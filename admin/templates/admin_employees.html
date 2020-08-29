@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_styles.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+    {% include 'admin_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<section id="body">
+    <div class="heading container-fluid">
+        <!-- change this content -->
+        <h3>Mitarbeiter</h3>
+        <a class="btn btn-primary" role="button" href="#">
+            <i class="fas fa-download fa-sm"></i>&nbsp;
+            <!-- change this content -->
+            Alle Mitarbeiter ausdrucken</a>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Mitarbeiter Übersicht</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-1 row">
+                <div class="col-12 col-sm-6">
+                    <div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable">
+                        <label>Show&nbsp;
+                            <select class="form-control form-control-sm custom-select custom-select-sm">
+                                <option value="10" selected>10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>&nbsp;
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="dataTables_filter" id="dataTable_filter-1">
+                        <label>
+                            <input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Suchen...">
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="card-row-2 row">
+                <div class="col-12">
+                    <!-- change this content -->
+                    <div class="table-responsive table" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                        <table class="table" id="employeesTable">
+                            <thead>
+                                <tr>
+                                  <th>Vorname</th>
+                                  <th>Nachname</th>
+                                  <th>E-Mail</th>
+                                  <th>Rolle</th>
+                                  <th>Mehr...</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>Cedrick</td>
+                                  <td>Candia</td>
+                                  <td>email@email.com</td>
+                                  <td>Admin</td>
+                                  <td class="td-icons"><a href="employees-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Jeremy</td>
+                                  <td>Fuchs</td>
+                                  <td>email@email.com</td>
+                                  <td>Analyst</td>
+                                  <td class="td-icons"><a href="employees-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Maximilian</td>
+                                  <td>Huber</td>
+                                  <td>email@email.com</td>
+                                  <td>Kassierer</td>
+                                  <td class="td-icons"><a href="employees-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>Ludwig</td>
+                                  <td>Bergemann</td>
+                                  <td>email@email.com</td>
+                                  <td>Kassierer</td>
+                                  <td class="td-icons"><a href="employees-detail.html"><i class="fa fa-pencil"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                  <td><strong>Vorname</strong></td>
+                                  <td><strong>Nachname</strong></td>
+                                  <td><strong>E-Mail</strong></td>
+                                  <td><strong>Rolle</strong></td>
+                                  <td><strong>Mehr...</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+              </div>
+              <div class="card-row-3 row">
+                <div class="col-12 col-sm-6">
+                  <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <nav class="dataTables_paginate paging_simple_numbers">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                          <a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                      </li>
+                      <li class="page-item active">
+                          <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'main/js/admin_navbar.js' %}"></script>
+{% endblock javascript %}

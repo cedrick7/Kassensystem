@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block specific %}
+<title>Dashboard</title>
+{% endblock specific %}
+
+<!-- Body -->
+{% block content %}
+    <h1>Admin Dashboard</h1>
+    <p>Hallo {{ request.user }}!</p>
+{% endblock content %}

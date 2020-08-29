@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_styles.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+    {% include 'admin_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<section id="body">
+    <div class="heading container-fluid">
+        <!-- change this content -->
+        <h3>Rechnungen</h3>
+        <a class="btn btn-primary" role="button" href="#">
+            <i class="fas fa-download fa-sm"></i>&nbsp;
+            <!-- change this content -->
+            Alle Rechnungen ausdrucken</a>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Rechnungen Übersicht</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-1 row">
+                <div class="col-12 col-sm-6">
+                    <div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable">
+                        <label>Show&nbsp;
+                            <select class="form-control form-control-sm custom-select custom-select-sm">
+                                <option value="10" selected>10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>&nbsp;
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="dataTables_filter" id="dataTable_filter-1">
+                        <label>
+                            <input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Suchen...">
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="card-row-2 row">
+                <div class="col-12">
+                    <!-- change this content -->
+                    <div class="table-responsive table" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
+                        <table class="table" id="invoiceTable">
+                            <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Kasse</th>
+                                  <th>Mitarbeiter</th>
+                                  <th>Datum</th>
+                                  <th>Summe</th>
+                                  <th>Mehr Infos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>Kasse #1</td>
+                                  <td>Lorem ipsum</td>
+                                  <td>01.01.2020, 08:00</td>
+                                  <td>12,99€</td>
+                                  <td class="td-icons"><a href="invoice-detail.html"><i class="fas fa-comment-alt"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>Kasse #2</td>
+                                  <td>Lorem ipsum</td>
+                                  <td>01.01.2020, 09:00</td>
+                                  <td>19,99€</td>
+                                  <td class="td-icons"><a href="invoice-detail.html"><i class="fas fa-comment-alt"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>Kasse #1</td>
+                                  <td>Lorem ipsum</td>
+                                  <td>01.01.2020, 08:20</td>
+                                  <td>49,99€</td>
+                                  <td class="td-icons"><a href="invoice-detail.html"><i class="fas fa-comment-alt"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>Kasse #1</td>
+                                  <td>Lorem ipsum</td>
+                                  <td>01.01.2020, 10:55</td>
+                                  <td>21,99€</td>
+                                  <td class="td-icons"><a href="invoice-detail.html"><i class="fas fa-comment-alt"></i></a><a href="#"><i class="fa fa-remove"></i></a></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                  <td><strong>ID</strong></td>
+                                  <td><strong>Kasse</strong></td>
+                                  <td><strong>Mitarbeiter</strong></td>
+                                  <td><strong>Datum</strong></td>
+                                  <td><strong>Summe</strong></td>
+                                  <td><strong>Mehr Infos</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+              </div>
+              <div class="card-row-3 row">
+                <div class="col-12 col-sm-6">
+                  <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <nav class="dataTables_paginate paging_simple_numbers">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                          <a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a>
+                      </li>
+                      <li class="page-item active">
+                          <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'main/js/admin_navbar.js' %}"></script>
+{% endblock javascript %}

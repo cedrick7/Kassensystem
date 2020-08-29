@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_styles.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+    {% include 'admin_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<section id="body">
+    <div class="heading container-fluid">
+        <!-- change this content -->
+        <h3>Backups</h3>
+        <a class="btn btn-primary" role="button" href="#">
+            <i class="fas fa-download fa-sm"></i>&nbsp;
+            <!-- change this content -->
+            Dieses Backups ausdrucken</a>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Backups bearbeiten</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-2 row">
+                  <div class="col-12">
+                    <!-- change this content -->
+                    <form method="post" action=".">
+                        <div class="form-row form-row-string">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="first_name"><strong>Backupname</strong></label>
+                                    <input class="form-control" type="text" placeholder="Produktname" name="productname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-string">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="first_name"><strong>Erstellt von</strong></label>
+                                    <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-string">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="first_name"><strong>Erstellt am</strong></label>
+                                    <input class="form-control" type="text" placeholder="Preis" name="first_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-string">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="first_name"><strong>Pfad</strong></label>
+                                    <input class="form-control" type="text" placeholder="Kategorien" name="first_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-string">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="first_name"><strong>Kommentar</strong></label>
+                                    <input class="form-control" type="text" placeholder="Kategorien" name="first_name">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'main/js/admin_navbar.js' %}"></script>
+{% endblock javascript %}

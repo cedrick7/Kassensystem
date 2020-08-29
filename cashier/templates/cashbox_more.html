@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Bezahlen</title>
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/cashbox_more.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/rating.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block content %}
+<div class="page">
+    <header class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="nav-box col-12 col-md-3">
+                    <a class="nav-link" href="#"><i class="fa fa-chevron-left"></i>Zurück</a>
+                </div>
+                <div class="nav-box col-12 col-md-3">
+                    <a class="nav-link" href="{% url 'costumer' %}">Kundenkartei</a>
+                </div>
+                <div class="nav-box col-12 col-md-3">
+                    <div class="row">
+                        <div class="col"><a class="nav-link" href="#">Produkte</a></div>
+                        <div class="col"><a class="nav-link" href="#">Dienstleistungen</a></div>
+                    </div>
+                </div>
+                <div class="nav-box col-12 col-md-3">
+                    <div class="row">
+                        <div class="col"><p>Mitarbeitername</p></div>
+                        <div class="col"><a class="nav-link" href="#">Logout</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="body">
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Weitere Infos über den Einkauf&nbsp;</h4>
+                  <form class="">
+                    <div class="form-group col-12 col-md-8">
+                      <div class="input-group input-daterange">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Kunde</span>
+                        </div>
+                        <select class="form-control">
+                          <optgroup label="Kundenart">
+                            <option value="1" selected>Neukunde</option>
+                            <option value="2">Kunde 1</option>
+                            <option value="3">Kunde 2</option>
+                            <option value="4">Kunde 3</option>
+                          </optgroup>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-8">
+                      <div class="input-group input-daterange">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Gefunden durch</span>
+                        </div>
+                        <select class="form-control">
+                          <optgroup label="Gefunden durch...">
+                            <option value="1" selected>Zufall</option>
+                            <option value="2">Webseite</option>
+                            <option value="3">Soziale Netzwerke</option>
+                          </optgroup>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group col-12 col-md-8">
+                      <div class="input-group input-daterange">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text rating-box-size">Bewertung</span>
+                        </div>
+                        <div class="rating">
+                          <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                          <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                          <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                          <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                          <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary" type="button">Fertig</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+{% endblock content %}

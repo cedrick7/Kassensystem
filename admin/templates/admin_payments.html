@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Dashboard</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_styles.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+    {% include 'admin_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<section id="body">
+    <div class="heading container-fluid">
+        <!-- change this content -->
+        <h3>Zahlungsmittel</h3>
+        <a class="btn btn-primary" role="button" href="#">
+            <i class="fas fa-download fa-sm"></i>&nbsp;
+            <!-- change this content -->
+            Zahlungsmittel ausdrucken</a>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Barzahlung</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-2 row">
+                  <div class="col-12">
+                    <!-- change this content -->
+                    <form method="post" action=".">
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Zahlungsmittel</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktname" name="productname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Informationen</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-submit">
+                        <div class="col">
+                            <button class="btn btn-primary btn-sm" type="submit">Speichern</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen bestätigen</button>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Kartenzahlung</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-2 row">
+                  <div class="col-12">
+                    <!-- change this content -->
+                    <form method="post" action=".">
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Zahlungsmittel</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktname" name="productname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Informationen</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-submit">
+                        <div class="col">
+                            <button class="btn btn-primary btn-sm" type="submit">Speichern</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen bestätigen</button>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Apple Pay</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-2 row">
+                  <div class="col-12">
+                    <!-- change this content -->
+                    <form method="post" action=".">
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Zahlungsmittel</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktname" name="productname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Informationen</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-submit">
+                        <div class="col">
+                            <button class="btn btn-primary btn-sm" type="submit">Speichern</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen bestätigen</button>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="card">
+            <div class="card-header">
+              <!-- change this content -->
+              <p>Neues Zahlungsmittel hinzufügen</p>
+            </div>
+            <div class="card-body">
+              <div class="card-row-2 row">
+                  <div class="col-12">
+                    <!-- change this content -->
+                    <form method="post" action=".">
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Zahlungsmittel</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktname" name="productname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-string">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="first_name"><strong>Informationen</strong></label>
+                                <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-row-submit">
+                        <div class="col">
+                            <button class="btn btn-primary btn-sm" type="submit">Speichern</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen</button>
+                            <button class="btn btn-primary btn-sm" type="submit">Löschen bestätigen</button>
+                        </div>
+                    </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'main/js/admin_navbar.js' %}"></script>
+{% endblock javascript %}
