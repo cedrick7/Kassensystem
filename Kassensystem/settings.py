@@ -43,9 +43,9 @@ INSTALLED_APPS = [
 
     # own
     'administration',
-    'analyst',
+    'analyzation',
     'authorization',
-    'cashier',
+    'cashbox',
     'costumer',
     'product',
 ]

@@ -20,9 +20,9 @@ from django.conf.urls.static import static
 
 from authorization.views import *
 from costumer.views import *
-from cashier.views import *
+from cashbox.views import *
 from administration.views import *
-from analyst.views import *
+from analyzation.views import *
 
 urlpatterns = [
     path('', authorization_login_view, name='login'),
@@ -32,9 +32,9 @@ urlpatterns = [
 
     path('costumer/', costumer_costumer_view, name='costumer'),
 
-    path('kasse/', cashier_dashboard_view, name='cashier_dashboard'),
-    path('kasse/pay/', cashier_pay_view, name='cashier_pay'),
-    path('kasse/more/', cashier_more_view, name='cashier_more'),
+    path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
+    path('kasse/pay/', cashbox_pay_view, name='cashbox_pay'),
+    path('kasse/more/', cashbox_more_view, name='cashbox_more'),
 
     path('administration/', administration_dashboard_view, name='administration_dashboard'),
     path('administration/products/', administration_products_view, name='administration_products'),
@@ -58,10 +58,10 @@ urlpatterns = [
     path('administration/payments/', administration_payments_view, name='administration_payments'),
     path('administration/requests/', administration_requests_view, name='administration_requests'),
 
-    path('analyst/', analyst_dashboard_view, name='analyst_dashboard'),
-    path('analyst/sales/', analyst_sales_view, name='analyst_sales'),
-    path('analyst/costumers/', analyst_costumers_view, name='analyst_costumers'),
-    path('analyst/employees/', analyst_employees_view, name='analyst_employees'),
+    path('analyzation/', analyzation_dashboard_view, name='analyzation_dashboard'),
+    path('analyzation/sales/', analyzation_sales_view, name='analyzation_sales'),
+    path('analyzation/costumers/', analyzation_costumers_view, name='analyzation_costumers'),
+    path('analyzation/employees/', analyzation_employees_view, name='analyzation_employees'),
 
     path('superuser/', admin.site.urls),
 ]

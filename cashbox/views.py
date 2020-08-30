@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 # -------------------------------------------------------------------------
-# cashier
+# cashbox
 
 # who can access:
-    # --> cashier only
+    # --> cashbox only
 # what i need:
     # a list of all the products + services
     # a list of all categories
@@ -13,11 +13,11 @@ from django.shortcuts import render
 # -------------------------------------------------------------------------
 # views:
 
-def cashier_dashboard_view(request, *args, **kwargs):
-    return render(request, "cashier_dashboard.html", {})
+def cashbox_dashboard_view(request, *args, **kwargs):
+    return render(request, "cashbox_dashboard.html", {})
 
-def cashier_pay_view(request, *args, **kwargs):
-    return render(request, "cashier_pay.html", {})
+def cashbox_pay_view(request, *args, **kwargs):
+    return render(request, "cashbox_pay.html", {})
 
-def cashier_more_view(request, *args, **kwargs):
-    return render(request, "cashier_more.html", {})
+def cashbox_more_view(request, *args, **kwargs):
+    return render(request, "cashbox_more.html", {})
