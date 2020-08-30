@@ -18,45 +18,45 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from auth.views import *
+from authorization.views import *
 from costumer.views import *
 from cashier.views import *
-from admin.views import *
+from administration.views import *
 from analyst.views import *
 
 urlpatterns = [
-    path('', auth_login_view, name='login'),
-    path('register/', auth_register_view, name='register'),
-    path('forgot_password/', auth_forgot_password_view, name='forgot_password'),
-    path('change_password/', auth_change_password_view, name='change_password'),
+    path('', authorization_login_view, name='login'),
+    path('register/', authorization_register_view, name='register'),
+    path('forgot_password/', authorization_forgot_password_view, name='forgot_password'),
+    path('change_password/', authorization_change_password_view, name='change_password'),
 
     path('costumer/', costumer_costumer_view, name='costumer'),
 
-    path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
-    path('kasse/pay/', cashbox_pay_view, name='pay'),
-    path('kasse/more/', cashbox_more_view, name='more'),
+    path('kasse/', cashier_dashboard_view, name='cashier_dashboard'),
+    path('kasse/pay/', cashier_pay_view, name='cashier_pay'),
+    path('kasse/more/', cashier_more_view, name='cashier_more'),
 
-    path('admin/', admin_dashboard_view, name='admin_dashboard'),
-    path('admin/products/', admin_products_view, name='admin_products'),
-    path('admin/products/detail/', admin_products_detail_view, name='admin_products_detail'),
-    path('admin/services/', admin_services_view, name='admin_services'),
-    path('admin/services/detail/', admin_services_detail_view, name='admin_services_detail'),
-    path('admin/categories/', admin_categories_view, name='admin_categories'),
-    path('admin/categories/detail/', admin_categories_detail_view, name='admin_categories_detail'),
-    path('admin/attributes/', admin_attributes_view, name='admin_attributes'),
-    path('admin/attributes/detail/', admin_attributes_detail_view, name='admin_attributes_detail'),
-    path('admin/discounts/', admin_discounts_view, name='admin_discounts'),
-    path('admin/discounts/detail/', admin_discounts_detail_view, name='admin_discounts_detail'),
-    path('admin/employees/', admin_employees_view, name='admin_employees'),
-    path('admin/employees/detail/', admin_employees_detail_view, name='admin_employees_detail'),
-    path('admin/invoices/', admin_invoices_view, name='admin_invoices'),
-    path('admin/invoices/detail/', admin_invoices_detail_view, name='admin_invoices_detail'),
-    path('admin/cashboxes/', admin_cashboxes_view, name='admin_cashboxes'),
-    path('admin/safes/', admin_safes_view, name='admin_safes'),
-    path('admin/backups/', admin_backups_view, name='admin_backups'),
-    path('admin/backups/detail/', admin_backups_detail_view, name='admin_backups_detail'),
-    path('admin/payments/', admin_payments_view, name='admin_payments'),
-    path('admin/requests/', admin_requests_view, name='admin_requests'),
+    path('administration/', administration_dashboard_view, name='administration_dashboard'),
+    path('administration/products/', administration_products_view, name='administration_products'),
+    path('administration/products/detail/', administration_products_detail_view, name='administration_products_detail'),
+    path('administration/services/', administration_services_view, name='administration_services'),
+    path('administration/services/detail/', administration_services_detail_view, name='administration_services_detail'),
+    path('administration/categories/', administration_categories_view, name='administration_categories'),
+    path('administration/categories/detail/', administration_categories_detail_view, name='administration_categories_detail'),
+    path('administration/attributes/', administration_attributes_view, name='administration_attributes'),
+    path('administration/attributes/detail/', administration_attributes_detail_view, name='administration_attributes_detail'),
+    path('administration/discounts/', administration_discounts_view, name='administration_discounts'),
+    path('administration/discounts/detail/', administration_discounts_detail_view, name='administration_discounts_detail'),
+    path('administration/employees/', administration_employees_view, name='administration_employees'),
+    path('administration/employees/detail/', administration_employees_detail_view, name='administration_employees_detail'),
+    path('administration/invoices/', administration_invoices_view, name='administration_invoices'),
+    path('administration/invoices/detail/', administration_invoices_detail_view, name='administration_invoices_detail'),
+    path('administration/cashboxes/', administration_cashboxes_view, name='administration_cashboxes'),
+    path('administration/safes/', administration_safes_view, name='administration_safes'),
+    path('administration/backups/', administration_backups_view, name='administration_backups'),
+    path('administration/backups/detail/', administration_backups_detail_view, name='administration_backups_detail'),
+    path('administration/payments/', administration_payments_view, name='administration_payments'),
+    path('administration/requests/', administration_requests_view, name='administration_requests'),
 
     path('analyst/', analyst_dashboard_view, name='analyst_dashboard'),
     path('analyst/sales/', analyst_sales_view, name='analyst_sales'),

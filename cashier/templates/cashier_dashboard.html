@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+<title>Kasse</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/cashier_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/cashier_dashboard.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/cart-calculator.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/calculator.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+    {% include 'cashier_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<section id="body">
+    <div class="container">
+        <div class="col-12">
+            <div class="row pattern">
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D1</p>
+                <p class="product-description">Waschen, Föhnen inkl. Festiger + Spray</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D2</p>
+                <p class="product-description">Waschen, Schneiden</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D3</p>
+                <p class="product-description">Waschen, Schneiden, Föhnen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D4</p>
+                <p class="product-description">Neuschnitt/Styling</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D5</p>
+                <p class="product-description">Waschen, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D6</p>
+                <p class="product-description">Waschen, Schneiden, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D1</p>
+                <p class="product-description">Waschen, Föhnen inkl. Festiger + Spray</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D2</p>
+                <p class="product-description">Waschen, Schneiden</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D3</p>
+                <p class="product-description">Waschen, Schneiden, Föhnen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D4</p>
+                <p class="product-description">Neuschnitt/Styling</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D5</p>
+                <p class="product-description">Waschen, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+              <a href="#" class="col-4 pattern-element">
+                <p class="product-name">D6</p>
+                <p class="product-description">Waschen, Schneiden, Einlegen</p>
+                <p class="product-price">19.99€</p>
+              </a>
+            </div>
+          </div>
+    </div>
+    <div class="container div-cart-calculator">
+        <div class="row">
+            <div class="col col-cart">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Warenkorb</h4>
+                        <div class="table-responsive">
+                            <table class="table cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Pos</th>
+                                        <th>Quan.</th>
+                                        <th>Name</th>
+                                        <th>Preis</th>
+                                        <th>Preis</th>
+                                        <th>Entf.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1x</td>
+                                        <td>D1</td>
+                                        <td>19,99€</td>
+                                        <td>19,99€</td>
+                                        <td><a href="#"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>11x</td>
+                                        <td>H1</td>
+                                        <td>19,99€</td>
+                                        <td>429,99€</td>
+                                        <td><a href="#"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>1x</td>
+                                        <td>D1</td>
+                                        <td>19,99€</td>
+                                        <td>19,99€</td>
+                                        <td><a href="#"><i class="fa fa-remove"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col card-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p class="card-element">Insgesamt: 39,98€</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Zahlungsmittel&nbsp;</button>
+                                            <div class="dropdown-menu" role="menu">
+                                                <a class="dropdown-item" role="presentation" href="#">Barzahlung</a>
+                                                <a class="dropdown-item" role="presentation" href="#">Kartenzahlung</a>
+                                                <a class="dropdown-item" role="presentation" href="#">Apple Pay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary" type="button">Zur Kasse gehen<i class="fa fa-chevron-right"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-calculator">
+                <div class="row">
+                    <div class="col">
+                        <div role="tablist" id="accordion-calculator">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="accordion-calculator .accordion-item" href="#accordion-calculator .accordion-item">Taschenrechner</a>
+                                </div>
+                                <div class="collapse accordion-item" role="tabpanel" data-parent="#accordion-calculator">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col calculator">
+                                                <form class="calculator-form">
+                                                  <input type="text" id="calc-display" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="7" onclick="addToScreen('7')" />
+                                                  <input type="button" class="keys numbers" value="8" onclick="addToScreen('8')" />
+                                                  <input type="button" class="keys numbers" value="9" onclick="addToScreen('9')" />
+                                                  <input type="button" class="keys operators" value="C" onclick="addToScreen('c')" />
+                                                  <input type="button" class="keys operators" value="CE" onclick="backspace()" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="4" onclick="addToScreen('4')" />
+                                                  <input type="button" class="keys numbers" value="5" onclick="addToScreen('5')" />
+                                                  <input type="button" class="keys numbers" value="6" onclick="addToScreen('6')" />
+                                                  <input type="button" class="keys operators" value="*" onclick="addToScreen('*')" />
+                                                  <input type="button" class="keys operators" value="/" onclick="addToScreen('/')" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="1" onclick="addToScreen('1')" />
+                                                  <input type="button" class="keys numbers" value="2" onclick="addToScreen('2')" />
+                                                  <input type="button" class="keys numbers" value="3" onclick="addToScreen('3')" />
+                                                  <input type="button" class="keys operators" value="+" onclick="addToScreen('+')" />
+                                                  <input type="button" class="keys operators" value="-" onclick="addToScreen('-')" />
+                                                  <br />
+                                                  <input type="button" class="keys numbers" value="0" onclick="addToScreen('0')" />
+                                                  <input type="button" class="keys operators" value="." onclick="addToScreen('.')" />
+                                                  <input type="button" class="equal operators" id="key-result" value="=" onclick="result()" />
+                                                  <a id="toCart" class="keys operators" onclick="return calculatorToCart();"><i class="fas fa-shopping-cart"></i></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/calculator.js' %}"></script>
+{% endblock javascript %}

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body header .card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  body header .card .card-body {
+    flex-direction: row;
+  }
+}
+body header .card .card-body .nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+body header .card .card-body .nav-box .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+body header .card .card-body .nav-box .row .col {
+  padding: 5px;
+}
+body header .card .card-body .nav-box .row .col:nth-child(1) {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+body header .card .card-body .nav-box .row .col:nth-child(2) {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+body header .card .card-body .nav-box .row .col p {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+body header .card .card-body .nav-box .row .col .nav-link {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  color: #007bff;
+}
+body header .card .card-body .nav-box .row .col .nav-link:hover, body header .card .card-body .nav-box .row .col .nav-link:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: #00299C;
+}
+body header .card .card-body .nav-box .row .col .nav-link:active {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0043E0;
+}
+body #body .container .card-body .card-title {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+}
+body #body .container .card-body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+body #body .container .card-body form .form-group {
+  display: block;
+  margin: 10px;
+  padding: 0 15px;
+}
+body #body .container .card-body form .form-group .rating-box-size {
+  max-height: 38px;
+}
+
+/*# sourceMappingURL=cashier_more.css.map */

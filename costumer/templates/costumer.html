@@ -6,9 +6,9 @@
 {% block specific %}
 <title>Kasse</title>
 
-<link rel="stylesheet" type="text/css" href="{% static 'main/css/cashbox_navbar.css' %}" />
-<!--  <link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_navbar.css' %}" /> -->
-<link rel="stylesheet" type="text/css" href="{% static 'main/css/admin_styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/cashier_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}" />
 {% endblock specific %}
 
 <!-- Body -->
@@ -22,7 +22,7 @@
 
     -->
 
-    {% include 'cashbox_navbar.html' %}
+    {% include 'cashier_navbar.html' %}
 
 <section id="body">
     <div class="content container-fluid">
@@ -159,3 +159,6 @@
 
 {% endblock content %}
 
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

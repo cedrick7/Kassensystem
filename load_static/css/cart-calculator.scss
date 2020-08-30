@@ -1,0 +1,99 @@
+@import 'variables.scss';
+
+.div-cart-calculator {
+
+        .row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+
+          .col-cart {
+            margin-bottom: 10px;
+
+            .card-body {
+              margin-bottom: 10px;
+              padding-bottom: 0;
+
+              .card-title {
+              font-size: $size-header;
+              text-align: center;
+              }
+
+              .cart-table {
+                tr, th, td {
+                  text-align: center;
+                }
+              }
+
+              .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+
+                .card-row {
+                  margin-top: 10px;
+                  padding: 10px;
+                  padding-bottom: 0;
+                  border: none;
+                  border-radius: $card-border-radius;
+                  border-top: $card-border-width solid $card-border-color;
+
+                  .row {
+                    display: flex;
+                    flex-direction: row;
+
+                    div {
+                      &:nth-child(1) {
+                        padding: 10px;
+                        text-align: center;
+
+                        p {
+                          margin: 0;
+                          padding-left: 10px;
+                          padding-right: 10px;
+                        }
+                      }
+
+                      &:nth-child(2) {
+                        padding: 10px;
+                        padding-bottom: 0;
+                      }
+
+                      &:nth-child(3) {
+                        padding: 10px;
+                        padding-bottom: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-content: center;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .col-calculator {
+            .row {
+              .col {
+                margin-bottom: 10px;
+
+                .card-header {
+                  text-align: center;
+
+                  a {
+                    margin-bottom: 0;
+                    font-size: $size-header;
+                    color: $color-black;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }

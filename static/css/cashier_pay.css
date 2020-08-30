@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body #body {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  body #body {
+    flex-direction: row;
+  }
+}
+body #body .container:nth-child(1) {
+  order: 2;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+@media (min-width: 992px) {
+  body #body .container:nth-child(1) {
+    order: 1;
+  }
+}
+body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin:hover {
+  opacity: 0.7;
+}
+body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin .coin {
+  width: 200px;
+  height: 100px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body #body .container:nth-child(1) .col:nth-child(2), body #body .container:nth-child(1) .col:nth-child(3) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #dfdfdf;
+}
+body #body .container:nth-child(1) .col:nth-child(2) .row, body #body .container:nth-child(1) .col:nth-child(3) .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+body #body .container:nth-child(1) .col:nth-child(2) .row .col-12, body #body .container:nth-child(1) .col:nth-child(3) .row .col-12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  text-align: right;
+}
+body #body .container:nth-child(1) .col:nth-child(2) .row .col-12 p, body #body .container:nth-child(1) .col:nth-child(3) .row .col-12 p {
+  margin: 0;
+}
+body #body .container:nth-child(1) .col:nth-child(2) .row .col-12 .p-bold, body #body .container:nth-child(1) .col:nth-child(3) .row .col-12 .p-bold {
+  font-weight: 700;
+}
+body #body .container:nth-child(2) {
+  order: 1;
+}
+@media (min-width: 992px) {
+  body #body .container:nth-child(2) {
+    order: 2;
+  }
+}
+
+/*# sourceMappingURL=cashier_pay.css.map */

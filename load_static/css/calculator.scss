@@ -1,0 +1,93 @@
+@import 'variables.scss';
+
+.calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .calculator-form {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      height: auto;
+      width: 100%;
+      border: 0px solid black;
+      -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+      border-radius: 2px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+
+      #calc-display {
+        border: 1px solid #ddd;
+        border-radius: 1px;
+        height: 60px;
+        max-width: 100%;
+        padding-right: 15px;
+        padding-top: 10px;
+        text-align: right;
+        margin-right: 6px;
+        font-size: 2.5rem;
+        overflow-x: auto;
+        transition: all .2s ease-in-out;
+
+          &:hover {
+              border: 1px solid #bbb;
+              -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+              box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+      }
+
+      .numbers {
+      display: inline-block;
+      border: 1px solid #ddd;
+      border-radius: 1px;
+      width: 17%;
+      text-align: center;
+      padding: 10px;
+      margin: 10px 4px 10px 0;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+
+          &:hover {
+              background-color: #f1f1f1;
+              -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+              border-color: #bbb;
+            }
+
+        &:active {
+          font-weight: bold;
+        }
+      }
+
+      .operators {
+        display: inline-block;
+        border: 1px solid #bbb;
+        border-radius: 1px;
+        width: 17%;
+        text-align: center;
+        padding: 10px;
+        margin: 20px 4px 10px 0;
+        cursor: pointer;
+        background-color: #ddd;
+        transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+
+          &:hover {
+              background-color: #ddd;
+              -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+              box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+              border-color: #aaa;
+          }
+          &:active {
+          font-weight: bold;
+        }
+        }
+
+      .equal {
+            width: 35% !important;
+        }
+    }
+}

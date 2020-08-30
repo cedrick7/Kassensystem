@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.calculator .calculator-form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto;
+  width: 100%;
+  border: 0px solid black;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.calculator .calculator-form #calc-display {
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  height: 60px;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 6px;
+  font-size: 2.5rem;
+  overflow-x: auto;
+  transition: all 0.2s ease-in-out;
+}
+.calculator .calculator-form #calc-display:hover {
+  border: 1px solid #bbb;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.calculator .calculator-form .numbers {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  width: 17%;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 4px 10px 0;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s, box-shadow 0.2s;
+}
+.calculator .calculator-form .numbers:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+.calculator .calculator-form .numbers:active {
+  font-weight: bold;
+}
+.calculator .calculator-form .operators {
+  display: inline-block;
+  border: 1px solid #bbb;
+  border-radius: 1px;
+  width: 17%;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 4px 10px 0;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s, box-shadow 0.2s;
+}
+.calculator .calculator-form .operators:hover {
+  background-color: #ddd;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+}
+.calculator .calculator-form .operators:active {
+  font-weight: bold;
+}
+.calculator .calculator-form .equal {
+  width: 35% !important;
+}
+
+/*# sourceMappingURL=calculator.css.map */

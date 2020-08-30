@@ -1,0 +1,92 @@
+@import 'variables.scss';
+
+// media-queries:
+//@media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+//@media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+//@media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+//@media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
+
+body {
+  
+
+  #body {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    .container {
+      &:nth-child(1) {
+        order: 2;
+        @media (min-width: 992px) {
+          order: 1;
+        }
+        border: $card-border-width solid $card-border-color;
+        border-radius: $card-border-radius;
+
+        .col {
+          &:nth-child(1) {
+            .row-coins {
+              .col-coin {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                padding: 10px;
+
+                &:hover {
+                  opacity: .7;
+                }
+
+                .coin {
+                  width: 200px;
+                  height: 100px;
+                  background-position: center;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                }
+              }
+            }
+          }
+
+          &:nth-child(2), &:nth-child(3) {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: $card-border-width*2 solid $card-border-color;
+
+            .row {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              align-content: center;
+
+              .col-12 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                align-content: center;
+                padding: 10px;
+                text-align: right;
+
+                p {
+                  margin: 0;
+                }
+
+                .p-bold {
+                  font-weight: $font-weight-bold;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        order: 1;
+        @media (min-width: 992px) {
+          order: 2;
+        }
+      }
+    }
+  }
+}
