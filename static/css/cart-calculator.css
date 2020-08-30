@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.div-cart-calculator .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.div-cart-calculator .row .col-cart {
+  margin-bottom: 10px;
+}
+.div-cart-calculator .row .col-cart .card-body {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+.div-cart-calculator .row .col-cart .card-body .card-title {
+  font-size: 20px;
+  text-align: center;
+}
+.div-cart-calculator .row .col-cart .card-body .cart-table tr, .div-cart-calculator .row .col-cart .card-body .cart-table th, .div-cart-calculator .row .col-cart .card-body .cart-table td {
+  text-align: center;
+}
+.div-cart-calculator .row .col-cart .card-body .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.div-cart-calculator .row .col-cart .card-body .row .card-row {
+  margin-top: 10px;
+  padding: 10px;
+  padding-bottom: 0;
+  border: none;
+  border-radius: 5px;
+  border-top: 1px solid #dfdfdf;
+}
+.div-cart-calculator .row .col-cart .card-body .row .card-row .row {
+  display: flex;
+  flex-direction: row;
+}
+.div-cart-calculator .row .col-cart .card-body .row .card-row .row div:nth-child(1) {
+  padding: 10px;
+  text-align: center;
+}
+.div-cart-calculator .row .col-cart .card-body .row .card-row .row div:nth-child(1) p {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.div-cart-calculator .row .col-cart .card-body .row .card-row .row div:nth-child(2) {
+  padding: 10px;
+  padding-bottom: 0;
+}
+.div-cart-calculator .row .col-cart .card-body .row .card-row .row div:nth-child(3) {
+  padding: 10px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.div-cart-calculator .row .col-calculator .row .col {
+  margin-bottom: 10px;
+}
+.div-cart-calculator .row .col-calculator .row .col .card-header {
+  text-align: center;
+}
+.div-cart-calculator .row .col-calculator .row .col .card-header a {
+  margin-bottom: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+/*# sourceMappingURL=cart-calculator.css.map */

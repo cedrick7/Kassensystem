@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+}
+#body .card {
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border: 0;
+  margin: 5vw;
+  padding: 0;
+}
+#body .card .card-body {
+  margin: 0;
+  padding: 0;
+}
+#body .card .card-body .row {
+  margin: 0;
+  padding: 0;
+}
+#body .card .card-body .row .col {
+  margin: 0;
+  padding: 0;
+}
+#body .card .card-body .row .col:first-child {
+  display: none;
+}
+@media (min-width: 768px) {
+  #body .card .card-body .row .col:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+#body .card .card-body .row .col:first-child .bg-login-image {
+  width: 40vw;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#body .card .card-body .row .col:last-child {
+  margin: 50px 0;
+  padding: 10px;
+  text-align: center;
+}
+#body .card .card-body .row .col:last-child h3 {
+  font-size: 28px;
+  color: #000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#body .card .card-body .row .col:last-child .form-row .form-group {
+  margin: 0;
+}
+#body .card .card-body .row .col:last-child .form-row .form-group .input-group {
+  padding: 0;
+}
+#body .card .card-body .row .col:last-child .form-row .form-group .input-group .input-group-item:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 10%;
+  height: 42px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #f7f7f7;
+}
+#body .card .card-body .row .col:last-child .form-row .form-group .input-group .input-group-item:last-child {
+  display: block;
+  width: 90%;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#body .card .card-body .row .col:last-child .form-row .form-group .input-group .btn-submit {
+  width: 100%;
+}
+#body .card .card-body .row .col:last-child .div-links {
+  text-align: center;
+}
+
+/*# sourceMappingURL=auth.css.map */

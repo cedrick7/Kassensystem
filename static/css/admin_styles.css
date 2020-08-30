@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#body .container-fluid {
+  margin-bottom: 10px;
+}
+#body .heading {
+  margin-bottom: 10px;
+}
+@media (min-width: 576px) {
+  #body .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+}
+#body .heading h4 {
+  margin-bottom: 0;
+  font-size: 28px;
+  color: #000;
+}
+@media (min-width: 576px) {
+  #body .heading .btn {
+    display: inline-block;
+  }
+}
+#body .heading .btn i {
+  color: #fff;
+}
+#body .content {
+  margin-bottom: 10px;
+}
+#body .content .card {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+#body .content .card .card-header p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+}
+#body .content .card .card-body .card-row-1 div, #body .content .card .card-body .card-row-3 div {
+  padding: 10px;
+  white-space: nowrap !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+@media (min-width: 576px) {
+  #body .content .card .card-body .card-row-1 div:first-child, #body .content .card .card-body .card-row-3 div:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+  }
+  #body .content .card .card-body .card-row-1 div:last-child, #body .content .card .card-body .card-row-3 div:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  }
+}
+#body .content .card .card-body .card-row-1 div .dataTables_length label, #body .content .card .card-body .card-row-3 div .dataTables_length label {
+  margin: 0;
+}
+#body .content .card .card-body .card-row-1 div .dataTables_length label select, #body .content .card .card-body .card-row-3 div .dataTables_length label select {
+  width: 80px;
+}
+#body .content .card .card-body .card-row-2 {
+  margin-top: 0.5rem !important;
+}
+#body .content .card .card-body .card-row-2 table {
+  margin-bottom: 0;
+}
+#body .content .card .card-body .card-row-2 table tbody tr:hover {
+  background-color: #f7f7f7;
+}
+#body .content .card .card-body .card-row-2 table tbody tr .td-icons a .fa {
+  font-size: 20px;
+}
+#body .content .card .card-body .card-row-2 table tbody tr .td-icons a:first-child {
+  padding-right: 10px;
+}
+#body .content .card .card-body .card-row-2 table tbody tr .td-icons a:last-child {
+  padding-left: 10px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-string div .form-group .form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-img div .form-group .input-img {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-color-favorites div:first-child .form-group .div-color {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-color-favorites div:first-child .form-group .div-color .input-color-picker {
+  display: inline-block;
+  height: 30px;
+  width: 60px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-color-favorites div:first-child .form-group .div-color .paragraph-color-picker {
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-color-favorites div:last-child .form-group .div-favorites {
+  height: 46px;
+  padding: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+#body .content .card .card-body .card-row-2 form .form-row-submit {
+  margin-bottom: 1rem;
+}
+#body .content .card .card-body .card-row-2 form .form-row-submit div .btn {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-alert {
+  margin-bottom: 1rem;
+}
+#body .content .card .card-body .card-row-2 form .form-row-alert div .alert-success {
+  background-color: #d4edda;
+  border-color: rgba(212, 237, 218, 0.2);
+  border-width: 1px;
+  border-radius: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-alert div .alert-warning {
+  background-color: #fff3cd;
+  border-color: rgba(255, 243, 205, 0.2);
+  border-width: 1px;
+  border-radius: 5px;
+}
+#body .content .card .card-body .card-row-2 form .form-row-alert div .alert-danger {
+  background-color: #f8d7da;
+  border-color: rgba(248, 215, 218, 0.2);
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=admin_styles.css.map */
