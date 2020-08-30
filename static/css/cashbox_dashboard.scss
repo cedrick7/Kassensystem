@@ -1,0 +1,119 @@
+@import 'variables.scss';
+
+// media-queries:
+//@media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+//@media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+//@media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+//@media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
+
+body {
+
+  #body {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    .container {
+      &:nth-child(1) {
+        order: 2;
+        @media (min-width: 992px) {
+          order: 1;
+        }
+
+        .pattern {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+
+        .pattern-element {
+          height: 200px;
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          color: $color-black;
+          text-align: center;
+          text-decoration: none;
+
+          &:nth-child(1) {
+            background-color: #8fc4f5;
+          }
+
+          &:nth-child(2) {
+            background-color: #c580e6;
+          }
+
+          &:nth-child(3) {
+            background-color: #f2c896;
+          }
+
+          &:nth-child(4) {
+            background-color: #c6d7a1;
+          }
+
+          &:nth-child(5) {
+            background-color: #f28b8b;
+          }
+
+          &:nth-child(6) {
+            background-color: #8bf2ba;
+          }
+
+          &:nth-child(7) {
+            background-color: #8fc4f5;
+          }
+
+          &:nth-child(8) {
+            background-color: #c580e6;
+          }
+
+          &:nth-child(9) {
+            background-color: #f2c896;
+          }
+
+          &:nth-child(10) {
+            background-color: #c6d7a1;
+          }
+
+          &:nth-child(11) {
+            background-color: #f28b8b;
+          }
+
+          &:nth-child(12) {
+            background-color: #8bf2ba;
+          }
+
+          &:active,
+          &:focus,
+          &:hover {
+            opacity: 0.7;
+          }
+
+          .product-name {
+            font-size: 1.5em;
+          }
+
+          .product-description {
+            font-size: 1em;
+          }
+
+          .product-price {
+            font-size: 1.3em;
+          }
+        }
+      }
+      }
+      &:nth-child(2) {
+        order: 1;
+        @media (min-width: 992px) {
+          order: 2;
+        }
+      }
+    }
+  }
+}

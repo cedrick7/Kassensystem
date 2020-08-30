@@ -1,0 +1,39 @@
+/*
+ * Copyright (c) 2020.
+ * Author: Cedrick Candia Ferreira
+ * Wirtschaftsinformatik-Projekt 1: "Web-Kassensystem", Gruppe 2
+ */
+
+.error {
+  color:#ff0000;
+  font-weight:bold;
+}
+.style {
+  color: green;
+}
+
+.card-element {
+  display: inline;
+  padding: 10px;
+}
+
+.card-row {
+  border: 1px black solid;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.client-input-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.clientspage-search-div-item {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.accordion-item {
+  margin-bottom: 5px;
+}

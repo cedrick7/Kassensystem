@@ -1,0 +1,116 @@
+@import 'variables.scss';
+
+// media-queries:
+//@media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+//@media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+//@media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+//@media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
+
+body {
+  header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .card {
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+          flex-direction: row;
+        }
+
+        .nav-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          text-align: center;
+          border: $card-border-width solid $color-grey;
+          border-radius: $card-border-radius;
+
+          .row {
+             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+
+            .col {
+              padding: 5px;
+
+               &:nth-child(1) {
+                 padding-top: 10px;
+                 padding-bottom: 0;
+               }
+               &:nth-child(2) {
+                 padding-top: 0;
+                 padding-bottom: 10px;
+               }
+
+              p {
+                margin: 0;
+                padding-top: 10px;
+                padding-bottom: 0;
+                font-family: $font-stack;
+                font-weight: $font-weight-regular;
+              }
+
+              .nav-link {
+                margin: 0;
+                font-family: $font-stack;
+                font-weight: $font-weight-regular;
+                text-decoration: none;
+                cursor: pointer;
+                color: $links-color;
+
+                &:hover, &:focus {
+                  text-decoration: none;
+                  cursor: pointer;
+                  color: $links-color-hover;
+                }
+                &:active {
+                  text-decoration: none;
+                  cursor: pointer;
+                  color: $links-color-active;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #body {
+    .container {
+      .card-body {
+        .card-title {
+          font-size: $size-header;
+          color: $color-black;
+          text-align: center;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+
+          .form-group {
+            display: block;
+            margin: 10px;
+            padding: 0 15px;
+
+            .rating-box-size {
+              max-height: 38px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

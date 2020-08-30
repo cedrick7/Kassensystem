@@ -1,0 +1,96 @@
+// colors:
+$color-blue: #007bff;
+$color-blue-hover: #00299C;
+$color-blue-active: #0043E0;
+$color-white: #fff;
+$color-grey: #dfdfdf;
+$color-grey-hover: #f7f7f7;
+$color-black: #000;
+
+$color-green-1: rgba(212,237,218,1);
+$color-green-2: rgba(212,237,218,.2);
+$color-yellow-1: rgba(255,243,205,1);
+$color-yellow-2: rgba(255,243,205,.2);
+$color-red-1: rgba(248,215,218,1);
+$color-red-2: rgba(248,215,218,.2);
+
+// font-sizes:
+$size-navbar: 20px;
+$size-page-heading: 28px;
+$size-header: 20px;
+$size-paragraph: 16px;
+$size-icon: 20px;
+
+// font-family:
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+$font-stack: 'Open Sans', sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// cards:
+$card-heading-font-size: $size-header;        // admin + analyst
+$card-heading-font-weight: $font-weight-bold; // admin + analyst
+$card-heading-color: $color-black;            // admin + analyst
+$card-border-width: 1px;
+$card-border-color: $color-grey;
+$card-border-radius: 5px;
+$card-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
+// links:
+$links-color: $color-blue;
+$links-color-hover: $color-blue-hover;
+$links-color-active: $color-blue-active;
+
+// buttons:
+.btn-primary {
+  background-color: $links-color;
+  color: $color-white;
+
+  &:hover, &:focus {
+    background-color: $color-blue-hover;
+  }
+  &:active {
+    background-color: $color-blue-active;
+  }
+
+  .fa {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+// admin-navbar:
+$burger-menu-color: $color-black;
+$navbar-background-color: rgba(221,221,221,1);
+$navlink-color: rgba(0,0,0,.5);
+$navlink-color-hover: rgba(0,0,0,.7);
+$navlink-color-active: rgba(0,0,0,.9);
+$navlink-border-color: rgba(0,0,0,0.5);
+$navlink-border-width: 2px;
+$navlink-border-radius: 0;
+
+// alerts:
+$alert-background-color-success: $color-green-1;
+$alert-border-color-success: $color-green-2;
+$alert-background-color-warning: $color-yellow-1;
+$alert-border-color-warning: $color-yellow-2;
+$alert-background-color-danger: $color-red-1;
+$alert-border-color-danger: $color-red-2;
+
+// space between content-blocks:
+// margin-bottom: $space-between;
+$space-between: 10px;
+
+// using flexbox:
+// display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+// display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+// display: -ms-flexbox;      /* TWEENER - IE 10 */
+// display: -webkit-flex;     /* NEW - Chrome */
+// display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+// using media-queries:
+// @media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+// @media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+// @media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+// @media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
