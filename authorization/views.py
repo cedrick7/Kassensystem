@@ -6,7 +6,6 @@ from django.shortcuts import render
 # who can access:
     # --> eveyone
 # what i need:
-    # a list of all the jobs (cashbox, administration, analyzation)
     # login-data to check wether the input is correct or not
 
 
