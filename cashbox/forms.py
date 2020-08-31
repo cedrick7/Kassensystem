@@ -2,7 +2,7 @@ from django import forms
 from .models import *
 
 
-class Form_Create_ReversalBill(forms.ModelForm):
+class FormCreateReversalBill(forms.ModelForm):
     class Meta:
         model = Bill_Product
         fields = [

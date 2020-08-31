@@ -11,7 +11,7 @@ from product.models import *
 # Sortimentverwaltung
 
 # Produkt/Dienstleistung
-class Form_Create_Tweak_Products(forms.ModelForm):
+class FormCreateEditProducts(forms.ModelForm):
     class Meta:
         model = Product
         fields = [
@@ -27,7 +27,7 @@ class Form_Create_Tweak_Products(forms.ModelForm):
 
 
 # Eigenschaft
-class Form_Create_Tweak_Propertys(forms.ModelForm):
+class FormCreateEditProperties(forms.ModelForm):
     class Meta:
         model = Property
         fields = [
@@ -35,7 +35,7 @@ class Form_Create_Tweak_Propertys(forms.ModelForm):
         ]
 
 # Kategorie
-class Form_Create_Tweak_Categorie(forms.ModelForm):
+class FormCreateEditCategory(forms.ModelForm):
     class Meta:
         model = Category
         fields = [
@@ -44,7 +44,7 @@ class Form_Create_Tweak_Categorie(forms.ModelForm):
         ]
 
 # discount
-class Form_Create_Tweak_Discount(forms.ModelForm):
+class FormCreateEditDiscount(forms.ModelForm):
     class Meta:
         model = Discount
         fields = [
@@ -57,7 +57,7 @@ class Form_Create_Tweak_Discount(forms.ModelForm):
 # Mitarbeiterverwaltung
 
 # Mitarbeiter
-class Form_Create_Tweak_Employee(forms.ModelForm):
+class FormCreateEditEmployee(forms.ModelForm):
     class Meta:
         model = Employee
         fields = [
@@ -73,7 +73,7 @@ class Form_Create_Tweak_Employee(forms.ModelForm):
 # Systemverwaltung
 
 # Backup
-class Form_Create_Tweak_Backup(forms.ModelForm):
+class FormCreateEditBackup(forms.ModelForm):
     class Meta:
         model = Backup
         fields = [
@@ -85,7 +85,7 @@ class Form_Create_Tweak_Backup(forms.ModelForm):
         ]
 
 # Safe
-class Form_Create_Tweak_Safe(forms.ModelForm):
+class FormCreateEditSafe(forms.ModelForm):
     class Meta:
         model = Safe
         fields = [
@@ -94,7 +94,7 @@ class Form_Create_Tweak_Safe(forms.ModelForm):
         ]
 
 # Zahlungsmittel
-class Form_Create_Tweak_Payment(forms.ModelForm):
+class FormCreateEditPayment(forms.ModelForm):
     class Meta:
         model = Paymenttool
         fields = [
@@ -104,7 +104,7 @@ class Form_Create_Tweak_Payment(forms.ModelForm):
         ]
 
 # Kassen
-class Form_Create_Tweak_Cashbox(forms.ModelForm):
+class FormCreateEditCashbox(forms.ModelForm):
     class Meta:
         model = Cashbox
         fields = [

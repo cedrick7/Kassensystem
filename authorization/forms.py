@@ -3,7 +3,7 @@ from .models import Request, Employee
 
 
 # Anfage um sein Passwort zu ändern
-class Form_Reset_Password(forms.ModelForm):
+class FormResetPassword(forms.ModelForm):
     class Meta:
         model = Request
         fields = [
@@ -13,7 +13,7 @@ class Form_Reset_Password(forms.ModelForm):
         ]
 
 # Anfrage für einen neuen employee
-class Form_Employee_Create_Tweak(forms.ModelForm):
+class FormEmployeeCreateEdit(forms.ModelForm):
     class Meta:
         model = Request
         fields = [
@@ -39,7 +39,7 @@ class Form_Employee_Create_Tweak(forms.ModelForm):
 #         ]
 
 # employee LogIn
-class Form_Login(forms.ModelForm):
+class FormLogin(forms.ModelForm):
     
     employeeID = forms.IntegerField()
     # pw = employee.password
