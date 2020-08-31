@@ -25,10 +25,10 @@ from administration.views import *
 from analyzation.views import *
 
 urlpatterns = [
-    path('', authorization_login_view, name='login'),
-    path('register/', authorization_register_view, name='register'),
-    path('forgot_password/', authorization_forgot_password_view, name='forgot_password'),
-    path('change_password/', authorization_change_password_view, name='change_password'),
+    path('', authorization_login_view, name='authorization_login'),
+    path('register/', authorization_register_view, name='authorization_register'),
+    path('forgot_password/', authorization_forgot_password_view, name='authorization_forgot_password'),
+    path('change_password/', authorization_change_password_view, name='authorization_change_password'),
 
     path('costumer/', costumer_costumer_view, name='costumer'),
 

@@ -7,6 +7,7 @@ Taskboard für das Projekt:
 https://github.com/users/cedrick7/projects/3
 
 Namenskonvention:
+https://mndthmde-my.sharepoint.com/:w:/g/personal/jeremy_fuchs_mnd_thm_de/EWDOBSHuxy5BqfuX9w6Gj-gBPqURq-E1qVNZXRdFUtionA?rtime=ShbM2alN2Eg
 https://www.javatpoint.com/java-naming-conventions
 
 Literatur:
