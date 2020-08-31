@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import FormLogin
 
 # -------------------------------------------------------------------------
 # for all views:
@@ -18,7 +18,13 @@ def authorization_login_view(request, *args, **kwargs):
 
 
 def authorization_register_view(request, *args, **kwargs):
-    return render(request, "authorization_register.html", {})
+    form = FormLogin(request.POST or None)
+
+    context = {
+        'form': form
+
+    }
+    return render(request, "authorization_register.html", context)
 
 
 def authorization_forgot_password_view(request, *args, **kwargs):

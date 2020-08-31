@@ -11,7 +11,14 @@
 
 <!-- Body -->
 {% block content %}
-    <div class="container" id="body">
+
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <input type='submit' value='Save'/>
+        </form>
+
+<div class="container" id="body">
         <div class="card col-10">
           <div class="card-body">
             <div class="row">
@@ -106,4 +113,6 @@
           </div>
         </div>
     </div>
+
+
 {% endblock content %}

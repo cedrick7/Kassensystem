@@ -5,7 +5,7 @@ from django.db import models
 class Employee(models.Model):
     firstname       = models.CharField(max_length=45, blank=False)
     lastname        = models.CharField(max_length=45, blank=False)
-    username        = models.TextField(blank=False)
+    username        = models.CharField(max_length=45, blank=False)
     password        = models.CharField(max_length=72, blank=False, editable=True) # default: editable=False
     picture         = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
