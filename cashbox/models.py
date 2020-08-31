@@ -1,3 +1,92 @@
 from django.db import models
+from authorization.models import Employee
+from product.models import Discount      #cannot import
+from product.models import Product
 
 # Create your models here.
+
+
+class Cashbox(models.Model):
+    title       = models.CharField(max_length=45)
+    amount      = models.DecimalField(max_digits=6,decimal_places=2)
+    
+
+    class Meta:
+        verbose_name_plural = "Cashboxn"
+
+    def __str__(self):
+        return self.title
+
+
+class Paymenttool(models.Model):
+    title        = models.CharField(max_length=45)
+    picture         = models.FileField(upload_to='zah_img/', default='mit_img/default.jpg', blank=True)
+
+    class Meta:
+        verbose_name_plural = "paymenttool"
+
+    def __str__(self):
+        return self.title
+
+class Tresor(models.Model):
+    title       = models.CharField(max_length=45)
+    amount      = models.DecimalField(max_digits=8,decimal_places=2)
+    employee = models.ManyToManyField(Employee, blank=True)
+
+    class Meta:
+        verbose_name_plural = "Tresore"
+
+    def __str__(self):
+        return self.title
+
+
+class Bill(models.Model):
+    creation        = models.DateTimeField(blank=False)
+    totalcosts    = models.DecimalField(max_digits=7,decimal_places=2, blank=True, default=0) # max: 10.000,00
+    # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
+    employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
+    cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
+    paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
+    discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
+    pdf            = models.FileField(upload_to='rec_pdf/', default='mit_img/default.jpg', blank=True)
+    
+
+    # Liste erstellen
+    
+
+
+    class Meta:
+        verbose_name_plural = "Rechnungen"
+
+    def __str__(self):
+        return "Rechnung vom "+ str(self.creation.date())
+
+
+class Rechnung_Product(models.Model):
+    bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
+    amount = models.IntegerField(default=1)
+
+    class Meta:
+        unique_together=[['bill', 'product']]
+
+
+    # Video: https://www.youtube.com/watch?v=-HuTlmEVOgU
+
+
+
+class ReversalBill(models.Model):
+    creation        = models.DateTimeField(blank=False)
+    refund  = models.DecimalField(max_digits=7,decimal_places=2, blank=True, default=0) # max: 99.999,99, Negativ-Werte abfangen
+    # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
+    employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
+    cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
+    pdf             = models.FileField(upload_to='sto_rec_pdf/', default='mit_img/default.jpg', blank=True)
+    bill        = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
+    
+
+    class Meta:
+        verbose_name_plural = "Stornorechnungen"
+
+    def __str__(self):
+        return "Stornorechnung vom "+ str(self.creation.date())
