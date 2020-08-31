@@ -28,7 +28,7 @@ class Paymenttool(models.Model):
     def __str__(self):
         return self.title
 
-class Tresor(models.Model):
+class Safe(models.Model):
     title       = models.CharField(max_length=45)
     amount      = models.DecimalField(max_digits=8,decimal_places=2)
     employee = models.ManyToManyField(Employee, blank=True)
@@ -62,7 +62,7 @@ class Bill(models.Model):
         return "Rechnung vom "+ str(self.creation.date())
 
 
-class Rechnung_Product(models.Model):
+class Bill_Product(models.Model):
     bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
     amount = models.IntegerField(default=1)
