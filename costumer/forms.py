@@ -3,11 +3,8 @@ from .models import *
 
 
 class FormCreateEditCustomer(forms.ModelForm):
-    class Meta:
         model = Customer
-        fields = [
-            'firstname',
-            'lastname',
-            'phonenumber',
-            'notes',
-        ]
+        firstname = forms.CharField(max_length=45, required=False, widget=forms.TextInput(attrs={"class": "form-row"}))
+        lastname = forms.CharField(max_length=45, required=False, widget=forms.TextInput(attrs={"class": "form-row"}))
+        phonenumber = forms.CharField(max_length=45, required=False, widget=forms.TextInput(attrs={"class": "form-row"}))
+        notes = forms.CharField(widget=forms.TextInput(attrs={"class": "form-row"}))

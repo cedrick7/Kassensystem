@@ -65,7 +65,7 @@ class Bill(models.Model):
 class Bill_Product(models.Model):
     bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
-    amount = models.IntegerField(default=1)
+    amount = models.IntegerField(default=50)
 
     class Meta:
         unique_together=[['bill', 'product']]
