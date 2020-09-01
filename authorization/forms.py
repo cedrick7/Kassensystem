@@ -1,30 +1,31 @@
+
 from django import forms
 from .models import Request, Employee
 
 
 # Anfage um sein Passwort zu ändern
-class FormResetPassword(forms.ModelForm):
-    class Meta:
-        model = Request
-        fields = [
-            'employee',  # employee kennt seine employee-Nummer
-            'password',
-            'password'
-        ]
+class FormResetPassword(forms.Form):
+     model = Request
+     employee = forms.IntegerField(blank=True, default=None) # employee kennt seine employee-Nummer
+     password = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True,)
+     passwordreenter = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True,)
+
+       #Ready for styling
 
 
 # Anfrage für einen neuen employee
-class FormEmployeeCreateEdit(forms.ModelForm):
-    class Meta:
+class FormForgotPassword(forms.Form):
         model = Request
-        fields = [
-            'firstname',
-            'lastname',
-            'role',
-            'password'
-            # type automaisch, username automatisch
-            # Administrator erstellt, bearbeitet, löscht employee
-        ]
+        firstname = forms.CharField(widget= forms.Charfield(attrs= {"class": "form-row"}))
+        lastname = forms.CharField(widget= forms.CharField(attrs= {"class": "form-row"}))
+        type = forms.CharField(
+            max_length=2,
+            choices="TYPE",
+            blank=False, attrs= {"class": "form-row"})
+
+            # type automatisch
+            #Ready for styling
+
 
 
 
@@ -43,12 +44,16 @@ class FormEmployeeCreateEdit(forms.ModelForm):
 
 
 class FormLogin(forms.Form):
-    #class Meta:
+
         model = Employee
-        username = forms.CharField(widget= forms.Textarea(attrs= {"class": "form-row"}))
-        password = forms.CharField(widget= forms.Textarea(attrs= {"class": "form-row"}))
+        username = forms.CharField(widget= forms.CharField(attrs= {"class": "form-row"}))
+        password = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True,)
+#Form for /Login
+#Ready for styling
 
+class FormRegister(forms.Form):
+    model = Employee
+    username = forms.CharField(widget=forms.CharField(attrs={"class": "form-row"}))
+    password = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True,)
 
-
-
-
+    #Ready for styling

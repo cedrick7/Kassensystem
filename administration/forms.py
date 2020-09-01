@@ -114,3 +114,15 @@ class FormCreateEditCashbox(forms.ModelForm):
 
 # Kunden
 # siehe Kundenverwaltung
+
+class FormEmployeeCreateEdit(forms.ModelForm):
+    class Meta:
+        model = Request
+        fields = [
+            'firstname',
+            'lastname',
+            'role',
+            'password'
+            # type automaisch, username automatisch
+            # Administrator erstellt, bearbeitet, löscht employee
+        ]

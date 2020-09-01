@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import FormLogin
+from .forms import *
 
 # -------------------------------------------------------------------------
 # for all views:
@@ -14,22 +14,40 @@ from .forms import FormLogin
 # views:
 
 def authorization_login_view(request, *args, **kwargs):
-    return render(request, "authorization_login.html", {})
+    LoginForm = FormLogin(request.POST or None)
+
+    context = {
+        'form': LoginForm
+
+    }
+    return render(request, "authorization_login.html", context)
 
 
 def authorization_register_view(request, *args, **kwargs):
-    form = FormLogin(request.POST or None)
+    RegisterForm = FormLogin(request.POST or None)
 
     context = {
-        'form': form
+        'form': RegisterForm
 
     }
     return render(request, "authorization_register.html", context)
 
 
 def authorization_forgot_password_view(request, *args, **kwargs):
+    ForgotPasswordForm = FormLogin(request.POST or None)
+
+    context = {
+        'form': ForgotPasswordForm
+
+    }
     return render(request, "authorization_forgot_password.html", {})
 
 
 def authorization_change_password_view(request, *args, **kwargs):
-    return render(request, "authorization_change_password.html", {})
+    ResetPasswordForm = FormResetPassword(request.POST or None)
+
+    context = {
+        'form': ResetPasswordForm
+
+    }
+    return render(request, "authorization_change_password.html", context)
