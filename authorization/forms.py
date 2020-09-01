@@ -6,6 +6,14 @@ from .models import Employee
 styling = "display: block; width: 90%; height: 42px !important; padding: 10px; border: 1px solid #dfdfdf; " \
           "border-radius: 5px; border-left: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; "
 
+# choices u can select as role
+choices = (
+    ('cashier', 'Kassierer'),
+    ('admin', 'Administrator'),
+    ('analyst', 'Analyst')
+)
+
+
 # Login
 class FormLogin(forms.Form):
     username = forms.CharField(
@@ -32,12 +40,18 @@ class FormLogin(forms.Form):
 
 # Registrieren
 class FormRegister(forms.Form):
-    role_select = forms.Select(
-        choices = (
-            ('cashier', 'Kassierer'),
-            ('admin',   'Administrator'),
-            ('analyst', 'Analyst'))
-    )
+    #role_choice = forms.ChoiceField(
+    #    required = True,
+    #    label = 'Rolle auswählen',
+    #    choices = choices,
+    #    widget = forms.ChoiceField(),
+    #    initial = {'cashier', 'Kassierer'}
+    #)
+
+    # {% for choice in form.fields.role_choice.choices %}
+    #  <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+    # {% endfor %}
+
     firstname = forms.CharField(
         required = True,
         label = 'Vorname',
@@ -98,7 +112,7 @@ class FormRegister(forms.Form):
 
     class Meta:
         model = Employee
-        fields = ['role_select', 'firstname', 'lastname', 'email', 'username', 'password', 'password_confirm', 'img']
+        fields = ['role_choice', 'firstname', 'lastname', 'email', 'username', 'password', 'password_confirm', 'img']
 
 
 # Passwort vergessen

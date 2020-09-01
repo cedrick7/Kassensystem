@@ -14,8 +14,14 @@ class Employee(models.Model):
     password_old         = models.BinaryField(max_length=72, blank=False, editable=True) # default: editable=False
     password_new         = models.BinaryField(max_length=72, editable=True, blank=False)
     password_new_confirm = models.BinaryField(max_length=72, editable=True, blank=False)
+    # img wird nicht benötigt, denn wir hatten ja gesagt, dass wir das mit dem profilbildern weglassen
     img                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
+    role_choice = [
+        ('cashier', 'Kassierer'),
+        ('admin', 'Administrator'),
+        ('analyst', 'Analyst')]
+    role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
 
 
     CASHIER         = 'KA'
