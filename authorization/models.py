@@ -2,15 +2,19 @@ from django.db import models
 
 # Create your models here.
 
+# Mitarbeiter
 class Employee(models.Model):
-    firstname       = models.CharField(max_length=45, blank=False)
-    lastname        = models.CharField(max_length=45, blank=False)
-    emailadress =     models.EmailField(blank=False)
-    username        = models.CharField(max_length=45, blank=False)
-    oldpassword = models.CharField(max_length=72, blank=False, editable=True)
-    password        = models.CharField(max_length=72, blank=False, editable=True) # default: editable=False
-    passwordreenter = models.CharField(max_length=72, editable=True, blank=False)
-    picture         = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
+    # geändert und hinzugefügt
+    firstname            = models.CharField(max_length=45, blank=False)
+    lastname             = models.CharField(max_length=45, blank=False)
+    email                = models.EmailField(blank=False)
+    username             = models.CharField(max_length=45, blank=False)
+    password             = models.BinaryField(max_length=72, blank=False, editable=True)
+    password_confirm     = models.BinaryField(max_length=72, blank=False, editable=True)
+    password_old         = models.BinaryField(max_length=72, blank=False, editable=True) # default: editable=False
+    password_new         = models.BinaryField(max_length=72, editable=True, blank=False)
+    password_new_confirm = models.BinaryField(max_length=72, editable=True, blank=False)
+    img                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
 
 
@@ -43,6 +47,7 @@ class Employee(models.Model):
         verbose_name_plural = "Mitarbeiter"
 
 
+# Anfragen
 class Request(models.Model):
     employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=True, default=None)
     

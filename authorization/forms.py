@@ -1,36 +1,192 @@
 
 from django import forms
-from .models import Request, Employee
+from .models import Employee
+
+# copied from  authorization.css
+styling = "display: block; width: 90%; height: 42px !important; padding: 10px; border: 1px solid #dfdfdf; " \
+          "border-radius: 5px; border-left: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; "
+
+# Login
+class FormLogin(forms.Form):
+    username = forms.CharField(
+        required = True,
+        label = 'Username',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Username",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    password = forms.CharField(
+        required = True,
+        label = 'Password',
+        widget = forms.PasswordInput(
+            attrs = {"placeholder": "Password",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+
+    class Meta:
+        model = Employee
+        fields = ['username', 'password']
 
 
-# Anfage um sein Passwort zu ändern
-class FormResetPassword(forms.Form):
-        model = Request
-        employee = forms.CharField(blank=True) # employee kennt seine employee-Nummer
-        oldpassword = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True)
-        password = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True)
-        passwordreenter = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True)
+# Registrieren
+class FormRegister(forms.Form):
+    role_select = forms.Select(
+        choices = (
+            ('cashier', 'Kassierer'),
+            ('admin',   'Administrator'),
+            ('analyst', 'Analyst'))
+    )
+    firstname = forms.CharField(
+        required = True,
+        label = 'Vorname',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Vorname",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    lastname = forms.CharField(
+        required = True,
+        label = 'Nachname',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Nachname",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    email = forms.CharField(
+        required = True,
+        label = 'E-Mail',
+        widget = forms.EmailInput(
+            attrs = {"placeholder": "E-Mail",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling,
+                     "aria-describedby": "emailHelp"})
+    )
+    username = forms.CharField(
+        required = True,
+        label = 'Username',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Username",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    password = forms.CharField(
+        required = True,
+        label = 'Password',
+        widget = forms.PasswordInput(
+            attrs = {"placeholder": "Password",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    password_confirm = forms.CharField(
+        required = True,
+        label = 'Password',
+        widget = forms.PasswordInput(
+            attrs = {"placeholder": "Password",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    img = forms.FileField(
+        required = False,
+        label = 'Profilbild',
+        widget = forms.FileInput(
+            attrs = {"placeholder": "Profilbild",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
 
-       #Ready for styling
+    class Meta:
+        model = Employee
+        fields = ['role_select', 'firstname', 'lastname', 'email', 'username', 'password', 'password_confirm', 'img']
 
 
-# Anfrage für einen neuen employee
+# Passwort vergessen
 class FormForgotPassword(forms.Form):
-        model = Request
-        firstname = forms.CharField(widget=forms.TextInput(attrs={"class": "form-row"}))
-        lastname = forms.CharField(widget=forms.TextInput(attrs={"class": "form-row"}))
-        username = forms.CharField(widget=forms.TextInput(attrs={"class": "form-row"}))
-        type = forms.CharField(
-            max_length=2,
-            choices="TYPE",
-            blank=False, attrs= {"class": "form-row"})
+    firstname = forms.CharField(
+        required = True,
+        label = 'Vorname',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Vorname",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    lastname = forms.CharField(
+        required = True,
+        label = 'Nachname',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Nachname",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    username = forms.CharField(
+        required = True,
+        label = 'Username',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Username",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
 
-            # type automatisch
-            #Ready for styling
+    class Meta:
+        model = Employee
+        fields = ['firstname', 'lastname', 'username']
+
+
+
+# Passwort ändern
+class FormChangePassword(forms.Form):
+    username = forms.CharField(
+        required = True,
+        label = 'Username',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "Username",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    password_old = forms.CharField(
+        required = True,
+        label = 'Altes Password',
+        widget = forms.PasswordInput(
+            attrs = {"placeholder": "Altes Password",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    password_new = forms.CharField(
+        required = True,
+        label = 'Neues Password',
+        widget = forms.PasswordInput(
+            attrs = {"placeholder": "Neues Password",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+    password_new_confirm = forms.CharField(
+        required = True,
+        label = 'Neues Password bestätigen',
+        widget = forms.PasswordInput(
+            attrs = {"placeholder": "Neues Password bestätigen",
+                     "class": "input-group-item form-control needs-validation",
+                     "style": styling})
+    )
+
+    class Meta:
+        model = Employee
+        fields = ['username', 'password_old', 'password_new', 'password_new_confirm']
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+# irgendwas, was hier nicht reingehört
 # Administrator erstellt, bearbeitet, löscht employee
 # class employeeForm_employeeBearbeiten(forms.ModelForm):
 #     class Meta:
@@ -41,32 +197,3 @@ class FormForgotPassword(forms.Form):
 #             'role', 
 #             'password'
 #         ]
-
-# employee LogIn
-
-
-class FormLogin(forms.Form):
-
-        model = Employee
-        username = forms.CharField(widget=forms.TextInput(attrs={"class": "form-row"}))
-        password = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True,)
-#Form for /Login
-#Ready for styling
-
-class FormRegister(forms.Form):
-    model = Employee
-    firstname = forms.CharField(max_length=45, blank=False)
-    lastname = forms.CharField(max_length=45, blank=False)
-    emailadress = forms.EmailField(blank=False, widget=forms.CharField(attrs={"class": "form-row"}))
-    username = forms.CharField(widget=forms.TextInput(attrs={"class": "form-row"}))
-    password = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True,)
-    confirmpassword = forms.CharField(blank=False, widget=forms.PasswordInput(attrs={"class": "form-row"}), editable=True, )
-    picture = forms.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
-    role = forms.CharField(
-        max_length=2,
-        choices='PERMISSIONS',
-        default='CASHIER',
-        attrs={"class": "form-row"}
-    )
-
-    #Ready for styling

@@ -14,40 +14,36 @@ from .forms import *
 # views:
 
 def authorization_login_view(request, *args, **kwargs):
-    LoginForm = FormLogin(request.POST or None)
+    login_form = FormLogin(request.POST or None)
 
     context = {
-        'form': LoginForm
-
+        'form': login_form
     }
     return render(request, "authorization_login.html", context)
 
 
 def authorization_register_view(request, *args, **kwargs):
-    RegisterForm = FormLogin(request.POST or None)
+    register_form = FormLogin(request.POST or None)
 
     context = {
-        'form': RegisterForm
-
+        'form': register_form
     }
     return render(request, "authorization_register.html", context)
 
 
 def authorization_forgot_password_view(request, *args, **kwargs):
-    ForgotPasswordForm = FormLogin(request.POST or None)
+    forgot_password_form = FormLogin(request.POST or None)
 
     context = {
-        'form': ForgotPasswordForm
-
+        'form': forgot_password_form
     }
-    return render(request, "authorization_forgot_password.html", {})
+    return render(request, "authorization_forgot_password.html", context)
 
 
 def authorization_change_password_view(request, *args, **kwargs):
-    ResetPasswordForm = FormResetPassword(request.POST or None)
+    change_password_form = FormChangePassword(request.POST or None)
 
     context = {
-        'form': ResetPasswordForm
-
+        'form': change_password_form
     }
     return render(request, "authorization_change_password.html", context)

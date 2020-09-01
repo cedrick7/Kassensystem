@@ -18,7 +18,7 @@
     overflow: hidden;
     box-shadow: $card-box-shadow;
     border: 0;
-    margin: 5vw;
+    margin: 2vw;
     padding: 0;
 
     .card-body {
@@ -78,7 +78,7 @@
                       align-items: center;
                       align-content: center;
                       width: 10%;
-                      height: 42px;
+                      height: 42px !important;
                       border: $card-border-width solid $card-border-color;
                       border-radius: $card-border-radius;
                       border-top-right-radius: 0;
@@ -87,9 +87,10 @@
                     }
 
                     &:last-child {
+                      // if changed: change authorization.views too!!!
                       display: block;
                       width: 90%;
-                      height: 42px;
+                      height: 42px !important;
                       padding: 10px;
                       border: $card-border-width solid $card-border-color;
                       border-radius: $card-border-radius;
