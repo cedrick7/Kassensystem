@@ -2,7 +2,7 @@
 from django import forms
 from .models import Employee
 
-# copied from  authorization.css
+# copied from authorization.css
 styling = "display: block; width: 90%; height: 42px !important; padding: 10px; border: 1px solid #dfdfdf; " \
           "border-radius: 5px; border-left: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; "
 

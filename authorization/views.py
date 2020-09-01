@@ -23,7 +23,7 @@ def authorization_login_view(request, *args, **kwargs):
 
 
 def authorization_register_view(request, *args, **kwargs):
-    register_form = FormLogin(request.POST or None)
+    register_form = FormRegister(request.POST or None)
 
     context = {
         'form': register_form
@@ -32,7 +32,7 @@ def authorization_register_view(request, *args, **kwargs):
 
 
 def authorization_forgot_password_view(request, *args, **kwargs):
-    forgot_password_form = FormLogin(request.POST or None)
+    forgot_password_form = FormForgotPassword(request.POST or None)
 
     context = {
         'form': forgot_password_form
