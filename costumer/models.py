@@ -7,7 +7,7 @@ class Customer(models.Model):
     firstname         = models.CharField(max_length=45, blank=True)
     lastname          = models.CharField(max_length=45, blank=True)
     phonenumber       = models.CharField(max_length=45, blank=True, unique=True)
-    notes           = models.TextField(blank=True)
+    notes           = models.CharField(max_length=45)
 
     class Meta:
         verbose_name_plural = "Customern"

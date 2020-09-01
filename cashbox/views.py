@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import *
 
 # -------------------------------------------------------------------------
 # cashbox
@@ -15,7 +15,13 @@ from django.shortcuts import render
 # views:
 
 def cashbox_dashboard_view(request, *args, **kwargs):
-    return render(request, "cashbox_dashboard.html", {})
+    CreateReversalBill = FormCreateReversalBill(request.Post or None)
+
+    context = {
+        'form': CreateReversalBill
+
+    }
+    return render(request, "cashbox_dashboard.html", context)
 
 
 def cashbox_pay_view(request, *args, **kwargs):
