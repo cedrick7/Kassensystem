@@ -5,8 +5,11 @@ from django.db import models
 class Employee(models.Model):
     firstname       = models.CharField(max_length=45, blank=False)
     lastname        = models.CharField(max_length=45, blank=False)
+    emailadress =     models.EmailField(blank=False)
     username        = models.CharField(max_length=45, blank=False)
+    oldpassword = models.CharField(max_length=72, blank=False, editable=True)
     password        = models.CharField(max_length=72, blank=False, editable=True) # default: editable=False
+    passwordreenter = models.CharField(max_length=72, editable=True, blank=False)
     picture         = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
 
@@ -58,7 +61,7 @@ class Request(models.Model):
     firstname       = models.CharField(max_length=45, blank=True)
     lastname        = models.CharField(max_length=45, blank=True)
     password        = models.BinaryField(blank=False, editable=True) # default: editable=False
-
+    passwordreenter = models.BinaryField(blank=False, editable=True)
     CASHIER         = 'KA'
     ADMINISTRATOR   = 'AD'
     ANALYST         = 'AN'
