@@ -16,14 +16,16 @@ choices = (
 
 # Login
 class FormLogin(forms.Form):
-    CHOICES = (
-        ('Kassierer', 'Kassierer'),
-        ('Analyst', 'Analyst'),
-        ('Admin', 'Admin'),
-
+    role = forms.ChoiceField(
+        required = True,
+        label = 'Rolle auswählen',
+        choices = choices,
+        widget = forms.Select(
+            attrs = {
+                'class': 'form-control'
+            }
+        )
     )
-
-    role = forms.ChoiceField(choices=CHOICES)
 
     username = forms.CharField(
         required = True,
@@ -49,27 +51,16 @@ class FormLogin(forms.Form):
 
 # Registrieren
 class FormRegister(forms.Form):
-    #role_choice = forms.ChoiceField(
-    #    required = True,
-    #    label = 'Rolle auswählen',
-    #    choices = choices,
-    #    widget = forms.ChoiceField(),
-    #    initial = {'cashier', 'Kassierer'}
-    #)
-
-    # {% for choice in form.fields.role_choice.choices %}
-    #  <option value="{{ choice.0 }}">{{ choice.1 }}</option>
-    # {% endfor %}
-
-    CHOICES = (
-        ('Kassierer', 'Kassierer'),
-        ('Analyst', 'Analyst'),
-        ('Admin', 'Admin'),
-
+    role = forms.ChoiceField(
+        required = True,
+        label = 'Rolle auswählen',
+        choices = choices,
+        widget = forms.Select(
+            attrs = {
+                'class': 'form-control'
+            }
+        )
     )
-
-    role = forms.ChoiceField(choices=CHOICES)
-
     firstname = forms.CharField(
         required = True,
         label = 'Vorname',
@@ -212,8 +203,10 @@ class FormChangePassword(forms.Form):
 
 
 
-
-
+# Notizen (bitte stehen lassen)
+   # {% for choice in form.fields.role_choice.choices %}
+   #  <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+   # {% endfor %}
 
 
 

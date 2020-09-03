@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load bootstrap4 %}
+{% load widget_tweaks %}
 
 <!-- Head -->
 {% block specific %}
@@ -25,17 +26,13 @@
                 <div class="form-row">
                     <div class="form-group col">
                       <div class="input-group">
-                          <select class="form-control">
-                            <optgroup label="Rolle auswählen:">
-                                <option value="cashier" selected>Kassierer</option>
-                                <option value="admin">Admin</option>
-                                <option value="analyst">Analyst</option>
-                            </optgroup>
-                          </select>
+                        {{ form.role }}
+                        <div class="invalid-feedback">
+                            {{ form.role.errors }}
+                        </div>
                       </div>
                     </div>
                 </div>
-                {{ form.role }}
                 <!-- Input-field: firstname -->
                 {{ form.non_field_errors }}
                 <div class="form-row">

@@ -92,7 +92,7 @@
 #body .card .card-body .row .col:last-child .form-row .form-group .input-group .input-group-item:last-child {
   display: block;
   width: 90%;
-  height: 42px;
+  height: 42px !important;
   padding: 10px;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
