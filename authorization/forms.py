@@ -16,6 +16,15 @@ choices = (
 
 # Login
 class FormLogin(forms.Form):
+    CHOICES = (
+        ('Kassierer', 'Kassierer'),
+        ('Analyst', 'Analyst'),
+        ('Admin', 'Admin'),
+
+    )
+
+    role = forms.ChoiceField(choices=CHOICES)
+
     username = forms.CharField(
         required = True,
         label = 'Username',
@@ -51,6 +60,15 @@ class FormRegister(forms.Form):
     # {% for choice in form.fields.role_choice.choices %}
     #  <option value="{{ choice.0 }}">{{ choice.1 }}</option>
     # {% endfor %}
+
+    CHOICES = (
+        ('Kassierer', 'Kassierer'),
+        ('Analyst', 'Analyst'),
+        ('Admin', 'Admin'),
+
+    )
+
+    role = forms.ChoiceField(choices=CHOICES)
 
     firstname = forms.CharField(
         required = True,
