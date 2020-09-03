@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import *
 # -------------------------------------------------------------------------
 # administration
 
@@ -26,10 +26,15 @@ def administration_dashboard_view(request, *args, **kwargs):
     return render(request, "administration_dashboard.html", {})
 
 def administration_products_view(request, *args, **kwargs):
-    return render(request, "administration_products.html", {})
+    return render(request, "administration_products.html",)
 
 def administration_products_detail_view(request, *args, **kwargs):
-    return render(request, "administration_products_detail.html", {})
+    create_edit_products_form = FormCreateEditProducts(request.POST or None)
+
+    context = {
+        'form': create_edit_products_form
+    }
+    return render(request, "administration_products_detail.html", context)
 
 def administration_services_view(request, *args, **kwargs):
     return render(request, "administration_services.html", {})
@@ -41,25 +46,46 @@ def administration_categories_view(request, *args, **kwargs):
     return render(request, "administration_categories.html", {})
 
 def administration_categories_detail_view(request, *args, **kwargs):
-    return render(request, "administration_categories_detail.html", {})
+    create_edit_categories_form = FormCreateEditCategory(request.POST or None)
+
+    context = {
+        'form': create_edit_categories_form
+    }
+    return render(request, "administration_categories_detail.html", context)
 
 def administration_attributes_view(request, *args, **kwargs):
     return render(request, "administration_attributes.html", {})
 
 def administration_attributes_detail_view(request, *args, **kwargs):
-    return render(request, "administration_attributes_detail.html", {})
+    create_edit_properties_form = FormCreateEditProperties(request.POST or None)
+
+    context = {
+        'form': create_edit_properties_form
+    }
+
+    return render(request, "administration_attributes_detail.html", context)
 
 def administration_discounts_view(request, *args, **kwargs):
     return render(request, "administration_discounts.html", {})
 
 def administration_discounts_detail_view(request, *args, **kwargs):
-    return render(request, "administration_discounts_detail.html", {})
+    create_edit_discount_form = FormCreateEditDiscount(request.POST or None)
+
+    context = {
+        'form': create_edit_discount_form
+    }
+    return render(request, "administration_discounts_detail.html", context)
 
 def administration_employees_view(request, *args, **kwargs):
     return render(request, "administration_employees.html", {})
 
 def administration_employees_detail_view(request, *args, **kwargs):
-    return render(request, "administration_employees_detail.html", {})
+    create_edit_employee_form = FormCreateEditEmployee(request.POST or None)
+
+    context = {
+        'form': create_edit_employee_form
+    }
+    return render(request, "administration_employees_detail.html", context)
 
 def administration_invoices_view(request, *args, **kwargs):
     return render(request, "administration_invoices.html", {})

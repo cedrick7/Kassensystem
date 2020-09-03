@@ -11,62 +11,145 @@ from product.models import *
 # Sortimentverwaltung
 
 # Produkt/Dienstleistung
-class FormCreateEditProducts(forms.ModelForm):
-    class Meta:
-        model = Product
-        fields = [
-            'title',
-            'type',
-            'brand',
-            'costs',
-            'tax',
-            'weight',
-            'picture',
-            'discount',
-        ]
+class FormCreateEditProducts(forms.Form):
+    title = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    #category = forms.ManyToManyField(Category, blank=True)
+
+    description = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+    costs = forms.DecimalField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+    weight = forms.DecimalField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))  # in Gramm
+    stock = forms.IntegerField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+    brand = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    #tax = forms.ForeignKey(Tax, on_delete=models.CASCADE, blank=True, default=None, null=True)
+    #discount = forms.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
+
+    picture = forms.FileField(required = True,
+        label = '',
+        widget = forms.FileInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    #property = forms.ManyToManyField(Property, blank=True)
 
 
 # Eigenschaft
-class FormCreateEditProperties(forms.ModelForm):
-    class Meta:
-        model = Property
-        fields = [
-            'title',
-        ]
+class FormCreateEditProperties(forms.Form):
+    title = forms.CharField(required=True,
+                            label='',
+                            widget=forms.TextInput(
+                                attrs={"placeholder": "",
+                                       "class": ""
+                                       }))
 
 # Kategorie
-class FormCreateEditCategory(forms.ModelForm):
-    class Meta:
-        model = Category
-        fields = [
-            'title',
-            'discount',
-        ]
+class FormCreateEditCategory(forms.Form):
+    title = forms.CharField(required=True,
+                            label='',
+                            widget=forms.TextInput(
+                                attrs={"placeholder": "",
+                                       "class": ""
+                                       }))
+  #  discount = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
 
 # discount
 class FormCreateEditDiscount(forms.ModelForm):
-    class Meta:
-        model = Discount
-        fields = [
-            'amount', 
-            # kasse automaisch, mitarbeiter automatisch, creation automatisch
-        ]
 
+       discount = forms.DecimalField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+#Is this right?
 
 
 # Mitarbeiterverwaltung
 
 # Mitarbeiter
-class FormCreateEditEmployee(forms.ModelForm):
-    class Meta:
-        model = Employee
-        fields = [
-            'firstname', 
-            'lastname', 
-            'role', 
-            'password', 
-            'picture' 
-        ]
+class FormCreateEditEmployee(forms.Form):
+    firstname = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    lastname = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    email = forms.EmailField(required = True,
+        label = '',
+        widget = forms.EmailInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    role = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    phone_number = forms.DecimalField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    work_since = forms.DateField(required = True,
+        label = '',
+        widget = forms.DateInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    img = forms.FileField(required = True,
+        label = '',
+        widget = forms.FileInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+    #color = Color field (not in Models)
+    #is_favourite= Form for boolean checkbox (not in models)
 
 
 

@@ -57,7 +57,8 @@ class Tax(models.Model):
 
 class Product(models.Model):
     title        = models.CharField(max_length=45)
-    category    = models.ManyToManyField(Category, blank=True) 
+    category    = models.ManyToManyField(Category, blank=True)
+    #description =    Model for Description
     costs       = models.DecimalField(max_digits=4,decimal_places=2)
     weight      = models.DecimalField(max_digits=6,decimal_places=0, null=True, blank=True) # in Gramm
     stock      = models.IntegerField
@@ -66,7 +67,8 @@ class Product(models.Model):
     discount       = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
     picture         = models.FileField(upload_to='pro_img/', default='mit_img/default.jpg', blank=True)
     property  = models.ManyToManyField(Property, blank=True)
-
+    #color = Model for colorfield
+    #is_favourite = Model for Boolean checkbox
     Service   = 'DI'
     PRODUCT   = 'PR'
     TYPE = [
