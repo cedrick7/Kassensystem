@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+
+<!-- Head -->
+{% block specific %}
+<title>Analyst - Kunden</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/toggle-switch.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+    {% include 'analyzation_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+<section id="body">
+    <div class="heading container-fluid">
+        <!-- change this content -->
+        <h3>Dashboard</h3>
+    </div>
+    <div class="content container-fluid">
+        <!-- Sturmzeiten [line-chart] -->
+
+        <!-- Kundenart und Zahlungsmethode [doughnut-chart] -->
+
+        <!-- Produkte Überblick (TOP-X Ranking => generell und nach Stammkunden) [bar-chart] -->
+
+        <!-- Dienstleistungen Überblick (TOP-X Ranking => generell und nach Stammkunden) [bar-chart] -->
+    </div>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightpick@1.3.4/lightpick.min.js"></script>
+
+<script type="text/javascript" src="{% static 'js/smart-forms.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/datepicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/analyzation_navbar.js' %}"></script>
+{% endblock javascript %}
