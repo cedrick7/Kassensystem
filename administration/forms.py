@@ -6,6 +6,64 @@ from cashbox.models import *
 from costumer.models import *
 from product.models import *
 
+styling = ""
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+# forms von cedi als template
+
+# Produkt anzeigen, bearbeiten, löschen
+class FormProductDetail(forms.Form):
+    title = forms.CharField(
+        required = True,
+        label = 'Prdouktname',
+        initial = Product.title,
+        widget = forms.TextInput(
+            attrs = {
+                "placeholder": "Produktname",
+                "class": "form-control needs-validation",
+                "style": styling
+            },
+        )
+    )
+    # ... = ...
+
+    class Meta:
+        model = Product
+        fields = ['title']
+
+
+# Produkt anlegen
+class FormProductCreate(forms.Form):
+    title = forms.CharField(
+        required = True,
+        label = 'Prdouktname',
+        # inital = "",
+        widget = forms.TextInput(
+            attrs = {
+                "placeholder": "Produktname",
+                "class": "form-control needs-validation",
+                "style": styling
+            }
+        )
+    )
+
+    # ... = ...
+
+    class Meta:
+        model = Product
+        fields = ['title']
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 # Sortimentverwaltung
@@ -173,7 +231,7 @@ class FormCreateEditSafe(forms.ModelForm):
         model = Safe
         fields = [
             'title',
-            'amount',           
+            'amount',
         ]
 
 # Zahlungsmittel
@@ -183,7 +241,7 @@ class FormCreateEditPayment(forms.ModelForm):
         fields = [
             'title',
             'picture',
-           
+
         ]
 
 # Kassen
