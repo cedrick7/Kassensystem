@@ -85,7 +85,7 @@ class FormCreateEditCategory(forms.Form):
   #  discount = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
 
 # discount
-class FormCreateEditDiscount(forms.ModelForm):
+class FormCreateEditDiscount(forms.Form):
 
        discount = forms.DecimalField(required = True,
         label = '',
