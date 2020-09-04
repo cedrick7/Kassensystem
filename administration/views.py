@@ -26,6 +26,14 @@ def administration_dashboard_view(request, *args, **kwargs):
     return render(request, "administration_dashboard.html", {})
 
 def administration_products_view(request, *args, **kwargs):
+    
+    queryset=Product.objects.all()[:5]
+    print(type(queryset))
+
+    for i in queryset:
+        print(i.title)
+
+
     return render(request, "administration_products.html",)
 
 def administration_products_detail_view(request, *args, **kwargs):
