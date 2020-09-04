@@ -14,3 +14,11 @@ Literatur:
 http://files.defcon.no/RUP/process/templates.htm
 https://mhuber.online/s/89CK989LpBf6osD
 https://mhuber.online/s/6ejtPCRWJd8w665
+
+Externe Bibliotheken:
+1. django-bootstrap4: 
+    https://github.com/zostera/django-bootstrap4.git
+2. django-widget-tweaks:
+    https://github.com/jazzband/django-widget-tweaks.git
+3. beautiful-soap (weiss net woher das kommt):
+    https://www.crummy.com/software/BeautifulSoup/
