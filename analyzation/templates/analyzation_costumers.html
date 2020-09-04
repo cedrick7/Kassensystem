@@ -7,9 +7,9 @@
 {% block specific %}
 <title>Analyst - Kunden</title>
 
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/navbar.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/styles.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/toggle-switch.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/analyzation_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/analyzation_styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/toggle-switch.css' %}" />
 {% endblock specific %}
 
 <!-- Body -->
@@ -21,16 +21,159 @@
 <section id="body">
     <div class="heading container-fluid">
         <!-- change this content -->
-        <h3>Dashboard</h3>
+        <h3>Kundenanalyse</h3>
     </div>
     <div class="content container-fluid">
+
         <!-- Sturmzeiten [line-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart line-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Kundenart und Zahlungsmethode [doughnut-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart doughnut-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col">
+                          <div class="chart-area">
+                              <div class="chart doughnut-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Produkte Überblick (TOP-X Ranking => generell und nach Stammkunden) [bar-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart bar-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart bar-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Dienstleistungen Überblick (TOP-X Ranking => generell und nach Stammkunden) [bar-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart bar-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart bar-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
 </section>
 {% endblock content %}

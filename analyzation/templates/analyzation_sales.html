@@ -7,9 +7,9 @@
 {% block specific %}
 <title>Analyst - Umsatz</title>
 
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/navbar.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/styles.css' %}" />
-<link rel="stylesheet" type="text/css" href="{% static 'assets/css/toggle-switch.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/analyzation_navbar.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/analyzation_styles.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/toggle-switch.css' %}" />
 {% endblock specific %}
 
 <!-- Body -->
@@ -21,145 +21,235 @@
 <section id="body">
     <div class="heading container-fluid">
         <!-- change this content -->
-        <h3>Dashboard</h3>
+        <h3>Umsatzanalyse</h3>
     </div>
     <div class="content container-fluid">
-        <!-- Einnahmen (Monat, Woche, Heute) [card] -->
-        <div class="row">
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow border-left-primary py-2">
-              <div class="card-body">
-                <div class="row align-items-center no-gutters">
-                  <div class="col mr-2">
-                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Einnahmen (Monat)</span></div>
-                    <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                  </div>
-                  <div class="col-auto"><i class="fas fa-euro-sign fa-2x text-gray-300"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow border-left-primary py-2">
-              <div class="card-body">
-                <div class="row align-items-center no-gutters">
-                  <div class="col mr-2">
-                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Einnahmen (Woche)</span></div>
-                    <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                  </div>
-                  <div class="col-auto"><i class="fas fa-euro-sign fa-2x text-gray-300"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow border-left-primary py-2">
-              <div class="card-body">
-                <div class="row align-items-center no-gutters">
-                  <div class="col mr-2">
-                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Einnahmen (Tag)</span></div>
-                    <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                  </div>
-                  <div class="col-auto"><i class="fas fa-euro-sign fa-2x text-gray-300"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Produkte, Dienstleistungen, Kunden (Heute) [card] -->
-        <div class="row">
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow border-left-primary py-2">
-              <div class="card-body">
-                <div class="row align-items-center no-gutters">
-                  <div class="col mr-2">
-                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Produkte (Heute)<br></span></div>
-                    <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                  </div>
-                  <div class="col-auto"><i class="fas fa-tags fa-2x text-gray-300"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow border-left-primary py-2">
-              <div class="card-body">
-                <div class="row align-items-center no-gutters">
-                  <div class="col mr-2">
-                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Dienstleistungen (Heute)<br></span></div>
-                    <div class="text-dark font-weight-bold h5 mb-0"><span>$40,000</span></div>
-                  </div>
-                  <div class="col-auto"><i class="fas fa-hands-helping fa-2x text-gray-300"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card shadow border-left-primary py-2">
-              <div class="card-body">
-                <div class="row align-items-center no-gutters">
-                  <div class="col mr-2">
-                    <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Kunden (Heute)</span></div>
-                    <div class="text-dark font-weight-bold h5 mb-0"><span>40</span></div>
-                  </div>
-                  <div class="col-auto"><i class="fas fa-users fa-2x text-gray-300"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Umsatz Überblick [line-chart] -->
-        <div class="row d-flex justify-content-center align-items-center align-content-center">
-          <div class="col">
-            <div class="row">
-              <div class="col-6 mb-4">
-                <div class="card shadow border-left-primary py-2">
-                  <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                      <div class="col mr-2">
-                        <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Kasse #1</span></div>
-                        <div class="text-dark font-weight-bold h5 mb-0"><span>Cedrick Candia Ferreira</span></div>
-                        <div class="text-dark font-weight-bold h5 mb-0"><span>499,12€</span></div>
-                      </div>
-                      <div class="col-auto"><i class="fas fa-circle fa-2x text-gray-300" style="color: #60dd49;"></i></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 mb-4">
-                <div class="card shadow border-left-primary py-2">
-                  <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                      <div class="col mr-2">
-                        <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Kasse #2</span></div>
-                        <div class="text-dark font-weight-bold h5 mb-0"><span>Jeremy Fuchs</span></div>
-                        <div class="text-dark font-weight-bold h5 mb-0"><span>231,21€</span></div>
-                      </div>
-                      <div class="col-auto"><i class="fas fa-circle fa-2x text-gray-300" style="color: #60dd49;"></i></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 mb-4">
-                <div class="card shadow border-left-primary py-2">
-                  <div class="card-body">
-                    <div class="row align-items-center no-gutters">
-                      <div class="col mr-2">
-                        <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Kasse #3</span></div>
-                        <div class="text-dark font-weight-bold h5 mb-0"><span>-</span></div>
-                        <div class="text-dark font-weight-bold h5 mb-0"><span>-</span></div>
-                      </div>
-                      <div class="col-auto"><i class="fas fa-circle fa-2x text-gray-300" style="color: #e5053a;"></i></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Produkte Überblick und Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] -->
 
-        <!-- Zahlungsmethoden und Kassen (Online-Status, Mitarbeitername, Kasseninhalt) [doughnut-chart, card] -->
+        <!-- Einnahmen (Monat, Woche, Heute) [card] -->
+        <div class="row-card row">
+          <div class="col-card col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-1"><span>Einnahmen (Monat)</span></div>
+                    <div class="text-2"><span>40.000€</span></div>
+                  </div>
+                  <div class="col-auto"><i class="fas fa-euro-sign fa-2x"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-card col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-1"><span>Einnahmen (Woche)</span></div>
+                    <div class="text-2"><span>40.000€</span></div>
+                  </div>
+                  <div class="col-auto"><i class="fas fa-euro-sign fa-2x"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-card col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-1"><span>Einnahmen (Heute)</span></div>
+                    <div class="text-2"><span>40,000€</span></div>
+                  </div>
+                  <div class="col-auto">
+                      <i class="fas fa-euro-sign fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produkte, Dienstleistungen, Kunden (Heute) [card] -->
+        <div class="row-card row">
+          <div class="col-card col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-1"><span>Produkte (Heute)</span></div>
+                    <div class="text-2"><span>40.000€</span></div>
+                  </div>
+                  <div class="col-auto"><i class="fas fa-tags fa-2x"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-card col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-1"><span>Dienstleistungen (Heute)</span></div>
+                    <div class="text-2"><span>40.000€</span></div>
+                  </div>
+                  <div class="col-auto"><i class="fas fa-hands-helping fa-2x"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-card col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="text-1"><span>Kunden (Heute)</span></div>
+                    <div class="text-2"><span>40,000€</span></div>
+                  </div>
+                  <div class="col-auto">
+                      <i class="fas fa-users fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Umsatz Überblick [line-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart line-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produkte Überblick und Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart bar-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-chart col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart bar-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kassen (Online-Status, Mitarbeitername, Kasseninhalt) [card] -->
+        <div class="row-card row">
+          <div class="col-card col-12 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="cashbox-heading"><span>Kasse #1</span></div>
+                    <div class="text-3"><span>Mitarbeitername 1</span></div>
+                    <div class="text-4"><span>40.000€</span></div>
+                  </div>
+                  <div class="col-auto"><i class="fas fa-circle fa-2x status-online"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-card col-12 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="cashbox-heading"><span>Kasse #2</span></div>
+                    <div class="text-3"><span>Mitarbeitername 2</span></div>
+                    <div class="text-4"><span>40.000€</span></div>
+                  </div>
+                  <div class="col-auto"><i class="fas fa-circle fa-2x status-online"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-card col-12 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="cashbox-heading"><span>Kasse #3</span></div>
+                    <div class="text-3"><span>-</span></div>
+                    <div class="text-4"><span>-</span></div>
+                  </div>
+                  <div class="col-auto">
+                      <i class="fas fa-circle fa-2x status-offline"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zahlungsmethoden [doughnut-chart] -->
+        <div class="row-chart row">
+          <div class="col-chart col-12">
+            <div class="card">
+              <div class="card-header">
+              <!-- change this content -->
+              <p>Umsatz Überblick</p>
+            </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col col-chart">
+                          <div class="chart-area">
+                              <div class="chart doughnut-chart">
+                                  <canvas height="200" width="200"></canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Sturmzeiten [line-chart] -->
     </div>
