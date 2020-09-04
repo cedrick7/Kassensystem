@@ -27,14 +27,17 @@ def administration_dashboard_view(request, *args, **kwargs):
 
 def administration_products_view(request, *args, **kwargs):
     
-    queryset=Product.objects.all()[:5]
+    queryset=Product.objects.all()
     print(type(queryset))
 
     for i in queryset:
         print(i.title)
+    
+    context = {
+        'products': queryset
+    }
 
-
-    return render(request, "administration_products.html",)
+    return render(request, "administration_products.html", context)
 
 def administration_products_detail_view(request, *args, **kwargs):
     create_edit_products_form = FormCreateEditProducts(request.POST or None)
