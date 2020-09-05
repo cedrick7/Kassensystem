@@ -22,3 +22,9 @@ Externe Bibliotheken:
     https://github.com/jazzband/django-widget-tweaks.git
 3. beautiful-soap (weiss net woher das kommt):
     https://www.crummy.com/software/BeautifulSoup/
+4. django-extensions:
+    https://github.com/django-extensions/django-extensions.git
+5. django-colorfield:
+    https://github.com/fabiocaccamo/django-colorfield.git
+6. django-rest-framework:
+    https://www.django-rest-framework.org bzw. https://github.com/encode/django-rest-framework.git
