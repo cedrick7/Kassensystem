@@ -191,7 +191,7 @@
               margin-left: 0;
 
               .col-filter {
-                margin-bottom: $space-between;
+                margin-bottom: 40px!important;
 
                 .accordion-filter {
 
@@ -265,12 +265,33 @@
                 margin-right: .5rem;
 
                 .chart-area {
+                  display: flex!important;
+                    flex-direction: column!important;
+                    justify-content: center!important;
+                    align-content: center!important;
+                    align-items: center!important;
 
-                  .chart {}
+                  .chart {
+                    display: flex!important;
+                    flex-direction: column!important;
+                    justify-content: center!important;
+                    align-content: center!important;
+                    align-items: center!important;
+
+                    height: auto;
+                    max-height: 600px;
+                    width: auto;
+                  }
 
                   .line-chart {}
 
-                  .bar-chart {}
+                  .bar-chart {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+                  }
 
                   .pie-chart {}
 
