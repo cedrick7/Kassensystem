@@ -7,15 +7,15 @@ class Employee(models.Model):
     # geändert und hinzugefügt
     firstname            = models.CharField(max_length=45, blank=False)
     lastname             = models.CharField(max_length=45, blank=False)
-    email                = models.EmailField(blank=False)
+    # email                = models.EmailField(blank=False)
     username             = models.CharField(max_length=45, blank=False)
     password             = models.BinaryField(max_length=72, blank=False, editable=True)
-    password_confirm     = models.BinaryField(max_length=72, blank=False, editable=True)
-    password_old         = models.BinaryField(max_length=72, blank=False, editable=True) # default: editable=False
-    password_new         = models.BinaryField(max_length=72, editable=True, blank=False)
-    password_new_confirm = models.BinaryField(max_length=72, editable=True, blank=False)
+    # password_confirm     = models.BinaryField(max_length=72, blank=False, editable=True)
+    # password_old         = models.BinaryField(max_length=72, blank=False, editable=True) # default: editable=False
+    # password_new         = models.BinaryField(max_length=72, editable=True, blank=False)
+    # password_new_confirm = models.BinaryField(max_length=72, editable=True, blank=False)
     # img wird nicht benötigt, denn wir hatten ja gesagt, dass wir das mit dem profilbildern weglassen
-    img                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
+    picture                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
     role_choice = [
         ('cashier', 'Kassierer'),
@@ -72,7 +72,7 @@ class Request(models.Model):
     firstname       = models.CharField(max_length=45, blank=True)
     lastname        = models.CharField(max_length=45, blank=True)
     password        = models.BinaryField(blank=False, editable=True) # default: editable=False
-    passwordreenter = models.BinaryField(blank=False, editable=True)
+    # passwordreenter = models.BinaryField(blank=False, editable=True)
     CASHIER         = 'KA'
     ADMINISTRATOR   = 'AD'
     ANALYST         = 'AN'

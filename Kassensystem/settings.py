@@ -37,11 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 
     # third party
     'bootstrap4',
     'widget_tweaks',
+<<<<<<< HEAD
     'rest_framework',
+=======
+    'colorfield',
+>>>>>>> 1d6929f7d6715e22f08f26ef1b7145f3507a90d8
 
     # own
     'administration',

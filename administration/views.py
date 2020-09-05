@@ -105,19 +105,39 @@ def administration_invoices_detail_view(request, *args, **kwargs):
     return render(request, "administration_invoices_detail.html", {})
 
 def administration_cashboxes_view(request, *args, **kwargs):
-    return render(request, "administration_cashboxes.html", {})
+    create_edit_cashbox_form = FormCreateEditCashbox(request.POST or None)
+
+    context = {
+        'form': create_edit_cashbox_form
+    }
+    return render(request, "administration_cashboxes.html", context)
 
 def administration_safes_view(request, *args, **kwargs):
-    return render(request, "administration_safes.html", {})
+    create_edit_safe_form = FormCreateEditSafe(request.POST or None)
+
+    context = {
+        'form': create_edit_safe_form
+    }
+    return render(request, "administration_safes.html", context)
 
 def administration_backups_view(request, *args, **kwargs):
     return render(request, "administration_backups.html", {})
 
 def administration_backups_detail_view(request, *args, **kwargs):
-    return render(request, "administration_backups_detail.html", {})
+    create_edit_backup_form = FormCreateEditBackup(request.POST or None)
+
+    context = {
+        'form': create_edit_backup_form
+    }
+    return render(request, "administration_backups_detail.html", context)
 
 def administration_payments_view(request, *args, **kwargs):
-    return render(request, "administration_payments.html", {})
+    create_edit_payment_form = FormCreateEditPayment(request.POST or None)
+
+    context = {
+        'form': create_edit_payment_form
+    }
+    return render(request, "administration_payments.html", context)
 
 def administration_requests_view(request, *args, **kwargs):
     return render(request, "administration_requests.html", {})
