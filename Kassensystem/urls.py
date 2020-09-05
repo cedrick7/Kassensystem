@@ -39,7 +39,7 @@ urlpatterns = [
 
     path('administration/', administration_dashboard_view, name='administration_dashboard'),
     path('administration/products/', administration_products_view, name='administration_products'),
-    path('administration/products/detail/', administration_products_detail_view, name='administration_products_detail'),
+    path('administration/products/detail/<int:id>/', administration_products_detail_view, name='administration_products_detail'),
     path('administration/services/', administration_services_view, name='administration_services'),
     path('administration/services/detail/', administration_services_detail_view, name='administration_services_detail'),
     path('administration/categories/', administration_categories_view, name='administration_categories'),
