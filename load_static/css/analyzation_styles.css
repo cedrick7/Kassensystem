@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #00299C;
+}
+.btn-primary:active {
+  background-color: #0043E0;
+}
+.btn-primary .fa {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#body .container-fluid {
+  margin-bottom: 10px;
+}
+#body .heading {
+  margin-bottom: 10px;
+}
+@media (min-width: 576px) {
+  #body .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+}
+#body .heading h4 {
+  margin-bottom: 0;
+  font-size: 28px;
+  color: #000;
+}
+@media (min-width: 576px) {
+  #body .heading .btn {
+    display: inline-block;
+  }
+}
+#body .heading .btn i {
+  color: #fff;
+}
+#body .content {
+  margin-top: 10px;
+}
+#body .content .row-card .col-card {
+  margin-bottom: 10px;
+}
+#body .content .row-card .col-card .card {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  padding-bottom: 0.5rem;
+}
+#body .content .row-card .col-card .card .card-header p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+}
+#body .content .row-card .col-card .card .card-body .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0;
+}
+#body .content .row-card .col-card .card .card-body .row .col {
+  margin-right: 0.5rem;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-1 {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-1 span {
+  word-wrap: break-word;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-2 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-2 span {
+  word-wrap: break-word;
+}
+#body .content .row-card .col-card .card .card-body .row .col .cashbox-heading {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 1.75;
+}
+#body .content .row-card .col-card .card .card-body .row .col .cashbox-heading span {
+  word-wrap: break-word;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-3 {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 1;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-3 span {
+  word-wrap: break-word;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-4 {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 18px;
+  word-wrap: break-word;
+  line-height: 1;
+}
+#body .content .row-card .col-card .card .card-body .row .col .text-4 span {
+  word-wrap: break-word;
+}
+#body .content .row-card .col-card .card .card-body .row .col-auto .status-online {
+  color: #60dd49;
+}
+#body .content .row-card .col-card .card .card-body .row .col-auto .status-offline {
+  color: #e5053a;
+}
+#body .content .row-chart .col-chart {
+  margin-bottom: 10px;
+}
+#body .content .row-chart .col-chart .card {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  padding-bottom: 0.5rem;
+}
+#body .content .row-chart .col-chart .card .card-header p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+}
+#body .content .row-chart .col-chart .card .card-body .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter {
+  margin-bottom: 10px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  padding-bottom: 0.5rem;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header {
+  text-align: center;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header a:hover {
+  color: #545252;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header a .fas {
+  padding-left: 10px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .collapse .card-body form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 0 15px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .collapse .card-body form .form-group {
+  display: block;
+  margin: 10px;
+  padding: 0 15px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-chart {
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=analyzation_styles.css.map */

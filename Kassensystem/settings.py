@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 
     # third party
     'bootstrap4',
     'widget_tweaks',
+    'colorfield',
 
     # own
     'administration',
