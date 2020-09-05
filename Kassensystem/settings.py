@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # third party
     'bootstrap4',
     'widget_tweaks',
+    'rest_framework',
 
     # own
     'administration',

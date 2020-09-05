@@ -1,4 +1,4 @@
-"""Projekt1 URL Configuration
+"""Kassensystem URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -58,12 +59,16 @@ urlpatterns = [
     path('administration/payments/', administration_payments_view, name='administration_payments'),
     path('administration/requests/', administration_requests_view, name='administration_requests'),
 
-    path('analyzation/', analyzation_dashboard_view, name='analyzation_dashboard'),
+    path('Analyst/', analyzation_dashboard_view, name='analyzation_dashboard'),
     path('analyzation/sales/', analyzation_sales_view, name='analyzation_sales'),
     path('analyzation/costumers/', analyzation_costumers_view, name='analyzation_costumers'),
     path('analyzation/employees/', analyzation_employees_view, name='analyzation_employees'),
 
     path('superuser/', admin.site.urls),
+
+    #url(r'^Analyst/$', DashboardView.as_view(), name='analyzation_dashboard'),
+    #url(r'^api/data/$', get_data, name='api-data'),
+    url(r'^api/dashboard/chart/data/$', DashboardChartData.as_view(), name='api-dashboard-chart-data'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
