@@ -15,13 +15,8 @@ from .forms import *
 # views:
 
 def cashbox_dashboard_view(request, *args, **kwargs):
-    CreateReversalBill = FormCreateReversalBill(request.Post or None)
 
-    context = {
-        'form': CreateReversalBill
-
-    }
-    return render(request, "cashbox_dashboard.html", context)
+    return render(request, "cashbox_dashboard.html",)
 
 
 def cashbox_pay_view(request, *args, **kwargs):

@@ -9,6 +9,12 @@ from product.models import *
 styling = ""
 
 
+choices = (
+    ('cashier', 'Kassierer'),
+    ('admin', 'Administrator'),
+    ('analyst', 'Analyst')
+)
+
 # ----------------------------------------------------------------------------------------------------------------------
 # forms von cedi als template
 
@@ -214,56 +220,140 @@ class FormCreateEditEmployee(forms.Form):
 # Systemverwaltung
 
 # Backup
-class FormCreateEditBackup(forms.ModelForm):
-    class Meta:
-        model = Backup
-        fields = [
-            'title',
-            'store',
-            'creation',
-            'comment',
-            # mitarbeiter automatisch
-        ]
+class FormCreateEditBackup(forms.Form):
+    title = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    creation = forms.DateTimeField(required = True,
+        label = '',
+        widget = forms.DateInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    store = forms.FileField(required = True,
+        label = '',
+        widget = forms.FileInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    comment = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+
+    #employee = forms.ForeignKey(Employee, on_delete=models.CASCADE, blank=True, default=None)
 
 
 # Safe
-class FormCreateEditSafe(forms.ModelForm):
-    class Meta:
-        model = Safe
-        fields = [
-            'title',
-            'amount',
-        ]
+class FormCreateEditSafe(forms.Form):
+    title = forms.CharField(required=True,
+                             label='',
+                             widget=forms.TextInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    amount = forms.DecimalField(required=True,
+                                 label='',
+                                 widget=forms.NumberInput(
+                                     attrs={"placeholder": "",
+                                            "class": ""
+                                            }))
 
 # Zahlungsmittel
-class FormCreateEditPayment(forms.ModelForm):
-    class Meta:
-        model = Paymenttool
-        fields = [
-            'title',
-            'picture',
-        ]
+class FormCreateEditPayment(forms.Form):
+    title = forms.CharField(required=True,
+                                 label='',
+                                 widget=forms.TextInput(
+                                     attrs={"placeholder": "",
+                                            "class": ""
+                                            }))
+
+    picture = forms.FileField(required=True,
+                                 label='',
+                                 widget=forms.FileInput(
+                                     attrs={"placeholder": "",
+                                            "class": ""
+                                            }))
 
 # Kassen
-class FormCreateEditCashbox(forms.ModelForm):
-    class Meta:
-        model = Cashbox
-        fields = [
-            'title',
-            'amount',
-        ]
+class FormCreateEditCashbox(forms.Form):
+    title = forms.CharField(required=True,
+                             label='',
+                             widget=forms.TextInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    amount = forms.DecimalField(required=True,
+                                 label='',
+                                 widget=forms.NumberInput(
+                                     attrs={"placeholder": "",
+                                            "class": ""
+                                            }))
 
 # Kunden
 # siehe Kundenverwaltung
 
-class FormEmployeeCreateEdit(forms.ModelForm):
-    class Meta:
-        model = Request
-        fields = [
-            'firstname',
-            'lastname',
-            'role',
-            'password'
-            # type automaisch, username automatisch
-            # Administrator erstellt, bearbeitet, löscht employee
-        ]
+class FormEmployeeCreateEdit(forms.Form):
+    firstname = forms.CharField(required=True,
+                             label='',
+                             widget=forms.TextInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    lastname = forms.CharField(required=True,
+                             label='',
+                             widget=forms.TextInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    email = forms.EmailField(required=True,
+                             label='',
+                             widget=forms.EmailInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    phone_number = forms.CharField(required=True,
+                             label='',
+                             widget=forms.NumberInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    work_since = forms.DateTimeField(required=True,
+                             label='',
+                             widget=forms.DateInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+    role = forms.ChoiceField(
+        required = True,
+        label = 'Rolle auswählen',
+        choices = choices,
+        widget = forms.Select(
+            attrs = {
+                'class': 'form-control'
+            }
+        ))
+
+    img = forms.FileField(required=True,
+                             label='',
+                             widget=forms.FileInput(
+                                 attrs={"placeholder": "",
+                                        "class": ""
+                                        }))
+
+#class FormAdministrationEdit(forms.Form):
