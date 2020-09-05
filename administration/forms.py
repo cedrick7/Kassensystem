@@ -16,7 +16,7 @@ styling = ""
 class FormProductDetail(forms.Form):
     title = forms.CharField(
         required = True,
-        label = 'Prdouktname',
+        label = 'Produktname',
         initial = Product.title,
         widget = forms.TextInput(
             attrs = {
@@ -225,6 +225,7 @@ class FormCreateEditBackup(forms.ModelForm):
             # mitarbeiter automatisch
         ]
 
+
 # Safe
 class FormCreateEditSafe(forms.ModelForm):
     class Meta:
@@ -241,7 +242,6 @@ class FormCreateEditPayment(forms.ModelForm):
         fields = [
             'title',
             'picture',
-
         ]
 
 # Kassen

@@ -86,7 +86,7 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = "Producte"
 
-    # prints brand + ProduCttitle, wenn brand leer Nur ProduCttitle
+    # prints brand + Producttitle, wenn brand leer Nur ProduCttitle
     def __str__(self):
         
         if(self.brand == ""):
