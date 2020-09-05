@@ -42,11 +42,8 @@ INSTALLED_APPS = [
     # third party
     'bootstrap4',
     'widget_tweaks',
-<<<<<<< HEAD
     'rest_framework',
-=======
     'colorfield',
->>>>>>> 1d6929f7d6715e22f08f26ef1b7145f3507a90d8
 
     # own
     'administration',
