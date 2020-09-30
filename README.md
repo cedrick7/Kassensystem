@@ -23,7 +23,7 @@ Externe Bibliotheken:
     https://github.com/zostera/django-bootstrap4.git
 2. django-widget-tweaks:
     https://github.com/jazzband/django-widget-tweaks.git
-3. beautiful-soap (weiss net woher das kommt):
+3. beautiful-soap:
     https://www.crummy.com/software/BeautifulSoup/
 4. django-extensions:
     https://github.com/django-extensions/django-extensions.git
