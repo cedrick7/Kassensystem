@@ -39,11 +39,16 @@ def administration_products_view(request, *args, **kwargs):
 
     return render(request, "administration_products.html", context)
 
-def administration_products_detail_view(request, *args, **kwargs):
+def administration_products_detail_view(request, id,  *args, **kwargs):
     create_edit_products_form = FormCreateEditProducts(request.POST or None)
-
+    
+    print(id)
+    object = Product.objects.get(id=id)
+    print(object)
+    
     context = {
-        'form': create_edit_products_form
+        'form': create_edit_products_form,
+        'object': object 
     }
     return render(request, "administration_products_detail.html", context)
 

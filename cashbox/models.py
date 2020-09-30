@@ -8,7 +8,7 @@ from product.models import Product
 
 class Cashbox(models.Model):
     title       = models.CharField(max_length=45)
-    amount      = models.DecimalField(max_digits=6,decimal_places=2)
+    amount      = models.DecimalField(max_digits=6,decimal_places=2) # in Euro
     
 
     class Meta:
@@ -30,7 +30,7 @@ class Paymenttool(models.Model):
 
 class Safe(models.Model):
     title       = models.CharField(max_length=45)
-    amount      = models.DecimalField(max_digits=8,decimal_places=2)
+    amount      = models.DecimalField(max_digits=8,decimal_places=2) # in Euro
     employee = models.ManyToManyField(Employee, blank=True)
 
     class Meta:
@@ -42,12 +42,12 @@ class Safe(models.Model):
 
 class Bill(models.Model):
     creation        = models.DateTimeField(blank=False)
-    totalcosts    = models.DecimalField(max_digits=7,decimal_places=2, blank=True, default=0) # max: 10.000,00
+    totalcosts    = models.DecimalField(max_digits=7,decimal_places=2, blank=True, default=0) # max: 10.000,00 # in Euro
     # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
     employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
     paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
-    discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
+    discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
     pdf            = models.FileField(upload_to='rec_pdf/', default='mit_img/default.jpg', blank=True)
     
 
@@ -65,7 +65,7 @@ class Bill(models.Model):
 class Bill_Product(models.Model):
     bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
-    amount = models.IntegerField(default=50)
+    amount = models.IntegerField(default=50) # in Stück
 
     class Meta:
         unique_together=[['bill', 'product']]

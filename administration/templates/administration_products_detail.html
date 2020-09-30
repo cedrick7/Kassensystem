@@ -16,6 +16,7 @@
 {% endblock navbar %}
 
 {% block content %}
+
 <section id="body">
     <div class="heading container-fluid">
         <!-- change this content -->
@@ -31,6 +32,7 @@
               <!-- change this content -->
               <p>Produkt bearbeiten</p>
             </div>
+
             <div class="card-body">
               <div class="card-row-2 row">
                   <div class="col-12">
@@ -39,8 +41,8 @@
                         <div class="form-row form-row-string">
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="first_name"><strong>Produktname</strong></label>
-                                    <input class="form-control" type="text" placeholder="Produktname" name="productname">
+                                    <label for="first_name"><strong>Produktname</strong></label>                    
+                                    <input class="form-control" type="text" placeholder="Produktname" name="productname" value= >
                                 </div>
                             </div>
                         </div>
@@ -48,7 +50,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="first_name"><strong>Produktbeschreibung</strong></label>
-                                    <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name">
+                                    <input class="form-control" type="text" placeholder="Produktbeschreibung" name="first_name" value={{object.description}}>
                                 </div>
                             </div>
                         </div>

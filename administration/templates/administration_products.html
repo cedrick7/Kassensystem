@@ -70,8 +70,8 @@
                                     <th>Marke</th>
                                     <th>Preis</th>
                                     <th>Bestand</th>
-                                    <th>Kategorie</th>
-                                    <th>Eigenschaft</th>
+                                    <th>Kategorien</th>
+                                    <th>Eigenschaften</th>
                                     <th>Gewicht</th>
                                     <th>Bild</th>
                                     <th>Steuersatz</th>
@@ -94,7 +94,7 @@
                                     <td>{{i.tax}}</td>
                                     <td>{{i.discount}}</td>
                                     <td class="td-icons">
-                                        <a href="{% url 'administration_products_detail' %}"><i class="fa fa-pencil"></i></a>
+                                        <a href="{% url 'administration_products_detail' i.id %} "><i class="fa fa-pencil"></i></a>
                                         <a href="#"><i class="fa fa-remove"></i></a>
                                     </td>
                                 </tr>
@@ -108,8 +108,8 @@
                                     <th>Marke</th>
                                     <th>Preis</th>
                                     <th>Bestand</th>
-                                    <th>Kategorie</th>
-                                    <th>Eigenschaft</th>
+                                    <th>Kategorien</th>
+                                    <th>Eigenschaften</th>
                                     <th>Gewicht</th>
                                     <th>Bild</th>
                                     <th>Steuersatz</th>
