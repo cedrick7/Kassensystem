@@ -10,6 +10,9 @@ Namenskonvention:
 https://mndthmde-my.sharepoint.com/:w:/g/personal/jeremy_fuchs_mnd_thm_de/EWDOBSHuxy5BqfuX9w6Gj-gBPqURq-E1qVNZXRdFUtionA?rtime=ShbM2alN2Eg
 https://www.javatpoint.com/java-naming-conventions
 
+Dokumentation:
+https://github.com/cedrick7/projekt1/tree/master/Dokumentation
+
 Literatur:
 http://files.defcon.no/RUP/process/templates.htm
 https://mhuber.online/s/89CK989LpBf6osD
