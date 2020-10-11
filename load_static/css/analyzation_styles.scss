@@ -191,90 +191,175 @@
               margin-left: 0;
 
               .col-filter {
-                margin-bottom: $space-between;
+                margin-bottom: 10px !important;
 
-                .accordion-filter {
+                .daterange-form {
+                  display: flex !important;
+                  flex-direction: column;
+                  justify-content: center !important;
+                  align-content: center !important;
+                  align-items: center !important;
+                  padding: 0 15px;
+                  margin: 0 auto;
+                  width: 447px;
+                  min-width: 447px;
+                  max-width: 447px;
 
-                  .card {
-                    border: $card-border-width solid $card-border-color;
-                    border-radius: $card-border-radius;
-                    box-shadow: $card-box-shadow-analyst;
-                    padding-bottom: .5rem;
+                  .form-group {
+                    display: block;
+                    margin: 10px 5px;
+                    padding: 0 15px;
 
-                    .card-header {
-                      text-align: center;
+                    .input-group {
 
-                      a {
-                        font-size: $card-heading-font-size;
-                        font-weight: $card-heading-font-weight;
-                        color: $card-heading-color;
-                        margin-bottom: 0;
+                      .input-group-prepend {
 
-                        &:hover {
-                          color: $color-black-hover;
-                        }
-
-                        .fas {
-                          padding-left: 10px;
+                        .input-group-text {
                         }
                       }
+
+                      .form-control {
+                      }
                     }
+                  }
+                }
 
-                    .collapse {
+                .radio-form {
+                  display: flex !important;
+                  flex-direction: column;
+                  justify-content: center !important;
+                  align-content: center !important;
+                  align-items: center !important;
+                  margin: -20px auto;
 
-                      .card-body {
+                  .radio-form-div-1 {
+                    padding: 0;
+                    margin: 0;
+                    height: 10vh;
+                    width: 15vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                        form {
-                          display: flex;
-                          flex-direction: column;
-                          justify-content: center;
-                          align-content: center;
-                          align-items: center;
-                          margin: 10px;
-                          padding: 0 15px;
+                    .radio-form-div-2 {
+                      background-color: white;
+                      height: 40px;
+                      width: 260px;
+                      position: absolute;
+                      //box-shadow: 0 0 30px 0px #d1d1d1;
+                      border: .5px solid rgb(206, 212, 218);
+                      border-radius: $card-border-radius;
+                      overflow: hidden;
 
-                          .form-group {
-                            display: block;
-                            margin: 10px;
-                            padding: 0 15px;
+                      input[type="radio"] {
+                        display: none;
+                      }
 
-                            .input-group {
+                      label:hover {
+                        cursor: pointer;
+                      }
 
-                              .input-group-prepend {
+                      .label0, .label1 {
+                        display: block;
+                        height: 180px;
+                        width: 130px;
+                        background-size: 130px 180px;
+                        background: linear-gradient(to bottom, white 0, white 90px, $links-color 90px, $links-color 180px);
+                        position: absolute;
+                        top: 0;
+                        transition: 0.2s;
+                        color: #2c2c2c;
+                      }
 
-                                .input-group-text {}
-                              }
+                      .label1 {
+                        right: 0;
+                      }
 
-                              .form-control {}
-                            }
+                      span {
+                        display: flex;
+                        height: 45px;
+                        width: 130px;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: $font-weight-bold;
+                      }
+
+                      input:checked + label {
+                        background-position: 0 -90px;
+                        color: white;
+                        transition: 0.2s;
+                      }
+                    }
+                  }
+
+                  // Select Day
+                  .form-row {
+                    width: 260px;
+                    margin-top: -10px;
+
+                    .form-group {
+
+                      .input-group {
+                        padding: 0;
+
+                        .input-group-item {
+                          &:first-child {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                            width: 260px;
+                            height: 42px !important;
+                            border: $card-border-width solid $card-border-color;
+                            border-radius: $card-border-radius;
+                            border-top-right-radius: 0;
+                            border-bottom-right-radius: 0;
+                            background-color: $color-grey-hover;
                           }
+                        }
 
-                          .date-select {}
-
-                          .selection-select {}
-
-                          .comparison-select {}
+                        .btn-submit {
+                          width: 100%;
                         }
                       }
                     }
                   }
                 }
-              }
 
-              .col-chart {
-                margin-right: .5rem;
+                .col-chart {
+                  margin-right: .5rem;
 
-                .chart-area {
+                  .chart-area {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    justify-content: center !important;
+                    align-content: center !important;
+                    align-items: center !important;
+                    overflow-x: scroll;
 
-                  .chart {}
+                    .chart-div {
+                      display: flex !important;
+                      flex-direction: column !important;
+                      justify-content: center !important;
+                      align-content: center !important;
+                      align-items: center !important;
 
-                  .line-chart {}
+                      .chart {
+                      }
 
-                  .bar-chart {}
+                      .line-chart {
+                      }
 
-                  .pie-chart {}
+                      .bar-chart {
+                      }
 
-                  .doughnnout-chart {}
+                      .pie-chart {
+                      }
+
+                      .doughnout-chart {
+                      }
+                    }
+                  }
                 }
               }
             }

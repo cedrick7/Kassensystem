@@ -26,7 +26,7 @@
   overflow: hidden;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   border: 0;
-  margin: 5vw;
+  margin: 2vw;
   padding: 0;
 }
 #body .card .card-body {
@@ -63,6 +63,7 @@
   margin: 50px 0;
   padding: 10px;
   text-align: center;
+  display: block;
 }
 #body .card .card-body .row .col:last-child h3 {
   font-size: 28px;
@@ -82,7 +83,7 @@
   align-items: center;
   align-content: center;
   width: 10%;
-  height: 42px;
+  height: 42px !important;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
   border-top-right-radius: 0;
@@ -99,6 +100,11 @@
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 #body .card .card-body .row .col:last-child .form-row .form-group .input-group .btn-submit {
   width: 100%;
