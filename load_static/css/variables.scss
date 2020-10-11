@@ -6,6 +6,7 @@ $color-white: #fff;
 $color-grey: #dfdfdf;
 $color-grey-hover: #f7f7f7;
 $color-black: #000;
+$color-black-hover: #545252;
 
 $color-green-1: rgba(212,237,218,1);
 $color-green-2: rgba(212,237,218,.2);
@@ -18,6 +19,7 @@ $color-red-2: rgba(248,215,218,.2);
 $size-navbar: 20px;
 $size-page-heading: 28px;
 $size-header: 20px;
+$size-paragraph-big: 18px;
 $size-paragraph: 16px;
 $size-icon: 20px;
 
@@ -36,6 +38,7 @@ $card-border-width: 1px;
 $card-border-color: $color-grey;
 $card-border-radius: 5px;
 $card-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+$card-box-shadow-analyst: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 
 // links:
 $links-color: $color-blue;

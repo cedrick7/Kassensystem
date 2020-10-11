@@ -61,7 +61,7 @@ urlpatterns = [
 
     path('Analyst/', analyzation_dashboard_view, name='analyzation_dashboard'),
     path('analyzation/sales/', analyzation_sales_view, name='analyzation_sales'),
-    path('analyzation/costumers/', analyzation_costumers_view, name='analyzation_costumers'),
+    path('analyzation/customers/', analyzation_customers_view, name='analyzation_customers'),
     path('analyzation/employees/', analyzation_employees_view, name='analyzation_employees'),
 
     path('superuser/', admin.site.urls),
@@ -69,6 +69,9 @@ urlpatterns = [
     #url(r'^Analyst/$', DashboardView.as_view(), name='analyzation_dashboard'),
     #url(r'^api/data/$', get_data, name='api-data'),
     url(r'^api/dashboard/chart/data/$', DashboardChartData.as_view(), name='api-dashboard-chart-data'),
+    url(r'^api/sales/chart/data/$', SalesChartData.as_view(), name='api-sales-chart-data'),
+    url(r'^api/customers/chart/data/$', CustomerChartData.as_view(), name='api-customers-chart-data'),
+    url(r'^api/employees/chart/data/$', EmployeeChartData.as_view(), name='api-employees-chart-data'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

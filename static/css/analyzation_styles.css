@@ -155,69 +155,124 @@
   margin-left: 0;
 }
 #body .content .row-chart .col-chart .card .card-body .row .col-filter {
-  margin-bottom: 40px !important;
+  margin-bottom: 10px !important;
 }
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card {
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .daterange-form {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 447px;
+  min-width: 447px;
+  max-width: 447px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .daterange-form .form-group {
+  display: block;
+  margin: 10px 5px;
+  padding: 0 15px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  margin: -20px auto;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 {
+  padding: 0;
+  margin: 0;
+  height: 10vh;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 {
+  background-color: white;
+  height: 40px;
+  width: 260px;
+  position: absolute;
+  border: 0.5px solid #ced4da;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 input[type=radio] {
+  display: none;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 label:hover {
+  cursor: pointer;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 .label0, #body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 .label1 {
+  display: block;
+  height: 180px;
+  width: 130px;
+  background-size: 130px 180px;
+  background: linear-gradient(to bottom, white 0, white 90px, #007bff 90px, #007bff 180px);
+  position: absolute;
+  top: 0;
+  transition: 0.2s;
+  color: #2c2c2c;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 .label1 {
+  right: 0;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 span {
+  display: flex;
+  height: 45px;
+  width: 130px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .radio-form-div-1 .radio-form-div-2 input:checked + label {
+  background-position: 0 -90px;
+  color: white;
+  transition: 0.2s;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .form-row {
+  width: 260px;
+  margin-top: -10px;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .form-row .form-group .input-group {
+  padding: 0;
+}
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .form-row .form-group .input-group .input-group-item:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 260px;
+  height: 42px !important;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  padding-bottom: 0.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #f7f7f7;
 }
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header {
-  text-align: center;
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .radio-form .form-row .form-group .input-group .btn-submit {
+  width: 100%;
 }
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header a {
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 0;
-}
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header a:hover {
-  color: #545252;
-}
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .card-header a .fas {
-  padding-left: 10px;
-}
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .collapse .card-body form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 10px;
-  padding: 0 15px;
-}
-#body .content .row-chart .col-chart .card .card-body .row .col-filter .accordion-filter .card .collapse .card-body form .form-group {
-  display: block;
-  margin: 10px;
-  padding: 0 15px;
-}
-#body .content .row-chart .col-chart .card .card-body .row .col-chart {
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .col-chart {
   margin-right: 0.5rem;
 }
-#body .content .row-chart .col-chart .card .card-body .row .col-chart .chart-area {
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .col-chart .chart-area {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
+  overflow-x: scroll;
 }
-#body .content .row-chart .col-chart .card .card-body .row .col-chart .chart-area .chart {
+#body .content .row-chart .col-chart .card .card-body .row .col-filter .col-chart .chart-area .chart-div {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-content: center !important;
   align-items: center !important;
-  height: auto;
-  max-height: 600px;
-  width: auto;
-}
-#body .content .row-chart .col-chart .card .card-body .row .col-chart .chart-area .bar-chart {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
 }
 
 /*# sourceMappingURL=analyzation_styles.css.map */
