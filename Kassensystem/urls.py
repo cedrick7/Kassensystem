@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from authorization.views import *
-from costumer.views import *
+from customer.views import *
 from cashbox.views import *
 from administration.views import *
 from analyzation.views import *
@@ -31,7 +31,7 @@ urlpatterns = [
     path('forgot_password/', authorization_forgot_password_view, name='authorization_forgot_password'),
     path('change_password/', authorization_change_password_view, name='authorization_change_password'),
 
-    path('costumer/', costumer_costumer_view, name='costumer'),
+    path('customer/', customer_customer_view, name='customer'),
 
     path('kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
     path('kasse/pay/', cashbox_pay_view, name='cashbox_pay'),

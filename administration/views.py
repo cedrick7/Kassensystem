@@ -56,7 +56,13 @@ def administration_services_view(request, *args, **kwargs):
     return render(request, "administration_services.html", {})
 
 def administration_services_detail_view(request, *args, **kwargs):
-    return render(request, "administration_services_detail.html", {})
+    create_edit_services_form = FormCreateEditServices(request.POST or None)
+
+    context = {
+        'form': create_edit_services_form
+    }
+
+    return render(request, "administration_services_detail.html", context)
 
 def administration_categories_view(request, *args, **kwargs):
     return render(request, "administration_categories.html", {})

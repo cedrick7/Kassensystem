@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'analyzation',
     'authorization',
     'cashbox',
-    'costumer',
+    'customer',
     'product',
 ]
 
