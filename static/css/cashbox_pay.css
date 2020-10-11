@@ -31,6 +31,7 @@ body #body .container:nth-child(1) {
 @media (min-width: 992px) {
   body #body .container:nth-child(1) {
     order: 1;
+    margin-left: 15px !important;
   }
 }
 body #body .container:nth-child(1) .col:nth-child(1) .row-coins .col-coin {

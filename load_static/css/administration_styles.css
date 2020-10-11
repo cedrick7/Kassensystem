@@ -107,10 +107,10 @@
   border: 1px solid #dfdfdf;
   border-radius: 5px;
 }
-#body .content .card .card-body .card-row-2 form .form-row-img div .form-group .input-img {
+#body .content .card .card-body .card-row-2 form .form-row-img div .form-group .input-group .input-img {
   display: block;
   width: 100%;
-  padding: 5px;
+  padding: 4px;
   border: 1px solid #dfdfdf;
   border-radius: 5px;
 }

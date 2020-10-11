@@ -21,6 +21,7 @@ body {
         order: 2;
         @media (min-width: 992px) {
           order: 1;
+          margin-left: 15px!important;
         }
         border: $card-border-width solid $card-border-color;
         border-radius: $card-border-radius;
