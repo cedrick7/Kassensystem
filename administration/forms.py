@@ -6,7 +6,7 @@ from cashbox.models import *
 from customer.models import *
 from product.models import *
 
-styling = ""
+styling = ''
 
 choices = (
     ('cashier', 'Kassierer'),
@@ -26,10 +26,10 @@ class FormProductDetail(forms.Form):
         initial=Product.title,
         widget=forms.TextInput(
             attrs={
-                "placeholder": "Produktname",
-                "class": "form-control needs-validation",
-                "style": styling,
-                "name": "productname"
+                'placeholder': 'Produktname',
+                'class': 'form-control needs-validation',
+                'style': styling,
+                'name': 'productname'
             }
         )
     )
@@ -46,12 +46,12 @@ class FormProductCreate(forms.Form):
     title = forms.CharField(
         required=True,
         label='Prdouktname',
-        # inital = "",
+        # inital = '',
         widget=forms.TextInput(
             attrs={
-                "placeholder": "Produktname",
-                "class": "form-control needs-validation",
-                "style": styling
+                'placeholder': 'Produktname',
+                'class': 'form-control needs-validation',
+                'style': styling
             }
         )
     )
@@ -74,211 +74,315 @@ class FormCreateEditProducts(forms.Form):
                             label='Produktname',
                             widget=forms.TextInput(
                                 attrs={
-                                    "placeholder": "Produktname",
-                                    "class": "form-control needs-validation",
-                                    "style": styling,
-                                    "name": "product_name",
-                                    "value": ""
+                                    'placeholder': 'Produktname',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'product_title',
+                                    'value': ''
                                 }
                             ))
     description = forms.CharField(required=True,
                                   label='Produktbeschreibung',
                                   widget=forms.TextInput(
                                       attrs={
-                                          "placeholder": "Produktbeschreibung",
-                                          "class": "form-control needs-validation",
-                                          "style": styling,
-                                          "name": "product_description",
-                                          "value": ""
+                                          'placeholder': 'Produktbeschreibung',
+                                          'class': 'form-control needs-validation',
+                                          'style': styling,
+                                          'name': 'product_description',
+                                          'value': ''
                                       }
                                   ))
     costs = forms.DecimalField(required=True,
                                label='Preis',
                                widget=forms.NumberInput(
                                    attrs={
-                                       "placeholder": "Preis",
-                                       "class": "form-control needs-validation",
-                                       "style": styling,
-                                       "name": "product_description",
-                                       "value": ""
+                                       'placeholder': 'Preis',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'product_price',
+                                       'value': ''
                                    }
                                ))
     category = forms.CharField(required=True,
-                               label='',
+                               label='Kategorien',
                                widget=forms.TextInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-    weight = forms.DecimalField(required=True,
-                                label='',
-                                widget=forms.NumberInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))  # in Gramm
-    stock = forms.IntegerField(required=True,
-                               label='',
-                               widget=forms.NumberInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-    brand = forms.CharField(required=True,
-                            label='',
-                            widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
-    taxfactor = forms.IntegerField(required=True,
-                                   label='',
-                                   widget=forms.NumberInput(
-                                       attrs={"placeholder": "",
-                                              "class": ""
-                                              }))
-    discount = forms.IntegerField(required=True,
-                                  label='',
-                                  widget=forms.NumberInput(
-                                      attrs={"placeholder": "",
-                                             "class": ""
-                                             }))
-
-    picture = forms.FileField(required=True,
-                              label='',
-                              widget=forms.FileInput(
-                                  attrs={"placeholder": "",
-                                         "class": ""
-                                         }))
-
+                                   attrs={
+                                       'placeholder': 'Kategorien',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'product_categories',
+                                       'value': ''
+                                   }
+                               ))
     attribute = forms.CharField(required=True,
-                                label='',
+                                label='Eigenschaften',
                                 widget=forms.TextInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))
+                                    attrs={
+                                        'placeholder': 'Eigenschaften',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'product_attributes',
+                                        'value': ''
+                                    }
+                                ))
+    weight = forms.DecimalField(required=True,
+                                label='Gewicht',
+                                widget=forms.NumberInput(
+                                    attrs={
+                                        'placeholder': 'Gewicht',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'product_weight',
+                                        'value': ''
+                                    }
+                                ))  # in Gramm
+    stock = forms.IntegerField(required=True,
+                               label='Bestand',
+                               widget=forms.NumberInput(
+                                   attrs={
+                                       'placeholder': 'Bestand',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'product_stock',
+                                       'value': ''
+                                   }
+                               ))
+    brand = forms.CharField(required=True,
+                            label='Marke',
+                            widget=forms.TextInput(
+                                attrs={
+                                    'placeholder': 'Marke',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'product_brand',
+                                    'value': ''
+                                }
+                            ))
+    taxfactor = forms.IntegerField(required=True,
+                                   label='Mehrwertsteuersatz',
+                                   widget=forms.NumberInput(
+                                       attrs={
+                                           'placeholder': 'Mehrwertsteuersatz',
+                                           'class': 'form-control needs-validation',
+                                           'style': styling,
+                                           'name': 'product_taxfactor',
+                                           'value': ''
+                                       }
+                                   ))
+    discount = forms.IntegerField(required=True,
+                                  label='Rabatt',
+                                  widget=forms.NumberInput(
+                                      attrs={
+                                          'placeholder': 'Rabatt',
+                                          'class': 'form-control needs-validation',
+                                          'style': styling,
+                                          'name': 'product_discount',
+                                          'value': ''
+                                      }
+                                  ))
+    picture = forms.FileField(required=False,
+                              label='Bild',
+                              widget=forms.FileInput(
+                                  attrs={
+                                      'placeholder': 'Bild',
+                                      'class': 'input-img form-control needs-validation',
+                                      'style': styling,
+                                      'name': 'product_picture',
+                                      'value': ''
+                                  }
+                              ))
 
 
 # Dienstleistung
 class FormCreateEditServices(forms.Form):
     title = forms.CharField(required=True,
-                            label='',
+                            label='Dienstleistungsname',
                             widget=forms.TextInput(
                                 attrs={
-                                    "placeholder": "Dienstleistungsname",
-                                    "class": "form-control needs-validation",
-                                    "style": styling
+                                    'placeholder': 'Dienstleistungsname',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'services_title',
+                                    'value': ''
                                 }
                             ))
-
-    category = forms.CharField(required=True,
-                               label='',
-                               widget=forms.TextInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-
     description = forms.CharField(required=True,
-                                  label='',
+                                  label='Dienstleistungsbeschreibung',
                                   widget=forms.TextInput(
-                                      attrs={"placeholder": "",
-                                             "class": ""
-                                             }))
+                                      attrs={
+                                          'placeholder': 'Dienstleistungsbeschreibung',
+                                          'class': 'form-control needs-validation',
+                                          'style': styling,
+                                          'name': 'services_description',
+                                          'value': ''
+                                      }
+                                  ))
     costs = forms.DecimalField(required=True,
-                               label='',
+                               label='Preis',
                                widget=forms.NumberInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-    weight = forms.DecimalField(required=True,
-                                label='',
-                                widget=forms.NumberInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))  # in Gramm
-    stock = forms.IntegerField(required=True,
-                               label='',
-                               widget=forms.NumberInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-    brand = forms.CharField(required=True,
-                            label='',
-                            widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
-    taxfactor = forms.IntegerField(required=True,
-                                   label='',
-                                   widget=forms.NumberInput(
-                                       attrs={"placeholder": "",
-                                              "class": ""
-                                              }))
-    discount = forms.IntegerField(required=True,
-                                  label='',
-                                  widget=forms.NumberInput(
-                                      attrs={"placeholder": "",
-                                             "class": ""
-                                             }))
-
-    picture = forms.FileField(required=True,
-                              label='',
-                              widget=forms.FileInput(
-                                  attrs={"placeholder": "",
-                                         "class": ""
-                                         }))
-
+                                   attrs={
+                                       'placeholder': 'Preis',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'services_price',
+                                       'value': ''
+                                   }
+                               ))
+    category = forms.CharField(required=True,
+                               label='Kategorien',
+                               widget=forms.TextInput(
+                                   attrs={
+                                       'placeholder': 'Kategorien',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'services_categories',
+                                       'value': ''
+                                   }
+                               ))
     attribute = forms.CharField(required=True,
-                                label='',
+                                label='Eigenschaften',
                                 widget=forms.TextInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))
-
-    # Eigenschaft
-
-
-# Eigenschaften
-class FormCreateEditProperties(forms.Form):
-    title = forms.CharField(required=True,
-                            label='',
+                                    attrs={
+                                        'placeholder': 'Eigenschaften',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'services_attributes',
+                                        'value': ''
+                                    }
+                                ))
+    weight = forms.DecimalField(required=True,
+                                label='Gewicht',
+                                widget=forms.NumberInput(
+                                    attrs={
+                                        'placeholder': 'Gewicht',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'services_weight',
+                                        'value': ''
+                                    }
+                                ))  # in Gramm
+    stock = forms.IntegerField(required=True,
+                               label='Bestand',
+                               widget=forms.NumberInput(
+                                   attrs={
+                                       'placeholder': 'Bestand',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'services_stock',
+                                       'value': ''
+                                   }
+                               ))
+    brand = forms.CharField(required=True,
+                            label='Marke',
                             widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
+                                attrs={
+                                    'placeholder': 'Marke',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'services_brand',
+                                    'value': ''
+                                }
+                            ))
+    taxfactor = forms.IntegerField(required=True,
+                                   label='Mehrwertsteuersatz',
+                                   widget=forms.NumberInput(
+                                       attrs={
+                                           'placeholder': 'Mehrwertsteuersatz',
+                                           'class': 'form-control needs-validation',
+                                           'style': styling,
+                                           'name': 'services_taxfactor',
+                                           'value': ''
+                                       }
+                                   ))
+    discount = forms.IntegerField(required=True,
+                                  label='Rabatt',
+                                  widget=forms.NumberInput(
+                                      attrs={
+                                          'placeholder': 'Rabatt',
+                                          'class': 'form-control needs-validation',
+                                          'style': styling,
+                                          'name': 'services_discount',
+                                          'value': ''
+                                      }
+                                  ))
+    picture = forms.FileField(required=False,
+                              label='Bild',
+                              widget=forms.FileInput(
+                                  attrs={
+                                      'placeholder': 'Bild',
+                                      'class': 'input-img form-control needs-validation',
+                                      'style': styling,
+                                      'name': 'services_picture',
+                                      'value': ''
+                                  }
+                              ))
 
 
 # Kategorie
 class FormCreateEditCategory(forms.Form):
     title = forms.CharField(required=True,
-                            label='',
+                            label='Kategoriename',
                             widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
+                                attrs={
+                                    'placeholder': 'Kategoriename',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'category_title',
+                                    'value': ''
+                                }
+                            ))
+    discount = forms.DecimalField(required=True,
+                                  label='Rabatt',
+                                  widget=forms.NumberInput(
+                                      attrs={
+                                          'placeholder': 'Rabatt',
+                                          'class': 'form-control needs-validation',
+                                          'style': styling,
+                                          'name': 'category_discount',
+                                          'value': ''
+                                      }
+                                  ))
 
 
-discount = forms.DecimalField(required=True,
-                              label='',
-                              widget=forms.NumberInput(
-                                  attrs={"placeholder": "",
-                                         "class": ""
-                                         }))
+# Eigenschaften
+class FormCreateEditProperties(forms.Form):
+    title = forms.CharField(required=True,
+                            label='Eigenschaft Name',
+                            widget=forms.TextInput(
+                                attrs={
+                                    'placeholder': 'Eigenschaft Name',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'attributes_title',
+                                    'value': ''
+                                }
+                            ))
 
 
-# discount
+# Rabatt
 class FormCreateEditDiscount(forms.Form):
     title = forms.CharField(required=True,
-                            label='',
+                            label='Rabatt Name',
                             widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
+                                attrs={
+                                    'placeholder': 'Rabatt Name',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'discount_title',
+                                    'value': ''
+                                }
+                            ))
     discount = forms.DecimalField(required=True,
-                                  label='',
+                                  label='Rabatt',
                                   widget=forms.NumberInput(
-                                      attrs={"placeholder": "",
-                                             "class": ""
-                                             }))
+                                      attrs={
+                                          'placeholder': 'Rabatt',
+                                          'class': 'form-control needs-validation',
+                                          'style': styling,
+                                          'name': 'discount_discount',
+                                          'value': ''
+                                      }
+                                  ))
 
 
 # Mitarbeiterverwaltung
@@ -286,160 +390,207 @@ class FormCreateEditDiscount(forms.Form):
 # Mitarbeiter
 class FormCreateEditEmployee(forms.Form):
     firstname = forms.CharField(required=True,
-                                label='',
+                                label='Vorname',
                                 widget=forms.TextInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))
-
+                                    attrs={
+                                        'placeholder': 'Vorname',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'employees_firstname',
+                                        'value': ''
+                                    }
+                                ))
     lastname = forms.CharField(required=True,
-                               label='',
+                               label='Nachname',
                                widget=forms.TextInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-
+                                   attrs={
+                                       'placeholder': 'Nachname',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'employees_lastname',
+                                       'value': ''
+                                   }
+                               ))
     role = forms.CharField(required=True,
-                           label='',
+                           label='Rolle',
                            widget=forms.TextInput(
-                               attrs={"placeholder": "",
-                                      "class": ""
-                                      }))
-
-    img = forms.FileField(required=True,
-                          label='',
-                          widget=forms.FileInput(
-                              attrs={"placeholder": "",
-                                     "class": ""
-                                     }))
-    # color = Color field (not in Models)
-    # is_favourite= Form for boolean checkbox (not in models)
+                               attrs={
+                                   'placeholder': 'Rolle',
+                                   'class': 'form-control needs-validation',
+                                   'style': styling,
+                                   'name': 'employees_role',
+                                   'value': ''
+                               }
+                           ))
+    picture = forms.FileField(required=True,
+                              label='Bild',
+                              widget=forms.FileInput(
+                                  attrs={
+                                      'placeholder': 'Bild',
+                                      'class': 'form-control needs-validation',
+                                      'style': styling,
+                                      'name': 'employees_picture',
+                                      'value': ''
+                                  }
+                              ))
 
 
 # Systemverwaltung
-
-# Backup
-class FormCreateEditBackup(forms.Form):
-    title = forms.CharField(required=True,
-                            label='',
-                            widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
-    creation = forms.DateTimeField(required=True,
-                                   label='',
-                                   widget=forms.DateInput(
-                                       attrs={"placeholder": "",
-                                              "class": ""
-                                              }))
-
-    store = forms.FileField(required=True,
-                            label='',
-                            widget=forms.FileInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
-    comment = forms.CharField(required=True,
-                              label='',
-                              widget=forms.TextInput(
-                                  attrs={"placeholder": "",
-                                         "class": ""
-                                         }))
-
-    employee = forms.CharField(required=True,
-                               label='',
-                               widget=forms.TextInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
-
-
-# Safe
-class FormCreateEditSafe(forms.Form):
-    title = forms.CharField(required=True,
-                            label='',
-                            widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
-    amount = forms.DecimalField(required=True,
-                                label='',
-                                widget=forms.NumberInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))
-
-
-# Zahlungsmittel
-class FormCreateEditPayment(forms.Form):
-    title = forms.CharField(required=True,
-                            label='',
-                            widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
-    picture = forms.FileField(required=True,
-                              label='',
-                              widget=forms.FileInput(
-                                  attrs={"placeholder": "",
-                                         "class": ""
-                                         }))
+# Rechnungen
+class FromCreateEditInvoices(forms.Form):
+    id = forms.CharField(required=True,
+                         label='Rechnung-ID',
+                         widget=forms.TextInput(
+                             attrs={
+                                 'placeholder': 'Rechnung-ID',
+                                 'class': 'form-control needs-validation',
+                                 'style': styling,
+                                 'name': 'invoice_id',
+                                 'value': ''
+                             }
+                         ))
 
 
 # Kassen
 class FormCreateEditCashbox(forms.Form):
     title = forms.CharField(required=True,
-                            label='',
+                            label='Kasse-ID',
                             widget=forms.TextInput(
-                                attrs={"placeholder": "",
-                                       "class": ""
-                                       }))
-
+                                attrs={
+                                    'placeholder': 'Kasse-ID',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'cashbox_id',
+                                    'value': ''
+                                }
+                            ))
     amount = forms.DecimalField(required=True,
-                                label='',
+                                label='Betrag',
                                 widget=forms.NumberInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))
+                                    attrs={
+                                        'placeholder': 'Betrag',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'cashbox_amount',
+                                        'value': ''
+                                    }
+                                ))
+
+
+# Safe
+class FormCreateEditSafe(forms.Form):
+    title = forms.CharField(required=True,
+                            label='Tresor-ID',
+                            widget=forms.TextInput(
+                                attrs={
+                                    'placeholder': 'Tresor-ID',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'safe_id',
+                                    'value': ''
+                                }
+                            ))
+    amount = forms.DecimalField(required=True,
+                                label='Betrag',
+                                widget=forms.NumberInput(
+                                    attrs={
+                                        'placeholder': 'Betrag',
+                                        'class': 'form-control needs-validation',
+                                        'style': styling,
+                                        'name': 'safe_amount',
+                                        'value': ''
+                                    }
+                                ))
 
 
 # Kunden
-# siehe Kundenverwaltung
 
-class FormEmployeeCreateEdit(forms.Form):
-    firstname = forms.CharField(required=True,
-                                label='',
-                                widget=forms.TextInput(
-                                    attrs={"placeholder": "",
-                                           "class": ""
-                                           }))
 
-    lastname = forms.CharField(required=True,
-                               label='',
+# Backup
+class FormCreateEditBackup(forms.Form):
+    title = forms.CharField(required=True,
+                            label='Backup Titel',
+                            widget=forms.TextInput(
+                                attrs={
+                                    'placeholder': 'Backup Titel',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'backup_title',
+                                    'value': ''
+                                }
+                            ))
+    creation = forms.DateTimeField(required=True,
+                                   label='Erstellt am',
+                                   widget=forms.DateInput(
+                                       attrs={
+                                           'placeholder': 'Erstellt am',
+                                           'class': 'form-control needs-validation',
+                                           'style': styling,
+                                           'name': 'backup_creation',
+                                           'value': ''
+                                       }
+                                   ))
+    store = forms.FileField(required=True,
+                            label='Pfad zur Backup-Datei',
+                            widget=forms.TextInput(
+                                attrs={
+                                    'placeholder': 'Pfad zur Backup-Datei',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'backup_store',
+                                    'value': ''
+                                }
+                            ))
+    comment = forms.CharField(required=True,
+                              label='Kommentar',
+                              widget=forms.TextInput(
+                                  attrs={
+                                      'placeholder': 'Kommentar',
+                                      'class': 'form-control needs-validation',
+                                      'style': styling,
+                                      'name': 'backup_comment',
+                                      'value': ''
+                                  }
+                              ))
+    employee = forms.CharField(required=True,
+                               label='Erstellt von',
                                widget=forms.TextInput(
-                                   attrs={"placeholder": "",
-                                          "class": ""
-                                          }))
+                                   attrs={
+                                       'placeholder': 'Erstellt von',
+                                       'class': 'form-control needs-validation',
+                                       'style': styling,
+                                       'name': 'backup_employee',
+                                       'value': ''
+                                   }
+                               ))
 
-    role = forms.ChoiceField(
-        required=True,
-        label='Rolle auswählen',
-        choices=choices,
-        widget=forms.Select(
-            attrs={
-                'class': 'form-control'
-            }
-        ))
 
-    img = forms.FileField(required=True,
-                          label='',
-                          widget=forms.FileInput(
-                              attrs={"placeholder": "",
-                                     "class": ""
-                                     }))
+# Zahlungsmittel
+class FormCreateEditPayment(forms.Form):
+    title = forms.CharField(required=True,
+                            label='Zahlungsmittel',
+                            widget=forms.TextInput(
+                                attrs={
+                                    'placeholder': 'Zahlungsmittel',
+                                    'class': 'form-control needs-validation',
+                                    'style': styling,
+                                    'name': 'payment_title',
+                                    'value': ''
+                                }
+                            ))
 
-# class FormAdministrationEdit(forms.Form):
+    picture = forms.FileField(required=True,
+                              label='Bild',
+                              widget=forms.FileInput(
+                                  attrs={
+                                      'placeholder': 'Bild',
+                                      'class': 'form-control needs-validation',
+                                      'style': styling,
+                                      'name': 'payment_picture',
+                                      'value': ''
+                                  }
+                              ))
+
+
+# Anfragenverwaltung
+#class FormRequest(forms.Form):

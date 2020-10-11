@@ -41,7 +41,7 @@
 								<div class="form-row form-row-string">
 									<div class="col">
 										<div class="form-group">
-											<label for="first_name"><strong>Produktname</strong></label>
+											<label for="product_title"><strong>{{ form.title.label }}</strong></label>
 											<div class="input-group">
 												{{ form.title }}
 												<div class="invalid-feedback">
@@ -54,38 +54,132 @@
 								<div class="form-row form-row-string">
 									<div class="col">
 										<div class="form-group">
-											<label for="first_name"><strong>Produktbeschreibung</strong></label>
-											<input class="form-control" type="text" placeholder="Produktbeschreibung"
-											       name="first_name" value={{ object.description }}>
+											<label for="product_description"><strong>{{ form.description.label }}</strong></label>
+											<div class="input-group">
+												{{ form.description }}
+												<div class="invalid-feedback">
+													{{ form.description.errors }}
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="form-row form-row-string">
 									<div class="col">
 										<div class="form-group">
-											<label for="first_name"><strong>Preis</strong></label>
-											<input class="form-control" type="text" placeholder="Preis"
-											       name="first_name">
+											<label for="product_price"><strong>{{ form.costs.label }}</strong></label>
+											<div class="input-group">
+												{{ form.costs }}
+												<div class="invalid-feedback">
+													{{ form.costs.errors }}
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="form-row form-row-string">
 									<div class="col">
 										<div class="form-group">
-											<label for="first_name"><strong>Kategorien</strong></label>
-											<input class="form-control" type="text" placeholder="Kategorien"
-											       name="first_name">
+											<label for="product_categories"><strong>{{ form.category.label }}</strong></label>
+											<div class="input-group">
+												{{ form.category }}
+												<div class="invalid-feedback">
+													{{ form.category.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="product_attributes"><strong>{{ form.attribute.label }}</strong></label>
+											<div class="input-group">
+												{{ form.attribute }}
+												<div class="invalid-feedback">
+													{{ form.attribute.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="product_weight"><strong>{{ form.weight.label }}</strong></label>
+											<div class="input-group">
+												{{ form.weight }}
+												<div class="invalid-feedback">
+													{{ form.weight.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="product_stock"><strong>{{ form.stock.label }}</strong></label>
+											<div class="input-group">
+												{{ form.stock }}
+												<div class="invalid-feedback">
+													{{ form.stock.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="product_brand"><strong>{{ form.brand.label }}</strong></label>
+											<div class="input-group">
+												{{ form.brand }}
+												<div class="invalid-feedback">
+													{{ form.brand.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="product_taxfactor"><strong>{{ form.taxfactor.label }}</strong></label>
+											<div class="input-group">
+												{{ form.taxfactor }}
+												<div class="invalid-feedback">
+													{{ form.taxfactor.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="product_discount"><strong>{{ form.discount.label }}</strong></label>
+											<div class="input-group">
+												{{ form.discount }}
+												<div class="invalid-feedback">
+													{{ form.discount.errors }}
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="form-row form-row-img">
 									<div class="col">
 										<div class="form-group">
-											<label for="image"><strong>Bild einfügen</strong></label>
-											<input class="input-img" type="file" name="image">
+											<label for="product_picture"><strong>{{ form.picture.label }}</strong></label>
+											{{ form.picture }}
+											<div class="invalid-feedback">
+												{{ form.picture.errors }}
+											</div>
 										</div>
 									</div>
 								</div>
+								<!--
 								<div class="form-row form-row-color-favorites">
 									<div class="col">
 										<div class="form-group">
@@ -106,6 +200,7 @@
 										</div>
 									</div>
 								</div>
+								-->
 								<div class="form-row form-row-submit">
 									<div class="col">
 										<button class="btn btn-primary btn-sm" type="submit">Speichern</button>

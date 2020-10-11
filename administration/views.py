@@ -113,7 +113,12 @@ def administration_invoices_view(request, *args, **kwargs):
     return render(request, "administration_invoices.html", {})
 
 def administration_invoices_detail_view(request, *args, **kwargs):
-    return render(request, "administration_invoices_detail.html", {})
+    create_edit_invoices_form = FromCreateEditInvoices(request.POST or None)
+
+    context = {
+        'form': create_edit_invoices_form
+    }
+    return render(request, "administration_invoices_detail.html", context)
 
 def administration_cashboxes_view(request, *args, **kwargs):
     create_edit_cashbox_form = FormCreateEditCashbox(request.POST or None)

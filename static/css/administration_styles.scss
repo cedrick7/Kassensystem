@@ -158,12 +158,14 @@
             .form-row-img {
               div {
                 .form-group {
-                  .input-img {
-                    display: block;
-                    width: 100%;
-                    padding: 5px;
-                    border: $card-border-width solid $card-border-color;
-                    border-radius: $card-border-radius;
+                  .input-group {
+                    .input-img {
+                      display: block;
+                      width: 100%;
+                      padding: 4px;
+                      border: $card-border-width solid $card-border-color;
+                      border-radius: $card-border-radius;
+                    }
                   }
                 }
               }
