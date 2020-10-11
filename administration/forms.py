@@ -83,7 +83,12 @@ class FormCreateEditProducts(forms.Form):
                      "class": ""
                     }))
 
-    #category = forms.ManyToManyField(Category, blank=True)
+    category = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
 
     description = forms.CharField(required = True,
         label = '',
@@ -116,8 +121,18 @@ class FormCreateEditProducts(forms.Form):
                      "class": ""
                     }))
 
-    #tax = forms.ForeignKey(Tax, on_delete=models.CASCADE, blank=True, default=None, null=True)
-    #discount = forms.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
+    taxfactor = forms.IntegerField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
+    discount = forms.IntegerField(required = True,
+        label = '',
+        widget = forms.NumberInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
 
     picture = forms.FileField(required = True,
         label = '',
@@ -126,7 +141,12 @@ class FormCreateEditProducts(forms.Form):
                      "class": ""
                     }))
 
-    #property = forms.ManyToManyField(Property, blank=True)
+    property = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
 
 
 # Eigenschaft
@@ -146,8 +166,14 @@ class FormCreateEditCategory(forms.Form):
                                 attrs={"placeholder": "",
                                        "class": ""
                                        }))
-  #  discount = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True)
 
+
+discount = forms.IntegerField(required=True,
+                              label='',
+                              widget=forms.NumberInput(
+                                  attrs={"placeholder": "",
+                                         "class": ""
+                                         }))
 # discount
 class FormCreateEditDiscount(forms.Form):
 
@@ -249,7 +275,12 @@ class FormCreateEditBackup(forms.Form):
                      "class": ""
                     }))
 
-    #employee = forms.ForeignKey(Employee, on_delete=models.CASCADE, blank=True, default=None)
+    employee = forms.CharField(required = True,
+        label = '',
+        widget = forms.TextInput(
+            attrs = {"placeholder": "",
+                     "class": ""
+                    }))
 
 
 # Safe

@@ -7,21 +7,14 @@ class Employee(models.Model):
     # geändert und hinzugefügt
     firstname            = models.CharField(max_length=45, blank=False)
     lastname             = models.CharField(max_length=45, blank=False)
-    # email                = models.EmailField(blank=False)
-    username             = models.CharField(max_length=45, blank=False)
     password             = models.BinaryField(max_length=72, blank=False, editable=True)
-    # password_confirm     = models.BinaryField(max_length=72, blank=False, editable=True)
-    # password_old         = models.BinaryField(max_length=72, blank=False, editable=True) # default: editable=False
-    # password_new         = models.BinaryField(max_length=72, editable=True, blank=False)
-    # password_new_confirm = models.BinaryField(max_length=72, editable=True, blank=False)
-    # img wird nicht benötigt, denn wir hatten ja gesagt, dass wir das mit dem profilbildern weglassen
     picture                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
-    role_choice = [
-        ('cashier', 'Kassierer'),
-        ('admin', 'Administrator'),
-        ('analyst', 'Analyst')]
-    role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
+    #ROLE_CHOICE = [
+    #    ('cashier', 'Kassierer'),
+    #    ('admin', 'Administrator'),
+    #    ('analyst', 'Analyst')]
+    #role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
 
 
     CASHIER         = 'KA'
@@ -88,6 +81,8 @@ class Request(models.Model):
         default=None,
         blank=True
     )
+
+    requestid       = models.CharField(max_length=10, unique=True)
 
     class Meta:
         verbose_name_plural = "Anfragen"

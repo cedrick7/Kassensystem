@@ -30,8 +30,8 @@ def administration_products_view(request, *args, **kwargs):
     queryset=Product.objects.all()
     print(type(queryset))
 
-    for i in queryset:
-        print(i.title)
+    #for i in queryset:
+    #    print(i.title)
     
     context = {
         'products': queryset
