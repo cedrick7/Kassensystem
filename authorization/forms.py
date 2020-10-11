@@ -28,10 +28,10 @@ class FormLogin(forms.Form):
         )
     )
 
-    username = forms.CharField(
+    userid = forms.IntegerField(
         required = True,
         label = 'Username',
-        widget = forms.TextInput(
+        widget = forms.NumberInput(
             attrs = {"placeholder": "Username",
                      "class": "input-group-item form-control needs-validation",
                      "style": styling})
@@ -41,13 +41,13 @@ class FormLogin(forms.Form):
         label = 'Password',
         widget = forms.PasswordInput(
             attrs = {"placeholder": "Password",
-                     "class": "input-group-item form-control needs-validation",
+                     "class": "inp4ut-group-item form-control needs-validation",
                      "style": styling})
     )
 
     class Meta:
         model = Employee
-        fields = ['username', 'password']
+        fields = ['userid', 'password','role']
 
 
 # Registrieren
@@ -78,23 +78,7 @@ class FormRegister(forms.Form):
                      "class": "input-group-item form-control needs-validation",
                      "style": styling})
     )
-    email = forms.CharField(
-        required = True,
-        label = 'E-Mail',
-        widget = forms.EmailInput(
-            attrs = {"placeholder": "E-Mail",
-                     "class": "input-group-item form-control needs-validation",
-                     "style": styling,
-                     "aria-describedby": "emailHelp"})
-    )
-    username = forms.CharField(
-        required = True,
-        label = 'Username',
-        widget = forms.TextInput(
-            attrs = {"placeholder": "Username",
-                     "class": "input-group-item form-control needs-validation",
-                     "style": styling})
-    )
+
     password = forms.CharField(
         required = True,
         label = 'Password',
@@ -122,48 +106,57 @@ class FormRegister(forms.Form):
 
     class Meta:
         model = Employee
-        fields = ['role_choice', 'firstname', 'lastname', 'email', 'username', 'password', 'password_confirm', 'img']
+        fields = ['role_choice', 'firstname', 'lastname', 'userid', 'password', 'password_confirm', 'img']
 
 
 # Passwort vergessen
 class FormForgotPassword(forms.Form):
-    firstname = forms.CharField(
-        required = True,
-        label = 'Vorname',
-        widget = forms.TextInput(
-            attrs = {"placeholder": "Vorname",
-                     "class": "input-group-item form-control needs-validation",
-                     "style": styling})
+    userid = forms.IntegerField(
+        required=True,
+        label='Username',
+        widget=forms.NumberInput(
+            attrs={"placeholder": "Username",
+                   "class": "input-group-item form-control needs-validation",
+                   "style": styling})
     )
-    lastname = forms.CharField(
-        required = True,
-        label = 'Nachname',
-        widget = forms.TextInput(
-            attrs = {"placeholder": "Nachname",
-                     "class": "input-group-item form-control needs-validation",
-                     "style": styling})
+    password_old = forms.CharField(
+        required=True,
+        label='Altes Password',
+        widget=forms.PasswordInput(
+            attrs={"placeholder": "Altes Password",
+                   "class": "input-group-item form-control needs-validation",
+                   "style": styling})
     )
-    username = forms.CharField(
-        required = True,
-        label = 'Username',
-        widget = forms.TextInput(
-            attrs = {"placeholder": "Username",
-                     "class": "input-group-item form-control needs-validation",
-                     "style": styling})
+    password_new = forms.CharField(
+        required=True,
+        label='Neues Password',
+        widget=forms.PasswordInput(
+            attrs={"placeholder": "Neues Password",
+                   "class": "input-group-item form-control needs-validation",
+                   "style": styling})
+    )
+    password_new_confirm = forms.CharField(
+        required=True,
+        label='Neues Password bestätigen',
+        widget=forms.PasswordInput(
+            attrs={"placeholder": "Neues Password bestätigen",
+                   "class": "input-group-item form-control needs-validation",
+                   "style": styling})
     )
 
-    class Meta:
-        model = Employee
-        fields = ['firstname', 'lastname', 'username']
+
+class Meta:
+    model = Employee
+    fields = ['userid', 'password_old', 'password_new', 'password_new_confirm']
 
 
 
 # Passwort ändern
 class FormChangePassword(forms.Form):
-    username = forms.CharField(
+    userid = forms.IntegerField(
         required = True,
         label = 'Username',
-        widget = forms.TextInput(
+        widget = forms.NumberInput(
             attrs = {"placeholder": "Username",
                      "class": "input-group-item form-control needs-validation",
                      "style": styling})
@@ -195,7 +188,7 @@ class FormChangePassword(forms.Form):
 
     class Meta:
         model = Employee
-        fields = ['username', 'password_old', 'password_new', 'password_new_confirm']
+        fields = ['userid', 'password_old', 'password_new', 'password_new_confirm']
 
 
 

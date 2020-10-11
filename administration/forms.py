@@ -29,7 +29,7 @@ class FormProductDetail(forms.Form):
                 "placeholder": "Produktname",
                 "class": "form-control needs-validation",
                 "style": styling
-            },
+            }
         )
     )
     # ... = ...
@@ -61,14 +61,6 @@ class FormProductCreate(forms.Form):
         fields = ['title']
 
 # ----------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
 
 
 
@@ -141,7 +133,7 @@ class FormCreateEditProducts(forms.Form):
                      "class": ""
                     }))
 
-    property = forms.CharField(required = True,
+    attribute = forms.CharField(required = True,
         label = '',
         widget = forms.TextInput(
             attrs = {"placeholder": "",
@@ -168,7 +160,7 @@ class FormCreateEditCategory(forms.Form):
                                        }))
 
 
-discount = forms.IntegerField(required=True,
+discount = forms.DecimalField(required=True,
                               label='',
                               widget=forms.NumberInput(
                                   attrs={"placeholder": "",
@@ -177,13 +169,21 @@ discount = forms.IntegerField(required=True,
 # discount
 class FormCreateEditDiscount(forms.Form):
 
-       discount = forms.DecimalField(required = True,
-        label = '',
-        widget = forms.NumberInput(
-            attrs = {"placeholder": "",
-                     "class": ""
+    title = forms.CharField(required=True,
+                            label='',
+                            widget=forms.TextInput(
+                                attrs={"placeholder": "",
+                                       "class": ""
+                                       }))
+
+
+    discount = forms.DecimalField(required = True,
+     label = '',
+     widget = forms.NumberInput(
+     attrs = {"placeholder": "",
+              "class": ""
                     }))
-#Is this right?
+
 
 
 # Mitarbeiterverwaltung
@@ -204,13 +204,6 @@ class FormCreateEditEmployee(forms.Form):
                      "class": ""
                     }))
 
-    email = forms.EmailField(required = True,
-        label = '',
-        widget = forms.EmailInput(
-            attrs = {"placeholder": "",
-                     "class": ""
-                    }))
-
     role = forms.CharField(required = True,
         label = '',
         widget = forms.TextInput(
@@ -218,19 +211,6 @@ class FormCreateEditEmployee(forms.Form):
                      "class": ""
                     }))
 
-    phone_number = forms.DecimalField(required = True,
-        label = '',
-        widget = forms.NumberInput(
-            attrs = {"placeholder": "",
-                     "class": ""
-                    }))
-
-    work_since = forms.DateField(required = True,
-        label = '',
-        widget = forms.DateInput(
-            attrs = {"placeholder": "",
-                     "class": ""
-                    }))
 
     img = forms.FileField(required = True,
         label = '',
@@ -349,26 +329,6 @@ class FormEmployeeCreateEdit(forms.Form):
                                         "class": ""
                                         }))
 
-    email = forms.EmailField(required=True,
-                             label='',
-                             widget=forms.EmailInput(
-                                 attrs={"placeholder": "",
-                                        "class": ""
-                                        }))
-
-    phone_number = forms.CharField(required=True,
-                             label='',
-                             widget=forms.NumberInput(
-                                 attrs={"placeholder": "",
-                                        "class": ""
-                                        }))
-
-    work_since = forms.DateTimeField(required=True,
-                             label='',
-                             widget=forms.DateInput(
-                                 attrs={"placeholder": "",
-                                        "class": ""
-                                        }))
 
     role = forms.ChoiceField(
         required = True,

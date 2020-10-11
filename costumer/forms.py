@@ -15,7 +15,7 @@ class FormCreateEditCustomer(forms.ModelForm):
                                  attrs={"placeholder": "",
                                         "class": ""
                                         }))
-        phonenumber = forms.CharField(required=True,
+        phone_number = forms.CharField(required=True,
                              label='',
                              widget=forms.NumberInput(
                                  attrs={"placeholder": "",
