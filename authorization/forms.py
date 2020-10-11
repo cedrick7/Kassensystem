@@ -47,7 +47,7 @@ class FormLogin(forms.Form):
 
     class Meta:
         model = Employee
-        fields = ['userid', 'password','role']
+        fields = ['userid', 'password', 'role']
 
 
 # Registrieren
