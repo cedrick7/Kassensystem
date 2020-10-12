@@ -25,6 +25,14 @@ from .forms import *
 def administration_dashboard_view(request, *args, **kwargs):
     return render(request, "administration_dashboard.html", {})
 
+
+# !!! Please do a searchbar function for this view as mentioned in discord  !!!
+# I need the following:
+# returntype= list  filteredobject= title,brand,attributes,category
+
+
+
+
 def administration_products_view(request, *args, **kwargs):
     
     queryset=Product.objects.all()
