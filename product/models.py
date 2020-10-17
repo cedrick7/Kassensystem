@@ -1,6 +1,7 @@
 from django.db import models
 from colorfield.fields import ColorField
 from django.utils import timezone
+from administration.models import Path
 
 
 # Create your models here.
@@ -66,7 +67,7 @@ class Product(models.Model):
     brand        =  models.CharField(max_length=45, blank=True)
     tax       =     models.ForeignKey(Tax, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
     discount      = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
-    picture       = models.FileField(upload_to='pro_img/', default='mit_img/default.jpg', blank=True)
+    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
     attributes  =   models.ManyToManyField(Attribute, blank=True)
     #color = Model for colorfield
     #is_favourite = Model for Boolean checkbox

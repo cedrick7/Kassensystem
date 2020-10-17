@@ -2,6 +2,7 @@ from django.db import models
 from authorization.models import Employee
 from product.models import Discount      #cannot import
 from product.models import Product
+from administration.models import Path
 
 # Create your models here.
 
@@ -20,7 +21,7 @@ class Cashbox(models.Model):
 
 class Paymenttool(models.Model):
     title        = models.CharField(max_length=45)
-    picture         = models.FileField(upload_to='zah_img/', default='mit_img/default.jpg', blank=True)
+    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
 
     class Meta:
         verbose_name_plural = "paymenttool"
@@ -48,7 +49,7 @@ class Bill(models.Model):
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
     paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
     discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
-    pdf            = models.FileField(upload_to='rec_pdf/', default='mit_img/default.jpg', blank=True)
+    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
     
 
     # Liste erstellen
@@ -81,7 +82,7 @@ class ReversalBill(models.Model):
     # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
     employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
-    pdf             = models.FileField(upload_to='sto_rec_pdf/', default='mit_img/default.jpg', blank=True)
+    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
     bill        = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     
 

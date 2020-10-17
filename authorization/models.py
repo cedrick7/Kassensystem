@@ -7,7 +7,7 @@ class Employee(models.Model):
     # geändert und hinzugefügt
     firstname            = models.CharField(max_length=45, blank=False)
     lastname             = models.CharField(max_length=45, blank=False)
-    password             = models.BinaryField(max_length=72, blank=False, editable=True)
+    password             = models.CharField(max_length=73, blank=False, editable=True)
     picture                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
     #ROLE_CHOICE = [
@@ -64,7 +64,7 @@ class Request(models.Model):
     )
     firstname       = models.CharField(max_length=45, blank=True)
     lastname        = models.CharField(max_length=45, blank=True)
-    password        = models.BinaryField(blank=False, editable=True) # default: editable=False
+    password        = models.CharField(max_length=73, blank=False, editable=True) # default: editable=False
     # passwordreenter = models.BinaryField(blank=False, editable=True)
     CASHIER         = 'KA'
     ADMINISTRATOR   = 'AD'
@@ -89,3 +89,5 @@ class Request(models.Model):
 
     def __str__(self):
         return self.firstname + " " + self.lastname + " möchte " + self.type + " " + self.role 
+
+
