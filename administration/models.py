@@ -3,7 +3,6 @@ from django.utils import timezone
 import datetime
 
 from authorization.models import Employee
-from administration.models import Path
 
 # Create your models here.
 

@@ -36,8 +36,7 @@ def administration_dashboard_view(request, *args, **kwargs):
 def administration_products_view(request, *args, **kwargs):
     
     queryset=Product.objects.all()
-    print(type(queryset))
-
+    #print(type(queryset))
     #for i in queryset:
     #    print(i.title)
     
