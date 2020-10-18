@@ -3,16 +3,18 @@ from django.db import models
 # Create your models here.
 
 
-class CustomerDetails(models.Model):
-    phonenumber       = models.DecimalField(max_digits=15, decimal_places=2, blank=True, unique=True)
-    email             = models.EmailField(max_length=254)
+# class CustomerDetails(models.Model):
+#     phonenumber       = models.DecimalField(max_digits=15, decimal_places=2, blank=True, unique=True)
+#     email             = models.EmailField(max_length=254)
     
 
 class Customer(models.Model):
     firstname         = models.CharField(max_length=45, blank=True)
     lastname          = models.CharField(max_length=45, blank=True)
     birthday           = models.DateField(max_length=45,default=None)
-    details       = models.ForeignKey(CustomerDetails, on_delete=models.CASCADE, blank=True, default=None)
+    # details       = models.ForeignKey(CustomerDetails, on_delete=models.CASCADE, blank=True, default=None)
+    phonenumber       = models.DecimalField(max_digits=15, decimal_places=2, blank=True, unique=True)
+    email             = models.EmailField(max_length=254, blank=True, unique=True)
 
     class Meta:
         verbose_name_plural = "Customern"

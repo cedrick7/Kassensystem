@@ -9,7 +9,7 @@ from authorization.models import Employee
 
 
 class Path(models.Model):
-    store       = models.FileField(upload_to='uploads/')
+    store       = models.FileField(upload_to='uploads/', unique=True)
 
 
     class Meta:

@@ -38,7 +38,7 @@ urlpatterns = [
     path('Kasse/Mehr/', cashbox_more_view, name='cashbox_more'),
 
     path('Admin/', administration_dashboard_view, name='administration_dashboard'),
-    path('Admin/Produkte/', administration_products_view, name='administration_products'),
+    # path('Admin/Produkte/', administration_products_view, name='administration_products'),
     path('Admin/Produkte/Details/<int:id>/', administration_products_detail_view, name='administration_products_detail'),
     path('Admin/Dienstleistungen/', administration_services_view, name='administration_services'),
     path('Admin/Dienstleistungen/Details/', administration_services_detail_view, name='administration_services_detail'),
