@@ -5,7 +5,7 @@ from django.views.generic import (
     CreateView, 
     DetailView, 
     ListView, 
-    UpdateView, 
+    UpdateView,  
     ListView, 
     DeleteView
 )
