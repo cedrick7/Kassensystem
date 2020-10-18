@@ -135,7 +135,6 @@ class SalesChartData(APIView):
         payment_chart_labels = ['Barzahlung', 'Kartenzahlung', 'ApplePay']
         payment_chart_legend = 'Zahlungsmethoden in Prozent'
 
-
         # chart no.5 - Stoßzeiten [line-chart]
         peak_times_data = [13, 16, 20, 26, 43, 31, 0]
         peak_times_chart_labels = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
@@ -205,32 +204,42 @@ class CustomerChartData(APIView):
         customers_chart_legend = 'Kundenart in Prozent'
 
         # chart no.3 - Zahlungsmethode [doughnut-chart]
-        payment_data = [60, 35, 5]
+        payment_data = [[60], [35], [5]]
         payment_chart_labels = ['Barzahlung', 'Kartenzahlung', 'ApplePay']
         payment_chart_legend = 'Zahlungsmethoden in Prozent'
 
-        # chart no.4 - Produkte Überblick (TOP-X Ranking => generell) [bar-chart]
+        # chart no.4 - Gefunden durch [doughnut-chart]
+        found_through_data = [40, 25, 20, 15]
+        found_through_chart_labels = ['Zufall', 'Soziale Medien', 'Flyer', 'Webseite']
+        found_through_chart_legend = 'Kundenart in Prozent'
+
+        # chart no.5 - Bewertung in Sternen [doughnut-chart]
+        rating_data = [60, 20, 15, 5, 0, 0]
+        rating_chart_labels = ['5 Sterne', '4 Sterne', '3 Sterne', '2 Sterne', '1 Sterne', '0 Sterne']
+        rating_chart_legend = 'Zahlungsmethoden in Prozent'
+
+        # chart no.6 - Produkte Überblick (TOP-X Ranking => generell) [bar-chart]
         products_1_data = [13, 23, 24, 38, 49, 33]
         products_1_chart_legend = 'TOP 5 Produkte (Gesamt)'
         products_1_chart_labels = ['Schampoo', 'Spülung', 'Festiger', 'Kamm', 'Bürste']
         products_1_chart_x_axes = 'Kategoriename'
         products_1_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
 
-        # chart no.5 - Produkte Überblick (TOP-X Ranking => nach Stammkunden) [bar-chart]
+        # chart no.7 - Produkte Überblick (TOP-X Ranking => nach Stammkunden) [bar-chart]
         products_2_data = [13, 23, 24, 38, 49, 33]
         products_2_chart_legend = 'TOP 5 Produkte (nach Stammkunden)'
         products_2_chart_labels = ['Schampoo', 'Spülung', 'Festiger', 'Kamm', 'Bürste']
         products_2_chart_x_axes = 'Kategoriename'
         products_2_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
 
-        # chart no.6 - Dienstleistungen Überblick (TOP-X Ranking => generell) [bar-chart]
+        # chart no.8 - Dienstleistungen Überblick (TOP-X Ranking => generell) [bar-chart]
         services_1_data = [13, 16, 20, 26, 43, 31]
         services_1_chart_legend = 'TOP 5 Dienstleistungen (Gesamt)'
         services_1_chart_labels = ['Damen', 'Colorationen', 'Herren', 'Specials', 'Kinder']
         services_1_chart_x_axes = 'Kategoriename'
         services_1_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
 
-        # chart no.7 - Dienstleistungen Überblick (TOP-X Ranking => nach Stammkunden) [bar-chart]
+        # chart no.9 - Dienstleistungen Überblick (TOP-X Ranking => nach Stammkunden) [bar-chart]
         services_2_data = [13, 16, 20, 26, 43, 31]
         services_2_chart_legend = 'TOP 5 Dienstleistungen (nach Stammkunden)'
         services_2_chart_labels = ['Damen', 'Colorationen', 'Herren', 'Specials', 'Kinder']
@@ -249,6 +258,12 @@ class CustomerChartData(APIView):
             'payment_data': payment_data,
             'payment_chart_labels': payment_chart_labels,
             'payment_chart_legend': payment_chart_legend,
+            'found_through_data': found_through_data,
+            'found_through_chart_labels': found_through_chart_labels,
+            'found_through_chart_legend': found_through_chart_legend,
+            'rating_data': rating_data,
+            'rating_chart_labels': rating_chart_labels,
+            'rating_chart_legend': rating_chart_legend,
             'products_1_data': products_1_data,
             'products_1_chart_legend': products_1_chart_legend,
             'products_1_chart_labels': products_1_chart_labels,
@@ -290,7 +305,7 @@ class EmployeeChartData(APIView):
 
     def get(self, request, format=None):
         # chart no.1 - Mitarbeiterzeiten [line-chart]
-        employee_times_data = [[0,4,4,4,4,8,8],[8,8,8,8,0,0,0],[2,2,2,2,0,0,8]]
+        employee_times_data = [[0, 4, 4, 4, 4, 8, 8], [8, 8, 8, 8, 0, 0, 0], [2, 2, 2, 2, 0, 0, 8]]
         employee_times_labels = ['Mitarbeitername 1', 'Mitarbeitername 2', 'Mitarbeitername 3']
         employee_times_chart_labels = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
         employee_times_chart_legend = 'Mitarbeiterzeiten'
@@ -298,9 +313,10 @@ class EmployeeChartData(APIView):
         employee_times_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
 
         # chart no.2 - Mitarbeiterumsatz [line-chart]
-        employee_revenue_data = [[0,4,4,4,4,8,8],[8,8,8,8,0,0,0],[2,2,2,2,0,0,8]]
+        employee_revenue_data = [[0, 4, 4, 4, 4, 8, 8], [8, 8, 8, 8, 0, 0, 0], [2, 2, 2, 2, 0, 0, 8]]
         employee_revenue_labels = ['Mitarbeitername 1', 'Mitarbeitername 2', 'Mitarbeitername 3']
-        employee_revenue_chart_labels = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+        employee_revenue_chart_labels = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag',
+                                         'Sonntag']
         employee_revenue_chart_legend = 'Mitarbeiterumsatz'
         employee_revenue_x_axes = 'Zeit in Tagen'
         employee_revenue_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
@@ -320,7 +336,6 @@ class EmployeeChartData(APIView):
             'employee_revenue_y_axes': employee_revenue_y_axes
         }
         return Response(data)
-
 
 # ----------------------------------------------------------------------------------------------------------------------
 # class DashboardView(View):
