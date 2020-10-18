@@ -8,7 +8,7 @@ from .views import (
 
 app_name =  'administration'
 urlpatterns=[
-    path('pl', productlist_view, name='test_productlist'),
-    path('pl/<int:id>', productdetail_view, name='test_productdetail'),
+    path('Produkte', productlist_view, name='test_productlist'),
+    path('Produkte/<int:id>', productdetail_view, name='test_productdetail'),
 ]
 
