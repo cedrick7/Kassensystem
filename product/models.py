@@ -2,6 +2,7 @@ from django.db import models
 from colorfield.fields import ColorField
 from django.utils import timezone
 from administration.models import Path
+from django.urls import reverse
 
 
 # Create your models here.
@@ -84,9 +85,16 @@ class Product(models.Model):
         default=PRODUCT,
     )
 
-    
+    def get_absolute_url(self):
+        return reverse("test_productdetail", kwargs={"id": self.id})
+
+
+
     class Meta:
         verbose_name_plural = "Producte"
+
+
+
 
     # prints brand + Producttitle, wenn brand leer Nur ProduCttitle
     def __str__(self):

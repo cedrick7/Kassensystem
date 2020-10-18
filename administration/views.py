@@ -48,19 +48,26 @@ class ProductListView(ListView):
 
 
 
+def productlist_view(request, *args, **kwargs):
+    
+    queryset=Product.objects.all()
+    
+    context = {
+        'object_list': queryset
+    }
+
+    return render(request, "test_productlist.html", context)
 
 
+def productdetail_view(request, id):
+    
+    queryset=Product.objects.get(id=id)
+    
+    context = {
+        'object': queryset
+    }
 
-
-
-
-
-
-
-
-
-
-
+    return render(request, "test_productdetail.html", context)
 
 
 

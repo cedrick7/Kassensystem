@@ -1,0 +1,14 @@
+
+{% block content %}
+
+<h1>Einzelnes Objekt:</h1>
+
+    {% for instance in object_list %}
+        
+        <p>
+            <a href="{{ instance.get_absolute_url }}">{{ instance.title }}</a>
+        </p>
+
+    {% endfor %}
+
+{% endblock %}

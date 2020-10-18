@@ -24,10 +24,15 @@ from customer.views import *
 from cashbox.views import *
 from administration.views import *
 from analyzation.views import *
+from administration.urls import * 
+from django.urls import include, path
 
 urlpatterns = [
 
-    path('administration/', include('product.urls')),
+    path('administration/', include('urls.py')),
+
+
+
 
 
 

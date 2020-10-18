@@ -1,10 +1,14 @@
-from django.urls import path
+from django.urls import include, path
+
+
 from .views import (
-    ProductListView
+    productlist_view, 
+    productdetail_view
 )
 
 app_name =  'administration'
 urlpatterns=[
-    path('products', ProductListView.as_view(), name='product-list')
+    path('pl', productlist_view, name='test_productlist'),
+    path('pl/<int:id>', productdetail_view, name='test_productdetail'),
 ]
 
