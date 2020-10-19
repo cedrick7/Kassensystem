@@ -38,6 +38,21 @@ class ProductCreateView(CreateView):
         return super().form_valid(form)
 
 
+
+class ProductUpdateView(UpdateView):
+    template_name = 'test_productcreate.html'
+    form_class = ProductModelForm
+    queryset = Product.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Product, id=id_)
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
+
+
 # -------------------------------------------------------------------------
 # administration
 

@@ -1,6 +1,6 @@
 {% block content %}
 
-<form action=".. /Produkte">
+<form action="../Produkte">
     <input type="submit" value="Back" />
 </form>
 
@@ -9,5 +9,12 @@
     <p>{{ object.title }}</p>
     <p>{{ object.type }}</p>
     <!-- <p>{{ object.type }}</p> -->
+
+
+    <form href="{{ instance.get_absolute_url }}">
+        <input type="submit" value="Produkt bearbeiten" />
+    </form>
+    
+
 
 {% endblock %}
