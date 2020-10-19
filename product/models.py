@@ -64,7 +64,7 @@ class Product(models.Model):
     description =   models.CharField(max_length=255, blank=True)
     costs       =   models.DecimalField(max_digits=4,decimal_places=2) # in Euro
     weight      =   models.DecimalField(max_digits=6,decimal_places=0, null=True, blank=True) # in Gramm
-    stock      =    models.IntegerField # in Stück
+    stock      =    models.IntegerField(blank=True) # in Stück
     brand        =  models.CharField(max_length=45, blank=True)
     tax       =     models.ForeignKey(Tax, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
     discount      = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
