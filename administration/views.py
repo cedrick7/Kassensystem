@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .forms import *
+from django.urls import reverse
 
 from django.views.generic import (
     CreateView, 
@@ -52,6 +53,17 @@ class ProductUpdateView(UpdateView):
         print(form.cleaned_data)
         return super().form_valid(form)
 
+
+class ProductDeleteView(DeleteView):
+    template_name = 'test_productdelete.html'
+    queryset = Product.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Product, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:test_productlist')
 
 # -------------------------------------------------------------------------
 # administration

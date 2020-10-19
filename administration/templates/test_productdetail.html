@@ -6,13 +6,30 @@
 
 <h1>Einzelnes Produkt</h1>
 
+    <p>{{ object.brand }}</p>
+
     <p>{{ object.title }}</p>
-    <p>{{ object.type }}</p>
-    <!-- <p>{{ object.type }}</p> -->
+
+    
+    <p>Typ: {{ object.type }}</p>
+    <p>Beschreibung: {{ object.description }}</p>
+    <p>Kosten: {{ object.costs }}</p>
+    <p>Rabatt: {{ object.discount }}</p>
+    <p>Kategorie: {{ object.category }}</p>
+    <p>Attribute: {{ object.attributes }}</p>
+    <p>Bestand: {{ object.stock }}</p>
+    <p>Gewicht: {{ object.weight }}</p>
+    <p>Pfad: {{ object.path }}</p>
+    <p>Steuersatz: {{ object.tax }}</p>
 
 
-    <form href="{{ instance.get_absolute_url }}">
+
+    <form action="{{ object.get_update_url }}">
         <input type="submit" value="Produkt bearbeiten" />
+    </form>
+
+    <form action="{{ object.get_delete_url }}">
+        <input type="submit" value="Produkt löschen" />
     </form>
     
 

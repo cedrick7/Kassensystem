@@ -24,7 +24,7 @@ class ProductModelForm(forms.ModelForm):
             # 'title', 
             # 'type', 
             # 'costs', 
-
+            'type',
             'title',
             'category',
             'description',

@@ -88,7 +88,11 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse("administration:test_productdetail", kwargs={"id": self.id})
     
-
+    def get_update_url(self):
+        return reverse("administration:test_productupdate", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:test_productdelete", kwargs={"id": self.id})
 
 
     class Meta:

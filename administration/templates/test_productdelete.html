@@ -1,0 +1,27 @@
+{% block content %}
+
+<form action="../Produkte">
+    <input type="submit" value="Back" />
+</form>
+
+<h1>Delete </h1>
+
+
+
+
+    <!-- <form action="{{ object.get_update_url }}">
+        <input type="submit" value="Produkt bearbeiten" />
+    </form>  -->
+
+
+
+    <form action="" method="POST"> {% csrf_token %}
+        <h1>Möchtest du das Produkt "{{ object.title }}"?</h1>
+        <p>
+            <input type="submit" value="Ja" /> <a href="{{ object.get_absolute_url }}">Abbrechen</a>
+        </p>
+    </form> 
+    
+
+
+{% endblock %}
