@@ -1,8 +1,13 @@
 {% block content %}
 
-<h1>vor der liste</h1>
+<form action=".. /Produkte">
+    <input type="submit" value="Back" />
+</form>
+
+<h1>Einzelnes Produkt</h1>
 
     <p>{{ object.title }}</p>
+    <p>{{ object.type }}</p>
+    <!-- <p>{{ object.type }}</p> -->
 
-<h1>nach der liste</h1>
 {% endblock %}

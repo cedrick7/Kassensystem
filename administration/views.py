@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import *
 
 from django.views.generic import (
@@ -10,14 +10,32 @@ from django.views.generic import (
     DeleteView
 )
 
+from .forms import ProductModelForm
 from .models import *
 
 
 class ProductListView(ListView):
-    template_name = 'administration/administration_products.html'
+    template_name = 'test_productlist.html'
     queryset = Product.objects.all()
 
 
+class ProductDetailView(DetailView):
+    template_name = 'test_productdetail.html'
+    queryset = Product.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Product, id=id_)
+
+
+class ProductCreateView(CreateView):
+    template_name = 'test_productcreate.html'
+    form_class = ProductModelForm
+    queryset = Product.objects.all()
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return super().form_valid(form)
 
 
 # -------------------------------------------------------------------------
@@ -48,26 +66,26 @@ class ProductListView(ListView):
 
 
 
-def productlist_view(request, *args, **kwargs):
+# def productlist_view(request, *args, **kwargs):
     
-    queryset=Product.objects.all()
+#     queryset=Product.objects.all()
     
-    context = {
-        'object_list': queryset
-    }
+#     context = {
+#         'object_list': queryset
+#     }
 
-    return render(request, "test_productlist.html", context)
+#     return render(request, "test_productlist.html", context)
 
 
-def productdetail_view(request, id):
+# def productdetail_view(request, id):
     
-    queryset=Product.objects.get(id=id)
+#     queryset=Product.objects.get(id=id)
     
-    context = {
-        'object': queryset
-    }
+#     context = {
+#         'object': queryset
+#     }
 
-    return render(request, "test_productdetail.html", context)
+#     return render(request, "test_productdetail.html", context)
 
 
 

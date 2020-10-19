@@ -29,7 +29,7 @@ from django.urls import include, path
 
 urlpatterns = [
 
-    path('administration/', include('administration.urls')),
+    path('Administration/', include('administration.urls')),
 
 
 

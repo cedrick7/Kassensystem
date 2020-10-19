@@ -1,0 +1,14 @@
+{% block content %}
+
+<form action="../Produkte">
+    <input type="submit" value="Back" />
+</form>
+
+<h1>Erstelle ein Produkt</h1>
+
+<form action="" method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Speichern">
+</form>
+
+{% endblock %}

@@ -2,13 +2,15 @@ from django.urls import path
 
 
 from .views import (
-    productlist_view, 
-    productdetail_view
+    ProductListView, 
+    ProductDetailView, 
+    ProductCreateView
 )
 
 app_name =  'administration'
 urlpatterns=[
-    path('Produkte', productlist_view, name='test_productlist'),
-    path('Produkte/<int:id>', productdetail_view, name='test_productdetail'),
+    path('Produkte', ProductListView.as_view(), name='test_productlist'),
+    path('Produkte/<int:id>', ProductDetailView.as_view(), name='test_productdetail'),
+    path('Produkte/Erstellen', ProductCreateView.as_view(), name='test_productcreate'),
 ]
 
