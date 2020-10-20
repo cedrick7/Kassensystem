@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+	{% include 'administration_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+	<section id="body">
+		<div class="heading container-fluid">
+			<!-- change this content -->
+			<h3>Dienstleistungen</h3>
+			<a class="btn btn-primary" role="button" href="#">
+				<i class="fas fa-download fa-sm"></i>&nbsp;
+				<!-- change this content -->
+				Diese Dienstleistung ausdrucken</a>
+		</div>
+		<div class="content container-fluid">
+			<div class="card">
+				<div class="card-header">
+					<!-- change this content -->
+					<p>Dienstleistung bearbeiten</p>
+				</div>
+				<div class="card-body">
+					<div class="card-row-2 row">
+						<div class="col-12">
+							<!-- change this content -->
+							<form method="post" action="." class="needs-validation">{% csrf_token %}
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_title"><strong>{{ form.title.label }}</strong></label>
+											<div class="input-group">
+												{{ form.title }}
+												<div class="invalid-feedback">
+													{{ form.title.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_description"><strong>{{ form.description.label }}</strong></label>
+											<div class="input-group">
+												{{ form.description }}
+												<div class="invalid-feedback">
+													{{ form.description.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_price"><strong>{{ form.costs.label }}</strong></label>
+											<div class="input-group">
+												{{ form.costs }}
+												<div class="invalid-feedback">
+													{{ form.costs.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_categories"><strong>{{ form.category.label }}</strong></label>
+											<div class="input-group">
+												{{ form.category }}
+												<div class="invalid-feedback">
+													{{ form.category.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_attributes"><strong>{{ form.attribute.label }}</strong></label>
+											<div class="input-group">
+												{{ form.attribute }}
+												<div class="invalid-feedback">
+													{{ form.attribute.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_weight"><strong>{{ form.weight.label }}</strong></label>
+											<div class="input-group">
+												{{ form.weight }}
+												<div class="invalid-feedback">
+													{{ form.weight.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_stock"><strong>{{ form.stock.label }}</strong></label>
+											<div class="input-group">
+												{{ form.stock }}
+												<div class="invalid-feedback">
+													{{ form.stock.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_brand"><strong>{{ form.brand.label }}</strong></label>
+											<div class="input-group">
+												{{ form.brand }}
+												<div class="invalid-feedback">
+													{{ form.brand.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_taxfactor"><strong>{{ form.taxfactor.label }}</strong></label>
+											<div class="input-group">
+												{{ form.taxfactor }}
+												<div class="invalid-feedback">
+													{{ form.taxfactor.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-string">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_discount"><strong>{{ form.discount.label }}</strong></label>
+											<div class="input-group">
+												{{ form.discount }}
+												<div class="invalid-feedback">
+													{{ form.discount.errors }}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-img">
+									<div class="col">
+										<div class="form-group">
+											<label for="services_picture"><strong>{{ form.picture.label }}</strong></label>
+											{{ form.picture }}
+											<div class="invalid-feedback">
+												{{ form.picture.errors }}
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-submit">
+									<div class="col">
+										<button class="btn btn-primary btn-sm" type="submit">Speichern</button>
+										<button class="btn btn-primary btn-sm" type="submit">Löschen</button>
+										<button class="btn btn-primary btn-sm" type="submit">Löschen bestätigen</button>
+									</div>
+								</div>
+								<div class="form-row form-row-alert">
+									<div class="col">
+										<div class="alert alert-warning" role="alert"><span><strong>Zum Löschen, bitte bestätigen!</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-alert">
+									<div class="col">
+										<div class="alert alert-success" role="alert"><span><strong>Settings is saved successfully!</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-alert">
+									<div class="col">
+										<div class="alert alert-success" role="alert"><span><strong>Item is deleted successfully!</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-alert">
+									<div class="col">
+										<div class="alert alert-danger" role="alert"><span><strong>Settings could not be saved!</strong></span>
+										</div>
+									</div>
+								</div>
+								<div class="form-row form-row-alert">
+									<div class="col">
+										<div class="alert alert-danger" role="alert"><span><strong>Item could not be deleted!</strong><br></span>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

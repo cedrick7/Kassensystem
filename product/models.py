@@ -76,7 +76,7 @@ class Product(models.Model):
     PRODUCT   = 'PR'
     TYPE = [
     (Service, 'Dienstleistung'),
-    (PRODUCT, 'Product'),
+    (PRODUCT, 'Produkt'),
     ]
 
     type = models.CharField(
@@ -85,18 +85,17 @@ class Product(models.Model):
         default=PRODUCT,
     )
 
-    def get_absolute_url(self):
-        return reverse("administration:test_productdetail", kwargs={"id": self.id})
     
     def get_update_url(self):
-        return reverse("administration:test_productupdate", kwargs={"id": self.id})
+        return reverse("administration:product_update", kwargs={"id": self.id})
     
     def get_delete_url(self):
-        return reverse("administration:test_productdelete", kwargs={"id": self.id})
+        return reverse("administration:product_delete", kwargs={"id": self.id})
+
 
 
     class Meta:
-        verbose_name_plural = "Producte"
+        verbose_name_plural = "Products"
 
 
 
