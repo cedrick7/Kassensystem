@@ -8,7 +8,7 @@ from django.views.generic import (
     ListView, 
     UpdateView,  
     ListView, 
-    DeleteView
+    DeleteView,
 )
 
 from .forms import ProductModelForm
