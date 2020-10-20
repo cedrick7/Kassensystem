@@ -15,8 +15,14 @@ from .forms import ProductModelForm
 from .models import *
 
 
+# Administration Dashboard
+def administration_dashboard(request, *args, **kwargs):
+
+    return render(request, "administration_dashboard_copy.html", {})
+
+
 class ProductListView(ListView):
-    template_name = 'test_productlist.html'
+    template_name = 'administration_products_new.html'
     queryset = Product.objects.all()
 
 
@@ -37,7 +43,6 @@ class ProductCreateView(CreateView):
     def form_valid(self, form):
         print(form.cleaned_data)
         return super().form_valid(form)
-
 
 
 class ProductUpdateView(UpdateView):

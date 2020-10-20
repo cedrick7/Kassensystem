@@ -1,7 +1,7 @@
 <header id="header">
     <nav class="navbar navbar-light navbar-expand-xl" id="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'administration:administration_dashboard' %}">Kassensystem</a>
+        <a class="navbar-brand" href="{% url 'administration_dashboard' %}">Kassensystem</a>
         <button data-toggle="collapse" class="navbar-toggler" id="burger-button" data-target="#navcol-1" style="border-style: none;">
           <span class="sr-only">Toggle navigation</span>
           <div class="animated-icon">
@@ -17,7 +17,7 @@
               <div class="nav-item dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Sortimentverwaltung</a>
                 <div class="dropdown-menu" role="menu" style="border-radius: 0;border-style: none;border-left: 2px solid rgba(0,0,0,0.5) ;">
-                    <a class="dropdown-item" role="presentation" href="{% url 'administration:administration_products' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Produkte</a>
+                    <a class="dropdown-item" role="presentation" href="{% url 'administration_products' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Produkte</a>
                     <a class="dropdown-item" role="presentation" href="{% url 'administration_services' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Dienstleistungen</a>
                     <a class="dropdown-item" role="presentation" href="{% url 'administration_categories' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Kategorien</a>
                     <a class="dropdown-item" role="presentation" href="{% url 'administration_attributes' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Eigenschaften</a>

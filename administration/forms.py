@@ -37,6 +37,8 @@ class ProductModelForm(forms.ModelForm):
             'path',
             'attributes',
         ]
+
+
            
                            
 

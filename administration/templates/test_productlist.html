@@ -11,4 +11,10 @@
 
     {% endfor %}
 
+
+
+    <form action="{% url 'administration:test_productcreate' %}">
+        <input type="submit" value="Erstelle ein Produkt" />
+    </form>
+
 {% endblock %}
