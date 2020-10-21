@@ -70,7 +70,19 @@ class AttributeModelForm(forms.ModelForm):
         model = Attribute
         fields = [
             'title', 
-        ]           
+        ]   
+
+
+class CustomerModelForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = [
+            'firstname', 
+            'lastname',
+            'birthday',
+            'email',
+            'phonenumber',
+        ]             
 
 
 

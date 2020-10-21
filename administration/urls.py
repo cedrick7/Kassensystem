@@ -29,6 +29,10 @@ from .views import (
     AttributeUpdateView,
     AttributeDeleteView,
 
+    CustomerListView,
+    CustomerCreateView,
+    CustomerUpdateView,
+    CustomerDeleteView,
 )
 
 app_name =  'administration'
@@ -61,11 +65,17 @@ urlpatterns=[
     path('Steuersätze/<int:id>/Bearbeiten', TaxUpdateView.as_view(), name='tax_update'),
     path('Steuersätze/<int:id>/Löschen', TaxDeleteView.as_view(), name='tax_delete'),
 
-    #Attribute
+    # Attribute
     path('Attribute', AttributeListView.as_view(), name='attribute_list'),
     path('Attribute/Erstellen', AttributeCreateView.as_view(), name='attribute_create'),
     path('Attribute/<int:id>/Bearbeiten', AttributeUpdateView.as_view(), name='attribute_update'),
     path('Attribute/<int:id>/Löschen', AttributeDeleteView.as_view(), name='attribute_delete'),
+
+    # Kunden
+    path('Kunden', CustomerListView.as_view(), name='customer_list'),
+    path('Kunden/Erstellen', CustomerCreateView.as_view(), name='customer_create'),
+    path('Kunden/<int:id>/Bearbeiten', CustomerUpdateView.as_view(), name='customer_update'),
+    path('Kunden/<int:id>/Löschen', CustomerDeleteView.as_view(), name='customer_delete'),
 
 
 ]

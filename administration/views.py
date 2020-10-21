@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
+from customer.models import Customer
 from django.urls import reverse
 
 from django.views.generic import (
@@ -323,7 +324,7 @@ class TaxUpdateView(UpdateView):
         return render(request, self.template_name, context)
 
 class TaxDeleteView(DeleteView):
-    template_name = 'new/administration_tax_delete_copy.html'
+    template_name = 'new/administration_taxes_delete_copy.html'
     queryset = Tax.objects.all()
 
     def get_object(self):
@@ -332,6 +333,7 @@ class TaxDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:tax_list')
+
 
 # Attribute 
 class AttributeListView(ListView):
@@ -400,7 +402,7 @@ class AttributeUpdateView(UpdateView):
         return render(request, self.template_name, context)
 
 class AttributeDeleteView(DeleteView):
-    template_name = 'new/administration_attribute_delete_copy.html'
+    template_name = 'new/administration_attributes_delete_copy.html'
     queryset = Attribute.objects.all()
 
     def get_object(self):
@@ -410,7 +412,85 @@ class AttributeDeleteView(DeleteView):
     def get_success_url(self):
         return reverse('administration:attribute_list')
 
-#
+
+# Kunden
+class CustomerListView(ListView):
+    template_name = 'new/administration_customers_copy.html'
+    queryset = Customer.objects.all()
+
+class CustomerCreateView(View):
+    template_name = 'new/administration_customers_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = CustomerModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Kunden"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        form = CustomerModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:customer_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class CustomerUpdateView(UpdateView):
+    template_name = 'new/administration_customers_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Customer, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CustomerModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Kunden"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CustomerModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:customer_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class CustomerDeleteView(DeleteView):
+    template_name = 'new/administration_customers_delete_copy.html'
+    queryset = Customer.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Customer, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:customer_list')
+
+
 
 # -------------------------------------------------------------------------
 # administration
