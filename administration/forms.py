@@ -65,7 +65,12 @@ class TaxModelForm(forms.ModelForm):
             'taxrate', 
         ]
 
-                         
+class AttributeModelForm(forms.ModelForm):
+    class Meta:
+        model = Attribute
+        fields = [
+            'title', 
+        ]           
 
 
 

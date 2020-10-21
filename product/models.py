@@ -8,8 +8,16 @@ from django.urls import reverse
 # Create your models here.
 
 
-class Attribute(models.Model):
+class Attribute(models.Model): 
     title = models.CharField(max_length=30)
+
+
+    def get_update_url(self):
+        return reverse("administration:attribute_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:attribute_delete", kwargs={"id": self.id})
+
 
     class Meta:
         verbose_name_plural = "attributes"
@@ -117,7 +125,6 @@ class Product(models.Model):
 
     class Meta:
         verbose_name_plural = "Products"
-
 
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm
-from product.models import Product, Category, Discount, Tax
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm
+from product.models import Product, Category, Discount, Tax, Attribute
 from django.urls import reverse
 
 from django.views.generic import (
@@ -333,7 +333,84 @@ class TaxDeleteView(DeleteView):
     def get_success_url(self):
         return reverse('administration:tax_list')
 
+# Attribute 
+class AttributeListView(ListView):
+    template_name = 'new/administration_attributes_copy.html'
+    queryset = Attribute.objects.all()
 
+class AttributeCreateView(View):
+    template_name = 'new/administration_attributes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = AttributeModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle ein Attribut"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = AttributeModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:attribute_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class AttributeUpdateView(UpdateView):
+    template_name = 'new/administration_attributes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Attribute, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = AttributeModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Steuersatz"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = AttributeModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:attribute_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class AttributeDeleteView(DeleteView):
+    template_name = 'new/administration_attribute_delete_copy.html'
+    queryset = Attribute.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Attribute, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:attribute_list')
+
+#
 
 # -------------------------------------------------------------------------
 # administration
