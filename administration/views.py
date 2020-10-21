@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from .forms import *
+from django.shortcuts import render, get_object_or_404, redirect
+from .forms import ProductModelForm, CategoryModelForm
+from product.models import Product, Category
 from django.urls import reverse
-from django.shortcuts import redirect
 
 from django.views.generic import (
     View,
@@ -13,8 +13,7 @@ from django.views.generic import (
     DeleteView,
 )
 
-from .forms import ProductModelForm
-from .models import *
+
 
 
 # Administration Dashboard
@@ -26,26 +25,6 @@ def administration_dashboard(request, *args, **kwargs):
 class ProductListView(ListView):
     template_name = 'new/administration_products_copy.html'
     queryset = Product.objects.all()
-
-
-# class ProductDetailView(DetailView):
-#     template_name = 'test_productdetail.html'
-#     queryset = Product.objects.all()
-
-#     def get_object(self):
-#         id_ = self.kwargs.get("id")
-#         return get_object_or_404(Product, id=id_)
-
-
-# class ProductCreateView(CreateView):
-#     template_name = 'new/administration_products_create_copy.html'
-#     form_class = ProductModelForm
-#     queryset = Product.objects.all()
-
-#     def form_valid(self, form):
-#         print(form.cleaned_data)
-#         return super().form_valid(form)
-
 
 class ProductCreateView(View):
     template_name = 'new/administration_products_create-update_copy.html'
@@ -69,7 +48,6 @@ class ProductCreateView(View):
             "form":form
         }
         return render(request, self.template_name, context)
-
 
 class ProductUpdateView(UpdateView):
     template_name = 'new/administration_products_create-update_copy.html'
@@ -109,22 +87,6 @@ class ProductUpdateView(UpdateView):
                     }
         return render(request, self.template_name, context)
 
-
-
-# class ProductUpdateView(UpdateView):
-    # template_name = 'new/administration_products_detail_copy.html'
-    # form_class = ProductModelForm
-    # queryset = Product.objects.all()
-
-    # def get_object(self):
-    #     id_ = self.kwargs.get("id")
-    #     return get_object_or_404(Product, id=id_)
-
-    # def form_valid(self, form):
-    #     print(form.cleaned_data)
-    #     return super().form_valid(form)
-
-
 class ProductDeleteView(DeleteView):
     template_name = 'new/administration_products_delete_copy.html'
     queryset = Product.objects.all()
@@ -137,58 +99,83 @@ class ProductDeleteView(DeleteView):
         return reverse('administration:product_list')
 
 
+
 # Kategorien
-# class CategoryListView(ListView):
-#     template_name = 'administration_products_new.html'
-#     queryset = Product.objects.all()
+class CategoryListView(ListView):
+    template_name = 'new/administration_categories_copy.html'
+    queryset = Category.objects.all()
 
+class CategoryCreateView(View):
+    template_name = 'new/administration_categories_create-update_copy.html'
 
-# class CategoryDetailView(DetailView):
-#     template_name = 'test_productdetail.html'
-#     queryset = Product.objects.all()
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = CategoryModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle eine Kategorie"
+        }
+        return render(request, self.template_name, context)
 
-#     def get_object(self):
-#         id_ = self.kwargs.get("id")
-#         return get_object_or_404(Product, id=id_)
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = CategoryModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:category_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
 
+class CategoryUpdateView(UpdateView):
+    template_name = 'new/administration_categories_create-update_copy.html'
 
-# class CategoryCreateView(CreateView):
-#     template_name = 'test_productcreate.html'
-#     form_class = ProductModelForm
-#     queryset = Product.objects.all()
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Category, id=id)
+        return obj
 
-#     def form_valid(self, form):
-#         print(form.cleaned_data)
-#         return super().form_valid(form)
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CategoryModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite eine Kategorie"
+            }
+        return render(request, self.template_name, context)
 
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CategoryModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:category_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
 
-# class CategoryUpdateView(UpdateView):
-#     template_name = 'test_productcreate.html'
-#     form_class = ProductModelForm
-#     queryset = Product.objects.all()
+class CategoryDeleteView(DeleteView):
+    template_name = 'new/administration_categories_delete_copy.html'
+    queryset = Category.objects.all()
 
-#     def get_object(self):
-#         id_ = self.kwargs.get("id")
-#         return get_object_or_404(Product, id=id_)
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Category, id=id_)
 
-#     def form_valid(self, form):
-#         print(form.cleaned_data)
-#         return super().form_valid(form)
-
-
-# class CategoryDeleteView(DeleteView):
-#     template_name = 'test_productdelete.html'
-#     queryset = Product.objects.all()
-
-#     def get_object(self):
-#         id_ = self.kwargs.get("id")
-#         return get_object_or_404(Product, id=id_)
-
-# def get_success_url(self):
-#     return reverse('administration:test_productlist')
-
-
-
+    def get_success_url(self):
+        return reverse('administration:category_list')
 
 # -------------------------------------------------------------------------
 # administration

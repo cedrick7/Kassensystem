@@ -10,24 +10,23 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
 {% endblock specific %}
 
+<!-- Body -->
 
 
 {% block content %}
-
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Produkte</h3>
+			<h3>Kategorien</h3>
 			<a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
 				<!-- change this content -->
-				Dieses Produkt ausdrucken</a>
+				Diese Kategorien ausdrucken</a>
 		</div>
 		<div class="content container-fluid">
 			<div class="card">
 				<div class="card-header">
-
-					<form action="{% url 'administration:product_list' %}">
+					<form action="{% url 'administration:category_list' %}">
 						<input type="submit" value="Back" />
 					</form>
 					<!-- change this content -->
@@ -35,23 +34,16 @@
 					<p>{{ headline }}</p>
 					{% endblock %}
 				</div>
-
 				<div class="card-body">
 					<div class="card-row-2 row">
 						<div class="col-12">
-
-								<form action="" method="POST"> {% csrf_token %}
-									{{ form.as_p }}
-									<input type="submit" value="Speichern">
-								</form>
-
-
-
-								<div class="form-row form-row-submit">
-									
-								</div>
-								
+							<!-- change this content -->
+							
+							<form action="" method="POST"> {% csrf_token %}
+								{{ form.as_p }}
+								<input type="submit" value="Speichern">
 							</form>
+							
 						</div>
 					</div>
 				</div>

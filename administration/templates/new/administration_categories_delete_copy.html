@@ -13,9 +13,9 @@
 
 
     <form action="" method="POST"> {% csrf_token %}
-        <h1>Möchtest du das Produkt "{{ object.title }}" löschen?</h1>
+        <h1>Möchtest du die Kategorie "{{ object.title }}" löschen?</h1>
         <p>
-            <input type="submit" value="Ja" /> <a href="{% url 'administration:product_list' %}">Abbrechen</a>
+            <input type="submit" value="Ja" /> <a href="{% url 'administration:category_list' %}">Abbrechen</a>
         </p>
     </form> 
     

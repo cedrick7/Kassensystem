@@ -40,6 +40,13 @@ class Category(models.Model):
     title       =   models.CharField(max_length=45)
     discount    =   models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
     color       =   ColorField(default='#FF0000')
+        
+    def get_update_url(self):
+        return reverse("administration:category_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:category_delete", kwargs={"id": self.id})
+
 
     class Meta:
         verbose_name_plural = "categorien"

@@ -10,10 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
 {% endblock specific %}
 
-<!-- Body -->
-{% block navbar %}
-	{% include 'administration_navbar.html' %}
-{% endblock navbar %}
+
 
 {% block content %}
 	<section id="body">
@@ -47,8 +44,9 @@
 						</div>
 						<div class="col-12 col-sm-4">
 							<div class="create_button">
-								<button class="btn btn-primary">Kategorie hinzufügen</button>
-							</div>
+								<form action="{% url 'administration:category_create' %}">
+									<input class="btn btn-primary" type="submit" value="Kategorie hinzufügen" />
+								</form>							</div>
 						</div>
 						<div class="col-12 col-sm-4">
 							<div class="dataTables_filter" id="dataTable_filter-1">
@@ -74,37 +72,28 @@
 									</tr>
 									</thead>
 									<tbody>
-									<tr>
-										<td>Obst</td>
-										<td>00,00%</td>
-										<td>color</td>
-										<td class="td-icons"><a href="categories-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Gemüse</td>
-										<td>00,00%</td>
-										<td>color</td>
-										<td class="td-icons"><a href="categories-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Kosmetik</td>
-										<td>10,00%</td>
-										<td>color</td>
-										<td class="td-icons"><a href="categories-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									</tbody>
+
+										{% for instance in object_list %}
+											<tr>
+												<td>{{ instance.title }}</td>
+												<td>{{ instance.disount }}</td>
+												<td>{{ instance.color }}</td>
+												<td class="td-icons">
+													<a href="{{ instance.get_update_url }}"><i
+															class="fa fa-pencil"></i></a>
+													<a href="{{ instance.get_delete_url }}"><i class="fa fa-remove"></i></a>
+												</td>
+											</tr>
+										{% endfor %}
+	
+										</tbody>
 									<tfoot>
 									<tr>
 										<td><strong>Name</strong></td>
 										<td><strong>Rabatt</strong></td>
 										<td><strong>Farbe</strong></td>
 										<td><strong>Mehr</strong></td>
+										
 									</tr>
 									</tfoot>
 								</table>
