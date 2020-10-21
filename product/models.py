@@ -28,6 +28,13 @@ class Discount(models.Model):
     end         = models.DateTimeField(blank=True, null=True)
 
 
+    def get_update_url(self):
+        return reverse("administration:discount_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:discount_delete", kwargs={"id": self.id})
+
+
     class Meta:
         verbose_name_plural = "discounte"
 

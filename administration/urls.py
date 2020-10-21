@@ -2,15 +2,22 @@ from django.urls import path
 
 
 from .views import (
+    administration_dashboard,
+   
     ProductListView,  
     ProductCreateView, 
     ProductUpdateView, 
     ProductDeleteView, 
-    administration_dashboard,
+
     CategoryListView,
     CategoryCreateView,
     CategoryUpdateView, 
     CategoryDeleteView,
+
+    DiscountListView,
+    DiscountCreateView,
+    DiscountUpdateView,
+    DiscountDeleteView,
     
 
 )
@@ -33,6 +40,11 @@ urlpatterns=[
     path('Kategorien/<int:id>/Bearbeiten', CategoryUpdateView.as_view(), name='category_update'),
     path('Kategorien/<int:id>/Delete', CategoryDeleteView.as_view(), name='category_delete'),
 
+    # Rabatt
+    path('Rabatte', DiscountListView.as_view(), name='discount_list'),
+    path('Rabatte/Erstellen', DiscountCreateView.as_view(), name='discount_create'),
+    path('Rabatte/<int:id>/Bearbeiten', DiscountUpdateView.as_view(), name='discount_update'),
+    path('Rabatte/<int:id>/Delete', DiscountDeleteView.as_view(), name='discount_delete'),
 
 
 

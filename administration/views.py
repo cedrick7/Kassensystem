@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm
-from product.models import Product, Category
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm
+from product.models import Product, Category, Discount
 from django.urls import reverse
 
 from django.views.generic import (
@@ -176,6 +176,87 @@ class CategoryDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:category_list')
+
+
+
+class DiscountListView(ListView):
+    template_name = 'new/administration_discounts_copy.html'
+    queryset = Discount.objects.all()
+
+class DiscountCreateView(View):
+    template_name = 'new/administration_discounts_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = DiscountModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle ein Rabatt"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = DiscountModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:discount_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class DiscountUpdateView(UpdateView):
+    template_name = 'new/administration_discounts_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Discount, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = DiscountModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite ein Rabatt"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = DiscountModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:discount_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class DiscountDeleteView(DeleteView):
+    template_name = 'new/administration_discounts_delete_copy.html'
+    queryset = Discount.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Discount, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:discount_list')
+
+
+
 
 # -------------------------------------------------------------------------
 # administration

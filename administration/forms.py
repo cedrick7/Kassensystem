@@ -48,6 +48,18 @@ class CategoryModelForm(forms.ModelForm):
             'discount',
         ]
 
+class DiscountModelForm(forms.ModelForm):
+    class Meta:
+        model = Discount
+        fields = [
+            'title', 
+            'factor',
+            'amount',
+            'begin',
+            'end',
+        ]
+
+
                            
 
 

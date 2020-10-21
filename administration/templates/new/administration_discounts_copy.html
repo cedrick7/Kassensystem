@@ -11,9 +11,7 @@
 {% endblock specific %}
 
 <!-- Body -->
-{% block navbar %}
-	{% include 'administration_navbar.html' %}
-{% endblock navbar %}
+
 
 {% block content %}
 	<section id="body">
@@ -46,9 +44,9 @@
 							</div>
 						</div>
 						<div class="col-12 col-sm-4">
-							<div class="create_button">
-								<button class="btn btn-primary">Rabatt hinzufügen</button>
-							</div>
+							<form action="{% url 'administration:discount_create' %}">
+								<input class="btn btn-primary" type="submit" value="Rabatt hinzufügen" />
+							</form>
 						</div>
 						<div class="col-12 col-sm-4">
 							<div class="dataTables_filter" id="dataTable_filter-1">
@@ -76,42 +74,20 @@
 									</tr>
 									</thead>
 									<tbody>
-									<tr>
-										<td>Neukunde</td>
-										<td>Lorem ipsum dolor sit amet</td>
-										<td>10%</td>
-										<td>01.01.2020</td>
-										<td>01.01.2021</td>
-										<td class="td-icons"><a href="discount-detail.html"><i class="fa fa-pencil"></i></a><a
-												href="#"><i class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>FSV-Kunden</td>
-										<td>Lorem ipsum dolor sit amet</td>
-										<td>50%</td>
-										<td>01.01.2020</td>
-										<td>01.06.2020</td>
-										<td class="td-icons"><a href="discount-detail.html"><i class="fa fa-pencil"></i></a><a
-												href="#"><i class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Mitarbeiter</td>
-										<td>Lorem ipsum dolor sit amet</td>
-										<td>5%</td>
-										<td>01.01.2020</td>
-										<td>01.03.2020</td>
-										<td class="td-icons"><a href="discount-detail.html"><i class="fa fa-pencil"></i></a><a
-												href="#"><i class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Kinder</td>
-										<td>Lorem ipsum dolor sit amet</td>
-										<td>1%</td>
-										<td>01.01.2020</td>
-										<td>01.04.2021</td>
-										<td class="td-icons"><a href="discount-detail.html"><i class="fa fa-pencil"></i></a><a
-												href="#"><i class="fa fa-remove"></i></a></td>
-									</tr>
+										{% for instance in object_list %}
+										<tr>
+											<td>{{ instance.title }}</td>
+											<td>{{ instance.factor }}</td>
+											<td>{{ instance.amount }}</td>
+											<td>{{ instance.begin }}</td>
+											<td>{{ instance.end }}</td>
+											<td class="td-icons">
+												<a href="{{ instance.get_update_url }}"><i
+														class="fa fa-pencil"></i></a>
+												<a href="{{ instance.get_delete_url }}"><i class="fa fa-remove"></i></a>
+											</td>
+										</tr>
+									{% endfor %}
 									</tbody>
 									<tfoot>
 									<tr>
