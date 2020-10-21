@@ -5,6 +5,7 @@ from analyzation.models import *
 from cashbox.models import *
 from customer.models import *
 from product.models import *
+from authorization.models import *
 
 styling = ''
 
@@ -82,9 +83,27 @@ class CustomerModelForm(forms.ModelForm):
             'birthday',
             'email',
             'phonenumber',
-        ]             
+        ]         
 
+class EmployeeModelForm(forms.ModelForm):
+    class Meta:
+        model = Employee
+        fields = [
+            'firstname',
+            'lastname',
+            'password',
+            'picture',
+            'role',
+        ]                 
 
+class WorkTimeModelForm(forms.ModelForm):
+    class Meta:
+        model = Worktime
+        fields = [
+            'employee',
+            'begin',
+            'end',
+        ]                 
 
 # ----------------------------------------------------------------------------------------------------------------------
 # forms von cedi als template

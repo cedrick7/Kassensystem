@@ -10,11 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
 {% endblock specific %}
 
-<!-- Body -->
-{% block navbar %}
-	{% include 'administration_navbar.html' %}
-{% endblock navbar %}
-
 {% block content %}
 	<section id="body">
 		<div class="heading container-fluid">
@@ -67,59 +62,23 @@
 										<th>Rolle</th>
 										<th>Passwort</th>
 										<th>Bild</th>
-										<th>Mehr</th>
 									</tr>
 									</thead>
 									<tbody>
-									<tr>
-										<td>Cedrick</td>
-										<td>Candia</td>
-										<td>email@email.com</td>
-										<td>Admin</td>
-										<td>Bild</td>
-										<td class="td-icons"><a href="employees-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Jeremy</td>
-										<td>Fuchs</td>
-										<td>email@email.com</td>
-										<td>Analyst</td>
-										<td>Bild</td>
-										<td class="td-icons"><a href="employees-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Maximilian</td>
-										<td>Huber</td>
-										<td>email@email.com</td>
-										<td>Kassierer</td>
-										<td>Bild</td>
-										<td class="td-icons"><a href="employees-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Ludwig</td>
-										<td>Bergemann</td>
-										<td>email@email.com</td>
-										<td>Kassierer</td>
-										<td>Bild</td>
-										<td class="td-icons"><a href="employees-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									</tbody>
-									<tfoot>
-									<tr>
+										{% for instance in object_list %}
+										<tr>
+											<td>{{ instance.firstname }}</td>
+											<td>{{ instance.lastname }}</td>
+											<td>{{ instance.password }}</td>
+											<td>{{ instance.picture }}</td>
+											<td>{{ instance.role }}</td>
+										</tr>
+										{% endfor %}
 										<td><strong>Vorname</strong></td>
 										<td><strong>Nachname</strong></td>
 										<td><strong>Rolle</strong></td>
 										<td><strong>Passwort</strong></td>
 										<td><strong>Bild</strong></td>
-										<td><strong>Mehr</strong></td>
 									</tr>
 									</tfoot>
 								</table>

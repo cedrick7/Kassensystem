@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
+from authorization.models import Employee
+from analyzation.models import Worktime
 from django.urls import reverse
 
 from django.views.generic import (
@@ -477,6 +479,8 @@ class CustomerUpdateView(UpdateView):
                         "object":obj,
                         "form":form
                     }
+            else:
+                print("not valid!")
         return render(request, self.template_name, context)
 
 class CustomerDeleteView(DeleteView):
@@ -489,6 +493,17 @@ class CustomerDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:customer_list')
+
+# Angestellte
+class EmployeeListView(ListView):
+    template_name = 'new/administration_employees_copy.html'
+    queryset = Employee.objects.all()
+
+# Arbeitszeit
+class WorkTimeListView(ListView):
+    template_name = 'new/administration_worktime_copy.html'
+    queryset = Worktime.objects.all()
+
 
 
 

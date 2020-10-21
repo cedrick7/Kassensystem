@@ -33,6 +33,9 @@ from .views import (
     CustomerCreateView,
     CustomerUpdateView,
     CustomerDeleteView,
+
+    EmployeeListView,
+    WorkTimeListView,
 )
 
 app_name =  'administration'
@@ -76,6 +79,12 @@ urlpatterns=[
     path('Kunden/Erstellen', CustomerCreateView.as_view(), name='customer_create'),
     path('Kunden/<int:id>/Bearbeiten', CustomerUpdateView.as_view(), name='customer_update'),
     path('Kunden/<int:id>/Löschen', CustomerDeleteView.as_view(), name='customer_delete'),
+
+    # Angestellte
+    path('Angestellte', EmployeeListView.as_view(), name='employee_list'),
+
+    # Arbeitszeit
+    path('Arbeitszeit', WorkTimeListView.as_view(), name='worktime_list'),
 
 
 ]
