@@ -27,7 +27,7 @@
 			<div class="card">
 				<div class="card-header">
 					<!-- change this content -->
-					<p>Produkte Übersicht</p>
+					<p>Steuersatz Übersicht</p>
 				</div>
 				<div class="card-body">
 					<div class="card-row-1 row">
@@ -46,8 +46,8 @@
 						<div class="col-12 col-sm-4">
 							<div class="create_button">
 
-								<form action="{% url 'administration:product_create' %}">
-									<input class="btn btn-primary" type="submit" value="Produkt hinzufügen" />
+								<form action="{% url 'administration:tax_create' %}">
+									<input class="btn btn-primary" type="submit" value="Steuersatz hinzufügen" />
 								</form>
 								
 							</div>
@@ -70,37 +70,18 @@
 								<table class="table" id="productsTable">
 									<thead>
 									<tr>
-										<th>Typ</th>
 										<th>Name</th>
-										<th>Marke</th>
-										<th>Preis</th>
-										<th>Bestand</th>
-										<th>Eigenschaften</th>
-										<th>Kategorien</th>
-										<th>Gewicht</th>
-										<th>Bild</th>
 										<th>Steuersatz</th>
-										<th>Bild</th>
 										<th>Mehr</th>
+
 									</tr>
 									</thead>
 									<tbody>
 
 									{% for instance in object_list %}
 										<tr>
-											<td>{{ instance.type }}</td>
 											<td>{{ instance.title }}</td>
-											<td>{{ instance.description }}</td>
-											<td>{{ instance.brand }}</td>
-											<td>{{ instance.costs }}</td>
-											<td>{{ instance.stock }}</td>
-											<td>{% for instance in instance.category.all %}{{ instance }}<br/>{% endfor %}</td>
-											<td>{{ instance.attributes }}</td>
-											<td>{{ instance.weight }}</td>
-											<td>{{ instance.picture }}</td>
-											<td>{{ instance.tax }}</td>
-											<td>{{ instance.discount }}</td>
-											<td>{{ instance.path }}</td>
+											<td>{{ instance.taxrate }} % </td> 
 											<td class="td-icons">
 												<a href="{{ instance.get_update_url }}"><i
 														class="fa fa-pencil"></i></a>
@@ -112,17 +93,8 @@
 									</tbody>
 									<tfoot>
 									<tr>
-										<td><strong>Typ</strong></td>
 										<td><strong>Name</strong></td>
-										<td><strong>Marke</strong></td>
-										<td><strong>Preis</strong></td>
-										<td><strong>Bestand</strong></td>
-										<td><strong>Kategorien</strong></td>
-										<td><strong>Eigenschaften</strong></td>
-										<td><strong>Gewicht</strong></td>
-										<td><strong>Bild</strong></td>
 										<td><strong>Steuersatz</strong></td>
-										<td><strong>Rabatt</strong></td>
 										<td><strong>Mehr</strong></td>
 									</tr>
 									</tfoot>

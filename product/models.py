@@ -21,9 +21,9 @@ class Attribute(models.Model):
 
 
 class Discount(models.Model):
-    title           = models.CharField(max_length=45, null=True)
-    factor          = models.DecimalField(max_digits=3,decimal_places=0, default=0) # max: 3 Stellen # in Prozent
-    amount          = models.IntegerField(default=0, blank=True) # in Stück
+    title       = models.CharField(max_length=45, null=True)
+    factor      = models.DecimalField(max_digits=3,decimal_places=0, default=0) # max: 3 Stellen # in Prozent
+    amount      = models.IntegerField(default=0, blank=True) # in Stück
     begin       = models.DateTimeField(blank=True, default=timezone.now)    # wenn blank, dann permanent 
     end         = models.DateTimeField(blank=True, null=True)
 
@@ -63,14 +63,21 @@ class Category(models.Model):
 
 
 class Tax(models.Model):
+    title       = models.CharField(max_length=45, null=True)
     taxrate      = models.DecimalField(max_digits=2,decimal_places=0, blank=True, null=True) # in Prozent
+
+
+    def get_update_url(self):
+        return reverse("administration:tax_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:tax_delete", kwargs={"id": self.id})
+
 
     class Meta:
         verbose_name_plural = "taxsätze"
 
-    def __str__(self):
 
-        return "taxrate: "+ self.taxrate + "%"
 
 class Product(models.Model):
     title        =  models.CharField(max_length=45)
@@ -82,7 +89,7 @@ class Product(models.Model):
     brand        =  models.CharField(max_length=45, blank=True)
     tax       =     models.ForeignKey(Tax, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
     discount      = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None, null=True)
+    path    = models.FileField(upload_to='uploads/', unique=True, blank=True, default=None, null=True)
     attributes  =   models.ManyToManyField(Attribute, blank=True)
     #color = Model for colorfield
     #is_favourite = Model for Boolean checkbox

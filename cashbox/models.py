@@ -21,7 +21,7 @@ class Cashbox(models.Model):
 
 class Paymenttool(models.Model):
     title        = models.CharField(max_length=45)
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=True, blank=True, default=None, null=True)
 
     class Meta:
         verbose_name_plural = "paymenttool"

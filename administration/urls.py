@@ -19,6 +19,10 @@ from .views import (
     DiscountUpdateView,
     DiscountDeleteView,
     
+    TaxListView,
+    TaxCreateView,
+    TaxUpdateView,
+    TaxDeleteView,
 
 )
 
@@ -45,6 +49,13 @@ urlpatterns=[
     path('Rabatte/Erstellen', DiscountCreateView.as_view(), name='discount_create'),
     path('Rabatte/<int:id>/Bearbeiten', DiscountUpdateView.as_view(), name='discount_update'),
     path('Rabatte/<int:id>/Delete', DiscountDeleteView.as_view(), name='discount_delete'),
+
+    # Steuersätze
+    path('Steuersätze', TaxListView.as_view(), name='tax_list'),
+    path('Steuersätze/Erstellen', TaxCreateView.as_view(), name='tax_create'),
+    path('Steuersätze/<int:id>/Bearbeiten', TaxUpdateView.as_view(), name='tax_update'),
+    path('Steuersätze/<int:id>/Delete', TaxDeleteView.as_view(), name='tax_delete'),
+
 
 
 

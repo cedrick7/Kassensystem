@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm
-from product.models import Product, Category, Discount
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm
+from product.models import Product, Category, Discount, Tax
 from django.urls import reverse
 
 from django.views.generic import (
@@ -178,7 +178,7 @@ class CategoryDeleteView(DeleteView):
         return reverse('administration:category_list')
 
 
-
+# Rabatte
 class DiscountListView(ListView):
     template_name = 'new/administration_discounts_copy.html'
     queryset = Discount.objects.all()
@@ -255,6 +255,83 @@ class DiscountDeleteView(DeleteView):
     def get_success_url(self):
         return reverse('administration:discount_list')
 
+
+# Steuersätze
+class TaxListView(ListView):
+    template_name = 'new/administration_taxes_copy.html'
+    queryset = Tax.objects.all()
+
+class TaxCreateView(View):
+    template_name = 'new/administration_taxes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = TaxModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Steuersatz"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = TaxModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:tax_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class TaxUpdateView(UpdateView):
+    template_name = 'new/administration_taxes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Tax, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = TaxModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Steuersatz"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = TaxModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:tax_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class TaxDeleteView(DeleteView):
+    template_name = 'new/administration_tax_delete_copy.html'
+    queryset = Tax.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Tax, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:tax_list')
 
 
 
