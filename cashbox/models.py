@@ -35,11 +35,11 @@ class Safe(models.Model):
     amount      = models.DecimalField(max_digits=8,decimal_places=2) # in Euro
     employee = models.ManyToManyField(Employee, blank=True)
 
-    # def get_update_url(self):
-    #     return reverse("administration:safe_update", kwargs={"id": self.id})
+    def get_update_url(self):
+        return reverse("administration:safe_update", kwargs={"id": self.id})
     
-    # def get_delete_url(self):
-    #     return reverse("administration:safe_delete", kwargs={"id": self.id})
+    def get_delete_url(self):
+        return reverse("administration:safe_delete", kwargs={"id": self.id})
 
 
 

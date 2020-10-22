@@ -102,20 +102,18 @@ class WorkTimeModelForm(forms.ModelForm):
             'end',
         ]                 
 
-# class SafeModelForm(forms.ModelForm):
-#     class Meta:
-#         model = Safe
-#         fields = [
-#             'title',
-#             'amount'
-#         ]                 
-
-
+class SafeModelForm(forms.ModelForm):
+    class Meta:
+        model = Safe
+        fields = [
+            'title',
+            'amount'
+        ]                 
 
 
 class PaymenttoolForm(forms.ModelForm):
     class Meta:
-        model = Safe
+        model = Paymenttool
         fields = [
             'title',
             'path',

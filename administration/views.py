@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, PaymenttoolForm # SafeModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, PaymenttoolForm, SafeModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
