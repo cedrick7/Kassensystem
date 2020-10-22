@@ -36,7 +36,6 @@ class ProductModelForm(forms.ModelForm):
             'attributes',
         ]
 
-
 class CategoryModelForm(forms.ModelForm):
     class Meta:
         model = Category
@@ -57,7 +56,6 @@ class DiscountModelForm(forms.ModelForm):
             'end',
         ]
 
-
 class TaxModelForm(forms.ModelForm):
     class Meta:
         model = Tax
@@ -72,7 +70,6 @@ class AttributeModelForm(forms.ModelForm):
         fields = [
             'title', 
         ]   
-
 
 class CustomerModelForm(forms.ModelForm):
     class Meta:
@@ -104,6 +101,15 @@ class WorkTimeModelForm(forms.ModelForm):
             'begin',
             'end',
         ]                 
+
+class SafeModelForm(forms.ModelForm):
+    class Meta:
+        model = Safe
+        fields = [
+            'title',
+            'amount',
+        ]                 
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # forms von cedi als template

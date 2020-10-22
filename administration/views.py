@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, SafeModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
 from analyzation.models import Worktime
+from cashbox.models import Safe
 from django.urls import reverse
 
 from django.views.generic import (
@@ -494,15 +495,98 @@ class CustomerDeleteView(DeleteView):
     def get_success_url(self):
         return reverse('administration:customer_list')
 
+
 # Angestellte
 class EmployeeListView(ListView):
     template_name = 'new/administration_employees_copy.html'
     queryset = Employee.objects.all()
 
+
 # Arbeitszeit
 class WorkTimeListView(ListView):
     template_name = 'new/administration_worktime_copy.html'
     queryset = Worktime.objects.all()
+
+
+# Safe
+class SafeListView(ListView):
+    template_name = 'new/administration_safes_copy.html'
+    queryset = Safe.objects.all()
+
+class SafeCreateView(View):
+    template_name = 'new/administration_safes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = SafeModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Safe"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = SafeModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:safe_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class SafeUpdateView(UpdateView):
+    template_name = 'new/administration_safes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Safe, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = SafeModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Safe"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = SafeModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:safe_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class SafeDeleteView(DeleteView):
+    template_name = 'new/administration_safes_delete_copy.html'
+    queryset = Safe.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Safe, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:safe_list')
+
+
+
 
 
 

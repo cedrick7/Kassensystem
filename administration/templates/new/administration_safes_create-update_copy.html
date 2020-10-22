@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
+
+
+{% block content %}
+
+	<section id="body">
+		<div class="heading container-fluid">
+			<!-- change this content -->
+			<h3>Produkte</h3>
+			<a class="btn btn-primary" role="button" href="#">
+				<i class="fas fa-download fa-sm"></i>&nbsp;
+				<!-- change this content -->
+				Dieses Produkt ausdrucken</a>
+		</div>
+		<div class="content container-fluid">
+			<div class="card">
+				<div class="card-header">
+
+					<form action="{% url 'administration:safe_list' %}">
+						<input type="submit" value="Back" />
+					</form>
+					<!-- change this content -->
+					{% block title %}
+					<p>{{ headline }}</p>
+					{% endblock %}
+				</div>
+
+				<div class="card-body">
+					<div class="card-row-2 row">
+						<div class="col-12">
+
+								<form action="" method="POST"> {% csrf_token %}
+									{{ form.as_p }}
+									<input type="submit" value="Speichern">
+								</form>
+
+
+
+								<div class="form-row form-row-submit">
+									
+								</div>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

@@ -35,7 +35,14 @@ from .views import (
     CustomerDeleteView,
 
     EmployeeListView,
+
     WorkTimeListView,
+
+    SafeListView,
+    SafeCreateView,
+    SafeUpdateView,
+    SafeDeleteView,
+
 )
 
 app_name =  'administration'
@@ -80,12 +87,17 @@ urlpatterns=[
     path('Kunden/<int:id>/Bearbeiten', CustomerUpdateView.as_view(), name='customer_update'),
     path('Kunden/<int:id>/Löschen', CustomerDeleteView.as_view(), name='customer_delete'),
 
-    # Angestellte
-    path('Angestellte', EmployeeListView.as_view(), name='employee_list'),
+    # Mitarbeiter
+    path('Mitarbeiter', EmployeeListView.as_view(), name='employee_list'),
 
-    # Arbeitszeit
-    path('Arbeitszeit', WorkTimeListView.as_view(), name='worktime_list'),
+    # Arbeitszeiten
+    path('Arbeitszeiten', WorkTimeListView.as_view(), name='worktime_list'),
 
+    # Safes
+    path('Safes', SafeListView.as_view(), name='safe_list'),
+    path('Safes/Erstellen', SafeCreateView.as_view(), name='safe_create'),
+    path('Safes/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
+    path('Safes/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
 
 ]
 
