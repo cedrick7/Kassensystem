@@ -44,6 +44,15 @@ from .views import (
     SafeDeleteView,
 
     CashboxListView,
+    CashboxCreateView, 
+    CashboxUpdateView, 
+    CashboxDeleteView,
+
+
+    PaymenttoolListView,
+    PaymenttoolCreateView,
+    PaymenttoolUpdateView,
+    PaymenttoolDeleteView,
 
 )
 
@@ -103,16 +112,16 @@ urlpatterns=[
 
     # Kassen
     path('Kassen', CashboxListView.as_view(), name='cashbox_list'),
-
-
-
+    path('Kassen/Erstellen', CashboxCreateView.as_view(), name='cashbox_create'),
+    path('Kassen/<int:id>/Bearbeiten', CashboxUpdateView.as_view(), name='cashbox_update'),
+    path('Kassen/<int:id>/Löschen', CashboxDeleteView.as_view(), name='cashbox_delete'),
 
 
     # Zahlungsmittel
-    # path('Zahlungsmittel', SafeListView.as_view(), name='safe_list'),
-    # path('Zahlungsmittel/Erstellen', SafeCreateView.as_view(), name='safe_create'),
-    # path('Zahlungsmittel/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
-    # path('Zahlungsmittel/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
+    path('Zahlungsmittel', PaymenttoolListView.as_view(), name='paymenttool_list'),
+    path('Zahlungsmittel/Erstellen', PaymenttoolCreateView.as_view(), name='paymenttool_create'),
+    path('Zahlungsmittel/<int:id>/Bearbeiten', PaymenttoolUpdateView.as_view(), name='paymenttool_update'),
+    path('Zahlungsmittel/<int:id>/Löschen', PaymenttoolDeleteView.as_view(), name='paymenttool_delete'),
 
 ]
 

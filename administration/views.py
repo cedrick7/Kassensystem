@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, PaymenttoolForm, SafeModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
 from analyzation.models import Worktime
-from cashbox.models import Safe, Cashbox
+from cashbox.models import Safe, Cashbox, Paymenttool
 from django.urls import reverse
 
 from django.views.generic import (
@@ -590,43 +590,37 @@ class CashboxListView(ListView):
     template_name = 'new/administration_cashboxes_copy.html'
     queryset = Cashbox.objects.all()
 
-
-# Zahlungsmittel
-class TaxListView(ListView):
-    template_name = 'new/administration_taxes_copy.html'
-    queryset = Tax.objects.all()
-
-class TaxCreateView(View):
-    template_name = 'new/administration_taxes_create-update_copy.html'
+class CashboxCreateView(View):
+    template_name = 'new/administration_cashboxes_create-update_copy.html'
 
     # http/GET method
     def get(self, request, *args, **kwargs):
-        form = TaxModelForm()
+        form = CashboxModelForm()
         context = {
             "form":form,
-            "headline": "Erstelle einen Steuersatz"
+            "headline": "Erstelle eine Kasse"
         }
         return render(request, self.template_name, context)
 
     # http/POST method
     def post(self, request, *args, **kwargs):
-        form = TaxModelForm(request.POST)
+        form = CashboxModelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('administration:tax_list')
+            return redirect('administration:cashbox_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class TaxUpdateView(UpdateView):
-    template_name = 'new/administration_taxes_create-update_copy.html'
+class CashboxUpdateView(UpdateView):
+    template_name = 'new/administration_cashboxes_create-update_copy.html'
 
     def get_object(self):
         id = self.kwargs.get('id')
         obj = None
         if id is not None: 
-            obj = get_object_or_404(Tax, id=id)
+            obj = get_object_or_404(Cashbox, id=id)
         return obj
 
     # http/GET method
@@ -634,11 +628,11 @@ class TaxUpdateView(UpdateView):
         context={}
         obj = self.get_object()
         if obj is not None:
-            form = TaxModelForm(instance=obj)
+            form = CashboxModelForm(instance=obj)
             context={
                 "object":obj,
                 "form":form, 
-                "headline":"Bearbeite einen Steuersatz"
+                "headline":"Bearbeite eine Kasse"
             }
         return render(request, self.template_name, context)
 
@@ -647,26 +641,106 @@ class TaxUpdateView(UpdateView):
         context={}
         obj = self.get_object()
         if obj is not None:
-            form = TaxModelForm(request.POST, instance=obj)
+            form = CashboxModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
-                return redirect('administration:tax_list')
+                return redirect('administration:cashbox_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)        
+
+class CashboxDeleteView(DeleteView):
+    template_name = 'new/administration_cashboxes_delete_copy.html'
+    queryset = Cashbox.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Cashbox, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:cashbox_list')
+
+# Zahlungsmittel
+class PaymenttoolListView(ListView):
+    template_name = 'new/administration_paymenttools_copy.html'
+    queryset = Paymenttool.objects.all()
+
+class PaymenttoolCreateView(View):
+    template_name = 'new/administration_paymenttools_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = PaymenttoolModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Zahlungsmittel"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = PaymenttoolModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:paymenttool_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class PaymenttoolUpdateView(UpdateView):
+    template_name = 'new/administration_paymenttools_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Paymenttool, id=id)
+        return obj
+
+    # http/GET method 
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = PaymenttoolModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite ein Zahlungsmittel"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = PaymenttoolModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:paymenttool_list')
                 context={
                         "object":obj,
                         "form":form
                     }
         return render(request, self.template_name, context)
 
-class TaxDeleteView(DeleteView):
-    template_name = 'new/administration_taxes_delete_copy.html'
-    queryset = Tax.objects.all()
+class PaymenttoolDeleteView(DeleteView):
+    template_name = 'new/administration_paymenttools_delete_copy.html'
+    queryset = Paymenttool.objects.all()
 
     def get_object(self):
         id_ = self.kwargs.get("id")
-        return get_object_or_404(Tax, id=id_)
+        return get_object_or_404(Paymenttool, id=id_)
 
     def get_success_url(self):
-        return reverse('administration:tax_list')
+        return reverse('administration:paymenttool_list')
+
+
+
 
 
 

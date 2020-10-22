@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
+<!-- Body -->
+
+
+{% block content %}
+    <section id="body">
+        <div class="heading container-fluid">
+            <!-- change this content -->
+            <h3>Kassen</h3>
+            <a class="btn btn-primary" role="button" href="#">
+                <i class="fas fa-download fa-sm"></i>&nbsp;
+                <!-- change this content -->
+                Diese Kasse ausdrucken</a>
+        </div>
+        <div class="content container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <form action="{% url 'administration:cashbox_list' %}">
+                        <input type="submit" value="Back" />
+                    </form>
+                    <!-- change this content -->
+                    {% block title %}
+                    <p>{{ headline }}</p>
+                    {% endblock %}
+                </div>
+                <div class="card-body">
+                    <div class="card-row-2 row">
+                        <div class="col-12">
+                            <!-- change this content -->
+
+                            <form action="" method="POST"> {% csrf_token %}
+                                {{ form.as_p }}
+                                <input type="submit" value="Speichern">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

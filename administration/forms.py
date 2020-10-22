@@ -110,8 +110,15 @@ class SafeModelForm(forms.ModelForm):
             'amount'
         ]                 
 
+class CashboxModelForm(forms.ModelForm):
+    class Meta:
+        model = Cashbox
+        fields = [
+            'title',
+            'amount'
+        ]
 
-class PaymenttoolForm(forms.ModelForm):
+class PaymenttoolModelForm(forms.ModelForm):
     class Meta:
         model = Paymenttool
         fields = [

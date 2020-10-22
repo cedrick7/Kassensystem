@@ -27,7 +27,7 @@
 			<div class="card">
 				<div class="card-header">
 					<!-- change this content -->
-					<p>Kassen Übersicht</p>
+					<p>Zahlungsmittel Übersicht</p>
 				</div>
 				<div class="card-body">
 					<div class="card-row-1 row">
@@ -46,8 +46,8 @@
 						<div class="col-12 col-sm-4">
 							<div class="create_button">
 
-								<form action="{% url 'administration:cashbox_create' %}">
-									<input class="btn btn-primary" type="submit" value="Kasse hinzufügen" />
+								<form action="{% url 'administration:paymenttool_create' %}">
+									<input class="btn btn-primary" type="submit" value="Zahlungsmittel hinzufügen" />
 								</form>
 								
 							</div>
@@ -71,7 +71,7 @@
 									<thead>
 									<tr>
 										<th>Name</th>
-										<th>Betrag</th>
+										<th>Path</th>
 										<th>Mehr</th>
 
 									</tr>
@@ -81,7 +81,7 @@
 									{% for instance in object_list %}
 										<tr>
 											<td>{{ instance.title }}</td>
-											<td>{{ instance.amount }} € </td> 
+											<td>{{ instance.path }} </td> 
 											<td class="td-icons">
 												<a href="{{ instance.get_update_url }}"><i
 														class="fa fa-pencil"></i></a>
@@ -94,7 +94,7 @@
 									<tfoot>
 									<tr>
 										<td><strong>Name</strong></td>
-										<td><strong>Betrag</strong></td>
+										<td><strong>Steuersatz</strong></td>
 										<td><strong>Mehr</strong></td>
 									</tr>
 									</tfoot>

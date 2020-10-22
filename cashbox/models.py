@@ -12,6 +12,12 @@ class Cashbox(models.Model):
     title       = models.CharField(max_length=45)
     amount      = models.DecimalField(max_digits=6,decimal_places=2) # in Euro
     
+    def get_update_url(self):
+        return reverse("administration:cashbox_update", kwargs={"id": self.id})
+
+    def get_delete_url(self):
+        return reverse("administration:cashbox_delete", kwargs={"id": self.id})
+
 
     class Meta:
         verbose_name_plural = "Cashboxn"
@@ -22,7 +28,13 @@ class Cashbox(models.Model):
 
 class Paymenttool(models.Model):
     title        = models.CharField(max_length=45)
-    path       = models.FileField(upload_to='uploads/', unique=True, blank=True, default=None, null=True)
+    path       = models.FileField(upload_to='uploads/', blank=True, default=None, null=True)
+
+    def get_update_url(self):
+        return reverse("administration:paymenttool_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:paymenttool_delete", kwargs={"id": self.id})
 
     class Meta:
         verbose_name_plural = "paymenttool"
@@ -38,8 +50,8 @@ class Safe(models.Model):
     def get_update_url(self):
         return reverse("administration:safe_update", kwargs={"id": self.id})
     
-    def get_delete_url(self):
-        return reverse("administration:safe_delete", kwargs={"id": self.id})
+    # def get_delete_url(self):
+    #     return reverse("administration:safe_delete", kwargs={"id": self.id})
 
 
 
