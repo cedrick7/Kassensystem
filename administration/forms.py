@@ -111,6 +111,19 @@ class SafeModelForm(forms.ModelForm):
         ]                 
 
 
+
+
+class PaymenttoolForm(forms.ModelForm):
+    class Meta:
+        model = Safe
+        fields = [
+            'title',
+            'path',
+        ]      
+
+
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 # forms von cedi als template
 
