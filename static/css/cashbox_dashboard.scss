@@ -108,10 +108,15 @@ body {
         }
       }
       }
+
       &:nth-child(2) {
         order: 1;
         @media (min-width: 992px) {
           order: 2;
+        }
+
+        .button {
+          padding: .375rem .75rem;
         }
       }
     }
