@@ -6,6 +6,7 @@ from authorization.models import Employee
 from administration.models import Backup
 from analyzation.models import Worktime
 from cashbox.models import Safe, Cashbox, Paymenttool
+from django.db import connection 
 
 from django.urls import reverse
 import os, subprocess 
@@ -799,32 +800,30 @@ class BackupListView(ListView):
 class BackupCreateView(View):
     template_name = 'new/administration_backups_create-update_copy.html'
 
-    def createBackup(self, backup):
+    def custom_sql(self, query):
+        with connection.cursor() as cursor:
+            cursor.execute(query, [self.path])
+            row = cursor.fetchone()
+        return row
+
+    def createBackup(self, pk):
         file = "backup.sh"
         BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
         path = os.path.join(BASE_DIR, 'static/scripts/')
         exec = path + file
-        print("Objekt des Backups:")
-        print(backup)
+        print("Pk des Backups:")
+        print(pk)
         # subprocess.run(["sh", exec])
 
         backup = os.path.join(BASE_DIR, 'static/backups/' + str(7) + '/sql.dumb')    #str(pk)
         
-        print("Pfad des Backups: ")
-        print(backup)
+        sql_query = "UPDATE TABLE Backup SET path = " + backup + " WHERE id = " + str(pk) + ";"
+        print(sql_query)
+        # Backup.objects.raw(sql_query)
+        row = self.custom_sql(sql_query)
+        print(row)
 
-        Pfad = Path(store=backup)       #Path Eintrag wird erstellt 
-        
-        Pfad.save()
-        print(Pfad)
-        print("Pfad wurde erstellt")
-        # a.save()
 
-        # object = Backup.objects.get(id=pk)     # wir setzen Backup.path = Path.store
-        # print(object)
-        # object(path=a)
-        # print(object.path)
-        # object.save()
 
         
 
@@ -849,8 +848,10 @@ class BackupCreateView(View):
     def post(self, request, *args, **kwargs):
         form = BackupModelForm(request.POST)
         if form.is_valid():
-            backup = form.save()
-            self.createBackup(backup)
+            backup = form.save()     
+            pk = backup.pk
+            self.createBackup(pk)
+
             return redirect('administration:backup_list')
         context = {
             "form":form
