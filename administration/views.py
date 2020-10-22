@@ -1,8 +1,14 @@
-from django.shortcuts import render, get_object_or_404
-from .forms import *
+from django.shortcuts import render, get_object_or_404, redirect
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, PaymenttoolForm, SafeModelForm
+from product.models import Product, Category, Discount, Tax, Attribute
+from customer.models import Customer
+from authorization.models import Employee
+from analyzation.models import Worktime
+from cashbox.models import Safe, Cashbox
 from django.urls import reverse
 
 from django.views.generic import (
+    View,
     CreateView, 
     DetailView, 
     ListView, 
@@ -11,56 +17,82 @@ from django.views.generic import (
     DeleteView,
 )
 
-from .forms import ProductModelForm
-from .models import *
+
 
 
 # Administration Dashboard
 def administration_dashboard(request, *args, **kwargs):
 
-    return render(request, "administration_dashboard_copy.html", {})
+    return render(request, "new/administration_dashboard_copy.html", {})
 
-
+# Produkte
 class ProductListView(ListView):
-    template_name = 'administration_products_new.html'
+    template_name = 'new/administration_products_copy.html'
     queryset = Product.objects.all()
 
+class ProductCreateView(View):
+    template_name = 'new/administration_products_create-update_copy.html'
 
-class ProductDetailView(DetailView):
-    template_name = 'test_productdetail.html'
-    queryset = Product.objects.all()
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = ProductModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle ein Produkt"
+        }
+        return render(request, self.template_name, context)
 
-    def get_object(self):
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(Product, id=id_)
-
-
-class ProductCreateView(CreateView):
-    template_name = 'test_productcreate.html'
-    form_class = ProductModelForm
-    queryset = Product.objects.all()
-
-    def form_valid(self, form):
-        print(form.cleaned_data)
-        return super().form_valid(form)
-
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = ProductModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:product_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
 
 class ProductUpdateView(UpdateView):
-    template_name = 'test_productcreate.html'
-    form_class = ProductModelForm
-    queryset = Product.objects.all()
+    template_name = 'new/administration_products_create-update_copy.html'
 
     def get_object(self):
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(Product, id=id_)
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Product, id=id)
+        return obj
 
-    def form_valid(self, form):
-        print(form.cleaned_data)
-        return super().form_valid(form)
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = ProductModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite ein Produkt"
+            }
+        return render(request, self.template_name, context)
 
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = ProductModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:product_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
 
 class ProductDeleteView(DeleteView):
-    template_name = 'test_productdelete.html'
+    template_name = 'new/administration_products_delete_copy.html'
     queryset = Product.objects.all()
 
     def get_object(self):
@@ -68,7 +100,579 @@ class ProductDeleteView(DeleteView):
         return get_object_or_404(Product, id=id_)
 
     def get_success_url(self):
-        return reverse('administration:test_productlist')
+        return reverse('administration:product_list')
+
+
+
+# Kategorien
+class CategoryListView(ListView):
+    template_name = 'new/administration_categories_copy.html'
+    queryset = Category.objects.all()
+
+class CategoryCreateView(View):
+    template_name = 'new/administration_categories_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = CategoryModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle eine Kategorie"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = CategoryModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:category_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class CategoryUpdateView(UpdateView):
+    template_name = 'new/administration_categories_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Category, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CategoryModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite eine Kategorie"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CategoryModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:category_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class CategoryDeleteView(DeleteView):
+    template_name = 'new/administration_categories_delete_copy.html'
+    queryset = Category.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Category, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:category_list')
+
+
+# Rabatte
+class DiscountListView(ListView):
+    template_name = 'new/administration_discounts_copy.html'
+    queryset = Discount.objects.all()
+
+class DiscountCreateView(View):
+    template_name = 'new/administration_discounts_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = DiscountModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle ein Rabatt"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = DiscountModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:discount_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class DiscountUpdateView(UpdateView):
+    template_name = 'new/administration_discounts_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Discount, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = DiscountModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite ein Rabatt"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = DiscountModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:discount_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class DiscountDeleteView(DeleteView):
+    template_name = 'new/administration_discounts_delete_copy.html'
+    queryset = Discount.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Discount, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:discount_list')
+
+
+# Steuersätze
+class TaxListView(ListView):
+    template_name = 'new/administration_taxes_copy.html'
+    queryset = Tax.objects.all()
+
+class TaxCreateView(View):
+    template_name = 'new/administration_taxes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = TaxModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Steuersatz"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = TaxModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:tax_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class TaxUpdateView(UpdateView):
+    template_name = 'new/administration_taxes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Tax, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = TaxModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Steuersatz"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = TaxModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:tax_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class TaxDeleteView(DeleteView):
+    template_name = 'new/administration_taxes_delete_copy.html'
+    queryset = Tax.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Tax, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:tax_list')
+
+
+# Attribute 
+class AttributeListView(ListView):
+    template_name = 'new/administration_attributes_copy.html'
+    queryset = Attribute.objects.all()
+
+class AttributeCreateView(View):
+    template_name = 'new/administration_attributes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = AttributeModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle ein Attribut"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = AttributeModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:attribute_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class AttributeUpdateView(UpdateView):
+    template_name = 'new/administration_attributes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Attribute, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = AttributeModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Steuersatz"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = AttributeModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:attribute_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class AttributeDeleteView(DeleteView):
+    template_name = 'new/administration_attributes_delete_copy.html'
+    queryset = Attribute.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Attribute, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:attribute_list')
+
+
+# Kunden
+class CustomerListView(ListView):
+    template_name = 'new/administration_customers_copy.html'
+    queryset = Customer.objects.all()
+
+class CustomerCreateView(View):
+    template_name = 'new/administration_customers_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = CustomerModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Kunden"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        form = CustomerModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:customer_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class CustomerUpdateView(UpdateView):
+    template_name = 'new/administration_customers_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Customer, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CustomerModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Kunden"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = CustomerModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:customer_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+            else:
+                print("not valid!")
+        return render(request, self.template_name, context)
+
+class CustomerDeleteView(DeleteView):
+    template_name = 'new/administration_customers_delete_copy.html'
+    queryset = Customer.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Customer, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:customer_list')
+
+
+# Angestellte
+class EmployeeListView(ListView):
+    template_name = 'new/administration_employees_copy.html'
+    queryset = Employee.objects.all()
+
+
+# Arbeitszeit
+class WorkTimeListView(ListView):
+    template_name = 'new/administration_worktime_copy.html'
+    queryset = Worktime.objects.all()
+
+
+# Safe
+class SafeListView(ListView):
+    template_name = 'new/administration_safes_copy.html'
+    queryset = Safe.objects.all()
+
+class SafeCreateView(View):
+    template_name = 'new/administration_safes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = SafeModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Safe"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = SafeModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:safe_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class SafeUpdateView(UpdateView):
+    template_name = 'new/administration_safes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Safe, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = SafeModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Safe"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = SafeModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:safe_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class SafeDeleteView(DeleteView):
+    template_name = 'new/administration_safes_delete_copy.html'
+    queryset = Safe.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Safe, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:safe_list')
+
+# Kasse
+class CashboxListView(ListView):
+    template_name = 'new/administration_cashboxes_copy.html'
+    queryset = Cashbox.objects.all()
+
+
+# Zahlungsmittel
+class TaxListView(ListView):
+    template_name = 'new/administration_taxes_copy.html'
+    queryset = Tax.objects.all()
+
+class TaxCreateView(View):
+    template_name = 'new/administration_taxes_create-update_copy.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = TaxModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Steuersatz"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = TaxModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:tax_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class TaxUpdateView(UpdateView):
+    template_name = 'new/administration_taxes_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Tax, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = TaxModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Steuersatz"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = TaxModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:tax_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class TaxDeleteView(DeleteView):
+    template_name = 'new/administration_taxes_delete_copy.html'
+    queryset = Tax.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Tax, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:tax_list')
+
+
+
+
+
+
 
 # -------------------------------------------------------------------------
 # administration

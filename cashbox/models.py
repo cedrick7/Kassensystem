@@ -3,6 +3,7 @@ from authorization.models import Employee
 from product.models import Discount      #cannot import
 from product.models import Product
 from administration.models import Path
+from django.urls import reverse
 
 # Create your models here.
 
@@ -21,7 +22,7 @@ class Cashbox(models.Model):
 
 class Paymenttool(models.Model):
     title        = models.CharField(max_length=45)
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=True, blank=True, default=None, null=True)
 
     class Meta:
         verbose_name_plural = "paymenttool"
@@ -33,6 +34,14 @@ class Safe(models.Model):
     title       = models.CharField(max_length=45)
     amount      = models.DecimalField(max_digits=8,decimal_places=2) # in Euro
     employee = models.ManyToManyField(Employee, blank=True)
+
+    def get_update_url(self):
+        return reverse("administration:safe_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:safe_delete", kwargs={"id": self.id})
+
+
 
     class Meta:
         verbose_name_plural = "Tresore"

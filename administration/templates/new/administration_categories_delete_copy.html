@@ -1,0 +1,24 @@
+{% block content %}
+
+
+<h1>Delete </h1>
+
+
+
+
+    <!-- <form action="{{ object.get_update_url }}">
+        <input type="submit" value="Produkt bearbeiten" />
+    </form>  -->
+
+
+
+    <form action="" method="POST"> {% csrf_token %}
+        <h1>Möchtest du die Kategorie "{{ object.title }}" löschen?</h1>
+        <p>
+            <input type="submit" value="Ja" /> <a href="{% url 'administration:category_list' %}">Abbrechen</a>
+        </p>
+    </form> 
+    
+
+
+{% endblock %}
