@@ -15,8 +15,12 @@ from .forms import *
 # views:
 
 def cashbox_dashboard_view(request, *args, **kwargs):
+    cardForm = FormCart(request.POST or None)
 
-    return render(request, "cashbox_dashboard.html",)
+    context = {
+        'form': cardForm
+    }
+    return render(request, "cashbox_dashboard.html", context)
 
 
 def cashbox_pay_view(request, *args, **kwargs):
@@ -24,4 +28,9 @@ def cashbox_pay_view(request, *args, **kwargs):
 
 
 def cashbox_more_view(request, *args, **kwargs):
-    return render(request, "cashbox_more.html", {})
+    moreForm = FormGetInfo(request.POST or None)
+
+    context = {
+        'form': moreForm
+    }
+    return render(request, "cashbox_more.html", context)

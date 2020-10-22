@@ -13,11 +13,12 @@
 {% endblock specific %}
 
 <!-- Body -->
+{% block navbar %}
+    {% include 'cashbox_pay_navbar.html' %}
+{% endblock navbar %}
+
 {% block content %}
 <div class="page">
-
-    {% include 'cashbox_navbar.html' %}
-
     <section id="body">
         <div class="container">
             <div class="col">
