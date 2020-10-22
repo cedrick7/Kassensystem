@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -31,6 +32,13 @@ class Employee(models.Model):
         choices=PERMISSIONS,
         default=CASHIER,
     )
+
+
+    def get_update_url(self):
+        return reverse("administration:employee_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:employee_delete", kwargs={"id": self.id})
 
 
     def __str__(self):

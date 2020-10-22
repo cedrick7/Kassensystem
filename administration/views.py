@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
+from administration.models import Backup
 from analyzation.models import Worktime
 from cashbox.models import Safe, Cashbox, Paymenttool
 from django.urls import reverse
@@ -499,43 +500,55 @@ class EmployeeListView(ListView):
     template_name = 'new/administration_employees_copy.html'
     queryset = Employee.objects.all()
 
-# class EmployeeUpdateView(UpdateView):
-#     template_name = 'new/administration_customers_create-update_copy.html'
+class EmployeeUpdateView(UpdateView):
+    template_name = 'new/administration_employees_create-update_copy.html'
 
-#     def get_object(self):
-#         id = self.kwargs.get('id')
-#         obj = None
-#         if id is not None: 
-#             obj = get_object_or_404(Employee, id=id)
-#         return obj
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Employee, id=id)
+        return obj
 
-#     # http/GET method
-#     def get(self, request, id=None, *args, **kwargs):
-#         context={}
-#         obj = self.get_object()
-#         if obj is not None:
-#             form = EmployeeModelForm(instance=obj)
-#             context={
-#                 "object":obj,
-#                 "form":form, 
-#                 "headline":"Bearbeite einen Kunden"
-#             }
-#         return render(request, self.template_name, context)
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = EmployeeModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Mitarbeiter"
+            }
+        return render(request, self.template_name, context)
 
-#     # http/POST method
-#     def post(self, request, id=None, *args, **kwargs):
-#         context={}
-#         obj = self.get_object()
-#         if obj is not None:
-#             form = EmployeeModelForm(request.POST, instance=obj)
-#             if form.is_valid():
-#                 form.save()
-#                 return redirect('administration:employee_list')
-#                 context={
-#                         "object":obj,
-#                         "form":form
-#                     }
-#         return render(request, self.template_name, context)
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = EmployeeModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:employee_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class EmployeeDeleteView(DeleteView):
+    template_name = 'new/administration_employees_delete_copy.html'
+    queryset = Employee.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Employee, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:employee_list')
+
 
 # Arbeitszeit
 class WorkTimeListView(ListView):
@@ -773,6 +786,85 @@ class PaymenttoolDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:paymenttool_list')
+
+
+# Backups
+class BackupListView(ListView):
+    template_name = 'new/administration_backups_copy.html'
+    queryset = Backup.objects.all()
+
+# class TaxCreateView(View):
+#     template_name = 'new/administration_taxes_create-update_copy.html'
+
+#     # http/GET method
+#     def get(self, request, *args, **kwargs):
+#         form = TaxModelForm()
+#         context = {
+#             "form":form,
+#             "headline": "Erstelle einen Steuersatz"
+#         }
+#         return render(request, self.template_name, context)
+
+#     # http/POST method
+#     def post(self, request, *args, **kwargs):
+#         form = TaxModelForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('administration:tax_list')
+#         context = {
+#             "form":form
+#         }
+#         return render(request, self.template_name, context)
+
+# class TaxUpdateView(UpdateView):
+#     template_name = 'new/administration_taxes_create-update_copy.html'
+
+#     def get_object(self):
+#         id = self.kwargs.get('id')
+#         obj = None
+#         if id is not None: 
+#             obj = get_object_or_404(Tax, id=id)
+#         return obj
+
+#     # http/GET method
+#     def get(self, request, id=None, *args, **kwargs):
+#         context={}
+#         obj = self.get_object()
+#         if obj is not None:
+#             form = TaxModelForm(instance=obj)
+#             context={
+#                 "object":obj,
+#                 "form":form, 
+#                 "headline":"Bearbeite einen Steuersatz"
+#             }
+#         return render(request, self.template_name, context)
+
+#     # http/POST method
+#     def post(self, request, id=None, *args, **kwargs):
+#         context={}
+#         obj = self.get_object()
+#         if obj is not None:
+#             form = TaxModelForm(request.POST, instance=obj)
+#             if form.is_valid():
+#                 form.save()
+#                 return redirect('administration:tax_list')
+#                 context={
+#                         "object":obj,
+#                         "form":form
+#                     }
+#         return render(request, self.template_name, context)
+
+# class TaxDeleteView(DeleteView):
+#     template_name = 'new/administration_taxes_delete_copy.html'
+#     queryset = Tax.objects.all()
+
+#     def get_object(self):
+#         id_ = self.kwargs.get("id")
+#         return get_object_or_404(Tax, id=id_)
+
+#     def get_success_url(self):
+#         return reverse('administration:tax_list')
+
 
 
 

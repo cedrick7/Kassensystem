@@ -126,6 +126,16 @@ class PaymenttoolModelForm(forms.ModelForm):
             'path',
         ]      
 
+class BackupModelForm(forms.ModelForm):
+    class Meta:
+        model = Backup
+        fields = [
+            'title',
+            'comment',
+            'creation',
+            'employee', 
+            'path',
+        ]      
 
 
 

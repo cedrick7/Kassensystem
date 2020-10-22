@@ -11,29 +11,27 @@
 {% endblock specific %}
 
 <!-- Body -->
-{% block navbar %}
-	{% include 'administration_navbar.html' %}
-{% endblock navbar %}
+
 
 {% block content %}
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Backups</h3>
+			<h3>Produkte</h3>
 			<a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
 				<!-- change this content -->
-				Alle Backups ausdrucken</a>
+				Alle Produkte ausdrucken</a>
 		</div>
 		<div class="content container-fluid">
 			<div class="card">
 				<div class="card-header">
 					<!-- change this content -->
-					<p>Backups Übersicht</p>
+					<p>Datensicherung Übersicht</p>
 				</div>
 				<div class="card-body">
 					<div class="card-row-1 row">
-						<div class="col-12 col-sm-6">
+						<div class="col-12 col-sm-4">
 							<div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable">
 								<label>Show&nbsp;
 									<select class="form-control form-control-sm custom-select custom-select-sm">
@@ -45,7 +43,17 @@
 								</label>
 							</div>
 						</div>
-						<div class="col-12 col-sm-6">
+						<div class="col-12 col-sm-4">
+							<div class="create_button">
+
+								<form action="">
+									<input class="btn btn-primary" type="submit" value="Datensicherung hinzufügen" />
+								</form>
+								
+							</div>
+						</div>
+
+						<div class="col-12 col-sm-4">
 							<div class="dataTables_filter" id="dataTable_filter-1">
 								<label>
 									<input type="search" class="form-control form-control-sm" aria-controls="dataTable"
@@ -59,66 +67,34 @@
 							<!-- change this content -->
 							<div class="table-responsive table" id="dataTable-1" role="grid"
 							     aria-describedby="dataTable_info">
-								<table class="table" id="backupsTable">
+								<table class="table" id="productsTable">
 									<thead>
 									<tr>
-										<th>Titel</th>
-										<th>Datum</th>
-										<th>Mitarbeiter</th>
-										<th>Kommentar</th>
-										<th>Dateipfad</th>
+										<th>Name</th>
+										<th>Steuersatz</th>
 										<th>Mehr</th>
+
 									</tr>
 									</thead>
 									<tbody>
-									<tr>
-										<td>Backup #1</td>
-										<td>Lorem ipsum</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020</td>
-										<td>01.01.2020</td>
-										<td class="td-icons"><a href="backup-detail.html"><i
-												class="fas fa-comment-alt"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Backup #2</td>
-										<td>Lorem ipsum</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020</td>
-										<td>01.01.2020</td>
-										<td class="td-icons"><a href="backup-detail.html"><i
-												class="fas fa-comment-alt"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Backup #3</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020</td>
-										<td class="td-icons"><a href="backup-detail.html"><i
-												class="fas fa-comment-alt"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Backup #4</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020</td>
-										<td class="td-icons"><a href="backup-detail.html"><i
-												class="fas fa-comment-alt"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
+
+									{% for instance in object_list %}
+										<tr>
+											<td>{{ instance.title }}</td>
+											<td>{{ instance.taxrate }} % </td> 
+											<td class="td-icons">
+												<a href=""><i
+														class="fa fa-pencil"></i></a>
+												<a href=""><i class="fa fa-remove"></i></a>
+											</td>
+										</tr>
+									{% endfor %}
+
 									</tbody>
 									<tfoot>
 									<tr>
-										<td><strong>Titel</strong></td>
-										<td><strong>Datum</strong></td>
-										<td><strong>Mitarbeiter</strong></td>
-										<td><strong>Kommentar</strong></td>
-										<td><strong>Dateipfad</strong></td>
+										<td><strong>Name</strong></td>
+										<td><strong>Steuersatz</strong></td>
 										<td><strong>Mehr</strong></td>
 									</tr>
 									</tfoot>

@@ -50,8 +50,8 @@ class Safe(models.Model):
     def get_update_url(self):
         return reverse("administration:safe_update", kwargs={"id": self.id})
     
-    # def get_delete_url(self):
-    #     return reverse("administration:safe_delete", kwargs={"id": self.id})
+    def get_delete_url(self):
+        return reverse("administration:safe_delete", kwargs={"id": self.id})
 
 
 

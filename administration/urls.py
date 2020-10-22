@@ -35,7 +35,8 @@ from .views import (
     CustomerDeleteView,
 
     EmployeeListView,
-    EmployeeUpdateView
+    EmployeeUpdateView,
+    EmployeeDeleteView,
 
     WorkTimeListView,
 
@@ -54,6 +55,9 @@ from .views import (
     PaymenttoolCreateView,
     PaymenttoolUpdateView,
     PaymenttoolDeleteView,
+
+    BackupListView,
+
 
 )
 
@@ -101,7 +105,8 @@ urlpatterns=[
 
     # Mitarbeiter
     path('Mitarbeiter', EmployeeListView.as_view(), name='employee_list'),
-    path('Mitarbeiter/<int:id>/Bearbeiten', EmployeeUpdateView.as_view(), name='customer_update'),
+    path('Mitarbeiter/<int:id>/Bearbeiten', EmployeeUpdateView.as_view(), name='employee_update'),
+    path('Mitarbeiter/<int:id>/Löschen', EmployeeDeleteView.as_view(), name='employee_delete'),
 
     # Arbeitszeiten
     path('Arbeitszeiten', WorkTimeListView.as_view(), name='worktime_list'),
@@ -124,6 +129,14 @@ urlpatterns=[
     path('Zahlungsmittel/Erstellen', PaymenttoolCreateView.as_view(), name='paymenttool_create'),
     path('Zahlungsmittel/<int:id>/Bearbeiten', PaymenttoolUpdateView.as_view(), name='paymenttool_update'),
     path('Zahlungsmittel/<int:id>/Löschen', PaymenttoolDeleteView.as_view(), name='paymenttool_delete'),
+
+
+    # Datensicherungen
+    path('Datensicherungen', BackupListView.as_view(), name='backup_list'),
+    # path('Kassen/Erstellen', CashboxCreateView.as_view(), name='cashbox_create'),
+    # path('Kassen/<int:id>/Bearbeiten', CashboxUpdateView.as_view(), name='cashbox_update'),
+    # path('Kassen/<int:id>/Löschen', CashboxDeleteView.as_view(), name='cashbox_delete'),
+
 
 ]
 
