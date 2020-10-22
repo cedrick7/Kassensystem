@@ -62,6 +62,7 @@
 										<th>Rolle</th>
 										<th>Passwort</th>
 										<th>Bild</th>
+										<th>Mehr</th>
 									</tr>
 									</thead>
 									<tbody>
@@ -72,6 +73,11 @@
 											<td>{{ instance.password }}</td>
 											<td>{{ instance.picture }}</td>
 											<td>{{ instance.role }}</td>
+											<td class="td-icons">
+												<a href=""><i
+														class="fa fa-pencil"></i></a>
+												<a href=""><i class="fa fa-remove"></i></a>
+											</td>
 										</tr>
 										{% endfor %}
 										<td><strong>Vorname</strong></td>

@@ -480,8 +480,6 @@ class CustomerUpdateView(UpdateView):
                         "object":obj,
                         "form":form
                     }
-            else:
-                print("not valid!")
         return render(request, self.template_name, context)
 
 class CustomerDeleteView(DeleteView):
@@ -501,6 +499,43 @@ class EmployeeListView(ListView):
     template_name = 'new/administration_employees_copy.html'
     queryset = Employee.objects.all()
 
+# class EmployeeUpdateView(UpdateView):
+#     template_name = 'new/administration_customers_create-update_copy.html'
+
+#     def get_object(self):
+#         id = self.kwargs.get('id')
+#         obj = None
+#         if id is not None: 
+#             obj = get_object_or_404(Employee, id=id)
+#         return obj
+
+#     # http/GET method
+#     def get(self, request, id=None, *args, **kwargs):
+#         context={}
+#         obj = self.get_object()
+#         if obj is not None:
+#             form = EmployeeModelForm(instance=obj)
+#             context={
+#                 "object":obj,
+#                 "form":form, 
+#                 "headline":"Bearbeite einen Kunden"
+#             }
+#         return render(request, self.template_name, context)
+
+#     # http/POST method
+#     def post(self, request, id=None, *args, **kwargs):
+#         context={}
+#         obj = self.get_object()
+#         if obj is not None:
+#             form = EmployeeModelForm(request.POST, instance=obj)
+#             if form.is_valid():
+#                 form.save()
+#                 return redirect('administration:employee_list')
+#                 context={
+#                         "object":obj,
+#                         "form":form
+#                     }
+#         return render(request, self.template_name, context)
 
 # Arbeitszeit
 class WorkTimeListView(ListView):

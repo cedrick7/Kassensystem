@@ -35,6 +35,7 @@ from .views import (
     CustomerDeleteView,
 
     EmployeeListView,
+    EmployeeUpdateView
 
     WorkTimeListView,
 
@@ -100,6 +101,7 @@ urlpatterns=[
 
     # Mitarbeiter
     path('Mitarbeiter', EmployeeListView.as_view(), name='employee_list'),
+    path('Mitarbeiter/<int:id>/Bearbeiten', EmployeeUpdateView.as_view(), name='customer_update'),
 
     # Arbeitszeiten
     path('Arbeitszeiten', WorkTimeListView.as_view(), name='worktime_list'),
