@@ -9,26 +9,29 @@ from authorization.models import Employee
 
 
 
-class Path(models.Model):
-    store       = models.FileField(upload_to='uploads/', unique=True)
-
-
-    class Meta:
-        verbose_name_plural = "Paths"
 
 
 
 class Backup(models.Model):
     title       = models.CharField(max_length=45)
     creation    = models.DateTimeField(default=timezone.now)
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=False)
     comment     = models.CharField(max_length=150, blank=True)
     employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=True, default=None)
+
+
+    
+    def get_update_url(self):
+        return reverse("administration:backup_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:backup_delete", kwargs={"id": self.id})
+
 
 
     class Meta:
         verbose_name_plural = "Backups"
 
-    def __str__(self):
-        return self.title + " from " + self.creation
+    # def __str__(self):
+    #     return self.title + " from " + self.creation
     

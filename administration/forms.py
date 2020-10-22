@@ -134,7 +134,6 @@ class BackupModelForm(forms.ModelForm):
             'comment',
             'creation',
             'employee', 
-            'path',
         ]      
 
 

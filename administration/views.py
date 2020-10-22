@@ -6,7 +6,10 @@ from authorization.models import Employee
 from administration.models import Backup
 from analyzation.models import Worktime
 from cashbox.models import Safe, Cashbox, Paymenttool
+
 from django.urls import reverse
+import os, subprocess 
+from pathlib import Path
 
 from django.views.generic import (
     View,
@@ -23,7 +26,7 @@ from django.views.generic import (
 
 # Administration Dashboard
 def administration_dashboard(request, *args, **kwargs):
-
+    
     return render(request, "new/administration_dashboard_copy.html", {})
 
 # Produkte
@@ -793,77 +796,115 @@ class BackupListView(ListView):
     template_name = 'new/administration_backups_copy.html'
     queryset = Backup.objects.all()
 
-# class TaxCreateView(View):
-#     template_name = 'new/administration_taxes_create-update_copy.html'
+class BackupCreateView(View):
+    template_name = 'new/administration_backups_create-update_copy.html'
 
-#     # http/GET method
-#     def get(self, request, *args, **kwargs):
-#         form = TaxModelForm()
-#         context = {
-#             "form":form,
-#             "headline": "Erstelle einen Steuersatz"
-#         }
-#         return render(request, self.template_name, context)
+    def createBackup(self, backup):
+        file = "backup.sh"
+        BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+        path = os.path.join(BASE_DIR, 'static/scripts/')
+        exec = path + file
+        print("Objekt des Backups:")
+        print(backup)
+        # subprocess.run(["sh", exec])
 
-#     # http/POST method
-#     def post(self, request, *args, **kwargs):
-#         form = TaxModelForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect('administration:tax_list')
-#         context = {
-#             "form":form
-#         }
-#         return render(request, self.template_name, context)
+        backup = os.path.join(BASE_DIR, 'static/backups/' + str(7) + '/sql.dumb')    #str(pk)
+        
+        print("Pfad des Backups: ")
+        print(backup)
 
-# class TaxUpdateView(UpdateView):
-#     template_name = 'new/administration_taxes_create-update_copy.html'
+        Pfad = Path(store=backup)       #Path Eintrag wird erstellt 
+        
+        Pfad.save()
+        print(Pfad)
+        print("Pfad wurde erstellt")
+        # a.save()
 
-#     def get_object(self):
-#         id = self.kwargs.get('id')
-#         obj = None
-#         if id is not None: 
-#             obj = get_object_or_404(Tax, id=id)
-#         return obj
+        # object = Backup.objects.get(id=pk)     # wir setzen Backup.path = Path.store
+        # print(object)
+        # object(path=a)
+        # print(object.path)
+        # object.save()
 
-#     # http/GET method
-#     def get(self, request, id=None, *args, **kwargs):
-#         context={}
-#         obj = self.get_object()
-#         if obj is not None:
-#             form = TaxModelForm(instance=obj)
-#             context={
-#                 "object":obj,
-#                 "form":form, 
-#                 "headline":"Bearbeite einen Steuersatz"
-#             }
-#         return render(request, self.template_name, context)
+        
 
-#     # http/POST method
-#     def post(self, request, id=None, *args, **kwargs):
-#         context={}
-#         obj = self.get_object()
-#         if obj is not None:
-#             form = TaxModelForm(request.POST, instance=obj)
-#             if form.is_valid():
-#                 form.save()
-#                 return redirect('administration:tax_list')
-#                 context={
-#                         "object":obj,
-#                         "form":form
-#                     }
-#         return render(request, self.template_name, context)
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Backup, id=id)
+        return obj
 
-# class TaxDeleteView(DeleteView):
-#     template_name = 'new/administration_taxes_delete_copy.html'
-#     queryset = Tax.objects.all()
 
-#     def get_object(self):
-#         id_ = self.kwargs.get("id")
-#         return get_object_or_404(Tax, id=id_)
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = BackupModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle einen Datensicherungssatz"
+        }
+        return render(request, self.template_name, context)
 
-#     def get_success_url(self):
-#         return reverse('administration:tax_list')
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = BackupModelForm(request.POST)
+        if form.is_valid():
+            backup = form.save()
+            self.createBackup(backup)
+            return redirect('administration:backup_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+class BackupUpdateView(UpdateView):
+    template_name = 'new/administration_backups_create-update_copy.html'
+
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None: 
+            obj = get_object_or_404(Backup, id=id)
+        return obj
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = BackupModelForm(instance=obj)
+            context={
+                "object":obj,
+                "form":form, 
+                "headline":"Bearbeite einen Datensicherungssatz"
+            }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        context={}
+        obj = self.get_object()
+        if obj is not None:
+            form = BackupModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                form.save()
+                return redirect('administration:backup_list')
+                context={
+                        "object":obj,
+                        "form":form
+                    }
+        return render(request, self.template_name, context)
+
+class BackupDeleteView(DeleteView):
+    template_name = 'new/administration_backups_delete_copy.html'
+    queryset = Backup.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get("id")
+        return get_object_or_404(Backup, id=id_)
+
+    def get_success_url(self):
+        return reverse('administration:backup_list')
 
 
 

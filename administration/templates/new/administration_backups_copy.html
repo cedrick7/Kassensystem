@@ -46,7 +46,7 @@
 						<div class="col-12 col-sm-4">
 							<div class="create_button">
 
-								<form action="">
+								<form action="{% url 'administration:backup_create' %}">
 									<input class="btn btn-primary" type="submit" value="Datensicherung hinzufügen" />
 								</form>
 								
@@ -71,7 +71,10 @@
 									<thead>
 									<tr>
 										<th>Name</th>
-										<th>Steuersatz</th>
+										
+										<th>Name</th>
+										<th>adasd</th>
+										<th>Name</th>
 										<th>Mehr</th>
 
 									</tr>
@@ -81,11 +84,14 @@
 									{% for instance in object_list %}
 										<tr>
 											<td>{{ instance.title }}</td>
-											<td>{{ instance.taxrate }} % </td> 
+											<td>{{ instance.comment }}</td> 
+											<td>{{ instance.creation }}</td>
+											<td>{{ instance.employee }}</td> 
+											
 											<td class="td-icons">
-												<a href=""><i
+												<a href="{{ instance.get_update_url }}"><i
 														class="fa fa-pencil"></i></a>
-												<a href=""><i class="fa fa-remove"></i></a>
+												<a href="{{ instance.get_delete_url }}"><i class="fa fa-remove"></i></a>
 											</td>
 										</tr>
 									{% endfor %}
@@ -93,6 +99,8 @@
 									</tbody>
 									<tfoot>
 									<tr>
+										<td><strong>Name</strong></td>
+										<td><strong>Steuersatz</strong></td>
 										<td><strong>Name</strong></td>
 										<td><strong>Steuersatz</strong></td>
 										<td><strong>Mehr</strong></td>

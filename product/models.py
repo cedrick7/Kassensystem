@@ -1,7 +1,6 @@
 from django.db import models
 from colorfield.fields import ColorField
 from django.utils import timezone
-from administration.models import Path
 from django.urls import reverse
 
 

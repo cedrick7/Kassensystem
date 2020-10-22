@@ -2,7 +2,7 @@ from django.db import models
 from authorization.models import Employee
 from product.models import Discount      #cannot import
 from product.models import Product
-from administration.models import Path
+
 from django.urls import reverse
 
 # Create your models here.
@@ -28,7 +28,7 @@ class Cashbox(models.Model):
 
 class Paymenttool(models.Model):
     title        = models.CharField(max_length=45)
-    path       = models.FileField(upload_to='uploads/', blank=True, default=None, null=True)
+    path       = models.FileField(upload_to='uploads/', blank=True, default=None, null=True, unique=False)
 
     def get_update_url(self):
         return reverse("administration:paymenttool_update", kwargs={"id": self.id})
@@ -70,7 +70,7 @@ class Bill(models.Model):
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
     paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
     discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=False)
     
 
     # Liste erstellen
@@ -103,7 +103,7 @@ class ReversalBill(models.Model):
     # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
     employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=False)
     bill        = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     
 

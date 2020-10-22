@@ -57,6 +57,9 @@ from .views import (
     PaymenttoolDeleteView,
 
     BackupListView,
+    BackupCreateView,
+    BackupUpdateView,
+    BackupDeleteView,
 
 
 )
@@ -133,9 +136,9 @@ urlpatterns=[
 
     # Datensicherungen
     path('Datensicherungen', BackupListView.as_view(), name='backup_list'),
-    # path('Kassen/Erstellen', CashboxCreateView.as_view(), name='cashbox_create'),
-    # path('Kassen/<int:id>/Bearbeiten', CashboxUpdateView.as_view(), name='cashbox_update'),
-    # path('Kassen/<int:id>/Löschen', CashboxDeleteView.as_view(), name='cashbox_delete'),
+    path('Datensicherungen/Erstellen', BackupCreateView.as_view(), name='backup_create'),
+    path('Datensicherungen/<int:id>/Bearbeiten', BackupUpdateView.as_view(), name='backup_update'),
+    path('Datensicherungen/<int:id>/Löschen', BackupDeleteView.as_view(), name='backup_delete'),
 
 
 ]

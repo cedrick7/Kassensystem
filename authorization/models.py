@@ -9,7 +9,7 @@ class Employee(models.Model):
     firstname            = models.CharField(max_length=45, blank=False)
     lastname             = models.CharField(max_length=45, blank=False)
     password             = models.CharField(max_length=73, blank=False, editable=True)
-    picture                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
+    picture              = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
     #ROLE_CHOICE = [
     #    ('cashier', 'Kassierer'),
