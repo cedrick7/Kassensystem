@@ -43,6 +43,8 @@ from .views import (
     SafeUpdateView,
     SafeDeleteView,
 
+    CashboxListView,
+
 )
 
 app_name =  'administration'
@@ -99,5 +101,7 @@ urlpatterns=[
     path('Safes/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
     path('Safes/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
 
+    # Kasse
+    path('Kassen', CashboxListView.as_view(), name='cashbox_list'),
 ]
 

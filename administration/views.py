@@ -4,7 +4,7 @@ from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
 from analyzation.models import Worktime
-from cashbox.models import Safe
+from cashbox.models import Safe, Cashbox
 from django.urls import reverse
 
 from django.views.generic import (
@@ -584,6 +584,12 @@ class SafeDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:safe_list')
+
+# Kasse
+
+class CashboxListView(ListView):
+    template_name = 'new/administration_cashboxes_copy.html'
+    queryset = Cashbox.objects.all()
 
 
 
