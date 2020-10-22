@@ -38,10 +38,10 @@ from .views import (
 
     WorkTimeListView,
 
-    SafeListView,
-    SafeCreateView,
-    SafeUpdateView,
-    SafeDeleteView,
+    # SafeListView,
+    # SafeCreateView,
+    # SafeUpdateView,
+    # SafeDeleteView,
 
     CashboxListView,
 
@@ -96,10 +96,10 @@ urlpatterns=[
     path('Arbeitszeiten', WorkTimeListView.as_view(), name='worktime_list'),
 
     # Safes
-    path('Safes', SafeListView.as_view(), name='safe_list'),
-    path('Safes/Erstellen', SafeCreateView.as_view(), name='safe_create'),
-    path('Safes/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
-    path('Safes/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
+    # path('Safes', SafeListView.as_view(), name='safe_list'),
+    # path('Safes/Erstellen', SafeCreateView.as_view(), name='safe_create'),
+    # path('Safes/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
+    # path('Safes/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
 
     # Kassen
     path('Kassen', CashboxListView.as_view(), name='cashbox_list'),
@@ -109,7 +109,7 @@ urlpatterns=[
 
 
     # Zahlungsmittel
-    path('Zahlungsmittel', SafeListView.as_view(), name='safe_list'),
+    # path('Zahlungsmittel', SafeListView.as_view(), name='safe_list'),
     # path('Zahlungsmittel/Erstellen', SafeCreateView.as_view(), name='safe_create'),
     # path('Zahlungsmittel/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
     # path('Zahlungsmittel/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
