@@ -1,29 +1,347 @@
-INFO 2020-10-23 14:28:49,850 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:28:55,151 basehttp "GET /Administration/ HTTP/1.1" 200 8600
-INFO 2020-10-23 14:28:55,186 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
-INFO 2020-10-23 14:29:05,451 basehttp "GET /Administration/ HTTP/1.1" 200 8600
-INFO 2020-10-23 14:29:05,493 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
-INFO 2020-10-23 14:29:24,396 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:29:24,630 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:29:25,802 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:29:25,998 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:29:52,335 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:29:52,548 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:29:56,679 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:29:56,901 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:30:01,045 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:30:01,265 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:30:03,448 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:30:03,680 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:30:08,416 basehttp "GET /Administration/ HTTP/1.1" 200 8600
-INFO 2020-10-23 14:30:08,460 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
-INFO 2020-10-23 14:30:08,460 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
-INFO 2020-10-23 14:30:17,948 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:30:20,522 basehttp "GET /Administration/ HTTP/1.1" 200 8600
-INFO 2020-10-23 14:30:20,563 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 304 0
-INFO 2020-10-23 14:30:20,564 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
-INFO 2020-10-23 14:30:20,564 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
-INFO 2020-10-23 14:33:19,115 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:33:19,349 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:33:27,613 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
-INFO 2020-10-23 14:33:27,862 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:09:01,044 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:09:11,051 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10163
+INFO 2020-10-23 15:09:12,901 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 200 5629
+INFO 2020-10-23 15:09:21,224 views Produkt wurde erfolgreich angelegt
+INFO 2020-10-23 15:09:21,225 basehttp "POST /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 15:09:21,251 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10750
+INFO 2020-10-23 15:09:29,103 basehttp "GET /Administration/ HTTP/1.1" 200 7693
+INFO 2020-10-23 15:10:24,722 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:10:25,728 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:03,875 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:04,820 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:12,590 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:13,534 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:18,214 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:19,173 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:38,531 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:39,528 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:41,579 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:42,548 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:51,207 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:52,149 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:13:58,219 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:13:59,281 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:14:06,645 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:14:07,595 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:14:09,587 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:14:10,630 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:14:40,601 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:14:41,541 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:15:08,020 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:15:08,993 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:15:31,192 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:15:32,145 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:15:47,544 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:15:48,602 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:15:57,331 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:15:58,277 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:16:13,639 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:16:14,638 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:16:16,735 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:16:17,710 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:16:22,394 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:16:23,349 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:17:25,524 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:17:26,471 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:17:38,038 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:17:39,063 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:17:41,032 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:17:41,986 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:18:33,615 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:18:34,718 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:18:37,082 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:18:38,058 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:18:44,010 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:18:44,955 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:18:46,960 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:18:47,965 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:19:52,519 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:19:53,481 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:19:59,658 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:00,604 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:20:04,015 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:05,007 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:20:16,275 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:17,236 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:20:24,844 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:25,792 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:20:37,177 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:38,118 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:20:42,830 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:43,789 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:20:57,810 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:20:58,841 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:21:45,156 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:21:46,138 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:21:49,111 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:21:50,047 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:21:58,913 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:21:59,875 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:22:27,486 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:22:28,443 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:22:30,496 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:22:31,456 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:22:38,609 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:22:55,095 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:22:56,051 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:23:03,400 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:23:04,356 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:24:39,599 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:24:40,556 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:24:44,310 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:24:45,279 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:24:48,615 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:24:49,571 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:24:59,536 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:00,472 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:10,509 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:11,459 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:14,859 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:15,818 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:27,161 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:28,110 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:30,190 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:31,161 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:42,440 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:43,401 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:52,137 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:53,155 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:25:55,122 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:25:56,080 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:29:30,279 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:29:31,254 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:29:37,272 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:29:42,233 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10750
+INFO 2020-10-23 15:29:45,308 basehttp "GET /Administration/Produkte/7/Bearbeiten HTTP/1.1" 200 5693
+INFO 2020-10-23 15:29:49,125 views Produkt wurde erfolgreich geändert
+INFO 2020-10-23 15:29:49,125 basehttp "POST /Administration/Produkte/7/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-23 15:29:49,152 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10751
+INFO 2020-10-23 15:30:21,988 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:22,956 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:27,659 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:28,619 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:33,367 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:34,336 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:37,723 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:38,699 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:40,715 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:41,691 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:45,102 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:46,058 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:48,040 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:49,071 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:30:51,047 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:30:52,007 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:31:59,364 basehttp "GET /Administration/Zahlungsmittel HTTP/1.1" 200 6368
+INFO 2020-10-23 15:32:01,357 basehttp "GET /Administration/Zahlungsmittel/1/Bearbeiten HTTP/1.1" 200 3979
+INFO 2020-10-23 15:32:04,595 views Zahlungsmittel wurde erfolgreich geändert
+INFO 2020-10-23 15:32:04,596 basehttp "POST /Administration/Zahlungsmittel/1/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-23 15:32:04,611 basehttp "GET /Administration/Zahlungsmittel HTTP/1.1" 200 6364
+INFO 2020-10-23 15:32:10,085 basehttp "GET /Administration/Zahlungsmittel/Erstellen? HTTP/1.1" 200 3966
+INFO 2020-10-23 15:32:13,118 views Zahlungsmittel wurde erfolgreich angelegt
+INFO 2020-10-23 15:32:13,119 basehttp "POST /Administration/Zahlungsmittel/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 15:32:13,133 basehttp "GET /Administration/Zahlungsmittel HTTP/1.1" 200 6715
+INFO 2020-10-23 15:33:26,509 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:33:27,465 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:34:18,359 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:34:19,350 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:34:21,346 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:34:22,384 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:34:26,991 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:34:28,056 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:34:33,599 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:34:34,572 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:34:41,423 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:34:42,373 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:36:18,558 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:36:19,508 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:36:27,269 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:36:28,236 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:36:36,396 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:36:37,328 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:36:49,437 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:36:50,356 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:36:53,313 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:36:54,250 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:36:57,103 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:36:58,021 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:37:40,370 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:37:41,321 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:37:44,304 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:37:45,241 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:37:49,418 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:37:50,359 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:38:00,331 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:38:01,291 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:38:10,406 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:38:11,362 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:38:45,427 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:38:46,487 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:38:51,226 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:38:52,301 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:38:58,314 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:38:59,265 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:39:31,941 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:39:32,912 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:39:39,004 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:39:39,947 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:39:46,802 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:39:59,548 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10751
+INFO 2020-10-23 15:40:03,376 basehttp "GET /Administration/Produkte/7/L%C3%B6schen HTTP/1.1" 200 521
+INFO 2020-10-23 15:40:04,886 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10751
+INFO 2020-10-23 15:40:07,459 basehttp "GET /Administration/Produkte/7/L%C3%B6schen HTTP/1.1" 200 521
+ERROR 2020-10-23 15:40:09,372 log Internal Server Error: /Administration/Produkte/7/Löschen
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 123, in post
+    if obj is not None:
+NameError: name 'obj' is not defined
+ERROR 2020-10-23 15:40:09,374 basehttp "POST /Administration/Produkte/7/L%C3%B6schen HTTP/1.1" 500 81505
+INFO 2020-10-23 15:40:54,395 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:40:55,380 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:40:58,760 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:40:59,742 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:41:04,418 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:41:05,392 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:41:07,403 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:41:08,405 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:41:10,380 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:41:11,335 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:41:19,404 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10751
+INFO 2020-10-23 15:41:23,195 basehttp "GET /Administration/Produkte/7/L%C3%B6schen HTTP/1.1" 200 521
+INFO 2020-10-23 15:41:25,161 views Produkt wurde erfolgreich gelöscht
+INFO 2020-10-23 15:41:25,162 basehttp "POST /Administration/Produkte/7/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 15:41:25,187 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10165
+INFO 2020-10-23 15:41:33,827 basehttp "GET /Administration/ HTTP/1.1" 200 62007
+INFO 2020-10-23 15:42:15,215 basehttp "GET /Administration/ HTTP/1.1" 200 62239
+INFO 2020-10-23 15:42:35,966 basehttp "GET /Administration/Produkte HTTP/1.1" 200 10165
+INFO 2020-10-23 15:42:38,857 basehttp "GET /Administration/Produkte/8/L%C3%B6schen HTTP/1.1" 200 528
+INFO 2020-10-23 15:42:40,757 views Produkt wurde erfolgreich gelöscht
+INFO 2020-10-23 15:42:40,758 basehttp "POST /Administration/Produkte/8/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 15:42:40,789 basehttp "GET /Administration/Produkte HTTP/1.1" 200 9569
+INFO 2020-10-23 15:42:44,679 basehttp "GET /Administration/ HTTP/1.1" 200 63668
+INFO 2020-10-23 15:49:23,769 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:24,712 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:28,438 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:29,400 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:31,394 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:32,364 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:41,033 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:41,979 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:44,037 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:44,996 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:50,990 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:51,945 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:56,652 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:49:57,617 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:49:59,580 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:50:00,644 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:50:34,719 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:50:35,699 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:50:40,390 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:50:41,360 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:51:00,887 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:51:02,032 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:51:29,739 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:51:30,678 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:51:34,079 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:51:35,031 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:51:48,974 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:51:49,959 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:51:52,032 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:51:53,045 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:52:07,145 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:52:08,127 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:52:12,426 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:52:13,398 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:52:16,334 basehttp "GET /Administration/Produkte HTTP/1.1" 200 9569
+INFO 2020-10-23 15:52:20,992 basehttp "GET /Administration/Produkte/10/L%C3%B6schen HTTP/1.1" 200 521
+INFO 2020-10-23 15:52:22,955 views Produkt wurde erfolgreich gelöscht
+INFO 2020-10-23 15:52:22,956 basehttp "POST /Administration/Produkte/10/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 15:52:22,977 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8982
+INFO 2020-10-23 15:54:14,642 basehttp "GET /Administration/ HTTP/1.1" 200 73734
+INFO 2020-10-23 15:55:01,795 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:02,745 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:11,842 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:12,796 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:16,104 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:17,054 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:19,016 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:19,993 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:31,342 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:32,298 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:39,755 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:40,787 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:44,124 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:45,075 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:55:56,434 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:55:57,374 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:10,072 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:11,008 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:17,072 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:18,072 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:20,122 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:21,090 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:28,393 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:29,345 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:36,710 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:37,682 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:39,670 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:40,645 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:56:43,100 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:56:44,093 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:57:10,106 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:57:11,132 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:57:14,413 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:57:15,373 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:57:21,413 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:57:22,459 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:58:13,799 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:58:14,766 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:58:23,581 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:58:24,523 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:58:30,932 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:58:31,935 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:58:41,943 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:58:42,903 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:58:54,262 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:58:55,220 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:58:58,627 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:58:59,596 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:59:04,290 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:59:05,253 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:59:07,254 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:59:08,261 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:59:34,252 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:59:35,235 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:59:39,955 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:59:40,959 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:59:44,383 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:59:45,367 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 15:59:50,021 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 15:59:50,990 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:00:33,029 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:00:34,025 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:00:37,759 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:00:38,725 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:00:43,415 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:00:44,376 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:00:50,445 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:00:51,404 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:01:05,448 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:01:06,465 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:01:12,617 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:01:13,644 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:01:17,093 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:01:18,111 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 16:01:20,127 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-23 16:01:21,141 autoreload Watching for file changes with StatReloader

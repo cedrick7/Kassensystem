@@ -7,9 +7,8 @@ from administration.models import Backup
 from analyzation.models import Worktime
 from cashbox.models import Safe, Cashbox, Paymenttool, Bill, Bill_Product, ReversalBill
 from django.db import connection 
-
 from django.urls import reverse
-import os, subprocess 
+import os, subprocess, logging
 from pathlib import Path
 
 from django.views.generic import (
@@ -22,6 +21,7 @@ from django.views.generic import (
     DeleteView,
 )
 
+logger = logging.getLogger('django')
 
 
 
@@ -29,12 +29,16 @@ from django.views.generic import (
 def administration_dashboard(request, *args, **kwargs):
     BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
     file = open(str(os.path.join(BASE_DIR, "static", "syslog")), 'r')
-    Lines = file.readlines()
+    lines = file.readlines()
 
-    for line in Lines:
-       pass
+    loglist = []
+    for line in lines:
+       loglist.append(line)
 
-    return render(request, "new/administration_dashboard_copy.html", {})
+    context = {
+            "loglist":loglist
+        }
+    return render(request, "new/administration_dashboard_copy.html", context)
 
 # Produkte
 class ProductListView(ListView):
@@ -58,13 +62,14 @@ class ProductCreateView(View):
         form = ProductModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Produkt wurde erfolgreich angelegt')
             return redirect('administration:product_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(View):
     template_name = 'new/administration_products_create-update_copy.html'
 
     def get_object(self):
@@ -95,6 +100,7 @@ class ProductUpdateView(UpdateView):
             form = ProductModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Produkt wurde erfolgreich geändert')
                 return redirect('administration:product_list')
                 context={
                         "object":obj,
@@ -112,6 +118,18 @@ class ProductDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:product_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Produkt wurde erfolgreich gelöscht')
+
+            return redirect('administration:product_list')
+        return render(request, self.template_name, context)
 
 
 
@@ -137,13 +155,14 @@ class CategoryCreateView(View):
         form = CategoryModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Kategorie wurde erfolgreich angelegt')
             return redirect('administration:category_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class CategoryUpdateView(UpdateView):
+class CategoryUpdateView(View):
     template_name = 'new/administration_categories_create-update_copy.html'
 
     def get_object(self):
@@ -174,6 +193,7 @@ class CategoryUpdateView(UpdateView):
             form = CategoryModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Kategorie wurde erfolgreich geändert')
                 return redirect('administration:category_list')
                 context={
                         "object":obj,
@@ -191,6 +211,17 @@ class CategoryDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:category_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Kategorie wurde erfolgreich gelöscht')
+
+            return redirect('administration:category_list')
 
 
 # Rabatte
@@ -215,13 +246,14 @@ class DiscountCreateView(View):
         form = DiscountModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Rabatt wurde erfolgreich angelegt')
             return redirect('administration:discount_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class DiscountUpdateView(UpdateView):
+class DiscountUpdateView(View):
     template_name = 'new/administration_discounts_create-update_copy.html'
 
     def get_object(self):
@@ -252,6 +284,7 @@ class DiscountUpdateView(UpdateView):
             form = DiscountModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Rabatt wurde erfolgreich geändert')
                 return redirect('administration:discount_list')
                 context={
                         "object":obj,
@@ -269,6 +302,17 @@ class DiscountDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:discount_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Rabatt wurde erfolgreich gelöscht')
+
+            return redirect('administration:discount_list')
 
 
 # Steuersätze
@@ -293,13 +337,14 @@ class TaxCreateView(View):
         form = TaxModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Steuersatz wurde erfolgreich angelegt')
             return redirect('administration:tax_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class TaxUpdateView(UpdateView):
+class TaxUpdateView(View):
     template_name = 'new/administration_taxes_create-update_copy.html'
 
     def get_object(self):
@@ -330,6 +375,7 @@ class TaxUpdateView(UpdateView):
             form = TaxModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Steuersatz wurde erfolgreich geändert')
                 return redirect('administration:tax_list')
                 context={
                         "object":obj,
@@ -347,6 +393,17 @@ class TaxDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:tax_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Steuersatz wurde erfolgreich gelöscht')
+
+            return redirect('administration:tax_list')
 
 
 # Attribute 
@@ -371,13 +428,14 @@ class AttributeCreateView(View):
         form = AttributeModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Attribut wurde erfolgreich angelegt')
             return redirect('administration:attribute_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class AttributeUpdateView(UpdateView):
+class AttributeUpdateView(View):
     template_name = 'new/administration_attributes_create-update_copy.html'
 
     def get_object(self):
@@ -408,6 +466,7 @@ class AttributeUpdateView(UpdateView):
             form = AttributeModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Attribut wurde erfolgreich geändert')
                 return redirect('administration:attribute_list')
                 context={
                         "object":obj,
@@ -425,6 +484,17 @@ class AttributeDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:attribute_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Attribut wurde erfolgreich gelöscht')
+
+            return redirect('administration:attributes_list')
 
 
 # Kunden
@@ -449,13 +519,14 @@ class CustomerCreateView(View):
         form = CustomerModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Kunde wurde erfolgreich angelegt')
             return redirect('administration:customer_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class CustomerUpdateView(UpdateView):
+class CustomerUpdateView(View):
     template_name = 'new/administration_customers_create-update_copy.html'
 
     def get_object(self):
@@ -486,6 +557,7 @@ class CustomerUpdateView(UpdateView):
             form = CustomerModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Kunde wurde erfolgreich geändert')
                 return redirect('administration:customer_list')
                 context={
                         "object":obj,
@@ -504,13 +576,24 @@ class CustomerDeleteView(DeleteView):
     def get_success_url(self):
         return reverse('administration:customer_list')
 
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Kunde wurde erfolgreich gelöscht')
+
+            return redirect('administration:customer_list')
+
 
 # Angestellte
 class EmployeeListView(ListView):
     template_name = 'new/administration_employees_copy.html'
     queryset = Employee.objects.all()
 
-class EmployeeUpdateView(UpdateView):
+class EmployeeUpdateView(View):
     template_name = 'new/administration_employees_create-update_copy.html'
 
     def get_object(self):
@@ -541,6 +624,7 @@ class EmployeeUpdateView(UpdateView):
             form = EmployeeModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Mitarbeiter wurde erfolgreich geändert')
                 return redirect('administration:employee_list')
                 context={
                         "object":obj,
@@ -558,6 +642,17 @@ class EmployeeDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:employee_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Mitarbeiter wurde erfolgreich gelöscht')
+
+            return redirect('administration:employee_list')
 
 
 # Arbeitszeit
@@ -588,13 +683,14 @@ class SafeCreateView(View):
         form = SafeModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Tresor wurde erfolgreich angelegt')
             return redirect('administration:safe_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class SafeUpdateView(UpdateView):
+class SafeUpdateView(View):
     template_name = 'new/administration_safes_create-update_copy.html'
 
     def get_object(self):
@@ -613,7 +709,7 @@ class SafeUpdateView(UpdateView):
             context={
                 "object":obj,
                 "form":form, 
-                "headline":"Bearbeite einen Safe"
+                "headline":"Bearbeite einen Tresor"
             }
         return render(request, self.template_name, context)
 
@@ -625,6 +721,7 @@ class SafeUpdateView(UpdateView):
             form = SafeModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Tresor wurde erfolgreich geändert')
                 return redirect('administration:safe_list')
                 context={
                         "object":obj,
@@ -642,6 +739,17 @@ class SafeDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:safe_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Tresor wurde erfolgreich gelöscht')
+
+            return redirect('administration:safe_list')
 
 # Kasse
 class CashboxListView(ListView):
@@ -665,13 +773,14 @@ class CashboxCreateView(View):
         form = CashboxModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Kasse wurde erfolgreich angelegt')
             return redirect('administration:cashbox_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class CashboxUpdateView(UpdateView):
+class CashboxUpdateView(View):
     template_name = 'new/administration_cashboxes_create-update_copy.html'
 
     def get_object(self):
@@ -702,6 +811,7 @@ class CashboxUpdateView(UpdateView):
             form = CashboxModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Kasse wurde erfolgreich geändert')
                 return redirect('administration:cashbox_list')
                 context={
                         "object":obj,
@@ -719,6 +829,18 @@ class CashboxDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:cashbox_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Kasse wurde erfolgreich gelöscht')
+
+            return redirect('administration:cashbox_list')
+
 
 # Zahlungsmittel
 class PaymenttoolListView(ListView):
@@ -742,13 +864,14 @@ class PaymenttoolCreateView(View):
         form = PaymenttoolModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Zahlungsmittel wurde erfolgreich angelegt')
             return redirect('administration:paymenttool_list')
         context = {
             "form":form
         }
         return render(request, self.template_name, context)
 
-class PaymenttoolUpdateView(UpdateView):
+class PaymenttoolUpdateView(View):
     template_name = 'new/administration_paymenttools_create-update_copy.html'
 
     def get_object(self):
@@ -779,6 +902,7 @@ class PaymenttoolUpdateView(UpdateView):
             form = PaymenttoolModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Zahlungsmittel wurde erfolgreich geändert')
                 return redirect('administration:paymenttool_list')
                 context={
                         "object":obj,
@@ -796,6 +920,18 @@ class PaymenttoolDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:paymenttool_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Zahlungsmittel wurde erfolgreich gelöscht')
+
+            return redirect('administration:paymenttool_list')
+    
 
 
 # Backups
@@ -855,6 +991,7 @@ class BackupCreateView(View):
             # backup = form.save()     
             # pk = backup.pk
             # self.createBackup(pk)
+            # logger.info('Datensicherungssatz wurde erfolgreich angelegt')
 
             return redirect('administration:backup_list')
         context = {
@@ -862,7 +999,7 @@ class BackupCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class BackupUpdateView(UpdateView):
+class BackupUpdateView(View):
     template_name = 'new/administration_backups_create-update_copy.html'
 
     def get_object(self):
@@ -893,6 +1030,7 @@ class BackupUpdateView(UpdateView):
             form = BackupModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
+                logger.info('Datensicherungssatz wurde erfolgreich geändert')
                 return redirect('administration:backup_list')
                 context={
                         "object":obj,
@@ -910,6 +1048,17 @@ class BackupDeleteView(DeleteView):
 
     def get_success_url(self):
         return reverse('administration:backup_list')
+
+    def post(self, request, id=None, *args, **kwargs):
+        
+        context = {}    
+
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Datensicherungssatz wurde erfolgreich gelöscht')
+
+            return redirect('administration:backup_list')
 
 
 # Rechnungen 
@@ -957,6 +1106,7 @@ class BillCreateView(View):
         form = BillModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Rechnung wurde erfolgreich angelegt')
             return redirect('administration:bill_list')
         context = {
             "form":form
@@ -1009,6 +1159,7 @@ class ReversalBillCreateView(View):
         form = ReversalBillModelForm(request.POST)
         if form.is_valid():
             form.save()
+            logger.info('Stornorechnung wurde erfolgreich angelegt')
             return redirect('administration:reversalbill_list')
         context = {
             "form":form

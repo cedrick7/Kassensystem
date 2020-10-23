@@ -57,36 +57,13 @@
                             <tr></tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40&nbsp;Could not connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40&nbsp;Could not connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354Aasd1E webseald ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald ivc socket mtsclient.cpp 1923 0x00000c40&nbsp;Coud server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E webseald connect to the server servername, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E ERROR&nbsp;ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
-                            <tr>
-                              <td>2002-08-06-17:41:56.720+00:00I----- 0x1354A41E ivc socket mtsclient.cpp 1923 0x00000c40, on port 7135.&nbsp;</td>
-                            </tr>
+
+                            {% for log in loglist reversed %}
+                              <tr>
+                                <td>{{ log }}</td>
+                              </tr>
+                            {% endfor %}
+              
                           </tbody>
                           <tfoot>
                             <tr></tr>
