@@ -848,9 +848,9 @@ class BackupCreateView(View):
     def post(self, request, *args, **kwargs):
         form = BackupModelForm(request.POST)
         if form.is_valid():
-            backup = form.save()     
-            pk = backup.pk
-            self.createBackup(pk)
+            # backup = form.save()     
+            # pk = backup.pk
+            # self.createBackup(pk)
 
             return redirect('administration:backup_list')
         context = {

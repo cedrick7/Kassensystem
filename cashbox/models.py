@@ -2,7 +2,8 @@ from django.db import models
 from authorization.models import Employee
 from product.models import Discount      #cannot import
 from product.models import Product
-
+from decimal import Decimal
+from django.core.validators import MinValueValidator
 from django.urls import reverse
 
 # Create your models here.
@@ -10,7 +11,7 @@ from django.urls import reverse
 
 class Cashbox(models.Model):
     title       = models.CharField(max_length=45)
-    amount      = models.DecimalField(max_digits=6,decimal_places=2) # in Euro
+    amount      = models.DecimalField(max_digits=6,decimal_places=2, validators=[MinValueValidator(Decimal('-0.01'))]) # in Euro
     
     def get_update_url(self):
         return reverse("administration:cashbox_update", kwargs={"id": self.id})
@@ -44,7 +45,7 @@ class Paymenttool(models.Model):
 
 class Safe(models.Model):
     title       = models.CharField(max_length=45)
-    amount      = models.DecimalField(max_digits=8,decimal_places=2) # in Euro
+    amount      = models.DecimalField(max_digits=8,decimal_places=2, validators=[MinValueValidator(Decimal('-0.01'))]) # in Euro
     employee = models.ManyToManyField(Employee, blank=True)
 
     def get_update_url(self):
@@ -88,7 +89,7 @@ class Bill(models.Model):
 class Bill_Product(models.Model):
     bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
-    amount = models.IntegerField(default=50) # in Stück
+    amount = models.IntegerField(default=50, validators=[MinValueValidator(Decimal('-0.01'))]) # in Stück
 
     class Meta:
         unique_together=[['bill', 'product']]
