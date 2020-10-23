@@ -27,7 +27,13 @@ from django.views.generic import (
 
 # Administration Dashboard
 def administration_dashboard(request, *args, **kwargs):
-    
+    BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+    file = open(str(os.path.join(BASE_DIR, "static", "syslog")), 'r')
+    Lines = file.readlines()
+
+    for line in Lines:
+       pass
+
     return render(request, "new/administration_dashboard_copy.html", {})
 
 # Produkte

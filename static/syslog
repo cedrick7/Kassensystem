@@ -1,4 +1,29 @@
-INFO 2020-10-23 14:06:30,114 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:06:33,275 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\Kassensystem\settings.py changed, reloading.
-INFO 2020-10-23 14:06:34,468 autoreload Watching for file changes with StatReloader
-INFO 2020-10-23 14:06:43,225 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:28:49,850 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:28:55,151 basehttp "GET /Administration/ HTTP/1.1" 200 8600
+INFO 2020-10-23 14:28:55,186 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-23 14:29:05,451 basehttp "GET /Administration/ HTTP/1.1" 200 8600
+INFO 2020-10-23 14:29:05,493 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-23 14:29:24,396 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:29:24,630 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:29:25,802 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:29:25,998 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:29:52,335 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:29:52,548 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:29:56,679 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:29:56,901 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:30:01,045 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:30:01,265 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:30:03,448 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:30:03,680 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:30:08,416 basehttp "GET /Administration/ HTTP/1.1" 200 8600
+INFO 2020-10-23 14:30:08,460 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-10-23 14:30:08,460 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-23 14:30:17,948 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:30:20,522 basehttp "GET /Administration/ HTTP/1.1" 200 8600
+INFO 2020-10-23 14:30:20,563 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 304 0
+INFO 2020-10-23 14:30:20,564 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-23 14:30:20,564 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-23 14:33:19,115 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:33:19,349 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 14:33:27,613 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 14:33:27,862 autoreload Watching for file changes with StatReloader
