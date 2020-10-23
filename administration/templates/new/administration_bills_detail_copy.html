@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
+<!-- Body -->
+
+
+{% block content %}
+	<section id="body">
+		<div class="heading container-fluid">
+			<!-- change this content -->
+			<h3>Produkte</h3>
+			<a class="btn btn-primary" role="button" href="#">
+				<i class="fas fa-download fa-sm"></i>&nbsp;
+				<!-- change this content -->
+				Alle Produkte ausdrucken</a>
+		</div>
+		<div class="content container-fluid">
+			<div class="card">
+				<div class="card-header">
+
+					<form action="{% url 'administration:bill_list' %}">
+						<input type="submit" value="Back" />
+					</form>
+
+					<!-- change this content -->
+					<p>Rechnung Details</p>
+				</div>
+				<div class="card-body">
+					<div class="card-row-1 row">
+						<div class="col-12 col-sm-4">
+							<div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable">
+								<label>Show&nbsp;
+									<select class="form-control form-control-sm custom-select custom-select-sm">
+										<option value="10" selected>10</option>
+										<option value="25">25</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+									</select>&nbsp;
+								</label>
+							</div>
+						</div>
+
+						<div class="col-12 col-sm-4">
+							<div class="dataTables_filter" id="dataTable_filter-1">
+								<label>
+									<input type="search" class="form-control form-control-sm" aria-controls="dataTable"
+									       placeholder="Suchen...">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="card-row-2 row">
+						<div class="col-12">
+							<!-- change this content -->
+							<div class="table-responsive table" id="dataTable-1" role="grid"
+							     aria-describedby="dataTable_info">
+								<table class="table" id="productsTable">
+									<thead>
+									<tr>
+										<th>Datum</th>
+										<th>Kosten</th>
+										<th>Mitarbeiter</th>
+										<th>Kasse</th>
+										<th>Zahlungsmittel</th>
+										<th>Rabatt</th>
+										<th>Pfad</th>
+ 
+										
+										
+
+
+									</tr>
+									</thead>
+									<tbody>
+
+									
+										<tr>
+											<td>{{ object.creation }}</td>
+											<td>{{ object.totalcosts }}</td> 
+											<td>{{ object.employee }}</td>
+											<td>{{ object.cashbox }}</td> 
+											<td>{{ object.paymenttool }}</td>
+											<td>{{ object.discount }}</td> 
+											<td>{{ object.path }}</td> 
+
+
+											
+										</tr>
+
+
+
+									</tbody>
+									
+									<tfoot>
+									<tr>
+										<td><strong>Datum</strong></td>
+										<td><strong>Kosten</strong></td>
+										<td><strong>Mitarbeiter</strong></td>
+										<td><strong>Kasse</strong></td>
+										<td><strong>Zahlungsmittel</strong></td>
+										<td><strong>Rabatt</strong></td>
+										<td><strong>Pfad</strong></td>
+
+									</tr>
+									</tfoot>
+								</table>
+									
+							</div>
+						</div>
+						<div class="col-12">
+							<!-- change this content -->
+							<div class="table-responsive table" id="dataTable-1" role="grid">
+								<table class="table" id="productsTable">
+									<h1>Produkte</h1>
+
+									<tr>
+										<th>Typ</th>
+										<th>Name</th>
+										<th>Marke</th>
+										<th>Preis</th>
+										<th>Bestand</th>
+										<th>Eigenschaften</th>
+										<th>Kategorien</th>
+										<th>Gewicht</th>
+										<th>Bild</th>
+										<th>Steuersatz</th>
+										<th>Bild</th>
+										<th>Mehr</th>
+ 
+										
+										
+
+
+									</tr>
+									</thead>
+									<tbody>
+
+
+
+										
+										{% for product in productlist %}
+											<tr>
+												<td>{{ product.type }}</td>
+												<td>{{ product.title }}</td>
+												<td>{{ product.description }}</td>
+												<td>{{ product.brand }}</td>
+												<td>{{ product.costs }}</td>
+												<td>{{ product.stock }}</td>
+												<td>{% for product in product.category.all %}{{ product }}<br/>{% endfor %}</td>
+												<td>{{ product.attributes }}</td>
+												<td>{{ product.weight }}</td>
+												<td>{{ product.picture }}</td>
+												<td>{{ product.tax }}</td>
+												<td>{{ product.discount }}</td>
+												<td>{{ product.path }}</td>
+						
+											</tr>
+										{% endfor %}
+									
+
+									</tbody>
+									
+									<tfoot>
+									<tr>
+										<td><strong>Typ</strong></td>
+										<td><strong>Name</strong></td>
+										<td><strong>Marke</strong></td>
+										<td><strong>Preis</strong></td>
+										<td><strong>Bestand</strong></td>
+										<td><strong>Kategorien</strong></td>
+										<td><strong>Eigenschaften</strong></td>
+										<td><strong>Gewicht</strong></td>
+										<td><strong>Bild</strong></td>
+										<td><strong>Steuersatz</strong></td>
+										<td><strong>Rabatt</strong></td>
+										<td><strong>Mehr</strong></td>
+
+									</tr>
+									</tfoot>
+								</table>
+							</div>	
+						</div>
+					</div>
+					<div class="card-row-3 row">
+						<div class="col-12 col-sm-6">
+							<p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to
+								10 of 27</p>
+						</div>
+						<div class="col-12 col-sm-6">
+							<nav class="dataTables_paginate paging_simple_numbers">
+								<ul class="pagination">
+									<li class="page-item disabled">
+										<a class="page-link" href="#" aria-label="Previous"><span
+												aria-hidden="true">«</span></a>
+									</li>
+									<li class="page-item active">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Next"><span
+												aria-hidden="true">»</span></a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

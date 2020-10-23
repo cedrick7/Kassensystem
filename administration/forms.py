@@ -136,6 +136,34 @@ class BackupModelForm(forms.ModelForm):
             'employee', 
         ]      
 
+class BillModelForm(forms.ModelForm):
+    class Meta:
+        model = Bill
+        fields = [
+            'creation',
+            'totalcosts',
+            'employee',
+            'cashbox',
+            'paymenttool',
+            'discount',
+            'path', 
+        ]  
+
+class ReversalBillModelForm(forms.ModelForm):
+    class Meta:
+        model = ReversalBill
+        fields = [
+            'bill',
+            'creation',
+            'refund',
+            'employee',
+            'cashbox',
+            'path', 
+        ]      
+    
+
+
+
 
 
 # ----------------------------------------------------------------------------------------------------------------------

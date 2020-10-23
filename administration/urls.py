@@ -61,6 +61,15 @@ from .views import (
     BackupUpdateView,
     BackupDeleteView,
 
+    BillListView, 
+    BillDetailView,
+    BillCreateView,
+
+    ReversalBillListView,
+    ReversalBillDetailView,
+    ReversalBillCreateView,
+    
+
 
 )
 
@@ -139,6 +148,18 @@ urlpatterns=[
     path('Datensicherungen/Erstellen', BackupCreateView.as_view(), name='backup_create'),
     path('Datensicherungen/<int:id>/Bearbeiten', BackupUpdateView.as_view(), name='backup_update'),
     path('Datensicherungen/<int:id>/Löschen', BackupDeleteView.as_view(), name='backup_delete'),
+
+    # Rechnungen
+    path('Rechnungen', BillListView.as_view(), name='bill_list'),
+    path('Rechnungen/<int:id>/Details', BillDetailView.as_view(), name='bill_details'),
+    path('Rechnungen/Erstellen', BillCreateView.as_view(), name='bill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
+
+    # Rechnungen
+    path('Stornorechnungen', ReversalBillListView.as_view(), name='reversalbill_list'),
+    path('Stornorechnungen/<int:id>/Details', ReversalBillDetailView.as_view(), name='reversalbill_details'),
+    path('Stornorechnungen/Erstellen', ReversalBillCreateView.as_view(), name='reversalbill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
+    
+
 
 
 ]

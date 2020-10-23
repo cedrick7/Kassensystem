@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm, BillModelForm, ReversalBillModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
 from administration.models import Backup
 from analyzation.models import Worktime
-from cashbox.models import Safe, Cashbox, Paymenttool
+from cashbox.models import Safe, Cashbox, Paymenttool, Bill, Bill_Product, ReversalBill
 from django.db import connection 
 
 from django.urls import reverse
@@ -908,6 +908,108 @@ class BackupDeleteView(DeleteView):
         return reverse('administration:backup_list')
 
 
+# Rechnungen 
+class BillListView(ListView):
+    template_name = 'new/administration_bills_copy.html'
+    queryset = Bill.objects.all()
+
+class BillDetailView(View):
+    template_name = 'new/administration_bills_detail_copy.html'
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context = {}
+        if id is not None:
+            obj = get_object_or_404(Bill, id=id)
+            billproductIdlist = Bill_Product.objects.filter(bill=id).values_list('product', flat=True)
+            productlist = []
+
+            for i in billproductIdlist:
+                p = Product.objects.get(id=i)
+                productlist.append(p)
+
+            context = {
+                "object":obj,
+                "productlist":productlist    
+                
+            }
+            
+        return render(request, self.template_name, context)
+
+class BillCreateView(View):
+    template_name = 'new/administration_bills_create-update_copy_löschen.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = BillModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle eine Rechnung"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = BillModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:bill_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
+
+
+# Stornorechnungen 
+class ReversalBillListView(ListView):
+    template_name = 'new/administration_reversalbills_copy.html'
+    queryset = ReversalBill.objects.all()
+
+class ReversalBillDetailView(View):
+    template_name = 'new/administration_reversalbills_detail_copy.html'
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        context = {}
+        if id is not None:
+            obj = get_object_or_404(ReversalBill, id=id)
+            billIdlist = ReversalBill.objects.filter(bill=id).values_list('bill', flat=True)
+            billlist = []
+
+            for i in billIdlist:
+                b = Bill.objects.get(id=i)
+                billlist.append(b)
+                
+            context = {
+                "object":obj,
+                "billlist":billlist    
+                
+            }
+
+        return render(request, self.template_name, context)
+
+class ReversalBillCreateView(View):
+    template_name = 'new/administration_reversalbills_create-update_copy_löschen.html'
+
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = ReversalBillModelForm()
+        context = {
+            "form":form,
+            "headline": "Erstelle eine Stornorechnung"
+        }
+        return render(request, self.template_name, context)
+
+    # http/POST method
+    def post(self, request, *args, **kwargs):
+        form = ReversalBillModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('administration:reversalbill_list')
+        context = {
+            "form":form
+        }
+        return render(request, self.template_name, context)
 
 
 

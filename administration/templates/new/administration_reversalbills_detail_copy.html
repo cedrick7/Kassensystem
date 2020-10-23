@@ -11,29 +11,32 @@
 {% endblock specific %}
 
 <!-- Body -->
-{% block navbar %}
-	{% include 'administration_navbar.html' %}
-{% endblock navbar %}
+
 
 {% block content %}
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Rechnungen</h3>
+			<h3>Produkte</h3>
 			<a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
 				<!-- change this content -->
-				Alle Rechnungen ausdrucken</a>
+				Alle Produkte ausdrucken</a>
 		</div>
 		<div class="content container-fluid">
 			<div class="card">
 				<div class="card-header">
+
+					<form action="{% url 'administration:reversalbill_list' %}">
+						<input type="submit" value="Back" />
+					</form>
+
 					<!-- change this content -->
-					<p>Rechnungen Übersicht</p>
+					<p>Stornorechnung Details</p>
 				</div>
 				<div class="card-body">
 					<div class="card-row-1 row">
-						<div class="col-12 col-sm-6">
+						<div class="col-12 col-sm-4">
 							<div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable">
 								<label>Show&nbsp;
 									<select class="form-control form-control-sm custom-select custom-select-sm">
@@ -45,7 +48,8 @@
 								</label>
 							</div>
 						</div>
-						<div class="col-12 col-sm-6">
+
+						<div class="col-12 col-sm-4">
 							<div class="dataTables_filter" id="dataTable_filter-1">
 								<label>
 									<input type="search" class="form-control form-control-sm" aria-controls="dataTable"
@@ -59,47 +63,109 @@
 							<!-- change this content -->
 							<div class="table-responsive table" id="dataTable-1" role="grid"
 							     aria-describedby="dataTable_info">
-								<table class="table" id="invoiceTable">
+								<table class="table" id="productsTable">
 									<thead>
 									<tr>
+										<th>Rechnung</th>
 										<th>Datum</th>
-										<th>Summe</th>
-										<th>Kasse</th>
+										<th>Rückerstattung</th>
 										<th>Mitarbeiter</th>
-										<th>Zahlungsmittel</th>
-										<th>Rabatt</th>
-										<th>Dateipfad</th>
-										<th>Mehr</th>
+										<th>Kasse</th>
+										<th>Pfad</th>
+ 
+										
+										
+
+
 									</tr>
 									</thead>
 									<tbody>
-									<tr>
-										<td>1</td>
-										<td>Kasse #1</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020, 08:00</td>
-										<td>Lorem ipsum</td>
-										<td>01.01.2020, 08:00</td>
-										<td>12,99€</td>
-										<td class="td-icons"><a href="invoice-detail.html"><i
-												class="fas fa-comment-alt"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
+
+									
+										<tr>
+											<td>{{ object.creation }}</td>
+											<td>{{ object.totalcosts }}</td> 
+											<td>{{ object.employee }}</td>
+											<td>{{ object.cashbox }}</td> 
+											<td>{{ object.paymenttool }}</td>
+											<td>{{ object.discount }}</td> 
+											<td>{{ object.path }}</td> 
+
+
+											
+										</tr>
+
+
+
 									</tbody>
+									
 									<tfoot>
 									<tr>
+										<td><strong>Rechnung</strong></td>
 										<td><strong>Datum</strong></td>
-										<td><strong>Summe</strong></td>
-										<td><strong>Kasse</strong></td>
+										<td><strong>Rückerstattung</strong></td>
 										<td><strong>Mitarbeiter</strong></td>
-										<td><strong>Zahlungsmittel</strong></td>
-										<td><strong>Rabatt</strong></td>
-										<td><strong>Dateipfad</strong></td>
-										<td><strong>Mehr</strong></td>
+										<td><strong>Kasse</strong></td>
+										<td><strong>Pfad</strong></td>
+
 									</tr>
 									</tfoot>
 								</table>
+									
 							</div>
+						</div>
+						<div class="col-12">
+							<!-- change this content -->
+							<div class="table-responsive table" id="dataTable-1" role="grid">
+								<table class="table" id="productsTable">
+									<h1>Rechnung:</h1>
+
+									<tr>
+										<th>Datum</th>
+										<th>Kosten</th>
+										<th>Mitarbeiter</th>
+										<th>Kasse</th>
+										<th>Zahlungsmittel</th>
+										<th>Rabatt</th>
+										<th>Pfad</th>
+
+									</tr>
+									</thead>
+									<tbody>
+
+
+
+										
+										{% for bill in billlist %}
+											<tr>
+												<td>{{ bill.creation }}</td>
+												<td>{{ bill.totalcosts }}</td>
+												<td>{{ bill.employee }}</td>
+												<td>{{ bill.cashbox }}</td>
+												<td>{{ bill.paymenttool }}</td>
+												<td>{{ bill.discount }}</td>
+												<td>{{ bill.path }}</td>	
+																										
+											</tr>
+										{% endfor %}
+									
+
+									</tbody>
+									
+									<tfoot>
+									<tr>
+										<td><strong>Datum</strong></td>
+										<td><strong>Kosten</strong></td>
+										<td><strong>Mitarbeiter</strong></td>
+										<td><strong>Kasse</strong></td>
+										<td><strong>Zahlungsmittel</strong></td>
+										<td><strong>Rabatt</strong></td>
+										<td><strong>Pfad</strong></td>
+										
+									</tr>
+									</tfoot>
+								</table>
+							</div>	
 						</div>
 					</div>
 					<div class="card-row-3 row">
