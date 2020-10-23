@@ -95,7 +95,7 @@
 											<td>{{ instance.costs }}</td>
 											<td>{{ instance.stock }}</td>
 											<td>{% for instance in instance.category.all %}{{ instance }}<br/>{% endfor %}</td>
-											<td>{{ instance.attributes }}</td>
+											<td>{% for instance in instance.attributes.all %}{{ instance }}<br/>{% endfor %}</td>
 											<td>{{ instance.weight }}</td>
 											<td>{{ instance.picture }}</td>
 											<td>{{ instance.tax }}</td>

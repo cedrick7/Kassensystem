@@ -825,8 +825,6 @@ class BackupCreateView(View):
 
 
 
-        
-
     def get_object(self):
         id = self.kwargs.get('id')
         obj = None

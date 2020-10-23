@@ -156,7 +156,7 @@
 												<td>{{ product.costs }}</td>
 												<td>{{ product.stock }}</td>
 												<td>{% for product in product.category.all %}{{ product }}<br/>{% endfor %}</td>
-												<td>{{ product.attributes }}</td>
+												<td>{% for product in instance.attributes.all %}{{ product }}<br/>{% endfor %}</td>
 												<td>{{ product.weight }}</td>
 												<td>{{ product.picture }}</td>
 												<td>{{ product.tax }}</td>
