@@ -204,3 +204,719 @@ INFO 2020-10-23 16:35:37,444 basehttp "POST /Administration/Datensicherungen/23/
 INFO 2020-10-23 16:35:37,452 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6612
 INFO 2020-10-23 16:35:39,639 basehttp "GET /Administration/ HTTP/1.1" 200 55590
 INFO 2020-10-23 16:35:39,676 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-23 23:14:53,912 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:15:00,601 basehttp "GET / HTTP/1.1" 200 6467
+INFO 2020-10-23 23:15:00,629 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+WARNING 2020-10-23 23:15:00,635 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-23 23:15:00,662 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-23 23:15:00,664 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-10-23 23:15:01,276 log Not Found: /favicon.ico
+WARNING 2020-10-23 23:15:01,276 basehttp "GET /favicon.ico HTTP/1.1" 404 4537
+INFO 2020-10-23 23:15:08,886 basehttp "GET /Administration/ HTTP/1.1" 200 57927
+WARNING 2020-10-23 23:15:12,210 log Not Found: /Administration/kASEN
+WARNING 2020-10-23 23:15:12,210 basehttp "GET /Administration/kASEN HTTP/1.1" 404 15094
+INFO 2020-10-23 23:15:16,735 basehttp "GET /Administration/Kassen HTTP/1.1" 200 6337
+INFO 2020-10-23 23:15:18,435 basehttp "GET /Administration/Kassen/Erstellen? HTTP/1.1" 200 4361
+INFO 2020-10-23 23:15:19,373 basehttp "GET /Administration/Kassen? HTTP/1.1" 200 6337
+INFO 2020-10-23 23:17:04,597 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:17:04,803 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:17:33,229 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:17:33,459 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:17:34,652 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:17:34,871 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:17:40,023 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:17:40,248 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:17:44,488 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:17:44,709 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:18:04,102 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:18:04,328 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:18:09,596 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:18:09,827 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:18:15,994 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:18:16,211 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:18:22,456 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:18:22,687 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:18:29,942 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:18:30,167 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:18:56,635 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:18:56,870 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:19:00,072 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:19:00,278 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-23 23:19:12,220 log Not Found: /Administration/Backup
+WARNING 2020-10-23 23:19:12,220 basehttp "GET /Administration/Backup HTTP/1.1" 404 15097
+WARNING 2020-10-23 23:19:19,156 log Not Found: /Administration/Datensicherung
+WARNING 2020-10-23 23:19:19,156 basehttp "GET /Administration/Datensicherung HTTP/1.1" 404 15121
+INFO 2020-10-23 23:19:22,465 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6612
+INFO 2020-10-23 23:19:41,943 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:19:42,171 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:19:53,523 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:19:53,749 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:19:59,007 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:19:59,239 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:20:03,271 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:20:05,129 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6612
+INFO 2020-10-23 23:20:06,318 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:20:09,950 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:20:09,958 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6612
+INFO 2020-10-23 23:20:30,558 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:20:32,079 basehttp "GET /Administration/Datensicherungen? HTTP/1.1" 200 6612
+INFO 2020-10-23 23:20:55,132 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:20:55,370 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:20:58,629 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:20:58,870 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:21:03,093 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:21:03,310 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:21:08,571 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:21:08,795 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:21:09,196 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:21:14,534 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:21:14,535 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:21:14,542 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7053
+INFO 2020-10-23 23:22:00,538 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:22:00,751 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:22:01,929 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:22:02,149 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:22:10,407 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:22:10,608 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:22:24,920 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:22:25,123 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:22:29,357 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:22:29,584 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:22:30,832 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+ERROR 2020-10-23 23:22:32,939 log Internal Server Error: /Administration/Datensicherungen/Erstellen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: administration_backup.employee_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 987, in post
+    backup = form.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/forms/models.py", line 460, in save
+    self.instance.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 790, in save_base
+    updated = self._save_table(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 933, in _do_insert
+    return manager._insert(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1397, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: administration_backup.employee_id
+ERROR 2020-10-23 23:22:32,940 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 500 158497
+INFO 2020-10-23 23:22:38,223 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:22:38,224 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:22:38,231 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7494
+INFO 2020-10-23 23:23:26,472 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:23:27,056 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:23:28,722 basehttp "GET /Administration/Datensicherungen? HTTP/1.1" 200 7494
+INFO 2020-10-23 23:23:29,888 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+ERROR 2020-10-23 23:23:36,137 log Internal Server Error: /Administration/Datensicherungen/Erstellen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 411, in execute
+    return Database.Cursor.execute(self, query)
+sqlite3.OperationalError: near "TABLE": syntax error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 989, in post
+    self.createBackup(pk)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 961, in createBackup
+    row = self.custom_sql(sql_query)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 945, in custom_sql
+    cursor.execute(query)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 411, in execute
+    return Database.Cursor.execute(self, query)
+django.db.utils.OperationalError: near "TABLE": syntax error
+ERROR 2020-10-23 23:23:36,138 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 500 125518
+INFO 2020-10-23 23:25:33,084 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:25:33,316 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-23 23:25:44,782 log Internal Server Error: /Administration/Datensicherungen/Erstellen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 411, in execute
+    return Database.Cursor.execute(self, query)
+sqlite3.OperationalError: near "/": syntax error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 989, in post
+    self.createBackup(pk)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 961, in createBackup
+    row = self.custom_sql(sql_query)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 945, in custom_sql
+    cursor.execute(query)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 411, in execute
+    return Database.Cursor.execute(self, query)
+django.db.utils.OperationalError: near "/": syntax error
+ERROR 2020-10-23 23:25:44,782 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 500 125420
+INFO 2020-10-23 23:26:15,006 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:26:15,233 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:26:17,438 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:26:17,662 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:26:23,551 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:26:23,557 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:26:23,568 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 8817
+INFO 2020-10-23 23:27:05,381 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:27:05,601 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:27:09,863 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:27:10,075 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:27:10,767 basehttp "GET /Administration/Datensicherungen/32/L%C3%B6schen HTTP/1.1" 200 552
+INFO 2020-10-23 23:27:12,249 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:27:12,249 basehttp "POST /Administration/Datensicherungen/32/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:12,265 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 8376
+INFO 2020-10-23 23:27:13,541 basehttp "GET /Administration/Datensicherungen/24/L%C3%B6schen HTTP/1.1" 200 557
+INFO 2020-10-23 23:27:14,364 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:27:14,365 basehttp "POST /Administration/Datensicherungen/24/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:14,378 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7928
+INFO 2020-10-23 23:27:15,706 basehttp "GET /Administration/Datensicherungen/28/L%C3%B6schen HTTP/1.1" 200 552
+INFO 2020-10-23 23:27:16,831 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:27:16,831 basehttp "POST /Administration/Datensicherungen/28/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:16,841 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7487
+INFO 2020-10-23 23:27:18,152 basehttp "GET /Administration/Datensicherungen/29/L%C3%B6schen HTTP/1.1" 200 552
+INFO 2020-10-23 23:27:19,139 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:27:19,139 basehttp "POST /Administration/Datensicherungen/29/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:19,145 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7046
+INFO 2020-10-23 23:27:20,413 basehttp "GET /Administration/Datensicherungen/30/L%C3%B6schen HTTP/1.1" 200 552
+INFO 2020-10-23 23:27:21,565 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:27:21,565 basehttp "POST /Administration/Datensicherungen/30/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:21,571 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6605
+INFO 2020-10-23 23:27:23,259 basehttp "GET /Administration/Datensicherungen/31/L%C3%B6schen HTTP/1.1" 200 552
+INFO 2020-10-23 23:27:24,625 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:27:24,625 basehttp "POST /Administration/Datensicherungen/31/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:24,631 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6164
+INFO 2020-10-23 23:27:31,843 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:27:40,061 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:27:40,061 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:27:40,067 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6608
+INFO 2020-10-23 23:33:51,835 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:33:53,659 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6638
+INFO 2020-10-23 23:34:55,436 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6691
+INFO 2020-10-23 23:35:32,950 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6756
+INFO 2020-10-23 23:36:56,904 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:36:57,117 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:37:06,378 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:37:06,603 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:37:10,855 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:37:15,632 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:37:15,632 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:37:15,639 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7280
+INFO 2020-10-23 23:39:08,552 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:39:12,014 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:39:12,015 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:39:12,022 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7811
+INFO 2020-10-23 23:40:41,234 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:40:41,469 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:40:44,663 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:40:44,896 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:40:46,066 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:40:46,292 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:40:47,512 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:40:47,741 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:40:51,343 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:40:58,496 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:40:58,496 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:40:58,509 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 8350
+INFO 2020-10-23 23:42:03,884 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:42:04,115 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:42:43,593 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:42:43,820 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:42:44,989 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:42:45,219 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:42:52,460 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:42:52,703 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:42:53,847 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:42:54,052 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:43:03,350 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:43:06,379 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:43:06,607 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:43:07,813 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:43:08,036 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:43:13,286 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:43:13,472 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:43:19,067 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:43:19,074 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:43:19,085 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 8876
+INFO 2020-10-23 23:44:07,337 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:44:07,566 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:44:14,711 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:44:22,578 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+ERROR 2020-10-23 23:44:26,835 log Internal Server Error: /Administration/Datensicherungen/Erstellen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 989, in post
+    self.createBackup(pk)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 956, in createBackup
+    subprocess.run(["sh ./", exec,'test'])
+  File "/usr/lib/python3.8/subprocess.py", line 489, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/usr/lib/python3.8/subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.8/subprocess.py", line 1702, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'sh ./'
+ERROR 2020-10-23 23:44:26,835 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 500 101606
+INFO 2020-10-23 23:44:37,209 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:44:37,467 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:47:46,623 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:47:46,842 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:47:48,973 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:47:49,192 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:48:02,441 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:48:02,670 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:48:04,795 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:48:05,014 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:49:14,767 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:49:14,993 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:49:16,197 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:49:16,418 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:49:21,659 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:49:21,892 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:49:23,082 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:49:23,290 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:49:24,495 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:49:24,714 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:49:32,936 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:49:38,172 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:49:38,173 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:49:38,182 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 9889
+INFO 2020-10-23 23:50:08,463 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:50:08,703 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:50:09,881 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:50:10,096 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:50:13,358 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:50:18,556 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:50:18,556 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:50:18,566 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 10442
+INFO 2020-10-23 23:50:44,732 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:50:44,968 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:50:46,190 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:50:46,418 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:50:59,685 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:50:59,923 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:51:00,583 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:51:05,356 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:51:05,357 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:51:05,374 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 10980
+INFO 2020-10-23 23:51:53,448 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:51:58,654 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:51:58,655 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:51:58,665 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 11506
+INFO 2020-10-23 23:52:06,295 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:52:13,477 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:52:13,478 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:13,489 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 12035
+INFO 2020-10-23 23:52:20,435 basehttp "GET /Administration/Datensicherungen/33/L%C3%B6schen HTTP/1.1" 200 553
+INFO 2020-10-23 23:52:21,774 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:21,775 basehttp "POST /Administration/Datensicherungen/33/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:21,792 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 11508
+INFO 2020-10-23 23:52:22,812 basehttp "GET /Administration/Datensicherungen/34/L%C3%B6schen HTTP/1.1" 200 552
+INFO 2020-10-23 23:52:23,859 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:23,860 basehttp "POST /Administration/Datensicherungen/34/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:23,869 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 10984
+INFO 2020-10-23 23:52:25,130 basehttp "GET /Administration/Datensicherungen/35/L%C3%B6schen HTTP/1.1" 200 555
+INFO 2020-10-23 23:52:26,095 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:26,096 basehttp "POST /Administration/Datensicherungen/35/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:26,116 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 10453
+INFO 2020-10-23 23:52:27,569 basehttp "GET /Administration/Datensicherungen/36/L%C3%B6schen HTTP/1.1" 200 555
+INFO 2020-10-23 23:52:28,534 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:28,534 basehttp "POST /Administration/Datensicherungen/36/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:28,545 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 9914
+INFO 2020-10-23 23:52:29,678 basehttp "GET /Administration/Datensicherungen/37/L%C3%B6schen HTTP/1.1" 200 553
+INFO 2020-10-23 23:52:30,837 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:30,837 basehttp "POST /Administration/Datensicherungen/37/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:30,845 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 9388
+INFO 2020-10-23 23:52:32,223 basehttp "GET /Administration/Datensicherungen/38/L%C3%B6schen HTTP/1.1" 200 553
+INFO 2020-10-23 23:52:33,373 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:33,374 basehttp "POST /Administration/Datensicherungen/38/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:33,381 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 8923
+INFO 2020-10-23 23:52:34,546 basehttp "GET /Administration/Datensicherungen/39/L%C3%B6schen HTTP/1.1" 200 563
+INFO 2020-10-23 23:52:35,793 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:35,794 basehttp "POST /Administration/Datensicherungen/39/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:35,801 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 8375
+INFO 2020-10-23 23:52:36,846 basehttp "GET /Administration/Datensicherungen/40/L%C3%B6schen HTTP/1.1" 200 569
+INFO 2020-10-23 23:52:37,883 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:37,884 basehttp "POST /Administration/Datensicherungen/40/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:37,894 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7822
+INFO 2020-10-23 23:52:39,147 basehttp "GET /Administration/Datensicherungen/41/L%C3%B6schen HTTP/1.1" 200 558
+INFO 2020-10-23 23:52:40,312 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:40,313 basehttp "POST /Administration/Datensicherungen/41/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:40,319 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7284
+INFO 2020-10-23 23:52:41,261 basehttp "GET /Administration/Datensicherungen/42/L%C3%B6schen HTTP/1.1" 200 553
+INFO 2020-10-23 23:52:42,783 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:42,783 basehttp "POST /Administration/Datensicherungen/42/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:42,788 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6758
+INFO 2020-10-23 23:52:44,358 basehttp "GET /Administration/Datensicherungen/43/L%C3%B6schen HTTP/1.1" 200 555
+INFO 2020-10-23 23:52:45,737 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:52:45,737 basehttp "POST /Administration/Datensicherungen/43/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:52:45,744 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-23 23:52:48,722 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-23 23:53:03,513 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:53:03,762 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:53:05,984 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:53:06,205 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:53:15,481 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:53:15,701 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:53:17,913 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:53:18,138 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:53:19,349 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:53:19,577 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:53:28,881 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:53:29,109 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:53:30,598 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:53:39,691 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:53:39,692 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:53:39,698 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6765
+INFO 2020-10-23 23:53:49,042 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-23 23:54:00,343 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:54:00,344 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:54:00,350 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 7300
+INFO 2020-10-23 23:54:16,772 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:54:16,999 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:54:30,286 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:54:30,505 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:55:36,430 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:55:36,665 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:55:38,883 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:55:39,114 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:55:45,373 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:55:45,591 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:55:46,779 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:55:46,976 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:55:55,231 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:55:55,448 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:56:02,718 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:56:02,941 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:56:04,117 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:56:04,344 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:56:05,563 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:56:05,773 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:56:56,522 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:56:56,758 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:57:01,020 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:57:01,223 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:57:09,465 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:57:09,692 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:57:16,960 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:57:17,188 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:57:21,415 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:57:21,621 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:57:46,987 basehttp "GET /Administration/Datensicherungen/44/L%C3%B6schen HTTP/1.1" 200 559
+INFO 2020-10-23 23:57:48,181 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:57:48,182 basehttp "POST /Administration/Datensicherungen/44/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:57:48,195 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6764
+INFO 2020-10-23 23:57:49,939 basehttp "GET /Administration/Datensicherungen/45/L%C3%B6schen HTTP/1.1" 200 559
+INFO 2020-10-23 23:57:51,287 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:57:51,287 basehttp "POST /Administration/Datensicherungen/45/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:57:51,293 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-23 23:58:04,511 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+ERROR 2020-10-23 23:58:07,271 log Internal Server Error: /Administration/Datensicherungen/Erstellen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: administration_backup.employee_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 982, in post
+    backup = form.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/forms/models.py", line 460, in save
+    self.instance.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 790, in save_base
+    updated = self._save_table(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 933, in _do_insert
+    return manager._insert(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1397, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: administration_backup.employee_id
+ERROR 2020-10-23 23:58:07,274 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 500 158457
+INFO 2020-10-23 23:58:12,942 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-23 23:58:12,943 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-23 23:58:12,948 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6760
+INFO 2020-10-23 23:58:18,273 basehttp "GET /Administration/Datensicherungen/46/L%C3%B6schen HTTP/1.1" 200 555
+INFO 2020-10-23 23:58:19,481 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-23 23:58:19,482 basehttp "POST /Administration/Datensicherungen/46/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-23 23:58:19,488 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-23 23:58:30,681 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:58:30,919 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:59:51,934 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:59:52,166 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:59:55,377 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:59:55,581 autoreload Watching for file changes with StatReloader
+INFO 2020-10-23 23:59:57,707 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-23 23:59:57,930 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:00:01,144 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:00:01,378 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:00:02,930 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-24 00:00:06,642 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-24 00:00:06,643 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-24 00:00:06,652 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6757
+INFO 2020-10-24 00:00:10,006 basehttp "GET /Administration/Datensicherungen/47/L%C3%B6schen HTTP/1.1" 200 553
+INFO 2020-10-24 00:00:11,181 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-24 00:00:11,181 basehttp "POST /Administration/Datensicherungen/47/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-24 00:00:11,188 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-24 00:00:37,062 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:00:37,297 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:00:39,471 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:00:39,681 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:00:42,523 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-24 00:00:47,372 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-24 00:00:47,373 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-24 00:00:47,380 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6759
+INFO 2020-10-24 00:00:49,967 basehttp "GET /Administration/Datensicherungen/48/L%C3%B6schen HTTP/1.1" 200 554
+INFO 2020-10-24 00:00:51,621 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-24 00:00:51,621 basehttp "POST /Administration/Datensicherungen/48/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-24 00:00:51,626 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-24 00:02:59,434 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:02:59,643 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:03:04,883 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:03:05,109 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:03:31,545 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:03:31,773 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:03:42,067 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:03:42,300 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:03:53,603 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:03:53,830 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:03:55,037 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:03:55,262 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:04:06,525 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:04:06,734 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:04:09,961 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:04:10,180 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:04:14,655 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+ERROR 2020-10-24 00:04:17,027 log Internal Server Error: /Administration/Datensicherungen/Erstellen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: administration_backup.employee_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 982, in post
+    backup = form.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/forms/models.py", line 460, in save
+    self.instance.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 790, in save_base
+    updated = self._save_table(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 895, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/base.py", line 933, in _do_insert
+    return manager._insert(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/query.py", line 1254, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1397, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 413, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: administration_backup.employee_id
+ERROR 2020-10-24 00:04:17,028 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 500 158457
+INFO 2020-10-24 00:04:22,451 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-24 00:04:22,452 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-24 00:04:22,459 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6756
+INFO 2020-10-24 00:04:29,466 basehttp "GET /Administration/Datensicherungen/49/L%C3%B6schen HTTP/1.1" 200 553
+ERROR 2020-10-24 00:04:30,725 log Internal Server Error: /Administration/Datensicherungen/49/Löschen
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 1058, in post
+    deleteBackup(pk)
+NameError: name 'deleteBackup' is not defined
+ERROR 2020-10-24 00:04:30,726 basehttp "POST /Administration/Datensicherungen/49/L%C3%B6schen HTTP/1.1" 500 73372
+INFO 2020-10-24 00:04:45,850 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:04:46,081 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:04:48,756 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-24 00:04:48,762 basehttp "POST /Administration/Datensicherungen/49/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-24 00:04:48,770 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-24 00:05:07,551 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:05:07,775 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:05:11,239 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-24 00:05:18,851 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4866
+INFO 2020-10-24 00:05:21,799 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-24 00:05:21,800 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-24 00:05:21,807 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6760
+INFO 2020-10-24 00:05:36,799 basehttp "GET /Administration/Datensicherungen/50/L%C3%B6schen HTTP/1.1" 200 555
+INFO 2020-10-24 00:05:39,015 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-24 00:05:39,016 basehttp "POST /Administration/Datensicherungen/50/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-24 00:05:39,023 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-24 00:05:56,925 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-24 00:05:56,946 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-10-24 00:05:56,946 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-10-24 00:05:56,947 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-10-24 00:05:56,947 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-24 00:06:06,140 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-24 00:06:06,141 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-24 00:06:06,147 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6758
+INFO 2020-10-24 00:06:20,689 basehttp "GET /Administration/Datensicherungen/51/L%C3%B6schen HTTP/1.1" 200 554
+INFO 2020-10-24 00:06:23,866 views Datensicherungssatz wurde erfolgreich gelöscht
+INFO 2020-10-24 00:06:23,867 basehttp "POST /Administration/Datensicherungen/51/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-10-24 00:06:23,874 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6229
+INFO 2020-10-24 00:07:57,488 basehttp "GET /Administration/Datensicherungen/Erstellen? HTTP/1.1" 200 4788
+INFO 2020-10-24 00:08:08,359 views Datensicherungssatz wurde erfolgreich angelegt
+INFO 2020-10-24 00:08:08,360 basehttp "POST /Administration/Datensicherungen/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-24 00:08:08,369 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6773
+INFO 2020-10-24 00:08:27,201 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:08:27,441 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:08:31,641 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:08:31,868 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:08:38,093 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:08:38,321 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:08:43,542 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:08:43,772 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:08:48,987 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:08:49,214 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:08:57,500 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:08:57,732 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:09:00,933 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:09:01,163 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 00:09:07,427 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 00:09:07,659 autoreload Watching for file changes with StatReloader

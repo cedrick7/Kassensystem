@@ -942,7 +942,7 @@ class BackupCreateView(View):
 
     def custom_sql(self, query):
         with connection.cursor() as cursor:
-            cursor.execute(query, [self.path])
+            cursor.execute(query)
             row = cursor.fetchone()
         return row
 
@@ -951,19 +951,12 @@ class BackupCreateView(View):
         BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
         path = os.path.join(BASE_DIR, 'static/scripts/')
         exec = path + file
-        print("Pk des Backups:")
-        print(pk)
-        # subprocess.run(["sh", exec])
 
-        backup = os.path.join(BASE_DIR, 'static/backups/' + str(7) + '/sql.dumb')    #str(pk)
-        
-        sql_query = "UPDATE TABLE Backup SET path = " + backup + " WHERE id = " + str(pk) + ";"
-        print(sql_query)
-        # Backup.objects.raw(sql_query)
-        row = self.custom_sql(sql_query)
-        print(row)
+        subprocess.run(["sh", exec, str(pk)]) # backup wird angelegt
 
-
+        backup = os.path.join(BASE_DIR, 'static/backups/' + str(pk) + '/sql.dumb')
+        sql_query = "UPDATE administration_Backup SET path = '" + backup + "' WHERE id = " + str(pk) + ";" 
+        self.custom_sql(sql_query) # backup bekommt pfad der Datei
 
     def get_object(self):
         id = self.kwargs.get('id')
@@ -986,10 +979,10 @@ class BackupCreateView(View):
     def post(self, request, *args, **kwargs):
         form = BackupModelForm(request.POST)
         if form.is_valid():
-            # backup = form.save()     
-            # pk = backup.pk
-            # self.createBackup(pk)
-            # logger.info('Datensicherungssatz wurde erfolgreich angelegt')
+            backup = form.save()     
+            pk = backup.pk
+            # self.createBackup(pk) nur unter linux lauffähig! 
+            logger.info('Datensicherungssatz wurde erfolgreich angelegt')
 
             return redirect('administration:backup_list')
         context = {
@@ -1040,6 +1033,13 @@ class BackupDeleteView(DeleteView):
     template_name = 'new/administration_backups_delete_copy.html'
     queryset = Backup.objects.all()
 
+    def deleteBackup(self, pk):
+        file = "cleanup.sh"
+        BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+        path = os.path.join(BASE_DIR, 'static/scripts/')
+        exec = path + file
+        subprocess.run(["sh", exec, str(pk)]) # backup wird gelöscht
+
     def get_object(self):
         id_ = self.kwargs.get("id")
         return get_object_or_404(Backup, id=id_)
@@ -1053,6 +1053,8 @@ class BackupDeleteView(DeleteView):
 
         obj = self.get_object()
         if obj is not None:
+            pk = obj.pk
+            # self.deleteBackup(pk) nur unter linux lauffähig!
             obj.delete()
             logger.info('Datensicherungssatz wurde erfolgreich gelöscht')
 
