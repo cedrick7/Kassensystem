@@ -142,3 +142,29 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = "load_static/"
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+     'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': str(os.path.join(BASE_DIR, "static", "syslog")),
+            'formatter' : 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+     },
+}
