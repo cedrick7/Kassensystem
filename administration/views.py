@@ -304,14 +304,12 @@ class DiscountDeleteView(DeleteView):
         return reverse('administration:discount_list')
 
     def post(self, request, id=None, *args, **kwargs):
-        
-        context = {}    
-
+        context = {}   
+         
         obj = self.get_object()
         if obj is not None:
             obj.delete()
             logger.info('Rabatt wurde erfolgreich gelöscht')
-
             return redirect('administration:discount_list')
 
 
@@ -494,7 +492,7 @@ class AttributeDeleteView(DeleteView):
             obj.delete()
             logger.info('Attribut wurde erfolgreich gelöscht')
 
-            return redirect('administration:attributes_list')
+            return redirect('administration:attribute_list')
 
 
 # Kunden
