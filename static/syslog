@@ -997,3 +997,5 @@ INFO 2020-10-24 14:14:24,163 basehttp "GET /Administration/Kunden/Erstellen? HTT
 INFO 2020-10-24 14:14:33,262 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7774
 INFO 2020-10-24 14:16:15,388 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7774
 INFO 2020-10-24 14:16:18,984 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 7112
+INFO 2020-10-24 14:27:28,003 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
+INFO 2020-10-24 14:27:29,921 autoreload Watching for file changes with StatReloader
