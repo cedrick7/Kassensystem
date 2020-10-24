@@ -920,3 +920,80 @@ INFO 2020-10-24 00:09:00,933 autoreload /home/max/Lokal/GitHub/Kassensystem/admi
 INFO 2020-10-24 00:09:01,163 autoreload Watching for file changes with StatReloader
 INFO 2020-10-24 00:09:07,427 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
 INFO 2020-10-24 00:09:07,659 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 13:13:01,214 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 13:13:43,827 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+INFO 2020-10-24 13:13:43,922 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+WARNING 2020-10-24 13:13:44,221 log Not Found: /favicon.ico
+WARNING 2020-10-24 13:13:44,222 basehttp "GET /favicon.ico HTTP/1.1" 404 4537
+INFO 2020-10-24 13:14:18,685 basehttp "GET /Administration/Produkte/5/Bearbeiten HTTP/1.1" 200 5577
+INFO 2020-10-24 13:14:23,610 basehttp "GET /Administration/Produkte/5/Bearbeiten HTTP/1.1" 200 5577
+INFO 2020-10-24 13:17:46,689 basehttp "GET /Administration/Produkte/5/Bearbeiten HTTP/1.1" 200 5577
+INFO 2020-10-24 13:17:47,997 basehttp "GET /Administration/Produkte/5/Bearbeiten HTTP/1.1" 200 5577
+INFO 2020-10-24 13:17:50,783 basehttp "GET /Administration/Produkte? HTTP/1.1" 200 8386
+INFO 2020-10-24 13:17:55,370 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6896
+INFO 2020-10-24 13:17:57,841 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6194
+INFO 2020-10-24 13:23:02,886 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6234
+INFO 2020-10-24 13:23:05,643 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6234
+INFO 2020-10-24 13:25:15,471 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 3904
+INFO 2020-10-24 13:27:58,949 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6238
+INFO 2020-10-24 13:29:17,252 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6896
+INFO 2020-10-24 13:29:19,330 basehttp "GET /Administration/Attribute/4/Bearbeiten HTTP/1.1" 200 6238
+INFO 2020-10-24 13:29:27,124 views Attribut wurde erfolgreich geändert
+INFO 2020-10-24 13:29:27,125 basehttp "POST /Administration/Attribute/4/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 13:29:27,149 basehttp "GET /Administration/Attribute HTTP/1.1" 200 6898
+INFO 2020-10-24 13:32:06,238 basehttp "GET /Administration/Attribute/4/Bearbeiten HTTP/1.1" 200 6242
+INFO 2020-10-24 13:32:14,276 views Attribut wurde erfolgreich geändert
+INFO 2020-10-24 13:32:14,277 basehttp "POST /Administration/Attribute/4/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 13:32:14,290 basehttp "GET /Administration/Attribute HTTP/1.1" 200 6898
+INFO 2020-10-24 13:32:16,375 basehttp "GET /Administration/Attribute/4/Bearbeiten HTTP/1.1" 200 6242
+INFO 2020-10-24 13:33:29,805 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 13:33:41,372 basehttp "GET /Administration/Mitarbeiter? HTTP/1.1" 200 6303
+WARNING 2020-10-24 13:33:45,828 log Not Found: /Administration/Kunden 
+WARNING 2020-10-24 13:33:45,829 basehttp "GET /Administration/Kunden%20? HTTP/1.1" 404 15102
+INFO 2020-10-24 13:33:50,287 basehttp "GET /Administration/Kunden HTTP/1.1" 200 7112
+INFO 2020-10-24 13:33:52,811 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 4334
+INFO 2020-10-24 13:34:06,740 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 4535
+INFO 2020-10-24 13:35:14,653 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 7112
+INFO 2020-10-24 13:35:53,623 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 13:35:55,811 basehttp "GET /Administration/Attribute/4/Bearbeiten HTTP/1.1" 200 6260
+INFO 2020-10-24 13:36:03,668 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+WARNING 2020-10-24 13:41:53,256 log Not Found: /Administration/Datensicherungssätze
+WARNING 2020-10-24 13:41:53,257 basehttp "GET /Administration/Datensicherungss%C3%A4tze? HTTP/1.1" 404 15146
+WARNING 2020-10-24 13:41:56,828 log Not Found: /Administration/backups
+WARNING 2020-10-24 13:41:56,828 basehttp "GET /Administration/backups? HTTP/1.1" 404 15100
+WARNING 2020-10-24 13:42:04,132 log Not Found: /Administration/Backups
+WARNING 2020-10-24 13:42:04,133 basehttp "GET /Administration/Backups? HTTP/1.1" 404 15100
+WARNING 2020-10-24 13:42:24,394 log Not Found: /Administration/Datensicherungssätze
+WARNING 2020-10-24 13:42:24,395 basehttp "GET /Administration/Datensicherungss%C3%A4tze? HTTP/1.1" 404 15146
+INFO 2020-10-24 13:43:30,696 basehttp "GET /Administration/Datensicherungen? HTTP/1.1" 200 6773
+INFO 2020-10-24 13:43:33,787 basehttp "GET /Administration/Datensicherungen/52/Bearbeiten HTTP/1.1" 200 8085
+INFO 2020-10-24 13:52:30,944 basehttp "GET /Administration/Datensicherungen/52/Bearbeiten HTTP/1.1" 200 8094
+INFO 2020-10-24 13:54:04,993 views Datensicherungssatz wurde erfolgreich geändert
+INFO 2020-10-24 13:54:04,994 basehttp "POST /Administration/Datensicherungen/52/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 13:54:05,015 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6773
+INFO 2020-10-24 14:01:55,967 basehttp "GET /Administration/Kassen HTTP/1.1" 200 6337
+INFO 2020-10-24 14:01:58,392 basehttp "GET /Administration/Kassen/3/Bearbeiten HTTP/1.1" 200 6771
+INFO 2020-10-24 14:02:01,634 views Kasse wurde erfolgreich geändert
+INFO 2020-10-24 14:02:01,635 basehttp "POST /Administration/Kassen/3/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 14:02:01,649 basehttp "GET /Administration/Kassen HTTP/1.1" 200 6337
+INFO 2020-10-24 14:08:05,924 basehttp "GET /Administration/Kategorien HTTP/1.1" 200 6457
+INFO 2020-10-24 14:08:07,990 basehttp "GET /Administration/Kategorien/5/Bearbeiten HTTP/1.1" 200 6825
+INFO 2020-10-24 14:08:13,431 views Kategorie wurde erfolgreich geändert
+INFO 2020-10-24 14:08:13,432 basehttp "POST /Administration/Kategorien/5/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 14:08:13,445 basehttp "GET /Administration/Kategorien HTTP/1.1" 200 6456
+INFO 2020-10-24 14:08:17,539 basehttp "GET /Administration/Kategorien/5/Bearbeiten HTTP/1.1" 200 6824
+INFO 2020-10-24 14:08:19,459 views Kategorie wurde erfolgreich geändert
+INFO 2020-10-24 14:08:19,459 basehttp "POST /Administration/Kategorien/5/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 14:08:19,472 basehttp "GET /Administration/Kategorien HTTP/1.1" 200 6454
+INFO 2020-10-24 14:13:23,342 basehttp "GET /Administration/Kunden HTTP/1.1" 200 7112
+INFO 2020-10-24 14:13:24,610 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 7677
+INFO 2020-10-24 14:13:40,342 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7801
+INFO 2020-10-24 14:13:43,081 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7801
+INFO 2020-10-24 14:13:44,343 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7801
+INFO 2020-10-24 14:13:46,007 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7801
+INFO 2020-10-24 14:14:20,130 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7776
+INFO 2020-10-24 14:14:22,959 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 7112
+INFO 2020-10-24 14:14:24,163 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 7652
+INFO 2020-10-24 14:14:33,262 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7774
+INFO 2020-10-24 14:16:15,388 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 7774
+INFO 2020-10-24 14:16:18,984 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 7112
