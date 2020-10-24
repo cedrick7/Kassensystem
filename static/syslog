@@ -1291,3 +1291,13 @@ INFO 2020-10-24 15:42:43,357 basehttp "GET /Administration/Attribute/Erstellen? 
 INFO 2020-10-24 15:42:46,988 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6298
 INFO 2020-10-24 15:52:37,221 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6299
 INFO 2020-10-24 15:56:53,182 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6900
+INFO 2020-10-24 16:04:59,835 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-10-24 16:05:01,031 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 16:05:58,818 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 16:05:59,791 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 16:06:02,773 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 16:06:03,765 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 16:08:10,739 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 16:08:11,731 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 16:08:21,270 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 16:08:22,315 autoreload Watching for file changes with StatReloader

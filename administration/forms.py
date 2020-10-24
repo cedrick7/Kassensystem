@@ -6,8 +6,6 @@ from cashbox.models import *
 from customer.models import *
 from product.models import *
 from authorization.models import *
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 
 styling = ''
 
@@ -19,20 +17,11 @@ choices = (
 
 # -----------------------------------------------------------------------------------------
 
-class CreateUserForm(UserCreationForm):
-    class Meta:
-        model = User
-        fields = [
-        'username',
-        'first_name',
-        'last_name',
-        'email',
-        'password1',
-        'password2'
-        ]
 
 
 class AttributeModelForm(forms.ModelForm):
+
+class ProductModelForm(forms.ModelForm):
     class Meta:
         model = Attribute
         fields = [
