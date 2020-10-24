@@ -39,9 +39,9 @@
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          {{ form.firstname }}
+                          {{ form.first_name }}
                           <div class="invalid-feedback">
-                            {{ form.firstname.errors }}
+                            {{ form.first_name.errors }}
                           </div>
                       </div>
                     </div>
@@ -52,9 +52,9 @@
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          {{ form.lastname }}
+                          {{ form.last_name }}
                           <div class="invalid-feedback">
-                            {{ form.lastname.errors }}
+                            {{ form.last_name.errors }}
                           </div>
                       </div>
                     </div>
@@ -125,13 +125,13 @@
                 <hr>
             </form>
             <div class="div-links">
-                <a class="small" href="{% url 'authorization_login' %}">Einloggen.</a>
+                <a class="small" href="">Einloggen.</a>
             </div>
             <div class="div-links">
-                <a class="small" href="{% url 'authorization_forgot_password' %}">Passwort vergessen?</a>
+                <a class="small" href="">Passwort vergessen?</a>
             </div>
             <div class="div-links">
-                <a class="small" href="{% url 'authorization_change_password' %}">Passwort ändern.</a>
+                <a class="small" href="">Passwort ändern.</a>
             </div>
           </div>
       </div>
