@@ -69,17 +69,10 @@ from .views import (
     ReversalBillDetailView,
     ReversalBillCreateView,
 
-    RegisterView,
-    
-
-
 )
 
 app_name =  'administration'
 urlpatterns=[
-    
-    # Authentifizierung
-    path('register', RegisterView.as_view(), name='register'),
 
     # Administration
     path('', administration_dashboard, name='administration_dashboard'),

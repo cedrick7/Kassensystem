@@ -39,9 +39,9 @@
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          {{ form.first_name }}
+                          {{ form.firstname }}
                           <div class="invalid-feedback">
-                            {{ form.first_name.errors }}
+                            {{ form.firstname.errors }}
                           </div>
                       </div>
                     </div>
@@ -59,7 +59,7 @@
                       </div>
                     </div>
                 </div>
-                <!-- Input-field: email
+                   Input-field: email
                 form.non_field_errors }}
                 <div class="form-row">
                     <div class="form-group col">
@@ -72,8 +72,8 @@
                       </div>
                     </div>
                 </div>
-                -->
-                <!-- Input-field: username
+                
+                   Input-field: username
                 form.non_field_errors }}
                 <div class="form-row">
                     <div class="form-group col">
@@ -86,7 +86,7 @@
                       </div>
                     </div>
                 </div>
-                -->
+                
                 <!-- Input-field: password -->
                 {{ form.non_field_errors }}
                 <div class="form-row">
@@ -125,13 +125,13 @@
                 <hr>
             </form>
             <div class="div-links">
-                <a class="small" href="">Einloggen.</a>
+                <a class="small" href="{% url 'authorization_login' %}">Einloggen.</a>
             </div>
             <div class="div-links">
-                <a class="small" href="">Passwort vergessen?</a>
+                <a class="small" href="{% url 'authorization_forgot_password' %}">Passwort vergessen?</a>
             </div>
             <div class="div-links">
-                <a class="small" href="">Passwort ändern.</a>
+                <a class="small" href="{% url 'authorization_change_password' %}">Passwort ändern.</a>
             </div>
           </div>
       </div>

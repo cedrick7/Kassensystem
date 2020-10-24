@@ -1196,3 +1196,889 @@ WARNING 2020-10-24 14:37:04,841 basehttp "GET /static/js/forms_validation.js HTT
 INFO 2020-10-24 14:37:04,855 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
 WARNING 2020-10-24 14:37:04,946 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
 INFO 2020-10-24 14:37:05,273 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-10-24 14:38:46,808 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-24 14:39:25,395 log Not Found: /Authorization
+WARNING 2020-10-24 14:39:25,396 basehttp "GET /Authorization HTTP/1.1" 404 4073
+WARNING 2020-10-24 14:39:25,503 log Not Found: /favicon.ico
+WARNING 2020-10-24 14:39:25,504 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-24 14:39:33,392 basehttp "GET /Autorisierung HTTP/1.1" 301 0
+INFO 2020-10-24 14:39:33,436 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+INFO 2020-10-24 14:39:33,785 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+WARNING 2020-10-24 14:39:33,787 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 14:39:33,787 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+INFO 2020-10-24 14:39:34,212 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-10-24 14:39:34,259 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 14:39:57,695 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:39:57,894 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:40:32,338 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:40:32,544 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:40:59,868 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/forms.py changed, reloading.
+INFO 2020-10-24 14:41:00,079 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:41:08,240 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 14:41:08,425 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:41:24,656 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 14:41:24,869 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:41:47,168 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/forms.py changed, reloading.
+INFO 2020-10-24 14:41:47,379 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:41:49,506 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 14:41:49,734 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:41:54,876 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 14:41:55,102 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:42:21,430 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 14:42:21,621 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:42:28,781 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:42:29,012 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:42:31,110 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:42:31,313 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:42:45,528 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:42:45,714 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:42:47,860 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:42:48,050 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:42:50,147 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:42:50,363 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:44:26,306 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 14:44:26,499 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:44:30,672 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 14:44:30,877 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:44:31,996 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 14:44:32,180 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:45:12,632 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:45:12,831 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:45:17,141 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:45:28,367 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:45:28,580 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:45:29,682 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:45:29,870 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:45:31,990 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:45:32,181 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:46:10,634 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-24 14:46:10,841 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:46:23,018 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-24 14:46:23,207 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:46:32,405 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:46:32,607 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:46:39,764 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:46:39,951 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:46:47,096 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:46:47,303 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:00,554 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:00,763 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:05,903 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:06,112 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:08,265 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:08,472 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:10,676 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:10,906 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:13,016 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:13,225 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:17,358 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:17,587 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:19,774 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 14:47:19,977 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:47:27,767 basehttp "GET /Administration HTTP/1.1" 301 0
+ERROR 2020-10-24 14:47:27,821 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 33, in administration_dashboard
+    lines = file.readlines()
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe4 in position 3097: invalid continuation byte
+ERROR 2020-10-24 14:47:27,821 basehttp "GET /Administration/ HTTP/1.1" 500 80302
+INFO 2020-10-24 14:47:35,521 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+INFO 2020-10-24 14:47:35,586 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-24 14:47:35,586 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-10-24 14:47:35,588 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-10-24 14:49:24,167 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 14:49:24,362 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 14:49:29,262 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/administration/views.py", line 33, in administration_dashboard
+    lines = file.readlines()
+  File "/usr/lib/python3.8/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe4 in position 3097: invalid continuation byte
+ERROR 2020-10-24 14:49:29,262 basehttp "GET /Administration/ HTTP/1.1" 500 80302
+INFO 2020-10-24 14:51:03,689 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 14:51:03,749 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 14:51:03,857 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 14:51:06,696 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-24 14:57:02,139 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+ERROR 2020-10-24 14:59:30,128 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 46, in post
+    form.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 136, in save
+    user.set_password(self.cleaned_data["password1"])
+AttributeError: 'CreateUserForm' object has no attribute 'cleaned_data'
+ERROR 2020-10-24 14:59:30,129 basehttp "POST /Autorisierung/register HTTP/1.1" 500 77192
+INFO 2020-10-24 15:02:36,279 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:02:36,479 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:02:41,606 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:02:41,796 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:02:43,939 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:02:44,141 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:02:47,248 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:02:47,435 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:02:56,599 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:02:56,805 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:04:01,530 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:04:01,744 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:04:11,063 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+ERROR 2020-10-24 15:04:15,747 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 47, in post
+    form.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 136, in save
+    user.set_password(self.cleaned_data["password1"])
+AttributeError: 'CreateUserForm' object has no attribute 'cleaned_data'
+ERROR 2020-10-24 15:04:15,748 basehttp "POST /Autorisierung/register HTTP/1.1" 500 77192
+INFO 2020-10-24 15:07:44,335 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-24 15:07:50,620 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+ERROR 2020-10-24 15:08:03,170 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 47, in post
+    form.save()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/contrib/auth/forms.py", line 136, in save
+    user.set_password(self.cleaned_data["password1"])
+AttributeError: 'CreateUserForm' object has no attribute 'cleaned_data'
+ERROR 2020-10-24 15:08:03,170 basehttp "POST /Autorisierung/register HTTP/1.1" 500 77163
+INFO 2020-10-24 15:08:36,746 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:08:36,963 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:08:38,135 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:08:38,337 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:08:53,655 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:08:53,873 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 15:09:10,571 log Internal Server Error: /Autorisierung/
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 21, in LoginView
+    login_form = FormLogin(request.POST or None)
+NameError: name 'FormLogin' is not defined
+ERROR 2020-10-24 15:09:10,572 basehttp "GET /Autorisierung/ HTTP/1.1" 500 61397
+INFO 2020-10-24 15:09:31,372 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:09:31,591 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:09:34,722 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:09:34,914 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:09:39,052 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:09:39,281 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:09:42,409 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:09:42,607 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:09:47,670 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:09:49,665 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+INFO 2020-10-24 15:09:49,697 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+INFO 2020-10-24 15:09:49,697 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+WARNING 2020-10-24 15:09:49,699 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:09:50,158 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 15:10:05,305 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:10:12,145 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:10:12,364 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:10:21,558 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:10:21,765 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:10:23,959 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:10:24,167 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:10:32,427 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:10:32,660 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:10:42,828 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:10:43,064 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:10:49,566 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:11:38,650 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:11:38,891 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:11:52,128 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:11:52,352 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:12:10,922 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+ERROR 2020-10-24 15:12:25,870 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 44, in post
+    if form.is_valid():
+TypeError: is_valid() missing 1 required positional argument: 'self'
+ERROR 2020-10-24 15:12:25,870 basehttp "POST /Autorisierung/register HTTP/1.1" 500 72383
+INFO 2020-10-24 15:13:05,146 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:13:05,343 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:13:06,518 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:13:06,708 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:13:09,666 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+ERROR 2020-10-24 15:13:12,947 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 44, in post
+    if form.is_valid(self):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/forms/forms.py", line 177, in is_valid
+    return self.is_bound and not self.errors
+AttributeError: 'RegisterView' object has no attribute 'is_bound'
+ERROR 2020-10-24 15:13:12,948 basehttp "POST /Autorisierung/register HTTP/1.1" 500 76180
+INFO 2020-10-24 15:13:18,988 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:13:19,187 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:14:44,028 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:14:44,234 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:14:50,489 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:14:50,702 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:14:52,887 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:14:53,859 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+ERROR 2020-10-24 15:15:03,619 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 43, in post
+    form = UserCreationForm(request.Post)
+AttributeError: 'WSGIRequest' object has no attribute 'Post'
+ERROR 2020-10-24 15:15:03,620 basehttp "POST /Autorisierung/register HTTP/1.1" 500 72244
+INFO 2020-10-24 15:15:21,238 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:15:21,445 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:17:53,931 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:17:54,166 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:17:58,292 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:17:58,514 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:01,613 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:01,828 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:06,957 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:07,153 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:09,374 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:09,607 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:21,862 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:22,048 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:33,300 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:33,489 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:36,630 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:36,839 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:39,963 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:40,191 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:18:42,333 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:18:42,554 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:19:09,867 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:19:10,073 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 15:19:19,822 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 49, in post
+    return render(request, self.template_name, context)
+UnboundLocalError: local variable 'context' referenced before assignment
+ERROR 2020-10-24 15:19:19,823 basehttp "POST /Autorisierung/register HTTP/1.1" 500 72615
+INFO 2020-10-24 15:19:46,623 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:19:46,845 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:19:48,057 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:19:59,167 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:19:59,398 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:20:02,164 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:20:41,914 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:20:42,142 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:20:45,301 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:20:45,517 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:20:50,707 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:20:50,920 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:21:41,176 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:21:47,703 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 15:21:47,737 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:21:47,805 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:21:50,638 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:22:18,239 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:22:22,286 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:22:35,237 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:23:05,102 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:23:05,312 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:23:07,500 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:23:07,690 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:23:30,986 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:23:31,205 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:23:33,407 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:23:33,615 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:23:34,786 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:23:35,011 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:23:55,332 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:23:55,558 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:24:05,805 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:24:06,001 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:24:08,998 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:24:11,556 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:24:12,636 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:24:16,053 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:24:45,514 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:24:45,739 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:24:46,878 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:24:47,098 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:25:02,400 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:25:02,588 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:25:08,813 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:25:09,046 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:25:14,218 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:25:14,406 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:25:15,480 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 15:25:15,509 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:25:15,587 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:25:20,720 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:25:23,763 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:25:30,695 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:25:30,924 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:25:50,252 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:25:50,492 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:26:20,880 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:26:21,096 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:26:22,259 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:26:22,450 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:26:47,508 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 15:26:47,540 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:26:47,619 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:26:51,357 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:26:55,497 basehttp "POST /Autorisierung/register HTTP/1.1" 200 5319
+WARNING 2020-10-24 15:26:55,519 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:26:55,609 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:27:01,059 basehttp "POST /Autorisierung/register HTTP/1.1" 200 5319
+WARNING 2020-10-24 15:27:01,088 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:27:01,436 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 15:27:01,487 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:27:28,277 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:27:28,485 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:27:35,682 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+ERROR 2020-10-24 15:27:38,900 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 52, in post
+    return render(request, self.template_name, context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new/test_register.html.html
+ERROR 2020-10-24 15:27:38,901 basehttp "POST /Autorisierung/register HTTP/1.1" 500 91044
+INFO 2020-10-24 15:27:59,916 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:28:00,116 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:28:00,991 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:28:05,990 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:28:09,519 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 15:28:09,555 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:28:09,635 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:28:13,986 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:28:19,171 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:30:07,381 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:30:07,573 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:30:17,597 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:30:22,105 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+INFO 2020-10-24 15:30:22,153 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-10-24 15:30:22,154 basehttp "GET /static/css/authorization.css HTTP/1.1" 304 0
+WARNING 2020-10-24 15:30:22,160 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:30:22,250 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:30:25,706 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:30:32,210 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:30:34,073 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:30:40,904 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:30:42,079 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:30:53,042 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-24 15:30:54,545 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:32:13,903 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:14,134 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:15,275 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:15,499 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:20,612 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:20,819 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:22,939 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:23,158 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:40,412 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:40,613 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:43,738 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:43,934 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:49,103 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:49,309 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:51,432 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:51,631 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:53,747 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:53,951 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:32:58,078 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:32:58,304 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:00,426 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:00,624 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:03,724 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:03,907 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:10,032 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:10,257 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:12,373 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:12,590 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:29,885 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:30,115 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:34,237 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:34,423 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:37,556 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:37,772 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:41,932 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:42,147 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:44,271 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:44,491 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:53,675 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:53,861 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:33:56,984 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:33:57,201 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:00,329 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:00,545 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:05,698 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:05,917 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:08,015 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:08,213 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:15,376 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:15,574 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:17,685 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:17,884 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:18,993 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:19,208 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:48,565 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:48,754 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:50,866 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:51,092 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:54,235 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:54,462 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:57,579 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:34:57,785 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:34:59,901 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:35:00,112 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:35:09,289 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:35:09,479 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:35:19,662 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:35:19,856 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:35:43,105 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:35:43,300 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:36:03,576 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:36:03,785 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:36:19,033 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:36:19,273 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:36:23,493 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:36:33,662 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:36:33,897 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 15:36:36,430 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 44, in registerUser
+    return render(request, "test_register.html", context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: test_register.html
+ERROR 2020-10-24 15:36:36,430 basehttp "GET /Autorisierung/register HTTP/1.1" 500 80442
+INFO 2020-10-24 15:36:55,248 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:36:55,436 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:36:57,604 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:36:57,842 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:37:00,048 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:37:00,235 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:37:16,461 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:37:16,672 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:37:23,880 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:37:24,121 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 15:37:26,686 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 45, in registerUser
+    return render(request, "test_register.html", context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: test_register.html
+ERROR 2020-10-24 15:37:26,686 basehttp "GET /Autorisierung/register HTTP/1.1" 500 80637
+INFO 2020-10-24 15:37:45,563 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:37:45,803 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:37:47,036 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:37:53,145 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:37:53,363 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:39:22,301 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:39:22,495 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:40:22,196 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:40:22,439 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:40:22,629 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1229
+INFO 2020-10-24 15:40:26,208 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1399
+INFO 2020-10-24 15:41:10,020 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:10,227 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:13,395 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:13,612 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:16,808 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:17,013 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:23,180 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:23,386 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:39,728 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:39,942 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:44,090 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:44,290 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:46,419 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:46,617 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:41:57,899 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-24 15:41:58,106 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:42:12,387 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:42:12,603 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:42:14,739 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:42:14,960 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:42:17,060 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:42:17,239 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:42:22,407 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:42:22,623 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:42:52,009 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:42:52,221 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:43:05,532 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:43:05,737 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:43:07,912 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:43:08,103 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:43:11,278 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:43:11,476 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:43:19,461 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1716
+INFO 2020-10-24 15:43:45,128 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1707
+INFO 2020-10-24 15:45:42,990 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:45:43,232 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:45:46,410 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:45:46,643 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:45:51,791 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:45:51,992 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:45:54,690 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1707
+INFO 2020-10-24 15:46:01,240 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1683
+INFO 2020-10-24 15:46:10,412 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:46:10,637 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:46:13,705 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1707
+INFO 2020-10-24 15:46:16,040 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1707
+INFO 2020-10-24 15:46:27,366 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-24 15:46:37,362 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1754
+INFO 2020-10-24 15:46:43,136 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:46:43,368 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:46:51,620 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:46:51,848 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:46:53,033 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:46:53,226 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:47:07,469 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:47:07,691 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:47:15,898 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:47:16,119 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:47:18,222 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:47:18,449 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:47:21,646 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:47:21,845 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:47:33,170 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:47:33,357 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:47:34,513 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:47:34,706 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:48:01,208 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-24 15:48:17,845 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1801
+INFO 2020-10-24 15:48:32,772 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1709
+INFO 2020-10-24 15:48:46,063 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1685
+ERROR 2020-10-24 15:49:00,177 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 39, in registerUser
+    return redirect('authorization:authorization_login')
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 131, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_login' not found. 'authorization_login' is not a valid view function or pattern name.
+ERROR 2020-10-24 15:49:00,177 basehttp "POST /Autorisierung/register HTTP/1.1" 500 82969
+INFO 2020-10-24 15:49:22,098 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:49:22,324 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:49:23,796 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1682
+INFO 2020-10-24 15:49:33,581 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1682
+INFO 2020-10-24 15:49:45,055 basehttp "POST /Autorisierung/register HTTP/1.1" 200 1682
+INFO 2020-10-24 15:50:07,672 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-24 15:50:07,683 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 15:50:07,734 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:50:07,763 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-10-24 15:50:07,813 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:50:12,042 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:50:12,254 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:50:59,891 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:51:00,114 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:06,253 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:51:06,480 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:13,641 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:51:13,839 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:30,122 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:51:30,342 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:34,462 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:51:34,662 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:37,787 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:51:37,989 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:39,090 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:51:39,304 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:51:59,602 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:51:59,811 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:52:04,958 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:52:05,173 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:52:34,503 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:52:34,711 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:52:38,842 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:52:39,045 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:52:46,452 basehttp "GET /Autorisierung/Registrieren HTTP/1.1" 301 0
+ERROR 2020-10-24 15:52:46,504 log Internal Server Error: /Autorisierung/Registrieren/
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 48, in register
+    return render(request, "authorization_register.html", context)
+NameError: name 'context' is not defined
+ERROR 2020-10-24 15:52:46,505 basehttp "GET /Autorisierung/Registrieren/ HTTP/1.1" 500 61402
+ERROR 2020-10-24 15:52:55,385 log Internal Server Error: /Autorisierung/Registrieren/
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 48, in register
+    return render(request, "authorization_register.html", context)
+NameError: name 'context' is not defined
+ERROR 2020-10-24 15:52:55,385 basehttp "GET /Autorisierung/Registrieren/ HTTP/1.1" 500 61402
+INFO 2020-10-24 15:53:09,539 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:53:09,746 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:53:10,923 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:53:11,152 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:53:13,270 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:53:13,470 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 15:53:13,831 log Internal Server Error: /Autorisierung/Registrieren/
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 49, in register
+    return render(request, "authorization_register.html", context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_login' not found. 'authorization_login' is not a valid view function or pattern name.
+ERROR 2020-10-24 15:53:13,832 basehttp "GET /Autorisierung/Registrieren/ HTTP/1.1" 500 157380
+INFO 2020-10-24 15:53:39,871 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:53:40,082 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:54:22,227 basehttp "GET /Autorisierung/Registrieren/ HTTP/1.1" 200 7550
+INFO 2020-10-24 15:54:22,261 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-10-24 15:54:22,261 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+WARNING 2020-10-24 15:54:22,263 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:54:22,467 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 15:54:23,771 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:54:26,021 basehttp "POST /Autorisierung/Registrieren/ HTTP/1.1" 200 7550
+WARNING 2020-10-24 15:54:26,059 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:54:26,121 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:55:44,344 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:55:44,579 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:55:51,745 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:55:51,944 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:56:17,287 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 15:56:17,504 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:56:35,783 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-24 15:56:36,001 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:56:40,885 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 15:56:40,955 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:56:41,021 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:56:45,509 basehttp "GET /Autorisierung/register HTTP/1.1" 200 7550
+WARNING 2020-10-24 15:56:45,553 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-24 15:56:45,626 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:58:00,521 basehttp "GET /Autorisierung/register HTTP/1.1" 200 7637
+WARNING 2020-10-24 15:58:00,559 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:58:00,673 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 15:58:00,769 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:59:18,014 basehttp "GET /Autorisierung/register HTTP/1.1" 200 7709
+WARNING 2020-10-24 15:59:18,053 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:59:18,246 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 15:59:32,827 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:59:42,579 basehttp "GET /Autorisierung/register HTTP/1.1" 200 7779
+WARNING 2020-10-24 15:59:42,606 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 15:59:42,726 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 15:59:43,577 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+ERROR 2020-10-24 16:03:36,896 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 45, in registerUser
+    return render(request, "new/authorization_register.html", context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_login' not found. 'authorization_login' is not a valid view function or pattern name.
+ERROR 2020-10-24 16:03:36,897 basehttp "GET /Autorisierung/register HTTP/1.1" 500 159720
+ERROR 2020-10-24 16:04:32,420 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 45, in registerUser
+    return render(request, "new/authorization_register.html", context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_login' not found. 'authorization_login' is not a valid view function or pattern name.

@@ -20,7 +20,7 @@
             <div class="bg-login-image" style="background-image: url({% static 'img/dogs/image1.jpeg' %});"></div>
           </div>
           <div class="col">
-            <h3>Account beantragen</h3>
+            <h3>Login</h3>
             <form method="post" class="needs-validation">{% csrf_token %}
                 <!-- Input-field:  -->
                 <div class="form-row">
@@ -33,60 +33,19 @@
                       </div>
                     </div>
                 </div>
-                <!-- Input-field: firstname -->
+                <!-- Input-field: username -->
                 {{ form.non_field_errors }}
                 <div class="form-row">
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          {{ form.first_name }}
+                          {{ form.userid }}
                           <div class="invalid-feedback">
-                            {{ form.first_name.errors }}
+                            {{ form.userid.errors }}
                           </div>
                       </div>
                     </div>
                 </div>
-                <!-- Input-field: lastname -->
-                {{ form.non_field_errors }}
-                <div class="form-row">
-                    <div class="form-group col">
-                      <div class="input-group">
-                          <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          {{ form.lastname }}
-                          <div class="invalid-feedback">
-                            {{ form.lastname.errors }}
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <!-- Input-field: email
-                form.non_field_errors }}
-                <div class="form-row">
-                    <div class="form-group col">
-                      <div class="input-group">
-                          <span class="input-group-item"><i class="fas fa-envelope"></i></span>
-                          form.email }}
-                          <div class="invalid-feedback">
-                            form.email.errors }}
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                -->
-                <!-- Input-field: username
-                form.non_field_errors }}
-                <div class="form-row">
-                    <div class="form-group col">
-                      <div class="input-group">
-                          <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          form.username }}
-                          <div class="invalid-feedback">
-                            form.username.errors }}
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                -->
                 <!-- Input-field: password -->
                 {{ form.non_field_errors }}
                 <div class="form-row">
@@ -96,19 +55,6 @@
                           {{ form.password }}
                           <div class="invalid-feedback">
                             {{ form.password.errors }}
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <!-- Input-field: password_confirm -->
-                {{ form.non_field_errors }}
-                <div class="form-row">
-                    <div class="form-group col">
-                      <div class="input-group">
-                          <span class="input-group-item"><i class="fas fa-key"></i></span>
-                          {{ form.password_confirm }}
-                          <div class="invalid-feedback">
-                            {{ form.password_confirm.errors }}
                           </div>
                       </div>
                     </div>
@@ -125,16 +71,16 @@
                 <hr>
             </form>
             <div class="div-links">
-                <a class="small" href="">Einloggen.</a>
-            </div>
-            <div class="div-links">
                 <a class="small" href="">Passwort vergessen?</a>
             </div>
             <div class="div-links">
                 <a class="small" href="">Passwort ändern.</a>
             </div>
+            <div class="div-links">
+                <a class="small" href="">Account beantragen.</a>
+            </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
 </div>
