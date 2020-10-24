@@ -19,8 +19,11 @@ choices = (
 
 
 class AttributeModelForm(forms.ModelForm):
-
-
+    class Meta:
+        model = Attribute
+        fields = [
+            'title', 
+        ]   
 
 class BackupModelForm(forms.ModelForm):
     class Meta:
