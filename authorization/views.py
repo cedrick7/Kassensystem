@@ -48,12 +48,12 @@ def loginUser(request, *args, **kwargs):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        print(username)
-        print(password)
-        # user = authenticate(request, username=username, password=password)
-        # if user is not None:
-        #     login(request, username)
-        #     redirect('administration:tax_list')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, username)
+            redirect('administration:tax_list')
+        else:
+            print("Anmeldung fehlgeschlagen!")
     else:
         pass
 

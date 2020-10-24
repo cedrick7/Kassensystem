@@ -1796,3 +1796,40 @@ INFO 2020-10-24 17:29:48,580 basehttp "GET /Autorisierung/login HTTP/1.1" 200 36
 INFO 2020-10-24 17:29:53,556 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
 INFO 2020-10-24 17:30:06,476 basehttp "GET /Autorisierung/login HTTP/1.1" 200 362
 INFO 2020-10-24 17:30:13,656 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:32:08,721 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:32:08,940 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:32:17,136 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:32:17,349 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:32:25,555 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:32:25,791 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:32:49,214 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:32:49,452 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:32:54,086 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:33:03,378 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:33:14,906 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:33:15,116 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:33:22,354 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:33:22,559 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:33:29,769 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:33:29,975 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:33:31,148 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:33:31,385 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:33:39,599 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:33:39,820 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:33:45,333 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:34:02,308 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:02,543 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:34:06,737 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:06,974 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:34:17,174 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:17,376 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:34:19,557 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:19,761 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:34:23,314 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:34:25,753 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:34:34,149 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:34,385 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:34:35,555 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:35,763 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:34:49,055 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:34:49,276 autoreload Watching for file changes with StatReloader
