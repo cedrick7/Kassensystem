@@ -17,18 +17,17 @@
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Produkte</h3>
-			<a class="btn btn-primary" role="button" href="#">
+			<h3>Attribute</h3>
+			<!-- <a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
-				<!-- change this content -->
-				Dieses Produkt ausdrucken</a>
+				Dieses Produkt ausdrucken</a> -->
 		</div>
 		<div class="content container-fluid">
 			<div class="card">
 				<div class="card-header">
 
 					<form action="{% url 'administration:attribute_list' %}">
-						<input type="submit" value="Back" />
+						<input type="submit"  class="btn btn-primary btn-sm" value="Back" />
 					</form>
 					<!-- change this content -->
 					{% block title %}
@@ -54,6 +53,7 @@
 											</div>
 										</div>
 									</div>
+									
 									<!-- <div class="form-row form-row-submit">
 										<div class="col">
 											<button class="btn btn-primary btn-sm" type="submit">Speichern</button>

@@ -32,6 +32,81 @@ class CreateUserForm(UserCreationForm):
         ]
 
 
+class AttributeModelForm(forms.ModelForm):
+    class Meta:
+        model = Attribute
+        fields = [
+            'title', 
+        ]   
+
+class BackupModelForm(forms.ModelForm):
+    class Meta:
+        model = Backup
+        fields = [
+            'title',
+            'comment',
+            'creation',
+            'employee', 
+        ]      
+
+class CashboxModelForm(forms.ModelForm):
+    class Meta:
+        model = Cashbox
+        fields = [
+            'title',
+            'amount'
+        ]
+
+class CategoryModelForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = [
+            'title',
+            'color',
+            'discount',
+        ]
+
+class CustomerModelForm(forms.ModelForm):
+    class Meta:
+        model = Customer
+        fields = [
+            'firstname', 
+            'lastname',
+            'birthday',
+            'email',
+            'phonenumber',
+        ]         
+
+class DiscountModelForm(forms.ModelForm):
+    class Meta:
+        model = Discount
+        fields = [
+            'title', 
+            'factor',
+            'amount',
+            'begin',
+            'end',
+        ]
+
+class EmployeeModelForm(forms.ModelForm):
+    class Meta:
+        model = Employee
+        fields = [
+            'firstname',
+            'lastname',
+            'password',
+            'picture',
+            'role',
+        ]                 
+
+class PaymenttoolModelForm(forms.ModelForm):
+    class Meta:
+        model = Paymenttool
+        fields = [
+            'title',
+            'path',
+        ]      
+
 class ProductModelForm(forms.ModelForm):
     class Meta:
         model = Product
@@ -50,25 +125,13 @@ class ProductModelForm(forms.ModelForm):
             'attributes',
         ]
 
-class CategoryModelForm(forms.ModelForm):
+class SafeModelForm(forms.ModelForm):
     class Meta:
-        model = Category
+        model = Safe
         fields = [
             'title',
-            'color',
-            'discount',
-        ]
-
-class DiscountModelForm(forms.ModelForm):
-    class Meta:
-        model = Discount
-        fields = [
-            'title', 
-            'factor',
-            'amount',
-            'begin',
-            'end',
-        ]
+            'amount'
+        ]                 
 
 class TaxModelForm(forms.ModelForm):
     class Meta:
@@ -78,77 +141,6 @@ class TaxModelForm(forms.ModelForm):
             'taxrate', 
         ]
 
-class AttributeModelForm(forms.ModelForm):
-    class Meta:
-        model = Attribute
-        fields = [
-            'title', 
-        ]   
-
-class CustomerModelForm(forms.ModelForm):
-    class Meta:
-        model = Customer
-        fields = [
-            'firstname', 
-            'lastname',
-            'birthday',
-            'email',
-            'phonenumber',
-        ]         
-
-class EmployeeModelForm(forms.ModelForm):
-    class Meta:
-        model = Employee
-        fields = [
-            'firstname',
-            'lastname',
-            'password',
-            'picture',
-            'role',
-        ]                 
-
-class WorkTimeModelForm(forms.ModelForm):
-    class Meta:
-        model = Worktime
-        fields = [
-            'employee',
-            'begin',
-            'end',
-        ]                 
-
-class SafeModelForm(forms.ModelForm):
-    class Meta:
-        model = Safe
-        fields = [
-            'title',
-            'amount'
-        ]                 
-
-class CashboxModelForm(forms.ModelForm):
-    class Meta:
-        model = Cashbox
-        fields = [
-            'title',
-            'amount'
-        ]
-
-class PaymenttoolModelForm(forms.ModelForm):
-    class Meta:
-        model = Paymenttool
-        fields = [
-            'title',
-            'path',
-        ]      
-
-class BackupModelForm(forms.ModelForm):
-    class Meta:
-        model = Backup
-        fields = [
-            'title',
-            'comment',
-            'creation',
-            'employee', 
-        ]      
 
 class BillModelForm(forms.ModelForm):
     class Meta:
@@ -175,6 +167,19 @@ class ReversalBillModelForm(forms.ModelForm):
             'path', 
         ]      
     
+class WorkTimeModelForm(forms.ModelForm):
+    class Meta:
+        model = Worktime
+        fields = [
+            'employee',
+            'begin',
+            'end',
+        ]                 
+
+
+
+
+
 
 
 

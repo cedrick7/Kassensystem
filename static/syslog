@@ -1196,3 +1196,98 @@ WARNING 2020-10-24 14:37:04,841 basehttp "GET /static/js/forms_validation.js HTT
 INFO 2020-10-24 14:37:04,855 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
 WARNING 2020-10-24 14:37:04,946 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
 INFO 2020-10-24 14:37:05,273 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-10-24 14:48:10,796 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+WARNING 2020-10-24 14:48:18,389 log Not Found: /Administration/Produkte/Zahlungsmittel
+WARNING 2020-10-24 14:48:18,389 basehttp "GET /Administration/Produkte/Zahlungsmittel HTTP/1.1" 404 14865
+INFO 2020-10-24 14:48:27,574 basehttp "GET /Administration/Zahlungsmittel HTTP/1.1" 200 6365
+INFO 2020-10-24 14:48:31,541 basehttp "GET /Administration/Zahlungsmittel/3/Bearbeiten HTTP/1.1" 200 5884
+INFO 2020-10-24 14:48:38,575 basehttp "GET /Administration/Zahlungsmittel? HTTP/1.1" 200 6365
+INFO 2020-10-24 14:49:23,127 basehttp "GET /Administration/Zahlungsmittel/3/Bearbeiten HTTP/1.1" 200 6314
+INFO 2020-10-24 14:50:39,003 basehttp "GET /Administration/Zahlungsmittel? HTTP/1.1" 200 6365
+INFO 2020-10-24 14:50:52,871 basehttp "GET /Administration/Zahlungsmittel? HTTP/1.1" 200 6365
+INFO 2020-10-24 14:51:39,270 basehttp "GET /Administration/ HTTP/1.1" 200 292355
+INFO 2020-10-24 14:59:42,039 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+INFO 2020-10-24 14:59:45,252 basehttp "GET /Administration/Produkte/4/Bearbeiten HTTP/1.1" 200 11548
+INFO 2020-10-24 15:00:07,485 basehttp "GET /Administration/Produkte/4/Bearbeiten HTTP/1.1" 200 11548
+INFO 2020-10-24 15:00:11,734 views Produkt wurde erfolgreich geändert
+INFO 2020-10-24 15:00:11,735 basehttp "POST /Administration/Produkte/4/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 15:00:11,754 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+INFO 2020-10-24 15:00:21,522 basehttp "GET /Administration/Produkte/4/Bearbeiten HTTP/1.1" 200 11548
+INFO 2020-10-24 15:00:24,873 basehttp "GET /Administration/Produkte? HTTP/1.1" 200 8386
+INFO 2020-10-24 15:00:26,728 basehttp "GET /Administration/Produkte/3/Bearbeiten HTTP/1.1" 200 11548
+INFO 2020-10-24 15:00:29,866 views Produkt wurde erfolgreich geändert
+INFO 2020-10-24 15:00:29,867 basehttp "POST /Administration/Produkte/3/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 15:00:29,886 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+INFO 2020-10-24 15:00:33,497 basehttp "GET /Administration/Produkte/3/Bearbeiten HTTP/1.1" 200 11548
+INFO 2020-10-24 15:00:37,984 views Produkt wurde erfolgreich geändert
+INFO 2020-10-24 15:00:37,985 basehttp "POST /Administration/Produkte/3/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 15:00:38,006 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8386
+INFO 2020-10-24 15:06:21,018 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 7456
+INFO 2020-10-24 15:06:22,700 basehttp "GET /Administration/Steuers%C3%A4tze/4/Bearbeiten HTTP/1.1" 200 6330
+INFO 2020-10-24 15:06:25,722 views Steuersatz wurde erfolgreich geändert
+INFO 2020-10-24 15:06:25,723 basehttp "POST /Administration/Steuers%C3%A4tze/4/Bearbeiten HTTP/1.1" 302 0
+INFO 2020-10-24 15:06:25,736 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 7456
+INFO 2020-10-24 15:06:34,640 basehttp "GET /Administration/Rechnungen HTTP/1.1" 200 6305
+INFO 2020-10-24 15:06:48,467 basehttp "GET /Administration/Rechnungen/3/Details HTTP/1.1" 200 7734
+INFO 2020-10-24 15:06:51,621 basehttp "GET /Administration/Rechnungen? HTTP/1.1" 200 6305
+INFO 2020-10-24 15:06:53,601 basehttp "GET /Administration/Rechnungen/3/Details HTTP/1.1" 200 7734
+INFO 2020-10-24 15:07:07,932 basehttp "GET /Administration/Rechnungen? HTTP/1.1" 200 6305
+INFO 2020-10-24 15:07:36,512 basehttp "GET /Administration/Stornorechnungen? HTTP/1.1" 200 6060
+INFO 2020-10-24 15:09:22,358 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:09:25,786 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6298
+INFO 2020-10-24 15:09:27,226 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:09:28,845 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6298
+INFO 2020-10-24 15:09:29,962 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:09:31,560 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6298
+INFO 2020-10-24 15:09:32,520 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:10:21,180 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:10:28,489 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:10:41,115 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6436
+INFO 2020-10-24 15:11:06,551 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6298
+INFO 2020-10-24 15:11:12,977 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:11:16,289 basehttp "GET /Administration/Attribute/Erstellen? HTTP/1.1" 200 6267
+INFO 2020-10-24 15:11:17,415 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6898
+INFO 2020-10-24 15:15:21,204 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:22,187 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:24,430 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:25,375 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:27,362 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:28,399 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:35,765 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:36,731 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:40,040 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:41,053 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:48,186 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:49,182 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:50,978 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:52,023 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:15:57,972 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:15:58,944 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:00,741 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:01,721 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:10,385 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:11,367 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:15,834 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:16,799 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:22,819 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:24,064 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:30,143 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:31,110 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:38,507 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:39,455 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:45,188 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:46,142 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:48,132 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:49,160 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:53,880 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:54,845 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:16:56,880 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:16:57,850 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:17:09,184 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:17:10,167 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:17:16,585 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-24 15:17:17,552 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 15:42:43,357 basehttp "GET /Administration/Attribute/Erstellen? HTTP/1.1" 200 6267
+INFO 2020-10-24 15:42:46,988 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6298
+INFO 2020-10-24 15:52:37,221 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6299
+INFO 2020-10-24 15:56:53,182 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 6900
