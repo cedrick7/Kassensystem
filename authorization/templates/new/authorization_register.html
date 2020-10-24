@@ -33,6 +33,7 @@
                       </div>
                     </div>
                 </div>
+                
                 <!-- Input-field: firstname -->
                 {{ form.non_field_errors }}
                 <div class="form-row">
@@ -46,42 +47,43 @@
                       </div>
                     </div>
                 </div>
+                
                 <!-- Input-field: lastname -->
                 {{ form.non_field_errors }}
                 <div class="form-row">
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          {{ form.last_name }}
+                          {{ form.lastname }}
                           <div class="invalid-feedback">
-                            {{ form.last_name.errors }}
+                            {{ form.lastname.errors }}
                           </div>
                       </div>
                     </div>
                 </div>
-                   Input-field: email
-                form.non_field_errors }}
+                <!-- Input-field: email -->
+                {{ form.non_field_errors }}
                 <div class="form-row">
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-envelope"></i></span>
-                          form.email }}
+                          {{ form.email }}
                           <div class="invalid-feedback">
-                            form.email.errors }}
+                            {{ form.email.errors }}
                           </div>
                       </div>
                     </div>
                 </div>
                 
-                   Input-field: username
-                form.non_field_errors }}
+                 <!-- Input-field: username -->
+                {{ form.non_field_errors }}
                 <div class="form-row">
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-user"></i></span>
-                          form.username }}
+                          {{ form.username }}
                           <div class="invalid-feedback">
-                            form.username.errors }}
+                            {{ form.username.errors }}
                           </div>
                       </div>
                     </div>
@@ -93,9 +95,9 @@
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-key"></i></span>
-                          {{ form.password }}
+                          {{ form.password1 }}
                           <div class="invalid-feedback">
-                            {{ form.password.errors }}
+                            {{ form.password1.errors }}
                           </div>
                       </div>
                     </div>
@@ -106,9 +108,9 @@
                     <div class="form-group col">
                       <div class="input-group">
                           <span class="input-group-item"><i class="fas fa-key"></i></span>
-                          {{ form.password_confirm }}
+                          {{ form.password2 }}
                           <div class="invalid-feedback">
-                            {{ form.password_confirm.errors }}
+                            {{ form.password2.errors }}
                           </div>
                       </div>
                     </div>
