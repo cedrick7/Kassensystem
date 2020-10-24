@@ -22,8 +22,7 @@ def LoginView(request, *args, **kwargs):
         'form': login_form
     }
     return render(request, "authorization_login.html", context)
-
-
+    
 # def authorization_register_view(request, *args, **kwargs):
 #     register_form = FormRegister(request.POST or None)
 

@@ -999,3 +999,200 @@ INFO 2020-10-24 14:16:15,388 basehttp "POST /Administration/Kunden/Erstellen? HT
 INFO 2020-10-24 14:16:18,984 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 7112
 INFO 2020-10-24 14:27:28,003 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py changed, reloading.
 INFO 2020-10-24 14:27:29,921 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 14:28:19,974 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-24 14:28:22,975 log Not Found: /Authorisierung
+WARNING 2020-10-24 14:28:22,975 basehttp "GET /Authorisierung HTTP/1.1" 404 4076
+INFO 2020-10-24 14:29:53,639 basehttp "GET /Autorisierung HTTP/1.1" 301 0
+ERROR 2020-10-24 14:29:54,366 log Internal Server Error: /Autorisierung/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 24, in LoginView
+    return render(request, "authorization_login.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_forgot_password' not found. 'authorization_forgot_password' is not a valid view function or pattern name.
+ERROR 2020-10-24 14:29:54,370 basehttp "GET /Autorisierung/ HTTP/1.1" 500 165295
+INFO 2020-10-24 14:34:42,733 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-10-24 14:34:43,741 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 14:34:51,425 log Internal Server Error: /Autorisierung/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 24, in LoginView
+    return render(request, "authorization_login.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_forgot_password' not found. 'authorization_forgot_password' is not a valid view function or pattern name.
+ERROR 2020-10-24 14:34:51,428 basehttp "GET /Autorisierung/ HTTP/1.1" 500 164582
+INFO 2020-10-24 14:35:01,231 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-10-24 14:35:02,190 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-24 14:36:38,581 log Internal Server Error: /Autorisierung/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 24, in LoginView
+    return render(request, "authorization_login.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_change_password' not found. 'authorization_change_password' is not a valid view function or pattern name.
+ERROR 2020-10-24 14:36:38,584 basehttp "GET /Autorisierung/ HTTP/1.1" 500 165324
+ERROR 2020-10-24 14:36:51,734 log Internal Server Error: /Autorisierung/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 24, in LoginView
+    return render(request, "authorization_login.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'authorization_register' not found. 'authorization_register' is not a valid view function or pattern name.
+ERROR 2020-10-24 14:36:51,736 basehttp "GET /Autorisierung/ HTTP/1.1" 500 165088
+INFO 2020-10-24 14:37:04,742 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 14:37:04,841 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 14:37:04,855 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
+WARNING 2020-10-24 14:37:04,946 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 14:37:05,273 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
