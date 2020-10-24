@@ -15,7 +15,6 @@ choices = (
     ('analyst', 'Analyst')
 )
 
-# -----------------------------------------------------------------------------------------
 
 class ProductModelForm(forms.ModelForm):
     class Meta:
