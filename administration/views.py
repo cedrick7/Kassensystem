@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm, BillModelForm, ReversalBillModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm, BillModelForm, ReversalBillModelForm, CreateUserForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
 from authorization.models import Employee
@@ -10,6 +10,7 @@ from django.db import connection
 from django.urls import reverse
 import os, subprocess, logging
 from pathlib import Path
+from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic import (
     View,
@@ -24,6 +25,29 @@ from django.views.generic import (
 logger = logging.getLogger('django')
 
 
+# Registrieren
+class RegisterView(View):
+    template_name = 'new/test_register.html'
+    # http/GET method
+    def get(self, request, *args, **kwargs):
+        form = CreateUserForm()
+        context = {
+        'form':form
+         }  
+        return render(request, "new/test_register.html", context)
+    
+    def post(self, request, *args, **kwargs):
+        form = CreateUserForm()
+        if form.is_valid:
+            form.save()
+            context = {
+                'form':form
+            }
+        return render(request, self.template_name, context)
+
+    
+    
+    
 
 # Administration Dashboard
 def administration_dashboard(request, *args, **kwargs):
