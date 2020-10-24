@@ -1833,3 +1833,40 @@ INFO 2020-10-24 17:34:35,555 autoreload /home/max/Lokal/GitHub/Kassensystem/auth
 INFO 2020-10-24 17:34:35,763 autoreload Watching for file changes with StatReloader
 INFO 2020-10-24 17:34:49,055 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
 INFO 2020-10-24 17:34:49,276 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:35:40,931 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-24 17:35:55,199 basehttp "GET /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:36:07,156 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+ERROR 2020-10-24 17:36:19,559 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 53, in loginUser
+    login(request, username)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/contrib/auth/__init__.py", line 126, in login
+    request.session[SESSION_KEY] = user._meta.pk.value_to_string(user)
+AttributeError: 'str' object has no attribute '_meta'
+ERROR 2020-10-24 17:36:19,559 basehttp "POST /Autorisierung/login HTTP/1.1" 500 68138
+INFO 2020-10-24 17:38:18,763 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:38:18,979 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:38:30,812 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:38:47,896 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:38:59,170 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:38:59,385 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:39:01,516 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:39:01,717 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:39:08,948 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:39:09,162 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:39:23,812 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:39:47,774 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:39:47,991 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 17:40:01,465 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-24 17:40:12,221 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-10-24 17:40:12,231 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 7441
+INFO 2020-10-24 17:40:12,279 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-10-24 17:40:12,282 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-10-24 17:40:12,282 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-24 17:40:12,283 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-10-24 17:40:18,524 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-24 17:40:18,726 autoreload Watching for file changes with StatReloader
