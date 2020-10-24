@@ -60,6 +60,10 @@ def loginUser(request, *args, **kwargs):
 
     return render(request, "new/test_login.html", context)
 
+def logoutUser(request, *args, **kwargs):
+    logout(request)
+    return redirect('authorization:login')
+
     
 # def authorization_register_view(request, *args, **kwargs):
 #     register_form = FormRegister(request.POST or None)

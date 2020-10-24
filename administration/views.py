@@ -10,6 +10,7 @@ from django.db import connection
 from django.urls import reverse
 import os, subprocess, logging
 from pathlib import Path
+# from django.contrib.auth.decorators import login_required
 
 from django.views.generic import (
     View,
@@ -27,6 +28,7 @@ logger = logging.getLogger('django')
 
 
 # Administration Dashboard
+# @login_required(login_url='/Autorisierung/')
 def administration_dashboard(request, *args, **kwargs):
     BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
     file = open(str(os.path.join(BASE_DIR, "static", "syslog")), 'r')
