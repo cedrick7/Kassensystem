@@ -1,5 +1,5 @@
 from django.db import models
-from authorization.models import Employee
+from django.contrib.auth.models import User
 from product.models import Discount      #cannot import
 from product.models import Product
 from decimal import Decimal
@@ -46,7 +46,7 @@ class Paymenttool(models.Model):
 class Safe(models.Model):
     title       = models.CharField(max_length=45)
     amount      = models.DecimalField(max_digits=8,decimal_places=2, validators=[MinValueValidator(Decimal('-0.01'))]) # in Euro
-    employee = models.ManyToManyField(Employee, blank=True)
+    employee = models.ManyToManyField(User, blank=True)
 
     def get_update_url(self):
         return reverse("administration:safe_update", kwargs={"id": self.id})
@@ -67,7 +67,7 @@ class Bill(models.Model):
     creation        = models.DateTimeField(blank=False)
     totalcosts    = models.DecimalField(max_digits=7,decimal_places=2, blank=True, default=0) # max: 10.000,00 # in Euro
     # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
-    employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
+    employee     = models.ForeignKey(User, on_delete=models.CASCADE, blank=False)
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
     paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
     discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
@@ -103,7 +103,7 @@ class ReversalBill(models.Model):
     creation        = models.DateTimeField(blank=False)
     refund  = models.DecimalField(max_digits=7,decimal_places=2, blank=True, default=0) # max: 99.999,99, Negativ-Werte abfangen
     # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
-    employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
+    employee     = models.ForeignKey(User, on_delete=models.CASCADE, blank=False)
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
     path       = models.FileField(upload_to='uploads/', unique=False, blank=True)
     bill        = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)

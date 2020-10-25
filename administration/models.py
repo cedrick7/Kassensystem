@@ -3,7 +3,7 @@ from django.utils import timezone
 import datetime
 from django.urls import reverse
 
-from authorization.models import Employee
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -17,7 +17,7 @@ class Backup(models.Model):
     creation    = models.DateTimeField(default=timezone.now)
     path       = models.FileField(upload_to='uploads/', unique=False)
     comment     = models.CharField(max_length=150, blank=True)
-    employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=True, default=None)
+    employee     = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, default=None)
 
 
     
