@@ -1,0 +1,58 @@
+<form>
+	<div class="table-responsive">
+		<table class="table cart-table">
+			<thead>
+			<tr>
+				<th>Pos</th>
+				<th>Quan.</th>
+				<th>Name</th>
+				<th>Preis</th>
+				<th>Preis</th>
+				<th>Entf.</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>1</td>
+				<td>1x</td>
+				<td>D1</td>
+				<td>19,99€</td>
+				<td>19,99€</td>
+				<td><a href="#"><i class="fa fa-remove"></i></a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>11x</td>
+				<td>H1</td>
+				<td>19,99€</td>
+				<td>429,99€</td>
+				<td><a href="#"><i class="fa fa-remove"></i></a></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>1x</td>
+				<td>D1</td>
+				<td>19,99€</td>
+				<td>19,99€</td>
+				<td><a href="#"><i class="fa fa-remove"></i></a></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="row">
+		<div class="col card-row">
+			<div class="row">
+				<div class="col-12">
+					<p class="card-element">Insgesamt: 39,98€</p>
+				</div>
+				<div class="col-6">
+					{{ form.payment }}
+				</div>
+				<div class="col-6">
+					<button class="btn btn-primary" type="button">Zur Kasse gehen<i
+							class="fa fa-chevron-right"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

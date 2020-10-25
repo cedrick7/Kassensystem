@@ -91,64 +91,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h4 class="card-title">Warenkorb</h4>
-							<form>
-								<div class="table-responsive">
-									<table class="table cart-table">
-										<thead>
-										<tr>
-											<th>Pos</th>
-											<th>Quan.</th>
-											<th>Name</th>
-											<th>Preis</th>
-											<th>Preis</th>
-											<th>Entf.</th>
-										</tr>
-										</thead>
-										<tbody>
-										<tr>
-											<td>1</td>
-											<td>1x</td>
-											<td>D1</td>
-											<td>19,99€</td>
-											<td>19,99€</td>
-											<td><a href="#"><i class="fa fa-remove"></i></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>11x</td>
-											<td>H1</td>
-											<td>19,99€</td>
-											<td>429,99€</td>
-											<td><a href="#"><i class="fa fa-remove"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>1x</td>
-											<td>D1</td>
-											<td>19,99€</td>
-											<td>19,99€</td>
-											<td><a href="#"><i class="fa fa-remove"></i></a></td>
-										</tr>
-										</tbody>
-									</table>
-								</div>
-								<div class="row">
-									<div class="col card-row">
-										<div class="row">
-											<div class="col-12">
-												<p class="card-element">Insgesamt: 39,98€</p>
-											</div>
-											<div class="col-6">
-												{{ form.payment }}
-											</div>
-											<div class="col-6">
-												<button class="btn btn-primary" type="button">Zur Kasse gehen<i
-														class="fa fa-chevron-right"></i></button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
+							{% include 'cart.html' %}
 						</div>
 					</div>
 				</div>
@@ -164,57 +107,8 @@
 									</div>
 									<div class="collapse accordion-item" role="tabpanel"
 									     data-parent="#accordion-calculator">
-										<div class="card-body">
-											<div class="row">
-												<div class="col calculator">
-													<form class="calculator-form">
-														<input type="text" id="calc-display"/>
-														<br/>
-														<input type="button" class="keys numbers" value="7"
-														       onclick="addToScreen('7')"/>
-														<input type="button" class="keys numbers" value="8"
-														       onclick="addToScreen('8')"/>
-														<input type="button" class="keys numbers" value="9"
-														       onclick="addToScreen('9')"/>
-														<input type="button" class="keys operators" value="C"
-														       onclick="addToScreen('c')"/>
-														<input type="button" class="keys operators" value="CE"
-														       onclick="backspace()"/>
-														<br/>
-														<input type="button" class="keys numbers" value="4"
-														       onclick="addToScreen('4')"/>
-														<input type="button" class="keys numbers" value="5"
-														       onclick="addToScreen('5')"/>
-														<input type="button" class="keys numbers" value="6"
-														       onclick="addToScreen('6')"/>
-														<input type="button" class="keys operators" value="*"
-														       onclick="addToScreen('*')"/>
-														<input type="button" class="keys operators" value="/"
-														       onclick="addToScreen('/')"/>
-														<br/>
-														<input type="button" class="keys numbers" value="1"
-														       onclick="addToScreen('1')"/>
-														<input type="button" class="keys numbers" value="2"
-														       onclick="addToScreen('2')"/>
-														<input type="button" class="keys numbers" value="3"
-														       onclick="addToScreen('3')"/>
-														<input type="button" class="keys operators" value="+"
-														       onclick="addToScreen('+')"/>
-														<input type="button" class="keys operators" value="-"
-														       onclick="addToScreen('-')"/>
-														<br/>
-														<input type="button" class="keys numbers" value="0"
-														       onclick="addToScreen('0')"/>
-														<input type="button" class="keys operators" value="."
-														       onclick="addToScreen('.')"/>
-														<input type="button" class="equal operators" id="key-result"
-														       value="=" onclick="result()"/>
-														<a id="toCart" class="keys operators"
-														   onclick="return calculatorToCart();"><i
-																class="fas fa-shopping-cart"></i></a>
-													</form>
-												</div>
-											</div>
+										<div class="card-body calculator">
+											{% include 'calculator.html' %}
 										</div>
 									</div>
 								</div>
