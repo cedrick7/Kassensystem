@@ -40,9 +40,18 @@ def registerUser(request, *args, **kwargs):
             form = CreateUserForm(request.POST)
             if form.is_valid():
                 form.save()
+
+                # group permissions
+                # group = request.POST.get('role'))
+
+                
+                
                 user = form.cleaned_data.get('username')
                 messages.success(request, 'Account wurde erstellt für ' + user)
                 return redirect('authorization:login')
+            else:
+                messages.info(request, 'Fehler beim anlegen eines Nutzers')
+                return redirect('authorization:register')
         else:
             form = CreateUserForm()
             context = {'form':form}

@@ -11,10 +11,6 @@ choices = (
 )
 
 class CreateUserForm(UserCreationForm):
-    role = forms.ChoiceField(
-        required=True,
-        label='Rolle auswählen',
-        choices=choices)
     class Meta:
         model = User
         fields = [
@@ -23,8 +19,12 @@ class CreateUserForm(UserCreationForm):
         'last_name',
         'email',
         'password1',
-        'password2'
+        'password2',
+        'groups',
         ]
+
+# class UserModelForm(form.Model):
+#     class = Meta
 
 
 ####################################################################################################################

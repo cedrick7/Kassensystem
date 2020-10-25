@@ -1213,3 +1213,139 @@ INFO 2020-10-25 12:34:03,731 autoreload D:\Ludwig\Documents\Coding\Github Projek
 INFO 2020-10-25 12:34:04,810 autoreload Watching for file changes with StatReloader
 INFO 2020-10-25 12:34:09,162 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
 INFO 2020-10-25 12:34:10,318 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:35:35,472 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 12:47:32,036 log Not Found: /
+WARNING 2020-10-25 12:47:32,036 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-25 12:47:32,182 log Not Found: /favicon.ico
+INFO 2020-10-25 13:09:02,878 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 13:09:06,888 log Not Found: /
+WARNING 2020-10-25 13:09:06,889 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-25 13:09:07,167 log Not Found: /favicon.ico
+WARNING 2020-10-25 13:09:21,400 log Not Found: /Autorisierung
+WARNING 2020-10-25 13:09:21,401 log Not Found: /Autorisierung/
+WARNING 2020-10-25 13:09:21,402 basehttp "GET /Autorisierung/ HTTP/1.1" 404 4510
+WARNING 2020-10-25 13:09:21,472 log Not Found: /favicon.ico
+INFO 2020-10-25 13:09:27,163 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:09:27,230 log Not Found: /favicon.ico
+INFO 2020-10-25 13:10:20,536 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 13:10:20,544 basehttp "GET /Autorisierung/login HTTP/1.1" 200 423
+WARNING 2020-10-25 13:10:20,604 log Not Found: /favicon.ico
+INFO 2020-10-25 13:10:32,201 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:10:32,278 log Not Found: /favicon.ico
+INFO 2020-10-25 13:10:48,197 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:10:48,416 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:10:53,623 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:10:53,857 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:00,084 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:00,298 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:03,452 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:03,670 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:08,908 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:09,117 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:26,421 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:26,655 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:30,896 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:11:30,976 log Not Found: /favicon.ico
+INFO 2020-10-25 13:11:40,397 basehttp "POST /Autorisierung/register HTTP/1.1" 200 283
+WARNING 2020-10-25 13:11:40,498 log Not Found: /favicon.ico
+INFO 2020-10-25 13:11:46,594 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:11:46,653 log Not Found: /favicon.ico
+INFO 2020-10-25 13:12:15,429 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:15,660 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:18,819 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:19,028 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:26,239 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:26,469 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:32,644 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:32,866 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:35,067 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:35,295 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:41,476 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:41,662 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:49,995 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 13:12:50,019 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1833
+WARNING 2020-10-25 13:12:50,137 log Not Found: /favicon.ico
+INFO 2020-10-25 13:13:36,277 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:13:36,493 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:13:40,659 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:13:40,875 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:14:28,432 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:14:28,644 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:14:47,481 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+ERROR 2020-10-25 13:14:47,535 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 51, in registerUser
+    context = {'form':form}
+UnboundLocalError: local variable 'form' referenced before assignment
+ERROR 2020-10-25 13:14:47,536 basehttp "GET /Autorisierung/register HTTP/1.1" 500 62527
+WARNING 2020-10-25 13:14:47,660 log Not Found: /favicon.ico
+INFO 2020-10-25 13:14:57,084 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:14:57,309 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 13:14:57,791 log Not Found: /Autorisierung/
+INFO 2020-10-25 13:15:03,077 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1840
+WARNING 2020-10-25 13:15:03,140 log Not Found: /favicon.ico
+INFO 2020-10-25 13:15:58,450 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 13:15:58,456 basehttp "GET /Autorisierung/login HTTP/1.1" 200 421
+WARNING 2020-10-25 13:15:58,521 log Not Found: /favicon.ico
+INFO 2020-10-25 13:17:39,951 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:17:40,012 log Not Found: /favicon.ico
+INFO 2020-10-25 13:20:25,817 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:20:26,065 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:09,648 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:09,874 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:13,072 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:13,285 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:17,424 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:17,636 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:22,850 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:23,063 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:32,314 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:32,544 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:35,682 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:35,888 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:47,090 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:47,300 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:58,516 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:58,723 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:03,904 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:04,116 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:12,306 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:12,507 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:25,747 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:25,970 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:30,135 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:30,342 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:25:07,937 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:25:08,146 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:25:21,364 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:25:21,573 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:25:23,672 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:25:23,864 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:26:47,778 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:26:48,003 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:26:58,225 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:26:58,462 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:27:07,642 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:27:07,845 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:27:10,975 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:27:11,188 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:33:52,131 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:33:52,360 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:52:24,739 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 13:52:34,524 log Not Found: /Autorisierung
+WARNING 2020-10-25 13:52:34,527 log Not Found: /Autorisierung/
+WARNING 2020-10-25 13:52:34,527 basehttp "GET /Autorisierung/ HTTP/1.1" 404 4510
+WARNING 2020-10-25 13:52:34,627 log Not Found: /favicon.ico
+INFO 2020-10-25 13:52:42,911 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+WARNING 2020-10-25 13:52:42,977 log Not Found: /favicon.ico
+INFO 2020-10-25 13:52:47,537 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-25 13:52:55,240 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1781
+WARNING 2020-10-25 13:52:55,319 log Not Found: /favicon.ico
+INFO 2020-10-25 13:53:29,741 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 13:53:29,976 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:53:31,133 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 13:53:31,332 autoreload Watching for file changes with StatReloader
