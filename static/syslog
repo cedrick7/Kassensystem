@@ -1349,3 +1349,612 @@ INFO 2020-10-25 13:53:29,741 autoreload /home/max/Lokal/GitHub/Kassensystem/auth
 INFO 2020-10-25 13:53:29,976 autoreload Watching for file changes with StatReloader
 INFO 2020-10-25 13:53:31,133 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
 INFO 2020-10-25 13:53:31,332 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 14:11:29,331 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 14:11:42,024 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8452
+INFO 2020-10-25 14:11:42,161 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+WARNING 2020-10-25 14:11:42,380 log Not Found: /favicon.ico
+WARNING 2020-10-25 14:11:42,380 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+ERROR 2020-10-25 14:11:48,335 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_products' not found. 'administration_products' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:11:48,342 basehttp "GET /Administration/ HTTP/1.1" 500 303283
+INFO 2020-10-25 14:11:59,066 basehttp "GET /Administration/ HTTP/1.1" 200 335788
+ERROR 2020-10-25 14:16:21,828 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: new/administration_navbard_copy.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: new/administration_navbard_copy.html
+ERROR 2020-10-25 14:16:21,831 basehttp "GET /Administration/ HTTP/1.1" 500 265777
+ERROR 2020-10-25 14:16:31,556 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_products' not found. 'administration_products' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:16:31,558 basehttp "GET /Administration/ HTTP/1.1" 500 303450
+ERROR 2020-10-25 14:18:06,783 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_products' not found. 'administration_products' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:18:06,785 basehttp "GET /Administration/ HTTP/1.1" 500 303496
+ERROR 2020-10-25 14:18:21,343 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_employees' not found. 'administration_employees' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:18:21,345 basehttp "GET /Administration/ HTTP/1.1" 500 303205
+ERROR 2020-10-25 14:18:34,289 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_employees' not found. 'administration_employees' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:18:34,291 basehttp "GET /Administration/ HTTP/1.1" 500 300295
+INFO 2020-10-25 14:19:33,462 basehttp "GET /Administration/ HTTP/1.1" 200 404951
+INFO 2020-10-25 14:19:33,548 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:24:05,704 basehttp "GET /Administration/ HTTP/1.1" 200 406156
+INFO 2020-10-25 14:24:05,800 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:27:41,504 basehttp "GET /Administration/ HTTP/1.1" 200 406638
+INFO 2020-10-25 14:27:41,585 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+ERROR 2020-10-25 14:47:20,002 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_Datensicherungen' not found. 'administration_Datensicherungen' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:47:20,005 basehttp "GET /Administration/ HTTP/1.1" 500 299824
+ERROR 2020-10-25 14:47:29,586 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_backups' not found. 'administration_backups' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:47:29,588 basehttp "GET /Administration/ HTTP/1.1" 500 299606
+ERROR 2020-10-25 14:47:40,965 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_backup_list' not found. 'administration_backup_list' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:47:40,967 basehttp "GET /Administration/ HTTP/1.1" 500 299690
+INFO 2020-10-25 14:47:49,333 basehttp "GET /Administration/ HTTP/1.1" 200 447461
+INFO 2020-10-25 14:47:49,415 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:47:55,373 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6786
+INFO 2020-10-25 14:48:16,035 basehttp "GET /Administration/ HTTP/1.1" 200 448198
+ERROR 2020-10-25 14:52:50,897 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reveralbill_list' not found. 'reveralbill_list' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:52:50,899 basehttp "GET /Administration/ HTTP/1.1" 500 302511
+INFO 2020-10-25 14:52:59,313 basehttp "GET /Administration/ HTTP/1.1" 200 463230
+INFO 2020-10-25 14:52:59,373 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:53:02,407 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6786
+INFO 2020-10-25 14:54:32,290 basehttp "GET /Administration/ HTTP/1.1" 200 464779
+INFO 2020-10-25 14:54:47,779 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8452
+INFO 2020-10-25 14:55:19,703 basehttp "GET /Administration/ HTTP/1.1" 200 465241
+INFO 2020-10-25 14:56:10,260 basehttp "GET /Administration/ HTTP/1.1" 200 465662
+INFO 2020-10-25 15:00:28,879 basehttp "GET /Administration/ HTTP/1.1" 200 465895
+INFO 2020-10-25 15:00:28,926 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 15:01:18,470 basehttp "GET /Administration/Rechnungen HTTP/1.1" 200 6288
+INFO 2020-10-25 15:06:58,930 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 12840
+INFO 2020-10-25 15:06:58,986 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 15:07:02,660 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6275
+INFO 2020-10-25 15:07:05,319 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 12840

@@ -10,6 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
 {% endblock specific %}
 
+<!-- Body -->
+{% block navbar %}
+	{% include 'new/administration_navbar_copy.html' %}
+{% endblock navbar %}
+
 {% block content %}
 	<section id="body">
 		<div class="heading container-fluid">

@@ -1,0 +1,66 @@
+<header id="header">
+    <nav class="navbar navbar-light navbar-expand-xl" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'administration:administration_dashboard' %}">Kassensystem</a>
+        <button data-toggle="collapse" class="navbar-toggler" id="burger-button" data-target="#navcol-1" style="border-style: none;">
+          <span class="sr-only">Toggle navigation</span>
+          <div class="animated-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav">
+            <li class="nav-item d-flex justify-content-center align-items-center align-content-center" role="presentation" style="padding: 10px;width: 194px;min-width: 194px;max-width: 194px;">
+              <div class="nav-item dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Systemverwaltung</a>
+                <div class="dropdown-menu" role="menu" style="border-radius: 0;border-style: none;border-left: 2px solid rgba(0,0,0,0.5) ;">
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:backup_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Datensicherungen</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:bill_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Rechnungen</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:reversalbill_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Stornorechnungen</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:cashbox_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Kassen</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:safe_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Tresore</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:paymenttool_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Zahlungsmittel</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:customer_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Kunden</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:tax_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Steuersätze</a>
+
+                </div>
+            </li>
+            <li class="nav-item d-flex justify-content-center align-items-center align-content-center" role="presentation" style="padding: 10px;width: 176px;min-width: 176px;max-width: 176px;">
+              <div class="nav-item dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Sortimentverwaltung</a>
+                <div class="dropdown-menu" role="menu" style="border-radius: 0;border-style: none;border-left: 2px solid rgba(0,0,0,0.5) ;">
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:product_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Produkte</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:attribute_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Eigenschaften</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:category_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Kategorien</a>
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:discount_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Rabatte</a>                  
+                </div>
+              </div>
+            </li>
+            <li class="nav-item d-flex justify-content-center align-items-center align-content-center" role="presentation" style="padding: 10px;width: 109px;min-width: 109px;max-width: 109px;">
+              <div class="nav-item dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Mitarbeiterverwaltung</a>
+                <div class="dropdown-menu" role="menu" style="border-radius: 0;border-style: none;border-left: 2px solid rgba(0,0,0,0.5) ;">
+                  <a class="dropdown-item" role="presentation" href="{% url 'administration:employee_list' %}" style="padding-left: 10px;text-align: left;width: 158px;min-width: 158px;max-width: 158px;">Mitarbeiter</a>
+                </div>
+              </div>
+            </li>
+            
+            <li class="nav-item d-flex justify-content-center align-items-center align-content-center" role="presentation" style="padding: 10px;width: 176px;min-width: 176px;max-width: 176px;">
+              <div class="nav-item dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Anfragenverwaltung</a>
+                <div class="dropdown-menu" role="menu" style="border-radius: 0;border-style: none;border-left: 2px solid rgba(0,0,0,0.5) ;">
+                
+                </div>
+              </div> 
+            </li>
+            <li class="nav-item d-flex justify-content-center align-items-center align-content-center" role="presentation" style="padding: 10px;width: 81px;min-width: 81px;max-width: 81px;">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
