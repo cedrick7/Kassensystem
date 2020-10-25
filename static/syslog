@@ -521,3 +521,695 @@ INFO 2020-10-25 11:22:59,247 autoreload Watching for file changes with StatReloa
 INFO 2020-10-25 11:23:02,263 autoreload Watching for file changes with StatReloader
 INFO 2020-10-25 11:23:07,393 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
 INFO 2020-10-25 11:23:07,598 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:52:24,230 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:52:45,690 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 302 0
+INFO 2020-10-25 11:52:45,715 basehttp "GET /Autorisierung/login?next=/Administration/Mitarbeiter HTTP/1.1" 200 363
+WARNING 2020-10-25 11:52:46,005 log Not Found: /favicon.ico
+WARNING 2020-10-25 11:52:46,005 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-25 11:52:48,447 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 11:53:06,112 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 11:53:14,268 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-25 11:53:27,738 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-10-25 11:53:27,790 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 7441
+INFO 2020-10-25 11:53:27,867 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+INFO 2020-10-25 11:53:34,041 basehttp "GET /Administration/Kunden HTTP/1.1" 200 7091
+ERROR 2020-10-25 11:53:40,747 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:53:40,752 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 202969
+INFO 2020-10-25 11:55:03,153 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 11:55:05,438 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:55:05,445 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+ERROR 2020-10-25 11:56:44,988 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:56:44,991 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+ERROR 2020-10-25 11:58:38,385 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:58:38,387 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+INFO 2020-10-25 12:00:35,636 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:00:37,290 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:00:47,091 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:00:48,202 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:01:24,048 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 12:01:30,107 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:01:30,113 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 202647
+INFO 2020-10-25 12:01:42,120 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:01:43,287 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:10:33,332 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-25 12:10:34,329 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:19:39,437 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 12:19:49,565 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:19:49,570 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+INFO 2020-10-25 12:20:15,346 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-25 12:20:16,325 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:20:38,365 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-25 12:20:39,327 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:24:11,806 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 12:24:16,109 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:24:16,114 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+ERROR 2020-10-25 12:26:04,278 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:26:04,280 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+WARNING 2020-10-25 12:26:29,760 log Not Found: /Administration/Mitarbeitet
+WARNING 2020-10-25 12:26:29,760 basehttp "GET /Administration/Mitarbeitet HTTP/1.1" 404 14642
+ERROR 2020-10-25 12:26:31,971 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:26:31,973 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 202963
+INFO 2020-10-25 12:27:40,510 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:27:41,433 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:27:42,719 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:27:44,274 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:27:46,065 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:27:47,253 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:28:20,059 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:28:21,234 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:30:44,476 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:31:04,314 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:31:07,944 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:33:16,378 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:33:17,980 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:33:45,256 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:33:46,546 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:33:56,060 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:33:57,158 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:34:00,478 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:34:01,429 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:34:03,731 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:34:04,810 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:34:09,162 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:34:10,318 autoreload Watching for file changes with StatReloader

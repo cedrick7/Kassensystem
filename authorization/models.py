@@ -5,58 +5,20 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 # Mitarbeiter
-# class Employee(models.Model):
+class Employee(models.Model):
     # geändert und hinzugefügt
-    # firstname            = models.CharField(max_length=45, blank=False)
-    # lastname             = models.CharField(max_length=45, blank=False)
-    # password             = models.CharField(max_length=73, blank=False, editable=True)
-    # picture              = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
+    firstname            = models.CharField(max_length=45, blank=False)
+    lastname             = models.CharField(max_length=45, blank=False)
+    password             = models.CharField(max_length=73, blank=False, editable=True)
+    picture              = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
-    #ROLE_CHOICE = [
+    # ROLE_CHOICE = [
     #    ('cashier', 'Kassierer'),
     #    ('admin', 'Administrator'),
     #    ('analyst', 'Analyst')]
-    #role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
+    # role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
 
 
-    # CASHIER         = 'KA'
-    # ADMINISTRATOR   = 'AD'
-    # ANALYST         = 'AN'
-    # PERMISSIONS = [
-    # (CASHIER,     'Kassierer'),
-    # (ADMINISTRATOR, 'Administrator'),
-    # (ANALYST,       'Analyst'),
-    # ]
-
-    # role = models.CharField(
-    #     max_length=2,
-    #     choices=PERMISSIONS,
-    #     default=CASHIER,
-    # )
-
-
-    # def get_update_url(self):
-    #     return reverse("administration:employee_update", kwargs={"id": self.id})
-    
-    # def get_delete_url(self):
-    #     return reverse("administration:employee_delete", kwargs={"id": self.id})
-
-
-    # def __str__(self):
-    #         return self.getFirstname() + " " + self.getLastname()
-
-    # def getFirstname(self):
-    #     return self.firstname
-
-    # def getLastname (self):
-    #     return self.lastname
-
-    # class Meta:
-    #     verbose_name_plural = "Mitarbeiter"
-
-class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    
     CASHIER         = 'KA'
     ADMINISTRATOR   = 'AD'
     ANALYST         = 'AN'
@@ -71,6 +33,44 @@ class Employee(models.Model):
         choices=PERMISSIONS,
         default=CASHIER,
     )
+
+
+    def get_update_url(self):
+        return reverse("administration:employee_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:employee_delete", kwargs={"id": self.id})
+
+
+    def __str__(self):
+            return self.getFirstname() + " " + self.getLastname()
+
+    def getFirstname(self):
+        return self.firstname
+
+    def getLastname (self):
+        return self.lastname
+
+    class Meta:
+        verbose_name_plural = "Mitarbeiter"
+
+# class Employee(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    
+#     CASHIER         = 'KA'
+#     ADMINISTRATOR   = 'AD'
+#     ANALYST         = 'AN'
+#     PERMISSIONS = [
+#     (CASHIER,     'Kassierer'),
+#     (ADMINISTRATOR, 'Administrator'),
+#     (ANALYST,       'Analyst'),
+#     ]
+
+#     role = models.CharField(
+#         max_length=2,
+#         choices=PERMISSIONS,
+#         default=CASHIER,
+#     )
 
 
 
