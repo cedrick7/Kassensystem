@@ -3,7 +3,7 @@ from .forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from .decorators import unauthenticated_user
 from django.views.generic import (
     View,
@@ -36,6 +36,8 @@ from django.views.generic import (
 @unauthenticated_user
 def registerUser(request, *args, **kwargs):
     context = {}
+
+    #create groups if necessary
     admin_group, created = Group.objects.get_or_create(name='Administratoren')
     cashier_group, created = Group.objects.get_or_create(name='Kassierer')
     analyst_group, created = Group.objects.get_or_create(name='Analysten')
@@ -43,17 +45,23 @@ def registerUser(request, *args, **kwargs):
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
-            group = form.cleaned_data.get('groups')
-            if not group:
+            groups = form.cleaned_data.get('groups')
+            if not groups:
+                #need of specifying a group
                 form = CreateUserForm()
                 context = {'form':form}
                 messages.info(request, 'Bitte mindestens eine Gruppe wählen')
                 return render(request, "new/test_register.html", context)
             else:
+                #safe user
                 form.save()
-                user = form.cleaned_data.get('username')
-                messages.success(request, 'Account wurde erstellt für ' + user + ' mit Rechten für:')
-                for i in group:
+                username = form.cleaned_data.get('username')
+                messages.success(request, 'Account wurde erstellt für ' + username + ' mit Rechten für:')
+                for i in groups:
+                    #add user to groups
+                    group = Group.objects.get(name=i)
+                    user = User.objects.get(username=username)
+                    group.user_set.add(user)                        #Django fügt nicht die Gruppen hinzu, deswegen manuell
                     messages.success(request,i)
                 return redirect('authorization:login')
         else:
@@ -73,7 +81,6 @@ def loginUser(request, *args, **kwargs):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            print("Anmeldung erfolgreich!")
             return redirect('administration:tax_list')
         else:
             messages.info(request, 'Nutzername und Passwort stimmen nicht überein')

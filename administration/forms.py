@@ -298,6 +298,7 @@ class UserModelForm(forms.ModelForm):
             'is_staff',
             'is_superuser',
             'last_login',
+            'groups',
         ]
 
 
