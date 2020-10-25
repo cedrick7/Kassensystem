@@ -10,7 +10,8 @@ from django.db import connection
 from django.urls import reverse
 import os, subprocess, logging
 from pathlib import Path
-# from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.views.generic import (
     View,
@@ -28,7 +29,7 @@ logger = logging.getLogger('django')
 
 
 # Administration Dashboard
-# @login_required(login_url='/Autorisierung/')
+@login_required
 def administration_dashboard(request, *args, **kwargs):
     BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
     file = open(str(os.path.join(BASE_DIR, "static", "syslog")), 'r')
@@ -44,13 +45,12 @@ def administration_dashboard(request, *args, **kwargs):
     return render(request, "new/administration_dashboard_copy.html", context)
 
 # Produkte
-class ProductListView(ListView):
+class ProductListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_products_copy.html'
     queryset = Product.objects.all()
 
-class ProductCreateView(View):
+class ProductCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_products_create-update_copy.html'
-
     # http/GET method
     def get(self, request, *args, **kwargs):
         form = ProductModelForm()
@@ -72,7 +72,7 @@ class ProductCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class ProductUpdateView(View):
+class ProductUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_products_create-update_copy.html'
 
     def get_object(self):
@@ -111,7 +111,7 @@ class ProductUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_products_delete_copy.html'
     queryset = Product.objects.all()
 
@@ -137,11 +137,11 @@ class ProductDeleteView(DeleteView):
 
 
 # Kategorien
-class CategoryListView(ListView):
+class CategoryListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_categories_copy.html'
     queryset = Category.objects.all()
 
-class CategoryCreateView(View):
+class CategoryCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_categories_create-update_copy.html'
 
     # http/GET method
@@ -165,7 +165,7 @@ class CategoryCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class CategoryUpdateView(View):
+class CategoryUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_categories_create-update_copy.html'
 
     def get_object(self):
@@ -204,7 +204,7 @@ class CategoryUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class CategoryDeleteView(DeleteView):
+class CategoryDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_categories_delete_copy.html'
     queryset = Category.objects.all()
 
@@ -228,11 +228,11 @@ class CategoryDeleteView(DeleteView):
 
 
 # Rabatte
-class DiscountListView(ListView):
+class DiscountListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_discounts_copy.html'
     queryset = Discount.objects.all()
 
-class DiscountCreateView(View):
+class DiscountCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_discounts_create-update_copy.html'
 
     # http/GET method
@@ -256,7 +256,7 @@ class DiscountCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class DiscountUpdateView(View):
+class DiscountUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_discounts_create-update_copy.html'
 
     def get_object(self):
@@ -295,7 +295,7 @@ class DiscountUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class DiscountDeleteView(DeleteView):
+class DiscountDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_discounts_delete_copy.html'
     queryset = Discount.objects.all()
 
@@ -317,11 +317,11 @@ class DiscountDeleteView(DeleteView):
 
 
 # Steuersätze
-class TaxListView(ListView):
+class TaxListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_taxes_copy.html'
     queryset = Tax.objects.all()
 
-class TaxCreateView(View):
+class TaxCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_taxes_create-update_copy.html'
 
     # http/GET method
@@ -345,7 +345,7 @@ class TaxCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class TaxUpdateView(View):
+class TaxUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_taxes_create-update_copy.html'
 
     def get_object(self):
@@ -384,7 +384,7 @@ class TaxUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class TaxDeleteView(DeleteView):
+class TaxDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_taxes_delete_copy.html'
     queryset = Tax.objects.all()
 
@@ -408,11 +408,11 @@ class TaxDeleteView(DeleteView):
 
 
 # Attribute 
-class AttributeListView(ListView):
+class AttributeListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_attributes_copy.html'
     queryset = Attribute.objects.all()
 
-class AttributeCreateView(View):
+class AttributeCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_attributes_create-update_copy.html'
 
     # http/GET method
@@ -436,7 +436,7 @@ class AttributeCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class AttributeUpdateView(View):
+class AttributeUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_attributes_create-update_copy.html'
 
     def get_object(self):
@@ -475,7 +475,7 @@ class AttributeUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class AttributeDeleteView(DeleteView):
+class AttributeDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_attributes_delete_copy.html'
     queryset = Attribute.objects.all()
 
@@ -499,11 +499,11 @@ class AttributeDeleteView(DeleteView):
 
 
 # Kunden
-class CustomerListView(ListView):
+class CustomerListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_customers_copy.html'
     queryset = Customer.objects.all()
 
-class CustomerCreateView(View):
+class CustomerCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_customers_create-update_copy.html'
 
     # http/GET method
@@ -527,7 +527,7 @@ class CustomerCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class CustomerUpdateView(View):
+class CustomerUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_customers_create-update_copy.html'
 
     def get_object(self):
@@ -566,7 +566,7 @@ class CustomerUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class CustomerDeleteView(DeleteView):
+class CustomerDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_customers_delete_copy.html'
     queryset = Customer.objects.all()
 
@@ -590,11 +590,11 @@ class CustomerDeleteView(DeleteView):
 
 
 # Angestellte
-class EmployeeListView(ListView):
+class EmployeeListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_employees_copy.html'
     queryset = Employee.objects.all()
 
-class EmployeeUpdateView(View):
+class EmployeeUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_employees_create-update_copy.html'
 
     def get_object(self):
@@ -633,7 +633,7 @@ class EmployeeUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class EmployeeDeleteView(DeleteView):
+class EmployeeDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_employees_delete_copy.html'
     queryset = Employee.objects.all()
 
@@ -657,17 +657,17 @@ class EmployeeDeleteView(DeleteView):
 
 
 # Arbeitszeit
-class WorkTimeListView(ListView):
+class WorkTimeListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_worktime_copy.html'
     queryset = Worktime.objects.all()
 
 
 # Safe
-class SafeListView(ListView):
+class SafeListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_safes_copy.html'
     queryset = Safe.objects.all()
 
-class SafeCreateView(View):
+class SafeCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_safes_create-update_copy.html'
 
     # http/GET method
@@ -691,7 +691,7 @@ class SafeCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class SafeUpdateView(View):
+class SafeUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_safes_create-update_copy.html'
 
     def get_object(self):
@@ -730,7 +730,7 @@ class SafeUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class SafeDeleteView(DeleteView):
+class SafeDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_safes_delete_copy.html'
     queryset = Safe.objects.all()
 
@@ -753,11 +753,11 @@ class SafeDeleteView(DeleteView):
             return redirect('administration:safe_list')
 
 # Kasse
-class CashboxListView(ListView):
+class CashboxListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_cashboxes_copy.html'
     queryset = Cashbox.objects.all()
 
-class CashboxCreateView(View):
+class CashboxCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_cashboxes_create-update_copy.html'
 
     # http/GET method
@@ -781,7 +781,7 @@ class CashboxCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class CashboxUpdateView(View):
+class CashboxUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_cashboxes_create-update_copy.html'
 
     def get_object(self):
@@ -820,7 +820,7 @@ class CashboxUpdateView(View):
                     }
         return render(request, self.template_name, context)        
 
-class CashboxDeleteView(DeleteView):
+class CashboxDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_cashboxes_delete_copy.html'
     queryset = Cashbox.objects.all()
 
@@ -844,11 +844,11 @@ class CashboxDeleteView(DeleteView):
 
 
 # Zahlungsmittel
-class PaymenttoolListView(ListView):
+class PaymenttoolListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_paymenttools_copy.html'
     queryset = Paymenttool.objects.all()
 
-class PaymenttoolCreateView(View):
+class PaymenttoolCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_paymenttools_create-update_copy.html'
 
     # http/GET method
@@ -872,7 +872,7 @@ class PaymenttoolCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class PaymenttoolUpdateView(View):
+class PaymenttoolUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_paymenttools_create-update_copy.html'
 
     def get_object(self):
@@ -911,7 +911,7 @@ class PaymenttoolUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class PaymenttoolDeleteView(DeleteView):
+class PaymenttoolDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_paymenttools_delete_copy.html'
     queryset = Paymenttool.objects.all()
 
@@ -936,11 +936,11 @@ class PaymenttoolDeleteView(DeleteView):
 
 
 # Backups
-class BackupListView(ListView):
+class BackupListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_backups_copy.html'
     queryset = Backup.objects.all()
 
-class BackupCreateView(View):
+class BackupCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_backups_create-update_copy.html'
 
     def custom_sql(self, query):
@@ -993,7 +993,7 @@ class BackupCreateView(View):
         }
         return render(request, self.template_name, context)
 
-class BackupUpdateView(View):
+class BackupUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_backups_create-update_copy.html'
 
     def get_object(self):
@@ -1032,7 +1032,7 @@ class BackupUpdateView(View):
                     }
         return render(request, self.template_name, context)
 
-class BackupDeleteView(DeleteView):
+class BackupDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_backups_delete_copy.html'
     queryset = Backup.objects.all()
 
@@ -1065,11 +1065,11 @@ class BackupDeleteView(DeleteView):
 
 
 # Rechnungen 
-class BillListView(ListView):
+class BillListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_bills_copy.html'
     queryset = Bill.objects.all()
 
-class BillDetailView(View):
+class BillDetailView(LoginRequiredMixin, View):
     template_name = 'new/administration_bills_detail_copy.html'
 
     # http/GET method
@@ -1092,7 +1092,7 @@ class BillDetailView(View):
             
         return render(request, self.template_name, context)
 
-class BillCreateView(View):
+class BillCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_bills_create-update_copy_löschen.html'
 
     # http/GET method
@@ -1118,11 +1118,11 @@ class BillCreateView(View):
 
 
 # Stornorechnungen 
-class ReversalBillListView(ListView):
+class ReversalBillListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_reversalbills_copy.html'
     queryset = ReversalBill.objects.all()
 
-class ReversalBillDetailView(View):
+class ReversalBillDetailView(LoginRequiredMixin, View):
     template_name = 'new/administration_reversalbills_detail_copy.html'
 
     # http/GET method
@@ -1145,7 +1145,7 @@ class ReversalBillDetailView(View):
 
         return render(request, self.template_name, context)
 
-class ReversalBillCreateView(View):
+class ReversalBillCreateView(LoginRequiredMixin, View):
     template_name = 'new/administration_reversalbills_create-update_copy_löschen.html'
 
     # http/GET method

@@ -6,3 +6,6 @@
     <input type="password" name="password" placeholder="password"> <br>
  <input type="submit" value="Login">
 </form>
+{% for message in messages %}
+<p id="messages">{{message}} </p>
+{% endfor %}
