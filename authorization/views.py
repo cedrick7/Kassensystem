@@ -3,6 +3,7 @@ from .forms import CreateUserForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import Group
 from django.views.generic import (
     View,
 )
@@ -36,21 +37,28 @@ def registerUser(request, *args, **kwargs):
         return redirect('administration:administration_dashboard')
     else:
         context = {}
+        admin_group, created = Group.objects.get_or_create(name='Administratoren')
+        cashier_group, created = Group.objects.get_or_create(name='Kassierer')
+        analyst_group, created = Group.objects.get_or_create(name='Analysten')
+
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
             if form.is_valid():
-                form.save()
-
-                # group permissions
-                # group = request.POST.get('role'))
-
-                
-                
-                user = form.cleaned_data.get('username')
-                messages.success(request, 'Account wurde erstellt für ' + user)
-                return redirect('authorization:login')
+                group = form.cleaned_data.get('groups')
+                if not group:
+                    form = CreateUserForm()
+                    context = {'form':form}
+                    messages.info(request, 'Bitte mindestens eine Gruppe wählen')
+                    return render(request, "new/test_register.html", context)
+                else:
+                    form.save()
+                    user = form.cleaned_data.get('username')
+                    messages.success(request, 'Account wurde erstellt für ' + user + ' mit Rechten für:')
+                    for i in group:
+                        messages.success(request,i)
+                    return redirect('authorization:login')
             else:
-                messages.info(request, 'Fehler beim anlegen eines Nutzers')
+                messages.info(request, 'Anlegen des Nutzers fehlgeschlagen')
                 return redirect('authorization:register')
         else:
             form = CreateUserForm()

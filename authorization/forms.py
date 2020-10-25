@@ -3,12 +3,6 @@ from .models import Employee
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-# choices u can select as role
-choices = (
-    ('cashier', 'Kassierer'),
-    ('admin', 'Administrator'),
-    ('analyst', 'Analyst')
-)
 
 class CreateUserForm(UserCreationForm):
     class Meta:

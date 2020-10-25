@@ -90,8 +90,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Kassensystem.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -100,6 +100,26 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+
+#     'default': {
+
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+#         'NAME': 'rmpalrqy',
+
+#         'USER': 'q93noaus',
+
+#         'PASSWORD': 'cw7b65QVxtSUuEJHow1BGvNL4',
+
+#         'HOST': 'cloudrooter.ddns.net',
+
+#         'PORT': '5432',
+
+#     }
+
+# }
 
 
 # Password validation
