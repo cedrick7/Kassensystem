@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group
+from .decorators import unauthenticated_user
 from django.views.generic import (
     View,
 )
@@ -32,55 +33,50 @@ from django.views.generic import (
 
 
 # Registrieren
+@unauthenticated_user
 def registerUser(request, *args, **kwargs):
-    if request.user.is_authenticated:
-        return redirect('administration:administration_dashboard')
-    else:
-        context = {}
-        admin_group, created = Group.objects.get_or_create(name='Administratoren')
-        cashier_group, created = Group.objects.get_or_create(name='Kassierer')
-        analyst_group, created = Group.objects.get_or_create(name='Analysten')
+    context = {}
+    admin_group, created = Group.objects.get_or_create(name='Administratoren')
+    cashier_group, created = Group.objects.get_or_create(name='Kassierer')
+    analyst_group, created = Group.objects.get_or_create(name='Analysten')
 
-        if request.method == 'POST':
-            form = CreateUserForm(request.POST)
-            if form.is_valid():
-                group = form.cleaned_data.get('groups')
-                if not group:
-                    form = CreateUserForm()
-                    context = {'form':form}
-                    messages.info(request, 'Bitte mindestens eine Gruppe wählen')
-                    return render(request, "new/test_register.html", context)
-                else:
-                    form.save()
-                    user = form.cleaned_data.get('username')
-                    messages.success(request, 'Account wurde erstellt für ' + user + ' mit Rechten für:')
-                    for i in group:
-                        messages.success(request,i)
-                    return redirect('authorization:login')
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        if form.is_valid():
+            group = form.cleaned_data.get('groups')
+            if not group:
+                form = CreateUserForm()
+                context = {'form':form}
+                messages.info(request, 'Bitte mindestens eine Gruppe wählen')
+                return render(request, "new/test_register.html", context)
             else:
-                messages.info(request, 'Anlegen des Nutzers fehlgeschlagen')
-                return redirect('authorization:register')
+                form.save()
+                user = form.cleaned_data.get('username')
+                messages.success(request, 'Account wurde erstellt für ' + user + ' mit Rechten für:')
+                for i in group:
+                    messages.success(request,i)
+                return redirect('authorization:login')
         else:
-            form = CreateUserForm()
-            context = {'form':form}
-
+            messages.info(request, 'Anlegen des Nutzers fehlgeschlagen')
+            return redirect('authorization:register')
+    else:
+        form = CreateUserForm()
+        context = {'form':form}
         return render(request, "new/test_register.html", context)
 
+@unauthenticated_user
 def loginUser(request, *args, **kwargs):
-    if request.user.is_authenticated:
-        return redirect('administration:administration_dashboard')
-    else:
-        context = {}
-        if request.method == 'POST':
-            username = request.POST.get('username')
-            password = request.POST.get('password')
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                print("Anmeldung erfolgreich!")
-                return redirect('administration:tax_list')
-            else:
-                messages.info(request, 'Nutzername und Passwort stimmen nicht überein')
+    context = {}
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            print("Anmeldung erfolgreich!")
+            return redirect('administration:tax_list')
+        else:
+            messages.info(request, 'Nutzername und Passwort stimmen nicht überein')
 
     return render(request, "new/test_login.html", context)
 
