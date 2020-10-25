@@ -35,6 +35,8 @@ from .views import (
     CustomerDeleteView,
 
     EmployeeListView,
+    EmployeeUpdateView,
+    EmployeeDeleteView,
 
     WorkTimeListView,
 
@@ -44,12 +46,34 @@ from .views import (
     SafeDeleteView,
 
     CashboxListView,
+    CashboxCreateView, 
+    CashboxUpdateView, 
+    CashboxDeleteView,
+
+
+    PaymenttoolListView,
+    PaymenttoolCreateView,
+    PaymenttoolUpdateView,
+    PaymenttoolDeleteView,
+
+    BackupListView,
+    BackupCreateView,
+    BackupUpdateView,
+    BackupDeleteView,
+
+    BillListView, 
+    BillDetailView,
+    BillCreateView,
+
+    ReversalBillListView,
+    ReversalBillDetailView,
+    ReversalBillCreateView,
 
 )
 
 app_name =  'administration'
 urlpatterns=[
-    
+
     # Administration
     path('', administration_dashboard, name='administration_dashboard'),
 
@@ -91,6 +115,8 @@ urlpatterns=[
 
     # Mitarbeiter
     path('Mitarbeiter', EmployeeListView.as_view(), name='employee_list'),
+    path('Mitarbeiter/<int:id>/Bearbeiten', EmployeeUpdateView.as_view(), name='employee_update'),
+    path('Mitarbeiter/<int:id>/Löschen', EmployeeDeleteView.as_view(), name='employee_delete'),
 
     # Arbeitszeiten
     path('Arbeitszeiten', WorkTimeListView.as_view(), name='worktime_list'),
@@ -103,16 +129,36 @@ urlpatterns=[
 
     # Kassen
     path('Kassen', CashboxListView.as_view(), name='cashbox_list'),
-
-
-
+    path('Kassen/Erstellen', CashboxCreateView.as_view(), name='cashbox_create'),
+    path('Kassen/<int:id>/Bearbeiten', CashboxUpdateView.as_view(), name='cashbox_update'),
+    path('Kassen/<int:id>/Löschen', CashboxDeleteView.as_view(), name='cashbox_delete'),
 
 
     # Zahlungsmittel
-    # path('Zahlungsmittel', SafeListView.as_view(), name='safe_list'),
-    # path('Zahlungsmittel/Erstellen', SafeCreateView.as_view(), name='safe_create'),
-    # path('Zahlungsmittel/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
-    # path('Zahlungsmittel/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
+    path('Zahlungsmittel', PaymenttoolListView.as_view(), name='paymenttool_list'),
+    path('Zahlungsmittel/Erstellen', PaymenttoolCreateView.as_view(), name='paymenttool_create'),
+    path('Zahlungsmittel/<int:id>/Bearbeiten', PaymenttoolUpdateView.as_view(), name='paymenttool_update'),
+    path('Zahlungsmittel/<int:id>/Löschen', PaymenttoolDeleteView.as_view(), name='paymenttool_delete'),
+
+
+    # Datensicherungen
+    path('Datensicherungen', BackupListView.as_view(), name='backup_list'),
+    path('Datensicherungen/Erstellen', BackupCreateView.as_view(), name='backup_create'),
+    path('Datensicherungen/<int:id>/Bearbeiten', BackupUpdateView.as_view(), name='backup_update'),
+    path('Datensicherungen/<int:id>/Löschen', BackupDeleteView.as_view(), name='backup_delete'),
+
+    # Rechnungen
+    path('Rechnungen', BillListView.as_view(), name='bill_list'),
+    path('Rechnungen/<int:id>/Details', BillDetailView.as_view(), name='bill_details'),
+    path('Rechnungen/Erstellen', BillCreateView.as_view(), name='bill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
+
+    # Rechnungen
+    path('Stornorechnungen', ReversalBillListView.as_view(), name='reversalbill_list'),
+    path('Stornorechnungen/<int:id>/Details', ReversalBillDetailView.as_view(), name='reversalbill_details'),
+    path('Stornorechnungen/Erstellen', ReversalBillCreateView.as_view(), name='reversalbill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
+    
+
+
 
 ]
 

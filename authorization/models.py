@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -8,13 +10,13 @@ class Employee(models.Model):
     firstname            = models.CharField(max_length=45, blank=False)
     lastname             = models.CharField(max_length=45, blank=False)
     password             = models.CharField(max_length=73, blank=False, editable=True)
-    picture                  = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
+    picture              = models.FileField(upload_to='mit_img/', default='static/mit_img/default.jpg', blank=True)
 
-    #ROLE_CHOICE = [
+    # ROLE_CHOICE = [
     #    ('cashier', 'Kassierer'),
     #    ('admin', 'Administrator'),
     #    ('analyst', 'Analyst')]
-    #role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
+    # role_select          = models.CharField(max_length= 25, blank=False, null=True, choices = role_choice)
 
 
     CASHIER         = 'KA'
@@ -33,6 +35,13 @@ class Employee(models.Model):
     )
 
 
+    def get_update_url(self):
+        return reverse("administration:employee_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:employee_delete", kwargs={"id": self.id})
+
+
     def __str__(self):
             return self.getFirstname() + " " + self.getLastname()
 
@@ -44,6 +53,25 @@ class Employee(models.Model):
 
     class Meta:
         verbose_name_plural = "Mitarbeiter"
+
+# class Employee(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    
+#     CASHIER         = 'KA'
+#     ADMINISTRATOR   = 'AD'
+#     ANALYST         = 'AN'
+#     PERMISSIONS = [
+#     (CASHIER,     'Kassierer'),
+#     (ADMINISTRATOR, 'Administrator'),
+#     (ANALYST,       'Analyst'),
+#     ]
+
+#     role = models.CharField(
+#         max_length=2,
+#         choices=PERMISSIONS,
+#         default=CASHIER,
+#     )
+
 
 
 # Anfragen

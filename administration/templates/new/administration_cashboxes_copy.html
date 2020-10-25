@@ -11,17 +11,19 @@
 {% endblock specific %}
 
 <!-- Body -->
-
+{% block navbar %}
+	{% include 'new/administration_navbar_copy.html' %}
+{% endblock navbar %}
 
 {% block content %}
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Produkte</h3>
-			<a class="btn btn-primary" role="button" href="#">
+			<h3>Kassen</h3>
+			<!-- <a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
-				<!-- change this content -->
-				Alle Produkte ausdrucken</a>
+				
+				Alle Produkte ausdrucken</a> -->
 		</div>
 		<div class="content container-fluid">
 			<div class="card">
@@ -46,7 +48,7 @@
 						<div class="col-12 col-sm-4">
 							<div class="create_button">
 
-								<form action="">
+								<form action="{% url 'administration:cashbox_create' %}">
 									<input class="btn btn-primary" type="submit" value="Kasse hinzufügen" />
 								</form>
 								

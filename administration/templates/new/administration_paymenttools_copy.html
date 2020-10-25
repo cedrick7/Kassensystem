@@ -12,24 +12,24 @@
 
 <!-- Body -->
 {% block navbar %}
-	{% include 'administration_navbar.html' %}
+	{% include 'new/administration_navbar_copy.html' %}
 {% endblock navbar %}
 
 {% block content %}
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Eigenschaften</h3>
-			<a class="btn btn-primary" role="button" href="#">
+			<h3>Zahlungsmittel</h3>
+			<!-- <a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
-				<!-- change this content -->
-				Alle Eigenschaften ausdrucken</a>
+				
+				Alle Produkte ausdrucken</a> -->
 		</div>
 		<div class="content container-fluid">
 			<div class="card">
 				<div class="card-header">
 					<!-- change this content -->
-					<p>Eigenschaften Übersicht</p>
+					<p>Zahlungsmittel Übersicht</p>
 				</div>
 				<div class="card-body">
 					<div class="card-row-1 row">
@@ -47,9 +47,14 @@
 						</div>
 						<div class="col-12 col-sm-4">
 							<div class="create_button">
-								<button class="btn btn-primary">Eigenschaft hinzufügen</button>
+
+								<form action="{% url 'administration:paymenttool_create' %}">
+									<input class="btn btn-primary" type="submit" value="Zahlungsmittel hinzufügen" />
+								</form>
+								
 							</div>
 						</div>
+
 						<div class="col-12 col-sm-4">
 							<div class="dataTables_filter" id="dataTable_filter-1">
 								<label>
@@ -64,32 +69,34 @@
 							<!-- change this content -->
 							<div class="table-responsive table" id="dataTable-1" role="grid"
 							     aria-describedby="dataTable_info">
-								<table class="table" id="attributesTable">
+								<table class="table" id="productsTable">
 									<thead>
 									<tr>
-										<th>Titel</th>
+										<th>Name</th>
+										<th>Bild</th>
 										<th>Mehr</th>
+
 									</tr>
 									</thead>
 									<tbody>
-									<tr>
-										<td>Vegan</td>
 
-										<td class="td-icons"><a href="attributes-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
-									<tr>
-										<td>Bio</td>
+									{% for instance in object_list %}
+										<tr>
+											<td>{{ instance.title }}</td>
+											<td>{{ instance.path }} </td> 
+											<td class="td-icons">
+												<a href="{{ instance.get_update_url }}"><i
+														class="fa fa-pencil"></i></a>
+												<a href="{{ instance.get_delete_url }}"><i class="fa fa-remove"></i></a>
+											</td>
+										</tr>
+									{% endfor %}
 
-										<td class="td-icons"><a href="attributes-detail.html"><i
-												class="fa fa-pencil"></i></a><a href="#"><i
-												class="fa fa-remove"></i></a></td>
-									</tr>
 									</tbody>
 									<tfoot>
 									<tr>
-										<td><strong>Titel</strong></td>
+										<td><strong>Name</strong></td>
+										<td><strong>Bild</strong></td>
 										<td><strong>Mehr</strong></td>
 									</tr>
 									</tfoot>

@@ -2,7 +2,8 @@ from django.db import models
 from authorization.models import Employee
 from product.models import Discount      #cannot import
 from product.models import Product
-from administration.models import Path
+from decimal import Decimal
+from django.core.validators import MinValueValidator
 from django.urls import reverse
 
 # Create your models here.
@@ -10,8 +11,14 @@ from django.urls import reverse
 
 class Cashbox(models.Model):
     title       = models.CharField(max_length=45)
-    amount      = models.DecimalField(max_digits=6,decimal_places=2) # in Euro
+    amount      = models.DecimalField(max_digits=6,decimal_places=2, validators=[MinValueValidator(Decimal('-0.01'))]) # in Euro
     
+    def get_update_url(self):
+        return reverse("administration:cashbox_update", kwargs={"id": self.id})
+
+    def get_delete_url(self):
+        return reverse("administration:cashbox_delete", kwargs={"id": self.id})
+
 
     class Meta:
         verbose_name_plural = "Cashboxn"
@@ -22,7 +29,13 @@ class Cashbox(models.Model):
 
 class Paymenttool(models.Model):
     title        = models.CharField(max_length=45)
-    path       = models.FileField(upload_to='uploads/', unique=True, blank=True, default=None, null=True)
+    path       = models.FileField(upload_to='uploads/', blank=True, default=None, null=True, unique=False)
+
+    def get_update_url(self):
+        return reverse("administration:paymenttool_update", kwargs={"id": self.id})
+    
+    def get_delete_url(self):
+        return reverse("administration:paymenttool_delete", kwargs={"id": self.id})
 
     class Meta:
         verbose_name_plural = "paymenttool"
@@ -32,7 +45,7 @@ class Paymenttool(models.Model):
 
 class Safe(models.Model):
     title       = models.CharField(max_length=45)
-    amount      = models.DecimalField(max_digits=8,decimal_places=2) # in Euro
+    amount      = models.DecimalField(max_digits=8,decimal_places=2, validators=[MinValueValidator(Decimal('-0.01'))]) # in Euro
     employee = models.ManyToManyField(Employee, blank=True)
 
     def get_update_url(self):
@@ -58,11 +71,12 @@ class Bill(models.Model):
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
     paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
     discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=False, blank=True)
     
 
-    # Liste erstellen
-    
+    def get_detail_url(self):
+        return reverse("administration:bill_details", kwargs={"id": self.id})
+
 
 
     class Meta:
@@ -75,7 +89,7 @@ class Bill(models.Model):
 class Bill_Product(models.Model):
     bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
-    amount = models.IntegerField(default=50) # in Stück
+    amount = models.IntegerField(default=50, validators=[MinValueValidator(Decimal('-0.01'))]) # in Stück
 
     class Meta:
         unique_together=[['bill', 'product']]
@@ -91,8 +105,11 @@ class ReversalBill(models.Model):
     # productamount   = models.IntegerField(default=0) Wird zur Laufzeit ausgerechnet
     employee     = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
     cashbox           = models.ForeignKey(Cashbox, on_delete=models.CASCADE, blank=False)
-    path       = models.ForeignKey(Path, on_delete=models.CASCADE, blank=True, default=None)
+    path       = models.FileField(upload_to='uploads/', unique=False, blank=True)
     bill        = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
+    
+    def get_detail_url(self):
+        return reverse("administration:reversalbill_details", kwargs={"id": self.id})
     
 
     class Meta:

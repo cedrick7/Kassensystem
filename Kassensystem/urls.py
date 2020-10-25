@@ -30,18 +30,8 @@ from django.urls import include, path
 urlpatterns = [
 
     path('Administration/', include('administration.urls')),
+    path('Autorisierung/', include('authorization.urls')),
 
-
-
-
-
-
-
-
-    path('', authorization_login_view, name='authorization_login'),
-    path('Registrieren/', authorization_register_view, name='authorization_register'),
-    path('Passwort_vergessen/', authorization_forgot_password_view, name='authorization_forgot_password'),
-    path('Passwort_ändern/', authorization_change_password_view, name='authorization_change_password'),
 
     path('Kunden/', customer_customer_view, name='customer'),
 

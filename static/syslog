@@ -1,0 +1,1960 @@
+INFO 2020-10-24 18:06:17,464 basehttp "GET /Administration/ HTTP/1.1" 200 6277
+INFO 2020-10-24 18:06:17,515 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-10-24 18:06:17,517 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 304 0
+INFO 2020-10-24 18:06:17,518 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-24 18:06:17,518 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-24 18:06:22,614 basehttp "GET /Administration/ HTTP/1.1" 200 7487
+INFO 2020-10-24 18:06:39,788 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 18:06:40,031 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 18:06:43,480 basehttp "GET /Administration/ HTTP/1.1" 200 8206
+INFO 2020-10-24 18:06:43,513 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-24 18:06:48,489 basehttp "GET /Administration/ HTTP/1.1" 200 8684
+INFO 2020-10-24 18:08:27,414 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 18:08:27,626 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 18:08:36,883 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 18:08:37,113 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-24 18:09:02,809 log Not Found: /Autosrisierung
+WARNING 2020-10-24 18:09:02,809 basehttp "GET /Autosrisierung HTTP/1.1" 404 4076
+INFO 2020-10-24 18:09:07,849 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+INFO 2020-10-24 18:09:07,899 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+WARNING 2020-10-24 18:09:07,902 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 18:09:07,923 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-10-24 18:09:07,961 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 18:09:22,881 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 18:09:23,123 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 18:09:24,605 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-24 18:09:24,671 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 18:09:24,800 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-10-24 18:09:24,871 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-24 18:09:30,247 basehttp "GET /Administration/ HTTP/1.1" 200 12997
+INFO 2020-10-24 18:09:38,527 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 18:09:38,765 autoreload Watching for file changes with StatReloader
+INFO 2020-10-24 18:09:42,989 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-24 18:09:43,213 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:08:40,252 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 10:08:47,157 log Not Found: /
+WARNING 2020-10-25 10:08:47,157 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-25 10:08:47,341 log Not Found: /favicon.ico
+WARNING 2020-10-25 10:08:47,342 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+WARNING 2020-10-25 10:09:05,055 log Not Found: /
+WARNING 2020-10-25 10:09:05,056 basehttp "GET / HTTP/1.1" 404 4016
+INFO 2020-10-25 10:09:09,856 basehttp "GET /Autorisierung HTTP/1.1" 301 0
+INFO 2020-10-25 10:09:09,880 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+INFO 2020-10-25 10:09:10,303 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+INFO 2020-10-25 10:09:10,303 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+WARNING 2020-10-25 10:09:10,305 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-25 10:09:10,614 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-10-25 10:09:10,698 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-25 10:09:14,292 basehttp "GET /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-25 10:09:21,137 basehttp "POST /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-25 10:10:32,784 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:10:33,019 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:10:38,154 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:10:38,340 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:04,767 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:04,960 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:08,123 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:08,342 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:13,585 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:13,802 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:15,031 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:15,231 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:17,433 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:17,676 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:20,875 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:21,111 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:22,255 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:22,464 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:31,687 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:31,915 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:36,147 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:36,355 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:41,606 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:41,844 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:48,070 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:48,302 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:51,529 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:51,755 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:54,998 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:55,216 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:57,393 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:11:57,614 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:11:59,834 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:12:00,039 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:12:05,280 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:12:05,471 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:12:10,675 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:12:10,894 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:14:41,208 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 10:15:19,106 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 10:15:48,364 basehttp "POST /Autorisierung/register HTTP/1.1" 200 232
+INFO 2020-10-25 10:15:51,350 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 10:16:13,467 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 10:16:13,472 basehttp "GET /Autorisierung/login HTTP/1.1" 200 414
+INFO 2020-10-25 10:16:56,501 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-25 10:17:00,472 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 10:17:12,225 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:17:12,468 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:17:36,218 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 10:17:36,233 basehttp "GET /Autorisierung/login HTTP/1.1" 200 422
+INFO 2020-10-25 10:17:41,994 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:17:42,232 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:06,266 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:06,499 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:09,748 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:09,953 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:14,194 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:14,429 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:16,629 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:16,874 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:27,150 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:27,361 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:40,660 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:40,893 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:19:45,104 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:19:45,309 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:20:07,652 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 10:20:43,186 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:20:43,426 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:20:44,604 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:20:44,810 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:20:48,804 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 10:22:36,112 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:22:36,324 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:23:09,873 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:23:10,084 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:23:20,361 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:23:20,576 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:24:50,713 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:24:50,942 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:24:52,120 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:24:52,322 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:24:57,566 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:24:57,800 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:25:15,197 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:25:15,430 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:25:18,607 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:25:18,821 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:25:28,083 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:25:28,318 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:25:43,662 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:25:43,875 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:25:45,520 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 10:25:49,573 log Not Found: /
+WARNING 2020-10-25 10:25:49,573 basehttp "GET / HTTP/1.1" 404 4016
+INFO 2020-10-25 10:25:56,546 basehttp "GET /Administration HTTP/1.1" 301 0
+INFO 2020-10-25 10:25:56,557 basehttp "GET /Administration/ HTTP/1.1" 302 0
+WARNING 2020-10-25 10:25:56,571 log Not Found: /accounts/login/
+WARNING 2020-10-25 10:25:56,571 basehttp "GET /accounts/login/?next=/Administration/ HTTP/1.1" 404 4101
+INFO 2020-10-25 10:27:32,906 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:27:33,140 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:27:34,361 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:27:34,589 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:27:36,752 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:27:36,986 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 10:27:40,337 log Not Found: /
+WARNING 2020-10-25 10:27:40,337 basehttp "GET / HTTP/1.1" 404 4016
+INFO 2020-10-25 10:27:46,044 basehttp "GET /Administration/ HTTP/1.1" 302 0
+WARNING 2020-10-25 10:27:46,055 log Not Found: /accounts/login/
+WARNING 2020-10-25 10:27:46,055 basehttp "GET /accounts/login/?next=/Administration/ HTTP/1.1" 404 4101
+INFO 2020-10-25 10:29:04,162 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:29:04,399 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:29:06,580 autoreload /home/max/Lokal/GitHub/Kassensystem/Kassensystem/settings.py changed, reloading.
+INFO 2020-10-25 10:29:06,821 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:29:17,053 basehttp "GET /Administration/ HTTP/1.1" 302 0
+INFO 2020-10-25 10:29:17,067 basehttp "GET /Autorisierung/login?next=/Administration/ HTTP/1.1" 200 363
+INFO 2020-10-25 10:29:35,242 basehttp "GET /Administration/Kassen HTTP/1.1" 200 6316
+INFO 2020-10-25 10:29:35,299 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-25 10:29:35,300 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-10-25 10:29:35,300 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-10-25 10:30:42,126 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:30:42,334 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:31:03,640 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:31:03,871 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:32:27,676 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:32:27,909 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:32:50,307 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:32:50,533 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:33:10,962 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:33:11,165 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:33:13,319 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:33:13,540 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:33:16,674 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:33:16,903 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:33:25,161 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:33:25,382 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:33:26,580 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:33:26,799 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:33:33,782 basehttp "GET /Administration/ HTTP/1.1" 302 0
+INFO 2020-10-25 10:33:33,799 basehttp "GET /Autorisierung/login?next=/Administration/ HTTP/1.1" 200 363
+INFO 2020-10-25 10:33:44,406 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8452
+INFO 2020-10-25 10:33:49,972 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-25 10:33:49,979 basehttp "GET /Autorisierung/login?next=/Administration/Produkte/Erstellen HTTP/1.1" 200 363
+INFO 2020-10-25 10:34:01,391 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:34:01,632 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:34:02,476 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8452
+INFO 2020-10-25 10:34:02,516 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-25 10:34:04,041 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-25 10:34:04,051 basehttp "GET /Autorisierung/login?next=/Administration/Produkte/Erstellen HTTP/1.1" 200 363
+INFO 2020-10-25 10:34:07,423 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-25 10:34:07,435 basehttp "GET /Autorisierung/login?next=/Administration/Produkte/Erstellen HTTP/1.1" 200 363
+INFO 2020-10-25 10:34:13,859 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:34:14,070 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:34:36,453 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:34:36,681 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:34:49,942 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:34:50,145 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:35:08,491 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:35:08,720 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:35:16,892 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:35:17,117 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:40:03,546 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:40:03,752 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:40:15,933 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:40:16,147 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:41:22,286 basehttp "GET /Administration/Kassen/Erstellen? HTTP/1.1" 200 6752
+INFO 2020-10-25 10:41:28,277 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-10-25 10:41:28,287 basehttp "GET /Autorisierung/login?next=/Administration/Produkte/Erstellen HTTP/1.1" 200 363
+INFO 2020-10-25 10:41:33,538 basehttp "GET /Administration/ HTTP/1.1" 302 0
+INFO 2020-10-25 10:41:33,543 basehttp "GET /Autorisierung/login?next=/Administration/ HTTP/1.1" 200 363
+INFO 2020-10-25 10:41:52,326 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:41:52,554 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:41:53,761 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:41:53,987 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 10:42:07,458 log Not Found: /Administration/Kategorie
+WARNING 2020-10-25 10:42:07,458 basehttp "GET /Administration/Kategorie HTTP/1.1" 404 14636
+INFO 2020-10-25 10:42:39,008 basehttp "GET /Administration/Kategorien HTTP/1.1" 302 0
+INFO 2020-10-25 10:42:39,023 basehttp "GET /Autorisierung/login?next=/Administration/Kategorien HTTP/1.1" 200 363
+INFO 2020-10-25 10:42:58,030 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:42:58,236 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:43:03,495 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:43:03,721 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:43:06,933 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:43:07,155 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:43:12,425 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:43:12,648 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:43:14,837 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:43:15,059 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 10:43:23,084 log Not Found: /
+WARNING 2020-10-25 10:43:23,084 basehttp "GET / HTTP/1.1" 404 4016
+INFO 2020-10-25 10:43:28,314 basehttp "GET /Administration/ HTTP/1.1" 302 0
+INFO 2020-10-25 10:43:28,329 basehttp "GET /Autorisierung/login?next=/Administration/ HTTP/1.1" 200 363
+INFO 2020-10-25 10:43:40,393 basehttp "GET /Administration/ HTTP/1.1" 302 0
+INFO 2020-10-25 10:43:40,403 basehttp "GET /Autorisierung/login?next=/Administration/ HTTP/1.1" 200 363
+INFO 2020-10-25 10:43:57,963 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-10-25 10:43:57,971 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 7441
+INFO 2020-10-25 10:44:02,975 basehttp "GET /Administration/ HTTP/1.1" 200 65289
+INFO 2020-10-25 10:44:15,834 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:16,072 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:18,312 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:18,542 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:21,752 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:21,983 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:24,193 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:24,409 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:25,625 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:25,844 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:29,070 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:29,281 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:31,458 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:31,664 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:34,827 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:35,032 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:37,236 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:37,464 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:40,651 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:40,871 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:45,112 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:45,345 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:48,525 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:48,751 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:50,972 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:51,203 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:54,436 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:54,673 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:44:56,879 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:44:57,102 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:00,274 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:00,479 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:02,725 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:02,953 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:05,139 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:05,362 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:09,582 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:09,805 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:11,997 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:12,209 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:14,436 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:14,648 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:21,880 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:22,112 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:24,365 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:24,598 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:27,795 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:28,024 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:31,212 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:31,444 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:34,660 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:34,883 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:37,036 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:37,245 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:39,456 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:39,683 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:42,884 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:43,092 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:48,267 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:48,491 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:53,682 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:53,891 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:56,125 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:56,347 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:45:58,585 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:45:58,816 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:02,059 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:02,273 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:04,497 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:04,724 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:06,874 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:07,088 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:10,276 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:10,506 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:13,736 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:13,975 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:17,172 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:17,393 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:19,601 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:19,809 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:22,001 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:22,210 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:24,419 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:24,629 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:27,884 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:28,113 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:30,324 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:30,555 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:32,734 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:32,962 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:35,146 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:35,377 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:37,601 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:37,823 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:38,999 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:39,226 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:46:45,039 basehttp "GET /Administration/Kassen HTTP/1.1" 200 6316
+INFO 2020-10-25 10:46:46,541 basehttp "GET /Administration/Kassen/Erstellen? HTTP/1.1" 200 6752
+INFO 2020-10-25 10:46:49,305 basehttp "GET /Administration/Kassen/3/Bearbeiten HTTP/1.1" 200 6784
+INFO 2020-10-25 10:46:52,596 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/views.py changed, reloading.
+INFO 2020-10-25 10:46:52,832 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:02,263 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:02,484 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:10,742 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:10,954 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:15,117 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:15,323 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:17,418 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:17,628 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:21,795 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:21,994 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:24,137 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:24,355 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:27,479 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:27,681 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:31,834 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:32,026 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:37,150 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:37,366 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:43,524 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:43,708 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:48,843 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:49,045 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:52,156 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:52,345 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:49:56,475 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:49:56,669 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:50:09,882 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:50:10,103 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:50:32,406 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:50:32,618 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:50:41,779 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:50:41,989 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:51:01,224 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:51:01,431 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:51:10,629 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:51:10,851 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:51:14,062 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:51:14,281 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:51:36,938 basehttp "GET /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 10:51:36,955 basehttp "GET /Administration/ HTTP/1.1" 200 99656
+INFO 2020-10-25 10:52:12,923 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:52:13,158 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:52:18,332 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:52:18,546 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:52:36,733 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-10-25 10:52:36,752 basehttp "GET /Administration/ HTTP/1.1" 200 101094
+INFO 2020-10-25 10:53:30,684 basehttp "GET /Autorisierung/ HTTP/1.1" 200 6411
+WARNING 2020-10-25 10:53:30,713 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-25 10:53:30,819 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-25 10:53:50,624 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 10:53:50,854 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:15,199 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 10:54:15,425 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:18,557 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 10:54:18,777 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:20,901 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 10:54:21,125 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:26,011 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:35,208 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 10:54:35,416 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:44,608 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 10:54:44,835 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 10:54:47,411 basehttp "GET /Autorisierung/ HTTP/1.1" 302 0
+INFO 2020-10-25 10:54:47,430 basehttp "GET /Administration/ HTTP/1.1" 200 105423
+INFO 2020-10-25 10:54:47,469 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-25 11:07:51,667 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:07:51,901 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:07:56,075 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:07:56,304 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:08:10,571 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:08:10,776 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:08:24,091 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:08:24,321 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 11:08:46,029 log Not Found: /Autoriserung
+WARNING 2020-10-25 11:08:46,029 basehttp "GET /Autoriserung HTTP/1.1" 404 4070
+WARNING 2020-10-25 11:08:46,073 log Not Found: /favicon.ico
+WARNING 2020-10-25 11:08:46,073 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-25 11:09:01,736 basehttp "GET /Autorisierung HTTP/1.1" 301 0
+INFO 2020-10-25 11:09:01,741 basehttp "GET /Autorisierung/ HTTP/1.1" 200 363
+INFO 2020-10-25 11:09:07,527 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 11:09:14,132 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 11:09:14,373 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:09:33,747 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:09:33,984 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:09:39,210 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:09:39,441 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:09:57,746 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:09:57,969 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:10:18,322 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:10:18,523 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:10:32,822 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:10:33,061 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:10:38,314 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:10:38,524 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:10:42,756 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:10:42,972 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:10:54,243 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:10:54,470 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:11:08,702 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:11:08,938 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:11:11,081 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:11:11,314 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:11:48,790 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 11:11:49,008 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:11:51,977 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 11:11:56,034 basehttp "GET /Autorisierung/ HTTP/1.1" 200 363
+WARNING 2020-10-25 11:11:59,352 log Not Found: /Autorisierung/login
+WARNING 2020-10-25 11:11:59,353 basehttp "POST /Autorisierung/login HTTP/1.1" 404 4521
+WARNING 2020-10-25 11:12:42,101 log Not Found: /Autorisierung/login
+WARNING 2020-10-25 11:12:42,101 basehttp "POST /Autorisierung/login HTTP/1.1" 404 4521
+INFO 2020-10-25 11:13:17,156 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 11:13:17,381 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:13:19,736 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 11:13:22,181 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 11:13:25,713 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/urls.py changed, reloading.
+INFO 2020-10-25 11:13:25,922 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:13:53,073 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 11:14:03,525 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 11:14:03,763 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:14:07,137 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1546
+INFO 2020-10-25 11:14:29,241 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:14:29,475 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:14:34,623 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:14:34,841 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:14:36,955 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:14:37,153 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:14:39,267 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:14:39,470 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:14:42,617 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:14:42,842 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:15:09,214 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:15:09,435 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:15:10,611 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:15:10,837 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:15:13,141 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1782
+INFO 2020-10-25 11:15:37,353 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 11:15:37,591 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:18:24,400 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:18:24,622 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:18:44,961 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:18:45,183 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:18:49,319 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:18:49,521 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:04,716 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:04,913 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:07,040 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:07,232 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:17,393 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:17,603 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:23,747 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:23,951 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:27,084 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:27,294 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:33,439 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:33,643 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:19:37,816 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:19:38,040 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:20:31,660 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:20:31,870 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:20:36,015 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:20:36,234 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:20:37,331 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:20:37,543 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:21:21,985 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:21:22,185 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:22:00,439 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:22:23,773 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:22:23,982 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:22:34,362 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:22:41,549 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:22:41,756 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:22:59,042 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:22:59,247 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:23:02,263 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:23:07,393 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/models.py changed, reloading.
+INFO 2020-10-25 11:23:07,598 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:52:24,230 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 11:52:45,690 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 302 0
+INFO 2020-10-25 11:52:45,715 basehttp "GET /Autorisierung/login?next=/Administration/Mitarbeiter HTTP/1.1" 200 363
+WARNING 2020-10-25 11:52:46,005 log Not Found: /favicon.ico
+WARNING 2020-10-25 11:52:46,005 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-25 11:52:48,447 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 11:53:06,112 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-25 11:53:14,268 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-25 11:53:27,738 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-10-25 11:53:27,790 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 7441
+INFO 2020-10-25 11:53:27,867 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+INFO 2020-10-25 11:53:34,041 basehttp "GET /Administration/Kunden HTTP/1.1" 200 7091
+ERROR 2020-10-25 11:53:40,747 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:53:40,752 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 202969
+INFO 2020-10-25 11:55:03,153 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 11:55:05,438 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:55:05,445 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+ERROR 2020-10-25 11:56:44,988 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:56:44,991 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+ERROR 2020-10-25 11:58:38,385 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 11:58:38,387 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+INFO 2020-10-25 12:00:35,636 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:00:37,290 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:00:47,091 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:00:48,202 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:01:24,048 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 12:01:30,107 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:01:30,113 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 202647
+INFO 2020-10-25 12:01:42,120 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:01:43,287 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:10:33,332 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-25 12:10:34,329 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:19:39,437 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 12:19:49,565 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:19:49,570 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+INFO 2020-10-25 12:20:15,346 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-25 12:20:16,325 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:20:38,365 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\forms.py changed, reloading.
+INFO 2020-10-25 12:20:39,327 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:24:11,806 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-25 12:24:16,109 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:24:16,114 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+ERROR 2020-10-25 12:26:04,278 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:26:04,280 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 203106
+WARNING 2020-10-25 12:26:29,760 log Not Found: /Administration/Mitarbeitet
+WARNING 2020-10-25 12:26:29,760 basehttp "GET /Administration/Mitarbeitet HTTP/1.1" 404 14642
+ERROR 2020-10-25 12:26:31,971 log Internal Server Error: /Administration/Mitarbeiter
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: authorization_employee.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\sql\compiler.py", line 1152, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: authorization_employee.user_id
+ERROR 2020-10-25 12:26:31,973 basehttp "GET /Administration/Mitarbeiter HTTP/1.1" 500 202963
+INFO 2020-10-25 12:27:40,510 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:27:41,433 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:27:42,719 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:27:44,274 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:27:46,065 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:27:47,253 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:28:20,059 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:28:21,234 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:30:44,476 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:31:04,314 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:31:07,944 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:33:16,378 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:33:17,980 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:33:45,256 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:33:46,546 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:33:56,060 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:33:57,158 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:34:00,478 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:34:01,429 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:34:03,731 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:34:04,810 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:34:09,162 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\models.py changed, reloading.
+INFO 2020-10-25 12:34:10,318 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 12:35:35,472 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 12:47:32,036 log Not Found: /
+WARNING 2020-10-25 12:47:32,036 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-25 12:47:32,182 log Not Found: /favicon.ico
+INFO 2020-10-25 13:09:02,878 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 13:09:06,888 log Not Found: /
+WARNING 2020-10-25 13:09:06,889 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-25 13:09:07,167 log Not Found: /favicon.ico
+WARNING 2020-10-25 13:09:21,400 log Not Found: /Autorisierung
+WARNING 2020-10-25 13:09:21,401 log Not Found: /Autorisierung/
+WARNING 2020-10-25 13:09:21,402 basehttp "GET /Autorisierung/ HTTP/1.1" 404 4510
+WARNING 2020-10-25 13:09:21,472 log Not Found: /favicon.ico
+INFO 2020-10-25 13:09:27,163 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:09:27,230 log Not Found: /favicon.ico
+INFO 2020-10-25 13:10:20,536 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 13:10:20,544 basehttp "GET /Autorisierung/login HTTP/1.1" 200 423
+WARNING 2020-10-25 13:10:20,604 log Not Found: /favicon.ico
+INFO 2020-10-25 13:10:32,201 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:10:32,278 log Not Found: /favicon.ico
+INFO 2020-10-25 13:10:48,197 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:10:48,416 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:10:53,623 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:10:53,857 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:00,084 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:00,298 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:03,452 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:03,670 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:08,908 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:09,117 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:26,421 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:11:26,655 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:11:30,896 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:11:30,976 log Not Found: /favicon.ico
+INFO 2020-10-25 13:11:40,397 basehttp "POST /Autorisierung/register HTTP/1.1" 200 283
+WARNING 2020-10-25 13:11:40,498 log Not Found: /favicon.ico
+INFO 2020-10-25 13:11:46,594 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:11:46,653 log Not Found: /favicon.ico
+INFO 2020-10-25 13:12:15,429 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:15,660 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:18,819 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:19,028 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:26,239 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:26,469 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:32,644 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:32,866 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:35,067 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:35,295 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:41,476 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:12:41,662 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:12:49,995 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 13:12:50,019 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1833
+WARNING 2020-10-25 13:12:50,137 log Not Found: /favicon.ico
+INFO 2020-10-25 13:13:36,277 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:13:36,493 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:13:40,659 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:13:40,875 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:14:28,432 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:14:28,644 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:14:47,481 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+ERROR 2020-10-25 13:14:47,535 log Internal Server Error: /Autorisierung/register
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/views.py", line 51, in registerUser
+    context = {'form':form}
+UnboundLocalError: local variable 'form' referenced before assignment
+ERROR 2020-10-25 13:14:47,536 basehttp "GET /Autorisierung/register HTTP/1.1" 500 62527
+WARNING 2020-10-25 13:14:47,660 log Not Found: /favicon.ico
+INFO 2020-10-25 13:14:57,084 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:14:57,309 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 13:14:57,791 log Not Found: /Autorisierung/
+INFO 2020-10-25 13:15:03,077 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1840
+WARNING 2020-10-25 13:15:03,140 log Not Found: /favicon.ico
+INFO 2020-10-25 13:15:58,450 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-10-25 13:15:58,456 basehttp "GET /Autorisierung/login HTTP/1.1" 200 421
+WARNING 2020-10-25 13:15:58,521 log Not Found: /favicon.ico
+INFO 2020-10-25 13:17:39,951 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1783
+WARNING 2020-10-25 13:17:40,012 log Not Found: /favicon.ico
+INFO 2020-10-25 13:20:25,817 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:20:26,065 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:09,648 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:09,874 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:13,072 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:13,285 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:17,424 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:17,636 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:22,850 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:23,063 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:32,314 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:32,544 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:35,682 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:35,888 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:47,090 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:47,300 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:21:58,516 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:21:58,723 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:03,904 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:04,116 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:12,306 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:12,507 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:25,747 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:25,970 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:22:30,135 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:22:30,342 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:25:07,937 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:25:08,146 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:25:21,364 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:25:21,573 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:25:23,672 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:25:23,864 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:26:47,778 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:26:48,003 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:26:58,225 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:26:58,462 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:27:07,642 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:27:07,845 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:27:10,975 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:27:11,188 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:33:52,131 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-25 13:33:52,360 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:52:24,739 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-25 13:52:34,524 log Not Found: /Autorisierung
+WARNING 2020-10-25 13:52:34,527 log Not Found: /Autorisierung/
+WARNING 2020-10-25 13:52:34,527 basehttp "GET /Autorisierung/ HTTP/1.1" 404 4510
+WARNING 2020-10-25 13:52:34,627 log Not Found: /favicon.ico
+INFO 2020-10-25 13:52:42,911 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+WARNING 2020-10-25 13:52:42,977 log Not Found: /favicon.ico
+INFO 2020-10-25 13:52:47,537 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-25 13:52:55,240 basehttp "GET /Autorisierung/register HTTP/1.1" 200 1781
+WARNING 2020-10-25 13:52:55,319 log Not Found: /favicon.ico
+INFO 2020-10-25 13:53:29,741 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 13:53:29,976 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 13:53:31,133 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/forms.py changed, reloading.
+INFO 2020-10-25 13:53:31,332 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 14:11:29,331 autoreload Watching for file changes with StatReloader
+INFO 2020-10-25 14:11:42,024 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8452
+INFO 2020-10-25 14:11:42,161 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+WARNING 2020-10-25 14:11:42,380 log Not Found: /favicon.ico
+WARNING 2020-10-25 14:11:42,380 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+ERROR 2020-10-25 14:11:48,335 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_products' not found. 'administration_products' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:11:48,342 basehttp "GET /Administration/ HTTP/1.1" 500 303283
+INFO 2020-10-25 14:11:59,066 basehttp "GET /Administration/ HTTP/1.1" 200 335788
+ERROR 2020-10-25 14:16:21,828 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 176, in render
+    template = context.template.engine.get_template(template_name)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: new/administration_navbard_copy.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: new/administration_navbard_copy.html
+ERROR 2020-10-25 14:16:21,831 basehttp "GET /Administration/ HTTP/1.1" 500 265777
+ERROR 2020-10-25 14:16:31,556 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_products' not found. 'administration_products' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:16:31,558 basehttp "GET /Administration/ HTTP/1.1" 500 303450
+ERROR 2020-10-25 14:18:06,783 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_products' not found. 'administration_products' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:18:06,785 basehttp "GET /Administration/ HTTP/1.1" 500 303496
+ERROR 2020-10-25 14:18:21,343 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_employees' not found. 'administration_employees' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:18:21,345 basehttp "GET /Administration/ HTTP/1.1" 500 303205
+ERROR 2020-10-25 14:18:34,289 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_employees' not found. 'administration_employees' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:18:34,291 basehttp "GET /Administration/ HTTP/1.1" 500 300295
+INFO 2020-10-25 14:19:33,462 basehttp "GET /Administration/ HTTP/1.1" 200 404951
+INFO 2020-10-25 14:19:33,548 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:24:05,704 basehttp "GET /Administration/ HTTP/1.1" 200 406156
+INFO 2020-10-25 14:24:05,800 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:27:41,504 basehttp "GET /Administration/ HTTP/1.1" 200 406638
+INFO 2020-10-25 14:27:41,585 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+ERROR 2020-10-25 14:47:20,002 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_Datensicherungen' not found. 'administration_Datensicherungen' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:47:20,005 basehttp "GET /Administration/ HTTP/1.1" 500 299824
+ERROR 2020-10-25 14:47:29,586 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_backups' not found. 'administration_backups' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:47:29,588 basehttp "GET /Administration/ HTTP/1.1" 500 299606
+ERROR 2020-10-25 14:47:40,965 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_backup_list' not found. 'administration_backup_list' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:47:40,967 basehttp "GET /Administration/ HTTP/1.1" 500 299690
+INFO 2020-10-25 14:47:49,333 basehttp "GET /Administration/ HTTP/1.1" 200 447461
+INFO 2020-10-25 14:47:49,415 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:47:55,373 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6786
+INFO 2020-10-25 14:48:16,035 basehttp "GET /Administration/ HTTP/1.1" 200 448198
+ERROR 2020-10-25 14:52:50,897 log Internal Server Error: /Administration/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\views.py", line 45, in administration_dashboard
+    return render(request, "new/administration_dashboard_copy.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader_tags.py", line 188, in render
+    return template.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'reveralbill_list' not found. 'reveralbill_list' is not a valid view function or pattern name.
+ERROR 2020-10-25 14:52:50,899 basehttp "GET /Administration/ HTTP/1.1" 500 302511
+INFO 2020-10-25 14:52:59,313 basehttp "GET /Administration/ HTTP/1.1" 200 463230
+INFO 2020-10-25 14:52:59,373 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 14:53:02,407 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 6786
+INFO 2020-10-25 14:54:32,290 basehttp "GET /Administration/ HTTP/1.1" 200 464779
+INFO 2020-10-25 14:54:47,779 basehttp "GET /Administration/Produkte HTTP/1.1" 200 8452
+INFO 2020-10-25 14:55:19,703 basehttp "GET /Administration/ HTTP/1.1" 200 465241
+INFO 2020-10-25 14:56:10,260 basehttp "GET /Administration/ HTTP/1.1" 200 465662
+INFO 2020-10-25 15:00:28,879 basehttp "GET /Administration/ HTTP/1.1" 200 465895
+INFO 2020-10-25 15:00:28,926 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 15:01:18,470 basehttp "GET /Administration/Rechnungen HTTP/1.1" 200 6288
+INFO 2020-10-25 15:06:58,930 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 12840
+INFO 2020-10-25 15:06:58,986 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-25 15:07:02,660 basehttp "GET /Administration/Attribute/3/Bearbeiten HTTP/1.1" 200 6275
+INFO 2020-10-25 15:07:05,319 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 12840
