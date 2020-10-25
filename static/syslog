@@ -2014,3 +2014,4 @@ WARNING 2020-10-25 15:56:45,174 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
 INFO 2020-10-25 16:00:01,358 autoreload Watching for file changes with StatReloader
 INFO 2020-10-25 16:00:04,097 basehttp "GET /Kasse/Bezahlen/ HTTP/1.1" 200 11296
 INFO 2020-10-25 16:00:04,775 basehttp "GET /Kasse/Bezahlen/ HTTP/1.1" 200 11296
+INFO 2020-10-25 16:30:25,328 autoreload Watching for file changes with StatReloader
