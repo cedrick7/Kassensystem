@@ -7,9 +7,8 @@
     align-content: center;
 
     .calculator-form {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      height: auto;
+      position: absolute;
+      height: 454px;
       width: 100%;
       border: 0px solid black;
       -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);

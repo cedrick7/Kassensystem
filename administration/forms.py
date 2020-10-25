@@ -16,14 +16,26 @@ choices = (
 )
 
 
-
-
 class AttributeModelForm(forms.ModelForm):
     class Meta:
         model = Attribute
         fields = [
-            'title', 
-        ]   
+            'title',
+        ]
+        widgets = {
+
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Titel',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'attribute_title',
+                    'value': '',
+                }
+            )
+
+        }
+
 
 class BackupModelForm(forms.ModelForm):
     class Meta:
@@ -32,8 +44,50 @@ class BackupModelForm(forms.ModelForm):
             'title',
             'comment',
             'creation',
-            'employee', 
-        ]      
+            'employee',
+        ]
+        widgets = {
+
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Backupname',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'backup_title',
+                    'value': '',
+                }
+            ),
+            'comment': forms.Textarea(
+                attrs={
+                    'placeholder': 'Kommentar',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'backup_comment',
+                    'value': '',
+                }
+            ),
+            'creation': forms.DateTimeInput(
+                attrs={
+                    'placeholder': 'Erstellungsdatum',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'backup_employee',
+                    'value': '',
+                }
+
+            ),
+            'employee': forms.TextInput(
+                attrs={
+                    'placeholder': 'Ersteller',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'backup_employee',
+                    'value': '',
+                }
+            )
+
+        }
+
 
 class CashboxModelForm(forms.ModelForm):
     class Meta:
@@ -42,6 +96,28 @@ class CashboxModelForm(forms.ModelForm):
             'title',
             'amount'
         ]
+        widgets = {
+
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Kasse',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'cashbox_title',
+                    'value': '',
+                }
+            ),
+            'amount': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Geldinhalt',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'cashbox_amount',
+                    'value': '1000.00',
+                }
+            ),
+        }
+
 
 class CategoryModelForm(forms.ModelForm):
     class Meta:
@@ -52,27 +128,160 @@ class CategoryModelForm(forms.ModelForm):
             'discount',
         ]
 
+        widgets = {
+
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Kasse',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'category_title',
+                    'value': '',
+                }
+            ),
+            'color': forms.TextInput(
+                attrs={
+                    'placeholder': 'Farbe',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'category_color',
+                    'value': '',
+                }
+            ),
+            'discount': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Rabatt',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'category_discount',
+                    'value': '',
+                }
+            ),
+        }
+
+
 class CustomerModelForm(forms.ModelForm):
     class Meta:
         model = Customer
         fields = [
-            'firstname', 
+            'firstname',
             'lastname',
             'birthday',
             'email',
             'phonenumber',
-        ]         
+        ]
+        widgets = {
+
+            'firstname': forms.TextInput(
+                attrs={
+                    'placeholder': 'Vorname',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'customer_firstname',
+                    'value': '',
+                }
+            ),
+
+            'lastname': forms.TextInput(
+                attrs={
+                    'placeholder': 'Nachname',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'customer_lastname',
+                    'value': '',
+                }
+            ),
+            'birthday': forms.DateInput(
+                attrs={
+                    'placeholder': 'geburtstag',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'customer_firstname',
+                    'value': '01.01.1999',
+                }
+            ),
+            'email': forms.EmailInput(
+                attrs={
+                    'placeholder': 'Email',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'customer_firstname',
+                    'value': '',
+                }
+            ),
+            'phonenumber': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Mobil-Nummer',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'customer_phonenumber',
+                    'value': '',
+                }
+            ),
+        }
+
 
 class DiscountModelForm(forms.ModelForm):
     class Meta:
         model = Discount
         fields = [
-            'title', 
+            'title',
             'factor',
             'amount',
             'begin',
             'end',
         ]
+
+        widgets = {
+
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Name',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'discount_title',
+                    'value': '',
+                }
+            ),
+
+            'factor': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Faktor',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'discount_factor',
+                    'value': '',
+                }
+            ),
+            'amount': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Rabattsatz',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'discount_amount',
+                    'value': '',
+                }
+            ),
+            'begin': forms.DateInput(
+                attrs={
+                    'placeholder': 'Beginn',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'discount_begin',
+                    'value': '',
+                }
+            ),
+            'end': forms.DateInput(
+                attrs={
+                    'placeholder': 'Ende',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'discount_end',
+                    'value': '',
+                }
+            ),
+        }
+
 
 class EmployeeModelForm(forms.ModelForm):
     class Meta:
@@ -83,7 +292,60 @@ class EmployeeModelForm(forms.ModelForm):
             'password',
             'picture',
             'role',
-        ]                 
+        ]
+
+
+#        widgets = {
+#            'firstname': forms.TextInput(
+#                attrs={
+#                    'placeholder': 'Vorname',
+#                    'class': 'form-control needs-validation',
+#                    'style': styling,
+#                    'name': 'employee_firstname',
+#                    'value': ''
+#                }
+#            ),
+#
+#            'lastname': forms.TextInput(
+#                attrs={
+#                    'placeholder': 'Nachname',
+#                    'class': 'form-control needs-validation',
+#                    'style': styling,
+#                    'name': 'employee_lastname',
+#                    'value': ''
+#                }
+#            ),
+#
+#            'password': forms.PasswordInput(
+#                attrs={
+#                    'placeholder': 'Passwort',
+#                    'class': 'form-control needs-validation',
+#                    'style': styling,
+#                    'name': 'employee_password',
+#                    'value': ''
+#                }
+#            ),
+#
+#            'picture': forms.FileInput(
+#                attrs={
+#                    'placeholder': '',
+#                    'class': 'form-control needs-validation',
+#                    'style': styling,
+#                    'name': 'employee_picture',
+#                    'value': ''
+#                }
+#            ),
+#
+#            'role': forms.ModelChoiceField(
+#                attrs={
+#                    'placeholder': '',
+#                    'class': 'form-control needs-validation',
+#                    'style': styling,
+#                    'name': 'employee_role',
+#                    'value': ''
+#                }
+#            ),
+#        }
 
 class PaymenttoolModelForm(forms.ModelForm):
     class Meta:
@@ -91,7 +353,29 @@ class PaymenttoolModelForm(forms.ModelForm):
         fields = [
             'title',
             'path',
-        ]      
+        ]
+        widgets = {
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Zahlungstyp',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'paymenttool_title',
+                    'value': ''
+                }
+            ),
+
+            'path': forms.Textarea(
+                attrs={
+                    'placeholder': 'Pfad',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'paymenttool_path',
+                    'value': ''
+                }
+            ),
+        }
+
 
 class ProductModelForm(forms.ModelForm):
     class Meta:
@@ -110,6 +394,117 @@ class ProductModelForm(forms.ModelForm):
             'path',
             'attributes',
         ]
+        widgets = {
+            'type': forms.TextInput(
+                attrs={
+                    'placeholder': 'Produkttyp',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_type',
+                    'value': ''
+                }
+            ),
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Produktname',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_title',
+                    'value': '',
+                }
+            ),
+            'category': forms.TextInput(
+                attrs={
+                    'placeholder': 'Kategorie',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_category',
+                    'value': ''
+                }
+            ),
+            'description': forms.Textarea(
+                attrs={
+                    'placeholder': 'Beschreibung',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_description',
+                    'value': ''
+                }
+            ),
+            'cost': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Preis',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_cost',
+                    'value': ''
+                }
+            ),
+            'weight': forms.NumberInput(
+                attrs={
+                    'placeholder': 'gewicht',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_weight',
+                    'value': ''
+                }
+            ),
+            'stock': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Anzahl',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_stock',
+                    'value': ''
+                }
+            ),
+            'brand': forms.TextInput(
+                attrs={
+                    'placeholder': 'Marke',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_brand',
+                    'value': ''
+                }
+            ),
+            'tax': forms.NumberInput(
+                attrs={
+                    'placeholder': 'MW-Steuer',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_tax',
+                    'value': ''
+                }
+            ),
+            'discount': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Rabatt',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_discount',
+                    'value': ''
+                }
+            ),
+            'path': forms.Textarea(
+                attrs={
+                    'placeholder': 'Pfad',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_path',
+                    'value': ''
+                }
+            ),
+            'attributes': forms.Textarea(
+                attrs={
+                    'placeholder': 'Attribute',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'product_attributes',
+                    'value': ''
+                }
+            ),
+        }
+
 
 class SafeModelForm(forms.ModelForm):
     class Meta:
@@ -117,15 +512,57 @@ class SafeModelForm(forms.ModelForm):
         fields = [
             'title',
             'amount'
-        ]                 
+        ]
+        widgets = {
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Name',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'safe_title',
+                    'value': ''
+                }
+            ),
+            'amount': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Geldstand',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'safe_amount',
+                    'value': '1000.00'
+                }
+            ),
+
+        }
+
 
 class TaxModelForm(forms.ModelForm):
     class Meta:
         model = Tax
         fields = [
             'title',
-            'taxrate', 
+            'taxrate',
         ]
+        widgets = {
+            'title': forms.TextInput(
+                attrs={
+                    'placeholder': 'Name',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'tax_title',
+                    'value': ''
+                }
+            ),
+            'taxrate': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Mw-Steuer',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'tax_taxrate',
+                    'value': ''
+                }
+            ),
+        }
 
 
 class BillModelForm(forms.ModelForm):
@@ -138,8 +575,74 @@ class BillModelForm(forms.ModelForm):
             'cashbox',
             'paymenttool',
             'discount',
-            'path', 
-        ]  
+            'path',
+        ]
+        widgets = {
+            'creation': forms.DateTimeInput(
+                attrs={
+                    'placeholder': 'Erstelldatum',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_creation',
+                    'value': ''
+                }
+            ),
+            'totalcosts': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Gesammtkosten',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_totalcosts',
+                    'value': ''
+                }
+            ),
+            'employee': forms.TextInput(
+                attrs={
+                    'placeholder': 'Mitarbeiter',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_employee',
+                    'value': ''
+                }
+            ),
+            'cashbox': forms.TextInput(
+                attrs={
+                    'placeholder': 'Kassenname',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_cashbox',
+                    'value': ''
+                }
+            ),
+            'paymenttool': forms.TextInput(
+                attrs={
+                    'placeholder': 'Zahlungsart',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_paymenttool',
+                    'value': ''
+                }
+            ),
+            'discount': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Rabatt',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_discount',
+                    'value': ''
+                }
+            ),
+            'path': forms.Textarea(
+                attrs={
+                    'placeholder': 'Pfad',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'bill_path',
+                    'value': ''
+                }
+            ),
+        }
+
 
 class ReversalBillModelForm(forms.ModelForm):
     class Meta:
@@ -150,9 +653,72 @@ class ReversalBillModelForm(forms.ModelForm):
             'refund',
             'employee',
             'cashbox',
-            'path', 
-        ]      
-    
+            'path',
+        ]
+
+        widgets = {
+            'bill': forms.TextInput(
+                attrs={
+                    'placeholder': 'Name',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'reversalbill_bill',
+                    'value': ''
+                }
+            ),
+
+            'creation': forms.DateTimeInput(
+                attrs={
+                    'placeholder': 'Erstellt am',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'reversalbill_creation',
+                    'value': ''
+                }
+            ),
+
+            'refund': forms.NumberInput(
+                attrs={
+                    'placeholder': 'Erstattung',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'reversalbill_refund',
+                    'value': ''
+                }
+            ),
+
+            'employee': forms.TextInput(
+                attrs={
+                    'placeholder': 'Mitarbeiter',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'reversalbill_employee',
+                    'value': ''
+                }
+            ),
+
+            'cashbox': forms.TextInput(
+                attrs={
+                    'placeholder': 'Kasse',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'reversalbill_cashbox',
+                    'value': ''
+                }
+            ),
+
+            'path': forms.Textarea(
+                attrs={
+                    'placeholder': 'Pfad',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'reversalbill_path',
+                    'value': ''
+                }
+            ),
+        }
+
+
 class WorkTimeModelForm(forms.ModelForm):
     class Meta:
         model = Worktime
@@ -160,15 +726,39 @@ class WorkTimeModelForm(forms.ModelForm):
             'employee',
             'begin',
             'end',
-        ]                 
+        ]
 
+    widgets = {
+        'employee': forms.TextInput(
+            attrs={
+                'placeholder': 'mitarbeiter',
+                'class': 'form-control needs-validation',
+                'style': styling,
+                'name': 'worktime_employee',
+                'value': ''
+            }
+        ),
 
+        'begin': forms.TextInput(
+            attrs={
+                'placeholder': 'Eingecheckt',
+                'class': 'form-control needs-validation',
+                'style': styling,
+                'name': 'worktime_begin',
+                'value': ''
+            }
+        ),
 
-
-
-
-
-
+        'end': forms.TextInput(
+            attrs={
+                'placeholder': 'Ausgecheckt',
+                'class': 'form-control needs-validation',
+                'style': styling,
+                'name': 'worktime_end',
+                'value': ''
+            }
+        ),
+    }
 
 
 # ----------------------------------------------------------------------------------------------------------------------
