@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, EmployeeModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm, BillModelForm, ReversalBillModelForm
+from .forms import ProductModelForm, CategoryModelForm, DiscountModelForm, TaxModelForm, AttributeModelForm, CustomerModelForm, UserModelForm, BackupModelForm, PaymenttoolModelForm, SafeModelForm, CashboxModelForm, BillModelForm, ReversalBillModelForm
 from product.models import Product, Category, Discount, Tax, Attribute
 from customer.models import Customer
-from authorization.models import Employee
+
 from administration.models import Backup
 from analyzation.models import Worktime
 from cashbox.models import Safe, Cashbox, Paymenttool, Bill, Bill_Product, ReversalBill
@@ -12,6 +12,7 @@ import os, subprocess, logging
 from pathlib import Path
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import User
 
 from django.views.generic import (
     View,
@@ -592,7 +593,7 @@ class CustomerDeleteView(LoginRequiredMixin, DeleteView):
 # Angestellte
 class EmployeeListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_employees_copy.html'
-    queryset = Employee.objects.all()
+    queryset = User.objects.all()
 
 class EmployeeUpdateView(LoginRequiredMixin, View):
     template_name = 'new/administration_employees_create-update_copy.html'
@@ -601,7 +602,7 @@ class EmployeeUpdateView(LoginRequiredMixin, View):
         id = self.kwargs.get('id')
         obj = None
         if id is not None: 
-            obj = get_object_or_404(Employee, id=id)
+            obj = get_object_or_404(User, id=id)
         return obj
 
     # http/GET method
@@ -609,7 +610,7 @@ class EmployeeUpdateView(LoginRequiredMixin, View):
         context={}
         obj = self.get_object()
         if obj is not None:
-            form = EmployeeModelForm(instance=obj)
+            form = UserModelForm(instance=obj)
             context={
                 "object":obj,
                 "form":form, 
@@ -622,7 +623,7 @@ class EmployeeUpdateView(LoginRequiredMixin, View):
         context={}
         obj = self.get_object()
         if obj is not None:
-            form = EmployeeModelForm(request.POST, instance=obj)
+            form = UserModelForm(request.POST, instance=obj)
             if form.is_valid():
                 form.save()
                 logger.info('Mitarbeiter wurde erfolgreich geändert')
@@ -635,11 +636,11 @@ class EmployeeUpdateView(LoginRequiredMixin, View):
 
 class EmployeeDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'new/administration_employees_delete_copy.html'
-    queryset = Employee.objects.all()
+    queryset = User.objects.all()
 
     def get_object(self):
         id_ = self.kwargs.get("id")
-        return get_object_or_404(Employee, id=id_)
+        return get_object_or_404(User, id=id_)
 
     def get_success_url(self):
         return reverse('administration:employee_list')

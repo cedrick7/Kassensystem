@@ -6,6 +6,7 @@ from cashbox.models import *
 from customer.models import *
 from product.models import *
 from authorization.models import *
+from django.contrib.auth.models import User
 
 styling = ''
 
@@ -283,15 +284,20 @@ class DiscountModelForm(forms.ModelForm):
         }
 
 
-class EmployeeModelForm(forms.ModelForm):
+class UserModelForm(forms.ModelForm):
     class Meta:
-        model = Employee
+        model = User
         fields = [
-            'firstname',
-            'lastname',
+            'first_name',
+            'last_name',
+            'email',
+            'username',
             'password',
-            'picture',
-            'role',
+            'date_joined',
+            'is_active',
+            'is_staff',
+            'is_superuser',
+            'last_login',
         ]
 
 

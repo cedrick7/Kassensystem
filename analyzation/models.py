@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils import timezone
 import datetime
+from django.contrib.auth.models import User
 
-from authorization.models import Employee
 
 # Create your models here.
 
@@ -10,7 +10,7 @@ from authorization.models import Employee
 class Worktime(models.Model):
     begin    = models.DateTimeField(blank=True, default=timezone.now)    
     end      = models.DateTimeField(blank=True)
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, blank=False)
+    employee = models.ForeignKey(User, on_delete=models.CASCADE, blank=False)
 
 
     def duration(self):
