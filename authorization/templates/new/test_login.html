@@ -1,11 +1,96 @@
-<h3>Login</h3>
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
 
-<form method="POST" action="login">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="username"> <br>
-    <input type="password" name="password" placeholder="password"> <br>
- <input type="submit" value="Login">
-</form>
-{% for message in messages %}
-<p id="messages">{{message}} </p>
-{% endfor %}
+<!-- Head -->
+{% block specific %}
+<title>Login</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/authorization.css' %}" />
+{% endblock specific %}
+
+<!-- Body -->
+{% block content %}
+<div class="container" id="body">
+    <div class="card col-12">
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="bg-login-image" style="background-image: url({% static 'img/dogs/image1.jpeg' %});"></div>
+          </div>
+          <div class="col">
+            <h3>Login</h3>
+            <form method="POST" action="login">{% csrf_token %}
+                <!-- Input-field: 
+                <div class="form-row">
+                    <div class="form-group col">
+                      <div class="input-group">
+                        {{ form.role }}
+                        <div class="invalid-feedback">
+                            {{ form.role.errors }}
+                        </div>
+                      </div>
+                    </div>
+                </div> -->
+                <!-- Input-field: username -->
+                {{ form.non_field_errors }}
+                <div class="form-row">
+                    <div class="form-group col">
+                      <div class="input-group">
+                          <span class="input-group-item"><i class="fas fa-user"></i></span>
+                          <input type="text" name="username" placeholder="username"> <br>
+                          <!-- <div class="invalid-feedback">
+                            {{ form.userid.errors }}
+                          </div> -->
+                      </div>
+                    </div>
+                </div>
+                <!-- Input-field: password -->
+                {{ form.non_field_errors }}
+                <div class="form-row">
+                    <div class="form-group col">
+                      <div class="input-group">
+                          <span class="input-group-item"><i class="fas fa-key"></i></span>
+                          <input type="password" name="password" placeholder="password"> <br>
+                          <!-- <div class="invalid-feedback">
+                            {{ form.password.errors }}
+                          </div> -->
+                      </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <div class="form-row">
+                    <div class="form-group col">
+                      <div class="input-group">
+                          <input class="btn btn-primary btn-submit"  type="submit" value="Login">
+                      </div>
+                    </div>
+                </div>
+
+                <hr>
+            </form>
+
+            {% for message in messages %}
+              <p id="messages">{{message}} </p>
+            {% endfor %}
+            
+            <div class="div-links">
+                <a class="small" href="">Passwort vergessen?</a>
+            </div>
+            <div class="div-links">
+                <a class="small" href="">Passwort ändern.</a>
+            </div>
+            <div class="div-links">
+                <a class="small" href="{% url 'authorization:register' %}">Account beantragen.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/forms_validation.js' %}"></script>
+{% endblock javascript %}
