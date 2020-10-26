@@ -131,32 +131,32 @@ urlpatterns=[
     # Kassen
     path('Kassen', allowed_user(allowed_roles=['Administratoren'])(CashboxListView.as_view()), name='cashbox_list'),
     path('Kassen/Erstellen', allowed_user(allowed_roles=['Administratoren'])(CashboxCreateView.as_view()), name='cashbox_create'),
-    path('Kassen/<int:id>/Bearbeiten', CashboxUpdateView.as_view(), name='cashbox_update'),
-    path('Kassen/<int:id>/Löschen', CashboxDeleteView.as_view(), name='cashbox_delete'),
+    path('Kassen/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(CashboxUpdateView.as_view()), name='cashbox_update'),
+    path('Kassen/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(CashboxDeleteView.as_view()), name='cashbox_delete'),
 
 
     # Zahlungsmittel
-    path('Zahlungsmittel', PaymenttoolListView.as_view(), name='paymenttool_list'),
-    path('Zahlungsmittel/Erstellen', PaymenttoolCreateView.as_view(), name='paymenttool_create'),
-    path('Zahlungsmittel/<int:id>/Bearbeiten', PaymenttoolUpdateView.as_view(), name='paymenttool_update'),
-    path('Zahlungsmittel/<int:id>/Löschen', PaymenttoolDeleteView.as_view(), name='paymenttool_delete'),
+    path('Zahlungsmittel', allowed_user(allowed_roles=['Administratoren'])(PaymenttoolListView.as_view()), name='paymenttool_list'),
+    path('Zahlungsmittel/Erstellen', allowed_user(allowed_roles=['Administratoren'])(PaymenttoolCreateView.as_view()), name='paymenttool_create'),
+    path('Zahlungsmittel/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(PaymenttoolUpdateView.as_view()), name='paymenttool_update'),
+    path('Zahlungsmittel/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(PaymenttoolDeleteView.as_view()), name='paymenttool_delete'),
 
 
     # Datensicherungen
-    path('Datensicherungen', BackupListView.as_view(), name='backup_list'),
-    path('Datensicherungen/Erstellen', BackupCreateView.as_view(), name='backup_create'),
-    path('Datensicherungen/<int:id>/Bearbeiten', BackupUpdateView.as_view(), name='backup_update'),
-    path('Datensicherungen/<int:id>/Löschen', BackupDeleteView.as_view(), name='backup_delete'),
+    path('Datensicherungen', allowed_user(allowed_roles=['Administratoren'])(BackupListView.as_view()), name='backup_list'),
+    path('Datensicherungen/Erstellen', allowed_user(allowed_roles=['Administratoren'])(BackupCreateView.as_view()), name='backup_create'),
+    path('Datensicherungen/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(BackupUpdateView.as_view()), name='backup_update'),
+    path('Datensicherungen/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(BackupDeleteView.as_view()), name='backup_delete'),
 
     # Rechnungen
-    path('Rechnungen', BillListView.as_view(), name='bill_list'),
-    path('Rechnungen/<int:id>/Details', BillDetailView.as_view(), name='bill_details'),
-    path('Rechnungen/Erstellen', BillCreateView.as_view(), name='bill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
+    path('Rechnungen', allowed_user(allowed_roles=['Administratoren'])(BillListView.as_view()), name='bill_list'),
+    path('Rechnungen/<int:id>/Details', allowed_user(allowed_roles=['Administratoren'])(BillDetailView.as_view()), name='bill_details'),
+    path('Rechnungen/Erstellen', allowed_user(allowed_roles=['Administratoren'])(BillCreateView.as_view()), name='bill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
 
     # Rechnungen
-    path('Stornorechnungen', ReversalBillListView.as_view(), name='reversalbill_list'),
-    path('Stornorechnungen/<int:id>/Details', ReversalBillDetailView.as_view(), name='reversalbill_details'),
-    path('Stornorechnungen/Erstellen', ReversalBillCreateView.as_view(), name='reversalbill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
+    path('Stornorechnungen', allowed_user(allowed_roles=['Administratoren'])(ReversalBillListView.as_view()), name='reversalbill_list'),
+    path('Stornorechnungen/<int:id>/Details', allowed_user(allowed_roles=['Administratoren'])(ReversalBillDetailView.as_view()), name='reversalbill_details'),
+    path('Stornorechnungen/Erstellen', allowed_user(allowed_roles=['Administratoren'])(ReversalBillCreateView.as_view()), name='reversalbill_create'), # muss noch raus, dient nur zu Testzwecken, nicht stylen
     
 
 

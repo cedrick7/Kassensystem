@@ -6005,3 +6005,117 @@ INFO 2020-10-26 11:54:58,650 autoreload /home/max/Lokal/GitHub/Kassensystem/admi
 INFO 2020-10-26 11:54:58,847 autoreload Watching for file changes with StatReloader
 INFO 2020-10-26 11:55:15,150 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
 INFO 2020-10-26 11:55:15,363 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:55:49,813 basehttp "GET /Administration/Produkte HTTP/1.1" 200 14392
+INFO 2020-10-26 11:55:49,826 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+WARNING 2020-10-26 11:55:58,951 log Not Found: /
+WARNING 2020-10-26 11:55:58,951 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-26 11:55:58,971 log Not Found: /favicon.ico
+WARNING 2020-10-26 11:55:58,972 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-26 11:56:22,259 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-26 11:56:33,414 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+WARNING 2020-10-26 11:56:33,419 log Forbidden (Permission denied): /Administration/Produkte
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 51, in wrapper_func
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2020-10-26 11:56:33,419 basehttp "GET /Administration/Produkte HTTP/1.1" 403 135
+INFO 2020-10-26 11:56:54,450 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:56:54,667 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:04,864 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:05,062 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:07,193 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:07,383 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:11,618 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:11,838 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:13,957 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:14,148 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:17,330 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:17,570 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:21,746 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:21,957 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:26,157 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:26,378 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:28,501 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:28,700 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:33,842 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:34,039 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:36,167 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:36,376 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:44,600 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:44,798 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:46,922 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:47,130 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:51,373 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:51,584 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:54,725 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:54,922 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:57:58,066 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:57:58,278 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:00,403 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:00,606 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:04,798 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:04,995 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:08,145 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:08,337 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:11,546 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:11,757 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:13,889 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:14,106 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:18,326 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:18,518 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:23,689 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:23,881 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:26,021 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:26,221 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:29,416 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:29,638 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:32,769 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:32,985 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:37,168 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:37,369 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:40,507 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:40,707 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:44,890 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:45,101 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:47,224 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:47,441 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:50,574 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:50,764 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:53,899 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:54,090 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:58:58,228 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:58:58,423 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:00,546 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:00,769 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:08,942 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:09,177 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:13,325 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:13,536 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:25,776 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:25,987 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:28,135 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:28,327 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:33,518 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:33,720 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:35,845 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:36,035 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:40,266 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:40,511 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:42,675 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:42,887 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:46,102 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:46,336 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:49,474 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:49,683 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 11:59:52,861 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 11:59:53,102 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 12:00:18,492 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 12:00:18,709 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 12:00:28,981 autoreload /home/max/Lokal/GitHub/Kassensystem/administration/urls.py changed, reloading.
+INFO 2020-10-26 12:00:29,177 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 12:00:33,406 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py changed, reloading.
+INFO 2020-10-26 12:00:33,650 autoreload Watching for file changes with StatReloader
