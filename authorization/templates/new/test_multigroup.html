@@ -1,10 +1,25 @@
-<h1>Mehrere Gruppen</h1>
-<h3>Bitte Gruppe Wählen</h3>
+<h1>Mehrere Gruppen vorhanden</h1>
+<h3>Bitte ihre Tätigkeit auswählen</h3>
 
 {% for instance in links %}
 
-<p>{{instance}}<p>
-																						
-{% endfor %}
+{% ifequal instance "AD" %}
+    <form action="{% url 'administration:administration_dashboard' %}">
+        <input type="submit" class="btn btn-primary btn-sm"  value="Administrator" />
+    </form>
+{% endifequal %}
 
-<p>luddi versuch mal die links als kontext zu übergeben das man da drauf drücken kann wenn man mehrere Gruppen hat</p>
+{% ifequal instance "AN" %}
+    <form action="{% url 'administration:product_list' %}">
+        <input type="submit" class="btn btn-primary btn-sm"  value="Analyst" />
+    </form>
+{% endifequal %}
+
+
+{% ifequal instance "KA" %}
+    <form action="{% url 'administration:cashbox_list' %}">
+        <input type="submit" class="btn btn-primary btn-sm"  value="Analyst" />
+    </form>
+{% endifequal %}
+																				
+{% endfor %}

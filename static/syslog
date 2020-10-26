@@ -4823,3 +4823,526 @@ INFO 2020-10-25 21:18:55,410 basehttp "GET /Autorisierung/register HTTP/1.1" 200
 INFO 2020-10-25 21:19:50,654 basehttp "GET /Autorisierung/register HTTP/1.1" 200 188
 INFO 2020-10-25 21:20:10,578 basehttp "GET /Autorisierung/register HTTP/1.1" 200 206
 INFO 2020-10-25 21:21:03,755 basehttp "GET /Autorisierung/register HTTP/1.1" 200 328
+INFO 2020-10-26 08:54:14,105 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-26 08:54:27,255 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 175, in translate_token
+    op = OPERATORS[token]
+KeyError: '='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 964, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 897, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 166, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 177, in translate_token
+    return self.create_var(token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 900, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '=' from '='
+ERROR 2020-10-26 08:54:27,256 basehttp "GET /Autorisierung/login HTTP/1.1" 500 166186
+WARNING 2020-10-26 08:54:27,468 log Not Found: /favicon.ico
+WARNING 2020-10-26 08:54:27,468 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+ERROR 2020-10-26 08:54:39,729 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 175, in translate_token
+    op = OPERATORS[token]
+KeyError: '='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 964, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 897, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 166, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 177, in translate_token
+    return self.create_var(token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 900, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '=' from '='
+ERROR 2020-10-26 08:54:39,729 basehttp "GET /Autorisierung/login HTTP/1.1" 500 166407
+ERROR 2020-10-26 08:54:55,550 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 175, in translate_token
+    op = OPERATORS[token]
+KeyError: '='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 964, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 897, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 166, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/smartif.py", line 177, in translate_token
+    return self.create_var(token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 900, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '=' from '='
+ERROR 2020-10-26 08:54:55,550 basehttp "GET /Autorisierung/login HTTP/1.1" 500 166428
+ERROR 2020-10-26 09:29:25,211 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 814, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 979, in do_if
+    nodelist = parser.parse(('endif',))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'endfor', expected 'endif'. Did you forget to register or load this tag?
+ERROR 2020-10-26 09:29:25,211 basehttp "GET /Autorisierung/login HTTP/1.1" 500 152006
+INFO 2020-10-26 09:32:23,120 basehttp "GET /Autorisierung/login HTTP/1.1" 200 279
+INFO 2020-10-26 09:33:15,873 basehttp "GET /Autorisierung/login HTTP/1.1" 200 331
+INFO 2020-10-26 09:33:59,893 basehttp "GET /Autorisierung/login HTTP/1.1" 200 228
+INFO 2020-10-26 09:35:04,126 basehttp "GET /Autorisierung/login HTTP/1.1" 200 367
+INFO 2020-10-26 09:35:05,275 basehttp "GET /Administration/Safes? HTTP/1.1" 200 11905
+INFO 2020-10-26 09:35:05,296 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-10-26 09:35:05,298 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 304 0
+INFO 2020-10-26 09:35:05,300 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-10-26 09:35:05,302 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+ERROR 2020-10-26 09:35:45,929 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 280, in render
+    return self.nodelist_true.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' not found. 'dashboard' is not a valid view function or pattern name.
+ERROR 2020-10-26 09:35:45,929 basehttp "GET /Autorisierung/login HTTP/1.1" 500 136854
+ERROR 2020-10-26 09:36:35,586 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 280, in render
+    return self.nodelist_true.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' not found. 'dashboard' is not a valid view function or pattern name.
+ERROR 2020-10-26 09:36:35,586 basehttp "GET /Autorisierung/login HTTP/1.1" 500 136842
+ERROR 2020-10-26 09:36:50,341 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 280, in render
+    return self.nodelist_true.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' not found. 'dashboard' is not a valid view function or pattern name.
+ERROR 2020-10-26 09:36:50,341 basehttp "GET /Autorisierung/login HTTP/1.1" 500 136588
+INFO 2020-10-26 09:37:01,936 basehttp "GET /Autorisierung/login HTTP/1.1" 200 367
+INFO 2020-10-26 09:37:15,771 basehttp "GET /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-26 09:37:16,473 basehttp "GET /Autorisierung/login HTTP/1.1" 200 362
+INFO 2020-10-26 09:37:17,300 basehttp "GET /Administration/? HTTP/1.1" 200 1226043
+INFO 2020-10-26 09:37:42,203 basehttp "GET /Autorisierung/login HTTP/1.1" 200 384
+ERROR 2020-10-26 09:39:12,588 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 280, in render
+    return self.nodelist_true.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_cashbox_list' not found. 'administration_cashbox_list' is not a valid view function or pattern name.
+ERROR 2020-10-26 09:39:12,589 basehttp "GET /Autorisierung/login HTTP/1.1" 500 138157
+INFO 2020-10-26 09:39:45,358 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py changed, reloading.
+INFO 2020-10-26 09:39:45,571 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-26 09:39:47,028 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py", line 24, in wrapper_func
+    return render(request,'new/test_multigroup.html', context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 280, in render
+    return self.nodelist_true.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/max/Lokal/p1_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'administration_product_list' not found. 'administration_product_list' is not a valid view function or pattern name.
+ERROR 2020-10-26 09:39:47,029 basehttp "GET /Autorisierung/login HTTP/1.1" 500 138984
+INFO 2020-10-26 09:40:05,001 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py changed, reloading.
+INFO 2020-10-26 09:40:05,218 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:40:07,357 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py changed, reloading.
+INFO 2020-10-26 09:40:07,576 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:40:32,033 basehttp "GET /Autorisierung/login HTTP/1.1" 200 612
+INFO 2020-10-26 09:40:35,355 basehttp "GET /Administration/? HTTP/1.1" 200 1246536
+INFO 2020-10-26 09:40:36,918 basehttp "GET /Administration/Kassen? HTTP/1.1" 200 12256
+INFO 2020-10-26 09:40:38,968 basehttp "GET /Administration/Produkte? HTTP/1.1" 200 14392
+INFO 2020-10-26 09:41:05,540 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/decorators.py changed, reloading.
+INFO 2020-10-26 09:41:05,778 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:41:59,538 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:41:59,767 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:42:06,028 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:42:06,263 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:42:12,528 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:42:12,760 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:42:14,914 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:42:15,108 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:42:16,360 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:42:16,588 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:42:17,836 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:42:18,072 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:42:20,853 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:42:23,368 basehttp "GET /Administration/? HTTP/1.1" 200 1250899
+INFO 2020-10-26 09:42:25,396 basehttp "GET /Administration/Kassen? HTTP/1.1" 200 12256
+INFO 2020-10-26 09:42:26,845 basehttp "GET /Administration/Produkte? HTTP/1.1" 200 14392
+INFO 2020-10-26 09:43:06,021 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:43:09,544 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:43:14,829 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:43:23,523 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:43:29,325 basehttp "GET /Administration/ HTTP/1.1" 200 1252550
+INFO 2020-10-26 09:43:29,342 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-10-26 09:43:29,342 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-26 09:43:29,343 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-10-26 09:43:29,815 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-10-26 09:43:31,804 basehttp "GET /Administration/ HTTP/1.1" 200 1253773
+INFO 2020-10-26 09:43:49,191 basehttp "GET /Autorisierung/register HTTP/1.1" 200 575
+INFO 2020-10-26 09:44:25,823 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+WARNING 2020-10-26 09:44:26,038 log Not Found: /favicon.ico
+WARNING 2020-10-26 09:44:26,038 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-26 09:45:04,859 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:45:08,992 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:45:21,008 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:45:25,791 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:45:27,822 basehttp "GET /Autorisierung/login HTTP/1.1" 200 575
+WARNING 2020-10-26 09:45:43,892 log Not Found: /
+WARNING 2020-10-26 09:45:43,892 basehttp "GET / HTTP/1.1" 404 4016
+INFO 2020-10-26 09:45:56,196 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-26 09:46:07,621 basehttp "POST /Autorisierung/login HTTP/1.1" 200 433
+INFO 2020-10-26 09:46:11,772 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-10-26 09:46:11,792 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 13381
+INFO 2020-10-26 09:46:12,051 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-26 09:46:12,051 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-10-26 09:46:12,052 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-10-26 09:46:12,052 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+WARNING 2020-10-26 09:46:27,198 log Not Found: /favicon.ico
+WARNING 2020-10-26 09:46:27,198 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-26 09:46:33,629 basehttp "GET /Administration/Steuers%C3%A4tze HTTP/1.1" 200 13381
+INFO 2020-10-26 09:46:33,673 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-10-26 09:46:55,311 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:46:55,527 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:47:24,996 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:47:25,237 autoreload Watching for file changes with StatReloader
+INFO 2020-10-26 09:48:06,761 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
+INFO 2020-10-26 09:48:06,979 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-26 09:49:40,752 log Not Found: /
+WARNING 2020-10-26 09:49:40,753 basehttp "GET / HTTP/1.1" 404 4016
+WARNING 2020-10-26 09:49:40,778 log Not Found: /favicon.ico
+WARNING 2020-10-26 09:49:40,778 basehttp "GET /favicon.ico HTTP/1.1" 404 4067
+INFO 2020-10-26 09:49:51,035 basehttp "GET /Autorisierung/login HTTP/1.1" 200 363
+INFO 2020-10-26 09:50:08,320 basehttp "POST /Autorisierung/login HTTP/1.1" 200 575
+INFO 2020-10-26 09:50:13,580 basehttp "GET /Administration/Kassen? HTTP/1.1" 200 12256
+INFO 2020-10-26 09:50:13,599 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-10-26 09:50:13,601 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-10-26 09:50:13,602 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-10-26 09:50:13,607 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514

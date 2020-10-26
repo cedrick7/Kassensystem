@@ -81,7 +81,32 @@ def loginUser(request, *args, **kwargs):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('administration:tax_list')
+            groups = user.groups.all()
+            count = groups.count()
+            links = []
+            if count > 1:
+                if request.user.groups.filter(name = 'Administratoren').exists():
+                   links.append("AD")
+                
+                if request.user.groups.filter(name = 'Kassierer').exists():
+                    links.append('KA')
+
+                if request.user.groups.filter(name = 'Analysten').exists():
+                    links.append('AN')
+
+                context = {'links':links}
+                return render(request,'new/test_multigroup.html', context)
+
+            # Weiterleitung auf Basis der Gruppe    
+            else:
+                if request.user.groups.filter(name = 'Administratoren').exists():
+                    return redirect('administration:product_list')
+
+                if request.user.groups.filter(name = 'Kassierer').exists():
+                    return redirect('administration:cashbox_list')
+
+                if request.user.groups.filter(name = 'Analysten').exists():
+                    return redirect('administration:product_list')
         else:
             messages.info(request, 'Nutzername und Passwort stimmen nicht überein')
 

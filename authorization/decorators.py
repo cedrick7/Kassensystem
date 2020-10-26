@@ -12,13 +12,13 @@ def unauthenticated_user(view_func):
             links = []
             if count > 1:
                 if request.user.groups.filter(name = 'Administratoren').exists():
-                   links.append("Link zu Administrator")
+                   links.append("AD")
                 
                 if request.user.groups.filter(name = 'Kassierer').exists():
-                    links.append('Link zu Kassierer')
+                    links.append('KA')
 
                 if request.user.groups.filter(name = 'Analysten').exists():
-                    links.append('Link zu Analyten')
+                    links.append('AN')
 
                 context = {'links':links}
                 return render(request,'new/test_multigroup.html', context)
@@ -26,7 +26,7 @@ def unauthenticated_user(view_func):
             # Weiterleitung auf Basis der Gruppe    
             else:
                 if request.user.groups.filter(name = 'Administratoren').exists():
-                    return redirect('administration:administration_dashboard')
+                    return redirect('administration:product_list')
 
                 if request.user.groups.filter(name = 'Kassierer').exists():
                     return redirect('administration:cashbox_list')
