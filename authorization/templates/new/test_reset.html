@@ -1,0 +1,38 @@
+  {% extends 'base.html' %}
+  {% load static %}
+  {% load bootstrap4 %}
+  {% load widget_tweaks %}
+  
+  <!-- Head -->
+  {% block specific %}
+  <title>Login</title>
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/authorization.css' %}" />
+  {% endblock specific %}
+  
+  {% block content %}
+  
+  <div class="container" id="body">
+      <div class="card col-12">
+         <div class="card-body">
+          <div class="row">
+              <div class="col">
+              <h1>Passwort zurücksetzen</h1>
+              <form method="post">
+                {% csrf_token %}
+                <p> Username eingeben{{ form.username }}</p>
+                <p> Neues Password eingeben{{ form.password}}</p>
+                <button type="submit">Änderung speichern</button>
+                {% for message in messages %}
+                <p id="messages">{{message}} </p>
+                {% endfor %}
+              </form>            
+          </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  
+  {% endblock content %}

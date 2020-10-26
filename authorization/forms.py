@@ -14,7 +14,14 @@ class CreateUserForm(UserCreationForm):
         'password1',
         'password2',
         'groups',
+        'is_active',
         ]
+
+class ChangePasswordForm(forms.Form):
+    username = forms.CharField(max_length=150) 
+    password = forms.CharField(max_length=150, widget=forms.PasswordInput) 
+       
+
 
 # class UserModelForm(form.Model):
 #     class = Meta

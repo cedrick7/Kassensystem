@@ -76,7 +76,7 @@
             {% endfor %}
             
             <div class="div-links">
-                <a class="small" href="">Passwort vergessen?</a>
+                <a class="small" href="{% url 'authorization:reset' %}">Passwort vergessen?</a>
             </div>
             <div class="div-links">
                 <a class="small" href="{% url 'authorization:register' %}">Account beantragen.</a>
