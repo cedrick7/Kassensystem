@@ -13,6 +13,7 @@ from pathlib import Path
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from authorization.decorators import allowed_user
 
 from django.views.generic import (
     View,
@@ -31,6 +32,7 @@ logger = logging.getLogger('django')
 
 # Administration Dashboard
 @login_required
+@allowed_user(allowed_roles=['Administratoren'])
 def administration_dashboard(request, *args, **kwargs):
     BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
     file = open(str(os.path.join(BASE_DIR, "static", "syslog")), 'r')

@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path 
+from authorization.decorators import allowed_user
 
 
 from .views import (
@@ -78,58 +79,58 @@ urlpatterns=[
     path('', administration_dashboard, name='administration_dashboard'),
 
     # Produkte
-    path('Produkte', ProductListView.as_view(), name='product_list'),
-    path('Produkte/Erstellen', ProductCreateView.as_view(), name='product_create'),
-    path('Produkte/<int:id>/Bearbeiten', ProductUpdateView.as_view(), name='product_update'),
-    path('Produkte/<int:id>/Löschen', ProductDeleteView.as_view(), name='product_delete'),
+    path('Produkte', allowed_user(allowed_roles=['Administratoren'])(ProductListView.as_view()), name='product_list'),
+    path('Produkte/Erstellen', allowed_user(allowed_roles=['Administratoren'])(ProductCreateView.as_view()), name='product_create'),
+    path('Produkte/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(ProductUpdateView.as_view()), name='product_update'),
+    path('Produkte/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(ProductDeleteView.as_view()), name='product_delete'),
 
     # Kategorien
-    path('Kategorien', CategoryListView.as_view(), name='category_list'),
-    path('Kategorien/Erstellen', CategoryCreateView.as_view(), name='category_create'),
-    path('Kategorien/<int:id>/Bearbeiten', CategoryUpdateView.as_view(), name='category_update'),
-    path('Kategorien/<int:id>/Löschen', CategoryDeleteView.as_view(), name='category_delete'),
+    path('Kategorien', allowed_user(allowed_roles=['Administratoren'])(CategoryListView.as_view()), name='category_list'),
+    path('Kategorien/Erstellen', allowed_user(allowed_roles=['Administratoren'])(CategoryCreateView.as_view()), name='category_create'),
+    path('Kategorien/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(CategoryUpdateView.as_view()), name='category_update'),
+    path('Kategorien/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(CategoryDeleteView.as_view()), name='category_delete'),
 
     # Rabatt
-    path('Rabatte', DiscountListView.as_view(), name='discount_list'),
-    path('Rabatte/Erstellen', DiscountCreateView.as_view(), name='discount_create'),
-    path('Rabatte/<int:id>/Bearbeiten', DiscountUpdateView.as_view(), name='discount_update'),
-    path('Rabatte/<int:id>/Löschen', DiscountDeleteView.as_view(), name='discount_delete'),
+    path('Rabatte', allowed_user(allowed_roles=['Administratoren'])(DiscountListView.as_view()), name='discount_list'),
+    path('Rabatte/Erstellen', allowed_user(allowed_roles=['Administratoren'])(DiscountCreateView.as_view()), name='discount_create'),
+    path('Rabatte/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(DiscountUpdateView.as_view()), name='discount_update'),
+    path('Rabatte/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(DiscountDeleteView.as_view()), name='discount_delete'),
 
     # Steuersätze
-    path('Steuersätze', TaxListView.as_view(), name='tax_list'),
-    path('Steuersätze/Erstellen', TaxCreateView.as_view(), name='tax_create'),
-    path('Steuersätze/<int:id>/Bearbeiten', TaxUpdateView.as_view(), name='tax_update'),
-    path('Steuersätze/<int:id>/Löschen', TaxDeleteView.as_view(), name='tax_delete'),
+    path('Steuersätze', allowed_user(allowed_roles=['Administratoren'])(TaxListView.as_view()), name='tax_list'),
+    path('Steuersätze/Erstellen', allowed_user(allowed_roles=['Administratoren'])(TaxCreateView.as_view()), name='tax_create'),
+    path('Steuersätze/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(TaxUpdateView.as_view()), name='tax_update'),
+    path('Steuersätze/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(TaxDeleteView.as_view()), name='tax_delete'),
 
     # Attribute
-    path('Attribute', AttributeListView.as_view(), name='attribute_list'),
-    path('Attribute/Erstellen', AttributeCreateView.as_view(), name='attribute_create'),
-    path('Attribute/<int:id>/Bearbeiten', AttributeUpdateView.as_view(), name='attribute_update'),
-    path('Attribute/<int:id>/Löschen', AttributeDeleteView.as_view(), name='attribute_delete'),
+    path('Attribute', allowed_user(allowed_roles=['Administratoren'])(AttributeListView.as_view()), name='attribute_list'),
+    path('Attribute/Erstellen', allowed_user(allowed_roles=['Administratoren'])(AttributeCreateView.as_view()), name='attribute_create'),
+    path('Attribute/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(AttributeUpdateView.as_view()), name='attribute_update'),
+    path('Attribute/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(AttributeDeleteView.as_view()), name='attribute_delete'),
 
     # Kunden
-    path('Kunden', CustomerListView.as_view(), name='customer_list'),
-    path('Kunden/Erstellen', CustomerCreateView.as_view(), name='customer_create'),
-    path('Kunden/<int:id>/Bearbeiten', CustomerUpdateView.as_view(), name='customer_update'),
-    path('Kunden/<int:id>/Löschen', CustomerDeleteView.as_view(), name='customer_delete'),
+    path('Kunden', allowed_user(allowed_roles=['Administratoren'])(CustomerListView.as_view()), name='customer_list'),
+    path('Kunden/Erstellen', allowed_user(allowed_roles=['Administratoren'])(CustomerCreateView.as_view()), name='customer_create'),
+    path('Kunden/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(CustomerUpdateView.as_view()), name='customer_update'),
+    path('Kunden/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(CustomerDeleteView.as_view()), name='customer_delete'),
 
     # Mitarbeiter
-    path('Mitarbeiter', EmployeeListView.as_view(), name='employee_list'),
-    path('Mitarbeiter/<int:id>/Bearbeiten', EmployeeUpdateView.as_view(), name='employee_update'),
-    path('Mitarbeiter/<int:id>/Löschen', EmployeeDeleteView.as_view(), name='employee_delete'),
+    path('Mitarbeiter', allowed_user(allowed_roles=['Administratoren'])(EmployeeListView.as_view()), name='employee_list'),
+    path('Mitarbeiter/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(EmployeeUpdateView.as_view()), name='employee_update'),
+    path('Mitarbeiter/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(EmployeeDeleteView.as_view()), name='employee_delete'),
 
     # Arbeitszeiten
-    path('Arbeitszeiten', WorkTimeListView.as_view(), name='worktime_list'),
+    path('Arbeitszeiten', allowed_user(allowed_roles=['Administratoren'])(WorkTimeListView.as_view()), name='worktime_list'),
 
     # Safes
-    path('Safes', SafeListView.as_view(), name='safe_list'),
-    path('Safes/Erstellen', SafeCreateView.as_view(), name='safe_create'),
-    path('Safes/<int:id>/Bearbeiten', SafeUpdateView.as_view(), name='safe_update'),
-    path('Safes/<int:id>/Löschen', SafeDeleteView.as_view(), name='safe_delete'),
+    path('Safes', allowed_user(allowed_roles=['Administratoren'])(SafeListView.as_view()), name='safe_list'),
+    path('Safes/Erstellen', allowed_user(allowed_roles=['Administratoren'])(SafeCreateView.as_view()), name='safe_create'),
+    path('Safes/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(SafeUpdateView.as_view()), name='safe_update'),
+    path('Safes/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(SafeDeleteView.as_view()), name='safe_delete'),
 
     # Kassen
-    path('Kassen', CashboxListView.as_view(), name='cashbox_list'),
-    path('Kassen/Erstellen', CashboxCreateView.as_view(), name='cashbox_create'),
+    path('Kassen', allowed_user(allowed_roles=['Administratoren'])(CashboxListView.as_view()), name='cashbox_list'),
+    path('Kassen/Erstellen', allowed_user(allowed_roles=['Administratoren'])(CashboxCreateView.as_view()), name='cashbox_create'),
     path('Kassen/<int:id>/Bearbeiten', CashboxUpdateView.as_view(), name='cashbox_update'),
     path('Kassen/<int:id>/Löschen', CashboxDeleteView.as_view(), name='cashbox_delete'),
 
