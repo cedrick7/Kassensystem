@@ -35,6 +35,7 @@ def unauthenticated_user(view_func):
                 if request.user.groups.filter(name = 'Analysten').exists():
                     return redirect('administration:product_list')
         else:
+            print("nicht angemeldet")
             return view_func(request, *args, **kwargs)
     return wrapper_func
 

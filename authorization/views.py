@@ -171,11 +171,13 @@ def passwordReset(request, *args, **kwargs):
             context = {
             'form':form
             }
+            return render(request, "new/test_reset.html", context)
     else:
         form = ChangePasswordForm
         context = {
-            'form':form
+        'form':form
         }
+        return render(request, "new/test_reset.html", context)
 
 class RequestListView(ListView):
     template_name = 'new/test_requests.html'
