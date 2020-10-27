@@ -61,6 +61,7 @@ def registerUser(request, *args, **kwargs):
                 username = form.cleaned_data.get('username')
                 user = User.objects.get(username=username)
                 messages.success(request, 'Account wurde erstellt für ' + username + ' mit Rechten für:')
+
                 # boolean values for request
                 admn = False
                 nlyst = False
@@ -89,7 +90,7 @@ def registerUser(request, *args, **kwargs):
                 entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ,admin=admn,kassierer=nlyst,analyst=kssrr)
                 ############################################
                 # set inactive
-                user.is_active = False
+                user.is_active = True
                 user.save(update_fields=['is_active'])
                 return redirect('authorization:login')
         else:
@@ -168,7 +169,7 @@ def passwordReset(request, *args, **kwargs):
                 entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
                 ############################################
                 # set inactive
-                user.is_active = False
+                user.is_active = True
                 user.save(update_fields=['is_active'])
                 return redirect('authorization:login')
             except:
