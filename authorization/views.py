@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
-from .forms import CreateUserForm, ChangePasswordForm
+from .forms import CreateUserForm, ChangePasswordForm, RequestForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.hashers import make_password
+from .models import Request
 from .decorators import unauthenticated_user
 from django.views.generic import (
     View,
+    ListView,
 )
 
 
@@ -59,11 +61,33 @@ def registerUser(request, *args, **kwargs):
                 username = form.cleaned_data.get('username')
                 user = User.objects.get(username=username)
                 messages.success(request, 'Account wurde erstellt für ' + username + ' mit Rechten für:')
+                # boolean values for request
+                admn = False
+                nlyst = False
+                kssrr = False 
                 for i in groups:
-                    #add user to groups
+                    #add user to groups and set values for request
                     group = Group.objects.get(name=i)
-                    group.user_set.add(user)                        #Django fügt nicht die Gruppen hinzu, deswegen manuell
+                    tmp = str(group)
+                    if tmp == 'Administratoren':
+                        admn = True
+                    elif tmp == 'Analysten':
+                        nlyst = True
+                    elif tmp == 'Kassierer':
+                        nlyst = True
+                    group.user_set.add(user)                      
+                    #Django fügt nicht die Gruppen hinzu, deswegen manuell
                     messages.success(request,i)
+                    
+                ############################################
+                #           request wird generiert         #
+                ############################################
+                usrnme = request.POST.get("username","")
+                frstnm = request.POST.get("first_name","")
+                lstnm = request.POST.get("last_name","")
+                typ = 'AC'
+                entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ,admin=admn,kassierer=nlyst,analyst=kssrr)
+                ############################################
                 # set inactive
                 user.is_active = False
                 user.save(update_fields=['is_active'])
@@ -133,6 +157,8 @@ def passwordReset(request, *args, **kwargs):
                 user.password = password
                 user.save(update_fields=['password'])
                 messages.info(request, 'Passwort erfolgreich geändert')
+                user.is_active = False
+                user.save(update_fields=['is_active'])
                 return redirect('authorization:login')
             except:
                 messages.info(request, 'Nutzer nicht vorhanden')
@@ -150,15 +176,19 @@ def passwordReset(request, *args, **kwargs):
         context = {
             'form':form
         }
-    return render(request, "new/test_reset.html", context)
 
-def set_active(username)
-    try:
-        user = User.objects.get(username=username)
-        user.is_active = True
-        user.save(update_fields=['is_active'])
-    except :
-        messages.info("Nutzer konnte nicht aktiviert werden")
+class RequestListView(ListView):
+    template_name = 'new/test_requests.html'
+    queryset = Request.objects.all()
+
+
+# def set_active(username):
+#     try:
+#         user = User.objects.get(username=username)
+#         user.is_active = True
+#         user.save(update_fields=['is_active'])
+#     except :
+#         messages.info("Nutzer konnte nicht aktiviert werden")
 # def authorization_register_view(request, *args, **kwargs):
 #     register_form = FormRegister(request.POST or None)
 

@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Request, Active_Accounts
 
 
 class CreateUserForm(UserCreationForm):
@@ -20,8 +21,24 @@ class CreateUserForm(UserCreationForm):
 class ChangePasswordForm(forms.Form):
     username = forms.CharField(max_length=150) 
     password = forms.CharField(max_length=150, widget=forms.PasswordInput) 
-       
 
+class RequestForm(forms.Form):
+    class Meta:
+        fields = [
+            'firstname',
+            'lastname',
+            'username',
+            'type',
+            'admin',
+            'analyst',
+            'kassierer',
+        ]
+
+class Active_AccountsForm(forms.Form):
+    class Meta:
+        fields = [
+            'username'
+        ]
 
 # class UserModelForm(form.Model):
 #     class = Meta

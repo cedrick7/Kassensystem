@@ -1,0 +1,16 @@
+<h1>Ausstehende requests</h1>
+{% for instance in object_list reversed %}
+<p>--------------------------------</p>		
+{% ifequal instance.type "AC" %}
+<p>Account Anfrage für {{ instance.firstname }} {{ instance.lastname }}</p>
+<p>Nutzername: {{ instance.username }} </p>
+<p>Gruppe Administratoren: {{ instance.admin }}</p>
+<p>Gruppe Analysten: {{ instance.analyst }}</p>
+<p>Gruppe Kassierer: {{ instance.kassierer }}</p>
+{% endifequal %}				
+
+
+
+
+{% endfor %}
+<p>--------------------------------</p>
