@@ -156,20 +156,25 @@ def passwordReset(request, *args, **kwargs):
                 user = User.objects.get(username=username)
                 password = make_password(form.cleaned_data['password'])
                 user.password = password
+                query = Request.objects.filter(type='PR',username=username)
+                if query is not None:
+                    messages.info(request, 'Es existiert bereits eine Anfrage!')
+                    return redirect('authorization:login')
+                print(query)
                 user.save(update_fields=['password'])
                 messages.info(request, 'Passwort erfolgreich geändert')
-                # passwort geändert, nutzer ist inaktiv
+                # passwort geändert
                 ############################################
                 #           request wird generiert         #
                 ############################################
                 usrnme = request.POST.get("username","")
                 frstnm = request.POST.get("first_name","")
                 lstnm = request.POST.get("last_name","")
-                typ = 'AC'
+                typ = 'PR'
                 entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
                 ############################################
                 # set inactive
-                user.is_active = True
+                user.is_active = False
                 user.save(update_fields=['is_active'])
                 return redirect('authorization:login')
             except:
@@ -177,7 +182,8 @@ def passwordReset(request, *args, **kwargs):
                 form = ChangePasswordForm
                 context = {
                 'form':form
-        }
+                }
+                return render(request, "new/test_reset.html", context)
         else:
             form = ChangePasswordForm
             context = {
