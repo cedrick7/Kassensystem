@@ -41,8 +41,8 @@
             
             
             {% ifequal instance "KA" %}
-                <form action="{% url 'cashbox:cashbox_dashboard' %}">
-                    <input type="submit" class="btn btn-primary btn-sm"  value="Kassierer" />
+                <form action="{% url 'administration:cashbox_list' %}">
+                    <input type="submit" class="btn btn-primary btn-sm"  value="Analyst" />
                 </form>
             {% endifequal %}
             
