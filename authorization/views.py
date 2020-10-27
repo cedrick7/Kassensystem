@@ -152,7 +152,7 @@ def passwordReset(request, *args, **kwargs):
         }
     return render(request, "new/test_reset.html", context)
 
-def set_active(username)
+def set_active(username):
     try:
         user = User.objects.get(username=username)
         user.is_active = True

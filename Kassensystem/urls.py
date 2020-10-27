@@ -25,19 +25,21 @@ from cashbox.views import *
 from administration.views import *
 from analyzation.views import *
 from administration.urls import * 
+from cashbox.urls import *
 from django.urls import include, path
 
 urlpatterns = [
 
     path('Administration/', include('administration.urls')),
     path('Autorisierung/', include('authorization.urls')),
+    path('Kasse/', include('cashbox.urls')),
 
 
     path('Kunden/', customer_customer_view, name='customer'),
 
-    path('Kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
-    path('Kasse/Bezahlen/', cashbox_pay_view, name='cashbox_pay'),
-    path('Kasse/Mehr/', cashbox_more_view, name='cashbox_more'),
+    # path('Kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
+    # path('Kasse/Bezahlen/', cashbox_pay_view, name='cashbox_pay'),
+    # path('Kasse/Mehr/', cashbox_more_view, name='cashbox_more'),
 
     # path('Admin/', administration_dashboard_view, name='administration_dashboard'),
     # path('Admin/Produkte/', administration_products_view, name='administration_products'),

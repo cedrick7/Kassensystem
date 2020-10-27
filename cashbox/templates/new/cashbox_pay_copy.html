@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Bezahlen</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cashbox_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cashbox_pay.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cart-calculator.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/calculator.css' %}"/>
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+	{% include 'cashbox_pay_navbar.html' %}
+{% endblock navbar %}
+
+{% block content %}
+	<div class="page">
+		<section id="body">
+			<div class="container">
+				<div class="col">
+					<div class="row row-coins">
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/5.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/10.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/20.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/50.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/100.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/200.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/500.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/2.gif' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/1.gif' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/50c.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/20c.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/10c.jpg' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/5c.png' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/2c.png' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/1c.png' %});"></a>
+						</div>
+						<div class="col-3 col-coin"><a href="#" class="coin"
+						                               style="background-image: url({% static 'img/coins/Gutschein.jpg' %});"></a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row">
+						<div class="col-6">
+							<div class="row">
+								<div class="col-12">
+									<p>Total Netto</p><span>20,00<span>€</span></span>
+								</div>
+								<div class="col-12">
+									<p>MWST(19,00%)</p><span>19,98<span>€</span></span>
+								</div>
+								<div class="col-12">
+									<p class="p-bold">Total Brutto</p><span class="p-bold">19,98<span
+										class="p-bold">€</span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row">
+						<div class="col-6">
+							<div class="row">
+								<div class="col-12">
+									<p>Gezahl:</p><span>20,00<span>€</span></span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<p>Offener Betrag:</p><span>19,98<span>€</span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container div-cart-calculator">
+				<div class="row">
+					<div class="col col-cart">
+						<div class="card">
+							<div class="card-body">
+								<h4 class="card-title">Warenkorb</h4>
+								{% include 'cart.html' %}
+							</div>
+						</div>
+					</div>
+					<div class="col col-calculator">
+						<div class="row">
+							<div class="col">
+								<div role="tablist" id="accordion-calculator">
+									<div class="card">
+										<div class="card-header" role="tab">
+											<a data-toggle="collapse" aria-expanded="false"
+											   aria-controls="accordion-calculator .accordion-item"
+											   href="#accordion-calculator .accordion-item">Taschenrechner</a>
+										</div>
+										<div class="collapse accordion-item" role="tabpanel"
+										     data-parent="#accordion-calculator">
+											<div class="card-body calculator">
+												{% include 'calculator.html' %}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/calculator.js' %}"></script>
+{% endblock javascript %}

@@ -152,7 +152,7 @@ class CategoryCreateView(LoginRequiredMixin, View):
         form = CategoryModelForm()
         context = {
             "form":form,
-            "headline": "Erstelle eine Kategorie"
+            "headline": "Erstelle eine Kategorie",
         }
         return render(request, self.template_name, context)
 
