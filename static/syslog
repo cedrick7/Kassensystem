@@ -7278,3 +7278,307 @@ INFO 2020-10-26 18:52:44,862 autoreload /home/max/Lokal/GitHub/Kassensystem/auth
 INFO 2020-10-26 18:52:45,079 autoreload Watching for file changes with StatReloader
 INFO 2020-10-26 18:54:04,905 autoreload /home/max/Lokal/GitHub/Kassensystem/authorization/views.py changed, reloading.
 INFO 2020-10-26 18:54:05,128 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:36:03,304 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:38:17,353 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:40:42,419 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-10-27 13:40:43,370 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:41:33,347 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\urls.py changed, reloading.
+INFO 2020-10-27 13:41:34,321 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:41:40,002 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\urls.py changed, reloading.
+INFO 2020-10-27 13:41:40,992 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-27 13:41:49,045 log Forbidden (Permission denied): /Administration/Produkte
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\decorators.py", line 51, in wrapper_func
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2020-10-27 13:41:49,048 basehttp "GET /Administration/Produkte HTTP/1.1" 403 135
+WARNING 2020-10-27 13:41:49,332 log Not Found: /favicon.ico
+WARNING 2020-10-27 13:41:49,333 basehttp "GET /favicon.ico HTTP/1.1" 404 3774
+INFO 2020-10-27 13:41:58,641 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-10-27 13:41:58,739 basehttp "GET /static/css/styles.css HTTP/1.1" 200 640
+INFO 2020-10-27 13:41:58,747 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
+WARNING 2020-10-27 13:41:58,786 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-27 13:41:59,063 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 13:41:59,089 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-10-27 13:42:03,154 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-10-27 13:42:03,234 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-27 13:42:03,653 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 13:42:16,718 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-10-27 13:42:16,798 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-27 13:42:17,252 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 13:42:18,082 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-10-27 13:42:18,155 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-27 13:42:18,572 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 13:42:26,144 basehttp "GET /Autorisierung/reset HTTP/1.1" 200 3322
+INFO 2020-10-27 13:42:36,837 basehttp "POST /Autorisierung/reset HTTP/1.1" 302 0
+INFO 2020-10-27 13:42:36,858 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5489
+WARNING 2020-10-27 13:42:36,945 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-27 13:42:37,364 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 13:42:41,474 basehttp "POST /Autorisierung/login HTTP/1.1" 200 4103
+INFO 2020-10-27 13:43:50,614 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\urls.py changed, reloading.
+INFO 2020-10-27 13:43:51,674 autoreload Watching for file changes with StatReloader
+WARNING 2020-10-27 13:44:32,935 log Forbidden (CSRF token missing or incorrect.): /Autorisierung/login
+WARNING 2020-10-27 13:44:32,935 basehttp "POST /Autorisierung/login HTTP/1.1" 403 2525
+WARNING 2020-10-27 13:44:36,039 log Forbidden (CSRF token missing or incorrect.): /Autorisierung/login
+WARNING 2020-10-27 13:44:36,039 basehttp "POST /Autorisierung/login HTTP/1.1" 403 2525
+INFO 2020-10-27 13:44:40,275 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-10-27 13:44:40,313 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-10-27 13:44:40,402 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 13:44:42,214 basehttp "POST /Autorisierung/login HTTP/1.1" 200 4090
+ERROR 2020-10-27 13:44:47,116 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py", line 23, in cashbox_dashboard_view
+    return render(request, "new/cashbox_dashboard.html", context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: new/cashbox_dashboard.html
+ERROR 2020-10-27 13:44:47,118 basehttp "GET /Kasse/? HTTP/1.1" 500 89977
+INFO 2020-10-27 13:47:08,517 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:47:09,601 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:47:17,078 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:47:18,022 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:47:33,010 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:47:34,032 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:47:42,404 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:47:43,389 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:47:49,089 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:47:50,057 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:47:53,192 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:47:54,153 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:48:41,079 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:48:42,054 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:48:45,189 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:48:46,167 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:49:00,211 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:49:01,152 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:49:24,020 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:49:25,060 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:49:44,447 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:49:45,409 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:49:52,828 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:49:53,786 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:50:29,241 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:50:30,236 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:50:36,713 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:50:37,748 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:50:39,828 basehttp "GET /Kasse/ HTTP/1.1" 200 10468
+INFO 2020-10-27 13:50:39,928 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 200 2222
+INFO 2020-10-27 13:50:39,982 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 200 3144
+INFO 2020-10-27 13:50:40,031 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 200 2507
+INFO 2020-10-27 13:50:40,041 basehttp "GET /static/css/calculator.css HTTP/1.1" 200 2690
+INFO 2020-10-27 13:50:40,100 basehttp "GET /static/js/calculator.js HTTP/1.1" 200 679
+INFO 2020-10-27 13:51:18,275 basehttp "GET /Kunden/ HTTP/1.1" 200 9840
+INFO 2020-10-27 13:51:18,349 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 528
+INFO 2020-10-27 13:51:18,372 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2970
+INFO 2020-10-27 13:51:18,372 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+INFO 2020-10-27 13:52:00,142 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:52:01,164 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:52:16,297 basehttp "GET /Kasse HTTP/1.1" 301 0
+INFO 2020-10-27 13:52:16,345 basehttp "GET /Kasse/ HTTP/1.1" 200 10468
+INFO 2020-10-27 13:52:24,424 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:52:28,465 basehttp "GET /Kasse/ HTTP/1.1" 200 10468
+INFO 2020-10-27 13:53:03,783 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:53:04,757 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:53:28,542 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:53:29,519 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:53:32,926 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:53:33,913 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-27 13:53:36,331 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2020-10-27 13:53:36,332 basehttp "GET /Kasse/ HTTP/1.1" 500 66811
+INFO 2020-10-27 13:54:23,007 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:54:23,987 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:54:29,529 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:54:30,504 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:54:34,790 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:54:35,735 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:54:45,216 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:54:46,197 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:55:02,904 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-27 13:55:07,673 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2020-10-27 13:55:07,674 basehttp "GET /Kasse/ HTTP/1.1" 500 66811
+INFO 2020-10-27 13:55:22,817 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:55:23,798 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:55:25,782 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:55:26,787 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-27 13:55:47,108 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2020-10-27 13:55:47,109 basehttp "GET /Kasse/ HTTP/1.1" 500 66948
+INFO 2020-10-27 13:55:59,649 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:56:00,638 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:56:44,135 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 13:56:45,169 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-27 13:56:46,758 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2020-10-27 13:56:46,759 basehttp "GET /Kasse/ HTTP/1.1" 500 66948
+ERROR 2020-10-27 13:56:50,500 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2020-10-27 13:56:50,501 basehttp "GET /Kasse/ HTTP/1.1" 500 66811
+INFO 2020-10-27 13:57:23,702 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\administration\urls.py changed, reloading.
+INFO 2020-10-27 13:57:24,754 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:57:38,803 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\urls.py changed, reloading.
+INFO 2020-10-27 13:57:39,784 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:57:41,866 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\urls.py changed, reloading.
+INFO 2020-10-27 13:57:42,852 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 13:57:43,887 basehttp "GET /Kasse/ HTTP/1.1" 200 10255
+INFO 2020-10-27 14:02:03,737 basehttp "GET /Kasse/ HTTP/1.1" 200 10270
+INFO 2020-10-27 14:06:51,756 basehttp "GET /Kasse/ HTTP/1.1" 200 10747
+INFO 2020-10-27 14:10:26,350 basehttp "GET /Kasse/ HTTP/1.1" 200 10758
+INFO 2020-10-27 14:11:03,938 basehttp "GET /Administration/Produkte HTTP/1.1" 200 14412
+INFO 2020-10-27 14:11:22,389 basehttp "GET /Kasse/ HTTP/1.1" 200 10761
+INFO 2020-10-27 14:12:08,816 basehttp "GET /Kasse/ HTTP/1.1" 200 10647
+INFO 2020-10-27 14:13:44,395 basehttp "GET /Administration/Produkte HTTP/1.1" 200 14412
+INFO 2020-10-27 14:15:16,831 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:17,814 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:22,681 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:23,630 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:25,712 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:26,695 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:28,702 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:29,726 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:35,762 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:36,740 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:41,438 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:42,445 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:49,846 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:50,845 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:15:52,849 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:15:53,906 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:01,296 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:02,267 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:05,640 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:06,608 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:12,626 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:13,588 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:28,897 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:29,890 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:36,850 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:37,813 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:50,577 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:51,588 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:54,962 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:16:55,934 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:16:59,728 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:17:00,741 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:17:05,407 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:17:06,424 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:17:14,669 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:17:15,696 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:17:28,436 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:17:29,475 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:17:44,943 basehttp "GET /Kasse/ HTTP/1.1" 200 10647
+INFO 2020-10-27 14:17:50,903 basehttp "GET /Kasse/ HTTP/1.1" 200 10647
+INFO 2020-10-27 14:18:17,383 basehttp "GET /Kasse/ HTTP/1.1" 200 10661
+INFO 2020-10-27 14:18:23,920 basehttp "GET /Kasse/ HTTP/1.1" 200 10647
+INFO 2020-10-27 14:21:08,838 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:21:09,842 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:21:16,318 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:21:17,329 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:21:46,142 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:21:47,127 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:21:49,216 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:21:50,189 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:27:57,258 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:27:58,257 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:28:00,740 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:28:01,800 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:28:05,169 basehttp "GET /Kasse/ HTTP/1.1" 200 10647
+INFO 2020-10-27 14:28:21,460 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:28:22,496 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:29:06,099 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:29:07,109 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:29:07,755 basehttp "GET /Kasse/ HTTP/1.1" 200 10797
+INFO 2020-10-27 14:29:15,487 basehttp "GET /Kasse/ HTTP/1.1" 200 10797
+INFO 2020-10-27 14:30:18,418 basehttp "GET /Kasse/ HTTP/1.1" 200 11043
+INFO 2020-10-27 14:30:58,003 basehttp "GET /Kasse/ HTTP/1.1" 200 11091
+INFO 2020-10-27 14:31:00,086 basehttp "GET /Kasse/? HTTP/1.1" 200 11091
+INFO 2020-10-27 14:33:36,281 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:33:37,295 autoreload Watching for file changes with StatReloader
+ERROR 2020-10-27 14:33:39,679 log Internal Server Error: /Kasse/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py", line 42, in get
+    if obj is not None:
+NameError: name 'obj' is not defined
+ERROR 2020-10-27 14:33:39,681 basehttp "GET /Kasse/ HTTP/1.1" 500 80845
+INFO 2020-10-27 14:33:56,023 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:33:56,996 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:34:15,951 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-10-27 14:34:17,013 autoreload Watching for file changes with StatReloader
+INFO 2020-10-27 14:34:42,297 basehttp "GET /Kasse/ HTTP/1.1" 200 11457
+INFO 2020-10-27 14:34:55,051 basehttp "GET /Administration/Produkte HTTP/1.1" 200 14412
+INFO 2020-10-27 14:34:56,947 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-10-27 14:34:56,959 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-10-27 14:34:57,037 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 14:34:59,081 basehttp "GET /Autorisierung/reset HTTP/1.1" 200 3322
+INFO 2020-10-27 14:35:02,624 basehttp "POST /Autorisierung/reset HTTP/1.1" 302 0
+INFO 2020-10-27 14:35:02,637 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5489
+WARNING 2020-10-27 14:35:02,710 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-10-27 14:35:03,099 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-10-27 14:35:06,665 basehttp "POST /Autorisierung/login HTTP/1.1" 200 4090
+INFO 2020-10-27 14:35:34,884 basehttp "GET /Kasse/ HTTP/1.1" 200 11457
+INFO 2020-10-27 14:35:40,713 basehttp "GET /Kasse/?csrfmiddlewaretoken=dk5ZcVEBAEyXYEPydRFPhjuxK26kebLzFKNHr9i13Vz97QeMXmn0CKohwAhSqaBr HTTP/1.1" 200 11457
+INFO 2020-10-27 14:43:32,860 basehttp "GET /Kasse/?csrfmiddlewaretoken=dk5ZcVEBAEyXYEPydRFPhjuxK26kebLzFKNHr9i13Vz97QeMXmn0CKohwAhSqaBr HTTP/1.1" 200 10800
+WARNING 2020-10-27 14:43:35,014 log Not Found: /Kasse/http.//www.google.com
+WARNING 2020-10-27 14:43:35,015 basehttp "GET /Kasse/http.//www.google.com HTTP/1.1" 404 3895
