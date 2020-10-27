@@ -145,20 +145,26 @@ def passwordReset(request, *args, **kwargs):
             context = {
             'form':form
             }
+            return render(request, "new/test_reset.html", context)
     else:
         form = ChangePasswordForm
         context = {
-            'form':form
+        'form':form
         }
-    return render(request, "new/test_reset.html", context)
+        return render(request, "new/test_reset.html", context)
 
-def set_active(username):
-    try:
-        user = User.objects.get(username=username)
-        user.is_active = True
-        user.save(update_fields=['is_active'])
-    except :
-        messages.info("Nutzer konnte nicht aktiviert werden")
+class RequestListView(ListView):
+    template_name = 'new/test_requests.html'
+    queryset = Request.objects.all()
+
+
+# def set_active(username):
+#     try:
+#         user = User.objects.get(username=username)
+#         user.is_active = True
+#         user.save(update_fields=['is_active'])
+#     except :
+#         messages.info("Nutzer konnte nicht aktiviert werden")
 # def authorization_register_view(request, *args, **kwargs):
 #     register_form = FormRegister(request.POST or None)
 
