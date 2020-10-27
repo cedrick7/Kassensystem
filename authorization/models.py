@@ -96,6 +96,9 @@ class Request(models.Model):
         default=AC_CREATE
     )
 
+    def get_delete_url(self):
+        return reverse("authorization:delete", kwargs={"username": self.username, "type":self.type})
+
 class Active_Accounts(models.Model):
     username = models.CharField(max_length=150, blank=True) 
 

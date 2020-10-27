@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CreateUserForm, ChangePasswordForm, RequestForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
@@ -10,6 +10,7 @@ from .decorators import unauthenticated_user
 from django.views.generic import (
     View,
     ListView,
+    DeleteView,
 )
 
 
@@ -90,7 +91,7 @@ def registerUser(request, *args, **kwargs):
                 entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ,admin=admn,kassierer=nlyst,analyst=kssrr)
                 ############################################
                 # set inactive
-                user.is_active = True
+                user.is_active = False
                 user.save(update_fields=['is_active'])
                 return redirect('authorization:login')
         else:
@@ -157,26 +158,26 @@ def passwordReset(request, *args, **kwargs):
                 password = make_password(form.cleaned_data['password'])
                 user.password = password
                 query = Request.objects.filter(type='PR',username=username)
-                if query is not None:
-                    messages.info(request, 'Es existiert bereits eine Anfrage!')
+                if query.exists():
+                    messages.info(request, 'Es existiert bereits eine Anfrage')
                     return redirect('authorization:login')
-                print(query)
-                user.save(update_fields=['password'])
-                messages.info(request, 'Passwort erfolgreich geändert')
-                # passwort geändert
-                ############################################
-                #           request wird generiert         #
-                ############################################
-                usrnme = request.POST.get("username","")
-                frstnm = request.POST.get("first_name","")
-                lstnm = request.POST.get("last_name","")
-                typ = 'PR'
-                entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
-                ############################################
-                # set inactive
-                user.is_active = False
-                user.save(update_fields=['is_active'])
-                return redirect('authorization:login')
+                else:
+                    user.save(update_fields=['password'])
+                    messages.info(request, 'Passwort anfrage gesendet')
+                    # passwort geändert
+                    ############################################
+                    #           request wird generiert         #
+                    ############################################
+                    usrnme = request.POST.get("username","")
+                    frstnm = request.POST.get("first_name","")
+                    lstnm = request.POST.get("last_name","")
+                    typ = 'PR'
+                    entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
+                    ############################################
+                    # set inactive
+                    user.is_active = False
+                    user.save(update_fields=['is_active'])
+                    return redirect('authorization:login')
             except:
                 messages.info(request, 'Nutzer nicht vorhanden')
                 form = ChangePasswordForm
@@ -201,7 +202,29 @@ class RequestListView(ListView):
     template_name = 'new/test_requests.html'
     queryset = Request.objects.all()
 
+class RequestDeleteView(DeleteView):
+    template_name = 'new/test_delete.html'
+    queryset = Request.objects.all()
 
+    def get_object(self):
+        username_ = self.kwargs.get("username")
+        type_ = self.kwargs.get("type")
+        return get_object_or_404(Request, username=username_,type=type)
+
+    
+    def get(self, request, username=None,type=None, *args, **kwargs):
+        context = {}
+        return render(request, self.template_name, context)
+
+    def post(self, request, username=None,type=None, *args, **kwargs): 
+        context = {}    
+        obj = self.get_object()
+        if obj is not None:
+            obj.delete()
+            logger.info('Request wurde erfolgreich gelöscht')
+            return redirect('authorization:request')
+        else:
+            print("Kein Objekt")
 # def set_active(username):
 #     try:
 #         user = User.objects.get(username=username)
