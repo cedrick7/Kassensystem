@@ -26,17 +26,20 @@
 
 					{% for instance in object_list %}
 						
-						<a href="http.//www.google.com" class="col-4 pattern-element">
-							<p class="product-name">{{ instance.title }}</p>
-							<p class="product-description">{{ instance.description }}</p>
-							<p class="product-price">{{ instance.costs }} €</p>
-							
-						</a>
+						<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"> {% csrf_token %}
 
-							
+							<button type="submit" class="col-4 pattern-element">
+								<input type="hidden" id="productId" name="productId" value="{{ instance.id }}">
+								<p class="product-name">{{ instance.title }}</p>
+								<p class="product-description">{{ instance.description }}</p>
+								<p class="product-price">{{ instance.costs }} €</p>
+							</button>
 						
+						</form>
+
 					{% endfor %}
 
+					
 					
 					
 					<!-- 
