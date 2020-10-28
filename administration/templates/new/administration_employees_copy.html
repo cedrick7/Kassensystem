@@ -69,8 +69,6 @@
 										<th>Passwort</th>
 										<th>Datum des Beitritts</th>
 										<th>Ist aktiv</th>
-										<th>Ist Personal</th>
-										<th>Ist Superuser</th>
 										<th>Letzter Login</th>
 										<th>Gruppen</th>
 										<th>Mehr</th>
@@ -86,8 +84,6 @@
 											<td>{{ instance.password }}</td>
 											<td>{{ instance.date_joined }}</td>
 											<td>{{ instance.is_active }}</td>
-											<td>{{ instance.is_staff }}</td>
-											<td>{{ instance.is_superuser }}</td>
 											<td>{{ instance.last_login }}</td>
 											<td>{% for instance in instance.groups.all %}{{ instance }}<br/>{% endfor %}</td>
 											<td class="td-icons">
@@ -104,8 +100,6 @@
 										<td><strong>Passwort</strong></td>
 										<td><strong>Datum des Beitritts</strong></td>
 										<td><strong>Ist aktiv</strong></td>
-										<td><strong>Ist Personal</strong></td>
-										<td><strong>Ist Superuser</strong></td>
 										<td><strong>Letzter Login</strong></td>
 										<td><strong>Gruppen</strong></td>
 										<td><strong>Mehr</strong></td>

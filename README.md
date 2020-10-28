@@ -31,3 +31,5 @@ Externe Bibliotheken:
     https://github.com/fabiocaccamo/django-colorfield.git
 6. django-rest-framework:
     https://www.django-rest-framework.org bzw. https://github.com/encode/django-rest-framework.git
+7. mysqlclient: https://pypi.org/project/mysqlclient/
+    
