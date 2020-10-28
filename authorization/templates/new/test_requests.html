@@ -10,6 +10,8 @@
 <p>Passwort zurücksetzen für {{ instance.firstname }} {{ instance.lastname }}</p>
 <p>Nutzername: {{ instance.username }} </p>
 {% endif %}				
+<a href="">Annehmen</a>
+<a href="{{ instance.get_delete_url }}">Ablehnen</a>
 <p>--------------------------------</p>		
 {% endfor %}
 

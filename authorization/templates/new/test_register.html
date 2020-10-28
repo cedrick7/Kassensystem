@@ -124,7 +124,9 @@
                       </div>
                     </div>
                 </div>
-
+                {% for message in messages %}
+                <p id="messages">{{message}} </p>
+                {% endfor %}
                 <hr>
             </form>
             <div class="div-links">
