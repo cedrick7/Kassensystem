@@ -6,13 +6,15 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.hashers import make_password
 from .models import Request
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .decorators import unauthenticated_user
 from django.views.generic import (
     View,
     ListView,
     DeleteView,
 )
-
+import logging
+logger = logging.getLogger('django')
 
 # -------------------------------------------------------------------------
 # for all views:
@@ -157,27 +159,28 @@ def passwordReset(request, *args, **kwargs):
                 user = User.objects.get(username=username)
                 password = make_password(form.cleaned_data['password'])
                 user.password = password
-                query = Request.objects.filter(type='PR',username=username)
-                if query.exists():
+                query_pr = Request.objects.filter(type='PR',username=username)
+                query_ac = Request.objects.filter(type='AC',username=username)
+                if query_pr.exists() or query_ac.exists():
                     messages.info(request, 'Es existiert bereits eine Anfrage')
                     return redirect('authorization:login')
-                else:
-                    user.save(update_fields=['password'])
-                    messages.info(request, 'Passwort anfrage gesendet')
-                    # passwort geändert
-                    ############################################
-                    #           request wird generiert         #
-                    ############################################
-                    usrnme = request.POST.get("username","")
-                    frstnm = request.POST.get("first_name","")
-                    lstnm = request.POST.get("last_name","")
-                    typ = 'PR'
-                    entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
-                    ############################################
-                    # set inactive
-                    user.is_active = False
-                    user.save(update_fields=['is_active'])
-                    return redirect('authorization:login')
+                
+                user.save(update_fields=['password'])
+                messages.info(request, 'Passwort anfrage gesendet')
+                # passwort geändert
+                ############################################
+                #           request wird generiert         #
+                ############################################
+                usrnme = request.POST.get("username","")
+                frstnm = request.POST.get("first_name","")
+                lstnm = request.POST.get("last_name","")
+                typ = 'PR'
+                entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
+                ############################################
+                # set inactive
+                user.is_active = False
+                user.save(update_fields=['is_active'])
+                return redirect('authorization:login')
             except:
                 messages.info(request, 'Nutzer nicht vorhanden')
                 form = ChangePasswordForm
@@ -198,33 +201,98 @@ def passwordReset(request, *args, **kwargs):
         }
         return render(request, "new/test_reset.html", context)
 
-class RequestListView(ListView):
+class RequestListView(LoginRequiredMixin,ListView):
     template_name = 'new/test_requests.html'
     queryset = Request.objects.all()
 
-class RequestDeleteView(DeleteView):
+class RequestDeleteView(LoginRequiredMixin,View):
     template_name = 'new/test_delete.html'
-    queryset = Request.objects.all()
 
     def get_object(self):
-        username_ = self.kwargs.get("username")
-        type_ = self.kwargs.get("type")
-        return get_object_or_404(Request, username=username_,type=type)
+        username = self.kwargs.get("username")
+        type = self.kwargs.get("type")
+        obj = None
+        if id is not None and type is not None:
+            obj =  get_object_or_404(Request, username=username,type=type)
+        return obj
 
     
     def get(self, request, username=None,type=None, *args, **kwargs):
         context = {}
+        obj = self.get_object()
+        if obj is not None:
+            context = {
+                "object":obj,
+                "reaktion":"löschen"
+            }
         return render(request, self.template_name, context)
 
     def post(self, request, username=None,type=None, *args, **kwargs): 
         context = {}    
         obj = self.get_object()
         if obj is not None:
-            obj.delete()
-            logger.info('Request wurde erfolgreich gelöscht')
-            return redirect('authorization:request')
-        else:
-            print("Kein Objekt")
+            try:
+                # löschen des Accounts wenn Accountanfrage
+                if type == 'AC':
+                    username = obj.username
+                    user = User.objects.get(username=username)
+                    user.delete()
+                    logger.info('Nutzer wurde erfolgreich gelöscht')
+                # löschen des Requests
+                obj.delete()
+                logger.info('Request wurde erfolgreich gelöscht')
+                context = {
+                "object":None,
+                }
+                return redirect('authorization:request')
+            except:
+                logger.info('Fehler beim löschen der Anfrage')
+                return redirect('authorization:request')
+        return render(request, self.template_name, context)
+
+class RequestAcceptView(LoginRequiredMixin,View):
+    template_name = 'new/test_delete.html'
+
+    def get_object(self):
+        username = self.kwargs.get("username")
+        type = self.kwargs.get("type")
+        obj = None
+        if id is not None and type is not None:
+            obj =  get_object_or_404(Request, username=username,type=type)
+        return obj
+
+    
+    def get(self, request, username=None,type=None, *args, **kwargs):
+        context = {}
+        obj = self.get_object()
+        if obj is not None:
+            context = {
+            "object":obj,
+            "reaktion": "hinzufügen"
+        }
+        return render(request, self.template_name, context)
+
+    def post(self, request, username=None,type=None, *args, **kwargs): 
+        context = {}    
+        obj = self.get_object()
+        if obj is not None:
+            # Nutzer wird aktiv
+            try:
+                username = obj.username
+                user = User.objects.get(username=username)
+                user.is_active = True
+                user.save(update_fields=['is_active'])
+                # Anfrage wird gelöscht
+                obj.delete()
+                context[object] = None
+                logger.info('Request wurde erfolgreich gelöscht')
+                return redirect('authorization:request')
+            except:
+                message.info('Nutzer nicht gefunden')
+                return redirect('authorization:request')
+        return render(request, self.template_name, context)
+
+
 # def set_active(username):
 #     try:
 #         user = User.objects.get(username=username)
