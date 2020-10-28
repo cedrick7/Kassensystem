@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.hashers import make_password
-from .models import Request
+from .models import Request, Active_Accounts
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .decorators import unauthenticated_user
 from django.views.generic import (
@@ -232,18 +232,26 @@ class RequestDeleteView(LoginRequiredMixin,View):
         obj = self.get_object()
         if obj is not None:
             try:
+                username = obj.username
                 # löschen des Accounts wenn Accountanfrage
                 if type == 'AC':
-                    username = obj.username
                     user = User.objects.get(username=username)
                     user.delete()
                     logger.info('Nutzer wurde erfolgreich gelöscht')
+                    # no Active_Account entry
+                    obj.delete()
+                    logger.info('Request wurde erfolgreich gelöscht')
+                    return redirect('authorization:request')
                 # löschen des Requests
                 obj.delete()
                 logger.info('Request wurde erfolgreich gelöscht')
-                context = {
-                "object":None,
-                }
+                # Check if account is already registert
+                query_aa = Active_Accounts.objects.filter(username=username)
+                if query_aa.exists():
+                    logger.info('Account ist bereits registriert')
+                else:
+                    entry = Active_Accounts.objects.create(username=username)
+                    logger.info('Account wird registriert')
                 return redirect('authorization:request')
             except:
                 logger.info('Fehler beim löschen der Anfrage')
@@ -260,8 +268,7 @@ class RequestAcceptView(LoginRequiredMixin,View):
         if id is not None and type is not None:
             obj =  get_object_or_404(Request, username=username,type=type)
         return obj
-
-    
+   
     def get(self, request, username=None,type=None, *args, **kwargs):
         context = {}
         obj = self.get_object()
@@ -282,24 +289,27 @@ class RequestAcceptView(LoginRequiredMixin,View):
                 user = User.objects.get(username=username)
                 user.is_active = True
                 user.save(update_fields=['is_active'])
+                logger.info('Nutzer aktiv')
                 # Anfrage wird gelöscht
                 obj.delete()
                 context[object] = None
                 logger.info('Request wurde erfolgreich gelöscht')
+                # Account wird registriert
+                query_aa = Active_Accounts.objects.filter(username=username)
+                if query_aa.exists():
+                    logger.info('Account ist bereits registriert')
+                else:
+                    entry = Active_Accounts.objects.create(username=username)
+                    logger.info('Account wird registriert')
                 return redirect('authorization:request')
             except:
-                message.info('Nutzer nicht gefunden')
+                logger.info('Nutzer nicht gefunden')
                 return redirect('authorization:request')
         return render(request, self.template_name, context)
 
 
-# def set_active(username):
-#     try:
-#         user = User.objects.get(username=username)
-#         user.is_active = True
-#         user.save(update_fields=['is_active'])
-#     except :
-#         messages.info("Nutzer konnte nicht aktiviert werden")
+
+
 # def authorization_register_view(request, *args, **kwargs):
 #     register_form = FormRegister(request.POST or None)
 
