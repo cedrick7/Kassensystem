@@ -95,32 +95,14 @@ WSGI_APPLICATION = 'Kassensystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
-        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '07yp3juew2',
+        'USER': 'd8qd3cnm31',
+        'PASSWORD': 'g6ipo5g3yt3chgctcnloy9762',
+        'HOST': 'cloudrooter.ddns.net',
+        'PORT': '3306',
     }
 }
-
-# DATABASES = {
-
-#     'default': {
-
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-#         'NAME': 'rmpalrqy',
-
-#         'USER': 'q93noaus',
-
-#         'PASSWORD': 'cw7b65QVxtSUuEJHow1BGvNL4',
-
-#         'HOST': 'cloudrooter.ddns.net',
-
-#         'PORT': '5432',
-
-#     }
-
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
