@@ -1,4 +1,78 @@
-<h1>Ausstehende requests</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+	{% include 'new/administration_navbar_copy.html' %}
+{% endblock navbar %}
+
+{% block content %}
+	<section id="body">
+		<div class="heading container-fluid">
+			<!-- change this content -->
+			<h1>Ausstehende Anfragen</h1>
+          
+            
+
+			<!-- <a class="btn btn-primary" role="button" href="#">
+				<i class="fas fa-download fa-sm"></i>&nbsp;
+				
+				Alle Produkte ausdrucken</a> -->
+        </div>
+        
+            
+		<div class="content container-fluid">
+            <a href="{% url 'authorization:mitarbeiter' %}" class="btn btn-primary">Zurück</a>
+            <br>
+            <br>
+            {% for instance in object_list reversed %}
+                <div class="card">
+                    
+                    <div class="card-body">
+                        
+
+                            {% if instance.type == "AC" %}
+                                <p>Account Anfrage für {{ instance.firstname }} {{ instance.lastname }}</p>
+                                <p>Nutzername: {{ instance.username }} </p>
+                                <p>Gruppe Administratoren: {{ instance.admin }}</p>
+                                <p>Gruppe Analysten: {{ instance.analyst }}</p>
+                                <p>Gruppe Kassierer: {{ instance.kassierer }}</p>
+
+                            {% else %}
+                                <p>Passwort zurücksetzen für {{ instance.firstname }} {{ instance.lastname }}</p>
+                                <p>Nutzername: {{ instance.username }} </p>
+                            {% endif %}				
+                            <a href="{{ instance.get_accept_url }}" class="btn btn-primary">Annehmen</a>   
+                            <a href="{{ instance.get_delete_url }}" class="btn btn-primary">Ablehnen</a>
+                    
+                        
+                        
+  
+                    </div>
+                </div>
+                <br>
+                <br>
+            {% endfor %}
+            
+		</div>
+	</section>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}
+
+
+<!-- <h1>Ausstehende requests</h1>
 {% for instance in object_list reversed %}
 
 {% if instance.type == "AC" %}
@@ -16,5 +90,5 @@
 <a href="{{ instance.get_delete_url }}">Ablehnen</a>
 <p>--------------------------------</p>	
 {% endfor %}
-<a href="{% url 'authorization:mitarbeiter' %}">Zurück</a>
+<a href="{% url 'authorization:mitarbeiter' %}">Zurück</a> -->
 
