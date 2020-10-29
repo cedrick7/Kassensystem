@@ -593,70 +593,70 @@ class CustomerDeleteView(LoginRequiredMixin, DeleteView):
 
 
 # Angestellte
-class EmployeeListView(LoginRequiredMixin, ListView):
-    template_name = 'new/administration_employees_copy.html'
-    queryset = User.objects.all()
+# class EmployeeListView(LoginRequiredMixin, ListView):
+#     template_name = 'new/administration_employees_copy.html'
+#     queryset = User.objects.all()
 
-class EmployeeUpdateView(LoginRequiredMixin, View):
-    template_name = 'new/administration_employees_create-update_copy.html'
+# class EmployeeUpdateView(LoginRequiredMixin, View):
+#     template_name = 'new/administration_employees_create-update_copy.html'
 
-    def get_object(self):
-        id = self.kwargs.get('id')
-        obj = None
-        if id is not None: 
-            obj = get_object_or_404(User, id=id)
-        return obj
+#     def get_object(self):
+#         id = self.kwargs.get('id')
+#         obj = None
+#         if id is not None: 
+#             obj = get_object_or_404(User, id=id)
+#         return obj
 
-    # http/GET method
-    def get(self, request, id=None, *args, **kwargs):
-        context={}
-        obj = self.get_object()
-        if obj is not None:
-            form = UserModelForm(instance=obj)
-            context={
-                "object":obj,
-                "form":form, 
-                "headline":"Bearbeite einen Mitarbeiter"
-            }
-        return render(request, self.template_name, context)
+#     # http/GET method
+#     def get(self, request, id=None, *args, **kwargs):
+#         context={}
+#         obj = self.get_object()
+#         if obj is not None:
+#             form = UserModelForm(instance=obj)
+#             context={
+#                 "object":obj,
+#                 "form":form, 
+#                 "headline":"Bearbeite einen Mitarbeiter"
+#             }
+#         return render(request, self.template_name, context)
 
-    # http/POST method
-    def post(self, request, id=None, *args, **kwargs):
-        context={}
-        obj = self.get_object()
-        if obj is not None:
-            form = UserModelForm(request.POST, instance=obj)
-            if form.is_valid():
-                form.save()
-                logger.info('Mitarbeiter wurde erfolgreich geändert')
-                return redirect('administration:employee_list')
-                context={
-                        "object":obj,
-                        "form":form
-                    }
-        return render(request, self.template_name, context)
+#     # http/POST method
+#     def post(self, request, id=None, *args, **kwargs):
+#         context={}
+#         obj = self.get_object()
+#         if obj is not None:
+#             form = UserModelForm(request.POST, instance=obj)
+#             if form.is_valid():
+#                 form.save()
+#                 logger.info('Mitarbeiter wurde erfolgreich geändert')
+#                 return redirect('administration:employee_list')
+#                 context={
+#                         "object":obj,
+#                         "form":form
+#                     }
+#         return render(request, self.template_name, context)
 
-class EmployeeDeleteView(LoginRequiredMixin, DeleteView):
-    template_name = 'new/administration_employees_delete_copy.html'
-    queryset = User.objects.all()
+# class EmployeeDeleteView(LoginRequiredMixin, DeleteView):
+#     template_name = 'new/administration_employees_delete_copy.html'
+#     queryset = User.objects.all()
 
-    def get_object(self):
-        id_ = self.kwargs.get("id")
-        return get_object_or_404(User, id=id_)
+#     def get_object(self):
+#         id_ = self.kwargs.get("id")
+#         return get_object_or_404(User, id=id_)
 
-    def get_success_url(self):
-        return reverse('administration:employee_list')
+#     def get_success_url(self):
+#         return reverse('administration:employee_list')
 
-    def post(self, request, id=None, *args, **kwargs):
+#     def post(self, request, id=None, *args, **kwargs):
         
-        context = {}    
+#         context = {}    
 
-        obj = self.get_object()
-        if obj is not None:
-            obj.delete()
-            logger.info('Mitarbeiter wurde erfolgreich gelöscht')
+#         obj = self.get_object()
+#         if obj is not None:
+#             obj.delete()
+#             logger.info('Mitarbeiter wurde erfolgreich gelöscht')
 
-            return redirect('administration:employee_list')
+#             return redirect('administration:employee_list')
 
 
 # Arbeitszeit

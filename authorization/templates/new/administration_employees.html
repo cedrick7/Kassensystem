@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
+<!-- Body -->
+{% block navbar %}
+	{% include 'new/administration_navbar_copy.html' %}
+{% endblock navbar %}
+
+{% block content %}
+	<section id="body">
+		<div class="heading container-fluid">
+			<!-- change this content -->
+			<h3>Mitarbeiter</h3>
+			<!-- <a class="btn btn-primary" role="button" href="#">
+				<i class="fas fa-download fa-sm"></i>&nbsp;
+				
+				Alle Mitarbeiter ausdrucken</a> -->
+		</div>
+		<div class="content container-fluid">
+			<div class="card">
+				<div class="card-header">
+					<!-- change this content -->
+					<p>Mitarbeiter Übersicht</p>
+				</div>
+				<div class="card-body">
+					<div class="card-row-1 row">
+						<div class="col-12 col-sm-6">
+							<div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable">
+								<label>Show&nbsp;
+									<select class="form-control form-control-sm custom-select custom-select-sm">
+										<option value="10" selected>10</option>
+										<option value="25">25</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+									</select>&nbsp;
+								</label>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6">
+							<div class="dataTables_filter" id="dataTable_filter-1">
+								<label>
+									<input type="search" class="form-control form-control-sm" aria-controls="dataTable"
+									       placeholder="Suchen...">
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="card-row-2 row">
+						<div class="col-12">
+							<!-- change this content -->
+							<div class="table-responsive table" id="dataTable-1" role="grid"
+							     aria-describedby="dataTable_info">
+								<table class="table" id="employeesTable">
+									<thead>
+									<tr>
+										<th>Vorname</th>
+										<th>Nachname</th>
+										<th>Email</th>
+										<th>Username</th>
+										<th>Passwort</th>
+										<th>Datum des Beitritts</th>
+										<th>Ist aktiv</th>
+										<th>Letzter Login</th>
+										<th>Gruppen</th>
+										<th>Mehr</th>
+									</tr>
+									</thead>
+									<tbody>
+										{% for instance in object_list %}
+										<tr>
+											<td>{{ instance.user.first_name }}</td>
+											<td>{{ instance.user.last_name }}</td>
+											<td>{{ instance.user.email }}</td>
+											<td>{{ instance.user.username }}</td>
+											<td>{{ instance.user.password }}</td>
+											<td>{{ instance.user.date_joined }}</td>
+											<td>{{ instance.user.is_active }}</td>
+											<td>{{ instance.user.last_login }}</td>
+											<td>{% for instance in instance.user.groups.all %}{{ instance }}<br/>{% endfor %}</td>
+											<td class="td-icons">
+												<a href="{{ instance.get_delete_url }}"><i class="fa fa-remove"></i></a>
+											</td>
+										</tr>
+										{% endfor %}
+										<td><strong>Vorname</strong></td>
+										<td><strong>Nachname</strong></td>
+										<td><strong>Email</strong></td>
+										<td><strong>Username</strong></td>
+										<td><strong>Passwort</strong></td>
+										<td><strong>Datum des Beitritts</strong></td>
+										<td><strong>Ist aktiv</strong></td>
+										<td><strong>Letzter Login</strong></td>
+										<td><strong>Gruppen</strong></td>
+										<td><strong>Mehr</strong></td>
+									</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="card-row-3 row">
+						<div class="col-12 col-sm-6">
+							<p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to
+								10 of 27</p>
+						</div>
+						<div class="col-12 col-sm-6">
+							<nav class="dataTables_paginate paging_simple_numbers">
+								<ul class="pagination">
+									<li class="page-item disabled">
+										<a class="page-link" href="#" aria-label="Previous"><span
+												aria-hidden="true">«</span></a>
+									</li>
+									<li class="page-item active">
+										<a class="page-link" href="#">1</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">2</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#">3</a>
+									</li>
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Next"><span
+												aria-hidden="true">»</span></a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

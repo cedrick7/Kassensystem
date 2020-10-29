@@ -35,9 +35,9 @@ from .views import (
     CustomerUpdateView,
     CustomerDeleteView,
 
-    EmployeeListView,
-    EmployeeUpdateView,
-    EmployeeDeleteView,
+    # EmployeeListView,
+    # EmployeeUpdateView,
+    # EmployeeDeleteView,
 
     WorkTimeListView,
 
@@ -115,9 +115,9 @@ urlpatterns=[
     path('Kunden/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(CustomerDeleteView.as_view()), name='customer_delete'),
 
     # Mitarbeiter
-    path('Mitarbeiter', allowed_user(allowed_roles=['Administratoren'])(EmployeeListView.as_view()), name='employee_list'),
-    path('Mitarbeiter/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(EmployeeUpdateView.as_view()), name='employee_update'),
-    path('Mitarbeiter/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(EmployeeDeleteView.as_view()), name='employee_delete'),
+    # path('Mitarbeiter', allowed_user(allowed_roles=['Administratoren'])(EmployeeListView.as_view()), name='employee_list'),
+    # path('Mitarbeiter/<int:id>/Bearbeiten', allowed_user(allowed_roles=['Administratoren'])(EmployeeUpdateView.as_view()), name='employee_update'),
+    # path('Mitarbeiter/<int:id>/Löschen', allowed_user(allowed_roles=['Administratoren'])(EmployeeDeleteView.as_view()), name='employee_delete'),
 
     # Arbeitszeiten
     path('Arbeitszeiten', allowed_user(allowed_roles=['Administratoren'])(WorkTimeListView.as_view()), name='worktime_list'),

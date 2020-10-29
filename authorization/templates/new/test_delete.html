@@ -2,7 +2,7 @@
 
 <h1>Delete </h1>
     <form action="" method="POST"> {% csrf_token %}
-        <h1>Möchtest du den Nutzer "{{ object.username }}" wirklich {{reaktion}}?</h1>
+        <h1>Möchtest du die Anfrage von "{{ object.username }}" wirklich {{reaktion}}?</h1>
         <p>
             <input type="submit" value="Ja" /> <a href="{% url 'authorization:request' %}">Abbrechen</a>
         </p>
