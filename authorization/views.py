@@ -48,6 +48,7 @@ def registerUser(request, *args, **kwargs):
     cashier_group, created = Group.objects.get_or_create(name='Kassierer')
     analyst_group, created = Group.objects.get_or_create(name='Analysten')
     #create superuser if necessary
+    # nicht implementiert
 
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
@@ -79,7 +80,7 @@ def registerUser(request, *args, **kwargs):
                     elif tmp == 'Analysten':
                         nlyst = True
                     elif tmp == 'Kassierer':
-                        nlyst = True
+                        kssrr = True
                     group.user_set.add(user)                      
                     #Django fügt nicht die Gruppen hinzu, deswegen manuell
                     messages.success(request,i)
@@ -91,7 +92,7 @@ def registerUser(request, *args, **kwargs):
                 frstnm = request.POST.get("first_name","")
                 lstnm = request.POST.get("last_name","")
                 typ = 'AC'
-                entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ,admin=admn,kassierer=nlyst,analyst=kssrr)
+                entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ,admin=admn,kassierer=kssrr,analyst=nlyst)
                 ############################################
                 # set inactive
                 user.is_active = False
