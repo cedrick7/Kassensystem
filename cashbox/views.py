@@ -3,6 +3,7 @@ from .forms import *
 from product.models import Product
 from django.http import HttpResponse
 
+
 from django.views.generic import (
     View, 
     ListView,
@@ -23,6 +24,41 @@ from django.views.generic import (
 # views:
 
 
+class cashbox_payment_view(View):
+    template_name = 'new/cashbox_pay_copy.html'
+     # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+        
+        context={}
+        
+        # queryset = Product.objects.all()
+
+        print("")
+        print("GET")
+  
+
+        context={
+            
+            
+        }
+        return render(request, self.template_name, context)
+
+    
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+  
+        context={}
+ 
+        print("")
+        print("POST")
+        
+
+        # queryset = Product.objects.all()
+        context={
+
+
+        }
+        return render(request, self.template_name, context)
 
 
 class cashbox_dashboard_view(View):
@@ -40,6 +76,7 @@ class cashbox_dashboard_view(View):
 
         print("")
         print("GET")
+        print(request.method)
         
         request.session['shoppingcartIds'] = []
         print(request.session.get('shoppingcartIds'))
@@ -58,8 +95,10 @@ class cashbox_dashboard_view(View):
     
     # http/POST method
     def post(self, request, id=None, *args, **kwargs):
+
         
         context={}
+
         productId = request.POST.get("productId", "")
         
         
@@ -76,17 +115,51 @@ class cashbox_dashboard_view(View):
         print("POST")
         print(request.session.get('shoppingcartIds'))
         
-        # productlist
+        productlist = []
         
+        
+        productIdlist.sort()
+        print(productIdlist)
+ 
+        include = False
+        for id in productIdlist:
+            obj = Product.objects.get(pk=id)
 
+            for list in productlist:
+
+                if obj in list:
+                    print("True")
+                    include = True
+                    list.append(obj)
+
+            if include is False:
+                productlist.append([obj])
+            else: 
+                include = False
+
+        print("Produktliste Davor:")
+        print(productlist)
+
+        # if 'delete' in request.POST:
+        #     print("DELETE")
+        #     print(request.POST.get("productId", ""))
+
+        print("Produktliste Danach:")
+        print(productlist)
+
+        total = 0
+
+        for list in productlist:
+            for p in list:
+                total += p.costs
+        
 
         queryset = Product.objects.all()
         context={
             "object_list":queryset,
-            
-            # "object":obj,
-            # "form":form, 
-            # "headline":"Bearbeite einen Datensicherungssatz"
+            "shoppingcart":productlist,
+            "totalcosts":total
+
         }
         return render(request, self.template_name, context)
 

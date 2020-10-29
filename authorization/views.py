@@ -47,6 +47,7 @@ def registerUser(request, *args, **kwargs):
     admin_group, created = Group.objects.get_or_create(name='Administratoren')
     cashier_group, created = Group.objects.get_or_create(name='Kassierer')
     analyst_group, created = Group.objects.get_or_create(name='Analysten')
+    #create superuser if necessary
 
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
@@ -171,11 +172,11 @@ def passwordReset(request, *args, **kwargs):
                 ############################################
                 #           request wird generiert         #
                 ############################################
-                usrnme = request.POST.get("username","")
-                frstnm = request.POST.get("first_name","")
-                lstnm = request.POST.get("last_name","")
+                # usrnme = request.POST.get("username","")
+                frstnm = user.first_name
+                lstnm = user.last_name
                 typ = 'PR'
-                entry = Request.objects.create(username=usrnme, firstname=frstnm,lastname=lstnm, type=typ)
+                entry = Request.objects.create(username=username, firstname=frstnm,lastname=lstnm, type=typ)
                 ############################################
                 # set inactive
                 user.is_active = False
@@ -215,15 +216,14 @@ class RequestDeleteView(LoginRequiredMixin,View):
         if id is not None and type is not None:
             obj =  get_object_or_404(Request, username=username,type=type)
         return obj
-
-    
+   
     def get(self, request, username=None,type=None, *args, **kwargs):
         context = {}
         obj = self.get_object()
         if obj is not None:
             context = {
                 "object":obj,
-                "reaktion":"löschen"
+                "reaktion":"ablehnen"
             }
         return render(request, self.template_name, context)
 
@@ -233,9 +233,9 @@ class RequestDeleteView(LoginRequiredMixin,View):
         if obj is not None:
             try:
                 username = obj.username
+                user = User.objects.get(username=username)
                 # löschen des Accounts wenn Accountanfrage
                 if type == 'AC':
-                    user = User.objects.get(username=username)
                     user.delete()
                     logger.info('Nutzer wurde erfolgreich gelöscht')
                     # no Active_Account entry
@@ -246,12 +246,13 @@ class RequestDeleteView(LoginRequiredMixin,View):
                 obj.delete()
                 logger.info('Request wurde erfolgreich gelöscht')
                 # Check if account is already registert
-                query_aa = Active_Accounts.objects.filter(username=username)
+                query_aa = Active_Accounts.objects.filter(user=user)
                 if query_aa.exists():
                     logger.info('Account ist bereits registriert')
                 else:
-                    entry = Active_Accounts.objects.create(username=username)
-                    logger.info('Account wird registriert')
+                    entry = Active_Accounts(user=user)
+                    entry.save()
+                    logger.info('Account wurde registriert')
                 return redirect('authorization:request')
             except:
                 logger.info('Fehler beim löschen der Anfrage')
@@ -275,7 +276,7 @@ class RequestAcceptView(LoginRequiredMixin,View):
         if obj is not None:
             context = {
             "object":obj,
-            "reaktion": "hinzufügen"
+            "reaktion": "annehmen"
         }
         return render(request, self.template_name, context)
 
@@ -295,43 +296,65 @@ class RequestAcceptView(LoginRequiredMixin,View):
                 context[object] = None
                 logger.info('Request wurde erfolgreich gelöscht')
                 # Account wird registriert
-                query_aa = Active_Accounts.objects.filter(username=username)
+                query_aa = Active_Accounts.objects.filter(user=user)
                 if query_aa.exists():
                     logger.info('Account ist bereits registriert')
                 else:
-                    entry = Active_Accounts.objects.create(username=username)
-                    logger.info('Account wird registriert')
+                    entry = Active_Accounts(user=user)
+                    entry.save()
+                    logger.info('Account wurde registriert')
                 return redirect('authorization:request')
             except:
                 logger.info('Nutzer nicht gefunden')
                 return redirect('authorization:request')
         return render(request, self.template_name, context)
 
+class AccountsListView(LoginRequiredMixin, View):
+    template_name = "new/administration_employees.html"
 
+    def get(self,request, *args,**kwargs):
+        queryset = Active_Accounts.objects.all()
+        context = {
+            'object_list':queryset
+        }
+        return render(request, self.template_name, context)
 
+class AccountsDeleteView(LoginRequiredMixin, View):
+    template_name = "new/test_delete_user.html"
+    def get_object_aa(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None:
+            obj = get_object_or_404(Active_Accounts, user=id)
+        return obj
+    
+    def get_object_ua(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None:
+            obj = get_object_or_404(User, id=id)
+        return obj
 
-# def authorization_register_view(request, *args, **kwargs):
-#     register_form = FormRegister(request.POST or None)
+    def get(self, request, id=None, *args, **kwargs):
+        context = {}
+        obj = self.get_object_aa()
+        if obj is not None:
+            context = {
+                'object':obj
+            }
+        return render(request,self.template_name ,context)
 
-#     context = {
-#         'form': register_form
-#     }
-#     return render(request, "authorization_register.html", context)
+    def post(self, request, id=None, *args, **kwargs):
+        context = {}
+        obj_aa = self.get_object_aa()
+        obj_ua = self.get_object_ua()
+        if obj_aa is not None and obj_ua is not None:
+            obj_aa.delete()
+            obj_ua.delete()
+            context = {
+                "object":None
+            }
+            return redirect('authorization:mitarbeiter')
+        return render(request, self.template_name, context)
 
-
-# def authorization_forgot_password_view(request, *args, **kwargs):
-#     forgot_password_form = FormForgotPassword(request.POST or None)
-
-#     context = {
-#         'form': forgot_password_form
-#     }
-#     return render(request, "authorization_forgot_password.html", context)
-
-
-# def authorization_change_password_view(request, *args, **kwargs):
-#     change_password_form = FormChangePassword(request.POST or None)
-
-#     context = {
-#         'form': change_password_form
-#     }
-#     return render(request, "authorization_change_password.html", context)
+    

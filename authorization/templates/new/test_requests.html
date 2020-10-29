@@ -7,6 +7,7 @@
 <p>Gruppe Administratoren: {{ instance.admin }}</p>
 <p>Gruppe Analysten: {{ instance.analyst }}</p>
 <p>Gruppe Kassierer: {{ instance.kassierer }}</p>
+
 {% else %}
 <p>Passwort zurücksetzen für {{ instance.firstname }} {{ instance.lastname }}</p>
 <p>Nutzername: {{ instance.username }} </p>
@@ -14,6 +15,6 @@
 <a href="{{ instance.get_accept_url }}">Annehmen</a>
 <a href="{{ instance.get_delete_url }}">Ablehnen</a>
 <p>--------------------------------</p>	
-
 {% endfor %}
+<a href="{% url 'authorization:mitarbeiter' %}">Zurück</a>
 

@@ -1,19 +1,49 @@
+{% load cashboxtags %}
+
+<html>
 <form>
 	<div class="table-responsive">
 		<table class="table cart-table">
 			<thead>
 			<tr>
-				<th>Pos</th>
-				<th>Quan.</th>
+				<th>Position</th>
+				<th>Anzahl</th>
 				<th>Name</th>
-				<th>Preis</th>
-				<th>Preis</th>
+				<th>Einzelpreis</th>
+				<th>Gesamtpreis</th>
 				<th>Entf.</th>
 			</tr>
 			</thead>
 			<tbody>
-			<tr>
-				<td>1</td>
+				
+				{% for instance in shoppingcart %}
+					<tr>
+						<td>{{ forloop.counter }}</td>
+						<td>{{ instance|length }} x</td>
+						<td>{{ instance.0 }}</td>
+						<td>{{ instance.0.costs }} €</td>
+						<td>{{ instance.0.costs|mult:instance}} €</td>
+						
+						
+						
+						<td>{{ instance.0.id }}</td>
+						
+						<td>
+							<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="col-4 pattern-element">
+									<input type="hidden" id="productId" name="productId" value="{{ instance.0.id }}">
+		
+								</button>
+								
+		
+							</form>
+						</td>
+					</tr>
+				{% endfor %}
+				
+			<!-- <tr>
+				<td>2</td>
 				<td>1x</td>
 				<td>D1</td>
 				<td>19,99€</td>
@@ -25,7 +55,7 @@
 				<td>11x</td>
 				<td>H1</td>
 				<td>19,99€</td>
-				<td>429,99€</td>
+				<td>429,9€</td>
 				<td><a href="#"><i class="fa fa-remove"></i></a></td>
 			</tr>
 			<tr>
@@ -35,7 +65,7 @@
 				<td>19,99€</td>
 				<td>19,99€</td>
 				<td><a href="#"><i class="fa fa-remove"></i></a></td>
-			</tr>
+			</tr> -->
 			</tbody>
 		</table>
 	</div>
@@ -43,16 +73,16 @@
 		<div class="col card-row">
 			<div class="row">
 				<div class="col-12">
-					<p class="card-element">Insgesamt: 39,98€</p>
+					<p class="card-element">Insgesamt: {{ totalcosts }} €</p>
 				</div>
 				<div class="col-6">
 					{{ form.payment }}
 				</div>
 				<div class="col-6">
-					<button class="btn btn-primary" type="button">Zur Kasse gehen<i
-							class="fa fa-chevron-right"></i></button>
+					<a href="{% url 'cashbox:cashbox_payment' %}" class="btn btn-primary">Zur Kasse gehen</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </form>
+</html>

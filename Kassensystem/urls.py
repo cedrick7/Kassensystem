@@ -29,7 +29,6 @@ from cashbox.urls import *
 from django.urls import include, path
 
 urlpatterns = [
-
     path('Administration/', include('administration.urls')),
     path('Autorisierung/', include('authorization.urls')),
     path('Kasse/', include('cashbox.urls')),

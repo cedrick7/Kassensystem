@@ -8,6 +8,8 @@ from .views import (
         RequestListView,
         RequestDeleteView,
         RequestAcceptView,
+        AccountsListView,
+        AccountsDeleteView
         
 )
 
@@ -17,6 +19,8 @@ urlpatterns=[
     path('register', registerUser, name='register'),
     path('logout', logoutUser, name='logout'),
     path('reset', passwordReset, name='reset'),
+    path('Mitarbeiter', allowed_user(allowed_roles=['Administratoren'])(AccountsListView.as_view()), name='mitarbeiter'),
+    path('<int:id>/delete', allowed_user(allowed_roles=['Administratoren'])(AccountsDeleteView.as_view()), name='delete_user'),
     path('request', allowed_user(allowed_roles=['Administratoren'])(RequestListView.as_view()), name='request'),
     path('<str:username>/<str:type>/delete', allowed_user(allowed_roles=['Administratoren'])(RequestDeleteView.as_view()), name='delete'),
     path('<str:username>/<str:type>/accept', allowed_user(allowed_roles=['Administratoren'])(RequestAcceptView.as_view()), name='accept')
