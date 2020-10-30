@@ -29,6 +29,7 @@ from cashbox.urls import *
 from django.urls import include, path
 
 urlpatterns = [
+    path('',redirectView, name='redirect'),
     path('Administration/', include('administration.urls')),
     path('Autorisierung/', include('authorization.urls')),
     path('Kasse/', include('cashbox.urls')),
@@ -65,9 +66,9 @@ urlpatterns = [
     path('Analyst/', analyzation_dashboard_view, name='analyzation_dashboard'),
     path('Analyst/Umsatz/', analyzation_sales_view, name='analyzation_sales'),
     path('Analyst/Kunden/', analyzation_customers_view, name='analyzation_customers'),
-    path('Analyst/Mitarbeiter/', analyzation_employees_view, name='analyzation_employees'),
+    path('Analyst/Mitarbeiter/', EmployeesView.as_view(), name='analyzation_employees'),
 
-    path('superuser/', admin.site.urls),
+    # path('superuser/', admin.site.urls),
 
     #url(r'^Analyst/$', DashboardView.as_view(), name='analyzation_dashboard'),
     #url(r'^api/data/$', get_data, name='api-data'),

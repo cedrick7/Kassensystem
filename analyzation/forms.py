@@ -142,7 +142,8 @@ class FormEmployeeFilter(forms.Form):
                 "id": "dateRangePicker",
                 "style": "",
                 # aktueller Tag - 6 Tage vor heute
-                "value": "01.10.2020 - 06.10.2020"
+                "value": "01.10.2020 - 06.10.2020",
+                "readonly":""
             }
         )
     )
@@ -158,7 +159,8 @@ class FormEmployeeFilter(forms.Form):
                 "id": "dateRangePicker2",
                 "style": "",
                 # aktueller Tag - 6 Tage vor heute
-                "value": "01.10.2020 - 06.10.2020"
+                "value": "01.10.2020 - 06.10.2020",
+                "readonly":""
             }
         )
     )

@@ -7,7 +7,6 @@ from rest_framework.response import Response
 
 from analyzation.forms import *
 
-
 # -------------------------------------------------------------------------
 # analyzation
 
@@ -182,6 +181,7 @@ def analyzation_customers_view(request, *args, **kwargs):
     context = {
         'form': customerForm
     }
+
     return render(request, 'analyzation_customers.html', context)
 
 
@@ -287,15 +287,34 @@ class CustomerChartData(APIView):
         }
         return Response(data)
 
-
 # EmployeesView
-def analyzation_employees_view(request, *args, **kwargs):
-    employeesForm = FormEmployeeFilter(request.POST or None)
+# def analyzation_employees_view(request, *args, **kwargs):
+#     employeesForm = FormEmployeeFilter()
+#     context = {'form': employeesForm}
 
-    context = {
-        'form': employeesForm
-    }
-    return render(request, 'analyzation_employees.html', context)
+#     if request.method == 'POST':
+#         print("post")
+#         if request.POST.get("mtrbtr_ztn"):
+#             print("mtrbtr_ztn")
+#         elif request.POST.get("mtrbtr_mstz"):
+#             print("mtrbtr_mstz")
+
+#     return render(request, 'analyzation_employees.html', context)
+
+class EmployeesView(View):
+    def get(self, request, *args, **kwargs):
+        print("GET")
+        context = {"form":FormEmployeeFilter}
+        return render(request, 'analyzation_employees.html', context)
+
+    def post(self, request, *args, **kwargs):
+        print("POST")
+        context = {"form":FormEmployeeFilter}
+        if request.POST.get("mtrbtr_ztn"):
+            print("mtrbtr_ztn")
+        elif request.POST.get("mtrbtr_mstz"):
+            print("mtrbtr_mstz")
+        return render(request, 'analyzation_employees.html', context)
 
 
 # for chart.js with rest-framework
@@ -308,6 +327,7 @@ class EmployeeChartData(APIView):
         employee_times_data = [[0, 4, 4, 4, 4, 8, 8], [8, 8, 8, 8, 0, 0, 0], [2, 2, 2, 2, 0, 0, 8]]
         employee_times_labels = ['Mitarbeitername 1', 'Mitarbeitername 2', 'Mitarbeitername 3']
         employee_times_chart_labels = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+        
         employee_times_chart_legend = 'Mitarbeiterzeiten'
         employee_times_x_axes = 'Zeit in Tagen'
         employee_times_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
@@ -336,6 +356,7 @@ class EmployeeChartData(APIView):
             'employee_revenue_y_axes': employee_revenue_y_axes
         }
         return Response(data)
+
 
 # ----------------------------------------------------------------------------------------------------------------------
 # class DashboardView(View):

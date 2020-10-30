@@ -38,6 +38,9 @@ logger = logging.getLogger('django')
 #     return render(request, "authorization_login.html", context)                                               
 
 
+
+def redirectView(request,*args,**kwargs):
+    return redirect('authorization:login')
 # Registrieren
 @unauthenticated_user
 def registerUser(request, *args, **kwargs):
