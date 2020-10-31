@@ -5,6 +5,7 @@ from product.models import Product
 from decimal import Decimal
 from django.core.validators import MinValueValidator
 from django.urls import reverse
+from authorization.models import Active_Accounts
 
 # Create your models here.
 
@@ -12,6 +13,7 @@ from django.urls import reverse
 class Cashbox(models.Model):
     title       = models.CharField(max_length=45)
     amount      = models.DecimalField(max_digits=6,decimal_places=2, validators=[MinValueValidator(Decimal('-0.01'))]) # in Euro
+    user        = models.OneToOneField(Active_Accounts, on_delete=models.CASCADE, null=True)
     
     def get_update_url(self):
         return reverse("administration:cashbox_update", kwargs={"id": self.id})

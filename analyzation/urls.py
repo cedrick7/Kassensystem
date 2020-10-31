@@ -16,6 +16,8 @@ urlpatterns=[
     url(r'^api/sales/chart/data/$',     SalesChartData.as_view(),     name='api-sales-chart-data'),
     url(r'^api/customers/chart/data/$', CustomerChartData.as_view(),  name='api-customers-chart-data'),
     url(r'^api/employees/chart/data/$', EmployeeChartData.as_view(),  name='api-employees-chart-data'),
+    # new apis
+    url(r'^api/sales/chart/products/$', SalesProductList.as_view(),   name='api-sales-chart-products'),
 ]
 
 

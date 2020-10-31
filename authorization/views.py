@@ -8,6 +8,7 @@ from django.contrib.auth.hashers import make_password
 from .models import Request, Active_Accounts
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .decorators import unauthenticated_user
+from cashbox.models import Cashbox
 from django.views.generic import (
     View,
     ListView,
@@ -150,6 +151,20 @@ def loginUser(request, *args, **kwargs):
     return render(request, "new/test_login.html", context)
 
 def logoutUser(request, *args, **kwargs):
+    try:
+        user = Active_Accounts.objects.get(user=request.user.id)
+        groups = user.user.groups.all()
+        for i in groups:
+            if i.name == 'Kassierer':
+                try:
+                    kasse = Cashbox.objects.get(user=user)
+                    kasse.user = None
+                    kasse.save([user])
+                except:
+                    logger.info(request, 'Kassierer konnte nicht abgemeldet werden')
+    except:
+        logger.info(request, 'Nutzer nicht gefunden')
+        
     logout(request)
     return redirect('authorization:login')
 

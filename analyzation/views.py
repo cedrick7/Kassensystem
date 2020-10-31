@@ -5,6 +5,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from analyzation.forms import *
 from cashbox.forms import *
+from product.models import *
+from django.db.models import Sum
+from django.db import connection
+from collections import namedtuple
 import datetime
 
 # -------------------------------------------------------------------------
@@ -21,6 +25,15 @@ import datetime
 #############################################################
 #Views
 
+# RawSQL
+def raw_sql(query):
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        desc = cursor.description
+        nt_result = namedtuple('Result', [col[0] for col in desc])
+        return [nt_result(*row) for row in cursor.fetchall()]
+
+
 # DashboardView
 def analyzation_dashboard_view(request, *args, **kwargs):
     dateRange_form = FormDashboard(request.POST or None)
@@ -32,10 +45,43 @@ def analyzation_sales_view(request, *args, **kwargs):
     context = {}
     if request.method == 'GET':
         print("GET")
-        sales_form = FormSalesFilter()
-        now = datetime.datetime.now()
-        sales_today = Bill.objects.filter(creation=datetime.date(now.year,now.month,now.day))
-        context = {'form': sales_form}
+        sales_form = FormSalesFilter() 
+
+        #Monatliche / Wöchentliche / Tägliche Einnahmen
+        date_end = datetime.datetime.today()
+        date_start = date_end - datetime.timedelta(days=1)
+        sales_day = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
+
+        date_start = date_end - datetime.timedelta(days=7)
+        sales_week = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
+
+        date_start = date_end - datetime.timedelta(days=30)
+        sales_month = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
+
+        #Einnahmen Produkte
+        # query = "SELECT SUM(costs) FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
+        #          ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
+        #          WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
+        #          AND type='PR';" 
+        # query_result = raw_sql(query)
+        # sales_product = query_result[0]
+        #Einnahmen Dienstleistungen
+        # query = "SELECT SUM(costs) FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
+        #          ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
+        #          WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
+        #          AND type='DI';" 
+        # query_result = raw_sql(query)
+        # sales_dienst = query_result[0]
+
+        context = {
+            'form': sales_form,
+            'sales_day' : sales_day,
+            'sales_week' : sales_week,
+            'sales_month' : sales_month,
+            # 'sales_product': sales_product,
+            # 'sales_dienst': sales_dienst,
+            }
+
     elif request.method == 'POST':
         print("POST")
 
@@ -54,9 +100,40 @@ def analyzation_employees_view(request, *args, **kwargs):
     return render(request, 'analyzation_employees.html', context)
 
 ##############################################################
-#API
+#new API's
+class SalesProductList(APIView):
+    
+    def get(self, request, format=None):
+        # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
+        query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 10;"
 
-##############################################################
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        products_chart_labels = []
+        products_data = []
+
+        #Festwerte
+        products_chart_x_axes = 'Produkte'
+        products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+        #Dynamische Werte füllen
+        for i in query_result:
+            products_chart_labels.append(i.Produkt)
+            products_data.append(i.Summe)
+        
+        context = {
+            'products_chart_labels':products_chart_labels,
+            'products_data':products_data,
+            'products_chart_x_axes':products_chart_x_axes,
+            'products_chart_y_axes':products_chart_y_axes,
+        }
+        return Response(context)
+###############################################################
 
 
 
