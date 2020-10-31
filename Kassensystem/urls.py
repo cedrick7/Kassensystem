@@ -32,9 +32,9 @@ urlpatterns = [
     path('',redirectView, name='redirect'),
     path('Administration/', include('administration.urls')),
     path('Autorisierung/', include('authorization.urls')),
+    path('Analyst/', include('analyzation.urls')),
+
     path('Kasse/', include('cashbox.urls')),
-
-
     path('Kunden/', customer_customer_view, name='customer'),
 
     # path('Kasse/', cashbox_dashboard_view, name='cashbox_dashboard'),
@@ -63,19 +63,20 @@ urlpatterns = [
     # path('Admin/Zahlungsmittel/', administration_payments_view, name='administration_payments'),
     # path('Admin/Anfragen/', administration_requests_view, name='administration_requests'),
 
-    path('Analyst/', analyzation_dashboard_view, name='analyzation_dashboard'),
-    path('Analyst/Umsatz/', analyzation_sales_view, name='analyzation_sales'),
-    path('Analyst/Kunden/', analyzation_customers_view, name='analyzation_customers'),
-    path('Analyst/Mitarbeiter/', EmployeesView.as_view(), name='analyzation_employees'),
+    # path('Analyst/', analyzation_dashboard_view, name='analyzation_dashboard'),
+    # path('Analyst/Umsatz/', analyzation_sales_view, name='analyzation_sales'),
+    # path('Analyst/Kunden/', analyzation_customers_view, name='analyzation_customers'),
+    # path('Analyst/Mitarbeiter/', EmployeesView.as_view(), name='analyzation_employees'),
 
     # path('superuser/', admin.site.urls),
 
     #url(r'^Analyst/$', DashboardView.as_view(), name='analyzation_dashboard'),
     #url(r'^api/data/$', get_data, name='api-data'),
-    url(r'^api/dashboard/chart/data/$', DashboardChartData.as_view(), name='api-dashboard-chart-data'),
-    url(r'^api/sales/chart/data/$', SalesChartData.as_view(), name='api-sales-chart-data'),
-    url(r'^api/customers/chart/data/$', CustomerChartData.as_view(), name='api-customers-chart-data'),
-    url(r'^api/employees/chart/data/$', EmployeeChartData.as_view(), name='api-employees-chart-data'),
+
+    # url(r'^api/dashboard/chart/data/$', DashboardChartData.as_view(), name='api-dashboard-chart-data'),
+    # url(r'^api/sales/chart/data/$', SalesChartData.as_view(), name='api-sales-chart-data'),
+    # url(r'^api/customers/chart/data/$', CustomerChartData.as_view(), name='api-customers-chart-data'),
+    # url(r'^api/employees/chart/data/$', EmployeeChartData.as_view(), name='api-employees-chart-data'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

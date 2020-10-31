@@ -1,11 +1,11 @@
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.generic import View
-
 from rest_framework.views import APIView
 from rest_framework.response import Response
-
 from analyzation.forms import *
+from cashbox.forms import *
+import datetime
 
 # -------------------------------------------------------------------------
 # analyzation
@@ -17,19 +17,66 @@ from analyzation.forms import *
 
 
 # -------------------------------------------------------------------------
-# views:
 
+#############################################################
+#Views
 
 # DashboardView
 def analyzation_dashboard_view(request, *args, **kwargs):
     dateRange_form = FormDashboard(request.POST or None)
-
-    context = {
-        'form': dateRange_form
-    }
+    context = {'form': dateRange_form}
     return render(request, 'analyzation_dashboard.html', context)
 
+# SalesView
+def analyzation_sales_view(request, *args, **kwargs):
+    context = {}
+    if request.method == 'GET':
+        print("GET")
+        sales_form = FormSalesFilter()
+        now = datetime.datetime.now()
+        sales_today = Bill.objects.filter(creation=datetime.date(now.year,now.month,now.day))
+        context = {'form': sales_form}
+    elif request.method == 'POST':
+        print("POST")
 
+    return render(request, 'analyzation_sales.html', context)
+
+# CustomerView
+def analyzation_customers_view(request, *args, **kwargs):
+    customerForm = FormCustomerFilter(request.POST or None)
+    context = {'form': customerForm}
+    return render(request, 'analyzation_customers.html', context)
+
+#EmployeesView
+def analyzation_employees_view(request, *args, **kwargs):
+    analystForm = FormEmployeeFilter()
+    context = {'form': analystForm}
+    return render(request, 'analyzation_employees.html', context)
+
+##############################################################
+#API
+
+##############################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################################################################################
+#                                                           old                                                                     #
+#####################################################################################################################################
 # for chart.js with rest-framework
 class DashboardChartData(APIView):
     authentication_classes = []
@@ -86,18 +133,7 @@ class DashboardChartData(APIView):
         }
         return Response(data)
 
-
-# SalesView
-def analyzation_sales_view(request, *args, **kwargs):
-    sales_form = FormSalesFilter(request.POST or None)
-
-    context = {
-        'form': sales_form
-    }
-    return render(request, 'analyzation_sales.html', context)
-
-
-# for chart.js with rest-framework
+# # for chart.js with rest-framework
 class SalesChartData(APIView):
     authentication_classes = []
     permission_classes = []
@@ -173,19 +209,7 @@ class SalesChartData(APIView):
         }
         return Response(data)
 
-
-# CustomerView
-def analyzation_customers_view(request, *args, **kwargs):
-    customerForm = FormCustomerFilter(request.POST or None)
-
-    context = {
-        'form': customerForm
-    }
-
-    return render(request, 'analyzation_customers.html', context)
-
-
-# for chart.js with rest-framework
+# # for chart.js with rest-framework
 class CustomerChartData(APIView):
     authentication_classes = []
     permission_classes = []
@@ -287,37 +311,7 @@ class CustomerChartData(APIView):
         }
         return Response(data)
 
-# EmployeesView
-# def analyzation_employees_view(request, *args, **kwargs):
-#     employeesForm = FormEmployeeFilter()
-#     context = {'form': employeesForm}
-
-#     if request.method == 'POST':
-#         print("post")
-#         if request.POST.get("mtrbtr_ztn"):
-#             print("mtrbtr_ztn")
-#         elif request.POST.get("mtrbtr_mstz"):
-#             print("mtrbtr_mstz")
-
-#     return render(request, 'analyzation_employees.html', context)
-
-class EmployeesView(View):
-    def get(self, request, *args, **kwargs):
-        print("GET")
-        context = {"form":FormEmployeeFilter}
-        return render(request, 'analyzation_employees.html', context)
-
-    def post(self, request, *args, **kwargs):
-        print("POST")
-        context = {"form":FormEmployeeFilter}
-        if request.POST.get("mtrbtr_ztn"):
-            print("mtrbtr_ztn")
-        elif request.POST.get("mtrbtr_mstz"):
-            print("mtrbtr_mstz")
-        return render(request, 'analyzation_employees.html', context)
-
-
-# for chart.js with rest-framework
+# # for chart.js with rest-framework
 class EmployeeChartData(APIView):
     authentication_classes = []
     permission_classes = []
@@ -356,7 +350,7 @@ class EmployeeChartData(APIView):
             'employee_revenue_y_axes': employee_revenue_y_axes
         }
         return Response(data)
-
+##############################################################################################################################
 
 # ----------------------------------------------------------------------------------------------------------------------
 # class DashboardView(View):

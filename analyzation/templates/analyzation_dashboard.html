@@ -19,7 +19,7 @@
 {% endblock navbar %}
 
 {% block content %}
-	<section id="body" url-endpoint='{% url "api-dashboard-chart-data" %}'>
+	<section id="body" url-endpoint='{% url "analyzation:api-dashboard-chart-data" %}'>
 		<div class="heading container-fluid">
 			<!-- change this content -->
 			<h3>Dashboard</h3>
@@ -328,7 +328,7 @@
 	<script>
 
         // DATA
-        const endpoint = '{% url "api-dashboard-chart-data" %}'
+        const endpoint = '{% url "analyzation:api-dashboard-chart-data" %}'
         var revenue_total_data = []
         var revenue_total_legend = ''
         var revenue_products_data = []
