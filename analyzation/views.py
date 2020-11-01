@@ -9,7 +9,7 @@ from product.models import *
 from django.db.models import Sum
 from django.db import connection
 from collections import namedtuple
-import datetime
+import datetime, json
 
 # -------------------------------------------------------------------------
 # analyzation
@@ -42,7 +42,10 @@ def analyzation_dashboard_view(request, *args, **kwargs):
 
 # SalesView
 def analyzation_sales_view(request, *args, **kwargs):
+    global sales_product, sales_dienst, sales_month, sales_week, sales_day
     context = {}
+    # Globale Variablen, genutzt für GET und POST
+
     if request.method == 'GET':
         print("GET")
         sales_form = FormSalesFilter() 
@@ -58,33 +61,55 @@ def analyzation_sales_view(request, *args, **kwargs):
         date_start = date_end - datetime.timedelta(days=30)
         sales_month = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
 
-        #Einnahmen Produkte
-        # query = "SELECT SUM(costs) FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
-        #          ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
-        #          WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
-        #          AND type='PR';" 
-        # query_result = raw_sql(query)
-        # sales_product = query_result[0]
-        #Einnahmen Dienstleistungen
-        # query = "SELECT SUM(costs) FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
-        #          ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
-        #          WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
-        #          AND type='DI';" 
-        # query_result = raw_sql(query)
-        # sales_dienst = query_result[0]
+        ##Einnahmen Produkte
+        query = "SELECT SUM(costs) AS 'Summe' FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
+                  ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
+                  WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
+                  AND type='PR';" 
+        query_result = raw_sql(query)
+        sales_product = query_result[0].Summe
+        ##Einnahmen Dienstleistungen
+        query = "SELECT SUM(costs) AS 'Summe' FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
+                ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
+                WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
+                AND type='DI';" 
+        query_result = raw_sql(query)
+        sales_dienst = query_result[0].Summe
+        #Standarddaten
 
+        revenue_total_data = [26, 39, 44, 64, 92, 64]
+        print(json.dumps(revenue_total_data))
+
+        #Context
         context = {
             'form': sales_form,
             'sales_day' : sales_day,
             'sales_week' : sales_week,
             'sales_month' : sales_month,
-            # 'sales_product': sales_product,
-            # 'sales_dienst': sales_dienst,
+            'sales_product': sales_product,
+            'sales_dienst': sales_dienst,
             }
+        
 
     elif request.method == 'POST':
         print("POST")
+        sales_form = FormSalesFilter(request.POST)
+        print(sales_form)
+        #Abfangen des Knopfes und Manipulierung der jeweiligen Daten
+        if request.POST.get("mstzfltr"):
+            print("Umsatzfilter")
+        elif request.POST.get("prdktfltr"):
+            print("Produktfilter")
+        elif request.POST.get("dnstlstngsfltr"):
+            print("Dienstleistungsfilter")
+        elif request.POST.get("stßztnfltr"):
+            print("Stoßzeitenfilter")
+        ##
 
+        #Context
+        context = {
+            'form': sales_form,
+        }
     return render(request, 'analyzation_sales.html', context)
 
 # CustomerView
