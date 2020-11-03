@@ -50,17 +50,23 @@ def analyzation_sales_view(request, *args, **kwargs):
         print("GET")
         sales_form = FormSalesFilter() 
 
-        #Monatliche / Wöchentliche / Tägliche Einnahmen
-        date_end = datetime.datetime.today()
-        date_start = date_end - datetime.timedelta(days=1)
-        sales_day = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
-        print(sales_day)
+        #Tägliche Einnahmen
+        query = "SELECT SUM(totalcosts) AS Summe FROM cashbox_bill \
+                WHERE creation >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY) AND creation <= CURRENT_TIMESTAMP();" #between statement geht nicht
+        result = raw_sql(query)
+        sales_day = result[0].Summe
 
-        date_start = date_end - datetime.timedelta(days=7)
-        sales_week = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
+        #Wöchentliche Einnahmen
+        query = "SELECT SUM(totalcosts) AS Summe FROM cashbox_bill \
+                WHERE creation >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND creation <= CURRENT_TIMESTAMP();" #between statement geht nicht
+        result = raw_sql(query)
+        sales_week = result[0].Summe
 
-        date_start = date_end - datetime.timedelta(days=30)
-        sales_month = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
+        #Monatliche Einnahmen
+        query = "SELECT SUM(totalcosts) AS Summe FROM cashbox_bill \
+                WHERE creation >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY) AND creation <= CURRENT_TIMESTAMP();" #between statement geht nicht
+        result = raw_sql(query)
+        sales_month = result[0].Summe
 
         ##Einnahmen Produkte
         query = "SELECT SUM(costs) AS 'Summe' FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
@@ -78,7 +84,7 @@ def analyzation_sales_view(request, *args, **kwargs):
         sales_dienst = query_result[0].Summe
         
         #Standarddaten
-        # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
+        ## chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
         query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
                 FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
                 ON product.id = products.product_id  \
@@ -86,21 +92,43 @@ def analyzation_sales_view(request, *args, **kwargs):
                 ORDER BY Summe ASC \
                 LIMIT 10;"
 
-        ##Dynamische Werte
+        #Dynamische Werte
         query_result = raw_sql(query)
         products_chart_labels = []
         products_data = []
 
-        ##Festwerte
+        #Festwerte
         products_chart_x_axes = 'Produkte'
         products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
-        ##Dynamische Werte füllen
-        print(query_result)
+        #Dynamische Werte füllen
         for i in query_result:
             products_chart_labels.append(i.Produkt)
-            products_data.append(float(i.Summe))
+            products_data.append(i.Summe)
         
+        ## chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
+        query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                FROM product_category AS pc \
+                INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                GROUP BY (pc.title) \
+                ORDER BY Summe DESC \
+                LIMIT 5;"
+                
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        services_data = []
+        services_chart_labels = []
+        #Festwerte
+        services_chart_x_axes = 'Kategoriename'
+        services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+        services_chart_legend = 'TOP 5 Dienstleistungen'
+        #Dynamische Werte füllen
+        for i in query_result:
+            services_data.append(i.Summe)
+            services_chart_labels(i.Kategorie)
+
         #Context
         context = {
             'form': sales_form,
@@ -110,10 +138,16 @@ def analyzation_sales_view(request, *args, **kwargs):
             'sales_product': sales_product,
             'sales_dienst': sales_dienst,
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
-            'products_chart_labels':json.dumps(products_chart_labels),
-            'products_data':json.dumps(products_data),
-            'products_chart_x_axes':json.dumps(products_chart_x_axes),
-            'products_chart_y_axes':json.dumps(products_chart_y_axes),
+            'products_chart_labels':products_chart_labels,
+            'products_data':products_data,
+            'products_chart_x_axes':products_chart_x_axes,
+            'products_chart_y_axes':products_chart_y_axes,
+            # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
+            'services_data' : services_data,
+            'services_chart_labels' : services_chart_labels,
+            'services_chart_x_axes' : services_chart_x_axes,
+            'services_chart_y_axes' : services_chart_y_axes,
+            'services_chart_legend' : services_chart_legend,
             }
     
     elif request.method == 'POST':
@@ -192,21 +226,6 @@ class SalesProductList(APIView):
 ###############################################################
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #####################################################################################################################################
 #                                                           old                                                                     #
 #####################################################################################################################################
@@ -229,18 +248,18 @@ class DashboardChartData(APIView):
         revenue_chart_y_axes = 'Umsatz in €'
 
         # chart no.2 - Produkte Überblick (TOP-X Ranking) [bar-chart]
-        products_data = [13, 23, 24, 38, 49, 33]
-        products_chart_legend = 'TOP 5 Produkte'
-        products_chart_labels = ['Schampoo', 'Spülung', 'Festiger', 'Kamm', 'Bürste']
-        products_chart_x_axes = 'Kategoriename'
-        products_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+        # products_data = [13, 23, 24, 38, 49, 33]
+        # products_chart_legend = 'TOP 5 Produkte'
+        # products_chart_labels = ['Schampoo', 'Spülung', 'Festiger', 'Kamm', 'Bürste']
+        # products_chart_x_axes = 'Kategoriename'
+        # products_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
 
         # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
-        services_data = [13, 16, 20, 26, 43, 31]
-        services_chart_legend = 'TOP 5 Dienstleistungen'
-        services_chart_labels = ['Damen', 'Colorationen', 'Herren', 'Specials', 'Kinder']
-        services_chart_x_axes = 'Kategoriename'
-        services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+        # services_data = [13, 16, 20, 26, 43, 31]
+        # services_chart_legend = 'TOP 5 Dienstleistungen'
+        # services_chart_labels = ['Damen', 'Colorationen', 'Herren', 'Specials', 'Kinder']
+        # services_chart_x_axes = 'Kategoriename'
+        # services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
 
         data = {
             'revenue_total_data': revenue_total_data,
