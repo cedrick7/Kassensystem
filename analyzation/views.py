@@ -54,6 +54,7 @@ def analyzation_sales_view(request, *args, **kwargs):
         date_end = datetime.datetime.today()
         date_start = date_end - datetime.timedelta(days=1)
         sales_day = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
+        print(sales_day)
 
         date_start = date_end - datetime.timedelta(days=7)
         sales_week = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
@@ -75,11 +76,31 @@ def analyzation_sales_view(request, *args, **kwargs):
                 AND type='DI';" 
         query_result = raw_sql(query)
         sales_dienst = query_result[0].Summe
+        
         #Standarddaten
+        # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
+        query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 10;"
 
-        revenue_total_data = [26, 39, 44, 64, 92, 64]
-        print(json.dumps(revenue_total_data))
+        ##Dynamische Werte
+        query_result = raw_sql(query)
+        products_chart_labels = []
+        products_data = []
 
+        ##Festwerte
+        products_chart_x_axes = 'Produkte'
+        products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+        ##Dynamische Werte füllen
+        print(query_result)
+        for i in query_result:
+            products_chart_labels.append(i.Produkt)
+            products_data.append(float(i.Summe))
+        
         #Context
         context = {
             'form': sales_form,
@@ -88,9 +109,13 @@ def analyzation_sales_view(request, *args, **kwargs):
             'sales_month' : sales_month,
             'sales_product': sales_product,
             'sales_dienst': sales_dienst,
+            # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
+            'products_chart_labels':json.dumps(products_chart_labels),
+            'products_data':json.dumps(products_data),
+            'products_chart_x_axes':json.dumps(products_chart_x_axes),
+            'products_chart_y_axes':json.dumps(products_chart_y_axes),
             }
-        
-
+    
     elif request.method == 'POST':
         sales_form = FormSalesFilter()
         print("POST")
