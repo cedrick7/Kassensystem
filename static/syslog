@@ -3282,3 +3282,7 @@ INFO 2020-10-31 12:30:01,068 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1
 INFO 2020-10-31 12:30:04,397 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38340
 INFO 2020-10-31 12:30:04,551 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
 WARNING 2020-10-31 12:30:04,561 log Not Found: /favicon.ico
+INFO 2020-11-03 15:39:52,930 autoreload Watching for file changes with StatReloader
+INFO 2020-11-03 15:44:13,645 autoreload Watching for file changes with StatReloader
+INFO 2020-11-03 15:44:27,527 basehttp "GET /Kasse/Payment HTTP/1.1" 200 11287
+INFO 2020-11-03 15:44:27,781 basehttp "GET /static/img/coins/Gutschein.jpg HTTP/1.1" 200 156153
