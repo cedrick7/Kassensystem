@@ -54,10 +54,7 @@ def analyzation_sales_view(request, *args, **kwargs):
         date_end = datetime.datetime.today()
         date_start = date_end - datetime.timedelta(days=1)
         sales_day = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
-<<<<<<< Updated upstream
         print(sales_day)
-=======
->>>>>>> Stashed changes
 
         date_start = date_end - datetime.timedelta(days=7)
         sales_week = Bill.objects.filter(creation__gte=date_start).aggregate(Sum('totalcosts'))
@@ -79,7 +76,6 @@ def analyzation_sales_view(request, *args, **kwargs):
                 AND type='DI';" 
         query_result = raw_sql(query)
         sales_dienst = query_result[0].Summe
-<<<<<<< Updated upstream
         
         #Standarddaten
         # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
@@ -105,13 +101,6 @@ def analyzation_sales_view(request, *args, **kwargs):
             products_chart_labels.append(i.Produkt)
             products_data.append(float(i.Summe))
         
-=======
-        #Standarddaten
-
-        revenue_total_data = [26, 39, 44, 64, 92, 64]
-        print(json.dumps(revenue_total_data))
-
->>>>>>> Stashed changes
         #Context
         context = {
             'form': sales_form,
@@ -120,7 +109,6 @@ def analyzation_sales_view(request, *args, **kwargs):
             'sales_month' : sales_month,
             'sales_product': sales_product,
             'sales_dienst': sales_dienst,
-<<<<<<< Updated upstream
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
             'products_chart_labels':json.dumps(products_chart_labels),
             'products_data':json.dumps(products_data),
@@ -128,11 +116,6 @@ def analyzation_sales_view(request, *args, **kwargs):
             'products_chart_y_axes':json.dumps(products_chart_y_axes),
             }
     
-=======
-            }
-        
-
->>>>>>> Stashed changes
     elif request.method == 'POST':
         sales_form = FormSalesFilter()
         print("POST")
@@ -216,10 +199,6 @@ class SalesProductList(APIView):
 
 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 
 
@@ -227,10 +206,7 @@ class SalesProductList(APIView):
 
 
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 #####################################################################################################################################
 #                                                           old                                                                     #
 #####################################################################################################################################

@@ -3286,7 +3286,3 @@ INFO 2020-11-03 15:39:52,930 autoreload Watching for file changes with StatReloa
 INFO 2020-11-03 15:44:13,645 autoreload Watching for file changes with StatReloader
 INFO 2020-11-03 15:44:27,527 basehttp "GET /Kasse/Payment HTTP/1.1" 200 11287
 INFO 2020-11-03 15:44:27,781 basehttp "GET /static/img/coins/Gutschein.jpg HTTP/1.1" 200 156153
-INFO 2020-11-03 15:45:29,735 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
-INFO 2020-11-03 15:45:30,712 autoreload Watching for file changes with StatReloader
-INFO 2020-11-03 15:45:32,611 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py changed, reloading.
-INFO 2020-11-03 15:45:33,575 autoreload Watching for file changes with StatReloader

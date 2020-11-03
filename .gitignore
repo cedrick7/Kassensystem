@@ -1,7 +1,4 @@
 
 .vscode/settings.json
-<<<<<<< Updated upstream
 .vscode/launch.json
-=======
->>>>>>> Stashed changes
 static/syslog
