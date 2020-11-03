@@ -8,9 +8,15 @@ class Migration(migrations.Migration):
 
     initial = True
 
+<<<<<<< Updated upstream
     # dependencies = [
     #     ('auth', '0012_alter_user_first_name_max_length'),
     # ]
+=======
+    dependencies = [
+        ('auth', '0012_alter_user_first_name_max_length'),
+    ]
+>>>>>>> Stashed changes
 
     operations = [
         migrations.CreateModel(

@@ -14,7 +14,7 @@
 
 <!-- Body -->
 {% block navbar %}
-	{% include 'cashbox_pay_navbar.html' %}
+	{% include 'new/cashbox_pay_navbar_copy.html' %}
 {% endblock navbar %}
 
 {% block content %}
@@ -23,8 +23,186 @@
 			<div class="container">
 				<div class="col">
 					<div class="row row-coins">
-						<div class="col-3 col-coin"><a href="#" class="coin"
-						                               style="background-image: url({% static 'img/coins/5.jpg' %});"></a>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/1c.png' %});">
+									<input type="hidden"  name="münze" value=0.01>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/2c.png' %});">
+									<input type="hidden" name="münze" value=0.02>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/5c.png' %});">
+									<input type="hidden" name="münze" value=0.05>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/10c.jpg' %});">
+									<input type="hidden" name="münze" value=0.10>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/20c.jpg' %});">
+									<input type="hidden" name="münze" value=0.20>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/50c.jpg' %});">
+									<input type="hidden"  name="münze" value=0.50>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/1.gif' %});">
+									<input type="hidden" name="münze" value=1.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/2.gif' %});">
+									<input type="hidden" name="münze" value=2.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/5.jpg' %});">
+									<input type="hidden" name="münze" value=5.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/10.jpg' %});">
+									<input type="hidden" name="münze" value=10.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/20.jpg' %});">
+									<input type="hidden" name="münze" value=20.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/50.jpg' %});">
+									<input type="hidden"  name="münze" value=50.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/100.jpg' %});">
+									<input type="hidden"  name="münze" value=100.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/200.jpg' %});">
+									<input type="hidden" name="münze" value=200.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/coins/500.jpg' %});">
+									<input type="hidden"  name="münze" value=500.00>
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+
+						<div class="col-3 col-coin">
+							<form action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+
+								<button type="submit" class="coin" style="background-image: url({% static 'img/other/reset.jpg' %});">
+									<input type="hidden" name="resetPayment">
+									<p class="product-name"></p>
+
+								</button>
+							
+							</form>
+						</div>
+
+
+						<!-- <div class="col-3 col-coin"><a href="#" class="coin" style="background-image: url({% static 'img/coins/5.jpg' %});"></a>
 						</div>
 						<div class="col-3 col-coin"><a href="#" class="coin"
 						                               style="background-image: url({% static 'img/coins/10.jpg' %});"></a>
@@ -70,10 +248,10 @@
 						</div>
 						<div class="col-3 col-coin"><a href="#" class="coin"
 						                               style="background-image: url({% static 'img/coins/Gutschein.jpg' %});"></a>
-						</div>
+						</div> -->
 					</div>
 				</div>
-				<div class="col">
+				<!-- <div class="col">
 					<div class="row">
 						<div class="col-6">
 							<div class="row">
@@ -106,15 +284,39 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="container div-cart-calculator">
 				<div class="row">
 					<div class="col col-cart">
 						<div class="card">
 							<div class="card-body">
-								<h4 class="card-title">Warenkorb</h4>
-								{% include 'cart.html' %}
+								<h3 class="card-title">Zahlung</h3> 
+								
+
+								<h5>Offener Betrag</h5>
+								<h5>{{ total }} €</h5>
+								<br>
+								<h5>Gezahlter Betrag</h5>
+								<h5>{{ amountpaid }} €</h5>
+
+								{% if amountpaid < total %}
+								
+								<div class="card">
+									<div class="card-body">
+										<p>Es fehlen noch {{ fehlenderbetrag }}</p>
+									</div>
+								</div>
+								{% else %}
+									<p>Der Kunde bekommt {{ rückzahlung }} zurück.</p>
+
+									<form  action="{% url 'cashbox:cashbox_payment' %}" method="POST"> {% csrf_token %}
+										<input  name="zahlungabschließen" type="submit" value="Zahlung abschließen">
+									</form>
+								{% endif %}
+								
+
+								<!-- {% include 'cart.html' %} -->
 							</div>
 						</div>
 					</div>
@@ -122,7 +324,7 @@
 						<div class="row">
 							<div class="col">
 								<div role="tablist" id="accordion-calculator">
-									<div class="card">
+									<!-- <div class="card">
 										<div class="card-header" role="tab">
 											<a data-toggle="collapse" aria-expanded="false"
 											   aria-controls="accordion-calculator .accordion-item"
@@ -134,7 +336,7 @@
 												{% include 'calculator.html' %}
 											</div>
 										</div>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>

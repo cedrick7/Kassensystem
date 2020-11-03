@@ -2,7 +2,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="nav-box col-12 col-md-3">
-                    <a class="nav-link" href="#"><i class="fa fa-chevron-left"></i>Zurück</a>
+                    <a class="nav-link" href="{% url 'cashbox:paymenttool_choose' %}"><i class="fa fa-chevron-left"></i>Zurück</a>
                 </div>
                 <div class="nav-box col-12 col-md-3">
                     <a class="nav-link" href="{% url 'customer' %}">Kundenkartei</a>
@@ -15,7 +15,7 @@
                 </div>
                 <div class="nav-box col-12 col-md-3">
                     <div class="row">
-                        <div class="col"><p>{{ request.user }}</p></div>
+                        <div class="col"><p>{{ request.user }}</p></div>					
                         <div class="col"><a class="nav-link" href="#">Logout</a></div>
                     </div>
                 </div>

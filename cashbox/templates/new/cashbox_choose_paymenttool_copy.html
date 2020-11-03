@@ -1,0 +1,18 @@
+<h1>Zahlungsmittel auswählen</h1>
+
+
+{% for paymenttool in paymenttoollist %}
+
+    <form method="POST" > {% csrf_token %}
+        <input type="hidden" name="paymenttoolId" value="{{ paymenttool.id }}">
+        
+        <button>
+            <p>{{ paymenttool.title}}</p>
+        </button>
+    </form>
+    <br>
+
+
+    <p>----------------------</p>
+
+{% endfor %}

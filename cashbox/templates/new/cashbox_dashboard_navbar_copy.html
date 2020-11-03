@@ -8,14 +8,23 @@
 				<a class="nav-link" href="{% url 'customer' %}">Kundenkartei</a>
 			</div>
 			<div class="nav-box col-12 col-md-3">
+				
 				<div class="row">
 					<div class="col"><a class="nav-link" href="#">Produkte</a></div>
 					<div class="col"><a class="nav-link" href="#">Dienstleistungen</a></div>
+					
 				</div>
 			</div>
 			<div class="nav-box col-12 col-md-3">
 				<div class="row">
-					<div class="col"><p>{{ request.user }}</p></div>
+					<div class="col"><p> User: {{ request.user }}</p></div>
+					<br>
+					<div class="col"><p>{{ cashbox.title }}</p></div>
+					<div class="col"><p>{{ cashbox.amount }} €</p></div>
+					
+					
+					
+					
 					<div class="col"><a class="nav-link" href="#">Logout</a></div>
 				</div>
 			</div>
