@@ -92,14 +92,20 @@ def analyzation_sales_view(request, *args, **kwargs):
         
 
     elif request.method == 'POST':
+        sales_form = FormSalesFilter()
         print("POST")
-        sales_form = FormSalesFilter(request.POST)
-        print(sales_form)
         #Abfangen des Knopfes und Manipulierung der jeweiligen Daten
         if request.POST.get("mstzfltr"):
             print("Umsatzfilter")
         elif request.POST.get("prdktfltr"):
             print("Produktfilter")
+            sales_form = FormSalesFilter(request.POST)
+            if sales_form.is_valid(): 
+                print("valid!")
+            else:
+                print("invalid")
+                x = sales_form.data["radioTOP"]
+                print(x)
         elif request.POST.get("dnstlstngsfltr"):
             print("Dienstleistungsfilter")
         elif request.POST.get("stßztnfltr"):
