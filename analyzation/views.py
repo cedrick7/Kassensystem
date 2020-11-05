@@ -87,11 +87,28 @@ def analyzation_sales_view(request, *args, **kwargs):
         sales_dienst = query_result[0].Summe
         
         #Standarddaten
+        ## chart no.1 - Umsatz Überblick [line-chart] ##
         #Dynamische Werte
-        revenue_products_data = [13, 23, 24, 38, 49, 33]
-        revenue_services_data = [13, 16, 20, 26, 43, 31]
-        revenue_total_data = [26, 39, 44, 64, 92, 64]
-        revenue_chart_labels = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag']
+        query = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe, pp.type AS Typ \
+                FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
+                INNER JOIN product_product AS pp ON cbp.product_id = pp.id \
+                WHERE creation >= date_sub(current_timestamp(), INTERVAL 7 DAY) \
+                AND creation <= current_timestamp() \
+                GROUP BY Wochentag, Typ \
+                ORDER BY Wochentag DESC;"
+        query_result = raw_sql(query)
+        query2 = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe \
+                 FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
+                 INNER JOIN product_product AS pp ON cbp.product_id = pp.id \
+                 WHERE creation >= date_sub(current_timestamp(), INTERVAL 7 DAY) \
+                 AND creation <= current_timestamp() \
+                 GROUP BY Wochentag \
+                 ORDER BY Wochentag DESC;"
+        query2_result = raw_sql(query2)
+        print(query2_result)
+        revenue_products_data = []
+        revenue_services_data = []
+        revenue_total_data = []
         #Festwerte
         revenue_chart_x_axes = 'Zeit in Tagen'
         revenue_chart_y_axes = 'Umsatz in €'
@@ -100,10 +117,47 @@ def analyzation_sales_view(request, *args, **kwargs):
         revenue_services_legend = 'Dienstleistungen'
         revenue_total_legend = 'Gesamt'
         #Dynamische Werte füllen
-        # chart no.1 - Umsatz Überblick [line-chart]
-        
-        
+        for i in query_result:
+            if i.Wochentag == 0:
+                tmp = "Montag"
+            elif i.Wochentag == 1:
+                tmp = "Dienstag"
+            elif i.Wochentag == 2:
+                tmp = "Mittwoch"
+            elif i.Wochentag == 3:
+                tmp = "Donnerstag"
+            elif i.Wochentag == 4:
+                tmp = "Freitag"
+            elif i.Wochentag == 5:
+                tmp = "Samstag"
+            elif i.Wochentag ==6:
+                tmp = "Sonntag"
 
+            if i.Typ == "PR":
+               revenue_products_data.append([tmp,i.Summe]) 
+            elif i.Typ == "DI":
+                revenue_services_data.append([tmp,i.Summe])
+        
+        for i in query2_result:
+            if i.Wochentag == 0:
+                revenue_total_data.append(["Montag",i.Summe])
+            elif i.Wochentag == 1:
+                revenue_total_data.append(["Dienstag",i.Summe])
+            elif i.Wochentag == 2:
+                revenue_total_data.append(["Mittwoch",i.Summe])
+            elif i.Wochentag == 3:
+                revenue_total_data.append(["Donnerstag",i.Summe])
+            elif i.Wochentag == 4:
+                revenue_total_data.append(["Freitag",i.Summe])
+            elif i.Wochentag == 5:
+                revenue_total_data.append(["Samstag",i.Summe])
+            elif i.Wochentag ==6:
+                revenue_total_data.append(["Sonntag",i.Summe])
+
+
+        print(revenue_products_data)
+        print(revenue_services_data)
+        print(revenue_total_data)
         ## chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart] ##
         query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
                 FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
@@ -206,6 +260,16 @@ def analyzation_sales_view(request, *args, **kwargs):
             'sales_product': sales_product,
             'sales_dienst': sales_dienst,
             'cashbox' : cashbox,
+            # chart no.1 - Umsatz Überblick [line-chart] #
+            'revenue_products_data' : revenue_products_data,
+            'revenue_services_data' : revenue_services_data,
+            'revenue_total_data' : revenue_total_data,
+            'revenue_chart_x_axes' : revenue_chart_x_axes,
+            'revenue_chart_y_axes' : revenue_chart_y_axes,
+            'revenue_chart_legend' : revenue_chart_legend,
+            'revenue_products_legend' : revenue_products_legend,
+            'revenue_services_legend': revenue_services_legend,
+            'revenue_total_legend' : revenue_total_legend,
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
             'products_chart_labels':products_chart_labels,
             'products_data':products_data,
