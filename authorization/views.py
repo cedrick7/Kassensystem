@@ -40,11 +40,9 @@ logger = logging.getLogger('django')
 #     return render(request, "authorization_login.html", context)                                               
 
     
-def custom_sql(query):
+def sql(query):
     with connection.cursor() as cursor:
         cursor.execute(query)
-        row = cursor.fetchone()
-    return row
 
 def redirectView(request,*args,**kwargs):
     return redirect('authorization:login')
@@ -165,17 +163,8 @@ def logoutUser(request, *args, **kwargs):
             if i.name == 'Kassierer':
                 try:
                     id = user.user.id
-                    # query = "UPDATE cashbox_cashbox SET user_id=NULL WHERE id="+ id +";"
-                    query = "UPDATE cashbox_cashbox SET user_id=NULL WHERE id = "+id+";"
-                    test = "UPDATE cashbox_cashbox SET user_id=NULL WHERE id = 1;"
-                    print(query)
-                    print(test)
-                    x = custom_sql(query)
-                    
-                    print(x)
-                    print(id)
-
-                    
+                    query= "UPDATE cashbox_cashbox SET user_id=NULL WHERE user_id = "+str(72)+";"
+                    sql(query)                          
                 except:
                     logger.info(request, 'Kassierer konnte nicht abgemeldet werden')
     except:

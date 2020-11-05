@@ -154,10 +154,6 @@ def analyzation_sales_view(request, *args, **kwargs):
             elif i.Wochentag ==6:
                 revenue_total_data.append(["Sonntag",i.Summe])
 
-
-        print(revenue_products_data)
-        print(revenue_services_data)
-        print(revenue_total_data)
         ## chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart] ##
         query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
                 FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
@@ -321,8 +317,134 @@ def analyzation_sales_view(request, *args, **kwargs):
 
 # CustomerView
 def analyzation_customers_view(request, *args, **kwargs):
-    customerForm = FormCustomerFilter(request.POST or None)
-    context = {'form': customerForm}
+    context = {}
+    if request.method == 'GET':
+        customerForm = FormCustomerFilter()
+        # Standarddaten
+        ## chart no.1 - Stoßzeiten [line-chart] ##
+        query = "SELECT WEEKDAY(DATE(cb.creation)) AS Wochentag, COUNT(cb.id) AS Summe FROM cashbox_bill AS cb \
+                WHERE creation >= date_sub(current_date(), INTERVAL 7 DAY) AND creation <= current_date() \
+                GROUP BY Wochentag \
+                ORDER BY Wochentag DESC"
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        peak_times_data = []
+        peak_times_chart_labels = []
+        #Festwerte
+        peak_times_chart_legend = 'Stoßzeiten in Tagen'
+        peak_times_chart_x_axes = 'Zeit in Tagen'
+        peak_times_chart_y_axes = 'Anzahl der Verkäufe'
+        #Dynamische Werte füllen
+        for i in query_result:
+            if i.Wochentag == 0:
+                peak_times_chart_labels.append("Montag")
+            elif i.Wochentag == 1:
+                peak_times_chart_labels.append("Dienstag")
+            elif i.Wochentag == 2:
+                peak_times_chart_labels.append("Mittwoch")
+            elif i.Wochentag == 3:
+                peak_times_chart_labels.append("Donnerstag")
+            elif i.Wochentag == 4:
+                peak_times_chart_labels.append("Freitag")
+            elif i.Wochentag == 5:
+                peak_times_chart_labels.append("Samstag")
+            elif i.Wochentag == 6:
+                peak_times_chart_labels.append("Sonntag")
+            peak_times_data.append(i.Summe)
+
+        ## chart no.3 - Zahlungsmethoden [doughnut-chart] ##
+        query = "SELECT cp.title AS Titel, (ROUND(COUNT(cp.id) / (SELECT COUNT(*) AS ges FROM cashbox_bill), 2) * 100) AS Summe \
+                FROM cashbox_bill AS cb \
+                INNER JOIN cashbox_paymenttool AS cp ON cb.paymenttool_id = cp.id \
+                GROUP BY cp.title \
+                LIMIT 5;"
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        payment_data = []
+        payment_chart_labels = []
+        #Festwerte
+        payment_chart_legend = 'Zahlungsmethoden in Prozent'
+        #Dynamische Werte füllen
+        for i in query_result:
+            payment_data.append(i.Summe)
+            payment_chart_labels.append(i.Titel)
+        
+         ## chart no.6 - Produkte Überblick (TOP-X Ranking => generell) [bar-chart] ##
+        query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 5;"
+
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        products_chart_labels = []
+        products_data = []
+
+        #Festwerte
+        products_chart_x_axes = 'Produkte'
+        products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+        #Dynamische Werte füllen
+        for i in query_result:
+            products_chart_labels.append(i.Produkt)
+            products_data.append(i.Summe)
+        
+        ## chart no.8 - Dienstleistungen Überblick (TOP-X Ranking => generell) [bar-chart] ##
+        query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                FROM product_category AS pc \
+                INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                GROUP BY (pc.title) \
+                ORDER BY Summe DESC \
+                LIMIT 5;"          
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        services_data = []
+        services_chart_labels = []
+        #Festwerte
+        services_chart_x_axes = 'Kategoriename'
+        services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+        services_chart_legend = 'TOP 5 Dienstleistungen'
+        #Dynamische Werte füllen
+        for i in query_result:
+            services_data.append(i.Summe)
+            services_chart_labels.append(i.Kategorie)
+            
+        #context
+        context = {'form': customerForm,
+                   # chart no.1 - Stoßzeiten [line-chart]
+                   'peak_times_data' : peak_times_data,
+                   'peak_times_chart_labels' : peak_times_chart_labels,
+                   'peak_times_chart_legend' : peak_times_chart_legend,
+                   'peak_times_chart_x_axes' : peak_times_chart_x_axes,
+                   'peak_times_chart_y_axes' : peak_times_chart_y_axes,
+                   # chart no.3 - Zahlungsmethoden [doughnut-chart] #
+                   'payment_data' : payment_data,
+                   'payment_chart_labels' : payment_chart_labels,
+                   'payment_chart_legend' : payment_chart_legend,
+                   # chart no.6 - Produkte Überblick (TOP-X Ranking => generell) [bar-chart]
+                   'products_chart_labels' : products_chart_labels,
+                   'products_data' : products_data,
+                   'products_chart_x_axes' : products_chart_x_axes,
+                   'products_chart_y_axes' : products_chart_y_axes,
+                   'services_chart_legend' : services_chart_legend,
+                   # chart no.8 - Dienstleistungen Überblick 
+                   'services_data' : services_data,
+                   'services_chart_labels' : services_chart_labels,
+                   'services_chart_x_axes' : services_chart_x_axes,
+                   'services_chart_y_axes' : services_chart_y_axes,
+                   'services_chart_legend' : services_chart_legend
+
+                  }
+
+
+
+
+
+    
     return render(request, 'analyzation_customers.html', context)
 
 #EmployeesView
