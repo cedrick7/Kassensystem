@@ -163,7 +163,7 @@ def logoutUser(request, *args, **kwargs):
             if i.name == 'Kassierer':
                 try:
                     id = user.user.id
-                    query= "UPDATE cashbox_cashbox SET user_id=NULL WHERE user_id = "+str(72)+";"
+                    query= "UPDATE cashbox_cashbox SET user_id=NULL WHERE user_id = "+str(id)+";"
                     sql(query)                          
                 except:
                     logger.info(request, 'Kassierer konnte nicht abgemeldet werden')
