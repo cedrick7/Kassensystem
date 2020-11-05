@@ -1,0 +1,20 @@
+<h1>Kasse auswählen</h1>
+
+
+{% for cashbox in cashboxlist %}
+
+    <form method="POST" > {% csrf_token %}
+        <input type="hidden" name="cashboxId" value="{{ cashbox.id }}">
+        
+        <button>
+            <p>{{ cashbox.title}}</p>
+            <p>{{ cashbox.amount}}</p>
+        </button>
+        
+    </form>
+	<br>
+
+
+    <p>----------------------</p>
+
+{% endfor %}

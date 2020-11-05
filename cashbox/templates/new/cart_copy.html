@@ -29,15 +29,17 @@
 						<td>{{ instance.0.id }}</td>
 						
 						<td>
-							<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"> {% csrf_token %}
 
-								<button type="submit" class="col-4 pattern-element">
-									<input type="hidden" id="productId" name="productId" value="{{ instance.0.id }}">
-		
-								</button>
-								
-		
-							</form>
+							<!-- <form method="POST"> {% csrf_token %}
+
+								<input type="submit" value="Entfernen">
+
+
+							</form> -->
+							<a class="nav-link" name="value" href="{% url 'cashbox:delete' %}">Delete</a>
+
+
+
 						</td>
 					</tr>
 				{% endfor %}
@@ -79,7 +81,18 @@
 					{{ form.payment }}
 				</div>
 				<div class="col-6">
-					<a href="{% url 'cashbox:cashbox_payment' %}" class="btn btn-primary">Zur Kasse gehen</a>
+					<form name="resetShoppingcart" action="{% url 'cashbox:cashbox_dashboard' %}" method="GET"> {% csrf_token %}
+
+						<button type="submit" class="col-4 pattern-element">
+							<input type="hidden" name="reset">
+							<p class="product-name">Reset</p>
+
+						</button>
+					
+					</form>
+				</div>
+				<div class="col-6">
+					<a href="{% url 'cashbox:paymenttool_choose' %}" class="btn btn-primary">Zahlen</a>
 				</div>
 			</div>
 		</div>

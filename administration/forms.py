@@ -95,7 +95,8 @@ class CashboxModelForm(forms.ModelForm):
         model = Cashbox
         fields = [
             'title',
-            'amount'
+            'amount', 
+            'user',
         ]
         widgets = {
 
@@ -169,6 +170,7 @@ class CustomerModelForm(forms.ModelForm):
             'lastname',
             'birthday',
             'email',
+            'notes',
             'phonenumber',
         ]
         widgets = {
@@ -204,6 +206,15 @@ class CustomerModelForm(forms.ModelForm):
             'email': forms.EmailInput(
                 attrs={
                     'placeholder': 'Email',
+                    'class': 'form-control needs-validation',
+                    'style': styling,
+                    'name': 'customer_firstname',
+                    'value': '',
+                }
+            ),
+            'notes': forms.TextInput(
+                attrs={
+                    'placeholder': 'Notizen',
                     'class': 'form-control needs-validation',
                     'style': styling,
                     'name': 'customer_firstname',
@@ -662,68 +673,67 @@ class ReversalBillModelForm(forms.ModelForm):
             'cashbox',
             'path',
         ]
+        # widgets = {
+        #     'bill': forms.TextInput(
+        #         attrs={
+        #             'placeholder': 'Name',
+        #             'class': 'form-control needs-validation',
+        #             'style': styling,
+        #             'name': 'reversalbill_bill',
+        #             'value': ''
+        #         }
+        #     ),
 
-        widgets = {
-            'bill': forms.TextInput(
-                attrs={
-                    'placeholder': 'Name',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'reversalbill_bill',
-                    'value': ''
-                }
-            ),
+        #     'creation': forms.DateTimeInput(
+        #         attrs={
+        #             'placeholder': 'Erstellt am',
+        #             'class': 'form-control needs-validation',
+        #             'style': styling,
+        #             'name': 'reversalbill_creation',
+        #             'value': ''
+        #         }
+        #     ),
 
-            'creation': forms.DateTimeInput(
-                attrs={
-                    'placeholder': 'Erstellt am',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'reversalbill_creation',
-                    'value': ''
-                }
-            ),
+        #     'refund': forms.NumberInput(
+        #         attrs={
+        #             'placeholder': 'Erstattung',
+        #             'class': 'form-control needs-validation',
+        #             'style': styling,
+        #             'name': 'reversalbill_refund',
+        #             'value': ''
+        #         }
+        #     ),
 
-            'refund': forms.NumberInput(
-                attrs={
-                    'placeholder': 'Erstattung',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'reversalbill_refund',
-                    'value': ''
-                }
-            ),
+        #     'employee': forms.TextInput(
+        #         attrs={
+        #             'placeholder': 'Mitarbeiter',
+        #             'class': 'form-control needs-validation',
+        #             'style': styling,
+        #             'name': 'reversalbill_employee',
+        #             'value': ''
+        #         }
+        #     ),
 
-            'employee': forms.TextInput(
-                attrs={
-                    'placeholder': 'Mitarbeiter',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'reversalbill_employee',
-                    'value': ''
-                }
-            ),
+        #     'cashbox': forms.TextInput(
+        #         attrs={
+        #             'placeholder': 'Kasse',
+        #             'class': 'form-control needs-validation',
+        #             'style': styling,
+        #             'name': 'reversalbill_cashbox',
+        #             'value': ''
+        #         }
+        #     ),
 
-            'cashbox': forms.TextInput(
-                attrs={
-                    'placeholder': 'Kasse',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'reversalbill_cashbox',
-                    'value': ''
-                }
-            ),
-
-            'path': forms.Textarea(
-                attrs={
-                    'placeholder': 'Pfad',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'reversalbill_path',
-                    'value': ''
-                }
-            ),
-        }
+        #     'path': forms.Textarea(
+        #         attrs={
+        #             'placeholder': 'Pfad',
+        #             'class': 'form-control needs-validation',
+        #             'style': styling,
+        #             'name': 'reversalbill_path',
+        #             'value': ''
+        #         }
+        #     ),
+        # }
 
 
 class WorkTimeModelForm(forms.ModelForm):

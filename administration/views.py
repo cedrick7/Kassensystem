@@ -1080,12 +1080,17 @@ class BillDetailView(LoginRequiredMixin, View):
         context = {}
         if id is not None:
             obj = get_object_or_404(Bill, id=id)
-            billproductIdlist = Bill_Product.objects.filter(bill=id).values_list('product', flat=True)
+            billproductIdlist = Bill_Product.objects.filter(bill=id).values_list('product', 'amount')
+            print(billproductIdlist)
             productlist = []
 
             for i in billproductIdlist:
-                p = Product.objects.get(id=i)
-                productlist.append(p)
+                p = Product.objects.get(id=i[0])
+                amount = i[1]
+                
+                for x in range(amount):
+
+                    productlist.append(p)
 
             context = {
                 "object":obj,

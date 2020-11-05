@@ -74,6 +74,7 @@
 									<tr>
 										<th>Name</th>
 										<th>Betrag</th>
+										<th>Mitarbeiter</th>
 										<th>Mehr</th>
 
 									</tr>
@@ -84,6 +85,7 @@
 										<tr>
 											<td>{{ instance.title }}</td>
 											<td>{{ instance.amount }} € </td> 
+											<td>{{ instance.user }}</td> 
 											<td class="td-icons">
 												<a href="{{ instance.get_update_url }}"><i
 														class="fa fa-pencil"></i></a>
@@ -97,6 +99,7 @@
 									<tr>
 										<td><strong>Name</strong></td>
 										<td><strong>Betrag</strong></td>
+										<td><strong>Mitarbeiter</strong></td>
 										<td><strong>Mehr</strong></td>
 									</tr>
 									</tfoot>

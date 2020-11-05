@@ -27,13 +27,13 @@ def unauthenticated_user(view_func):
             # Weiterleitung auf Basis der Gruppe    
             else:
                 if request.user.groups.filter(name = 'Administratoren').exists():
-                    return redirect('administration:product_list')
+                    return redirect('administration:administration_dashboard')
 
                 if request.user.groups.filter(name = 'Kassierer').exists():
-                    return redirect('administration:cashbox_list')
+                    return redirect('cashbox:cashbox_choose')
 
                 if request.user.groups.filter(name = 'Analysten').exists():
-                    return redirect('administration:product_list')
+                    return redirect('analyzation:analyzation_dashboard')
         else:
             return view_func(request, *args, **kwargs)
     return wrapper_func

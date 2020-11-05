@@ -34,14 +34,14 @@
             
             
             {% ifequal instance "AN" %}
-                <form action="{% url 'administration:product_list' %}">
+                <form action="{% url 'analyzation:analyzation_dashboard' %}">
                     <input type="submit" class="btn btn-primary btn-sm"  value="Analyst" />
                 </form>
             {% endifequal %}
             
             
             {% ifequal instance "KA" %}
-                <form action="{% url 'administration:cashbox_list' %}">
+                <form action="{% url 'cashbox:cashbox_choose' %}">
                     <input type="submit" class="btn btn-primary btn-sm"  value="Kassierer" />
                 </form>
             {% endifequal %}

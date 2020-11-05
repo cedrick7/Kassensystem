@@ -85,7 +85,7 @@ class Bill(models.Model):
         verbose_name_plural = "Rechnungen"
 
     def __str__(self):
-        return "Rechnung vom "+ str(self.creation.date())
+        return "Rechnung vom "+ str(self.creation.date()) +" von " + str(self.employee)
 
 
 class Bill_Product(models.Model):

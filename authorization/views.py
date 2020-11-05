@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.db import connection
 from .forms import CreateUserForm, ChangePasswordForm, RequestForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
@@ -38,7 +39,12 @@ logger = logging.getLogger('django')
 #     }
 #     return render(request, "authorization_login.html", context)                                               
 
-
+    
+def custom_sql(query):
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        row = cursor.fetchone()
+    return row
 
 def redirectView(request,*args,**kwargs):
     return redirect('authorization:login')
@@ -138,13 +144,13 @@ def loginUser(request, *args, **kwargs):
             # Weiterleitung auf Basis der Gruppe    
             else:
                 if request.user.groups.filter(name = 'Administratoren').exists():
-                    return redirect('administration:product_list')
+                    return redirect('administration:administration_dashboard')
 
                 if request.user.groups.filter(name = 'Kassierer').exists():
-                    return redirect('administration:cashbox_list')
+                    return redirect('cashbox:cashbox_choose')
 
                 if request.user.groups.filter(name = 'Analysten').exists():
-                    return redirect('administration:product_list')
+                    return redirect('analyzation:analyzation_dashboard')
         else:
             messages.info(request, 'Nutzername und Passwort stimmen nicht überein')
 
@@ -152,14 +158,24 @@ def loginUser(request, *args, **kwargs):
 
 def logoutUser(request, *args, **kwargs):
     try:
-        user = Active_Accounts.objects.get(user=request.user.id)
+        user = Active_Accounts.objects.get(user=request.user)
+        print(user)
         groups = user.user.groups.all()
         for i in groups:
             if i.name == 'Kassierer':
                 try:
-                    kasse = Cashbox.objects.get(user=user)
-                    kasse.user = None
-                    kasse.save([user])
+                    id = user.user.id
+                    # query = "UPDATE cashbox_cashbox SET user_id=NULL WHERE id="+ id +";"
+                    query = "UPDATE cashbox_cashbox SET user_id=NULL WHERE id = "+id+";"
+                    test = "UPDATE cashbox_cashbox SET user_id=NULL WHERE id = 1;"
+                    print(query)
+                    print(test)
+                    x = custom_sql(query)
+                    
+                    print(x)
+                    print(id)
+
+                    
                 except:
                     logger.info(request, 'Kassierer konnte nicht abgemeldet werden')
     except:
