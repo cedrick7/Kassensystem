@@ -37,8 +37,191 @@ def raw_sql(query):
 
 # DashboardView
 def analyzation_dashboard_view(request, *args, **kwargs):
-    dateRange_form = FormDashboard(request.POST or None)
-    context = {'form': dateRange_form}
+    context = {}
+
+    if request.method == 'GET':
+        print("GET")
+        dateRange_form = FormDashboard()
+
+        #Alle Kassen
+        cashbox = Cashbox.objects.all()
+        #Tägliche Einnahmen
+        query = "SELECT SUM(totalcosts) AS Summe FROM cashbox_bill \
+                WHERE creation >= DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY) AND creation <= CURRENT_TIMESTAMP();" #between statement geht nicht
+        result = raw_sql(query)
+        sales_day = result[0].Summe
+
+        #Wöchentliche Einnahmen
+        query = "SELECT SUM(totalcosts) AS Summe FROM cashbox_bill \
+                WHERE creation >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY) AND creation <= CURRENT_TIMESTAMP();" #between statement geht nicht
+        result = raw_sql(query)
+        sales_week = result[0].Summe
+
+        #Monatliche Einnahmen
+        query = "SELECT SUM(totalcosts) AS Summe FROM cashbox_bill \
+                WHERE creation >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY) AND creation <= CURRENT_TIMESTAMP();" #between statement geht nicht
+        result = raw_sql(query)
+        sales_month = result[0].Summe
+
+        ##Einnahmen Produkte
+        query = "SELECT SUM(costs) AS 'Summe' FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
+                  ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
+                  WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
+                  AND type='PR';" 
+        query_result = raw_sql(query)
+        sales_product = query_result[0].Summe
+        ##Einnahmen Dienstleistungen
+        query = "SELECT SUM(costs) AS 'Summe' FROM 07yp3juew2.cashbox_bill AS bills JOIN 07yp3juew2.cashbox_bill_product AS products \
+                ON bills.id = products.bill_id INNER JOIN 07yp3juew2.product_product AS product ON products.product_id = product.id \
+                WHERE creation >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 DAY) \
+                AND type='DI';" 
+        query_result = raw_sql(query)
+        sales_dienst = query_result[0].Summe
+
+        #Standarddaten
+        ## chart no.1 - Umsatz Überblick [line-chart] ##
+        #Dynamische Werte
+        query = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe, pp.type AS Typ \
+                FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
+                INNER JOIN product_product AS pp ON cbp.product_id = pp.id \
+                WHERE creation >= date_sub(current_timestamp(), INTERVAL 7 DAY) \
+                AND creation <= current_timestamp() \
+                GROUP BY Wochentag, Typ \
+                ORDER BY Wochentag DESC;"
+        query_result = raw_sql(query)
+        query2 = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe \
+                 FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
+                 INNER JOIN product_product AS pp ON cbp.product_id = pp.id \
+                 WHERE creation >= date_sub(current_timestamp(), INTERVAL 7 DAY) \
+                 AND creation <= current_timestamp() \
+                 GROUP BY Wochentag \
+                 ORDER BY Wochentag DESC;"
+        query2_result = raw_sql(query2)
+        
+        revenue_products_data = []
+        revenue_services_data = []
+        revenue_total_data = []
+        #Festwerte
+        revenue_chart_x_axes = 'Zeit in Tagen'
+        revenue_chart_y_axes = 'Umsatz in €'
+        revenue_chart_legend = 'Umsatz'
+        revenue_products_legend = 'Produkte'
+        revenue_services_legend = 'Dienstleistungen'
+        revenue_total_legend = 'Gesamt'
+        #Dynamische Werte füllen
+        for i in query_result:
+            if i.Wochentag == 0:
+                tmp = "Montag"
+            elif i.Wochentag == 1:
+                tmp = "Dienstag"
+            elif i.Wochentag == 2:
+                tmp = "Mittwoch"
+            elif i.Wochentag == 3:
+                tmp = "Donnerstag"
+            elif i.Wochentag == 4:
+                tmp = "Freitag"
+            elif i.Wochentag == 5:
+                tmp = "Samstag"
+            elif i.Wochentag ==6:
+                tmp = "Sonntag"
+
+            if i.Typ == "PR":
+               revenue_products_data.append([tmp,i.Summe]) 
+            elif i.Typ == "DI":
+                revenue_services_data.append([tmp,i.Summe])
+        
+        for i in query2_result:
+            if i.Wochentag == 0:
+                revenue_total_data.append(["Montag",i.Summe])
+            elif i.Wochentag == 1:
+                revenue_total_data.append(["Dienstag",i.Summe])
+            elif i.Wochentag == 2:
+                revenue_total_data.append(["Mittwoch",i.Summe])
+            elif i.Wochentag == 3:
+                revenue_total_data.append(["Donnerstag",i.Summe])
+            elif i.Wochentag == 4:
+                revenue_total_data.append(["Freitag",i.Summe])
+            elif i.Wochentag == 5:
+                revenue_total_data.append(["Samstag",i.Summe])
+            elif i.Wochentag ==6:
+                revenue_total_data.append(["Sonntag",i.Summe])
+
+        ## chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart] ##
+        query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 5;"
+
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        products_chart_labels = []
+        products_data = []
+
+        #Festwerte
+        products_chart_x_axes = 'Produkte'
+        products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+        #Dynamische Werte füllen
+        for i in query_result:
+            products_chart_labels.append(i.Produkt)
+            products_data.append(i.Summe)
+        
+        ## chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] ##
+        query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                FROM product_category AS pc \
+                INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                GROUP BY (pc.title) \
+                ORDER BY Summe DESC \
+                LIMIT 5;"          
+        #Dynamische Werte
+        query_result = raw_sql(query)
+        services_data = []
+        services_chart_labels = []
+        #Festwerte
+        services_chart_x_axes = 'Kategoriename'
+        services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+        services_chart_legend = 'TOP 5 Dienstleistungen'
+        #Dynamische Werte füllen
+        for i in query_result:
+            services_data.append(i.Summe)
+            services_chart_labels.append(i.Kategorie)
+        
+
+
+        #Context
+        context = {'form': dateRange_form,
+                   'sales_day' : sales_day,
+                   'sales_week' : sales_week,
+                   'sales_month' : sales_month,
+                   'sales_product': sales_product,
+                   'sales_dienst': sales_dienst,
+                   'cashbox' : cashbox,
+                   # chart no.1 - Umsatz Überblick [line-chart]
+                   'revenue_products_data' : revenue_products_data,
+                   'revenue_services_data' : revenue_services_data,
+                   'revenue_total_data' : revenue_total_data,
+                   'revenue_chart_x_axes' : revenue_chart_x_axes,
+                   'revenue_chart_y_axes' : revenue_chart_y_axes,
+                   'revenue_chart_legend' : revenue_chart_legend,
+                   'revenue_products_legend' : revenue_products_legend,
+                   'revenue_services_legend' : revenue_services_legend,
+                   'revenue_total_legend' : revenue_total_legend,
+                   #chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart]
+                   'products_chart_labels' : products_chart_labels,
+                   'products_data' : products_data,
+                   'products_chart_x_axes' : products_chart_x_axes,
+                   'products_chart_y_axes' : products_chart_y_axes,
+                   # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] 
+                   'services_data' : services_data,
+                   'services_chart_labels' : services_chart_labels,
+                   'services_chart_x_axes' : services_chart_x_axes,
+                   'services_chart_y_axes' : services_chart_y_axes,
+                   'services_chart_legend' : services_chart_legend,
+                  }
     return render(request, 'analyzation_dashboard.html', context)
 
 # SalesView
@@ -312,7 +495,43 @@ def analyzation_sales_view(request, *args, **kwargs):
         #Context
         context = {
             'form': sales_form,
-        }
+            'sales_day' : sales_day,
+            'sales_week' : sales_week,
+            'sales_month' : sales_month,
+            'sales_product': sales_product,
+            'sales_dienst': sales_dienst,
+            'cashbox' : cashbox,
+            # chart no.1 - Umsatz Überblick [line-chart] #
+            'revenue_products_data' : revenue_products_data,
+            'revenue_services_data' : revenue_services_data,
+            'revenue_total_data' : revenue_total_data,
+            'revenue_chart_x_axes' : revenue_chart_x_axes,
+            'revenue_chart_y_axes' : revenue_chart_y_axes,
+            'revenue_chart_legend' : revenue_chart_legend,
+            'revenue_products_legend' : revenue_products_legend,
+            'revenue_services_legend': revenue_services_legend,
+            'revenue_total_legend' : revenue_total_legend,
+            # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
+            'products_chart_labels':products_chart_labels,
+            'products_data':products_data,
+            'products_chart_x_axes':products_chart_x_axes,
+            'products_chart_y_axes':products_chart_y_axes,
+            # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
+            'services_data' : services_data,
+            'services_chart_labels' : services_chart_labels,
+            'services_chart_x_axes' : services_chart_x_axes,
+            'services_chart_y_axes' : services_chart_y_axes,
+            'services_chart_legend' : services_chart_legend,
+            ## chart no.4 - Zahlungsmethoden [doughnut-chart] ##
+            'payment_data' : payment_data,
+            'payment_chart_labels' : payment_chart_labels,
+            'payment_chart_legend' : payment_chart_legend,
+            ## chart no.5 - Stoßzeiten [line-chart] ##
+            'peak_times_data': peak_times_data,
+            'peak_times_chart_labels' : peak_times_chart_labels,
+            'peak_times_chart_legend' : peak_times_chart_legend,
+            'peak_times_chart_x_axes' : peak_times_chart_x_axes
+            }
     return render(request, 'analyzation_sales.html', context)
 
 # CustomerView
@@ -449,8 +668,52 @@ def analyzation_customers_view(request, *args, **kwargs):
 
 #EmployeesView
 def analyzation_employees_view(request, *args, **kwargs):
-    analystForm = FormEmployeeFilter()
-    context = {'form': analystForm}
+    context = {}
+    if request.method == 'GET':
+        print("GET")
+        # chart no.1 - Mitarbeiterzeiten [line-chart]
+        analystForm = FormEmployeeFilter()
+        # Standarddaten
+        # Dynamische Werte
+        query = "SELECT CONCAT(au.first_name, ' ', au.last_name) AS Mitarbeiter, DATE(aw.end) AS Datum, SEC_TO_TIME(SUM(TIME_TO_SEC(TIMEDIFF(aw.end, aw.begin)))) AS Arbeitszeit \
+                 FROM auth_user AS au INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id WHERE aw.end IS NOT NULL AND aw.begin >= DATE_SUB(CURRENT_TIMESTAMP(), \
+                 INTERVAL 7 DAY) AND aw.end <= CURRENT_TIMESTAMP() \
+                 GROUP BY DATE(aw.end) , au.id \
+                 ORDER BY Mitarbeiter ASC;"
+        query_result = raw_sql(query)
+        employee_data = []
+        # Festwerte
+        employee_times_x_axes = 'Zeit in Tagen'
+        employee_times_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
+        employee_times_chart_legend = 'Mitarbeiterzeiten'
+        # Dynamische Werte Füllen
+        query = "SELECT aaa.user_id AS Nutzer, concat(au.first_name, ' ', au.last_name) AS Nutzername \
+                FROM authorization_active_accounts AS aaa INNER JOIN auth_user AS au ON aaa.user_id = au.id;"
+        query_aa = raw_sql(query)
+        count = len(query_aa)
+
+        for x in range(count): #iteration über alle Nutzer
+            id = query_aa[x].Nutzer
+            query = "SELECT DATE(aw.end) AS Datum, \
+                     SEC_TO_TIME(SUM(TIME_TO_SEC(TIMEDIFF(aw.end, aw.begin)))) AS Arbeitszeit \
+                     FROM authorization_active_accounts AS aaa \
+                     INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+                     INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id \
+                     WHERE aw.end IS NOT NULL \
+                     AND aw.employee_id = " + str(id) + " \
+                     GROUP BY DATE(aw.end) \
+                     ORDER BY Datum DESC;"
+            user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer
+            sets = len(user_data)
+
+            employee_data.append([query_aa[x].Nutzername])
+            for i in range(sets):      #Füllen von Werten
+                    employee_data[x].extend([[user_data[i].Datum, user_data[i].Arbeitszeit]])
+
+        #Context
+        context = {'form': analystForm,
+                    'employee_data' : employee_data,     #Alle Nutzer Mit ihren Zeiten
+                  }                                  
     return render(request, 'analyzation_employees.html', context)
 
 ##############################################################
