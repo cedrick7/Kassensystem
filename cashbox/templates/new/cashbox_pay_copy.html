@@ -312,12 +312,13 @@
 									<p>Der Kunde bekommt {{ rückzahlung }} zurück.</p>
 									{% if rückzahlung > cashbox.amount %}
 										<p>Zu wenig Geld in der Kasse</p>
+										<p>Geld muss von {{ tresor.title }} eingezahlt werden!</p>
 										<p>Wie viel Geld möchten Sie einzahlen?</p>
 										
 										
 										<form  action="" method="POST"> {% csrf_token %}
 											<input type="number" name="betrag" step="0.01" placeholder="mind. {{minValue}}">
-											<input type="submit" value="Einzahlen">
+											<input type="submit" value="Eingezahlt">
 											
 										</form>
 									{% else %}
@@ -332,10 +333,36 @@
 							</div>
 						</div>
 					</div>
-					<div class="col col-calculator">
+
+					
+					<div class="col col-cart">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Rabatt hinzufügen</h5> 
+								{% for rabatt in rabatte %}
+
+
+								<div class="card">
+									<div class="card-body">
+										<form method="POST">{% csrf_token %}
+											<input type="hidden" id="discountId" name="discountId" value="{{ rabatt.id }}">
+											<h6>{{ rabatt.title }} {{ rabatt.factor}} %</h6>
+											<input type="submit" name="rabattAuswählen" value="Auswählen">
+										</form>
+										
+									</div>
+								</div>
+								<br>
+								{% endfor %}
+
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="col col-calculator">
 						<div class="row">
 							<div class="col">
-								<div role="tablist" id="accordion-calculator">
+								<div role="tablist" id="accordion-calculator"> -->
 									<!-- <div class="card">
 										<div class="card-header" role="tab">
 											<a data-toggle="collapse" aria-expanded="false"
@@ -348,11 +375,11 @@
 												{% include 'calculator.html' %}
 											</div>
 										</div>
-									</div> -->
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>

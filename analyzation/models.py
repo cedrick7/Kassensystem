@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 
 class Worktime(models.Model):
     begin    = models.DateTimeField(blank=True, default=timezone.now)    
-    end      = models.DateTimeField(blank=True)
+    end      = models.DateTimeField(blank=True, default=None, null=True)
     employee = models.ForeignKey(User, on_delete=models.CASCADE, blank=False)
 
 

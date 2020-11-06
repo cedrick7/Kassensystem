@@ -41,7 +41,7 @@ class choose_cashbox_view(View):
     def get(self, request, id=None, *args, **kwargs):
         template_name = 'new/choose_cashbox_copy.html'
         context={}
-        cashboxlist = Cashbox.objects.all()
+        cashboxlist = Cashbox.objects.filter(user=None)
 
         print("")
         print("GET")
@@ -62,7 +62,7 @@ class choose_cashbox_view(View):
     # http/POST method
     def post(self, request, id=None, *args, **kwargs):
 
-        template_name = 'new/cashbox_dashboard_copy.html'
+        # template_name = 'new/cashbox_dashboard_copy.html'
         # template_name = "{% url 'cashbox:cashbox_dashboard' %}"
         
         context={}
@@ -79,12 +79,13 @@ class choose_cashbox_view(View):
 
         
         # queryset = Product.objects.all()
-        context={
-            "object_list":queryset,
-            "cashbox":cashbox,
+        # context={
+        #     "object_list":queryset,
+        #     "cashbox":cashbox,
 
-        }
-        return render(request, template_name, context)
+        # }
+        return redirect('cashbox:cashbox_dashboard')
+        # return render(request, template_name, context)
 
 
 class cashbox_dashboard_view(View):
@@ -242,6 +243,9 @@ class cashbox_payment_view(View):
         print("GET")
           
         cashbox = getCashbox(request)
+        rabatte = Discount.objects.all()
+
+        setdiscount(request, None)
         
 
         #total
@@ -256,6 +260,7 @@ class cashbox_payment_view(View):
             "total":total, 
             "fehlenderbetrag":total,
             "amountpaid":amountpaid,
+            "rabatte":rabatte,
         }
         return render(request, self.template_name, context)
 
@@ -273,16 +278,76 @@ class cashbox_payment_view(View):
 
         else:
 
+            
+            
+
+            
+
+
+
+
+
+            # print("++++++")
+            # print(request.session.get("discountId", ""))
+            # print("++++++")
+
+            # if request.POST.get("discountId", "") is not None:
+            #     print("----------")
+            #     print("Discount")
+            #     print(getdiscount(request))
+            #     print("----------")
+            # else:
+            #     print("----------")
+            #     print("Discount")
+            #     print("None")
+            #     print("----------")
+
+            
+
+
     
             print("")
             print("POST")
+
+
             
             cashbox = getCashbox(request)
             # queryset = Product.objects.all()
+
+            if 'rabattAuswählen' in request.POST:
+                print("In Rabatt Auswählen")
+                discountId = request.POST.get("discountId", "")
+                setdiscount(request, discountId)
+
+                print(discountId)
             
-            #total
-            total = gettotal(request)
+            if request.session.get("discountId", "") is not None:
+                # total mit discount verrechnet
+                total = gettotal(request)
+                discount = getdiscount(request)
+                factor = discount.factor
+                rabatt = (total*factor)/100
+                total = total - rabatt
+
+
+                print(factor)
+                print("total mit discount verrechnet")
+                print(total)
+            else:
+                # total ohne discount verrechnet
+                total = gettotal(request)
+                print("total ohne discount verrechnet")
+                print(total)
+
+
+                
             
+                       
+            
+
+            # rabatte
+            rabatte = Discount.objects.all()
+
             if 'betrag' in request.POST:
                 print("Hier in der If Abfrage")
                 print(request.POST.get("betrag", ""))
@@ -290,6 +355,9 @@ class cashbox_payment_view(View):
                 betrag = request.POST.get("betrag", "")
                 cashbox.amount += Decimal(betrag)
                 cashbox.save()
+                safe = getMinSafe()
+                safe.amount -= Decimal(betrag)
+                safe.save()
                 amountpaid = getamountpaid(request)
                 rückzahlung = float(amountpaid)- float(total)
                 fehlenderbetrag = float(total) - float(amountpaid)
@@ -305,16 +373,21 @@ class cashbox_payment_view(View):
 
                 if 'resetPayment' in request.POST:
                     setamountpaid(request, 0.0)
-                    
+                    setdiscount(request, None)
                     print("RESET Só")
-                else:
+                
+                    
+                if 'münze' in request.POST:
+                    print("münze")
+
                     münze = float(request.POST.get("münze", ""))
                     amountpaid += münze
                     setamountpaid(request, amountpaid)
 
                 fehlenderbetrag = float(total) - float(amountpaid)      
                 rückzahlung = float(amountpaid)- float(total)
-
+                
+                safe = getMinSafe()
                 if (float(rückzahlung) - float(cashbox.amount)) > 0:
                     minValue = float(rückzahlung) - float(cashbox.amount)
                 else:
@@ -330,6 +403,8 @@ class cashbox_payment_view(View):
                 "fehlenderbetrag":fehlenderbetrag,
                 "rückzahlung":rückzahlung,
                 "minValue":minValue,
+                "tresor":safe,
+                "rabatte":rabatte,
             }
 
             return render(request, self.template_name, context)
@@ -503,6 +578,12 @@ class cashbox_customer_update_view(View):
 
 # Methoden
 
+def custom_sql(query):
+    with connection.cursor() as cursor:
+        cursor.execute(query)
+        row = cursor.fetchone()
+    return row
+
 def getproductIdlist(request):
     productIdlist = request.session['shoppingcartIds'] 
     return productIdlist
@@ -529,7 +610,7 @@ def getproductlist(productIdlist):
     return productlist
 
 def getallproductswithstockzero():
-    queryset = raw_sql("SELECT id AS ID FROM 07yp3juew2.product_product WHERE stock>0;")
+    queryset = raw_sql("select p.id AS ID from product_product p left join product_product_category pc on p.id=pc.product_id left join product_category c on pc.category_id=c.id where  p.stock>0 order by c.title;")
     idlist = []
     for i in queryset:
         idlist.append(i.ID)
@@ -609,6 +690,15 @@ def getCashboxId(request):
         return None
 
 
+def getMinSafe():
+    query = 'select * from cashbox_safe where amount = (select max(amount) from cashbox_safe);'
+    safetupel = raw_sql(query)
+    print(safetupel[0].id)
+    safe = Safe.objects.get(id=safetupel[0].id)
+
+    return safe
+
+
 def setPaymenttool(request, paymenttoolId):
     request.session['paymenttoolId'] = paymenttoolId
 
@@ -642,6 +732,23 @@ def getamountpaid(request):
     else: 
         return 0.0
 
+def setdiscount(request, id):
+    
+    request.session['discountId']= id
+    
+
+def getdiscount(request):
+
+    if request.session.get("discountId", "") is not None:
+        discountId = request.session['discountId']
+        discount = Discount.objects.get(id=discountId)
+        return discount
+    else: 
+        return None
+   
+
+
+
 
 def zahlungabschließen(request):
     print("Zahlung Abschließen:")
@@ -663,22 +770,38 @@ def zahlungabschließen(request):
 
     
     # creation DateTime
-    creation = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    creation = datetime.now()
     print(creation)
 
     # totalcosts
-    total=gettotal(request)
+    if request.session.get("discountId", "") is not None:
+        # total mit discount verrechnet
+        total = gettotal(request)
+        discount = getdiscount(request)
+        factor = discount.factor
+        rabatt = (total*factor)/100
+        total = total - rabatt
+
+
+        print(factor)
+        print("total mit discount verrechnet")
+        print(total)
+    else:
+        # total ohne discount verrechnet
+        total = gettotal(request)
+        print("total ohne discount verrechnet")
+        print(total)
     
 
     # discount
-    pass
+    discount = getdiscount(request)
     
     # path
     pass
 
     # sql query
 
-    bill =  Bill.objects.create(cashbox=cashbox, employee=employee, paymenttool=paymenttool, creation=creation , totalcosts=total)
+    bill =  Bill.objects.create(cashbox=cashbox, employee=employee, paymenttool=paymenttool, creation=creation , totalcosts=total, discount=discount)
 
     # create Bill_Product
     idlist = getproductIdlist(request)

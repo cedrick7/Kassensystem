@@ -10,6 +10,9 @@ from .models import Request, Active_Accounts
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .decorators import unauthenticated_user
 from cashbox.models import Cashbox
+from analyzation.models import Worktime
+from datetime import datetime
+
 from django.views.generic import (
     View,
     ListView,
@@ -123,6 +126,12 @@ def loginUser(request, *args, **kwargs):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+
+            # Arbeitszeit
+            begin = datetime.now()
+            worktime = Worktime.objects.create(employee=user, begin=begin)
+            request.session['worktimeId'] = worktime.id
+
             groups = user.groups.all()
             count = groups.count()
             links = []
@@ -169,7 +178,12 @@ def logoutUser(request, *args, **kwargs):
                     logger.info(request, 'Kassierer konnte nicht abgemeldet werden')
     except:
         logger.info(request, 'Nutzer nicht gefunden')
-        
+    
+    end = datetime.now()
+    worktimeId = request.session.get('worktimeId')
+    worktimeobj = Worktime.objects.get(id=worktimeId)
+    worktimeobj.end = end
+    worktimeobj.save()
     logout(request)
     return redirect('authorization:login')
 

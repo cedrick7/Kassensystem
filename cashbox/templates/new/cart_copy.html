@@ -83,7 +83,7 @@
 				<div class="col-6">
 					<form name="resetShoppingcart" action="{% url 'cashbox:cashbox_dashboard' %}" method="GET"> {% csrf_token %}
 
-						<button type="submit" class="col-4 pattern-element">
+						<button type="submit" class="btn btn-primary btn-sm">
 							<input type="hidden" name="reset">
 							<p class="product-name">Reset</p>
 

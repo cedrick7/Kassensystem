@@ -33,6 +33,8 @@
 								<p class="product-name">{{ instance.title }}</p>
 								<p class="product-description">{{ instance.description }}</p>
 								<p class="product-price">{{ instance.costs }} €</p>
+								<td>{% for instance in instance.category.all %}<p class="product-description">{{ instance }} €</p><br/>{% endfor %}</td>
+								
 							</button>
 						
 						</form>

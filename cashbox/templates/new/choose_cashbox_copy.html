@@ -1,20 +1,44 @@
-<h1>Kasse auswählen</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+
+<!-- Head -->
+{% block specific %}
+<title>Login</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/authorization.css' %}" />
+{% endblock specific %}
+
+{% block content %}
+<div class="container" id="body">
+    <div class="card col-12">
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <h1>Kasse auswählen</h1>
 
 
-{% for cashbox in cashboxlist %}
+                    {% for cashbox in cashboxlist %}
 
-    <form method="POST" > {% csrf_token %}
-        <input type="hidden" name="cashboxId" value="{{ cashbox.id }}">
-        
-        <button>
-            <p>{{ cashbox.title}}</p>
-            <p>{{ cashbox.amount}}</p>
-        </button>
-        
-    </form>
-	<br>
+                        <form method="POST" > {% csrf_token %}
+                            <input type="hidden" name="cashboxId" value="{{ cashbox.id }}">
+                            
+                            <button  class="btn btn-primary btn-sm">
+                                <p>{{ cashbox.title}}</p>
+                                <p>{{ cashbox.amount}}</p>
+                            </button>
+                            
+                        </form>
+                        <br>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <p>----------------------</p>
-
-{% endfor %}
+{% endblock content %}

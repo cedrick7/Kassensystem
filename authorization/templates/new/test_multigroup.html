@@ -16,42 +16,42 @@
 
 <div class="container" id="body">
     <div class="card col-12">
-       <div class="card-body">
-        <div class="row">
-            <div class="col">
-            <h1>Mehrere Gruppen vorhanden</h1>
-            <h3>Bitte ihre Tätigkeit auswählen</h3>
-            
-            {% for instance in links %}
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <h1>Mehrere Gruppen vorhanden</h1>
+                    <h3>Bitte ihre Tätigkeit auswählen</h3>
+                    
+                    {% for instance in links %}
 
-            <br>
-            
-            {% ifequal instance "AD" %}
-                <form action="{% url 'administration:administration_dashboard' %}">
-                    <input type="submit" class="btn btn-primary btn-sm"  value="Administrator" />
-                </form>
-            {% endifequal %}
-            
-            
-            {% ifequal instance "AN" %}
-                <form action="{% url 'analyzation:analyzation_dashboard' %}">
-                    <input type="submit" class="btn btn-primary btn-sm"  value="Analyst" />
-                </form>
-            {% endifequal %}
-            
-            
-            {% ifequal instance "KA" %}
-                <form action="{% url 'cashbox:cashbox_choose' %}">
-                    <input type="submit" class="btn btn-primary btn-sm"  value="Kassierer" />
-                </form>
-            {% endifequal %}
-            
-                                                                                            
-            {% endfor %}
+                    <br>
+                    
+                    {% ifequal instance "AD" %}
+                        <form action="{% url 'administration:administration_dashboard' %}">
+                            <input type="submit" class="btn btn-primary btn-sm"  value="Administrator" />
+                        </form>
+                    {% endifequal %}
+                    
+                    
+                    {% ifequal instance "AN" %}
+                        <form action="{% url 'analyzation:analyzation_dashboard' %}">
+                            <input type="submit" class="btn btn-primary btn-sm"  value="Analyst" />
+                        </form>
+                    {% endifequal %}
+                    
+                    
+                    {% ifequal instance "KA" %}
+                        <form action="{% url 'cashbox:cashbox_choose' %}">
+                            <input type="submit" class="btn btn-primary btn-sm"  value="Kassierer" />
+                        </form>
+                    {% endifequal %}
+                    
+                                                                                                    
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 
 
