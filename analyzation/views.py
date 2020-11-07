@@ -221,6 +221,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                    'services_chart_y_axes' : services_chart_y_axes,
                    'services_chart_legend' : services_chart_legend,
                   }
+    
     return render(request, 'analyzation_dashboard.html', context)
 
 # SalesView
@@ -528,6 +529,7 @@ def analyzation_sales_view(request, *args, **kwargs):
             'peak_times_chart_legend' : peak_times_chart_legend,
             'peak_times_chart_x_axes' : peak_times_chart_x_axes
             }
+    
     return render(request, 'analyzation_sales.html', context)
 
 # CustomerView
@@ -654,12 +656,7 @@ def analyzation_customers_view(request, *args, **kwargs):
                    'services_chart_legend' : services_chart_legend
 
                   }
-
-
-
-
-
-    
+ 
     return render(request, 'analyzation_customers.html', context)
 
 #EmployeesView
@@ -704,62 +701,62 @@ def analyzation_employees_view(request, *args, **kwargs):
             for i in range(sets):      #Füllen von Werten
                     employee_data[x].extend([[user_data[i].Datum, user_data[i].Arbeitszeit]])
    
-    # Datenstruktur ausgeben
-    # for i in employee_data:
-    #     print(i)
+        # Datenstruktur ausgeben
+        # for i in employee_data:
+        #     print(i)
 
-    # chart no.2 - Mitarbeiterumsatz [line-chart]
-    # Dynamische Werte
-    employee_revenue_data = []
-    # Festwerte
-    employee_revenue_chart_legend = 'Mitarbeiterumsatz'
-    employee_revenue_x_axes = 'Zeit in Tagen'
-    employee_revenue_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
-    # Dynamische Werte füllen
-    query = "SELECT DISTINCT aaa.user_id AS Nutzer, CONCAT(au.first_name, ' ', au.last_name) AS Nutzername \
-            FROM authorization_active_accounts AS aaa \
-            INNER JOIN auth_user AS au ON aaa.user_id = au.id \
-            INNER JOIN auth_user_groups AS aug ON au.id = aug.user_id \
-            INNER JOIN auth_group AS ag ON aug.group_id = ag.id \
-            INNER JOIN cashbox_bill AS cb ON au.id = cb.employee_id \
-            WHERE ag.id = 2 AND cb.creation >= DATE_SUB(CURRENT_TIMESTAMP(),INTERVAL 7 DAY) \
-            AND cb.creation <= CURRENT_TIMESTAMP();"
-    query_k = raw_sql(query)
-    count = len(query_k)
+        # chart no.2 - Mitarbeiterumsatz [line-chart]
+        # Dynamische Werte
+        employee_revenue_data = []
+        # Festwerte
+        employee_revenue_chart_legend = 'Mitarbeiterumsatz'
+        employee_revenue_x_axes = 'Zeit in Tagen'
+        employee_revenue_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
+        # Dynamische Werte füllen
+        query = "SELECT DISTINCT aaa.user_id AS Nutzer, CONCAT(au.first_name, ' ', au.last_name) AS Nutzername \
+                FROM authorization_active_accounts AS aaa \
+                INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+                INNER JOIN auth_user_groups AS aug ON au.id = aug.user_id \
+                INNER JOIN auth_group AS ag ON aug.group_id = ag.id \
+                INNER JOIN cashbox_bill AS cb ON au.id = cb.employee_id \
+                WHERE ag.id = 2 AND cb.creation >= DATE_SUB(CURRENT_TIMESTAMP(),INTERVAL 7 DAY) \
+                AND cb.creation <= CURRENT_TIMESTAMP();"
+        query_k = raw_sql(query)
+        count = len(query_k)
 
-    for x in range(count):
-        id = query_k[x].Nutzer
-        query = "SELECT DATE(cb.creation) AS Datum, SUM(cb.totalcosts) AS Summe \
-                FROM cashbox_bill AS cb WHERE cb.employee_id = " + str(id) +" \
-                AND cb.creation >= DATE_SUB(CURRENT_TIMESTAMP(), \
-                INTERVAL 7 DAY) AND cb.creation <= CURRENT_TIMESTAMP() \
-                GROUP BY DATE(cb.creation) \
-                ORDER BY Datum DESC;"
-        user_data = raw_sql(query)
-        sets = len(user_data)
-        employee_revenue_data.append([query_k[x].Nutzername])
-        
-        for i in range(sets):
-            employee_revenue_data[x].extend([[user_data[i].Datum, user_data[i].Summe]])
-   
-    # Datenstruktur ausgeben
-    # for i in employee_revenue_data:
-    #     print(i)
+        for x in range(count):
+            id = query_k[x].Nutzer
+            query = "SELECT DATE(cb.creation) AS Datum, SUM(cb.totalcosts) AS Summe \
+                    FROM cashbox_bill AS cb WHERE cb.employee_id = " + str(id) +" \
+                    AND cb.creation >= DATE_SUB(CURRENT_TIMESTAMP(), \
+                    INTERVAL 7 DAY) AND cb.creation <= CURRENT_TIMESTAMP() \
+                    GROUP BY DATE(cb.creation) \
+                    ORDER BY Datum DESC;"
+            user_data = raw_sql(query)
+            sets = len(user_data)
+            employee_revenue_data.append([query_k[x].Nutzername])
+            
+            for i in range(sets):
+                employee_revenue_data[x].extend([[user_data[i].Datum, user_data[i].Summe]])
+    
+        # Datenstruktur ausgeben
+        # for i in employee_revenue_data:
+        #     print(i)
 
 
-    #Context
-    context = {'form': analystForm,
-              # chart no.1 - Mitarbeiterzeiten [line-chart]
-              'employee_data' : employee_data,     #Alle Nutzer Mit ihren Zeiten
-              'employee_times_x_axes' : employee_times_x_axes,
-              'employee_times_y_axes' : employee_times_y_axes,
-              'employee_times_chart_legend' : employee_times_chart_legend,
-              # chart no.2 - Mitarbeiterumsatz [line-chart]
-              'employee_revenue_data' : employee_revenue_data,
-              'employee_revenue_chart_legend' : employee_revenue_chart_legend,
-              'employee_revenue_x_axes' : employee_revenue_x_axes,
-              'employee_revenue_y_axes' : employee_revenue_y_axes
-              }                                  
+        #Context
+        context = {'form': analystForm,
+                # chart no.1 - Mitarbeiterzeiten [line-chart]
+                'employee_data' : employee_data,     #Alle Nutzer Mit ihren Zeiten
+                'employee_times_x_axes' : employee_times_x_axes,
+                'employee_times_y_axes' : employee_times_y_axes,
+                'employee_times_chart_legend' : employee_times_chart_legend,
+                # chart no.2 - Mitarbeiterumsatz [line-chart]
+                'employee_revenue_data' : employee_revenue_data,
+                'employee_revenue_chart_legend' : employee_revenue_chart_legend,
+                'employee_revenue_x_axes' : employee_revenue_x_axes,
+                'employee_revenue_y_axes' : employee_revenue_y_axes
+                }                                  
     
     return render(request, 'analyzation_employees.html', context)
 
