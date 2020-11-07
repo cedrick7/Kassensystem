@@ -40,7 +40,6 @@ def analyzation_dashboard_view(request, *args, **kwargs):
     context = {}
 
     if request.method == 'GET':
-        print("GET")
         dateRange_form = FormDashboard()
 
         #Alle Kassen
@@ -231,7 +230,6 @@ def analyzation_sales_view(request, *args, **kwargs):
     # Globale Variablen, genutzt für GET und POST
 
     if request.method == 'GET':
-        print("GET")
         sales_form = FormSalesFilter() 
 
         #Alle Kassen
@@ -288,7 +286,6 @@ def analyzation_sales_view(request, *args, **kwargs):
                  GROUP BY Wochentag \
                  ORDER BY Wochentag DESC;"
         query2_result = raw_sql(query2)
-        print(query2_result)
         revenue_products_data = []
         revenue_services_data = []
         revenue_total_data = []
@@ -473,7 +470,6 @@ def analyzation_sales_view(request, *args, **kwargs):
     
     elif request.method == 'POST':
         sales_form = FormSalesFilter()
-        print("POST")
         #Abfangen des Knopfes und Manipulierung der jeweiligen Daten
         if request.POST.get("mstzfltr"):
             print("Umsatzfilter")
@@ -670,26 +666,23 @@ def analyzation_customers_view(request, *args, **kwargs):
 def analyzation_employees_view(request, *args, **kwargs):
     context = {}
     if request.method == 'GET':
-        print("GET")
         # chart no.1 - Mitarbeiterzeiten [line-chart]
         analystForm = FormEmployeeFilter()
         # Standarddaten
         # Dynamische Werte
-        query = "SELECT CONCAT(au.first_name, ' ', au.last_name) AS Mitarbeiter, DATE(aw.end) AS Datum, SEC_TO_TIME(SUM(TIME_TO_SEC(TIMEDIFF(aw.end, aw.begin)))) AS Arbeitszeit \
-                 FROM auth_user AS au INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id WHERE aw.end IS NOT NULL AND aw.begin >= DATE_SUB(CURRENT_TIMESTAMP(), \
-                 INTERVAL 7 DAY) AND aw.end <= CURRENT_TIMESTAMP() \
-                 GROUP BY DATE(aw.end) , au.id \
-                 ORDER BY Mitarbeiter ASC;"
-        query_result = raw_sql(query)
         employee_data = []
         # Festwerte
         employee_times_x_axes = 'Zeit in Tagen'
         employee_times_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
         employee_times_chart_legend = 'Mitarbeiterzeiten'
         # Dynamische Werte Füllen
-        query = "SELECT aaa.user_id AS Nutzer, concat(au.first_name, ' ', au.last_name) AS Nutzername \
-                FROM authorization_active_accounts AS aaa INNER JOIN auth_user AS au ON aaa.user_id = au.id;"
-        query_aa = raw_sql(query)
+        query = "SELECT DISTINCT aaa.user_id AS Nutzer, CONCAT(au.first_name, ' ', au.last_name) AS Nutzername \
+                FROM authorization_active_accounts AS aaa \
+                INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+                INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id \
+                WHERE aw.begin >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 7 DAY) \
+                AND aw.end <= CURRENT_TIMESTAMP();"      
+        query_aa = raw_sql(query) #Alle Nutzer mit Arbeitszeiten in den letzen 7 Tagen
         count = len(query_aa)
 
         for x in range(count): #iteration über alle Nutzer
@@ -701,19 +694,73 @@ def analyzation_employees_view(request, *args, **kwargs):
                      INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id \
                      WHERE aw.end IS NOT NULL \
                      AND aw.employee_id = " + str(id) + " \
+                     AND aw.begin >= DATE_SUB(CURRENT_TIMESTAMP(), INTERVAL 7 DAY) \
+                     AND aw.end <= CURRENT_TIMESTAMP() \
                      GROUP BY DATE(aw.end) \
                      ORDER BY Datum DESC;"
-            user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer
+            user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
             sets = len(user_data)
-
             employee_data.append([query_aa[x].Nutzername])
             for i in range(sets):      #Füllen von Werten
                     employee_data[x].extend([[user_data[i].Datum, user_data[i].Arbeitszeit]])
+   
+    # Datenstruktur ausgeben
+    # for i in employee_data:
+    #     print(i)
 
-        #Context
-        context = {'form': analystForm,
-                    'employee_data' : employee_data,     #Alle Nutzer Mit ihren Zeiten
-                  }                                  
+    # chart no.2 - Mitarbeiterumsatz [line-chart]
+    # Dynamische Werte
+    employee_revenue_data = []
+    # Festwerte
+    employee_revenue_chart_legend = 'Mitarbeiterumsatz'
+    employee_revenue_x_axes = 'Zeit in Tagen'
+    employee_revenue_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
+    # Dynamische Werte füllen
+    query = "SELECT DISTINCT aaa.user_id AS Nutzer, CONCAT(au.first_name, ' ', au.last_name) AS Nutzername \
+            FROM authorization_active_accounts AS aaa \
+            INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+            INNER JOIN auth_user_groups AS aug ON au.id = aug.user_id \
+            INNER JOIN auth_group AS ag ON aug.group_id = ag.id \
+            INNER JOIN cashbox_bill AS cb ON au.id = cb.employee_id \
+            WHERE ag.id = 2 AND cb.creation >= DATE_SUB(CURRENT_TIMESTAMP(),INTERVAL 7 DAY) \
+            AND cb.creation <= CURRENT_TIMESTAMP();"
+    query_k = raw_sql(query)
+    count = len(query_k)
+
+    for x in range(count):
+        id = query_k[x].Nutzer
+        query = "SELECT DATE(cb.creation) AS Datum, SUM(cb.totalcosts) AS Summe \
+                FROM cashbox_bill AS cb WHERE cb.employee_id = " + str(id) +" \
+                AND cb.creation >= DATE_SUB(CURRENT_TIMESTAMP(), \
+                INTERVAL 7 DAY) AND cb.creation <= CURRENT_TIMESTAMP() \
+                GROUP BY DATE(cb.creation) \
+                ORDER BY Datum DESC;"
+        user_data = raw_sql(query)
+        sets = len(user_data)
+        employee_revenue_data.append([query_k[x].Nutzername])
+        
+        for i in range(sets):
+            employee_revenue_data[x].extend([[user_data[i].Datum, user_data[i].Summe]])
+   
+    # Datenstruktur ausgeben
+    # for i in employee_revenue_data:
+    #     print(i)
+
+
+    #Context
+    context = {'form': analystForm,
+              # chart no.1 - Mitarbeiterzeiten [line-chart]
+              'employee_data' : employee_data,     #Alle Nutzer Mit ihren Zeiten
+              'employee_times_x_axes' : employee_times_x_axes,
+              'employee_times_y_axes' : employee_times_y_axes,
+              'employee_times_chart_legend' : employee_times_chart_legend,
+              # chart no.2 - Mitarbeiterumsatz [line-chart]
+              'employee_revenue_data' : employee_revenue_data,
+              'employee_revenue_chart_legend' : employee_revenue_chart_legend,
+              'employee_revenue_x_axes' : employee_revenue_x_axes,
+              'employee_revenue_y_axes' : employee_revenue_y_axes
+              }                                  
+    
     return render(request, 'analyzation_employees.html', context)
 
 ##############################################################
