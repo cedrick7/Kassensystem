@@ -11,6 +11,7 @@ from django.db import connection
 from cashbox.models import Cashbox
 from collections import namedtuple
 import datetime, json, re
+from datetime import datetime, timedelta
 
 # -------------------------------------------------------------------------
 # analyzation
@@ -692,19 +693,240 @@ def analyzation_sales_view(request, *args, **kwargs):
             print("Umsatzfilter")
             date = sales_form.data['dateRange']
             print(date)
+            date = str(sales_form.data["dateRange"])
+            dates = date.split(" - ")
+            date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+            date_end = datetime.datetime.strptime(dates[1], '%d.%m.%Y')
+            ## chart no.1 - Umsatz Überblick [line-chart] ##
+            #Dynamische Werte
+            query = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe, pp.type AS Typ \
+                    FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
+                    INNER JOIN product_product AS pp ON cbp.product_id = pp.id \
+                    WHERE creation > '" + str(date_begin) + "' \
+                    AND creation < '" + str(date_end) + "' \
+                    GROUP BY Wochentag, Typ \
+                    ORDER BY Wochentag DESC;"
+            query_result = raw_sql(query)
+            query2 = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe \
+                    FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
+                    INNER JOIN product_product AS pp ON cbp.product_id = pp.id \
+                    WHERE creation > '" + str(date_begin) + "' \
+                    AND creation < '" + str(date_end) + "' \
+                    GROUP BY Wochentag \
+                    ORDER BY Wochentag DESC;"
+            query2_result = raw_sql(query2)
+            revenue_products_data = []
+            revenue_services_data = []
+            revenue_total_data = []
+            #Festwerte
+            revenue_chart_x_axes = 'Zeit in Tagen'
+            revenue_chart_y_axes = 'Umsatz in €'
+            revenue_chart_legend = 'Umsatz'
+            revenue_products_legend = 'Produkte'
+            revenue_services_legend = 'Dienstleistungen'
+            revenue_total_legend = 'Gesamt'
+            #Dynamische Werte füllen
+            for i in query_result:
+                if i.Wochentag == 0:
+                    tmp = "Montag"
+                elif i.Wochentag == 1:
+                    tmp = "Dienstag"
+                elif i.Wochentag == 2:
+                    tmp = "Mittwoch"
+                elif i.Wochentag == 3:
+                    tmp = "Donnerstag"
+                elif i.Wochentag == 4:
+                    tmp = "Freitag"
+                elif i.Wochentag == 5:
+                    tmp = "Samstag"
+                elif i.Wochentag ==6:
+                    tmp = "Sonntag"
+
+                if i.Typ == "PR":
+                    revenue_products_data.append([tmp,i.Summe]) 
+                elif i.Typ == "DI":
+                    revenue_services_data.append([tmp,i.Summe])
+            
+            for i in query2_result:
+                if i.Wochentag == 0:
+                    revenue_total_data.append(["Montag",i.Summe])
+                elif i.Wochentag == 1:
+                    revenue_total_data.append(["Dienstag",i.Summe])
+                elif i.Wochentag == 2:
+                    revenue_total_data.append(["Mittwoch",i.Summe])
+                elif i.Wochentag == 3:
+                    revenue_total_data.append(["Donnerstag",i.Summe])
+                elif i.Wochentag == 4:
+                    revenue_total_data.append(["Freitag",i.Summe])
+                elif i.Wochentag == 5:
+                    revenue_total_data.append(["Samstag",i.Summe])
+                elif i.Wochentag ==6:
+                    revenue_total_data.append(["Sonntag",i.Summe])
+
 
         elif request.POST.get("prdktfltr"):
             print("Produktfilter")
             limit = sales_form.data['radioTOP']
-            print(limit)
+            if limit == '5':
+                query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 5;"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                products_chart_labels = []
+                products_data = []
+
+                #Festwerte
+                products_chart_x_axes = 'Produkte'
+                products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+                #Dynamische Werte füllen
+                for i in query_result:
+                    products_chart_labels.append(i.Produkt)
+                    products_data.append(i.Summe)
+        
+            elif limit == '10':
+                query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 10;"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                products_chart_labels = []
+                products_data = []
+
+                #Festwerte
+                products_chart_x_axes = 'Produkte'
+                products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+                #Dynamische Werte füllen
+                for i in query_result:
+                    products_chart_labels.append(i.Produkt)
+                    products_data.append(i.Summe)
+        
 
         elif request.POST.get("dnstlstngsfltr"):
             print("Dienstleistungsfilter")
             limit = sales_form.data['radioTOP']
-            print(limit)
+            if limit == '5':
+                ## chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] ##
+                query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                        FROM product_category AS pc \
+                        INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                        INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                        INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                        GROUP BY (pc.title) \
+                        ORDER BY Summe DESC \
+                        LIMIT 5;"          
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                services_data = []
+                services_chart_labels = []
+                #Festwerte
+                services_chart_x_axes = 'Kategoriename'
+                services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+                services_chart_legend = 'TOP 5 Dienstleistungen'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    services_data.append(i.Summe)
+                    services_chart_labels.append(i.Kategorie)
+        
+            elif limit == '10':
+                ## chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] ##
+                query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                        FROM product_category AS pc \
+                        INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                        INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                        INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                        GROUP BY (pc.title) \
+                        ORDER BY Summe DESC \
+                        LIMIT 10;"          
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                services_data = []
+                services_chart_labels = []
+                #Festwerte
+                services_chart_x_axes = 'Kategoriename'
+                services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+                services_chart_legend = 'TOP 5 Dienstleistungen'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    services_data.append(i.Summe)
+                    services_chart_labels.append(i.Kategorie)
 
         elif request.POST.get("stßztnfltr"):
             print("Stoßzeitenfilter")
+            typ = sales_form.data["radioDAY"]
+            if typ == "day":
+                ## chart no.5 - Stoßzeiten [line-chart] ##
+                query = "SELECT WEEKDAY(DATE(cb.creation)) AS Wochentag, COUNT(cb.id) AS Summe FROM cashbox_bill AS cb \
+                        WHERE creation >= date_sub(current_date(), INTERVAL 7 DAY) AND creation <= current_date() \
+                        GROUP BY Wochentag \
+                        ORDER BY Wochentag DESC"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                peak_times_data = []
+                peak_times_chart_labels = []
+                #Festwerte
+                peak_times_chart_legend = 'Stoßzeiten in Tagen'
+                peak_times_chart_x_axes = 'Zeit in Tagen'
+                peak_times_chart_y_axes = 'Anzahl der Verkäufe'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    if i.Wochentag == 0:
+                        peak_times_chart_labels.append("Montag")
+                    elif i.Wochentag == 1:
+                        peak_times_chart_labels.append("Dienstag")
+                    elif i.Wochentag == 2:
+                        peak_times_chart_labels.append("Mittwoch")
+                    elif i.Wochentag == 3:
+                        peak_times_chart_labels.append("Donnerstag")
+                    elif i.Wochentag == 4:
+                        peak_times_chart_labels.append("Freitag")
+                    elif i.Wochentag == 5:
+                        peak_times_chart_labels.append("Samstag")
+                    elif i.Wochentag == 6:
+                        peak_times_chart_labels.append("Sonntag")
+                    peak_times_data.append(i.Summe)
+            elif typ == "hours":
+                print("hours")
+                target_day = (int(sales_form.data["day"]) -1)
+                sub = 0 #Vor wievielen Tagen fand der target_day statt?
+                date = datetime.today()
+                date_day = date.weekday()
+        
+                while str(date_day) != str(target_day):
+                    sub+=1
+                    date = datetime.today() - timedelta(days=sub)
+                    date_day = date.weekday()
+            
+                ## chart no.5 - Stoßzeiten [line-chart] ##
+                query = "SELECT TIME(DATE_FORMAT(creation, '%Y-%m-%d %H:00:00')) AS Time, \
+                        COUNT(cb.id) AS Summe \
+                        FROM cashbox_bill AS cb \
+                        WHERE DATE(creation) = DATE_SUB(CURDATE(), INTERVAL " + str(sub) + " DAY) \
+                        GROUP BY Time ASC"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                peak_times_data = []
+                peak_times_chart_labels = []
+                #Festwerte
+                peak_times_chart_legend = 'Stoßzeiten in Stunden'
+                peak_times_chart_x_axes = 'Zeit in Stunden'
+                peak_times_chart_y_axes = 'Anzahl der Verkäufe'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    peak_times_data.append(i.Summe)
+                    peak_times_chart_labels.append(i.Time)
         ##
         #Context
         context = {
@@ -882,10 +1104,167 @@ def analyzation_customers_view(request, *args, **kwargs):
         
         if request.POST.get("stßztnfltr"):
             print("Stoßzeitenfilter")
+            typ = customerForm.data["radioDAY"]
+            if typ == "day":
+                ## chart no.5 - Stoßzeiten [line-chart] ##
+                query = "SELECT WEEKDAY(DATE(cb.creation)) AS Wochentag, COUNT(cb.id) AS Summe FROM cashbox_bill AS cb \
+                        WHERE creation >= date_sub(current_date(), INTERVAL 7 DAY) AND creation <= current_date() \
+                        GROUP BY Wochentag \
+                        ORDER BY Wochentag DESC"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                peak_times_data = []
+                peak_times_chart_labels = []
+                #Festwerte
+                peak_times_chart_legend = 'Stoßzeiten in Tagen'
+                peak_times_chart_x_axes = 'Zeit in Tagen'
+                peak_times_chart_y_axes = 'Anzahl der Verkäufe'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    if i.Wochentag == 0:
+                        peak_times_chart_labels.append("Montag")
+                    elif i.Wochentag == 1:
+                        peak_times_chart_labels.append("Dienstag")
+                    elif i.Wochentag == 2:
+                        peak_times_chart_labels.append("Mittwoch")
+                    elif i.Wochentag == 3:
+                        peak_times_chart_labels.append("Donnerstag")
+                    elif i.Wochentag == 4:
+                        peak_times_chart_labels.append("Freitag")
+                    elif i.Wochentag == 5:
+                        peak_times_chart_labels.append("Samstag")
+                    elif i.Wochentag == 6:
+                        peak_times_chart_labels.append("Sonntag")
+                    peak_times_data.append(i.Summe)
+            
+            elif typ == "hours":
+                print("hours")
+                target_day = (int(customerForm.data["day"]) -1)
+                sub = 0 #Vor wievielen Tagen fand der target_day statt?
+                date = datetime.today()
+                date_day = date.weekday()
+        
+                while str(date_day) != str(target_day):
+                    sub+=1
+                    date = datetime.today() - timedelta(days=sub)
+                    date_day = date.weekday()
+            
+                ## chart no.5 - Stoßzeiten [line-chart] ##
+                query = "SELECT TIME(DATE_FORMAT(creation, '%Y-%m-%d %H:00:00')) AS Time, \
+                        COUNT(cb.id) AS Summe \
+                        FROM cashbox_bill AS cb \
+                        WHERE DATE(creation) = DATE_SUB(CURDATE(), INTERVAL " + str(sub) + " DAY) \
+                        GROUP BY Time ASC"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                peak_times_data = []
+                peak_times_chart_labels = []
+                #Festwerte
+                peak_times_chart_legend = 'Stoßzeiten in Stunden'
+                peak_times_chart_x_axes = 'Zeit in Stunden'
+                peak_times_chart_y_axes = 'Anzahl der Verkäufe'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    peak_times_data.append(i.Summe)
+                    peak_times_chart_labels.append(i.Time)
+            
         elif request.POST.get("prdktfltr"):
             print("Produktfilter")
+            limit = customerForm.data["radioTOP"]
+            if limit == "5":
+                query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 5;"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                products_chart_labels = []
+                products_data = []
+
+                #Festwerte
+                products_chart_x_axes = 'Produkte'
+                products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+                #Dynamische Werte füllen
+                for i in query_result:
+                    products_chart_labels.append(i.Produkt)
+                    products_data.append(i.Summe)
+            elif limit == "10":
+                query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
+                FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
+                ON product.id = products.product_id  \
+                GROUP BY(description) \
+                ORDER BY Summe ASC \
+                LIMIT 10;"
+
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                products_chart_labels = []
+                products_data = []
+
+                #Festwerte
+                products_chart_x_axes = 'Produkte'
+                products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
+
+                #Dynamische Werte füllen
+                for i in query_result:
+                    products_chart_labels.append(i.Produkt)
+                    products_data.append(i.Summe)
+        
+
         elif request.POST.get("dnstlstngfltr"):
             print("Dienstleistungsfilter")
+            limit = customerForm.data["radioTOP"]
+            if limit == "5":
+                ## chart no.3 - Dienstleistungen Überblick (TOP-5 Ranking) [bar-chart] ##
+                query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                        FROM product_category AS pc \
+                        INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                        INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                        INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                        GROUP BY (pc.title) \
+                        ORDER BY Summe DESC \
+                        LIMIT 5;"          
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                services_data = []
+                services_chart_labels = []
+                #Festwerte
+                services_chart_x_axes = 'Kategoriename'
+                services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+                services_chart_legend = 'TOP 5 Dienstleistungen'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    services_data.append(i.Summe)
+                    services_chart_labels.append(i.Kategorie)
+        
+            elif limit == "10":
+                ## chart no.3 - Dienstleistungen Überblick (TOP-10 Ranking) [bar-chart] ##
+                query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
+                        FROM product_category AS pc \
+                        INNER JOIN product_product_category AS ppc ON pc.id = ppc.category_id \
+                        INNER JOIN product_product AS pp ON ppc.product_id = pp.id \
+                        INNER JOIN cashbox_bill_product AS cbp ON pp.id = cbp.product_id \
+                        GROUP BY (pc.title) \
+                        ORDER BY Summe DESC \
+                        LIMIT 10;"          
+                #Dynamische Werte
+                query_result = raw_sql(query)
+                services_data = []
+                services_chart_labels = []
+                #Festwerte
+                services_chart_x_axes = 'Kategoriename'
+                services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
+                services_chart_legend = 'TOP 5 Dienstleistungen'
+                #Dynamische Werte füllen
+                for i in query_result:
+                    services_data.append(i.Summe)
+                    services_chart_labels.append(i.Kategorie)
 
         # Context
         context = {'form': customerForm,
@@ -922,9 +1301,9 @@ def analyzation_employees_view(request, *args, **kwargs):
     global employee_revenue_y_axes
     context = {}
     if request.method == 'GET':
-        # chart no.1 - Mitarbeiterzeiten [line-chart]
         analystForm = FormEmployeeFilter()
         # Standarddaten
+        # chart no.1 - Mitarbeiterzeiten [line-chart]
         # Dynamische Werte
         employee_data = []
         # Festwerte
@@ -1022,13 +1401,85 @@ def analyzation_employees_view(request, *args, **kwargs):
 
         if request.POST.get("mtrbtr_ztn"):
             print("Mitarbeiter Zeiten")
-            date = analystForm.data["dateRange1"]
-            print(date)
+            date = str(analystForm.data["dateRange1"])
+            dates = date.split(" - ")
+            date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+            date_end = datetime.datetime.strptime(dates[1], '%d.%m.%Y')
+            # chart no.1 - Mitarbeiterzeiten [line-chart]
+            # Dynamische Werte
+            employee_data = []
+            # Festwerte
+            employee_times_x_axes = 'Zeit in Tagen'
+            employee_times_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
+            employee_times_chart_legend = 'Mitarbeiterzeiten'
+            # Dynamische Werte Füllen
+            query = "SELECT DISTINCT aaa.user_id AS Nutzer, CONCAT(au.first_name, ' ', au.last_name) AS Nutzername \
+                    FROM authorization_active_accounts AS aaa \
+                    INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+                    INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id \
+                    WHERE aw.begin >= '" + str(date_begin)  + "' \
+                    AND aw.end <= '" + str(date_end) + "';"      
+            query_aa = raw_sql(query) #Alle Nutzer mit Arbeitszeiten in den letzen 7 Tagen
+            count = len(query_aa)
+
+            for x in range(count): #iteration über alle Nutzer
+                id = query_aa[x].Nutzer
+                query = "SELECT DATE(aw.end) AS Datum, \
+                        SEC_TO_TIME(SUM(TIME_TO_SEC(TIMEDIFF(aw.end, aw.begin)))) AS Arbeitszeit \
+                        FROM authorization_active_accounts AS aaa \
+                        INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+                        INNER JOIN analyzation_worktime AS aw ON au.id = aw.employee_id \
+                        WHERE aw.end IS NOT NULL \
+                        AND aw.employee_id = " + str(id) + " \
+                        AND aw.begin >= '" + str(date_begin)  + "' \
+                        AND aw.end <= '" + str(date_end) + "' \
+                        GROUP BY DATE(aw.end) \
+                        ORDER BY Datum DESC;"
+                user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+                sets = len(user_data)
+                employee_data.append([query_aa[x].Nutzername])
+                for i in range(sets):      #Füllen von Werten
+                        employee_data[x].extend([[user_data[i].Datum, user_data[i].Arbeitszeit]])
 
         elif request.POST.get("mtrbtr_mstz"):
             print("Mitarbeiter Umsatz")
             date = analystForm.data["dateRange2"]
-            print(date)
+            dates = date.split(" - ")
+            date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+            date_end = datetime.datetime.strptime(dates[1], '%d.%m.%Y')
+            # chart no.2 - Mitarbeiterumsatz [line-chart]
+            # Dynamische Werte
+            employee_revenue_data = []
+            # Festwerte
+            employee_revenue_chart_legend = 'Mitarbeiterumsatz'
+            employee_revenue_x_axes = 'Zeit in Tagen'
+            employee_revenue_y_axes = 'Anzahl der Arbeitsstunnden pro Kassierer'
+            # Dynamische Werte füllen
+            query = "SELECT DISTINCT aaa.user_id AS Nutzer, CONCAT(au.first_name, ' ', au.last_name) AS Nutzername \
+                    FROM authorization_active_accounts AS aaa \
+                    INNER JOIN auth_user AS au ON aaa.user_id = au.id \
+                    INNER JOIN auth_user_groups AS aug ON au.id = aug.user_id \
+                    INNER JOIN auth_group AS ag ON aug.group_id = ag.id \
+                    INNER JOIN cashbox_bill AS cb ON au.id = cb.employee_id \
+                    WHERE ag.id = 2 AND cb.creation >= '" + str(date_begin) + "' \
+                    AND cb.creation <= '" + str(date_end) + "';"
+            query_k = raw_sql(query)
+            count = len(query_k)
+
+            for x in range(count):
+                id = query_k[x].Nutzer
+                query = "SELECT DATE(cb.creation) AS Datum, SUM(cb.totalcosts) AS Summe \
+                        FROM cashbox_bill AS cb WHERE cb.employee_id = " + str(id) +" \
+                        AND cb.creation >= '" + str(date_begin) + "' \
+                        cb.creation <= '" + str(date_end) + "' \
+                        GROUP BY DATE(cb.creation) \
+                        ORDER BY Datum DESC;"
+                user_data = raw_sql(query)
+                sets = len(user_data)
+                employee_revenue_data.append([query_k[x].Nutzername])
+                
+                for i in range(sets):
+                    employee_revenue_data[x].extend([[user_data[i].Datum, user_data[i].Summe]])
     
     context = {'form': analystForm,
                 # chart no.1 - Mitarbeiterzeiten [line-chart]
