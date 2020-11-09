@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+
+	<title>Bezahlen</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cashbox_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cashbox_pay.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cart-calculator.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/calculator.css' %}"/>
+{% endblock specific %}
+
+
+	{% block content %}
+
+<h1>Reversabill detail</h1>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}
+

@@ -1,0 +1,16 @@
+<h1>Stornorechung wurde Erfolgreich erstellt</h1>
+
+{% if einzahlung > 0 %}
+
+    <p>Der Kassengeldbetrag war nicht mehr ausreichnend</p>
+    <p>Bitte zahlen Sie {{einzahlung}} € in die Kasse ein</p>
+    <p>Das System wurde bereits aktualisiert</p>
+
+{% else %}
+
+    <p>Der Kunde bekommt {{refund}} € erstattet</p>
+
+{% endif %}
+
+
+<a href="{% url 'cashbox:cashbox_dashboard' %}" class="btn btn-primary btn-sm">Weiter</a>

@@ -1,16 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import *
 from product.models import Product
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
 from authorization.models import Active_Accounts
 from datetime import datetime
 from django.db import connection
 from collections import namedtuple
 from customer.models import Customer
-from administration.forms import CustomerModelForm, ReversalBillModelForm
-
-
+from administration.forms import CustomerModelForm, ReversalBillModelForm, Bill_ProductModelForm
+import math
 
 from django.views.generic import (
     View, 
@@ -91,8 +90,6 @@ class choose_cashbox_view(View):
 class cashbox_dashboard_view(View):
 
     template_name = 'new/cashbox_dashboard_copy.html'
-
-
 
 
     # http/GET method
@@ -355,7 +352,7 @@ class cashbox_payment_view(View):
                 betrag = request.POST.get("betrag", "")
                 cashbox.amount += Decimal(betrag)
                 cashbox.save()
-                safe = getMinSafe()
+                safe = getMaxSafe()
                 safe.amount -= Decimal(betrag)
                 safe.save()
                 amountpaid = getamountpaid(request)
@@ -387,7 +384,7 @@ class cashbox_payment_view(View):
                 fehlenderbetrag = float(total) - float(amountpaid)      
                 rückzahlung = float(amountpaid)- float(total)
                 
-                safe = getMinSafe()
+                safe = getMaxSafe()
                 if (float(rückzahlung) - float(cashbox.amount)) > 0:
                     minValue = float(rückzahlung) - float(cashbox.amount)
                 else:
@@ -427,14 +424,17 @@ class cashbox_reversalbill_view(View):
 
 
         cashbox = getCashbox(request)
-        headline = "Lege eine Stornorechnung an"
+        headline = "Für welche Rechnung eine Stornorechnung erstellen"
         
-        form = ReversalBillModelForm()
+        # der User sieht nur Rechnungen, die er selber erstellt hat 
+        objectlist = Bill.objects.filter(isReversalbill=False, employee=request.user)
+        
+
         context={
         
         "cashbox":cashbox,
         "headline":headline,
-        "form":form,
+        "object_list":objectlist,
         
             
         }
@@ -443,26 +443,239 @@ class cashbox_reversalbill_view(View):
     
     # http/POST method
     def post(self, request, id=None, *args, **kwargs):
-       
-        context={}
-        print("")
-        print("POST")
+        context = {}
+        billId = request.POST.get('billId')
+        print("hier ist get")
+        print(billId)
 
-        form = ReversalBillModelForm(request.POST)
-        print("sdfsdfsdf")
-        print(form.is_valid())
+        # Stornorechnung wird angelegt
+        original = Bill.objects.get(id=billId)
+        new = Bill.objects.create(creation=datetime.now(), totalcosts=original.totalcosts, cashbox=original.cashbox, discount=original.discount, employee=original.employee, paymenttool=original.paymenttool, isReversalbill=True, linkedbill=original)
+        new.save()
+
+        # Bill_Product hinzufügen
+        queryset = Bill_Product.objects.filter(bill=original.id)
+        for i in queryset:
+            obj = Bill_Product.objects.create(bill=new, product=i.product, amount=i.amount)
+            obj.save()
         
-        if form.is_valid():
-            
-            
-            form.save()   
-            return redirect('cashbox:cashbox_reversalbill')
 
-        cashbox = getCashbox(request)
+
+        return HttpResponseRedirect(reverse("cashbox:cashbox_bill_change", kwargs={"id": new.id}))
+
+
+
+class Bill_ProductListView(View):
+   
+
+    template_name = 'new/cashbox_change_bill_list_copy.html'
+
+    # http/GET method
+    def get(self, request, id=None, *args, **kwargs):
+
+        new = Bill.objects.get(id=id)
+        
+        id = new.id
+        objs = Bill_Product.objects.filter(bill=new)
+        
+
+        # if id is not None:
+        #     obj = get_object_or_404(Bill, id=id)
+        #     billproductIdlist = Bill_Product.objects.filter(bill=id).values_list('product', 'amount')
+        #     print(billproductIdlist)
+        #     productlist = []
+
+        #     for i in billproductIdlist:
+        #         p = Product.objects.get(id=i[0])
+        #         amount = i[1]
+                
+        #         for x in range(amount):
+
+        #             productlist.append(p)
+
+        context = {
+            "id":id,
+            "objectlist":objs,    
+        }
+            
+        return render(request, self.template_name, context)
+
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        print("Hier in Post")
+
+        if 'Ändern' in request.POST:
+            print("Hier in Ändern")
+
+            pid=0
+            pid = request.POST.get("productId")
+            print(id)
+            obj = Bill_Product.objects.filter(bill=id, product=pid)
+            print(obj[0].bill.id)
+
+            return HttpResponseRedirect(reverse("cashbox:cashbox_bill_detail_change", kwargs={"id": obj[0].bill.id, "pid": obj[0].product.id}))
+
+        
+
+        if 'Abbrechen' in request.POST:
+            print("in If Abfrage")
+            reversalbillId = request.POST['billId']
+            reversalbill = Bill.objects.get(id=reversalbillId)
+            Bill_Product.objects.filter(bill=reversalbill).delete()
+            Bill.objects.get(id=reversalbillId).delete()
+            return redirect("cashbox:cashbox_reversalbill")
+
+        if 'Abschließen' in request.POST:
+            print("Hier in Abschließen")
+
+            # totalcosts aktualisieren
+            bill = Bill.objects.get(id=id)
+            
+            newtotal = calctotalfromBill(bill)
+
+            bill.totalcosts = newtotal
+            
+
+
+            # refund ausrechnen
+            oldtotal = bill.linkedbill.totalcosts
+
+            refund = float(oldtotal) - newtotal
+            
+            # Kassengeld wird aktualisiert
+            einzahlung = 0
+            if refund>0: # wegen rechnen-Schwierigkeiten
+                
+                if refund>getCashbox(request).amount: # zu wenig Geld in der Kasse
+                    safe = getMaxSafe()
+                    cashbox = getCashbox(request)
+                    roundednum = roundup(refund)
+                    einzahlung = roundednum
+                    safe.amount-= Decimal(roundednum) # Geld wird aus Safe gezogen
+                    safe.save()
+                    cashbox.amount+= Decimal(roundednum) # Geld wird in Kasse eingezahlt
+                
+                cashbox = getCashbox(request) # Kassengeld wird aktualisiert
+                cashbox.amount-= Decimal(refund)
+
+            # Bestände werden aktualisiert
+            originalbill = bill.linkedbill
+            originalproductlist = []
+            originalqueryset = Bill_Product.objects.filter(bill=originalbill)
+            for i in originalqueryset:
+                originalproductlist.append(i)
+
+            print(originalproductlist)
+            
+            newproductlist = []
+            newqueryset = Bill_Product.objects.filter(bill=bill)
+            for i in newqueryset:
+                newproductlist.append(i)
+
+            if len(originalproductlist) == len(newproductlist):
+                length = len(newproductlist)
+                for i in range(length):
+                    if originalproductlist[i].product == newproductlist[i].product:
+                        oldamount = originalproductlist[i].amount
+                        newamount = newproductlist[i].amount
+                        korrektur = oldamount - newamount
+                        if 0<korrektur:
+                            originalproductlist[i].product.stock += korrektur # Bestand wird aktualisiert
+                            
+                            bill.refund = refund
+                            
+                            # Alles speichern
+                            bill.save()
+                            cashbox.save()
+                            cashbox.save()
+                            originalproductlist[i].product.save()
+
+                            # Weiterleitung
+                            request.session['refund'] = refund
+                            request.session['einzahlung'] = einzahlung
+                            
+                            return redirect('cashbox:cashbox_reversalbill_success')
+                            
+                                                    
+
+                        elif korrektur<0:
+                            print("Möchten Sie Waren dazu rechnen, erstellen Sie bitte eine neue Rechnung.")
+                            print("Korrigieren Sie bitte die richtige Anzahl.")
+                    else: 
+                        print("Etwas ist mit den Beständen schief gelaufen")
+            
+
+            # Zurück zum Warenkorb
+
+            return redirect("cashbox:cashbox_dashboard")
+                
+
+
+
+
+
+  
+class Bill_ProductDetailView(View):
+    template_name = 'new/cashbox_bill_detail_copy.html'
+
+    # http/GET method
+    def get(self, request, id=None, pid=None, *args, **kwargs):
+        context = {}
+        print("Hier in Get")
+        print(id)
+        print(pid)
+
+    
+        queryset = Bill_Product.objects.filter(bill=id, product=pid)
+        obj = queryset[0]
+        print(obj)
+        if obj is not None:
+            form = Bill_ProductModelForm(instance=obj)
+            context={
+                "obj":obj,
+                "form":form, 
+                
+            }
+        return render(request, self.template_name, context)
+
+
+    # http/POST method
+    def post(self, request, id=None, *args, **kwargs):
+        print("Hier in Post:")
+        print(id)
+        pid = request.POST.get('productId')
+        print(pid)
+        bill = Bill.objects.get(id=id)
+        product = Product.objects.get(id=pid)
+        obj = Bill_Product.objects.get(bill=bill, product=product)
+        print(obj)
+        if obj is not None:
+            form = Bill_ProductModelForm(request.POST, instance=obj)
+            if form.is_valid():
+                print("form is valid")
+                form.save()
+                
+        return HttpResponseRedirect(reverse("cashbox:cashbox_bill_change", kwargs={"id": id}))
+
+class ReversalBillSuccess(View):
+    template_name = 'new/cashbox_reversalbill_success.html'
+
+    def get(self, request, id=None, *args, **kwargs):
+        context = {}
+        print("Hier in Get")
+
+        refund = 0.0
+        einzahlung = 0.0
+        
+        refund = request.session.get('refund')
+        einzahlung = request.session.get('einzahlung')
+
         
         context={
-            "cashbox":cashbox,
-            "form":form,
+            "refund":refund, 
+            "einzahlung":einzahlung,             
+            
         }
         return render(request, self.template_name, context)
 
@@ -646,7 +859,26 @@ def gettotal(request):
     total = calctotal(productlist)
     return total
 
+def calctotalfromBill(bill):
+    total = 0.0
+    
+    id = bill.id
+    query = "select bp.amount, p.costs from cashbox_bill_product bp join product_product p on (bp.product_id=p.id) where bp.bill_id="+str(id)+";"
+    result = raw_sql(query)
 
+    for i in result:
+        total += float(Decimal(i[0])*Decimal(i[1]))
+     
+    # Discount
+    if bill.discount is not None:
+        factor = bill.discount.factor
+        rabatt = (total*float(factor))/100
+        total = total - rabatt
+    
+    return total
+        
+        
+       
 
 def takeoutProduct(request, *args, **kwargs):
     print("SKRRRR")
@@ -690,7 +922,7 @@ def getCashboxId(request):
         return None
 
 
-def getMinSafe():
+def getMaxSafe():
     query = 'select * from cashbox_safe where amount = (select max(amount) from cashbox_safe);'
     safetupel = raw_sql(query)
     print(safetupel[0].id)
@@ -747,6 +979,8 @@ def getdiscount(request):
         return None
    
 
+def roundup(x):
+    return int(math.ceil(x / 10.0)) * 10
 
 
 

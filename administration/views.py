@@ -1128,7 +1128,7 @@ class BillCreateView(LoginRequiredMixin, View):
 # Stornorechnungen 
 class ReversalBillListView(LoginRequiredMixin, ListView):
     template_name = 'new/administration_reversalbills_copy.html'
-    queryset = ReversalBill.objects.all()
+    queryset = Bill.objects.filter(isReversalbill=True)
 
 class ReversalBillDetailView(LoginRequiredMixin, View):
     template_name = 'new/administration_reversalbills_detail_copy.html'
@@ -1137,17 +1137,19 @@ class ReversalBillDetailView(LoginRequiredMixin, View):
     def get(self, request, id=None, *args, **kwargs):
         context = {}
         if id is not None:
-            obj = get_object_or_404(ReversalBill, id=id)
-            billIdlist = ReversalBill.objects.filter(bill=id).values_list('bill', flat=True)
-            billlist = []
-
-            for i in billIdlist:
-                b = Bill.objects.get(id=i)
-                billlist.append(b)
+            obj = get_object_or_404(Bill, id=id)
+            linkedbill = obj.linkedbill
+            
+            productlist = []
+            queryset = Bill_Product.objects.filter(bill=obj)
+            for i in queryset:
+                productlist.append(i.product)
                 
             context = {
                 "object":obj,
-                "billlist":billlist    
+                "linkedbill":linkedbill,
+                "productlist":productlist,
+
                 
             }
 

@@ -1,0 +1,40 @@
+<h1>hallo</h1>
+
+
+{% for instance in objectlist %}
+    <br>
+    <p>-----------------------</p>
+
+    <p>{{instance.id}}</p>
+    <p>Name: {{ instance.product}} </p>
+    <p>Anzahl: {{ instance.amount}} </p>
+    <form action="" method="POST"> {%csrf_token%}
+
+        <input type="hidden" name="productId" value="{{ instance.product.id }}">
+
+        <input type="submit" name="Ändern" value="Ändern">
+    </form>
+    <!-- <a href="{{ instance.change_detail }}" class="btn btn-primary btn-sm" >Ändern</a> -->
+
+    <p>-----------------------</p>
+    <br>
+
+{% endfor %}
+<br>
+<br>
+<br>
+<form method="POST" action=""> {% csrf_token%}
+
+    <input type="submit" name="Abschließen" value="Abschließen">
+
+</form>
+
+<form method="POST" action=""> {% csrf_token%}
+
+    <input type="hidden" name='billId' value="{{id}}">
+
+    <input type="submit" name="Abbrechen" value="Abbrechen">
+
+</form>
+
+

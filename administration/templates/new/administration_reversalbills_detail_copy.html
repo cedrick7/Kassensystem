@@ -19,7 +19,7 @@
 	<section id="body">
 		<div class="heading container-fluid">
 			<!-- change this content -->
-			<h3>Stornoechung</h3>
+			<h3>Stornorechung</h3>
 			<!-- <a class="btn btn-primary" role="button" href="#">
 				<i class="fas fa-download fa-sm"></i>&nbsp;
 				
@@ -34,7 +34,7 @@
 					</form>
 
 					<!-- change this content -->
-					<p>Stornorechnung Details</p>
+					<h2>Stornorechnung Details</h2>
 				</div>
 				<div class="card-body">
 					<div class="card-row-1 row">
@@ -68,7 +68,7 @@
 								<table class="table" id="productsTable">
 									<thead>
 									<tr>
-										<th>Rechnung</th>
+										
 										<th>Datum</th>
 										<th>Rückerstattung</th>
 										<th>Mitarbeiter</th>
@@ -86,7 +86,7 @@
 									
 										<tr>
 											<td>{{ object.creation }}</td>
-											<td>{{ object.totalcosts }}</td> 
+											<td>{{ object.refund }}</td> 
 											<td>{{ object.employee }}</td>
 											<td>{{ object.cashbox }}</td> 
 											<td>{{ object.paymenttool }}</td>
@@ -103,7 +103,7 @@
 									
 									<tfoot>
 									<tr>
-										<td><strong>Rechnung</strong></td>
+										
 										<td><strong>Datum</strong></td>
 										<td><strong>Rückerstattung</strong></td>
 										<td><strong>Mitarbeiter</strong></td>
@@ -118,9 +118,76 @@
 						</div>
 						<div class="col-12">
 							<!-- change this content -->
+							<div class="table-responsive table" id="dataTable-1" role="grid"
+							     aria-describedby="dataTable_info">
+								<table class="table" id="productsTable">
+									<h3>Produkte</h3>
+									<thead>
+										<tr>
+										
+											
+											<th>Typ</th>
+											<th>Name</th>
+											<th>Beschreibung</th>
+											<th>Marke</th>
+											<th>Kosten</th>
+											<th>Bestand</th>
+											<th>Kategorien</th>
+											<th>Eigenschaften</th>
+											<th>Gewicht</th>
+											<th>Bild</th>
+											
+										
+										
+
+										</tr>
+									</thead>
+									<tbody>
+
+										{% for instance in productlist reversed %}
+
+											<tr>
+												<td>{{ instance.type }}</td>
+												<td>{{ instance.title }}</td>
+												<td>{{ instance.description }}</td>
+												<td>{{ instance.brand }}</td>
+												<td>{{ instance.costs }}</td>
+												<td>{{ instance.stock }}</td>
+												<td>{% for instance in instance.category.all %}{{ instance }}<br/>{% endfor %}</td>
+												<td>{% for instance in instance.attributes.all %}{{ instance }}<br/>{% endfor %}</td>
+												<td>{{ instance.weight }}</td>
+												<td>{{ instance.path }}</td>
+												
+											</tr>
+
+										{% endfor %}		
+
+									</tbody>
+									
+									<tfoot>
+										<tr>
+											<td><strong>Typ</strong></td>
+											<td><strong>Name</strong></td>
+											<td><strong>Beschreibung</strong></td>
+											<td><strong>Marke</strong></td>
+											<td><strong>Kosten</strong></td>
+											<td><strong>Bestand</strong></td>
+											<td><strong>Kategorien</strong></td>
+											<td><strong>Eigenschaften</strong></td>
+											<td><strong>Gewicht</strong></td>
+											<td><strong>Bild</strong></td>
+
+										</tr>
+									</tfoot>
+								</table>
+									
+							</div>
+						</div>
+						<div class="col-12">
+							<!-- change this content -->
 							<div class="table-responsive table" id="dataTable-1" role="grid">
 								<table class="table" id="productsTable">
-									<h1>Rechnung</h1>
+									<h3>Original Rechnung</h3>
 
 									<tr>
 										<th>Datum</th>
@@ -139,18 +206,18 @@
 
 
 										
-										{% for bill in billlist %}
-											<tr>
-												<td>{{ bill.creation }}</td>
-												<td>{{ bill.totalcosts }}</td>
-												<td>{{ bill.employee }}</td>
-												<td>{{ bill.cashbox }}</td>
-												<td>{{ bill.paymenttool }}</td>
-												<td>{{ bill.discount }}</td>
-												<td>{{ bill.path }}</td>	
-																										
-											</tr>
-										{% endfor %}
+									
+									<tr>
+										<td>{{ linkedbill.creation }}</td>
+										<td>{{ linkedbill.totalcosts }}</td>
+										<td>{{ linkedbill.employee }}</td>
+										<td>{{ linkedbill.cashbox }}</td>
+										<td>{{ linkedbill.paymenttool }}</td>
+										<td>{{ linkedbill.discount }}</td>
+										<td>{{ linkedbill.path }}</td>	
+																								
+									</tr>
+									
 									
 
 									</tbody>

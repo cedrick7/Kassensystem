@@ -45,15 +45,7 @@
 								</label>
 							</div>
 						</div>
-						<div class="col-12 col-sm-4">
-							<div class="create_button">
-
-								<form action="{% url 'administration:reversalbill_create' %}">
-									<input class="btn btn-primary" type="submit" value="Stornorechnung hinzufügen" />
-								</form>
-								
-							</div>
-						</div>
+						
 
 						<div class="col-12 col-sm-4">
 							<div class="dataTables_filter" id="dataTable_filter-1">
@@ -75,21 +67,18 @@
 										<th>Datum</th>
 										<th>Rückerstattung</th>
 										<th>Details</th>
-										
-										
-
 
 									</tr>
 									</thead>
 									<tbody>
 
-									{% for instance in object_list %}
+									{% for instance in object_list reversed %}
 										<tr>
 											<td>{{ instance.creation }}</td>
 											<td>{{ instance.refund }} €</td> 
 											<td class="td-icons">
 												
-												<a href="{{ instance.get_detail_url }}"><i class="fa fa-pencil"></i></a>
+												<a href="{{ instance.get_reversal_detail_url }}"><i class="fa fa-pencil"></i></a>
 											</td>
 										</tr>
 									{% endfor %}

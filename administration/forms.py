@@ -661,6 +661,12 @@ class BillModelForm(forms.ModelForm):
             ),
         }
 
+class Bill_ProductModelForm(forms.ModelForm):
+    class Meta:
+        model = Bill_Product
+        fields = [
+            'amount',
+        ]
 
 class ReversalBillModelForm(forms.ModelForm):
     class Meta:
@@ -673,6 +679,7 @@ class ReversalBillModelForm(forms.ModelForm):
             'cashbox',
             'path',
         ]
+
         # widgets = {
         #     'bill': forms.TextInput(
         #         attrs={

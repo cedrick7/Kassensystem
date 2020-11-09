@@ -1,0 +1,8 @@
+Ändern
+<h1>Hier in Detail</h1>
+{{obj.product}}
+<form method="POST"> {% csrf_token %}
+    <input type="hidden" name="productId" value="{{obj.product.id}}">
+    {{ form.as_p}}
+    <input type="submit" value="Speichern">
+</form>

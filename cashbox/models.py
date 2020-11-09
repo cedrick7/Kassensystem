@@ -74,12 +74,22 @@ class Bill(models.Model):
     paymenttool  = models.ForeignKey(Paymenttool, on_delete=models.CASCADE, default=None)
     discount          = models.ForeignKey(Discount, on_delete=models.CASCADE, blank=True, default=None, null=True) # in Prozent
     path       = models.FileField(upload_to='uploads/', unique=False, blank=True)
+    linkedbill = models.ForeignKey("Bill", on_delete=models.CASCADE, blank=True, null=True)
+    isReversalbill = models.BooleanField(default=False)
+    refund = models.DecimalField(blank=True, default=0, max_digits=8,decimal_places=2)
     
 
     def get_detail_url(self):
         return reverse("administration:bill_details", kwargs={"id": self.id})
+    
+    def get_reversal_detail_url(self):
+        return reverse("administration:reversalbill_details", kwargs={"id": self.id})
 
+    
+    def change_url(self):
+        return reverse("cashbox:cashbox_bill_change", kwargs={"id": self.id})
 
+    
 
     class Meta:
         verbose_name_plural = "Rechnungen"
@@ -92,6 +102,7 @@ class Bill_Product(models.Model):
     bill = models.ForeignKey(Bill, on_delete=models.CASCADE, blank=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, blank=False)
     amount = models.IntegerField(default=50, validators=[MinValueValidator(Decimal('-0.01'))]) # in Stück
+
 
     class Meta:
         unique_together=[['bill', 'product']]

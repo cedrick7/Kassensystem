@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 LOGIN_URL = 'authorization:login'
 
 
+
+
 # Application definition
 
 INSTALLED_APPS = [
