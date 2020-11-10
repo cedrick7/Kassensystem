@@ -1,16 +1,54 @@
-<h1>Stornorechung wurde Erfolgreich erstellt</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
 
-{% if einzahlung > 0 %}
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
 
-    <p>Der Kassengeldbetrag war nicht mehr ausreichnend</p>
-    <p>Bitte zahlen Sie {{einzahlung}} € in die Kasse ein</p>
-    <p>Das System wurde bereits aktualisiert</p>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
 
-{% else %}
+{% block content %}
+    <div style="text-align:center;margin-top:50px;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Stornorechung wurde Erfolgreich erstellt</h1>
 
-    <p>Der Kunde bekommt {{refund}} € erstattet</p>
+        {% if einzahlung > 0 %}
 
-{% endif %}
+            <h3>Der Kassengeldbetrag war nicht mehr ausreichnend</h3>
+            <h3>Bitte zahlen Sie {{einzahlung}} € in die Kasse ein</h3>
+            <h3>Das System wurde bereits aktualisiert</h3>
+        {% else %}
+
+            <h3>Der Kunde bekommt {{refund}} € erstattet</h3>
+
+        {% endif %}
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
-<a href="{% url 'cashbox:cashbox_dashboard' %}" class="btn btn-primary btn-sm">Weiter</a>
+        <a href="{% url 'cashbox:cashbox_dashboard' %}" class="btn btn-primary btn-sm">Weiter</a>
+
+
+    </div>
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}
+
+
+

@@ -1,40 +1,113 @@
-<h1>hallo</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
 
 
-{% for instance in objectlist %}
-    <br>
-    <p>-----------------------</p>
 
-    <p>{{instance.id}}</p>
-    <p>Name: {{ instance.product}} </p>
-    <p>Anzahl: {{ instance.amount}} </p>
-    <form action="" method="POST"> {%csrf_token%}
+{% block content %}
+    <section id="body">
+        <div class="heading container-fluid">
+            <!-- change this content -->
+            <h3>Stornorechung</h3>
+            <!-- <a class="btn btn-primary" role="button" href="#">
+                <i class="fas fa-download fa-sm"></i>&nbsp;
+                    change this content
+                Alle Produkte ausdrucken</a> -->
+        </div>
+        <div class="content container-fluid">
+            <div class="card">
+                <div class="card-header">
+					<!-- change this content -->
+					<p>Produkt Übersicht</p>
+				</div>
+                <div class="card-body">
+                    <div class="card-row-2 row">
+						<div class="col-12">
+							<!-- change this content -->
+							<div class="table-responsive table" id="dataTable-1" role="grid"
+							     aria-describedby="dataTable_info">
+								<table class="table" id="productsTable">
+									<thead>
+									<tr>
+										<th>Name</th>
+                                        <th>Anzahl</th>
+                                        <th>Mehr</th>
 
-        <input type="hidden" name="productId" value="{{ instance.product.id }}">
+									</tr>
+									</thead>
+									<tbody>
+                                        {% for instance in objectlist %}
+                                        <br>
+                                        <tr>
 
-        <input type="submit" name="Ändern" value="Ändern">
-    </form>
-    <!-- <a href="{{ instance.change_detail }}" class="btn btn-primary btn-sm" >Ändern</a> -->
+                                            <td>{{ instance.product }}</td>
+                                            <td>{{ instance.amount }}</td>
+                                            <td>
+                                                <form action="" method="POST"> {%csrf_token%}
+                                
+                                                    <input type="hidden" name="productId" value="{{ instance.product.id }}">
+                                        
+                                                    <input type="submit" class="btn btn-primary" name="Ändern" value="Ändern">
+                                                </form>
 
-    <p>-----------------------</p>
-    <br>
+                                            </td>
 
-{% endfor %}
-<br>
-<br>
-<br>
-<form method="POST" action=""> {% csrf_token%}
+                                            
 
-    <input type="submit" name="Abschließen" value="Abschließen">
+                                        </tr>
+                                        
+                                    
+                                    {% endfor %}
 
-</form>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><strong>Name</strong></td>
+                                            <td><strong>Anzahl</strong></td>
+                                            <td><strong>Mehr</strong></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+							</div>
+						</div>
+					</div>
 
-<form method="POST" action=""> {% csrf_token%}
 
-    <input type="hidden" name='billId' value="{{id}}">
+                    <br>
+                    <br>
+                    <br>
+                    <form method="POST" action=""> {% csrf_token%}
 
-    <input type="submit" name="Abbrechen" value="Abbrechen">
+                        <input type="submit" class="btn btn-primary" name="Abschließen" value="Abschließen">
 
-</form>
+                    </form>
+                    
+                    <br>
+
+                    <form method="POST" action=""> {% csrf_token%}
+
+                        <input type="hidden" name='billId' value="{{id}}">
+
+                        <input type="submit" class="btn btn-primary" name="Abbrechen" value="Abbrechen">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
+{% endblock content %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}

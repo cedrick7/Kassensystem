@@ -1081,7 +1081,6 @@ class BillDetailView(LoginRequiredMixin, View):
         if id is not None:
             obj = get_object_or_404(Bill, id=id)
             billproductIdlist = Bill_Product.objects.filter(bill=id).values_list('product', 'amount')
-            print(billproductIdlist)
             productlist = []
 
             for i in billproductIdlist:
