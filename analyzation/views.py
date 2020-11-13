@@ -10,8 +10,9 @@ from django.db.models import Sum
 from django.db import connection
 from cashbox.models import Cashbox
 from collections import namedtuple
-import datetime, json, re
 from datetime import datetime, timedelta
+import datetime
+import datetime, json, re
 
 # -------------------------------------------------------------------------
 # analyzation
@@ -41,6 +42,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
     global sales_day, sales_week, sales_month, sales_product, sales_dienst, cashbox, revenue_products_data, revenue_services_data, revenue_total_data, revenue_chart_x_axes
     global revenue_chart_y_axes, revenue_chart_legend, revenue_products_legend, revenue_services_legend, revenue_total_legend, products_chart_labels, products_data
     global products_chart_x_axes, products_chart_y_axes, services_data, services_chart_labels, services_chart_x_axes, services_chart_y_axes, services_chart_legend
+    global date_begin, date_end
     context = {}
 
     if request.method == 'GET':
@@ -218,7 +220,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                    'products_data' : products_data,
                    'products_chart_x_axes' : products_chart_x_axes,
                    'products_chart_y_axes' : products_chart_y_axes,
-                   # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] 
+                   # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
                    'services_data' : services_data,
                    'services_chart_labels' : services_chart_labels,
                    'services_chart_x_axes' : services_chart_x_axes,
@@ -493,7 +495,7 @@ def analyzation_sales_view(request, *args, **kwargs):
                 WHERE creation >= date_sub(current_timestamp(), INTERVAL 7 DAY) \
                 AND creation <= current_timestamp() \
                 GROUP BY Wochentag, Typ \
-                ORDER BY Wochentag DESC;"
+                ORDER BY Wochentag ASC;"
         query_result = raw_sql(query)
         query2 = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe \
                  FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
@@ -501,7 +503,7 @@ def analyzation_sales_view(request, *args, **kwargs):
                  WHERE creation >= date_sub(current_timestamp(), INTERVAL 7 DAY) \
                  AND creation <= current_timestamp() \
                  GROUP BY Wochentag \
-                 ORDER BY Wochentag DESC;"
+                 ORDER BY Wochentag ASC;"
         query2_result = raw_sql(query2)
         revenue_products_data = []
         revenue_services_data = []
@@ -531,25 +533,30 @@ def analyzation_sales_view(request, *args, **kwargs):
                 tmp = "Sonntag"
 
             if i.Typ == "PR":
-               revenue_products_data.append([tmp,i.Summe]) 
+               revenue_products_data.append([tmp,float(i.Summe)])
             elif i.Typ == "DI":
-                revenue_services_data.append([tmp,i.Summe])
+                revenue_services_data.append([tmp,float(i.Summe)])
         
         for i in query2_result:
             if i.Wochentag == 0:
-                revenue_total_data.append(["Montag",i.Summe])
+                revenue_total_data.append(["Montag",float(i.Summe)])
             elif i.Wochentag == 1:
-                revenue_total_data.append(["Dienstag",i.Summe])
+                revenue_total_data.append(["Dienstag",float(i.Summe)])
             elif i.Wochentag == 2:
-                revenue_total_data.append(["Mittwoch",i.Summe])
+                revenue_total_data.append(["Mittwoch",float(i.Summe)])
             elif i.Wochentag == 3:
-                revenue_total_data.append(["Donnerstag",i.Summe])
+                revenue_total_data.append(["Donnerstag",float(i.Summe)])
             elif i.Wochentag == 4:
-                revenue_total_data.append(["Freitag",i.Summe])
+                revenue_total_data.append(["Freitag",float(i.Summe)])
             elif i.Wochentag == 5:
-                revenue_total_data.append(["Samstag",i.Summe])
+                revenue_total_data.append(["Samstag",float(i.Summe)])
             elif i.Wochentag ==6:
-                revenue_total_data.append(["Sonntag",i.Summe])
+                revenue_total_data.append(["Sonntag",float(i.Summe)])
+
+        print("\n===============================================================================================================")
+        print("revenue_total_data: " , revenue_total_data)
+        print("revenue_products_data: " , revenue_products_data)
+        print("revenue_services_data: " , revenue_services_data)
 
         ## chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart] ##
         query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
@@ -571,8 +578,8 @@ def analyzation_sales_view(request, *args, **kwargs):
         #Dynamische Werte füllen
         for i in query_result:
             products_chart_labels.append(i.Produkt)
-            products_data.append(i.Summe)
-        
+            products_data.append(float(i.Summe))
+
         ## chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] ##
         query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
                 FROM product_category AS pc \
@@ -592,7 +599,7 @@ def analyzation_sales_view(request, *args, **kwargs):
         services_chart_legend = 'TOP 5 Dienstleistungen'
         #Dynamische Werte füllen
         for i in query_result:
-            services_data.append(i.Summe)
+            services_data.append(float(i.Summe))
             services_chart_labels.append(i.Kategorie)
         
         ## chart no.4 - Zahlungsmethoden [doughnut-chart] ##
@@ -609,7 +616,7 @@ def analyzation_sales_view(request, *args, **kwargs):
         payment_chart_legend = 'Zahlungsmethoden in Prozent'
         #Dynamische Werte füllen
         for i in query_result:
-            payment_data.append(i.Summe)
+            payment_data.append(float(i.Summe))
             payment_chart_labels.append(i.Titel)
 
         ## chart no.5 - Stoßzeiten [line-chart] ##
@@ -644,6 +651,10 @@ def analyzation_sales_view(request, *args, **kwargs):
                 peak_times_chart_labels.append("Sonntag")
             peak_times_data.append(i.Summe)
 
+        #
+        date_begin = 999
+        date_end = 999
+
         #Context
         context = {
             'form': sales_form,
@@ -663,6 +674,8 @@ def analyzation_sales_view(request, *args, **kwargs):
             'revenue_products_legend' : revenue_products_legend,
             'revenue_services_legend': revenue_services_legend,
             'revenue_total_legend' : revenue_total_legend,
+            'date_begin': date_begin,
+            'date_end': date_end,
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
             'products_chart_labels':products_chart_labels,
             'products_data':products_data,
@@ -705,7 +718,7 @@ def analyzation_sales_view(request, *args, **kwargs):
                     WHERE creation > '" + str(date_begin) + "' \
                     AND creation < '" + str(date_end) + "' \
                     GROUP BY Wochentag, Typ \
-                    ORDER BY Wochentag DESC;"
+                    ORDER BY Wochentag ASC;"
             query_result = raw_sql(query)
             query2 = "SELECT WEEKDAY(DATE(creation)) AS Wochentag, SUM(totalcosts) AS Summe \
                     FROM cashbox_bill AS cb INNER JOIN cashbox_bill_product AS cbp ON cb.id = cbp.bill_id \
@@ -713,7 +726,7 @@ def analyzation_sales_view(request, *args, **kwargs):
                     WHERE creation > '" + str(date_begin) + "' \
                     AND creation < '" + str(date_end) + "' \
                     GROUP BY Wochentag \
-                    ORDER BY Wochentag DESC;"
+                    ORDER BY Wochentag ASC;"
             query2_result = raw_sql(query2)
             revenue_products_data = []
             revenue_services_data = []
@@ -743,25 +756,25 @@ def analyzation_sales_view(request, *args, **kwargs):
                     tmp = "Sonntag"
 
                 if i.Typ == "PR":
-                    revenue_products_data.append([tmp,i.Summe]) 
+                    revenue_products_data.append([tmp,float(i.Summe)])
                 elif i.Typ == "DI":
-                    revenue_services_data.append([tmp,i.Summe])
+                    revenue_services_data.append([tmp,float(i.Summe)])
             
             for i in query2_result:
                 if i.Wochentag == 0:
-                    revenue_total_data.append(["Montag",i.Summe])
+                    revenue_total_data.append(["Montag",float(i.Summe)])
                 elif i.Wochentag == 1:
-                    revenue_total_data.append(["Dienstag",i.Summe])
+                    revenue_total_data.append(["Dienstag",float(i.Summe)])
                 elif i.Wochentag == 2:
-                    revenue_total_data.append(["Mittwoch",i.Summe])
+                    revenue_total_data.append(["Mittwoch",float(i.Summe)])
                 elif i.Wochentag == 3:
-                    revenue_total_data.append(["Donnerstag",i.Summe])
+                    revenue_total_data.append(["Donnerstag",float(i.Summe)])
                 elif i.Wochentag == 4:
-                    revenue_total_data.append(["Freitag",i.Summe])
+                    revenue_total_data.append(["Freitag",float(i.Summe)])
                 elif i.Wochentag == 5:
-                    revenue_total_data.append(["Samstag",i.Summe])
+                    revenue_total_data.append(["Samstag",float(i.Summe)])
                 elif i.Wochentag ==6:
-                    revenue_total_data.append(["Sonntag",i.Summe])
+                    revenue_total_data.append(["Sonntag",float(i.Summe)])
 
 
         elif request.POST.get("prdktfltr"):
@@ -927,6 +940,10 @@ def analyzation_sales_view(request, *args, **kwargs):
                 for i in query_result:
                     peak_times_data.append(i.Summe)
                     peak_times_chart_labels.append(i.Time)
+
+        print(date_begin.day)
+        print(date_end.day)
+
         ##
         #Context
         context = {
@@ -947,6 +964,8 @@ def analyzation_sales_view(request, *args, **kwargs):
             'revenue_products_legend' : revenue_products_legend,
             'revenue_services_legend': revenue_services_legend,
             'revenue_total_legend' : revenue_total_legend,
+            'date_begin': date_begin.day,
+            'date_end': date_end.day,
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
             'products_chart_labels':products_chart_labels,
             'products_data':products_data,
@@ -968,7 +987,8 @@ def analyzation_sales_view(request, *args, **kwargs):
             'peak_times_chart_legend' : peak_times_chart_legend,
             'peak_times_chart_x_axes' : peak_times_chart_x_axes
             }
-    
+
+
     return render(request, 'analyzation_sales.html', context)
 
 # CustomerView
