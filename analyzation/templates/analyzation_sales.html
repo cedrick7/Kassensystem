@@ -431,16 +431,21 @@
         var revenue_chart_y_axes = '{{ revenue_chart_y_axes|safe }}'
 
 
-        //var weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
-        var weekdays = ['Sonntag', 'Samstag', 'Freitag', 'Donnerstag', 'Mittwoch', 'Dienstag', 'Montag']
+        var weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+        //var weekdays = ['Sonntag', 'Samstag', 'Freitag', 'Donnerstag', 'Mittwoch', 'Dienstag', 'Montag']
 
-        var date_end = {{ date_end|safe }}
+        var date_end = 99
+        date_end = {{ date_end|safe }}
 
-        if(date_end < 999) {
-            var counter = (new Date().getDay()) - 1;
-        } else {
+        console.log(date_end)
+
+        var counter = (new Date().getDay());
+
+        if(date_end < 9) {
             var counter = date_end;
         }
+
+        console.log("counter = " + counter)
 
         for (let i = 0; i < 7; i++) {
             if (counter < 7) {
@@ -451,7 +456,8 @@
             }
             counter++;
         }
-        revenue_chart_labels = revenue_chart_labels.reverse();
+        //revenue_chart_labels = revenue_chart_labels.reverse();
+        console.log(revenue_chart_labels)
 
         var revenue_total_data_raw = {{ revenue_total_data|safe }};
         var revenue_total_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
@@ -469,6 +475,7 @@
         }
 
         console.log(revenue_total_data)
+
 
         var data = []
         for(let i = 0; i < revenue_chart_labels.length; i++) {
@@ -525,7 +532,7 @@
                 revenue_services_data = data.revenue_services_data
                 revenue_services_legend = data.revenue_services_legend
                 revenue_chart_legend = data.revenue_chart_legend
-                revenue_chart_labels = data.revenue_chart_labels
+                //revenue_chart_labels = data.revenue_chart_labels
                 revenue_chart_x_axes = data.revenue_chart_x_axes
                 revenue_chart_y_axes = data.revenue_chart_y_axes
                 /*

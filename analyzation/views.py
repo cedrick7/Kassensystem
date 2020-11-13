@@ -773,7 +773,7 @@ def analyzation_sales_view(request, *args, **kwargs):
                     revenue_total_data.append(["Freitag",float(i.Summe)])
                 elif i.Wochentag == 5:
                     revenue_total_data.append(["Samstag",float(i.Summe)])
-                elif i.Wochentag ==6:
+                elif i.Wochentag == 6:
                     revenue_total_data.append(["Sonntag",float(i.Summe)])
 
 
