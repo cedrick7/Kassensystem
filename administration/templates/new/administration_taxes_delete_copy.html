@@ -1,6 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
 {% block content %}
 
-
+<div style="text-align:center;margin-top:50px;">
 <h1>Delete </h1>
 
 
@@ -14,11 +26,16 @@
 
     <form action="" method="POST"> {% csrf_token %}
         <h1>Möchtest du den Steuersatz "{{ object.title }}" löschen?</h1>
+        <br>
         <p>
-            <input type="submit" value="Ja" /> <a href="{% url 'administration:tax_list' %}">Abbrechen</a>
+            <input type="submit"  class="btn btn-primary btn-sm"  value="Ja" /> <a href="{% url 'administration:tax_list' %}">Abbrechen</a>
         </p>
     </form> 
+</div>
+
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}
     
-
-
-{% endblock %}

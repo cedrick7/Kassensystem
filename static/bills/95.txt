@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 95
+vom 2020-11-15 01:37:04.428508
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 
+Position    Produkt    Anzahl    Preis    Gesamtpreis
+0    Karottensaft    2    1.30    2.60
+1    Haare schneiden    1    10.00    10.00
+
+------------------------------------
+
+Gesamtkosten Netto: 10.58823529411764705882352941
+zzgl. 19,00€ MwSt. 2.01176470588235294117647059
+
+Gesamtkosten: 12.60 

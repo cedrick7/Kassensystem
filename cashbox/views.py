@@ -3,11 +3,13 @@ from .forms import *
 from product.models import Product
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
+from pathlib import Path
 from authorization.models import Active_Accounts
 from datetime import datetime
 from django.db import connection
 from collections import namedtuple
 from customer.models import Customer
+from product.models import Category, Product
 from administration.forms import CustomerModelForm, ReversalBillModelForm, Bill_ProductModelForm
 import math
 import os, subprocess, logging
@@ -88,9 +90,40 @@ class cashbox_dashboard_view(View):
 
         cashbox = getCashbox(request)
 
+
+
+        # categories
+        categorielist = Category.objects.all().order_by('title')
+
+        productlistbuy = []
+
+        for c in categorielist:
+                       
+            queryset = Product.category.through.objects.filter(category=c)
+            list=[]
+            for i in queryset:
+                if i.product.stock>0:
+                    list.append(i.product)
+            
+            productlistbuy.append(list)
+            
+        sonstiges = []
+        
+        for i in produkte:
+            if not i.category.exists():
+                sonstiges.append(i)
+        
+        
+        länge = range(0,len(productlistbuy))
+      
+       
         context={
             "object_list":produkte,
             "cashbox":cashbox,
+            "categories":categorielist,
+            "productlist":productlistbuy,
+            "sonstiges":sonstiges,
+            "range":länge,
             
         }
         return render(request, self.template_name, context)
@@ -104,7 +137,7 @@ class cashbox_dashboard_view(View):
         cashbox = getCashbox(request)
         productId = request.POST.get("productId", "")
         
-        
+        produkte = getallproductswithstockzero()
         productIdlist = request.session['shoppingcartIds']
         
         productIdlist.append(productId)
@@ -113,11 +146,38 @@ class cashbox_dashboard_view(View):
 
         #total
         total = gettotal(request)
+    	
+        # categories
+        categorielist = Category.objects.all().order_by('title')
 
+        productlistbuy = []
+
+        for c in categorielist:
+                       
+            queryset = Product.category.through.objects.filter(category=c)
+            list=[]
+            for i in queryset:
+                if i.product.stock>0:
+                    list.append(i.product)
+            
+            productlistbuy.append(list)
+            
+        sonstiges = []
+        
+        for i in produkte:
+            if not i.category.exists():
+                sonstiges.append(i)
+        
+        
+        länge = range(0,len(productlistbuy))
+        
+        
 
         #productlist 
         productIdlist = getproductIdlist(request)
         productlist = getproductlist(productIdlist)
+
+        
         
         
         
@@ -128,6 +188,10 @@ class cashbox_dashboard_view(View):
             "shoppingcart":productlist,
             "totalcosts":total,
             "cashbox":cashbox,
+            "categories":categorielist,
+            "productlist":productlistbuy,
+            "sonstiges":sonstiges,
+            "range":länge,
         }
 
         return render(request, self.template_name, context)
@@ -896,7 +960,58 @@ def zahlungabschließen(request):
     # Kassengeld wird aktualisiert
     cashbox.amount += Decimal(total)
     cashbox.save()
+
+
+    # file
     
+    print("-------------------")
+    print("File Erstellen")
+    name = str(bill.id)+".txt"
+    BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+    filename = os.path.join(BASE_DIR, "static", "bills", name)
+    print(filename)
+
+    f = open(filename, "x")
+    
+    f.write("\n")
+    f.write("Rechnungsnummer: "+ str(bill.id) +"\n")
+    f.write("vom "+str(bill.creation)+"\n")
+    f.write("\n")
+    f.write("------------------------------------\n")
+    f.write("\n")
+    f.write("Mitarbeiter: "+ str(bill.employee.username) +"\n")
+    f.write("Kasse: "+ str(bill.cashbox.title) +"\n")
+    f.write("Zahlungsmittel: "+ str(bill.paymenttool.title) +"\n")
+    f.write("Rabatt: "+ str(bill.discount) +"\n")
+    f.write("\n")
+    f.write("------------------------------------\n")
+    f.write("\n")
+    f.write("Produkte: \n")
+    f.write("{:10}".format('Pos.')+"{:20}".format('Produkt')+"{:10}".format('Anz.')+"{:10}".format('Preis')+"{:15}".format('Gesamtpreis')+"\n")
+    for index, list in enumerate(productlist):
+        position = index + 1
+        product = list[0]
+        price = product.costs
+        amount = len(list)
+        totalprice = price*Decimal(amount)
+        f.write("{:10}".format(str(position))+"{:20}".format(str(product.title)) +"{:10}".format(str(amount))+"{:10}".format(str(price))+"{:10}".format(str(totalprice))+"\n")
+        
+    f.write("\n")
+    f.write("------------------------------------\n")
+    f.write("\n")
+    brutto=bill.totalcosts
+    netto = brutto/Decimal(119)*Decimal(100)
+    mwst = brutto - netto
+    f.write("Gesamtkosten Netto: "+str(round(netto,2))+" Euro \n")
+    f.write("zzgl. 19,00% MwSt. "+str(round(mwst,2))+" Euro \n")
+    f.write("\n")
+    f.write("Gesamtkosten: "+str(brutto)+" Euro \n")
+    f.close()
+
+    # bill.path = File(filename)
+    # bill.save()
+
+   
 
 
 # RawSQL

@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 99
+vom 2020-11-15 02:09:06.032203
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt        Anz.      Preis     Gesamtpreis    
+1         Geflügel Salami1         1.89      1.89      
+2         Haare schneiden1         10.00     10.00     
+
+------------------------------------
+
+Gesamtkosten Netto: 9.99 Euro 
+zzgl. 19,00% MwSt. 1.90 Euro 
+
+Gesamtkosten: 11.89 Euro 

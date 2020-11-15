@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 98
+vom 2020-11-15 02:06:38.268770
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 
+Pos. Produkt        Anz. Preis     Gesamtpreis    
+1    Haare schneiden    1    10.00    10.00
+2    Tomate    1    1.20    1.20
+
+------------------------------------
+
+Gesamtkosten Netto: 9.41 Euro 
+zzgl. 19,00% MwSt. 1.79 Euro 
+
+Gesamtkosten: 11.20 Euro 

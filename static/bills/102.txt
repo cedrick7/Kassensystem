@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 102
+vom 2020-11-15 02:12:36.218691
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Kekse               1         3.00      3.00      
+2         Haare schneiden     1         10.00     10.00     
+
+------------------------------------
+
+Gesamtkosten Netto: 10.92 Euro 
+zzgl. 19,00% MwSt. 2.08 Euro 
+
+Gesamtkosten: 13.00 Euro 

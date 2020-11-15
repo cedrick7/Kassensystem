@@ -1,24 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+<!-- Head -->
+{% block specific %}
+	<title>Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_navbar.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/administration_styles.css' %}"/>
+{% endblock specific %}
+
 {% block content %}
-
-
-<h1>Delete </h1>
-
-
-
-
-    <!-- <form action="{{ object.get_update_url }}">
-        <input type="submit" value="Produkt bearbeiten" />
-    </form>  -->
+<div style="text-align:center;margin-top:50px;">
+    <h1>Delete </h1>
 
 
 
-    <form action="" method="POST"> {% csrf_token %}
-        <h1>Möchtest du den Rabatt "{{ object.title }}" löschen?</h1>
-        <p>
-            <input type="submit" value="Ja" /> <a href="{% url 'administration:discount_list' %}">Abbrechen</a>
-        </p>
-    </form> 
+
+        <!-- <form action="{{ object.get_update_url }}">
+            <input type="submit" value="Produkt bearbeiten" />
+        </form>  -->
+
+
+
+        <form action="" method="POST"> {% csrf_token %}
+            <h1>Möchtest du den Rabatt "{{ object.title }}" löschen?</h1>
+            
+            <br>
+            <p>
+                <input type="submit"  class="btn btn-primary btn-sm"  value="Ja" /> <a href="{% url 'administration:discount_list' %}">Abbrechen</a>
+            </p>
+        </form> 
+    </div>  
+{% endblock content %}
+
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'js/administration_navbar.js' %}"></script>
+{% endblock javascript %}
     
-
-
-{% endblock %}
