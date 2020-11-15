@@ -3282,3 +3282,1363 @@ INFO 2020-10-31 12:30:01,068 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1
 INFO 2020-10-31 12:30:04,397 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38340
 INFO 2020-10-31 12:30:04,551 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
 WARNING 2020-10-31 12:30:04,561 log Not Found: /favicon.ico
+INFO 2020-11-12 11:30:43,971 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 11:30:46,164 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 11:30:46,289 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-12 11:30:46,326 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-12 11:30:46,331 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+WARNING 2020-11-12 11:30:46,352 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 11:30:47,080 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-11-12 11:30:47,272 log Not Found: /favicon.ico
+WARNING 2020-11-12 11:30:47,272 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-12 11:31:02,907 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-12 11:31:02,925 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-12 11:31:02,935 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-12 11:31:02,935 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-12 11:31:02,936 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-12 11:31:02,937 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-12 11:31:02,939 basehttp "GET /static/js/moment.js HTTP/1.1" 304 0
+INFO 2020-11-12 11:31:02,940 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-12 11:31:02,940 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-12 11:31:02,944 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-12 11:31:03,064 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+WARNING 2020-11-12 11:31:03,133 log Not Found: /favicon.ico
+WARNING 2020-11-12 11:31:03,133 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-12 11:31:25,250 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38461
+INFO 2020-11-12 11:31:25,287 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:31:25,364 log Not Found: /favicon.ico
+WARNING 2020-11-12 11:31:25,364 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-12 11:36:05,519 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38535
+INFO 2020-11-12 11:36:05,553 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-12 11:36:33,061 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38565
+INFO 2020-11-12 11:36:33,094 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-12 11:37:08,791 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38612
+INFO 2020-11-12 11:37:10,683 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38612
+INFO 2020-11-12 11:38:02,625 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 11:38:03,412 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 11:38:05,738 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 11:38:06,617 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 11:38:06,641 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 11:38:06,663 log Not Found: /favicon.ico
+WARNING 2020-11-12 11:38:06,663 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+WARNING 2020-11-12 11:38:06,680 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 11:38:12,290 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38612
+INFO 2020-11-12 11:38:39,542 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38648
+INFO 2020-11-12 11:38:42,572 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-12 11:38:42,577 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-12 11:38:42,577 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+WARNING 2020-11-12 11:38:42,585 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+INFO 2020-11-12 11:38:42,587 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 304 0
+WARNING 2020-11-12 11:38:42,588 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:39:04,610 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38659
+WARNING 2020-11-12 11:39:04,779 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:39:04,779 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:39:42,677 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 11:39:43,312 autoreload Watching for file changes with StatReloader
+ERROR 2020-11-12 11:39:45,009 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 576, in analyzation_sales_view
+    print(json.dump(products_data))
+TypeError: dump() missing 1 required positional argument: 'fp'
+ERROR 2020-11-12 11:39:45,010 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 500 63088
+INFO 2020-11-12 11:40:31,943 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 11:40:32,559 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 11:40:33,892 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 11:40:34,537 autoreload Watching for file changes with StatReloader
+ERROR 2020-11-12 11:40:36,563 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 576, in analyzation_sales_view
+    print(products_data.value)
+AttributeError: 'list' object has no attribute 'value'
+ERROR 2020-11-12 11:40:36,564 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 500 62944
+INFO 2020-11-12 11:40:53,534 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 11:40:54,327 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 11:40:56,659 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38639
+INFO 2020-11-12 11:40:56,704 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-12 11:40:56,724 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-12 11:40:56,726 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-12 11:40:56,727 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-12 11:40:56,728 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-12 11:40:56,731 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-12 11:40:56,732 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-12 11:40:56,732 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-12 11:40:56,734 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-12 11:40:56,740 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-12 11:40:56,740 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-12 11:40:56,741 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-12 11:40:56,741 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-12 11:40:56,743 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+WARNING 2020-11-12 11:40:59,320 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:40:59,320 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:46:17,709 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 11:46:18,576 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 11:46:24,641 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38621
+INFO 2020-11-12 11:46:24,721 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:46:24,899 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:46:24,899 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:53:09,704 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38358
+INFO 2020-11-12 11:53:09,771 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:53:09,851 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:53:09,852 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:53:11,615 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38358
+INFO 2020-11-12 11:53:11,689 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:53:11,753 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:53:11,753 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:54:21,306 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38391
+INFO 2020-11-12 11:54:21,381 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:54:21,408 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:54:21,408 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:54:50,392 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38412
+INFO 2020-11-12 11:54:50,463 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:54:50,492 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:54:50,493 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 11:56:20,125 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38585
+INFO 2020-11-12 11:56:20,198 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 11:56:20,225 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 11:56:20,225 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:00:12,968 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38785
+WARNING 2020-11-12 12:00:13,063 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:00:13,063 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:00:14,936 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38785
+WARNING 2020-11-12 12:00:15,025 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:00:15,026 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:00:37,533 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:00:38,346 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 12:00:41,206 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38731
+INFO 2020-11-12 12:00:41,274 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:00:41,354 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:00:41,354 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:01:55,622 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:01:56,148 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 12:03:38,440 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38790
+INFO 2020-11-12 12:03:38,505 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:03:38,535 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:03:38,535 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:08:11,758 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39130
+WARNING 2020-11-12 12:08:11,852 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:08:11,852 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:08:14,072 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39130
+WARNING 2020-11-12 12:08:14,171 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:08:14,171 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:09:26,921 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:09:27,639 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 12:09:31,967 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39130
+INFO 2020-11-12 12:09:32,017 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-12 12:09:32,037 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-12 12:09:32,039 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-12 12:09:32,040 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-12 12:09:32,042 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-12 12:09:32,043 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-12 12:09:32,044 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-12 12:09:32,045 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-12 12:09:32,046 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-12 12:09:32,049 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-12 12:09:32,061 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-12 12:09:32,061 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-12 12:09:32,061 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-12 12:09:32,062 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+WARNING 2020-11-12 12:09:32,505 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:09:32,505 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:10:29,846 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:10:30,286 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 12:10:33,994 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39085
+WARNING 2020-11-12 12:10:34,286 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:10:34,286 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:12:36,823 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:12:37,645 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 12:12:41,373 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39028
+INFO 2020-11-12 12:12:41,420 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-12 12:12:41,439 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-12 12:12:41,440 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-12 12:12:41,440 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-12 12:12:41,443 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-12 12:12:41,445 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-12 12:12:41,445 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-12 12:12:41,447 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-12 12:12:41,448 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-12 12:12:41,449 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-12 12:12:41,451 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-12 12:12:41,462 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-12 12:12:41,463 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-12 12:12:41,463 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-12 12:12:42,900 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:12:42,967 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:12:42,968 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:18:38,317 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39214
+INFO 2020-11-12 12:18:38,388 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:18:38,418 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:18:38,418 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:19:44,604 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39228
+INFO 2020-11-12 12:19:44,670 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:19:44,700 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:19:44,700 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:22:16,971 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39346
+INFO 2020-11-12 12:22:17,036 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:22:17,066 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:22:17,066 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:22:44,413 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39346
+INFO 2020-11-12 12:22:44,486 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:22:44,517 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:22:44,517 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:23:22,786 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39350
+INFO 2020-11-12 12:23:22,856 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:23:22,886 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:23:22,887 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:23:32,472 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39346
+INFO 2020-11-12 12:23:32,546 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:23:32,574 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:23:32,574 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:24:15,753 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39378
+INFO 2020-11-12 12:24:15,823 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:24:15,854 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:24:15,854 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:24:20,412 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39378
+INFO 2020-11-12 12:24:20,479 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:24:20,506 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:24:20,507 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:24:32,794 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39368
+INFO 2020-11-12 12:24:32,866 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:24:32,896 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:24:32,897 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:25:20,125 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39384
+INFO 2020-11-12 12:25:20,194 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:25:20,223 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:25:20,223 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:28:11,080 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39390
+INFO 2020-11-12 12:28:11,150 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:28:11,183 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:28:11,184 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:28:23,028 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39390
+INFO 2020-11-12 12:28:23,095 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:28:23,123 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:28:23,123 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:36:53,091 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39491
+INFO 2020-11-12 12:36:53,171 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:36:53,204 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:36:53,204 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:39:22,435 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:39:23,151 autoreload Watching for file changes with StatReloader
+ERROR 2020-11-12 12:39:27,447 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 554, in analyzation_sales_view
+    print("revenue_total_data: " + revenue_total_data)
+TypeError: can only concatenate str (not "list") to str
+ERROR 2020-11-12 12:39:27,448 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 500 63511
+INFO 2020-11-12 12:39:46,144 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 12:39:46,747 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 12:39:47,876 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39491
+INFO 2020-11-12 12:39:47,953 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:39:47,988 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:39:47,989 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:41:12,671 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39491
+INFO 2020-11-12 12:41:12,749 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:41:12,779 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:41:12,780 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:41:27,151 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39491
+INFO 2020-11-12 12:41:27,223 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:41:27,250 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:41:27,250 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:49:06,153 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39574
+INFO 2020-11-12 12:49:06,226 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:49:06,261 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:49:06,261 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:49:31,407 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39573
+INFO 2020-11-12 12:49:31,478 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:49:31,507 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:49:31,508 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:49:47,161 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39573
+INFO 2020-11-12 12:49:47,234 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:49:47,263 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:49:47,263 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:50:46,301 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39608
+INFO 2020-11-12 12:50:46,381 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:50:46,449 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:50:46,449 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:51:29,525 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39638
+INFO 2020-11-12 12:51:29,598 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:51:29,627 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:51:29,627 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:52:09,785 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39588
+INFO 2020-11-12 12:52:09,864 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:52:09,935 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:52:09,935 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:52:53,648 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39635
+INFO 2020-11-12 12:52:53,719 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:52:53,747 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:52:53,748 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:53:19,914 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39636
+INFO 2020-11-12 12:53:19,995 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:53:20,065 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:53:20,066 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:53:55,134 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39646
+INFO 2020-11-12 12:53:55,214 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:53:55,246 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:53:55,246 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:54:17,452 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39634
+INFO 2020-11-12 12:54:17,532 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:54:17,606 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:54:17,606 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:54:37,513 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39634
+INFO 2020-11-12 12:54:37,586 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:54:37,615 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:54:37,615 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:54:58,199 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39635
+INFO 2020-11-12 12:54:58,275 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:54:58,305 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:54:58,305 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:55:42,226 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39707
+INFO 2020-11-12 12:55:42,300 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:55:42,328 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:55:42,328 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 12:57:21,280 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39519
+INFO 2020-11-12 12:57:21,833 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39519
+INFO 2020-11-12 12:57:21,913 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 12:57:21,944 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 12:57:21,944 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:39:46,972 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 16:39:48,563 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 16:39:52,174 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39520
+INFO 2020-11-12 16:39:52,316 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:39:52,532 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:39:52,532 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:43:27,006 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39521
+INFO 2020-11-12 16:43:27,090 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:43:27,121 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:43:27,122 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:45:21,908 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39546
+INFO 2020-11-12 16:45:21,980 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:45:22,056 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:45:22,056 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:46:22,832 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39602
+INFO 2020-11-12 16:46:22,905 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:46:22,935 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:46:22,936 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:47:05,403 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39545
+INFO 2020-11-12 16:47:05,483 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:47:05,511 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:47:05,511 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:47:46,308 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39545
+INFO 2020-11-12 16:47:46,387 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:47:46,417 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:47:46,417 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:49:10,152 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 16:49:11,129 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 16:49:15,565 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39545
+INFO 2020-11-12 16:49:15,615 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-12 16:49:15,640 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-12 16:49:15,640 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-12 16:49:15,642 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-12 16:49:15,643 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-12 16:49:15,649 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-12 16:49:15,650 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-12 16:49:15,651 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-12 16:49:15,654 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-12 16:49:15,659 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-12 16:49:15,659 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-12 16:49:15,659 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-12 16:49:15,660 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-12 16:49:15,666 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-12 16:49:16,119 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:49:16,199 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:49:16,199 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:50:29,508 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 16:50:29,904 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 16:50:33,321 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39545
+INFO 2020-11-12 16:50:33,389 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:50:33,420 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:50:33,421 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:52:54,036 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39608
+INFO 2020-11-12 16:52:54,102 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:52:54,131 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:52:54,131 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:53:25,825 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39647
+INFO 2020-11-12 16:53:25,893 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:53:25,924 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:53:25,924 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:54:48,531 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39756
+INFO 2020-11-12 16:54:48,598 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:54:48,627 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:54:48,627 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:55:06,646 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39758
+INFO 2020-11-12 16:55:06,711 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:55:06,739 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:55:06,739 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:55:38,188 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39757
+INFO 2020-11-12 16:55:38,255 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:55:38,283 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:55:38,283 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:55:53,166 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39732
+INFO 2020-11-12 16:55:53,233 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:55:53,263 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:55:53,263 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:56:04,819 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39730
+INFO 2020-11-12 16:56:04,893 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:56:04,924 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:56:04,924 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:56:33,340 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39751
+INFO 2020-11-12 16:56:33,409 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:56:33,440 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:56:33,440 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 16:58:09,752 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 39967
+INFO 2020-11-12 16:58:09,828 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 16:58:09,859 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 16:58:09,859 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:00:03,156 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40008
+INFO 2020-11-12 17:00:03,229 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:00:03,260 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:00:03,260 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:00:48,664 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40008
+WARNING 2020-11-12 17:00:48,917 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:00:48,917 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:01:32,374 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40034
+WARNING 2020-11-12 17:01:32,470 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:01:32,471 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:01:40,071 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40035
+WARNING 2020-11-12 17:01:40,171 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:01:40,171 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:01:59,769 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40034
+WARNING 2020-11-12 17:01:59,873 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:01:59,873 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:02:28,644 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40040
+WARNING 2020-11-12 17:02:28,744 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:02:28,744 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:02:44,948 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40008
+INFO 2020-11-12 17:02:45,017 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:02:45,048 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:02:45,048 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:03:16,814 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40048
+WARNING 2020-11-12 17:03:16,911 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:03:16,912 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:04:08,805 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40046
+INFO 2020-11-12 17:04:08,877 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:04:08,908 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:04:08,909 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:04:30,457 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40032
+INFO 2020-11-12 17:04:30,536 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:04:30,570 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:04:30,570 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:16:44,671 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40415
+WARNING 2020-11-12 17:16:44,769 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:16:44,769 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:17:15,627 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40376
+INFO 2020-11-12 17:17:15,705 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:17:15,818 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:17:15,818 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:19:01,846 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40382
+INFO 2020-11-12 17:19:01,918 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:19:01,951 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:19:01,952 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:19:42,704 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40417
+WARNING 2020-11-12 17:19:42,803 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:19:42,804 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:20:00,573 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40415
+WARNING 2020-11-12 17:20:00,669 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:20:00,669 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:20:23,074 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40371
+INFO 2020-11-12 17:20:23,149 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:20:23,183 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:20:23,183 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:22:32,382 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40403
+INFO 2020-11-12 17:22:32,453 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:22:32,484 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:22:32,484 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:22:59,701 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40437
+INFO 2020-11-12 17:22:59,772 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:22:59,803 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:22:59,804 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:23:14,158 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40439
+INFO 2020-11-12 17:23:14,237 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:23:14,274 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:23:14,275 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:23:51,705 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40522
+INFO 2020-11-12 17:23:51,783 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:23:51,815 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:23:51,815 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:30:48,567 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40819
+INFO 2020-11-12 17:30:48,648 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:30:48,681 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:30:48,682 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:32:19,339 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40779
+INFO 2020-11-12 17:32:19,413 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:32:19,444 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:32:19,445 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:36:34,188 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40780
+INFO 2020-11-12 17:36:34,265 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:36:34,296 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:36:34,296 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:37:37,730 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 17:37:38,424 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:37:58,996 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 17:37:59,408 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:38:01,797 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40780
+INFO 2020-11-12 17:38:01,875 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:38:01,916 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:38:01,917 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:38:08,211 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40780
+INFO 2020-11-12 17:38:08,283 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:38:08,312 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:38:08,313 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:38:17,526 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 17:38:18,052 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:38:19,186 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40780
+INFO 2020-11-12 17:38:19,264 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:38:19,303 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:38:19,304 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:38:27,616 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-12 17:38:28,249 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:38:31,876 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40780
+INFO 2020-11-12 17:38:31,925 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-12 17:38:31,953 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-12 17:38:31,953 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-12 17:38:31,954 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-12 17:38:31,959 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-12 17:38:31,961 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-12 17:38:31,966 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-12 17:38:31,968 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-12 17:38:31,968 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-12 17:38:31,970 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-12 17:38:31,971 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-12 17:38:31,972 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-12 17:38:31,973 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-12 17:38:31,977 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-12 17:38:33,021 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:38:33,098 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:38:33,098 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:44:21,928 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40874
+WARNING 2020-11-12 17:44:22,226 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:44:22,226 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:44:38,572 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40874
+INFO 2020-11-12 17:44:38,717 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:44:38,758 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:44:38,759 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:45:12,173 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40874
+INFO 2020-11-12 17:45:12,241 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:45:12,269 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:45:12,270 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:45:34,709 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40874
+INFO 2020-11-12 17:45:34,783 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:45:34,818 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:45:34,818 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:48:59,788 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40898
+INFO 2020-11-12 17:48:59,858 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:48:59,887 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:48:59,888 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:50:16,898 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:50:17,839 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:50:17,884 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:50:17,941 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:50:27,476 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:50:27,505 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:50:27,515 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:50:28,721 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:50:28,773 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:50:28,788 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:50:29,698 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:50:29,716 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:50:29,730 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:50:33,650 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40898
+INFO 2020-11-12 17:50:33,729 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:50:33,761 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:50:33,762 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:50:35,759 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:50:35,777 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:50:35,789 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:50:56,448 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:50:57,707 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:50:57,742 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:50:57,760 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:51:12,643 autoreload Watching for file changes with StatReloader
+INFO 2020-11-12 17:51:13,287 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-12 17:51:13,306 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-12 17:51:13,316 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-12 17:51:16,645 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40898
+INFO 2020-11-12 17:51:16,717 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:51:16,743 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:51:16,743 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:51:49,032 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40810
+INFO 2020-11-12 17:51:49,104 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:51:49,135 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:51:49,135 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:53:35,859 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40991
+INFO 2020-11-12 17:53:35,926 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:53:35,956 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:53:35,957 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:54:01,707 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40988
+INFO 2020-11-12 17:54:01,783 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:54:01,812 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:54:01,812 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:56:33,326 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41291
+INFO 2020-11-12 17:56:33,396 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:56:33,425 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:56:33,426 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:56:43,337 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41289
+INFO 2020-11-12 17:56:43,408 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:56:43,438 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:56:43,438 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:57:14,813 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41260
+INFO 2020-11-12 17:57:14,888 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:57:14,919 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:57:14,919 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:57:25,244 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41289
+INFO 2020-11-12 17:57:25,315 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:57:25,344 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:57:25,344 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:57:33,407 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41260
+INFO 2020-11-12 17:57:33,476 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:57:33,504 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:57:33,505 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:57:47,145 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41231
+INFO 2020-11-12 17:57:47,220 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:57:47,250 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:57:47,250 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:58:29,327 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41145
+INFO 2020-11-12 17:58:29,399 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:58:29,427 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:58:29,427 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:59:05,773 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41103
+INFO 2020-11-12 17:59:05,856 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 17:59:05,887 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:59:05,888 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 17:59:46,217 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41095
+WARNING 2020-11-12 17:59:46,315 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 17:59:46,315 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:07:02,130 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41101
+INFO 2020-11-12 18:07:02,200 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:07:02,228 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:07:02,228 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:09:07,579 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41125
+INFO 2020-11-12 18:09:07,652 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:09:07,680 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:09:07,681 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:11:08,162 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41041
+INFO 2020-11-12 18:11:08,234 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:11:08,262 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:11:08,262 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:11:36,527 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41040
+INFO 2020-11-12 18:11:36,599 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:11:36,627 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:11:36,628 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:12:52,095 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41138
+INFO 2020-11-12 18:12:52,169 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:12:52,204 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:12:52,205 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:13:47,333 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41132
+INFO 2020-11-12 18:13:47,407 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:13:47,436 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:13:47,436 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:15:57,805 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41134
+INFO 2020-11-12 18:15:57,878 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:15:57,907 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:15:57,907 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:17:07,556 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41132
+INFO 2020-11-12 18:17:07,629 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:17:07,659 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:17:07,659 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:26:33,294 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41175
+INFO 2020-11-12 18:26:33,370 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:26:33,401 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:26:33,402 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:44:02,703 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41177
+WARNING 2020-11-12 18:44:02,833 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:44:02,834 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:51:16,356 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41171
+WARNING 2020-11-12 18:51:16,466 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:51:16,466 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:51:37,148 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41169
+INFO 2020-11-12 18:51:37,226 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:51:37,255 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:51:37,256 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:52:25,312 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41169
+INFO 2020-11-12 18:52:25,500 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:52:25,569 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:52:25,570 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:52:50,597 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41464
+INFO 2020-11-12 18:52:50,702 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:52:50,732 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:52:50,732 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:53:01,607 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41572
+INFO 2020-11-12 18:53:01,704 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:53:01,737 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:53:01,737 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:53:18,840 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41529
+INFO 2020-11-12 18:53:19,026 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:53:19,059 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:53:19,060 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:54:44,742 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41532
+WARNING 2020-11-12 18:54:44,848 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:54:44,848 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:55:31,030 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41532
+INFO 2020-11-12 18:55:31,106 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:55:31,135 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:55:31,136 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:56:34,202 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41537
+INFO 2020-11-12 18:56:34,369 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:56:34,436 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:56:34,436 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 18:57:42,203 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41636
+INFO 2020-11-12 18:57:42,283 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 18:57:42,313 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 18:57:42,314 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:08:10,805 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41629
+INFO 2020-11-12 19:08:10,883 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:08:10,921 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:08:10,921 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:09:40,166 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41482
+INFO 2020-11-12 19:09:40,303 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:09:40,352 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:09:40,352 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:10:13,437 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41517
+INFO 2020-11-12 19:10:13,516 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:10:13,545 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:10:13,546 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:10:30,639 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41519
+INFO 2020-11-12 19:10:30,725 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:10:30,756 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:10:30,757 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:11:25,332 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41595
+INFO 2020-11-12 19:11:25,413 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:11:25,447 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:11:25,448 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:11:58,647 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41605
+INFO 2020-11-12 19:11:58,726 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:11:58,757 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:11:58,758 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:12:20,305 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41584
+INFO 2020-11-12 19:12:20,386 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:12:20,417 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:12:20,417 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:13:49,975 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41661
+INFO 2020-11-12 19:13:50,056 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:13:50,087 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:13:50,088 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:13:59,041 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41651
+INFO 2020-11-12 19:13:59,124 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:13:59,155 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:13:59,155 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:14:56,520 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41720
+INFO 2020-11-12 19:14:56,657 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:14:56,698 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:14:56,698 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:15:13,857 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41699
+INFO 2020-11-12 19:15:13,943 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:15:13,975 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:15:13,975 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:17:35,023 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41543
+INFO 2020-11-12 19:17:35,111 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:17:35,146 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:17:35,146 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:22:24,944 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41543
+INFO 2020-11-12 19:22:25,041 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:22:25,072 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:22:25,073 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-12 19:23:00,800 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 40992
+INFO 2020-11-12 19:23:00,881 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-12 19:23:00,917 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-12 19:23:00,917 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 16:51:31,621 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 16:51:32,901 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-13 16:51:32,954 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-13 16:51:32,991 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+WARNING 2020-11-13 16:51:33,009 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-13 16:51:38,929 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-13 16:51:38,929 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-13 16:51:39,005 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-13 16:55:00,707 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 16:55:01,390 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 16:55:02,811 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 16:55:03,644 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 16:55:55,037 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+WARNING 2020-11-13 16:55:55,076 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:55:55,076 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 16:56:04,234 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41010
+INFO 2020-11-13 16:56:04,376 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 16:56:04,421 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:56:04,422 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 16:56:12,584 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:56:12,585 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 16:56:25,256 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41010
+INFO 2020-11-13 16:56:25,651 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41010
+INFO 2020-11-13 16:56:25,728 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 16:56:25,770 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:56:25,771 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 16:56:29,767 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:56:29,768 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+ERROR 2020-11-13 16:56:37,153 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:56:37,154 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+ERROR 2020-11-13 16:57:07,092 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:57:07,094 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 16:57:11,882 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 16:57:13,236 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 16:57:13,324 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 16:57:13,419 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:57:13,419 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 16:57:26,102 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:57:26,103 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 16:58:28,105 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 16:58:29,507 autoreload Watching for file changes with StatReloader
+ERROR 2020-11-13 16:58:37,340 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:58:37,341 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 16:58:42,688 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 16:58:42,769 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 16:58:42,912 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:58:42,913 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 16:58:48,230 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:58:48,231 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 16:59:23,489 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 16:59:24,596 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-13 16:59:24,628 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-13 16:59:24,659 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-13 16:59:32,138 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 16:59:32,231 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 16:59:32,347 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:59:32,347 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 16:59:35,613 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:59:35,615 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 16:59:43,576 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 16:59:45,163 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 16:59:50,386 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 16:59:50,484 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 16:59:50,523 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 16:59:50,523 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 16:59:55,108 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 16:59:55,110 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+INFO 2020-11-13 17:01:43,057 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:01:44,577 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:01:58,091 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-13 17:01:58,196 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+WARNING 2020-11-13 17:01:58,277 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:01:58,278 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 17:02:03,333 log Internal Server Error: /Analyst/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 237, in analyzation_dashboard_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 17:02:03,334 basehttp "POST /Analyst/ HTTP/1.1" 500 62048
+ERROR 2020-11-13 17:03:18,658 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 704, in analyzation_sales_view
+    date_begin = datetime.datetime.strptime(dates[0], '%d.%m.%Y')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+ERROR 2020-11-13 17:03:18,659 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62167
+ERROR 2020-11-13 17:03:31,600 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 968, in analyzation_sales_view
+    'payment_data' : payment_data,
+NameError: name 'payment_data' is not defined
+ERROR 2020-11-13 17:03:31,600 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 62822
+INFO 2020-11-13 17:11:05,007 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:11:05,704 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:11:09,762 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:11:11,372 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-13 17:11:11,420 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-13 17:11:11,446 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-13 17:11:16,216 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 17:11:16,297 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:11:16,437 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:11:16,438 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:11:21,340 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40808
+INFO 2020-11-13 17:11:21,416 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:11:21,545 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:11:21,546 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:12:04,161 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:12:05,267 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:12:52,006 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:12:52,518 autoreload Watching for file changes with StatReloader
+ERROR 2020-11-13 17:12:57,312 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 941, in analyzation_sales_view
+    'sales_day' : sales_day,
+NameError: name 'sales_day' is not defined
+ERROR 2020-11-13 17:12:57,314 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 63821
+INFO 2020-11-13 17:13:07,708 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 17:13:07,798 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:13:07,834 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:07,834 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:13:09,112 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41019
+INFO 2020-11-13 17:13:09,196 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:13:09,326 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:09,326 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:13:12,332 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40846
+WARNING 2020-11-13 17:13:12,466 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:12,466 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:13:24,200 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40846
+WARNING 2020-11-13 17:13:24,329 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:24,329 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:13:49,147 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40837
+WARNING 2020-11-13 17:13:49,313 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:49,313 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:13:56,570 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41010
+INFO 2020-11-13 17:13:56,659 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:13:56,824 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:56,824 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:13:59,776 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40837
+WARNING 2020-11-13 17:13:59,949 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:13:59,950 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:15:42,723 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:15:43,482 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:15:54,193 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41010
+INFO 2020-11-13 17:15:54,295 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:15:54,439 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:15:54,440 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:15:56,973 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40801
+INFO 2020-11-13 17:15:57,082 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:15:57,222 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:15:57,223 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:16:17,691 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41010
+WARNING 2020-11-13 17:16:17,697 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:16:17,697 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:16:17,775 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:16:17,887 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:16:17,888 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:17:01,261 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:17:02,776 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:17:16,658 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:17:17,418 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:20:26,612 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41222
+WARNING 2020-11-13 17:20:26,770 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:20:26,771 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:20:28,924 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41222
+WARNING 2020-11-13 17:20:28,932 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:20:28,932 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-13 17:20:29,071 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:20:29,071 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-13 17:20:39,142 log Internal Server Error: /Analyst/Mitarbeiter/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 1345, in analyzation_employees_view
+    user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 34, in raw_sql
+    cursor.execute(query)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 82, in _execute
+    return self.cursor.execute(sql)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 321, in _query
+    self._post_get_result()
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 148, in typecast_time
+    return datetime.time(int(hour), int(minutes), int(seconds), int((microseconds + '000000')[:6]))
+ValueError: hour must be in 0..23
+ERROR 2020-11-13 17:20:39,144 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 500 115361
+INFO 2020-11-13 17:20:58,478 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41222
+WARNING 2020-11-13 17:20:58,487 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:20:58,488 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-13 17:20:58,653 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:20:58,654 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:21:01,796 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41222
+WARNING 2020-11-13 17:21:01,802 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:21:01,802 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-13 17:21:01,935 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:21:01,936 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:21:45,740 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41220
+WARNING 2020-11-13 17:21:45,986 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:21:45,987 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:23:39,573 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41241
+WARNING 2020-11-13 17:23:39,741 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:23:39,741 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:24:36,282 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41246
+WARNING 2020-11-13 17:24:36,516 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:24:36,516 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:24:39,508 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41246
+WARNING 2020-11-13 17:24:39,677 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:24:39,678 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:25:00,105 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41252
+WARNING 2020-11-13 17:25:00,315 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:25:00,316 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:25:08,154 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41066
+WARNING 2020-11-13 17:25:08,326 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:25:08,326 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:28:44,193 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:28:45,131 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:28:50,117 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41066
+INFO 2020-11-13 17:28:50,158 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-13 17:28:50,173 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-13 17:28:50,174 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-13 17:28:50,176 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-13 17:28:50,177 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-13 17:28:50,179 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-13 17:28:50,179 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-13 17:28:50,180 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-13 17:28:50,181 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-13 17:28:50,183 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-13 17:28:50,321 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-13 17:28:50,321 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-13 17:28:50,322 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-13 17:28:50,324 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-13 17:28:58,624 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40858
+INFO 2020-11-13 17:28:58,759 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:28:58,828 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:28:58,829 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:29:12,118 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40858
+INFO 2020-11-13 17:29:12,200 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:29:12,370 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:29:12,370 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:30:44,336 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:30:45,312 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:30:50,895 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41075
+INFO 2020-11-13 17:30:50,992 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:30:51,144 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:30:51,145 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:30:55,024 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40858
+INFO 2020-11-13 17:30:55,111 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:30:55,221 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:30:55,222 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:33:10,240 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41049
+WARNING 2020-11-13 17:33:10,250 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:33:10,250 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:33:10,328 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:33:10,470 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:33:10,470 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:33:25,622 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40836
+INFO 2020-11-13 17:33:25,737 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:33:25,880 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:33:25,881 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:34:11,190 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40838
+INFO 2020-11-13 17:34:11,301 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:34:11,331 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:34:11,331 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:34:17,961 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41051
+WARNING 2020-11-13 17:34:17,967 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:34:17,968 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:34:18,062 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:34:18,185 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:34:18,186 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:34:23,597 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40838
+INFO 2020-11-13 17:34:23,692 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:34:23,869 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:34:23,869 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:34:51,070 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40839
+INFO 2020-11-13 17:34:51,196 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:34:51,282 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:34:51,282 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:34:58,962 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40838
+INFO 2020-11-13 17:34:59,062 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:34:59,221 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:34:59,222 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:35:05,742 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40839
+INFO 2020-11-13 17:35:05,831 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:35:06,000 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:35:06,000 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:35:12,054 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40839
+INFO 2020-11-13 17:35:12,154 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:35:12,292 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:35:12,293 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:35:19,670 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 40839
+INFO 2020-11-13 17:35:19,791 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:35:19,930 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:35:19,930 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:37:29,526 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41205
+WARNING 2020-11-13 17:37:29,533 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:37:29,534 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-13 17:37:29,681 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:37:29,682 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:38:05,957 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41209
+WARNING 2020-11-13 17:38:06,228 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:38:06,229 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:38:55,151 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41252
+WARNING 2020-11-13 17:38:55,307 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:38:55,308 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:39:09,194 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41039
+WARNING 2020-11-13 17:39:09,373 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:39:09,373 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:39:29,788 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41250
+WARNING 2020-11-13 17:39:29,795 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:39:29,795 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-13 17:39:29,946 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:39:29,946 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:39:39,957 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41037
+WARNING 2020-11-13 17:39:40,158 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:39:40,159 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:39:49,646 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41037
+WARNING 2020-11-13 17:39:49,831 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:39:49,832 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:40:04,856 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41038
+WARNING 2020-11-13 17:40:05,010 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:40:05,010 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:40:35,823 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41248
+WARNING 2020-11-13 17:40:35,831 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:40:35,831 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-13 17:40:35,981 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:40:35,982 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:40:39,567 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41035
+INFO 2020-11-13 17:40:39,703 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:40:39,734 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:40:39,735 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:41:40,264 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41246
+WARNING 2020-11-13 17:41:40,273 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:41:40,274 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:41:40,360 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:41:40,501 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:41:40,501 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:41:51,211 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41033
+INFO 2020-11-13 17:41:51,334 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:41:51,364 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:41:51,365 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:04,743 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:04,856 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:04,900 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:04,900 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:11,851 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41033
+INFO 2020-11-13 17:42:11,961 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:12,113 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:12,113 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:20,751 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:20,843 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:21,011 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:21,011 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:27,257 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:27,380 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:27,487 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:27,487 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:28,331 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:28,440 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:28,604 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:28,605 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:33,590 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:33,707 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:33,869 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:33,870 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:35,922 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:36,070 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:36,184 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:36,184 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:41,375 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:42:41,486 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:41,531 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:41,532 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:42:52,879 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41033
+INFO 2020-11-13 17:42:53,006 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:42:53,034 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:42:53,035 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:43:02,294 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:43:02,405 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:43:02,580 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:43:02,580 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:43:07,871 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:43:07,967 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:43:08,110 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:43:08,111 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:43:14,516 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:43:14,647 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:43:14,789 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:43:14,789 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:43:20,827 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41034
+INFO 2020-11-13 17:43:20,961 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:43:20,994 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:43:20,995 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:43:29,551 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41153
+WARNING 2020-11-13 17:43:29,718 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:43:29,719 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:43:30,565 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41153
+WARNING 2020-11-13 17:43:30,752 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:43:30,753 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:45:10,770 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-13 17:45:12,291 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:45:20,832 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41246
+WARNING 2020-11-13 17:45:20,848 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:45:20,848 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:45:20,952 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:45:21,076 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:45:21,077 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:45:36,059 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41109
+INFO 2020-11-13 17:45:36,172 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:45:36,304 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:45:36,305 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:45:58,933 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41232
+WARNING 2020-11-13 17:45:58,940 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:45:58,941 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:45:59,054 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:45:59,136 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:45:59,137 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:46:09,431 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41095
+INFO 2020-11-13 17:46:09,548 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:46:09,701 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:46:09,702 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 17:59:43,547 autoreload Watching for file changes with StatReloader
+INFO 2020-11-13 17:59:45,271 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-13 17:59:45,293 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-13 17:59:45,340 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-13 17:59:49,332 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41234
+INFO 2020-11-13 17:59:49,418 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 17:59:49,448 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 17:59:49,448 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:01:10,864 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41276
+WARNING 2020-11-13 18:01:10,870 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:01:10,870 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:01:10,968 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:01:10,997 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:01:10,997 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:02:16,628 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41254
+INFO 2020-11-13 18:02:16,726 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:02:16,760 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:02:16,760 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:03:06,655 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41255
+INFO 2020-11-13 18:03:06,756 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:03:06,848 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:03:06,848 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:03:24,418 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41285
+INFO 2020-11-13 18:03:24,516 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:03:24,560 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:03:24,560 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:04:52,473 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41338
+INFO 2020-11-13 18:04:52,556 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:04:52,587 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:04:52,587 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:05:18,658 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41334
+INFO 2020-11-13 18:05:18,742 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:05:18,819 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:05:18,819 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:06:06,180 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41122
+INFO 2020-11-13 18:06:06,274 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:06:06,347 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:06:06,347 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:07:36,004 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 41122
+INFO 2020-11-13 18:07:36,089 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:07:36,118 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:07:36,118 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:07:42,660 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41334
+WARNING 2020-11-13 18:07:42,666 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:07:42,666 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:07:42,748 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:07:42,781 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:07:42,781 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:07:58,949 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41338
+INFO 2020-11-13 18:07:59,037 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:07:59,114 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:07:59,114 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:09:04,931 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41338
+WARNING 2020-11-13 18:09:04,936 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:09:04,937 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:09:05,025 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:09:05,053 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:09:05,054 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:09:43,758 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41350
+INFO 2020-11-13 18:09:43,857 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:09:43,895 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:09:43,895 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:09:59,545 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41349
+INFO 2020-11-13 18:09:59,643 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:09:59,682 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:09:59,683 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:10:23,934 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41349
+INFO 2020-11-13 18:10:24,023 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:10:24,058 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:10:24,059 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-13 18:10:42,049 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41351
+INFO 2020-11-13 18:10:42,141 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-13 18:10:42,218 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-13 18:10:42,218 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
