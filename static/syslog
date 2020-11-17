@@ -4642,3 +4642,329 @@ INFO 2020-11-13 18:10:42,049 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41351
 INFO 2020-11-13 18:10:42,141 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
 WARNING 2020-11-13 18:10:42,218 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
 WARNING 2020-11-13 18:10:42,218 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:09:27,236 autoreload Watching for file changes with StatReloader
+INFO 2020-11-16 13:09:28,212 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-16 13:09:28,235 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-16 13:09:28,272 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+INFO 2020-11-16 13:09:28,278 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+WARNING 2020-11-16 13:09:28,295 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-16 13:09:28,473 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-11-16 13:09:33,914 log Not Found: /apple-touch-icon-precomposed.png
+WARNING 2020-11-16 13:09:33,914 basehttp "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2746
+WARNING 2020-11-16 13:09:33,920 log Not Found: /apple-touch-icon.png
+WARNING 2020-11-16 13:09:33,921 basehttp "GET /apple-touch-icon.png HTTP/1.1" 404 2710
+INFO 2020-11-16 13:09:34,249 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41290
+INFO 2020-11-16 13:09:34,297 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-16 13:09:34,301 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-16 13:09:34,305 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-16 13:09:34,306 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-16 13:09:34,307 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-16 13:09:34,308 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-16 13:09:34,308 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 304 0
+INFO 2020-11-16 13:09:34,309 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-16 13:09:34,310 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-16 13:09:34,311 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-16 13:09:34,377 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-16 13:13:29,180 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 41293
+INFO 2020-11-16 13:13:29,215 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-16 13:28:01,660 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 42605
+INFO 2020-11-16 13:28:01,711 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-16 13:28:09,998 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-16 13:28:10,002 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-16 13:28:10,007 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 304 0
+INFO 2020-11-16 13:28:10,007 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 304 0
+WARNING 2020-11-16 13:28:10,016 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:28:10,016 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:31:13,816 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 42616
+INFO 2020-11-16 13:31:13,944 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:31:13,984 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:31:13,984 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:32:45,562 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 42608
+INFO 2020-11-16 13:32:45,652 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:32:45,683 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:32:45,684 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:35:04,357 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43323
+INFO 2020-11-16 13:35:04,426 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:35:04,455 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:35:04,455 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:40:49,481 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43282
+INFO 2020-11-16 13:40:49,554 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:40:49,582 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:40:49,583 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:41:10,563 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 43095
+INFO 2020-11-16 13:41:10,655 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:41:10,686 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:41:10,686 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:41:19,218 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 43096
+INFO 2020-11-16 13:41:19,307 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:41:19,337 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:41:19,338 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:41:26,436 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 200 43309
+INFO 2020-11-16 13:41:26,541 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:41:26,572 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:41:26,572 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 13:42:47,386 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-16 13:42:48,513 autoreload Watching for file changes with StatReloader
+INFO 2020-11-16 13:43:27,926 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-16 13:43:28,832 autoreload Watching for file changes with StatReloader
+INFO 2020-11-16 13:44:14,772 autoreload /Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py changed, reloading.
+INFO 2020-11-16 13:44:15,608 autoreload Watching for file changes with StatReloader
+ERROR 2020-11-16 13:44:21,214 log Internal Server Error: /Analyst/Umsatz/
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/analyzation/views.py", line 951, in analyzation_sales_view
+    'sales_day' : sales_day,
+NameError: name 'sales_day' is not defined
+ERROR 2020-11-16 13:44:21,215 basehttp "POST /Analyst/Umsatz/ HTTP/1.1" 500 64436
+INFO 2020-11-16 13:44:24,940 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43282
+INFO 2020-11-16 13:44:25,020 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 13:44:25,048 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 13:44:25,048 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 14:49:59,352 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-16 14:49:59,457 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+WARNING 2020-11-16 14:49:59,572 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 14:49:59,573 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 14:50:13,364 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43282
+INFO 2020-11-16 14:50:13,462 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-16 14:50:13,498 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-16 14:50:13,498 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-16 16:31:15,593 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-17 13:35:41,162 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 13:36:08,133 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 13:36:09,506 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-17 13:36:09,601 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-17 13:36:09,671 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-17 13:36:20,288 basehttp "GET /static/css/authorization.css.map HTTP/1.1" 200 691
+INFO 2020-11-17 13:37:22,504 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43317
+INFO 2020-11-17 13:37:22,560 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-17 13:37:22,561 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-17 13:37:22,567 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-17 13:37:22,575 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-17 13:37:22,575 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-17 13:37:22,577 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-17 13:37:22,582 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-17 13:37:22,653 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-17 13:37:22,716 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-17 13:37:22,716 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+WARNING 2020-11-17 13:37:37,163 log Not Found: /Kasse/
+WARNING 2020-11-17 13:37:37,164 basehttp "GET /Kasse/ HTTP/1.1" 404 4970
+WARNING 2020-11-17 13:37:37,236 log Not Found: /favicon.ico
+WARNING 2020-11-17 13:37:37,236 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+WARNING 2020-11-17 13:37:43,858 log Not Found: /Kasse/Dashboard
+WARNING 2020-11-17 13:37:43,858 basehttp "GET /Kasse/Dashboard HTTP/1.1" 404 4997
+WARNING 2020-11-17 13:37:43,918 log Not Found: /favicon.ico
+WARNING 2020-11-17 13:37:43,919 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-17 13:38:28,116 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+WARNING 2020-11-17 13:38:28,210 log Not Found: /favicon.ico
+WARNING 2020-11-17 13:38:28,210 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+ERROR 2020-11-17 13:38:30,109 log Internal Server Error: /Kasse/Kasse
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/cashbox/views.py", line 67, in post
+    cashbox.user = Active_Accounts.objects.get(user=request.user)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1292, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1121, in check_related_objects
+    for v in value:
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/utils/functional.py", line 241, in inner
+    return func(self._wrapped, *args)
+TypeError: 'AnonymousUser' object is not iterable
+ERROR 2020-11-17 13:38:30,111 basehttp "POST /Kasse/Kasse HTTP/1.1" 500 122337
+INFO 2020-11-17 13:39:27,607 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-17 13:39:27,664 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-17 14:06:02,830 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-17 14:06:03,333 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-17 14:06:05,155 views Kasse wurde belegt
+INFO 2020-11-17 14:06:05,314 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-17 14:06:06,283 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 13019
+INFO 2020-11-17 14:06:06,331 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 200 2130
+INFO 2020-11-17 14:06:06,339 basehttp "GET /static/css/calculator.css HTTP/1.1" 200 2590
+INFO 2020-11-17 14:06:06,339 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 200 3035
+INFO 2020-11-17 14:06:06,340 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 200 2417
+INFO 2020-11-17 14:06:06,341 basehttp "GET /static/js/calculator.js HTTP/1.1" 200 651
+INFO 2020-11-17 14:06:06,388 basehttp "GET /static/css/cashbox_navbar.css.map HTTP/1.1" 200 592
+INFO 2020-11-17 14:06:06,404 basehttp "GET /static/css/cashbox_dashboard.css.map HTTP/1.1" 200 587
+INFO 2020-11-17 14:06:06,404 basehttp "GET /static/css/calculator.css.map HTTP/1.1" 200 586
+INFO 2020-11-17 14:06:06,404 basehttp "GET /static/css/cart-calculator.css.map HTTP/1.1" 200 553
+WARNING 2020-11-17 14:06:06,765 log Not Found: /favicon.ico
+WARNING 2020-11-17 14:06:06,765 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-17 14:06:11,153 views Kasse wurde belegt
+ERROR 2020-11-17 14:06:11,406 log Internal Server Error: /Kasse/Kasse
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '72' for key 'user_id'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/cashbox/views.py", line 69, in post
+    cashbox.save()
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 790, in save_base
+    updated = self._save_table(
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 872, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 926, in _do_update
+    return filtered._update(values) > 0
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 803, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1522, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '72' for key 'user_id'")
+ERROR 2020-11-17 14:06:11,408 basehttp "POST /Kasse/Kasse HTTP/1.1" 500 175944
+INFO 2020-11-17 14:06:15,758 views Kasse wurde belegt
+INFO 2020-11-17 14:06:15,918 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-17 14:06:16,879 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 13019
+INFO 2020-11-17 14:07:38,987 autoreload /Users/cedrickcandia/Desktop/Kassensystem/cashbox/views.py changed, reloading.
+INFO 2020-11-17 14:07:39,656 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 14:07:53,938 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 14:07:55,359 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-17 14:07:56,029 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-17 14:07:56,400 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3389
+WARNING 2020-11-17 14:07:56,419 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-17 14:07:58,603 views Kasse wurde belegt
+ERROR 2020-11-17 14:07:58,879 log Internal Server Error: /Kasse/Kasse
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.IntegrityError: (1062, "Duplicate entry '72' for key 'user_id'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/cashbox/views.py", line 71, in post
+    cashbox.save()
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 753, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 790, in save_base
+    updated = self._save_table(
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 872, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/base.py", line 926, in _do_update
+    return filtered._update(values) > 0
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 803, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1522, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1062, "Duplicate entry '72' for key 'user_id'")
+ERROR 2020-11-17 14:07:58,885 basehttp "POST /Kasse/Kasse HTTP/1.1" 500 175944
+INFO 2020-11-17 14:08:04,748 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-17 14:08:05,390 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-17 14:08:05,777 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3389
+INFO 2020-11-17 14:08:11,193 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19268
+INFO 2020-11-17 14:11:56,449 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19295
+INFO 2020-11-17 14:12:08,488 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19207
+INFO 2020-11-17 14:13:29,015 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19207
+INFO 2020-11-17 14:13:31,536 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19207
+INFO 2020-11-17 14:14:46,299 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19270
+INFO 2020-11-17 14:15:56,984 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19326
+INFO 2020-11-17 14:17:48,307 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20353
+INFO 2020-11-17 14:19:08,335 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 14:19:09,453 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-17 14:19:10,095 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-17 14:19:10,514 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3389
+INFO 2020-11-17 14:19:13,471 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3389
+INFO 2020-11-17 14:19:19,015 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20353
+INFO 2020-11-17 14:21:18,614 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20353

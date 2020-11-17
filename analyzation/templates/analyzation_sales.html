@@ -60,7 +60,7 @@
 							<div class="row">
 								<div class="col">
 									<div class="text-1"><span>Einnahmen (Heute)</span></div>
-									<div class="text-2"><span>{{ sales_day }}</span></div>
+									<div class="text-2"><span>{{ sales_day }}€</span></div>
 								</div>
 								<div class="col-auto">
 									<i class="fas fa-euro-sign fa-2x"></i>
@@ -419,11 +419,9 @@
         const endpoint = '{% url "analyzation:api-sales-chart-data" %}'
         // var revenue_total_data = {{ revenue_total_data|safe }}
         var revenue_total_legend = '{{ revenue_total_legend|safe }}'
-        var revenue_products_data =
-        {{ revenue_products_data|safe }}
+        //var revenue_products_data = {{ revenue_products_data|safe }}
         var revenue_products_legend = '{{ revenue_products_legend|safe }}'
-        var revenue_services_data =
-        {{ revenue_services_data|safe }}
+        //var revenue_services_data = {{ revenue_services_data|safe }}
         var revenue_services_legend = '{{ revenue_services_legend|safe }}'
         var revenue_chart_legend = '{{ revenue_chart_legend|safe }}'
         var revenue_chart_labels = []
@@ -439,7 +437,7 @@
 
         console.log(date_end)
 
-        var counter = (new Date().getDay());
+        var counter = new Date().getDay();
 
         if(date_end < 9) {
             var counter = date_end;
@@ -461,6 +459,15 @@
 
         var revenue_total_data_raw = {{ revenue_total_data|safe }};
         var revenue_total_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
+		var revenue_products_data_raw = {{ revenue_products_data|safe }};
+		var revenue_products_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
+        var revenue_services_data_raw = {{ revenue_services_data|safe }};
+		var revenue_services_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
+
+
+
+
+
 
         for (let i = 0; i < revenue_chart_labels.length; i++) {
             for (let k = 0; k < revenue_total_data_raw.length; k++) {
@@ -474,17 +481,56 @@
             }
         }
 
-        console.log(revenue_total_data)
-
-
-        var data = []
-        for(let i = 0; i < revenue_chart_labels.length; i++) {
-            tmp = revenue_total_data[i][1];
-            data.push(tmp);
+        for (let i = 0; i < revenue_chart_labels.length; i++) {
+            for (let k = 0; k < revenue_products_data_raw.length; k++) {
+                if (revenue_chart_labels[i] === revenue_products_data_raw[k][0]) {
+					revenue_products_data[i][0] = revenue_chart_labels[i];
+	                revenue_products_data[i][1] = revenue_products_data_raw[k][1];
+                    break;
+                } else {
+	                revenue_products_data[i][0] = revenue_chart_labels[i];
+                }
+            }
         }
+
+        for (let i = 0; i < revenue_chart_labels.length; i++) {
+            for (let k = 0; k < revenue_services_data_raw.length; k++) {
+                if (revenue_chart_labels[i] === revenue_services_data_raw[k][0]) {
+					revenue_services_data[i][0] = revenue_chart_labels[i];
+	                revenue_services_data[i][1] = revenue_services_data_raw[k][1];
+                    break;
+                } else {
+	                revenue_services_data[i][0] = revenue_chart_labels[i];
+                }
+            }
+        }
+
+
+        console.log(revenue_services_data)
+
+
+        var revenue_total_data_only = []
+        for(let i = 0; i < revenue_chart_labels.length; i++) {
+            let tmp = revenue_total_data[i][1];
+            revenue_total_data_only.push(tmp);
+        }
+
+        var revenue_products_data_only = []
+        for(let i = 0; i < revenue_chart_labels.length; i++) {
+            let tmp = revenue_products_data[i][1];
+            revenue_products_data_only.push(tmp);
+        }
+
+        var revenue_services_data_only = []
+        for(let i = 0; i < revenue_chart_labels.length; i++) {
+            let tmp = revenue_services_data[i][1];
+            revenue_services_data_only.push(tmp);
+        }
+
+
         console.log("====================================================================================")
-        console.log(data);
-        console.log({{ revenue_total_data|safe }});
+        console.log(revenue_services_data_only);
+        console.log({{ revenue_services_data|safe }});
         console.log("====================================================================================")
 
         var products_data =
@@ -525,14 +571,15 @@
             method: "GET",
             url: endpoint,
             success: function (data) {
-                //revenue_total_data = data.revenue_total_data
+                /*
+                revenue_total_data = data.revenue_total_data
                 revenue_total_legend = data.revenue_total_legend
                 revenue_products_data = data.revenue_products_data
                 revenue_products_legend = data.revenue_products_legend
                 revenue_services_data = data.revenue_services_data
                 revenue_services_legend = data.revenue_services_legend
                 revenue_chart_legend = data.revenue_chart_legend
-                //revenue_chart_labels = data.revenue_chart_labels
+                revenue_chart_labels = data.revenue_chart_labels
                 revenue_chart_x_axes = data.revenue_chart_x_axes
                 revenue_chart_y_axes = data.revenue_chart_y_axes
                 /*
@@ -575,8 +622,8 @@
                 data: {
                     labels: revenue_chart_labels,
                     datasets: [{
-                        label: revenue_total_legend,
-                        data: data,
+                        label: '{{ revenue_total_legend|safe }}',
+                        data: revenue_total_data_only,
                         backgroundColor: color_background[0],
                         borderColor: color_border[0],
                         borderWidth: 1,
@@ -585,8 +632,8 @@
                         fill: true,
                         lineTension: 0.25
                     }, {
-                        label: revenue_products_legend,
-                        data: revenue_products_data,
+                        label: '{{ revenue_products_legend|safe }}',
+                        data: revenue_products_data_only,
                         backgroundColor: color_background[1],
                         borderColor: color_border[1],
                         borderWidth: 1,
@@ -595,8 +642,8 @@
                         fill: true,
                         lineTension: 0.25
                     }, {
-                        label: revenue_services_legend,
-                        data: revenue_services_data,
+                        label: '{{ revenue_services_legend|safe }}',
+                        data: revenue_services_data_only,
                         backgroundColor: color_background[2],
                         borderColor: color_border[2],
                         borderWidth: 1,
@@ -611,7 +658,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: revenue_chart_legend,
+                        text: '{{ revenue_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -635,14 +682,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: revenue_chart_x_axes
+                                labelString: '{{ revenue_chart_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: revenue_chart_y_axes
+                                labelString: '{{ revenue_chart_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
@@ -660,7 +707,7 @@
                     labels: {{ products_chart_labels|safe }},
                     datasets: [{
                         label: products_chart_legend,
-                        data: {{ products_data|safe }},
+                        data: products_data,
                         backgroundColor: [
                             color_background[0],
                             color_background[1],

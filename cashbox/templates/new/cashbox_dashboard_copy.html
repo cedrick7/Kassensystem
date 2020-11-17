@@ -33,18 +33,16 @@
 								<p class="product-name">{{ instance.title }}</p>
 								<p class="product-description">{{ instance.description }}</p>
 								<p class="product-price">{{ instance.costs }} €</p>
-								<td>{% for instance in instance.category.all %}<p class="product-description">{{ instance }} €</p><br/>{% endfor %}</td>
+								<td>{% for instance in instance.category.all %}<p class="product-description">
+						{{ instance }} €</p><br/>{% endfor %}</td>
 								
 							</button>
 						
 						</form>
 
 					{% endfor %} -->
-					
 
-					
-					
-					
+
 					<!-- 
 					<a href="#" class="col-4 pattern-element">
 						<p class="product-name">D2</p>
@@ -106,63 +104,58 @@
 					<h2>Produkte</h2>
 					<br>
 					{% for i in range %}
-						
+
 						<div class="row pattern">
 							<br>
 							{% for c in categories %}
-							
-							
+
+
 								{% if forloop.counter == forloop.parentloop.counter %}
 									<div class="col-12">
-										<h5>{{c}}</h5>
-										
+										<h5>{{ c }}</h5>
+
 									</div>
 									<br>
 								{% endif %}
-								
-							{% endfor %}	
-							
-						
-								{% for list in productlist %}
 
-									{% if forloop.counter == forloop.parentloop.counter %}
+							{% endfor %}
+
+
+							{% for list in productlist %}
+
+								{% if forloop.counter == forloop.parentloop.counter %}
+									<div class="col-12">
 										<div class="row pattern">
 											{% for instance in list %}
-											<div class="row pattern">
-												<br>
-												
-												<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"> {% csrf_token %}
-
-													<button type="submit" class="btn btn-primary btn-sm">
-
-														<input type="hidden" id="productId" name="productId" value="{{ instance.id }}">
+												<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"
+												      class="col-4 pattern-element"> {% csrf_token %}
+													<button type="submit" class="product-button">
+														<input type="hidden" id="productId" name="productId"
+														       value="{{ instance.id }}">
 														<h6 class="product-name">{{ instance.title }}</h6>
 														<p class="product-description">{{ instance.description }}</p>
-														<p class="product-price">{{ instance.costs }} €</p>
-														
-														
+														<p class="product-price">{{ instance.costs }}€</p>
 													</button>
-												
 												</form>
-											</div>
 											{% endfor %}
 										</div>
-									{% endif %}
-										
-								{% endfor %}
+									</div>
+								{% endif %}
 
-							
-						</div>		
+							{% endfor %}
 
-						
+
+						</div>
+
+
 					{% endfor %}
-					
+
 				</div>
 				<div class="col-12">
 					<h5>Sonstiges</h5>
 					<div class="row pattern">
 						{% for instance in sonstiges %}
-							
+
 							<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"> {% csrf_token %}
 
 								<button type="submit" class="btn btn-primary btn-sm">
@@ -170,16 +163,16 @@
 									<h6 class="product-name">{{ instance.title }}</h6>
 									<p class="product-description">{{ instance.description }}</p>
 									<p class="product-price">{{ instance.costs }} €</p>
-									
-									
+
+
 								</button>
-							
+
 							</form>
-							
+
 						{% endfor %}
 					</div>
-					
-					
+
+
 				</div>
 			</div>
 		</div>

@@ -553,11 +553,6 @@ def analyzation_sales_view(request, *args, **kwargs):
             elif i.Wochentag ==6:
                 revenue_total_data.append(["Sonntag",float(i.Summe)])
 
-        print("\n===============================================================================================================")
-        print("revenue_total_data: " , revenue_total_data)
-        print("revenue_products_data: " , revenue_products_data)
-        print("revenue_services_data: " , revenue_services_data)
-
         ## chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart] ##
         query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
                 FROM product_product AS product INNER JOIN cashbox_bill_product AS products \
@@ -649,7 +644,12 @@ def analyzation_sales_view(request, *args, **kwargs):
                 peak_times_chart_labels.append("Samstag")
             elif i.Wochentag == 6:
                 peak_times_chart_labels.append("Sonntag")
-            peak_times_data.append(i.Summe)
+            peak_times_data.append(float(i.Summe))
+
+        print(
+            "\n===============================================================================================================")
+        print("peak_times_data: ", peak_times_data)
+        print("peak_times_chart_labels: ", peak_times_chart_labels)
 
         #
         date_begin = 999
