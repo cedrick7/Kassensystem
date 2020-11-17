@@ -431,15 +431,15 @@ class ProductModelForm(forms.ModelForm):
                     'value': '',
                 }
             ),
-            'category': forms.TextInput(
-                attrs={
-                    'placeholder': 'Kategorie',
-                    'class': 'form-control needs-validation',
-                    'style': styling,
-                    'name': 'product_category',
-                    'value': ''
-                }
-            ),
+            # 'category': forms.TextInput(
+            #     attrs={
+            #         'placeholder': 'Kategorie',
+            #         'class': 'form-control needs-validation',
+            #         'style': styling,
+            #         'name': 'product_category',
+            #         'value': ''
+            #     }
+            # ),
             'description': forms.Textarea(
                 attrs={
                     'placeholder': 'Beschreibung',

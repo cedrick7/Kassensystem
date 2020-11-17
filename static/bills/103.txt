@@ -1,0 +1,23 @@
+
+Rechnungsnummer: 103
+vom 2020-11-15 14:33:28.091240
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: Seniorenrabatt25% 
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Haare schneiden     1         10.00     10.00     
+
+------------------------------------
+
+Gesamtkosten Netto: 6.30 Euro 
+zzgl. 19,00% MwSt. 1.20 Euro 
+
+Gesamtkosten: 7.50 Euro 
