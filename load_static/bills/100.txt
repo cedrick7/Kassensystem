@@ -1,0 +1,23 @@
+
+Rechnungsnummer: 100
+vom 2020-11-15 02:10:17.130884
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Kekse               2         3.00      6.00      
+
+------------------------------------
+
+Gesamtkosten Netto: 5.04 Euro 
+zzgl. 19,00% MwSt. 0.96 Euro 
+
+Gesamtkosten: 6.00 Euro 

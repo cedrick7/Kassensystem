@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 96
+vom 2020-11-15 01:45:18.070515
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: Studentenrabatt20% 
+
+------------------------------------
+
+Produkte: 
+Position    Produkt    Anzahl    Preis    Gesamtpreis
+1    Apfelsaft    1    1.00    1.00
+2    Tomate    1    1.20    1.20
+
+------------------------------------
+
+Gesamtkosten Netto: 1.48 € 
+zzgl. 19,00% MwSt. 0.28 € 
+
+Gesamtkosten: 1.76 € 

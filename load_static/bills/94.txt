@@ -1,0 +1,9 @@
+
+Rechnungsnummer: 94
+vom 2020-11-15 01:36:09.490750
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld

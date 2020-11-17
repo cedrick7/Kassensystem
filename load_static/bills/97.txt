@@ -1,0 +1,14 @@
+
+Rechnungsnummer: 97
+vom 2020-11-15 01:59:34.723921
+
+------------------------------------
+
+Mitarbeiter: ludo.username
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 

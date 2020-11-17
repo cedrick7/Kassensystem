@@ -9,11 +9,11 @@ header {
     .card-body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: center!important;
 
       @media (min-width: 768px) {
         flex-direction: row;
-        justify-content: center;
+        justify-content: center!important;
       }
 
       .nav-box {
