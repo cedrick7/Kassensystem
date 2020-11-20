@@ -151,12 +151,15 @@ def loginUser(request, *args, **kwargs):
             # Weiterleitung auf Basis der Gruppe    
             else:
                 if request.user.groups.filter(name = 'Administratoren').exists():
+                    logger.info('Administrator hat sich angemeldet')
                     return redirect('administration:administration_dashboard')
 
                 if request.user.groups.filter(name = 'Kassierer').exists():
+                    logger.info('Kassierer hat sich angemeldet')
                     return redirect('cashbox:cashbox_choose')
 
                 if request.user.groups.filter(name = 'Analysten').exists():
+                    logger.info('Analyst hat sich angemeldet')
                     return redirect('analyzation:analyzation_dashboard')
         else:
             messages.info(request, 'Nutzername und Passwort stimmen nicht überein')
@@ -185,6 +188,7 @@ def logoutUser(request, *args, **kwargs):
     worktimeobj.end = end
     worktimeobj.save()
     logout(request)
+    logger.info('Nutzer hat sich ausgeloggt')
     return redirect('authorization:login')
 
 @unauthenticated_user

@@ -11,6 +11,7 @@ urlpatterns=[
     path('Umsatz/', analyzation_sales_view, name='analyzation_sales'),
     path('Kunden/', analyzation_customers_view, name='analyzation_customers'),
     path('Mitarbeiter/', analyzation_employees_view, name='analyzation_employees'),
+    
 
     #legacy
     url(r'^api/dashboard/chart/data/$', DashboardChartData.as_view(), name='api-dashboard-chart-data'),

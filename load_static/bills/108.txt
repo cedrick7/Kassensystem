@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 108
+vom 2020-11-20 17:03:58.035763
+
+------------------------------------
+
+Mitarbeiter: hans.mueller
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: Studentenrabatt20% 
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Brötchen            1         0.30      0.30      
+2         Kakao               1         2.50      2.50      
+
+------------------------------------
+
+Gesamtkosten Netto: 1.88 Euro 
+zzgl. 19,00% MwSt. 0.36 Euro 
+
+Gesamtkosten: 2.24 Euro 

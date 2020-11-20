@@ -158,7 +158,7 @@
 
 							<form action="{% url 'cashbox:cashbox_dashboard' %}" method="POST"> {% csrf_token %}
 
-								<button type="submit" class="btn btn-primary btn-sm">
+								<button type="submit" class="product-button">
 									<input type="hidden" id="productId" name="productId" value="{{ instance.id }}">
 									<h6 class="product-name">{{ instance.title }}</h6>
 									<p class="product-description">{{ instance.description }}</p>

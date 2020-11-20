@@ -18,6 +18,58 @@ class CreateUserForm(UserCreationForm):
         'is_active',
         ]
 
+        widgets = {
+
+            'username': forms.TextInput(
+                attrs={
+                    'placeholder': 'Username',
+                    'class': 'form-control needs-validation',
+                    'name': 'username',
+                    'value': '',
+                }
+            ),
+            'firstname': forms.TextInput(
+                attrs={
+                    'placeholder': 'Vorname',
+                    'class': 'form-control needs-validation',
+                    'name': 'firstname',
+                    'value': '',
+                }
+            ),
+            'last_name': forms.TextInput(
+                attrs={
+                    'placeholder': 'Nachname',
+                    'class': 'form-control needs-validation',
+                    'name': 'last_name',
+                    'value': '',
+                }
+            ),
+            'email': forms.EmailInput(
+                attrs={
+                    'placeholder': 'Email',
+                    'class': 'form-control needs-validation',
+                    'name': 'email',
+                    'value': '',
+                }
+            ),
+            'password1': forms.PasswordInput(
+                attrs={
+                    'placeholder': 'Password',
+                    'class': 'form-control needs-validation',
+                    'name': 'password1',
+                    'value': '',
+                }
+            ),
+            'password2': forms.PasswordInput(
+                attrs={
+                    'placeholder': 'Password wiederholen',
+                    'class': 'form-control needs-validation',
+                    'name': 'password2',
+                    'value': '',
+                }
+            ),
+        }
+
 class ChangePasswordForm(forms.Form):
     username = forms.CharField(max_length=150) 
     password = forms.CharField(max_length=150, widget=forms.PasswordInput) 
@@ -33,6 +85,7 @@ class RequestForm(forms.Form):
             'analyst',
             'kassierer',
         ]
+
 
 class Active_AccountsForm(forms.Form):
     class Meta:

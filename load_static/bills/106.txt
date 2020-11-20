@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 106
+vom 2020-11-18 16:56:00.175514
+
+------------------------------------
+
+Mitarbeiter: thnthnthn
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: None
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Apfelschorle 0.5L   1         0.89      0.89      
+2         Brötchen            1         0.30      0.30      
+
+------------------------------------
+
+Gesamtkosten Netto: 1.00 Euro 
+zzgl. 19,00% MwSt. 0.19 Euro 
+
+Gesamtkosten: 1.19 Euro 
