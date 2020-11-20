@@ -5020,3 +5020,1346 @@ Traceback (most recent call last):
     self.model._meta.object_name
 analyzation.models.Worktime.DoesNotExist: Worktime matching query does not exist.
 ERROR 2020-11-17 14:38:18,689 basehttp "GET /Autorisierung/logout HTTP/1.1" 500 80238
+INFO 2020-11-17 14:50:13,933 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 14:50:19,056 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-17 14:50:19,130 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
+INFO 2020-11-17 14:50:19,161 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+WARNING 2020-11-17 14:50:19,169 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-17 14:50:19,244 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-11-17 14:50:27,757 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-17 14:50:27,846 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3389
+INFO 2020-11-17 14:50:51,671 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18110
+INFO 2020-11-17 14:50:51,809 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-17 14:50:51,811 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 200 3934
+INFO 2020-11-17 14:50:51,818 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 304 0
+INFO 2020-11-17 14:50:51,826 basehttp "GET /static/css/calculator.css HTTP/1.1" 304 0
+INFO 2020-11-17 14:50:51,830 basehttp "GET /static/js/calculator.js HTTP/1.1" 304 0
+WARNING 2020-11-17 14:50:52,132 log Not Found: /favicon.ico
+WARNING 2020-11-17 14:50:52,132 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-17 14:53:12,162 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-17 14:53:12,177 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-17 14:53:12,269 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-17 14:53:12,270 basehttp "GET /static/css/authorization.css HTTP/1.1" 304 0
+WARNING 2020-11-17 14:53:12,280 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-17 14:53:12,365 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-17 14:53:12,687 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:04,917 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 15:11:16,128 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18110
+INFO 2020-11-17 15:11:16,246 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:16,247 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:16,252 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:16,252 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:16,259 basehttp "GET /static/css/calculator.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:16,259 basehttp "GET /static/js/calculator.js HTTP/1.1" 304 0
+WARNING 2020-11-17 15:11:16,548 log Not Found: /favicon.ico
+WARNING 2020-11-17 15:11:16,549 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+ERROR 2020-11-17 15:11:18,730 log Internal Server Error: /Autorisierung/logout
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 184, in logoutUser
+    worktimeobj = Worktime.objects.get(id=worktimeId)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+analyzation.models.Worktime.DoesNotExist: Worktime matching query does not exist.
+ERROR 2020-11-17 15:11:18,731 basehttp "GET /Autorisierung/logout HTTP/1.1" 500 80238
+INFO 2020-11-17 15:11:22,996 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-17 15:11:23,085 basehttp "GET /static/css/authorization.css HTTP/1.1" 304 0
+WARNING 2020-11-17 15:11:23,089 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-17 15:11:23,161 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+INFO 2020-11-17 15:11:30,717 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-17 15:11:30,962 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-17 15:11:31,052 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2741
+INFO 2020-11-17 15:11:31,052 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6924
+INFO 2020-11-17 15:11:31,052 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8529
+INFO 2020-11-17 15:11:31,053 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 858
+INFO 2020-11-17 15:11:31,083 basehttp "GET /static/js/moment.js HTTP/1.1" 200 94459
+INFO 2020-11-17 15:11:31,099 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2986
+INFO 2020-11-17 15:11:31,099 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37833
+INFO 2020-11-17 15:11:31,118 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 444218
+INFO 2020-11-17 15:11:31,146 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-17 15:11:31,227 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-17 15:11:45,464 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43317
+INFO 2020-11-17 15:11:45,672 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-17 15:11:50,499 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47600
+INFO 2020-11-17 15:11:50,637 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+ERROR 2020-11-17 15:11:57,761 log Internal Server Error: /Analyst/Mitarbeiter/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 1356, in analyzation_employees_view
+    user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 34, in raw_sql
+    cursor.execute(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\mysql\base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 321, in _query
+    self._post_get_result()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 150, in typecast_time
+    return datetime.time(int(hour), int(minutes), int(seconds), int((microseconds + '000000')[:6]))
+ValueError: hour must be in 0..23
+ERROR 2020-11-17 15:11:57,764 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 500 125286
+INFO 2020-11-17 15:17:43,463 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43317
+INFO 2020-11-17 15:17:43,552 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,557 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,557 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,561 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,561 basehttp "GET /static/css/chartjs.css HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,564 basehttp "GET /static/js/moment.js HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,565 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,568 basehttp "GET /static/js/datepicker.js HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,569 basehttp "GET /static/js/chartjs.js HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,572 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 304 0
+INFO 2020-11-17 15:17:43,805 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+ERROR 2020-11-17 15:17:45,589 log Internal Server Error: /Analyst/Mitarbeiter/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 1356, in analyzation_employees_view
+    user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 34, in raw_sql
+    cursor.execute(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\mysql\base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 321, in _query
+    self._post_get_result()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 150, in typecast_time
+    return datetime.time(int(hour), int(minutes), int(seconds), int((microseconds + '000000')[:6]))
+ValueError: hour must be in 0..23
+ERROR 2020-11-17 15:17:45,590 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 500 125286
+INFO 2020-11-17 15:19:35,633 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-17 15:19:35,867 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-17 15:19:36,458 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43317
+INFO 2020-11-17 15:19:36,948 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+ERROR 2020-11-17 15:19:37,259 log Internal Server Error: /Analyst/Mitarbeiter/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 1356, in analyzation_employees_view
+    user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 34, in raw_sql
+    cursor.execute(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\mysql\base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 321, in _query
+    self._post_get_result()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 150, in typecast_time
+    return datetime.time(int(hour), int(minutes), int(seconds), int((microseconds + '000000')[:6]))
+ValueError: hour must be in 0..23
+ERROR 2020-11-17 15:19:37,261 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 500 125151
+INFO 2020-11-17 15:20:14,532 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47600
+INFO 2020-11-17 15:20:14,733 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+ERROR 2020-11-17 15:20:15,303 log Internal Server Error: /Analyst/Mitarbeiter/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 1356, in analyzation_employees_view
+    user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 34, in raw_sql
+    cursor.execute(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\mysql\base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 321, in _query
+    self._post_get_result()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 150, in typecast_time
+    return datetime.time(int(hour), int(minutes), int(seconds), int((microseconds + '000000')[:6]))
+ValueError: hour must be in 0..23
+ERROR 2020-11-17 15:20:15,304 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 500 125151
+INFO 2020-11-17 15:21:55,960 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43317
+INFO 2020-11-17 15:21:56,176 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-17 15:21:56,739 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20911
+INFO 2020-11-17 15:21:56,959 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-17 16:42:58,338 autoreload Watching for file changes with StatReloader
+INFO 2020-11-17 16:43:00,900 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20911
+INFO 2020-11-17 16:43:00,989 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:00,989 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:00,995 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:00,995 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,002 basehttp "GET /static/css/chartjs.css HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,002 basehttp "GET /static/js/moment.js HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,006 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,006 basehttp "GET /static/js/datepicker.js HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,010 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,010 basehttp "GET /static/js/chartjs.js HTTP/1.1" 304 0
+INFO 2020-11-17 16:43:01,248 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-17 16:43:13,466 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20911
+INFO 2020-11-17 16:43:13,701 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-17 16:43:16,421 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-17 16:43:16,662 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-17 16:43:36,548 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47600
+INFO 2020-11-17 16:43:36,802 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-17 16:43:44,455 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47600
+INFO 2020-11-17 16:43:44,691 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-17 16:43:57,018 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20911
+INFO 2020-11-17 16:43:57,255 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-17 16:47:39,007 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43317
+INFO 2020-11-17 16:47:39,255 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-18 16:09:54,224 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 16:10:23,307 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:10:23,621 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-18 16:10:23,764 basehttp "GET /static/css/styles.css HTTP/1.1" 200 640
+INFO 2020-11-18 16:10:23,764 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2741
+INFO 2020-11-18 16:10:23,831 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8529
+INFO 2020-11-18 16:10:23,848 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6924
+INFO 2020-11-18 16:10:23,902 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 858
+INFO 2020-11-18 16:10:23,931 basehttp "GET /static/js/moment.js HTTP/1.1" 200 94459
+INFO 2020-11-18 16:10:23,947 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37833
+INFO 2020-11-18 16:10:23,997 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2986
+INFO 2020-11-18 16:10:24,028 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 444218
+INFO 2020-11-18 16:10:24,037 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-18 16:10:24,209 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+WARNING 2020-11-18 16:10:24,405 log Not Found: /favicon.ico
+WARNING 2020-11-18 16:10:24,406 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-18 16:10:33,358 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:10:33,586 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-18 16:10:33,822 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-18 16:10:39,030 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-18 16:10:39,228 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-18 16:10:50,534 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:10:50,730 basehttp "GET /Analyst/ HTTP/1.1" 200 28693
+INFO 2020-11-18 16:10:50,949 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-18 16:15:20,409 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\urls.py changed, reloading.
+INFO 2020-11-18 16:15:21,551 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 16:16:05,842 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\urls.py changed, reloading.
+INFO 2020-11-18 16:16:06,947 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 16:20:03,304 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 16:20:16,853 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-18 16:20:17,053 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+ERROR 2020-11-18 16:20:19,852 log Internal Server Error: /Autorisierung/logout
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 184, in logoutUser
+    worktimeobj = Worktime.objects.get(id=worktimeId)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+analyzation.models.Worktime.DoesNotExist: Worktime matching query does not exist.
+ERROR 2020-11-18 16:20:19,855 basehttp "GET /Autorisierung/logout HTTP/1.1" 500 81628
+INFO 2020-11-18 16:20:29,875 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:20:30,079 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-18 16:20:30,366 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+ERROR 2020-11-18 16:20:34,417 log Internal Server Error: /Autorisierung/logout
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 184, in logoutUser
+    worktimeobj = Worktime.objects.get(id=worktimeId)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+analyzation.models.Worktime.DoesNotExist: Worktime matching query does not exist.
+ERROR 2020-11-18 16:20:34,418 basehttp "GET /Autorisierung/logout HTTP/1.1" 500 81628
+INFO 2020-11-18 16:21:12,861 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 16:21:39,939 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-18 16:21:40,065 basehttp "GET /static/css/styles.css HTTP/1.1" 200 640
+INFO 2020-11-18 16:21:40,147 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
+WARNING 2020-11-18 16:21:40,169 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:21:40,447 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:21:40,492 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-11-18 16:22:03,119 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-11-18 16:22:03,190 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:22:03,304 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:22:22,533 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-11-18 16:22:22,616 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:22:22,754 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:29:09,349 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-18 16:29:09,417 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:29:09,575 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:30:42,059 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-18 16:30:42,128 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:30:42,277 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:32:16,333 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-18 16:32:16,467 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8145
+WARNING 2020-11-18 16:32:16,568 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:32:16,721 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:33:16,139 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-18 16:33:16,275 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8145
+WARNING 2020-11-18 16:33:16,769 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:34:44,257 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-18 16:34:44,270 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5579
+WARNING 2020-11-18 16:34:44,364 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:34:44,498 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:34:58,761 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:34:59,023 basehttp "GET /Administration/ HTTP/1.1" 200 1298311
+INFO 2020-11-18 16:34:59,143 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2970
+INFO 2020-11-18 16:34:59,200 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+INFO 2020-11-18 16:34:59,248 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-18 16:35:43,180 basehttp "GET /Autorisierung/request HTTP/1.1" 200 10310
+INFO 2020-11-18 16:35:59,455 basehttp "GET /Autorisierung/analysttesttest/AC/accept HTTP/1.1" 200 391
+INFO 2020-11-18 16:36:01,769 views Nutzer aktiv
+INFO 2020-11-18 16:36:01,783 views Request wurde erfolgreich gelöscht
+INFO 2020-11-18 16:36:01,819 views Account wurde registriert
+INFO 2020-11-18 16:36:01,820 basehttp "POST /Autorisierung/analysttesttest/AC/accept HTTP/1.1" 302 0
+INFO 2020-11-18 16:36:01,956 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-18 16:36:03,876 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 16:36:03,887 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 16:36:03,962 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:36:04,056 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:36:23,791 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:36:24,001 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-18 16:36:24,102 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2741
+INFO 2020-11-18 16:36:24,103 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8529
+INFO 2020-11-18 16:36:24,126 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6924
+INFO 2020-11-18 16:36:24,142 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 858
+INFO 2020-11-18 16:36:24,191 basehttp "GET /static/js/moment.js HTTP/1.1" 200 94459
+INFO 2020-11-18 16:36:24,206 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37833
+INFO 2020-11-18 16:36:24,250 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2986
+INFO 2020-11-18 16:36:24,264 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 444218
+INFO 2020-11-18 16:36:24,321 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-18 16:36:24,379 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-18 16:36:27,756 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 16:36:27,767 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 16:36:27,848 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:36:27,940 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:37:03,908 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-11-18 16:37:03,977 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:37:04,110 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:38:14,800 basehttp "POST /Autorisierung/login HTTP/1.1" 200 4533
+INFO 2020-11-18 16:38:16,718 basehttp "GET /Kasse/Kasse? HTTP/1.1" 200 3976
+ERROR 2020-11-18 16:38:30,676 log Internal Server Error: /Kasse/Kasse
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\views\generic\base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py", line 69, in post
+    cashbox.user = Active_Accounts.objects.get(user=request.user)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\models\query.py", line 417, in get
+    self.model._meta.object_name
+authorization.models.Active_Accounts.DoesNotExist: Active_Accounts matching query does not exist.
+ERROR 2020-11-18 16:38:30,680 basehttp "POST /Kasse/Kasse? HTTP/1.1" 500 91746
+INFO 2020-11-18 16:39:20,287 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-18 16:39:20,400 basehttp "GET /static/css/styles.css HTTP/1.1" 200 640
+INFO 2020-11-18 16:39:20,454 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2850
+WARNING 2020-11-18 16:39:20,521 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:39:20,729 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:39:20,748 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-11-18 16:39:23,077 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-18 16:39:23,129 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:39:23,243 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:42:44,272 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-18 16:42:44,410 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8145
+WARNING 2020-11-18 16:42:44,507 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:42:44,607 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:45:12,606 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-18 16:45:12,618 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5573
+WARNING 2020-11-18 16:45:12,679 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:45:12,789 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:45:51,695 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:45:51,890 basehttp "GET /Administration/ HTTP/1.1" 200 1315840
+INFO 2020-11-18 16:45:51,984 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2970
+INFO 2020-11-18 16:45:52,012 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5226
+INFO 2020-11-18 16:45:52,806 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-18 16:46:41,020 basehttp "GET /Administration/Produkte HTTP/1.1" 200 19659
+INFO 2020-11-18 16:46:55,662 basehttp "GET /Autorisierung/request HTTP/1.1" 200 10288
+INFO 2020-11-18 16:47:05,886 basehttp "GET /Autorisierung/thnthnthn/AC/accept HTTP/1.1" 200 385
+INFO 2020-11-18 16:47:34,716 views Nutzer aktiv
+INFO 2020-11-18 16:47:34,733 views Request wurde erfolgreich gelöscht
+INFO 2020-11-18 16:47:34,768 views Account wurde registriert
+INFO 2020-11-18 16:47:34,769 basehttp "POST /Autorisierung/thnthnthn/AC/accept HTTP/1.1" 302 0
+INFO 2020-11-18 16:47:34,908 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-18 16:47:38,730 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 16:47:38,743 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 16:47:38,821 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 16:47:38,921 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 16:47:54,333 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 16:47:54,421 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 16:48:27,908 views Kasse wurde belegt
+INFO 2020-11-18 16:48:27,971 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 16:48:28,467 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18119
+INFO 2020-11-18 16:48:28,559 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 200 2222
+INFO 2020-11-18 16:48:28,559 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 200 3934
+INFO 2020-11-18 16:48:28,636 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 200 2507
+INFO 2020-11-18 16:48:28,641 basehttp "GET /static/css/calculator.css HTTP/1.1" 200 2690
+INFO 2020-11-18 16:48:28,687 basehttp "GET /static/js/calculator.js HTTP/1.1" 200 679
+INFO 2020-11-18 16:49:31,881 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 8401
+INFO 2020-11-18 16:49:31,987 basehttp "GET /static/css/cashbox_pay.css HTTP/1.1" 200 2468
+INFO 2020-11-18 16:51:10,392 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18119
+INFO 2020-11-18 16:51:43,413 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 18640
+INFO 2020-11-18 16:51:48,198 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19153
+INFO 2020-11-18 16:51:49,956 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19153
+INFO 2020-11-18 16:52:40,622 basehttp "GET /Kasse/Warenkorb?csrfmiddlewaretoken=u8RbU90XbYaTtAiMf2nbzjpUZhsW1GcROdxlipOSBMIA4IfmN9CnK0mswXwPCzyU&reset= HTTP/1.1" 200 18119
+INFO 2020-11-18 16:52:43,582 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 18640
+INFO 2020-11-18 16:52:45,093 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19153
+INFO 2020-11-18 16:52:45,258 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19153
+INFO 2020-11-18 16:52:48,854 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19153
+INFO 2020-11-18 16:52:50,514 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-18 16:53:06,651 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-18 16:53:06,882 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21092
+INFO 2020-11-18 16:53:07,151 basehttp "GET /static/img/coins/1c.png HTTP/1.1" 200 364899
+INFO 2020-11-18 16:53:07,222 basehttp "GET /static/img/coins/200.jpg HTTP/1.1" 200 36568
+INFO 2020-11-18 16:53:07,271 basehttp "GET /static/img/other/reset.jpg HTTP/1.1" 200 25583
+INFO 2020-11-18 16:53:07,337 basehttp "GET /static/img/coins/5.jpg HTTP/1.1" 200 37007
+INFO 2020-11-18 16:53:07,397 basehttp "GET /static/img/coins/50.jpg HTTP/1.1" 200 58177
+INFO 2020-11-18 16:53:07,452 basehttp "GET /static/img/coins/100.jpg HTTP/1.1" 200 34884
+INFO 2020-11-18 16:53:07,454 basehttp "GET /static/img/coins/1.gif HTTP/1.1" 200 84309
+INFO 2020-11-18 16:53:07,460 basehttp "GET /static/img/coins/10.jpg HTTP/1.1" 200 64216
+INFO 2020-11-18 16:53:07,471 basehttp "GET /static/img/coins/2.gif HTTP/1.1" 200 101352
+INFO 2020-11-18 16:53:07,472 basehttp "GET /static/img/coins/500.jpg HTTP/1.1" 200 31709
+INFO 2020-11-18 16:53:07,489 basehttp "GET /static/img/coins/20.jpg HTTP/1.1" 200 85566
+INFO 2020-11-18 16:53:07,505 basehttp "GET /static/img/coins/2c.png HTTP/1.1" 200 466216
+INFO 2020-11-18 16:53:07,528 basehttp "GET /static/img/coins/5c.png HTTP/1.1" 200 634700
+INFO 2020-11-18 16:53:07,538 basehttp "GET /static/img/coins/10c.jpg HTTP/1.1" 200 283338
+INFO 2020-11-18 16:53:07,629 basehttp "GET /static/img/coins/20c.jpg HTTP/1.1" 200 264713
+INFO 2020-11-18 16:53:07,639 basehttp "GET /static/img/coins/50c.jpg HTTP/1.1" 200 301850
+INFO 2020-11-18 16:53:34,080 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21305
+INFO 2020-11-18 16:53:52,844 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21307
+INFO 2020-11-18 16:53:57,944 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21309
+INFO 2020-11-18 16:54:05,293 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21305
+INFO 2020-11-18 16:54:13,564 views Rechnung wurde angelegt
+INFO 2020-11-18 16:54:13,565 basehttp "POST /Kasse/Zahlung HTTP/1.1" 302 0
+INFO 2020-11-18 16:54:14,056 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18119
+INFO 2020-11-18 16:54:47,897 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 18636
+INFO 2020-11-18 16:54:49,522 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 18636
+INFO 2020-11-18 16:54:52,484 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-18 16:54:56,767 basehttp "GET /Kasse/Warenkorb?csrfmiddlewaretoken=1FSkWlugxtLL6p0BdptDYmH8GtnxNEHqlKyukBibXhjsHxXbLwIP93EGd9rqox3t&reset= HTTP/1.1" 200 18119
+INFO 2020-11-18 16:54:57,705 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 18633
+INFO 2020-11-18 16:54:58,590 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19158
+INFO 2020-11-18 16:55:00,098 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-18 16:55:01,855 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-18 16:55:02,061 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21092
+INFO 2020-11-18 16:55:21,701 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21547
+INFO 2020-11-18 16:55:51,191 views Kassengeld wurde aktualisiert
+INFO 2020-11-18 16:55:51,233 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21309
+INFO 2020-11-18 16:56:00,322 views Rechnung wurde angelegt
+INFO 2020-11-18 16:56:00,323 basehttp "POST /Kasse/Zahlung HTTP/1.1" 302 0
+INFO 2020-11-18 16:56:00,827 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18119
+INFO 2020-11-18 17:00:08,782 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 17:00:08,794 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 17:00:08,882 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 17:01:06,119 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 17:01:06,338 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-18 17:01:06,397 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2741
+INFO 2020-11-18 17:01:06,399 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8529
+INFO 2020-11-18 17:01:06,419 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6924
+INFO 2020-11-18 17:01:06,435 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 858
+INFO 2020-11-18 17:01:06,484 basehttp "GET /static/js/moment.js HTTP/1.1" 200 94459
+INFO 2020-11-18 17:01:06,498 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37833
+INFO 2020-11-18 17:01:06,545 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2986
+INFO 2020-11-18 17:01:06,569 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 444218
+INFO 2020-11-18 17:01:06,608 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-18 17:01:06,675 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-18 17:01:34,786 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-18 17:01:34,985 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-18 17:01:59,325 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20952
+INFO 2020-11-18 17:01:59,482 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-18 17:02:37,097 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 17:02:37,108 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 17:02:37,191 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:38:25,574 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 19:51:05,421 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-18 19:51:05,535 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:51:05,540 basehttp "GET /static/css/authorization.css HTTP/1.1" 304 0
+WARNING 2020-11-18 19:51:05,549 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 19:51:05,661 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:51:05,852 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-11-18 19:51:05,886 log Not Found: /favicon.ico
+WARNING 2020-11-18 19:51:05,887 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-18 19:51:24,062 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-18 19:51:24,128 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 19:51:24,235 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:51:58,553 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 19:51:58,746 basehttp "GET /Administration/ HTTP/1.1" 200 1342619
+INFO 2020-11-18 19:51:58,849 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:51:58,853 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:51:59,573 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-11-18 19:52:03,505 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-18 19:52:11,389 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 19:52:11,399 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 19:52:11,456 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 19:52:11,550 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:52:28,333 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 19:52:28,424 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 19:52:35,987 views Kasse wurde belegt
+INFO 2020-11-18 19:52:36,044 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 19:52:36,513 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 19:52:36,581 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:52:36,584 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:52:36,590 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:52:36,593 basehttp "GET /static/css/calculator.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:52:36,596 basehttp "GET /static/js/calculator.js HTTP/1.1" 304 0
+INFO 2020-11-18 19:53:08,091 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 19:53:08,103 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 19:53:08,190 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 19:53:08,317 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:53:25,126 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 19:53:25,315 basehttp "GET /Administration/ HTTP/1.1" 200 1348313
+INFO 2020-11-18 19:53:32,915 basehttp "GET /Administration/Produkte HTTP/1.1" 200 19658
+INFO 2020-11-18 19:53:43,864 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 200 12238
+INFO 2020-11-18 19:54:10,167 basehttp "GET /Administration/Produkte? HTTP/1.1" 200 19658
+INFO 2020-11-18 19:54:18,077 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 200 12238
+INFO 2020-11-18 19:54:59,335 basehttp "GET /Administration/Produkte? HTTP/1.1" 200 19658
+INFO 2020-11-18 19:55:10,366 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 19:55:10,377 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 19:55:10,461 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 19:55:10,865 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:55:16,732 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 19:55:16,817 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 19:55:18,414 views Kasse wurde belegt
+INFO 2020-11-18 19:55:18,475 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 19:55:18,935 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 19:55:25,136 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 19:55:25,148 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 19:55:25,228 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 19:55:25,625 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 19:55:40,352 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 19:55:40,442 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 19:55:41,723 views Kasse wurde belegt
+INFO 2020-11-18 19:55:41,779 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 19:55:42,242 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 19:56:14,140 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 18644
+INFO 2020-11-18 19:56:16,463 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19154
+INFO 2020-11-18 19:56:20,579 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-18 19:56:28,929 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-18 19:56:29,124 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-18 19:56:29,208 basehttp "GET /static/css/cashbox_pay.css HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,284 basehttp "GET /static/img/coins/1c.png HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,288 basehttp "GET /static/img/coins/2c.png HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,292 basehttp "GET /static/img/coins/5c.png HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,295 basehttp "GET /static/img/coins/10c.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,299 basehttp "GET /static/img/coins/10.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,303 basehttp "GET /static/img/coins/20.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,307 basehttp "GET /static/img/coins/500.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,311 basehttp "GET /static/img/coins/5.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,315 basehttp "GET /static/img/coins/2.gif HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,319 basehttp "GET /static/img/coins/50.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,323 basehttp "GET /static/img/coins/200.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,327 basehttp "GET /static/img/coins/100.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,331 basehttp "GET /static/img/coins/1.gif HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,335 basehttp "GET /static/img/other/reset.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,340 basehttp "GET /static/img/coins/20c.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:29,344 basehttp "GET /static/img/coins/50c.jpg HTTP/1.1" 304 0
+INFO 2020-11-18 19:56:51,061 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 19:57:26,579 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 19:57:26,590 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 19:57:26,648 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:05:21,938 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:05:22,602 basehttp "GET /Administration/ HTTP/1.1" 200 1360293
+INFO 2020-11-18 20:05:27,327 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-18 20:05:31,471 basehttp "GET /Autorisierung/Mitarbeiter HTTP/1.1" 200 17257
+INFO 2020-11-18 20:07:10,710 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:07:10,721 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:07:10,793 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:07:11,242 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:22:21,114 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:22:21,201 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 20:22:22,451 views Kasse wurde belegt
+INFO 2020-11-18 20:22:22,510 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 20:22:22,986 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 20:24:23,130 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:24:23,142 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:24:23,196 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:24:23,651 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:25:38,548 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:25:38,634 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 20:25:39,756 views Kasse wurde belegt
+INFO 2020-11-18 20:25:39,954 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 20:25:40,429 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 20:28:41,301 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:28:41,312 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:28:41,404 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:28:41,870 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:35:42,140 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 20:35:56,956 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:35:57,028 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:35:57,182 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:44:33,832 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:44:34,034 basehttp "GET /Administration/ HTTP/1.1" 200 1367314
+INFO 2020-11-18 20:44:54,365 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-18 20:45:03,518 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:45:03,530 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:45:03,598 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:45:03,695 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:46:51,367 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:46:51,454 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 20:46:53,227 views Kasse wurde belegt
+INFO 2020-11-18 20:46:53,288 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 20:46:53,773 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 20:47:03,287 basehttp "GET /Kasse/Stornorechnung HTTP/1.1" 200 11545
+INFO 2020-11-18 20:47:07,716 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 18123
+INFO 2020-11-18 20:47:09,265 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 8405
+INFO 2020-11-18 20:47:12,392 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18123
+INFO 2020-11-18 20:47:13,466 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:47:13,479 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:47:13,555 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:47:13,647 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:48:20,456 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:48:20,674 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-18 20:48:20,748 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-18 20:48:20,749 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 304 0
+INFO 2020-11-18 20:48:20,753 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 304 0
+INFO 2020-11-18 20:48:20,753 basehttp "GET /static/css/chartjs.css HTTP/1.1" 304 0
+INFO 2020-11-18 20:48:20,760 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37833
+INFO 2020-11-18 20:48:20,761 basehttp "GET /static/js/moment.js HTTP/1.1" 200 94459
+INFO 2020-11-18 20:48:20,813 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2986
+INFO 2020-11-18 20:48:20,837 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 444218
+INFO 2020-11-18 20:48:20,875 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-18 20:48:20,943 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-18 20:48:26,709 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43438
+INFO 2020-11-18 20:48:26,910 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-18 20:48:34,699 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-18 20:48:34,912 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-18 20:48:39,265 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20952
+INFO 2020-11-18 20:48:39,456 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-18 20:48:42,524 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-18 20:48:42,729 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-18 20:48:46,864 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:48:46,876 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:48:46,936 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:48:47,029 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:49:11,002 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-18 20:49:11,101 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:49:11,248 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:50:01,029 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:01,041 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5573
+WARNING 2020-11-18 20:50:01,130 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:50:01,260 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:50:10,576 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:10,770 basehttp "GET /Administration/ HTTP/1.1" 200 1379456
+INFO 2020-11-18 20:50:15,335 basehttp "GET /Autorisierung/request HTTP/1.1" 200 10288
+INFO 2020-11-18 20:50:18,870 basehttp "GET /Autorisierung/thlthlthl/AC/accept HTTP/1.1" 200 385
+INFO 2020-11-18 20:50:20,553 views Nutzer aktiv
+INFO 2020-11-18 20:50:20,566 views Request wurde erfolgreich gelöscht
+INFO 2020-11-18 20:50:20,601 views Account wurde registriert
+INFO 2020-11-18 20:50:20,602 basehttp "POST /Autorisierung/thlthlthl/AC/accept HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:20,735 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-18 20:50:25,280 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:25,294 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:50:25,361 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:50:25,453 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:50:43,240 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:43,328 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 20:50:46,145 views Kasse wurde belegt
+INFO 2020-11-18 20:50:46,206 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:46,682 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18119
+INFO 2020-11-18 20:50:49,688 basehttp "GET /Kasse/Stornorechnung HTTP/1.1" 200 4058
+INFO 2020-11-18 20:50:51,862 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 18119
+INFO 2020-11-18 20:50:53,420 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 18119
+INFO 2020-11-18 20:50:54,780 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:50:54,794 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:50:54,864 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:50:54,956 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:51:15,631 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:51:15,821 basehttp "GET /Administration/ HTTP/1.1" 200 1385241
+INFO 2020-11-18 20:51:23,782 basehttp "GET /Administration/Produkte HTTP/1.1" 200 19658
+INFO 2020-11-18 20:51:26,896 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 200 12238
+INFO 2020-11-18 20:52:01,086 views Produkt wurde erfolgreich angelegt
+INFO 2020-11-18 20:52:01,087 basehttp "POST /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:01,649 basehttp "GET /Administration/Produkte HTTP/1.1" 200 20195
+INFO 2020-11-18 20:52:04,290 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:04,476 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:52:04,589 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:52:15,182 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:15,274 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 20:52:17,001 views Kasse wurde belegt
+INFO 2020-11-18 20:52:17,057 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:17,580 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19300
+INFO 2020-11-18 20:52:23,083 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:23,097 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 20:52:23,186 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:52:23,593 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:52:31,437 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-11-18 20:52:31,517 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 20:52:31,920 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 20:52:41,491 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:41,576 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-18 20:52:43,172 views Kasse wurde belegt
+INFO 2020-11-18 20:52:43,231 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-18 20:52:43,797 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19300
+INFO 2020-11-18 20:53:11,802 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19821
+INFO 2020-11-18 20:53:14,078 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20334
+INFO 2020-11-18 20:53:18,832 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-18 20:53:23,952 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-18 20:53:24,177 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21092
+INFO 2020-11-18 20:53:39,147 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21320
+INFO 2020-11-18 20:53:49,946 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21320
+INFO 2020-11-18 20:53:56,786 views Rechnung wurde angelegt
+INFO 2020-11-18 20:53:56,787 basehttp "POST /Kasse/Zahlung HTTP/1.1" 302 0
+INFO 2020-11-18 20:53:57,331 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19300
+INFO 2020-11-18 21:27:35,513 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 8401
+INFO 2020-11-18 21:27:37,209 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 21:27:37,223 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 21:27:37,293 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 21:27:37,397 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 21:31:44,988 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 21:31:45,656 basehttp "GET /Administration/ HTTP/1.1" 200 1395023
+INFO 2020-11-18 21:51:35,325 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-18 21:51:35,337 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 21:51:35,435 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 21:51:35,595 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-18 22:32:37,561 autoreload Watching for file changes with StatReloader
+INFO 2020-11-18 22:32:49,063 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-18 22:32:49,182 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 22:32:49,289 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-18 22:32:49,755 log Not Found: /favicon.ico
+WARNING 2020-11-18 22:32:49,756 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-18 22:32:53,419 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-18 22:32:53,614 basehttp "GET /Administration/ HTTP/1.1" 200 1397843
+INFO 2020-11-18 22:33:01,642 basehttp "GET /Administration/Attribute HTTP/1.1" 200 12408
+INFO 2020-11-18 22:33:12,657 basehttp "GET /Administration/Attribute/Erstellen? HTTP/1.1" 200 6442
+INFO 2020-11-18 22:33:14,286 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 12408
+INFO 2020-11-18 22:33:17,036 basehttp "GET /Administration/Attribute/1/Bearbeiten HTTP/1.1" 200 6475
+INFO 2020-11-18 22:33:19,086 basehttp "GET /Administration/Attribute? HTTP/1.1" 200 12408
+INFO 2020-11-20 15:57:32,128 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 15:57:49,921 basehttp "GET /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 15:57:50,216 basehttp "GET /Administration/ HTTP/1.1" 200 1399764
+INFO 2020-11-20 15:57:50,366 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:57:50,370 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:57:50,375 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:57:51,239 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 304 0
+INFO 2020-11-20 15:57:53,530 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 15:57:53,545 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-20 15:57:53,615 basehttp "GET /static/css/authorization.css HTTP/1.1" 304 0
+WARNING 2020-11-20 15:57:53,627 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 15:57:53,698 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 304 0
+WARNING 2020-11-20 15:57:54,129 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 15:57:54,235 log Not Found: /favicon.ico
+WARNING 2020-11-20 15:57:54,236 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-20 15:58:02,512 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 15:58:02,610 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 15:58:04,030 views Kasse wurde belegt
+INFO 2020-11-20 15:58:04,088 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 15:58:04,647 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 15:58:04,729 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:58:04,730 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:58:04,748 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:58:04,749 basehttp "GET /static/css/calculator.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:58:04,752 basehttp "GET /static/js/calculator.js HTTP/1.1" 304 0
+INFO 2020-11-20 15:58:08,873 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19821
+INFO 2020-11-20 15:58:11,037 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20331
+INFO 2020-11-20 15:58:12,996 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20331
+INFO 2020-11-20 15:58:13,941 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-20 15:58:15,330 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-20 15:58:15,537 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 15:58:15,593 basehttp "GET /static/css/cashbox_pay.css HTTP/1.1" 304 0
+INFO 2020-11-20 15:58:15,706 basehttp "GET /static/img/coins/1c.png HTTP/1.1" 200 364899
+INFO 2020-11-20 15:58:15,709 basehttp "GET /static/img/coins/2c.png HTTP/1.1" 200 466216
+INFO 2020-11-20 15:58:15,724 basehttp "GET /static/img/coins/10c.jpg HTTP/1.1" 200 283338
+INFO 2020-11-20 15:58:15,725 basehttp "GET /static/img/coins/20c.jpg HTTP/1.1" 200 264713
+INFO 2020-11-20 15:58:15,737 basehttp "GET /static/img/coins/5c.png HTTP/1.1" 200 634700
+INFO 2020-11-20 15:58:15,739 basehttp "GET /static/img/coins/5.jpg HTTP/1.1" 200 37007
+INFO 2020-11-20 15:58:15,760 basehttp "GET /static/img/other/reset.jpg HTTP/1.1" 200 25583
+INFO 2020-11-20 15:58:15,785 basehttp "GET /static/img/coins/2.gif HTTP/1.1" 200 101352
+INFO 2020-11-20 15:58:15,794 basehttp "GET /static/img/coins/500.jpg HTTP/1.1" 200 31709
+INFO 2020-11-20 15:58:15,801 basehttp "GET /static/img/coins/200.jpg HTTP/1.1" 200 36568
+INFO 2020-11-20 15:58:15,807 basehttp "GET /static/img/coins/20.jpg HTTP/1.1" 200 85566
+INFO 2020-11-20 15:58:15,822 basehttp "GET /static/img/coins/50.jpg HTTP/1.1" 200 58177
+INFO 2020-11-20 15:58:15,863 basehttp "GET /static/img/coins/100.jpg HTTP/1.1" 200 34884
+INFO 2020-11-20 15:58:15,864 basehttp "GET /static/img/coins/10.jpg HTTP/1.1" 200 64216
+INFO 2020-11-20 15:58:15,873 basehttp "GET /static/img/coins/1.gif HTTP/1.1" 200 84309
+INFO 2020-11-20 15:58:15,884 basehttp "GET /static/img/coins/50c.jpg HTTP/1.1" 200 301850
+INFO 2020-11-20 15:58:19,078 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 15:58:20,175 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 15:58:23,154 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21310
+INFO 2020-11-20 15:58:33,225 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21310
+INFO 2020-11-20 15:58:42,167 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21311
+INFO 2020-11-20 15:58:46,561 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21311
+INFO 2020-11-20 15:58:48,300 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21311
+INFO 2020-11-20 15:58:53,381 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 16:00:45,394 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-11-20 16:00:46,391 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:00:49,202 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-11-20 16:00:50,189 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:01:03,939 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\cashbox\views.py changed, reloading.
+INFO 2020-11-20 16:01:04,911 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:01:21,148 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:01:22,746 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 16:01:24,702 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19818
+INFO 2020-11-20 16:01:25,874 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 19818
+INFO 2020-11-20 16:01:27,092 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20331
+INFO 2020-11-20 16:01:28,262 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-20 16:01:29,734 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-20 16:01:29,955 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 16:01:31,767 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 16:01:35,810 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 16:01:37,772 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21097
+INFO 2020-11-20 16:01:40,309 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21097
+INFO 2020-11-20 16:01:42,807 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21097
+INFO 2020-11-20 16:01:45,229 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21097
+INFO 2020-11-20 16:01:46,199 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21309
+INFO 2020-11-20 16:06:35,216 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:06:36,194 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:06:53,628 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:06:54,689 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:16,752 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:17,707 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:29,761 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:30,764 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:37,701 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:38,665 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:40,531 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:41,545 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:44,723 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:45,679 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:48,811 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:49,796 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:51,678 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:52,747 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:07:58,447 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:07:59,401 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:08:11,429 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:08:12,402 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:08:16,440 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:08:17,388 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:08:46,331 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:08:47,304 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:08:58,899 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:08:59,843 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:09:06,379 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:09:07,410 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:09:13,536 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:09:28,802 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:09:29,733 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:09:34,446 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:09:39,199 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:09:59,397 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:10:00,401 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:10:05,652 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:10:06,633 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:10:09,409 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:10:10,374 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:10:21,885 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:10:22,865 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:10:25,983 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:10:30,791 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:10:30,796 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:10:30,818 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:10:30,886 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+ERROR 2020-11-20 16:10:34,830 log Internal Server Error: /Autorisierung/login
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\decorators.py", line 38, in wrapper_func
+    return view_func(request, *args, **kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py", line 154, in loginUser
+    request.logger.info('Administrator hat sich angemeldet')
+AttributeError: 'WSGIRequest' object has no attribute 'logger'
+ERROR 2020-11-20 16:10:34,833 basehttp "POST /Autorisierung/login HTTP/1.1" 500 78272
+INFO 2020-11-20 16:11:02,444 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:11:03,433 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:11:05,336 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:11:06,303 autoreload Watching for file changes with StatReloader
+INFO 2020-11-20 16:11:08,188 autoreload D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\authorization\views.py changed, reloading.
+INFO 2020-11-20 16:11:09,194 autoreload Watching for file changes with StatReloader
+WARNING 2020-11-20 16:11:10,697 log Forbidden (CSRF token missing or incorrect.): /Autorisierung/login
+WARNING 2020-11-20 16:11:10,698 basehttp "POST /Autorisierung/login HTTP/1.1" 403 2525
+INFO 2020-11-20 16:11:12,929 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-20 16:11:21,179 views Administrator hat sich angemeldet
+INFO 2020-11-20 16:11:21,228 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:11:21,419 basehttp "GET /Administration/ HTTP/1.1" 200 1435363
+INFO 2020-11-20 16:11:39,992 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:11:39,993 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:11:40,005 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:11:40,112 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:11:43,289 views Administrator hat sich angemeldet
+INFO 2020-11-20 16:11:43,336 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:11:43,551 basehttp "GET /Administration/ HTTP/1.1" 200 1436961
+INFO 2020-11-20 16:19:49,540 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:19:49,541 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:19:49,552 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:19:49,627 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:19:49,775 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:28:54,185 views Kassierer hat sich angemeldet
+INFO 2020-11-20 16:28:54,230 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:28:54,320 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 16:29:02,954 views Kasse wurde belegt
+INFO 2020-11-20 16:29:03,013 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 16:29:03,525 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 16:29:57,993 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:29:57,994 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:29:58,005 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:29:58,098 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:29:58,508 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:37:26,544 views Administrator hat sich angemeldet
+INFO 2020-11-20 16:37:26,651 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:37:26,880 basehttp "GET /Administration/ HTTP/1.1" 200 1441295
+INFO 2020-11-20 16:37:43,725 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-20 16:37:47,928 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:37:47,929 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:37:47,941 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:37:48,020 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:37:48,114 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:41:48,039 views Kassierer hat sich angemeldet
+INFO 2020-11-20 16:41:48,085 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:41:48,172 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 16:41:52,269 views Kasse wurde belegt
+INFO 2020-11-20 16:41:52,331 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 16:41:52,842 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 16:41:59,001 basehttp "GET /Kasse/Stornorechnung HTTP/1.1" 200 11545
+INFO 2020-11-20 16:42:02,894 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 19304
+INFO 2020-11-20 16:42:04,415 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 8405
+INFO 2020-11-20 16:42:06,777 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 16:42:09,103 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:42:09,104 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:42:09,116 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:42:09,186 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:42:09,273 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:47:08,738 views Administrator hat sich angemeldet
+INFO 2020-11-20 16:47:08,782 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:47:08,972 basehttp "GET /Administration/ HTTP/1.1" 200 1446802
+INFO 2020-11-20 16:47:12,409 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:47:12,410 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:47:12,421 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:47:12,506 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:47:28,699 views Analyst hat sich angemeldet
+INFO 2020-11-20 16:47:28,745 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 16:47:28,980 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-20 16:47:29,085 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2741
+INFO 2020-11-20 16:47:29,106 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8529
+INFO 2020-11-20 16:47:29,168 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6924
+INFO 2020-11-20 16:47:29,231 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 858
+INFO 2020-11-20 16:47:29,320 basehttp "GET /static/js/moment.js HTTP/1.1" 200 94459
+INFO 2020-11-20 16:47:29,369 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37833
+INFO 2020-11-20 16:47:29,392 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 528
+INFO 2020-11-20 16:47:29,393 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2986
+INFO 2020-11-20 16:47:29,420 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 444218
+INFO 2020-11-20 16:47:29,501 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-20 16:47:52,614 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-20 16:47:52,862 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-20 16:47:53,685 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43358
+INFO 2020-11-20 16:47:53,889 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-20 16:47:58,973 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-20 16:47:59,169 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+ERROR 2020-11-20 16:48:03,475 log Internal Server Error: /Analyst/Mitarbeiter/
+Traceback (most recent call last):
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 1356, in analyzation_employees_view
+    user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
+  File "D:\Ludwig\Documents\Coding\Github Projekte\Kassensystem\analyzation\views.py", line 34, in raw_sql
+    cursor.execute(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\mysql\base.py", line 74, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 321, in _query
+    self._post_get_result()
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 355, in _post_get_result
+    self._rows = self._fetch_row(0)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\MySQLdb\cursors.py", line 328, in _fetch_row
+    return self._result.fetch_row(size, self._fetch_type)
+  File "C:\Users\Ludwig\Envs\webkassensystemVENV\lib\site-packages\django\db\backends\utils.py", line 150, in typecast_time
+    return datetime.time(int(hour), int(minutes), int(seconds), int((microseconds + '000000')[:6]))
+ValueError: hour must be in 0..23
+ERROR 2020-11-20 16:48:03,477 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 500 125294
+INFO 2020-11-20 16:50:53,089 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20952
+INFO 2020-11-20 16:50:53,281 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-20 16:51:11,052 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-20 16:51:11,290 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-20 16:51:14,775 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43358
+INFO 2020-11-20 16:51:14,971 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-20 16:51:16,104 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-20 16:51:16,295 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-20 16:51:17,533 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20952
+INFO 2020-11-20 16:51:17,719 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-20 16:51:19,511 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 16:51:19,512 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 16:51:19,524 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 16:51:19,587 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:51:19,674 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:53:42,251 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-20 16:53:42,299 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:53:42,473 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:54:56,247 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-20 16:54:56,380 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8145
+WARNING 2020-11-20 16:54:56,436 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:54:56,594 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:55:37,661 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-20 16:55:37,795 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8145
+WARNING 2020-11-20 16:55:37,883 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:55:38,026 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 16:58:42,906 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-20 16:58:42,918 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5576
+WARNING 2020-11-20 16:58:42,991 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 16:58:43,136 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:00:15,458 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:00:15,508 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:00:15,700 basehttp "GET /Administration/ HTTP/1.1" 200 1467941
+INFO 2020-11-20 17:00:20,955 basehttp "GET /Autorisierung/request HTTP/1.1" 200 10291
+INFO 2020-11-20 17:00:22,736 basehttp "GET /Autorisierung/hans.mueller/AC/accept HTTP/1.1" 200 3270
+INFO 2020-11-20 17:00:25,230 views Nutzer aktiv
+INFO 2020-11-20 17:00:25,244 views Request wurde erfolgreich gelöscht
+INFO 2020-11-20 17:00:25,284 views Account wurde registriert
+INFO 2020-11-20 17:00:25,285 basehttp "POST /Autorisierung/hans.mueller/AC/accept HTTP/1.1" 302 0
+INFO 2020-11-20 17:00:25,515 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-20 17:00:29,906 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:00:29,907 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:00:29,919 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:00:30,003 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:00:30,089 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:00:43,724 views Kassierer hat sich angemeldet
+INFO 2020-11-20 17:00:43,770 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:00:43,854 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 17:00:46,566 views Kasse wurde belegt
+INFO 2020-11-20 17:00:46,626 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 17:00:47,144 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19303
+INFO 2020-11-20 17:00:48,651 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:00:48,652 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:00:48,664 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:00:48,741 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:00:48,831 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:01:12,407 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:01:12,451 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:01:12,641 basehttp "GET /Administration/ HTTP/1.1" 200 1473858
+INFO 2020-11-20 17:01:18,920 basehttp "GET /Administration/Produkte HTTP/1.1" 200 20194
+INFO 2020-11-20 17:01:24,395 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 200 12238
+INFO 2020-11-20 17:02:05,525 views Produkt wurde erfolgreich angelegt
+INFO 2020-11-20 17:02:05,526 basehttp "POST /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-11-20 17:02:06,010 basehttp "GET /Administration/Produkte HTTP/1.1" 200 20746
+INFO 2020-11-20 17:02:11,928 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:02:11,929 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:02:11,940 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:02:11,988 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:02:12,081 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:02:22,121 views Kassierer hat sich angemeldet
+INFO 2020-11-20 17:02:22,167 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:02:22,254 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 17:02:25,361 views Kasse wurde belegt
+INFO 2020-11-20 17:02:25,419 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 17:02:26,035 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 21779
+INFO 2020-11-20 17:02:57,296 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 22289
+INFO 2020-11-20 17:03:03,317 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 22799
+INFO 2020-11-20 17:03:08,491 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-20 17:03:11,897 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-20 17:03:12,120 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21095
+INFO 2020-11-20 17:03:20,864 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21095
+INFO 2020-11-20 17:03:40,162 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21095
+INFO 2020-11-20 17:03:41,740 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21308
+INFO 2020-11-20 17:03:58,209 views Rechnung wurde angelegt
+INFO 2020-11-20 17:03:58,210 basehttp "POST /Kasse/Zahlung HTTP/1.1" 302 0
+INFO 2020-11-20 17:03:58,763 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19303
+INFO 2020-11-20 17:04:17,040 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:04:17,041 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:04:17,055 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:04:17,122 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:04:17,560 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:07:49,320 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:07:49,369 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:07:49,569 basehttp "GET /Administration/ HTTP/1.1" 200 1481902
+INFO 2020-11-20 17:08:03,943 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:08:03,944 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:08:03,955 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:08:04,059 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:09:47,727 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-11-20 17:09:47,797 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:09:47,894 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:09:54,702 views Kassierer hat sich angemeldet
+INFO 2020-11-20 17:09:54,761 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:09:54,845 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 17:09:56,186 views Kasse wurde belegt
+INFO 2020-11-20 17:09:56,245 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 17:09:56,788 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 17:10:00,714 basehttp "GET /Kasse/Stornorechnung HTTP/1.1" 200 11545
+INFO 2020-11-20 17:10:03,813 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 19304
+INFO 2020-11-20 17:10:06,226 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 8405
+INFO 2020-11-20 17:10:15,171 basehttp "GET /Kasse/Kundenkartei/1/Bearbeiten HTTP/1.1" 200 8783
+INFO 2020-11-20 17:10:34,991 basehttp "POST /Kasse/Kundenkartei/1/Bearbeiten HTTP/1.1" 200 7600
+INFO 2020-11-20 17:10:37,351 basehttp "POST /Kasse/Kundenkartei/1/Bearbeiten HTTP/1.1" 200 7600
+INFO 2020-11-20 17:10:38,360 basehttp "GET /Kasse/Kundenkartei? HTTP/1.1" 200 8405
+INFO 2020-11-20 17:10:57,812 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:10:57,813 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:10:57,827 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:10:57,885 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:10:58,323 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:12:04,654 basehttp "GET /static/css/authorization.css.map HTTP/1.1" 200 691
+INFO 2020-11-20 17:12:04,654 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-20 17:12:19,952 views Analyst hat sich angemeldet
+INFO 2020-11-20 17:12:19,999 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:12:20,201 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-20 17:12:20,440 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-20 17:12:24,444 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43478
+INFO 2020-11-20 17:12:24,653 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-20 17:12:27,182 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-20 17:12:27,358 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-20 17:12:36,277 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20952
+INFO 2020-11-20 17:12:36,480 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-20 17:12:48,482 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:12:48,483 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:12:48,495 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:12:48,581 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:12:48,676 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:13:36,918 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:13:36,963 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:13:37,177 basehttp "GET /Administration/ HTTP/1.1" 200 1492411
+INFO 2020-11-20 17:13:43,388 basehttp "GET /Administration/Kunden HTTP/1.1" 200 14270
+INFO 2020-11-20 17:13:45,629 basehttp "GET /Administration/Kunden/1/L%C3%B6schen HTTP/1.1" 200 524
+INFO 2020-11-20 17:13:46,987 views Kunde wurde erfolgreich gelöscht
+INFO 2020-11-20 17:13:46,988 basehttp "POST /Administration/Kunden/1/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-11-20 17:13:47,124 basehttp "GET /Administration/Kunden HTTP/1.1" 200 13799
+INFO 2020-11-20 17:13:48,644 basehttp "GET /Administration/Kunden/2/L%C3%B6schen HTTP/1.1" 200 531
+INFO 2020-11-20 17:13:50,063 views Kunde wurde erfolgreich gelöscht
+INFO 2020-11-20 17:13:50,064 basehttp "POST /Administration/Kunden/2/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-11-20 17:13:50,199 basehttp "GET /Administration/Kunden HTTP/1.1" 200 13331
+INFO 2020-11-20 17:13:51,516 basehttp "GET /Administration/Kunden/3/L%C3%B6schen HTTP/1.1" 200 526
+INFO 2020-11-20 17:13:53,059 views Kunde wurde erfolgreich gelöscht
+INFO 2020-11-20 17:13:53,060 basehttp "POST /Administration/Kunden/3/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-11-20 17:13:53,197 basehttp "GET /Administration/Kunden HTTP/1.1" 200 12870
+INFO 2020-11-20 17:13:54,694 basehttp "GET /Administration/Kunden/4/L%C3%B6schen HTTP/1.1" 200 524
+INFO 2020-11-20 17:13:56,172 views Kunde wurde erfolgreich gelöscht
+INFO 2020-11-20 17:13:56,173 basehttp "POST /Administration/Kunden/4/L%C3%B6schen HTTP/1.1" 302 0
+INFO 2020-11-20 17:13:56,307 basehttp "GET /Administration/Kunden HTTP/1.1" 200 12417
+INFO 2020-11-20 17:14:21,469 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 8753
+INFO 2020-11-20 17:18:42,721 views Kunde wurde erfolgreich angelegt
+INFO 2020-11-20 17:18:42,722 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 302 0
+INFO 2020-11-20 17:18:42,868 basehttp "GET /Administration/Kunden HTTP/1.1" 200 12877
+INFO 2020-11-20 17:18:47,054 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 8753
+INFO 2020-11-20 17:19:19,793 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8866
+INFO 2020-11-20 17:19:21,824 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8866
+INFO 2020-11-20 17:19:33,383 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8866
+INFO 2020-11-20 17:19:36,560 basehttp "GET /Administration/Kunden HTTP/1.1" 200 12877
+INFO 2020-11-20 17:19:38,732 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 8753
+INFO 2020-11-20 17:19:52,774 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8865
+INFO 2020-11-20 17:19:59,524 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8865
+INFO 2020-11-20 17:20:05,120 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 12877
+INFO 2020-11-20 17:20:09,302 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 8753
+INFO 2020-11-20 17:20:16,373 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8866
+INFO 2020-11-20 17:26:31,460 basehttp "GET /Administration/Kunden? HTTP/1.1" 200 12877
+INFO 2020-11-20 17:26:33,318 basehttp "GET /Administration/Kunden/Erstellen? HTTP/1.1" 200 8753
+INFO 2020-11-20 17:26:40,488 basehttp "POST /Administration/Kunden/Erstellen? HTTP/1.1" 200 8858
+INFO 2020-11-20 17:26:45,305 basehttp "GET /Administration/Kunden/Erstellen HTTP/1.1" 200 8753
+WARNING 2020-11-20 17:26:48,796 log Not Found: /Administration/Kunden/
+WARNING 2020-11-20 17:26:48,797 basehttp "GET /Administration/Kunden/ HTTP/1.1" 404 12607
+INFO 2020-11-20 17:26:51,558 basehttp "GET /Administration/Kunden HTTP/1.1" 200 12877
+INFO 2020-11-20 17:26:54,028 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:26:54,029 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:26:54,042 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:26:54,114 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:26:54,209 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:35:53,862 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:35:53,905 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:35:54,111 basehttp "GET /Administration/ HTTP/1.1" 200 1503628
+INFO 2020-11-20 17:36:11,170 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-20 17:36:12,876 basehttp "GET /Autorisierung/Mitarbeiter HTTP/1.1" 200 18352
+INFO 2020-11-20 17:36:15,240 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:36:15,241 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:36:15,252 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:36:15,315 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:36:15,405 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:37:43,299 views Kassierer hat sich angemeldet
+INFO 2020-11-20 17:37:43,342 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:37:43,428 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 17:37:48,137 views Kasse wurde belegt
+INFO 2020-11-20 17:37:48,197 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 17:37:48,759 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 17:37:53,789 basehttp "GET /Kasse/Stornorechnung HTTP/1.1" 200 11545
+INFO 2020-11-20 17:38:00,003 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 19304
+INFO 2020-11-20 17:38:01,579 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 7342
+INFO 2020-11-20 17:38:05,550 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:38:05,550 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:38:05,562 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:38:05,648 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:38:05,740 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:39:04,930 views Analyst hat sich angemeldet
+INFO 2020-11-20 17:39:04,974 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:39:05,177 basehttp "GET /Analyst/ HTTP/1.1" 200 28734
+INFO 2020-11-20 17:39:05,381 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-20 17:39:09,954 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 43478
+INFO 2020-11-20 17:39:10,136 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+INFO 2020-11-20 17:39:18,364 basehttp "GET /Analyst/Kunden/ HTTP/1.1" 200 47641
+INFO 2020-11-20 17:39:18,566 basehttp "GET /Analyst/api/customers/chart/data/ HTTP/1.1" 200 2023
+INFO 2020-11-20 17:39:23,437 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20952
+INFO 2020-11-20 17:39:23,634 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-20 17:39:28,427 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:39:28,428 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:39:28,439 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:39:28,517 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:39:28,610 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:39:58,856 basehttp "GET /Autorisierung/register HTTP/1.1" 200 8055
+WARNING 2020-11-20 17:39:58,914 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:39:59,064 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:40:53,635 basehttp "POST /Autorisierung/register HTTP/1.1" 302 0
+INFO 2020-11-20 17:40:53,648 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5577
+WARNING 2020-11-20 17:40:53,706 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:40:53,840 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:41:03,454 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:41:03,499 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:41:03,693 basehttp "GET /Administration/ HTTP/1.1" 200 1514368
+INFO 2020-11-20 17:41:07,916 basehttp "GET /Autorisierung/request HTTP/1.1" 200 10295
+INFO 2020-11-20 17:41:10,672 basehttp "GET /Autorisierung/michael.meier/AC/accept HTTP/1.1" 200 3271
+INFO 2020-11-20 17:41:12,179 views Nutzer aktiv
+INFO 2020-11-20 17:41:12,193 views Request wurde erfolgreich gelöscht
+INFO 2020-11-20 17:41:12,234 views Account wurde registriert
+INFO 2020-11-20 17:41:12,235 basehttp "POST /Autorisierung/michael.meier/AC/accept HTTP/1.1" 302 0
+INFO 2020-11-20 17:41:12,390 basehttp "GET /Autorisierung/request HTTP/1.1" 200 9362
+INFO 2020-11-20 17:41:17,654 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:41:17,655 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:41:17,666 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:41:17,740 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:41:17,831 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:41:37,596 views Kassierer hat sich angemeldet
+INFO 2020-11-20 17:41:37,641 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:41:37,727 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 17:41:41,657 views Kasse wurde belegt
+INFO 2020-11-20 17:41:41,720 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 17:41:42,314 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 19304
+INFO 2020-11-20 17:41:47,498 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:41:47,499 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:41:47,512 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:41:47,579 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:41:47,674 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:42:05,330 views Administrator hat sich angemeldet
+INFO 2020-11-20 17:42:05,377 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:42:05,584 basehttp "GET /Administration/ HTTP/1.1" 200 1520287
+INFO 2020-11-20 17:42:11,249 basehttp "GET /Administration/Produkte HTTP/1.1" 200 20746
+INFO 2020-11-20 17:42:13,951 basehttp "GET /Administration/Produkte/Erstellen? HTTP/1.1" 200 12238
+INFO 2020-11-20 17:42:50,386 views Produkt wurde erfolgreich angelegt
+INFO 2020-11-20 17:42:50,387 basehttp "POST /Administration/Produkte/Erstellen? HTTP/1.1" 302 0
+INFO 2020-11-20 17:42:50,902 basehttp "GET /Administration/Produkte HTTP/1.1" 200 21268
+INFO 2020-11-20 17:42:53,439 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:42:53,440 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:42:53,452 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:42:53,508 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:42:53,605 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 17:43:04,257 views Kassierer hat sich angemeldet
+INFO 2020-11-20 17:43:04,312 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 17:43:04,403 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 17:43:07,042 views Kasse wurde belegt
+INFO 2020-11-20 17:43:07,105 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 17:43:07,688 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20321
+INFO 2020-11-20 17:43:41,628 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20842
+INFO 2020-11-20 17:43:43,063 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 21352
+INFO 2020-11-20 17:43:44,730 basehttp "GET /Kasse/Zahlungsmittel HTTP/1.1" 200 3841
+INFO 2020-11-20 17:43:48,675 basehttp "POST /Kasse/Zahlungsmittel HTTP/1.1" 302 0
+INFO 2020-11-20 17:43:48,895 basehttp "GET /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 17:43:55,241 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21096
+INFO 2020-11-20 17:44:08,716 basehttp "POST /Kasse/Zahlung HTTP/1.1" 200 21309
+INFO 2020-11-20 17:44:19,580 views Rechnung wurde angelegt
+INFO 2020-11-20 17:44:19,581 basehttp "POST /Kasse/Zahlung HTTP/1.1" 302 0
+INFO 2020-11-20 17:44:20,162 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20321
+INFO 2020-11-20 17:44:35,477 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 17:44:35,478 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 17:44:35,489 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 17:44:35,542 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 17:44:35,981 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 18:11:04,263 log Not Found: /Kasse
+WARNING 2020-11-20 18:11:04,264 basehttp "GET /Kasse HTTP/1.1" 404 2665
+INFO 2020-11-20 18:11:08,816 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 18:11:08,907 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-20 18:11:08,975 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 18:11:15,243 views Administrator hat sich angemeldet
+INFO 2020-11-20 18:11:15,286 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 18:11:15,483 basehttp "GET /Administration/ HTTP/1.1" 200 1529251
+INFO 2020-11-20 18:11:19,461 views Nutzer hat sich ausgeloggt
+INFO 2020-11-20 18:11:19,461 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-20 18:11:19,472 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-20 18:11:19,556 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-20 18:11:26,725 views Kassierer hat sich angemeldet
+INFO 2020-11-20 18:11:26,773 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-20 18:11:26,863 basehttp "GET /Kasse/Kasse HTTP/1.1" 200 3976
+INFO 2020-11-20 18:11:28,188 views Kasse wurde belegt
+INFO 2020-11-20 18:11:28,251 basehttp "POST /Kasse/Kasse HTTP/1.1" 302 0
+INFO 2020-11-20 18:11:28,831 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20321
+INFO 2020-11-20 18:14:59,256 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20313

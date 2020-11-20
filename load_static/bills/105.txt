@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 105
+vom 2020-11-18 16:54:13.370341
+
+------------------------------------
+
+Mitarbeiter: thnthnthn
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: Rabatte aufheben0% 
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Wasser 0.5L         1         0.59      0.59      
+2         Laugenstange        2         0.90      1.80      
+
+------------------------------------
+
+Gesamtkosten Netto: 2.01 Euro 
+zzgl. 19,00% MwSt. 0.38 Euro 
+
+Gesamtkosten: 2.39 Euro 

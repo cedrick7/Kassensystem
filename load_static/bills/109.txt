@@ -1,0 +1,24 @@
+
+Rechnungsnummer: 109
+vom 2020-11-20 17:44:19.375729
+
+------------------------------------
+
+Mitarbeiter: michael.meier
+Kasse: Kasse 1
+Zahlungsmittel: Bargeld
+Rabatt: Studentenrabatt20% 
+
+------------------------------------
+
+Produkte: 
+Pos.      Produkt             Anz.      Preis     Gesamtpreis    
+1         Wasser 0.5L         1         0.59      0.59      
+2         Brötchen            1         0.30      0.30      
+
+------------------------------------
+
+Gesamtkosten Netto: 0.60 Euro 
+zzgl. 19,00% MwSt. 0.11 Euro 
+
+Gesamtkosten: 0.712 Euro 
