@@ -3282,6 +3282,47 @@ INFO 2020-10-31 12:30:01,068 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1
 INFO 2020-10-31 12:30:04,397 basehttp "GET /Analyst/Umsatz/ HTTP/1.1" 200 38340
 INFO 2020-10-31 12:30:04,551 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
 WARNING 2020-10-31 12:30:04,561 log Not Found: /favicon.ico
+INFO 2020-11-07 13:32:16,869 autoreload Watching for file changes with StatReloader
+INFO 2020-11-07 13:35:26,140 autoreload Watching for file changes with StatReloader
+INFO 2020-11-07 13:38:06,887 autoreload Watching for file changes with StatReloader
+INFO 2020-11-07 13:43:31,601 autoreload Watching for file changes with StatReloader
+INFO 2020-11-07 13:54:39,004 autoreload Watching for file changes with StatReloader
+INFO 2020-11-07 13:54:52,966 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-07 13:54:53,047 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+INFO 2020-11-07 13:54:53,444 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-07 13:54:53,448 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+WARNING 2020-11-07 13:54:53,513 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-07 13:54:53,675 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+WARNING 2020-11-07 13:54:54,903 log Not Found: /favicon.ico
+WARNING 2020-11-07 13:55:00,635 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-07 13:55:52,582 basehttp "POST /Autorisierung/login HTTP/1.1" 200 5505
+WARNING 2020-11-07 13:55:52,885 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+WARNING 2020-11-07 13:55:53,085 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-07 13:55:58,194 basehttp "POST /Autorisierung/login HTTP/1.1" 200 4533
+INFO 2020-11-07 13:56:01,957 basehttp "GET /Administration/? HTTP/1.1" 200 791437
+INFO 2020-11-07 13:56:02,184 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-11-07 13:56:02,189 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-11-07 13:56:02,190 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-07 13:56:19,669 basehttp "GET /Administration/Kunden HTTP/1.1" 200 14270
+INFO 2020-11-07 13:56:27,747 basehttp "GET /Autorisierung/request HTTP/1.1" 200 11188
+INFO 2020-11-07 13:56:40,119 basehttp "GET /Administration/Kassen HTTP/1.1" 200 12937
+INFO 2020-11-07 13:57:09,526 basehttp "GET /Autorisierung/login HTTP/1.1" 200 4533
+INFO 2020-11-07 13:57:13,823 basehttp "GET /Analyst/? HTTP/1.1" 200 28597
+INFO 2020-11-07 13:57:14,083 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-07 13:57:14,087 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-07 13:57:14,089 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-07 13:57:14,089 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-07 13:57:14,095 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-07 13:57:14,095 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-07 13:57:14,097 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-07 13:57:14,099 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-07 13:57:14,102 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-07 13:57:14,255 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
+INFO 2020-11-07 13:57:37,589 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 20911
+INFO 2020-11-07 13:57:37,823 basehttp "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO 2020-11-07 13:57:38,011 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+INFO 2020-11-07 13:57:48,949 basehttp "GET /Analyst/ HTTP/1.1" 200 28597
+INFO 2020-11-07 13:57:49,334 basehttp "GET /Analyst/api/dashboard/chart/data/ HTTP/1.1" 200 961
 INFO 2020-11-12 11:30:43,971 autoreload Watching for file changes with StatReloader
 INFO 2020-11-12 11:30:46,164 basehttp "GET / HTTP/1.1" 302 0
 INFO 2020-11-12 11:30:46,289 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
