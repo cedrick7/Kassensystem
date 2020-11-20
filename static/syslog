@@ -6385,3 +6385,65 @@ WARNING 2020-11-21 00:04:04,933 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa8
 INFO 2020-11-21 00:04:05,033 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
 WARNING 2020-11-21 00:04:05,069 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
 WARNING 2020-11-21 00:04:05,070 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-21 00:07:29,977 autoreload Watching for file changes with StatReloader
+INFO 2020-11-21 00:07:30,775 basehttp "GET / HTTP/1.1" 302 0
+INFO 2020-11-21 00:07:30,864 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-21 00:07:30,878 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-21 00:07:36,106 basehttp "GET /Analyst/ HTTP/1.1" 200 32572
+INFO 2020-11-21 00:07:36,161 basehttp "GET /static/css/styles.css HTTP/1.1" 200 599
+INFO 2020-11-21 00:07:36,190 basehttp "GET /static/css/chartjs.css HTTP/1.1" 200 811
+INFO 2020-11-21 00:07:36,192 basehttp "GET /static/css/analyzation_styles.css HTTP/1.1" 200 8251
+INFO 2020-11-21 00:07:36,192 basehttp "GET /static/css/lightpicker.css HTTP/1.1" 200 6678
+INFO 2020-11-21 00:07:36,194 basehttp "GET /static/css/analyzation_navbar.css HTTP/1.1" 200 2627
+INFO 2020-11-21 00:07:36,197 basehttp "GET /static/js/datepicker.js HTTP/1.1" 200 2892
+INFO 2020-11-21 00:07:36,198 basehttp "GET /static/js/lightpicker.js HTTP/1.1" 200 37255
+INFO 2020-11-21 00:07:36,199 basehttp "GET /static/js/analyzation_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-21 00:07:36,201 basehttp "GET /static/js/moment.js HTTP/1.1" 200 92206
+INFO 2020-11-21 00:07:36,204 basehttp "GET /static/js/chartjs.js HTTP/1.1" 200 428067
+INFO 2020-11-21 00:07:36,235 basehttp "GET /static/css/styles.css.map HTTP/1.1" 200 241
+INFO 2020-11-21 00:07:36,238 basehttp "GET /static/css/lightpicker.css.map HTTP/1.1" 200 1609
+INFO 2020-11-21 00:07:36,241 basehttp "GET /static/css/analyzation_styles.css.map HTTP/1.1" 200 1564
+INFO 2020-11-21 00:07:36,242 basehttp "GET /static/css/analyzation_navbar.css.map HTTP/1.1" 200 669
+INFO 2020-11-21 00:07:37,059 basehttp "GET /Analyst/api/sales/chart/data/ HTTP/1.1" 200 1383
+WARNING 2020-11-21 00:07:37,132 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-21 00:07:37,132 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-21 00:07:42,126 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 28027
+WARNING 2020-11-21 00:07:42,133 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-21 00:07:42,133 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-21 00:07:42,683 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+WARNING 2020-11-21 00:07:42,704 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-21 00:07:42,705 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+INFO 2020-11-21 00:08:15,070 basehttp "GET /Analyst/Mitarbeiter/ HTTP/1.1" 200 26855
+INFO 2020-11-21 00:08:15,248 basehttp "GET /Analyst/api/employees/chart/data/ HTTP/1.1" 200 855
+WARNING 2020-11-21 00:08:15,267 log Not Found: /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map
+WARNING 2020-11-21 00:08:15,267 basehttp "GET /sm/c4134b711a4490a1339f56150dfaa86a9670d67329c90b95f1be6522417244c0.map HTTP/1.1" 404 2863
+ERROR 2020-11-21 00:08:23,103 log Internal Server Error: /Autorisierung/logout
+Traceback (most recent call last):
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/cedrickcandia/Desktop/Kassensystem/authorization/views.py", line 187, in logoutUser
+    worktimeobj = Worktime.objects.get(id=worktimeId)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/cedrickcandia/Desktop/venv/lib/python3.8/site-packages/django/db/models/query.py", line 429, in get
+    raise self.model.DoesNotExist(
+analyzation.models.Worktime.DoesNotExist: Worktime matching query does not exist.
+ERROR 2020-11-21 00:08:23,104 basehttp "GET /Autorisierung/logout HTTP/1.1" 500 70368
+INFO 2020-11-21 00:08:34,011 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-21 00:08:34,017 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-21 00:08:34,065 basehttp "GET /static/css/authorization.css HTTP/1.1" 200 2734
+WARNING 2020-11-21 00:08:34,075 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793
+INFO 2020-11-21 00:08:34,089 basehttp "GET /static/css/authorization.css.map HTTP/1.1" 304 0
+INFO 2020-11-21 00:08:34,428 basehttp "GET /static/img/dogs/image1.jpeg HTTP/1.1" 200 78608
+INFO 2020-11-21 00:08:39,639 views Administrator hat sich angemeldet
+INFO 2020-11-21 00:08:39,786 basehttp "POST /Autorisierung/login HTTP/1.1" 302 0
+INFO 2020-11-21 00:08:40,245 basehttp "GET /Administration/ HTTP/1.1" 200 1572336
+INFO 2020-11-21 00:08:40,296 basehttp "GET /static/css/administration_navbar.css HTTP/1.1" 200 2847
+INFO 2020-11-21 00:08:40,298 basehttp "GET /static/css/administration_styles.css HTTP/1.1" 200 5051
+INFO 2020-11-21 00:08:40,312 basehttp "GET /static/js/administration_navbar.js HTTP/1.1" 200 514
+INFO 2020-11-21 00:08:40,333 basehttp "GET /static/css/administration_styles.css.map HTTP/1.1" 200 1090
+INFO 2020-11-21 00:08:40,334 basehttp "GET /static/css/administration_navbar.css.map HTTP/1.1" 200 722
+WARNING 2020-11-21 00:08:40,861 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:08:40,862 basehttp "GET /favicon.ico HTTP/1.1" 404 2683

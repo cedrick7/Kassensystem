@@ -271,20 +271,6 @@
 
         }
 
-        console.log('zeiten')
-        console.log({{ employee_data|safe }})
-        console.log('usernames')
-        console.log(employee_times_data_usernames)
-        console.log('labels')
-        console.log(employee_times_data_username_days)
-        console.log('hours')
-        console.log(employee_times_data_username_hours)
-
-
-        console.log(' ')
-        console.log(' ')
-        console.log(' ')
-
         //var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         var days = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
         var weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
@@ -300,8 +286,6 @@
             }
             counter++;
         }
-
-        console.log(labels)
 
         // mitarbeiterzeiten
         for (let i = 0; i < employee_times_data_usernames.length; i++) {
@@ -368,22 +352,6 @@
             }
             employees_revenue_data_hours.push(tmpRevenue);
         }
-
-
-
-
-
-
-        console.log('')
-        console.log('')
-        console.log('')
-        console.log(employees_times_data_hours)
-
-
-        console.log(' ')
-        console.log(' ')
-
-
 
         // COLORS
         var color_background = ['rgba(255,99,132,0.2)', 'rgba(61,236,245,0.2)', 'rgba(50,133,250,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(50,133,250,0.2)', 'rgba(165,97,255,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(254,177,249,0.2)', 'rgba(255,133,102,0.2)', 'rgba(243,211,131,0.2)', 'rgba(50,133,250,0.2)']
