@@ -6447,3 +6447,75 @@ INFO 2020-11-21 00:08:40,333 basehttp "GET /static/css/administration_styles.css
 INFO 2020-11-21 00:08:40,334 basehttp "GET /static/css/administration_navbar.css.map HTTP/1.1" 200 722
 WARNING 2020-11-21 00:08:40,861 log Not Found: /favicon.ico
 WARNING 2020-11-21 00:08:40,862 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:12:00,127 basehttp "GET /Administration/ HTTP/1.1" 200 1574266
+INFO 2020-11-21 00:13:34,656 basehttp "GET /Administration/ HTTP/1.1" 200 1574500
+INFO 2020-11-21 00:13:51,986 basehttp "GET /Administration/ HTTP/1.1" 200 1574734
+INFO 2020-11-21 00:14:19,680 basehttp "GET /Administration/ HTTP/1.1" 200 1574968
+INFO 2020-11-21 00:15:32,455 basehttp "GET /Administration/Produkte HTTP/1.1" 200 21268
+WARNING 2020-11-21 00:15:32,740 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:15:32,740 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:16:05,102 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20292
+INFO 2020-11-21 00:16:05,202 basehttp "GET /static/css/cashbox_dashboard.css HTTP/1.1" 200 3806
+INFO 2020-11-21 00:16:05,208 basehttp "GET /static/css/cashbox_navbar.css HTTP/1.1" 304 0
+INFO 2020-11-21 00:16:05,210 basehttp "GET /static/css/cart-calculator.css HTTP/1.1" 304 0
+INFO 2020-11-21 00:16:05,210 basehttp "GET /static/css/calculator.css HTTP/1.1" 304 0
+INFO 2020-11-21 00:16:05,211 basehttp "GET /static/js/calculator.js HTTP/1.1" 304 0
+INFO 2020-11-21 00:16:05,262 basehttp "GET /static/css/calculator.css.map HTTP/1.1" 304 0
+INFO 2020-11-21 00:16:05,263 basehttp "GET /static/css/cart-calculator.css.map HTTP/1.1" 200 553
+INFO 2020-11-21 00:16:05,264 basehttp "GET /static/css/cashbox_dashboard.css.map HTTP/1.1" 200 587
+INFO 2020-11-21 00:16:05,264 basehttp "GET /static/css/cashbox_navbar.css.map HTTP/1.1" 200 592
+INFO 2020-11-21 00:24:19,235 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20252
+INFO 2020-11-21 00:24:42,785 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20252
+INFO 2020-11-21 00:24:53,041 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20252
+INFO 2020-11-21 00:25:01,184 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20252
+INFO 2020-11-21 00:25:10,664 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20252
+INFO 2020-11-21 00:25:15,915 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20766
+INFO 2020-11-21 00:25:19,795 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 20766
+INFO 2020-11-21 00:25:23,566 basehttp "POST /Kasse/Warenkorb HTTP/1.1" 200 21279
+INFO 2020-11-21 00:27:24,716 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20297
+INFO 2020-11-21 00:28:09,306 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20297
+INFO 2020-11-21 00:28:58,258 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20330
+INFO 2020-11-21 00:29:47,388 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20526
+INFO 2020-11-21 00:29:50,137 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20526
+INFO 2020-11-21 00:30:51,439 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20548
+INFO 2020-11-21 00:32:16,679 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20569
+INFO 2020-11-21 00:32:25,231 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20569
+INFO 2020-11-21 00:32:44,612 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20582
+INFO 2020-11-21 00:33:34,243 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20613
+INFO 2020-11-21 00:36:13,372 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20682
+INFO 2020-11-21 00:36:18,765 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 7321
+INFO 2020-11-21 00:36:18,820 basehttp "GET /static/css/cashbox_pay.css HTTP/1.1" 200 2380
+INFO 2020-11-21 00:36:18,887 basehttp "GET /static/css/cashbox_pay.css.map HTTP/1.1" 200 516
+WARNING 2020-11-21 00:36:18,895 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:36:18,895 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:36:23,301 basehttp "GET /Kasse/Kundenkartei/5/Bearbeiten HTTP/1.1" 200 8767
+WARNING 2020-11-21 00:36:23,423 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:36:23,423 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:36:36,546 basehttp "GET /Kasse/Kundenkartei HTTP/1.1" 200 7321
+INFO 2020-11-21 00:36:37,872 basehttp "GET /Kasse/Warenkorb HTTP/1.1" 200 20682
+INFO 2020-11-21 00:36:40,558 basehttp "GET /Kasse/Stornorechnung HTTP/1.1" 200 4058
+WARNING 2020-11-21 00:36:40,662 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:36:40,663 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:36:49,563 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 20682
+WARNING 2020-11-21 00:36:49,685 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:36:49,685 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:39:08,894 basehttp "GET /Kasse/Warenkorb? HTTP/1.1" 200 20682
+WARNING 2020-11-21 00:39:48,700 log Not Found: /Admin/
+WARNING 2020-11-21 00:39:48,701 basehttp "GET /Admin/ HTTP/1.1" 404 2668
+WARNING 2020-11-21 00:39:48,794 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:39:48,794 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:39:55,810 basehttp "GET /Administration/Produkte HTTP/1.1" 200 21268
+INFO 2020-11-21 00:39:59,885 basehttp "GET /Administration/ HTTP/1.1" 200 1587672
+INFO 2020-11-21 00:40:10,848 basehttp "GET /Administration/Datensicherungen HTTP/1.1" 200 12382
+WARNING 2020-11-21 00:40:11,023 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:40:11,024 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:40:29,849 basehttp "GET /Administration/Attribute HTTP/1.1" 200 12399
+WARNING 2020-11-21 00:40:30,072 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:40:30,072 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:40:38,879 basehttp "GET /Autorisierung/Mitarbeiter HTTP/1.1" 200 18902
+WARNING 2020-11-21 00:40:39,056 log Not Found: /favicon.ico
+WARNING 2020-11-21 00:40:39,056 basehttp "GET /favicon.ico HTTP/1.1" 404 2683
+INFO 2020-11-21 00:41:08,747 views Nutzer hat sich ausgeloggt
+INFO 2020-11-21 00:41:08,748 basehttp "GET /Autorisierung/logout HTTP/1.1" 302 0
+INFO 2020-11-21 00:41:08,760 basehttp "GET /Autorisierung/login HTTP/1.1" 200 5409
+WARNING 2020-11-21 00:41:08,848 basehttp "GET /static/js/forms_validation.js HTTP/1.1" 404 1793

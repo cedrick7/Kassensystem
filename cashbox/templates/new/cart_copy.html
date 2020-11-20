@@ -14,17 +14,17 @@
 			</tr>
 			</thead>
 			<tbody>
-				
-				{% for instance in shoppingcart %}
-					<tr>
-						<td>{{ forloop.counter }}</td>
-						<td>{{ instance|length }} x</td>
-						<td>{{ instance.0 }}</td>
-						<td>{{ instance.0.costs }} €</td>
-						<td>{{ instance.0.costs|mult:instance}} €</td>
-						
-						
-						<!--
+
+			{% for instance in shoppingcart %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td>{{ instance|length }} x</td>
+					<td>{{ instance.0 }}</td>
+					<td>{{ instance.0.costs }} €</td>
+					<td>{{ instance.0.costs|mult:instance }} €</td>
+
+
+					<!--
 						<td>{{ instance.0.id }}</td>
 						
 						<td>
@@ -40,9 +40,9 @@
 
 
 						</td>-->
-					</tr>
-				{% endfor %}
-				
+				</tr>
+			{% endfor %}
+
 			<!-- <tr>
 				<td>2</td>
 				<td>1x</td>
@@ -76,22 +76,25 @@
 				<div class="col-12">
 					<p class="card-element">Insgesamt: {{ totalcosts }} €</p>
 				</div>
-				<div class="col-6">
+				<div class="col-6" style="visibility:hidden;display:none;">
 					{{ form.payment }}
 				</div>
-				<div class="col-6">
-					<form name="resetShoppingcart" action="{% url 'cashbox:cashbox_dashboard' %}" method="GET"> {% csrf_token %}
+				<div class="col-12" style="align-items: baseline;">
+					<div class="col-6">
+						<a href="{% url 'cashbox:paymenttool_choose' %}" class="btn btn-primary">Zahlen</a>
+					</div>
+					<div class="col-6" style="display: flex;justify-content: center;align-content: center;">
+						<form name="resetShoppingcart" action="{% url 'cashbox:cashbox_dashboard' %}"
+						      method="GET"> {% csrf_token %}
 
-						<button type="submit" class="btn btn-primary btn-sm">
-							<input type="hidden" name="reset">
-							<p class="product-name">Reset</p>
+							<button type="submit" class="btn btn-primary btn-sm" style="padding: .375rem .75rem;text-align: center;vertical-align: middle;display: inline-block;font-weight: 400;border: 1px solid transparent;padding: .375rem .75rem;font-size: 1rem;line-height: 1.5;border-radius: .25rem;width:76px;height:38px">
+								<input type="hidden" name="reset">
+								<p class="product-name">Reset</p>
 
-						</button>
-					
-					</form>
-				</div>
-				<div class="col-6">
-					<a href="{% url 'cashbox:paymenttool_choose' %}" class="btn btn-primary">Zahlen</a>
+							</button>
+
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
