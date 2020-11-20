@@ -1,10 +1,37 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+
+<!-- Head -->
+{% block specific %}
+<title>Login</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/authorization.css' %}" />
+{% endblock specific %}
+
+
 {% block content %}
 
-<h1>Delete </h1>
-    <form action="" method="POST"> {% csrf_token %}
-        <h1>Möchtest du die Anfrage von "{{ object.username }}" wirklich {{reaktion}}?</h1>
-        <p>
-            <input type="submit" value="Ja" /> <a href="{% url 'authorization:request' %}">Abbrechen</a>
-        </p>
-    </form> 
+<div class="container" id="body">
+    <div class="card col-12">
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+
+                    <h1>Annehmen </h1>
+                    <form action="" method="POST"> {% csrf_token %}
+                        <h1>Möchtest du die Anfrage von "{{ object.username }}" wirklich {{reaktion}}?</h1>
+                        <p>
+                            <input type="submit" class="btn btn-primary btn-sm" value="Ja" /> <a href="{% url 'authorization:request' %}">Abbrechen</a>
+                        </p>
+                    </form> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

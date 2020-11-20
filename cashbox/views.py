@@ -274,9 +274,9 @@ class cashbox_payment_view(View):
         context={
             
             "cashbox":cashbox,
-            "total":total, 
+            "total":round(total,2), 
             "fehlenderbetrag":total,
-            "amountpaid":amountpaid,
+            "amountpaid":round(amountpaid,2),
             "rabatte":rabatte,
         }
         return render(request, self.template_name, context)
@@ -364,11 +364,11 @@ class cashbox_payment_view(View):
         
             context={
                 "cashbox":cashbox,
-                "total":total,
-                "amountpaid":amountpaid,
-                "fehlenderbetrag":fehlenderbetrag,
-                "rückzahlung":rückzahlung,
-                "minValue":minValue,
+                "total":round(total,2),
+                "amountpaid":round(amountpaid,2),
+                "fehlenderbetrag":round(fehlenderbetrag,2),
+                "rückzahlung":round(rückzahlung,2),
+                "minValue":round(minValue,2),
                 "tresor":safe,
                 "rabatte":rabatte,
             }
