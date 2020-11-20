@@ -131,25 +131,25 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                 tmp = "Sonntag"
 
             if i.Typ == "PR":
-               revenue_products_data.append([tmp,i.Summe]) 
+               revenue_products_data.append([tmp,float(i.Summe)])
             elif i.Typ == "DI":
-                revenue_services_data.append([tmp,i.Summe])
+                revenue_services_data.append([tmp,float(i.Summe)])
         
         for i in query2_result:
             if i.Wochentag == 0:
-                revenue_total_data.append(["Montag",i.Summe])
+                revenue_total_data.append(["Montag",float(i.Summe)])
             elif i.Wochentag == 1:
-                revenue_total_data.append(["Dienstag",i.Summe])
+                revenue_total_data.append(["Dienstag",float(i.Summe)])
             elif i.Wochentag == 2:
-                revenue_total_data.append(["Mittwoch",i.Summe])
+                revenue_total_data.append(["Mittwoch",float(i.Summe)])
             elif i.Wochentag == 3:
-                revenue_total_data.append(["Donnerstag",i.Summe])
+                revenue_total_data.append(["Donnerstag",float(i.Summe)])
             elif i.Wochentag == 4:
-                revenue_total_data.append(["Freitag",i.Summe])
+                revenue_total_data.append(["Freitag",float(i.Summe)])
             elif i.Wochentag == 5:
-                revenue_total_data.append(["Samstag",i.Summe])
+                revenue_total_data.append(["Samstag",float(i.Summe)])
             elif i.Wochentag ==6:
-                revenue_total_data.append(["Sonntag",i.Summe])
+                revenue_total_data.append(["Sonntag",float(i.Summe)])
 
         ## chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart] ##
         query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
@@ -165,13 +165,14 @@ def analyzation_dashboard_view(request, *args, **kwargs):
         products_data = []
 
         #Festwerte
+        products_chart_legend = 'TOP 5 Produkte'
         products_chart_x_axes = 'Produkte'
         products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
         #Dynamische Werte füllen
         for i in query_result:
             products_chart_labels.append(i.Produkt)
-            products_data.append(i.Summe)
+            products_data.append(float(i.Summe))
         
         ## chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] ##
         query = "SELECT pc.title AS Kategorie, SUM(cbp.amount) AS Summe \
@@ -192,7 +193,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
         services_chart_legend = 'TOP 5 Dienstleistungen'
         #Dynamische Werte füllen
         for i in query_result:
-            services_data.append(i.Summe)
+            services_data.append(float(i.Summe))
             services_chart_labels.append(i.Kategorie)
         
 
@@ -218,6 +219,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                    #chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart]
                    'products_chart_labels' : products_chart_labels,
                    'products_data' : products_data,
+                   'products_chart_legend': products_chart_legend,
                    'products_chart_x_axes' : products_chart_x_axes,
                    'products_chart_y_axes' : products_chart_y_axes,
                    # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
@@ -283,25 +285,25 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                     tmp = "Sonntag"
 
                 if i.Typ == "PR":
-                    revenue_products_data.append([tmp,i.Summe]) 
+                    revenue_products_data.append([tmp,float(i.Summe)])
                 elif i.Typ == "DI":
-                    revenue_services_data.append([tmp,i.Summe])
+                    revenue_services_data.append([tmp,float(i.Summe)])
             
             for i in query2_result:
                 if i.Wochentag == 0:
-                    revenue_total_data.append(["Montag",i.Summe])
+                    revenue_total_data.append(["Montag",float(i.Summe)])
                 elif i.Wochentag == 1:
-                    revenue_total_data.append(["Dienstag",i.Summe])
+                    revenue_total_data.append(["Dienstag",float(i.Summe)])
                 elif i.Wochentag == 2:
-                    revenue_total_data.append(["Mittwoch",i.Summe])
+                    revenue_total_data.append(["Mittwoch",float(i.Summe)])
                 elif i.Wochentag == 3:
-                    revenue_total_data.append(["Donnerstag",i.Summe])
+                    revenue_total_data.append(["Donnerstag",float(i.Summe)])
                 elif i.Wochentag == 4:
-                    revenue_total_data.append(["Freitag",i.Summe])
+                    revenue_total_data.append(["Freitag",float(i.Summe)])
                 elif i.Wochentag == 5:
-                    revenue_total_data.append(["Samstag",i.Summe])
+                    revenue_total_data.append(["Samstag",float(i.Summe)])
                 elif i.Wochentag ==6:
-                    revenue_total_data.append(["Sonntag",i.Summe])
+                    revenue_total_data.append(["Sonntag",float(i.Summe)])
 
 
         elif request.POST.get("prdktfltr"):
@@ -323,13 +325,14 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                 products_data = []
 
                 #Festwerte
+                products_chart_legend = 'TOP 5 Produkte'
                 products_chart_x_axes = 'Produkte'
                 products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
                 #Dynamische Werte füllen
                 for i in query_result:
                     products_chart_labels.append(i.Produkt)
-                    products_data.append(i.Summe)
+                    products_data.append(float(i.Summe))
         
             elif limit == "10":
                 print("10")
@@ -347,13 +350,14 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                 products_data = []
 
                 #Festwerte
+                products_chart_legend = 'TOP 10 Produkte'
                 products_chart_x_axes = 'Produkte'
                 products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
                 #Dynamische Werte füllen
                 for i in query_result:
                     products_chart_labels.append(i.Produkt)
-                    products_data.append(i.Summe)
+                    products_data.append(float(i.Summe))
 
         elif request.POST.get("dnstlstngfltr"):
            print("Dienstleistungsfilter")
@@ -379,7 +383,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                 services_chart_legend = 'TOP 5 Dienstleistungen'
                 #Dynamische Werte füllen
                 for i in query_result:
-                    services_data.append(i.Summe)
+                    services_data.append(float(i.Summe))
                     services_chart_labels.append(i.Kategorie)
         
            elif limit == "10":
@@ -403,7 +407,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                 services_chart_legend = 'TOP 5 Dienstleistungen'
                 #Dynamische Werte füllen
                 for i in query_result:
-                    services_data.append(i.Summe)
+                    services_data.append(float(i.Summe))
                     services_chart_labels.append(i.Kategorie)
 
         #context
@@ -427,6 +431,7 @@ def analyzation_dashboard_view(request, *args, **kwargs):
                    #chart no.2 - Produkte Überblick (TOP-5 Ranking) [bar-chart]
                    'products_chart_labels' : products_chart_labels,
                    'products_data' : products_data,
+                   'products_chart_legend': products_chart_legend,
                    'products_chart_x_axes' : products_chart_x_axes,
                    'products_chart_y_axes' : products_chart_y_axes,
                    # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart] 
@@ -567,6 +572,7 @@ def analyzation_sales_view(request, *args, **kwargs):
         products_data = []
 
         #Festwerte
+        products_chart_legend = 'TOP 5 Produkte'
         products_chart_x_axes = 'Produkte'
         products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
@@ -615,36 +621,40 @@ def analyzation_sales_view(request, *args, **kwargs):
             payment_chart_labels.append(i.Titel)
 
         ## chart no.5 - Stoßzeiten [line-chart] ##
-        query = "SELECT WEEKDAY(DATE(cb.creation)) AS Wochentag, COUNT(cb.id) AS Summe FROM cashbox_bill AS cb \
-                WHERE creation >= date_sub(current_date(), INTERVAL 7 DAY) AND creation <= current_date() \
-                GROUP BY Wochentag \
-                ORDER BY Wochentag DESC"
-
-        #Dynamische Werte
-        query_result = raw_sql(query)
+        # Dynamische Werte
         peak_times_data = []
         peak_times_chart_labels = []
-        #Festwerte
+        # Festwerte
         peak_times_chart_legend = 'Stoßzeiten in Tagen'
         peak_times_chart_x_axes = 'Zeit in Tagen'
-        peak_times_chart_y_axes = 'Anzahl der Verkäufe'
-        #Dynamische Werte füllen
-        for i in query_result:
-            if i.Wochentag == 0:
+        peak_times_chart_y_axes = 'Durchnittlicher Umsatz'
+        # Dynamische Werte füllen
+        for weekday in range(7):
+            query = "SELECT DATE(creation) AS Datum, COUNT(cb.id) AS Verkäufe \
+                         FROM cashbox_bill AS cb WHERE WEEKDAY(DATE(cb.creation)) = " + str(weekday) + " \
+                         GROUP BY DATE(cb.creation)"
+            query_result = raw_sql(query)
+            passed = len(query_result)
+            sum = 0
+            for i in range(passed):
+                sum += query_result[i].Verkäufe
+            print(str(weekday) + " " + str(passed) + " " + str(sum))
+
+            if weekday == 0:
                 peak_times_chart_labels.append("Montag")
-            elif i.Wochentag == 1:
+            elif weekday == 1:
                 peak_times_chart_labels.append("Dienstag")
-            elif i.Wochentag == 2:
+            elif weekday == 2:
                 peak_times_chart_labels.append("Mittwoch")
-            elif i.Wochentag == 3:
+            elif weekday == 3:
                 peak_times_chart_labels.append("Donnerstag")
-            elif i.Wochentag == 4:
+            elif weekday == 4:
                 peak_times_chart_labels.append("Freitag")
-            elif i.Wochentag == 5:
+            elif weekday == 5:
                 peak_times_chart_labels.append("Samstag")
-            elif i.Wochentag == 6:
+            elif weekday == 6:
                 peak_times_chart_labels.append("Sonntag")
-            peak_times_data.append(float(i.Summe))
+            peak_times_data.append(round(sum / passed, 2))
 
         print(
             "\n===============================================================================================================")
@@ -679,6 +689,7 @@ def analyzation_sales_view(request, *args, **kwargs):
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
             'products_chart_labels':products_chart_labels,
             'products_data':products_data,
+            'products_chart_legend': products_chart_legend,
             'products_chart_x_axes':products_chart_x_axes,
             'products_chart_y_axes':products_chart_y_axes,
             # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
@@ -695,7 +706,8 @@ def analyzation_sales_view(request, *args, **kwargs):
             'peak_times_data': peak_times_data,
             'peak_times_chart_labels' : peak_times_chart_labels,
             'peak_times_chart_legend' : peak_times_chart_legend,
-            'peak_times_chart_x_axes' : peak_times_chart_x_axes
+            'peak_times_chart_x_axes' : peak_times_chart_x_axes,
+            'peak_times_chart_y_axes': peak_times_chart_y_axes
             }
     
     elif request.method == 'POST':
@@ -794,13 +806,14 @@ def analyzation_sales_view(request, *args, **kwargs):
                 products_data = []
 
                 #Festwerte
+                products_chart_legend = 'TOP 5 Produkte'
                 products_chart_x_axes = 'Produkte'
                 products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
                 #Dynamische Werte füllen
                 for i in query_result:
                     products_chart_labels.append(i.Produkt)
-                    products_data.append(i.Summe)
+                    products_data.append(float(i.Summe))
         
             elif limit == '10':
                 query = "SELECT product.description AS Produkt, SUM(DISTINCT(amount)) AS Summe \
@@ -816,13 +829,14 @@ def analyzation_sales_view(request, *args, **kwargs):
                 products_data = []
 
                 #Festwerte
+                products_chart_legend = 'TOP 10 Produkte'
                 products_chart_x_axes = 'Produkte'
                 products_chart_y_axes = 'Anzahl der Verkäufe pro Produkt'
 
                 #Dynamische Werte füllen
                 for i in query_result:
                     products_chart_labels.append(i.Produkt)
-                    products_data.append(i.Summe)
+                    products_data.append(float(i.Summe))
         
 
         elif request.POST.get("dnstlstngsfltr"):
@@ -848,7 +862,7 @@ def analyzation_sales_view(request, *args, **kwargs):
                 services_chart_legend = 'TOP 5 Dienstleistungen'
                 #Dynamische Werte füllen
                 for i in query_result:
-                    services_data.append(i.Summe)
+                    services_data.append(float(i.Summe))
                     services_chart_labels.append(i.Kategorie)
         
             elif limit == '10':
@@ -868,10 +882,10 @@ def analyzation_sales_view(request, *args, **kwargs):
                 #Festwerte
                 services_chart_x_axes = 'Kategoriename'
                 services_chart_y_axes = 'Anzahl der Verkäufe pro Kategorie'
-                services_chart_legend = 'TOP 5 Dienstleistungen'
+                services_chart_legend = 'TOP 10 Dienstleistungen'
                 #Dynamische Werte füllen
                 for i in query_result:
-                    services_data.append(i.Summe)
+                    services_data.append(float(i.Summe))
                     services_chart_labels.append(i.Kategorie)
 
         elif request.POST.get("stßztnfltr"):
@@ -920,26 +934,42 @@ def analyzation_sales_view(request, *args, **kwargs):
                     sub+=1
                     date = datetime.today() - timedelta(days=sub)
                     date_day = date.weekday()
-            
-                ## chart no.5 - Stoßzeiten [line-chart] ##
-                query = "SELECT TIME(DATE_FORMAT(creation, '%Y-%m-%d %H:00:00')) AS Time, \
-                        COUNT(cb.id) AS Summe \
-                        FROM cashbox_bill AS cb \
-                        WHERE DATE(creation) = DATE_SUB(CURDATE(), INTERVAL " + str(sub) + " DAY) \
-                        GROUP BY Time ASC"
 
-                #Dynamische Werte
-                query_result = raw_sql(query)
-                peak_times_data = []
-                peak_times_chart_labels = []
-                #Festwerte
-                peak_times_chart_legend = 'Stoßzeiten in Stunden'
-                peak_times_chart_x_axes = 'Zeit in Stunden'
-                peak_times_chart_y_axes = 'Anzahl der Verkäufe'
-                #Dynamische Werte füllen
-                for i in query_result:
-                    peak_times_data.append(i.Summe)
-                    peak_times_chart_labels.append(i.Time)
+                    ## chart no.5 - Stoßzeiten [line-chart] ##
+                    # Dynamische Werte
+                    peak_times_data = []
+                    peak_times_chart_labels = []
+                    # Festwerte
+                    peak_times_chart_legend = 'Stoßzeiten in Tagen'
+                    peak_times_chart_x_axes = 'Zeit in Tagen'
+                    peak_times_chart_y_axes = 'Durchnittlicher Umsatz'
+                    # Dynamische Werte füllen
+                    for weekday in range(7):
+                        query = "SELECT DATE(creation) AS Datum, COUNT(cb.id) AS Verkäufe \
+                                     FROM cashbox_bill AS cb WHERE WEEKDAY(DATE(cb.creation)) = " + str(weekday) + " \
+                                     GROUP BY DATE(cb.creation)"
+                        query_result = raw_sql(query)
+                        passed = len(query_result)
+                        sum = 0
+                        for i in range(passed):
+                            sum += query_result[i].Verkäufe
+                        print(str(weekday) + " " + str(passed) + " " + str(sum))
+
+                        if weekday == 0:
+                            peak_times_chart_labels.append("Montag")
+                        elif weekday == 1:
+                            peak_times_chart_labels.append("Dienstag")
+                        elif weekday == 2:
+                            peak_times_chart_labels.append("Mittwoch")
+                        elif weekday == 3:
+                            peak_times_chart_labels.append("Donnerstag")
+                        elif weekday == 4:
+                            peak_times_chart_labels.append("Freitag")
+                        elif weekday == 5:
+                            peak_times_chart_labels.append("Samstag")
+                        elif weekday == 6:
+                            peak_times_chart_labels.append("Sonntag")
+                        peak_times_data.append(round(sum / passed, 2))
 
         print(date_begin.day)
         print(date_end.day)
@@ -969,6 +999,7 @@ def analyzation_sales_view(request, *args, **kwargs):
             # chart no.2 - Produkte Überblick (TOP-10 Ranking) [bar-chart]
             'products_chart_labels':products_chart_labels,
             'products_data':products_data,
+            'products_chart_legend': products_chart_legend,
             'products_chart_x_axes':products_chart_x_axes,
             'products_chart_y_axes':products_chart_y_axes,
             # chart no.3 - Dienstleistungen Überblick (TOP-X Ranking) [bar-chart]
@@ -1001,35 +1032,40 @@ def analyzation_customers_view(request, *args, **kwargs):
         customerForm = FormCustomerFilter()
         # Standarddaten
         ## chart no.1 - Stoßzeiten [line-chart] ##
-        query = "SELECT WEEKDAY(DATE(cb.creation)) AS Wochentag, COUNT(cb.id) AS Summe FROM cashbox_bill AS cb \
-                WHERE creation >= date_sub(current_date(), INTERVAL 7 DAY) AND creation <= current_date() \
-                GROUP BY Wochentag \
-                ORDER BY Wochentag DESC"
-        #Dynamische Werte
-        query_result = raw_sql(query)
+        # Dynamische Werte
         peak_times_data = []
         peak_times_chart_labels = []
-        #Festwerte
+        # Festwerte
         peak_times_chart_legend = 'Stoßzeiten in Tagen'
         peak_times_chart_x_axes = 'Zeit in Tagen'
-        peak_times_chart_y_axes = 'Anzahl der Verkäufe'
-        #Dynamische Werte füllen
-        for i in query_result:
-            if i.Wochentag == 0:
+        peak_times_chart_y_axes = 'Durchnittlicher Umsatz'
+        # Dynamische Werte füllen
+        for weekday in range(7):
+            query = "SELECT DATE(creation) AS Datum, COUNT(cb.id) AS Verkäufe \
+                                 FROM cashbox_bill AS cb WHERE WEEKDAY(DATE(cb.creation)) = " + str(weekday) + " \
+                                 GROUP BY DATE(cb.creation)"
+            query_result = raw_sql(query)
+            passed = len(query_result)
+            sum = 0
+            for i in range(passed):
+                sum += query_result[i].Verkäufe
+            print(str(weekday) + " " + str(passed) + " " + str(sum))
+
+            if weekday == 0:
                 peak_times_chart_labels.append("Montag")
-            elif i.Wochentag == 1:
+            elif weekday == 1:
                 peak_times_chart_labels.append("Dienstag")
-            elif i.Wochentag == 2:
+            elif weekday == 2:
                 peak_times_chart_labels.append("Mittwoch")
-            elif i.Wochentag == 3:
+            elif weekday == 3:
                 peak_times_chart_labels.append("Donnerstag")
-            elif i.Wochentag == 4:
+            elif weekday == 4:
                 peak_times_chart_labels.append("Freitag")
-            elif i.Wochentag == 5:
+            elif weekday == 5:
                 peak_times_chart_labels.append("Samstag")
-            elif i.Wochentag == 6:
+            elif weekday == 6:
                 peak_times_chart_labels.append("Sonntag")
-            peak_times_data.append(i.Summe)
+            peak_times_data.append(round(sum / passed, 2))
 
         ## chart no.3 - Zahlungsmethoden [doughnut-chart] ##
         query = "SELECT cp.title AS Titel, (ROUND(COUNT(cp.id) / (SELECT COUNT(*) AS ges FROM cashbox_bill), 2) * 100) AS Summe \
@@ -1126,37 +1162,41 @@ def analyzation_customers_view(request, *args, **kwargs):
             print("Stoßzeitenfilter")
             typ = customerForm.data["radioDAY"]
             if typ == "day":
-                ## chart no.5 - Stoßzeiten [line-chart] ##
-                query = "SELECT WEEKDAY(DATE(cb.creation)) AS Wochentag, COUNT(cb.id) AS Summe FROM cashbox_bill AS cb \
-                        WHERE creation >= date_sub(current_date(), INTERVAL 7 DAY) AND creation <= current_date() \
-                        GROUP BY Wochentag \
-                        ORDER BY Wochentag DESC"
-
-                #Dynamische Werte
-                query_result = raw_sql(query)
+                ## chart no.1 - Stoßzeiten [line-chart] ##
+                # Dynamische Werte
                 peak_times_data = []
                 peak_times_chart_labels = []
-                #Festwerte
+                # Festwerte
                 peak_times_chart_legend = 'Stoßzeiten in Tagen'
                 peak_times_chart_x_axes = 'Zeit in Tagen'
-                peak_times_chart_y_axes = 'Anzahl der Verkäufe'
-                #Dynamische Werte füllen
-                for i in query_result:
-                    if i.Wochentag == 0:
+                peak_times_chart_y_axes = 'Durchnittlicher Umsatz'
+                # Dynamische Werte füllen
+                for weekday in range(7):
+                    query = "SELECT DATE(creation) AS Datum, COUNT(cb.id) AS Verkäufe \
+                                         FROM cashbox_bill AS cb WHERE WEEKDAY(DATE(cb.creation)) = " + str(weekday) + " \
+                                         GROUP BY DATE(cb.creation)"
+                    query_result = raw_sql(query)
+                    passed = len(query_result)
+                    sum = 0
+                    for i in range(passed):
+                        sum += query_result[i].Verkäufe
+                    print(str(weekday) + " " + str(passed) + " " + str(sum))
+
+                    if weekday == 0:
                         peak_times_chart_labels.append("Montag")
-                    elif i.Wochentag == 1:
+                    elif weekday == 1:
                         peak_times_chart_labels.append("Dienstag")
-                    elif i.Wochentag == 2:
+                    elif weekday == 2:
                         peak_times_chart_labels.append("Mittwoch")
-                    elif i.Wochentag == 3:
+                    elif weekday == 3:
                         peak_times_chart_labels.append("Donnerstag")
-                    elif i.Wochentag == 4:
+                    elif weekday == 4:
                         peak_times_chart_labels.append("Freitag")
-                    elif i.Wochentag == 5:
+                    elif weekday == 5:
                         peak_times_chart_labels.append("Samstag")
-                    elif i.Wochentag == 6:
+                    elif weekday == 6:
                         peak_times_chart_labels.append("Sonntag")
-                    peak_times_data.append(i.Summe)
+                    peak_times_data.append(round(sum / passed, 2))
             
             elif typ == "hours":
                 print("hours")
@@ -1356,12 +1396,19 @@ def analyzation_employees_view(request, *args, **kwargs):
             user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
             sets = len(user_data)
             employee_data.append([query_aa[x].Nutzername])
+            tmp = []
             for i in range(sets):      #Füllen von Werten
-                    employee_data[x].extend([[user_data[i].Datum, user_data[i].Arbeitszeit]])
+                    tmp.extend([[str(user_data[i].Datum), str(user_data[i].Arbeitszeit)]])
+            employee_data[x].append(tmp)
    
         # Datenstruktur ausgeben
-        # for i in employee_data:
-        #     print(i)
+        print('#######################################################################################################')
+        print('zeiten')
+        for i in employee_data:
+            print(i)
+
+        print('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+        print(employee_data)
 
         # chart no.2 - Mitarbeiterumsatz [line-chart]
         # Dynamische Werte
@@ -1393,19 +1440,26 @@ def analyzation_employees_view(request, *args, **kwargs):
             user_data = raw_sql(query)
             sets = len(user_data)
             employee_revenue_data.append([query_k[x].Nutzername])
-            
+
+            tmp = []
             for i in range(sets):
-                employee_revenue_data[x].extend([[user_data[i].Datum, user_data[i].Summe]])
+                tmp.extend([[str(user_data[i].Datum), float(user_data[i].Summe)]])
+            employee_revenue_data[x].append(tmp)
+
     
         # Datenstruktur ausgeben
-        # for i in employee_revenue_data:
-        #     print(i)
+        print('#######################################################################################################')
+        print('umsatz')
+        for i in employee_revenue_data:
+            print(i)
+        print('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+        print(employee_revenue_data)
 
 
         #Context
         context = {'form': analystForm,
                 # chart no.1 - Mitarbeiterzeiten [line-chart]
-                'employee_data' : employee_data,     #Alle Nutzer Mit ihren Zeiten
+                'employee_data' : employee_data,
                 'employee_times_x_axes' : employee_times_x_axes,
                 'employee_times_y_axes' : employee_times_y_axes,
                 'employee_times_chart_legend' : employee_times_chart_legend,
@@ -1458,8 +1512,10 @@ def analyzation_employees_view(request, *args, **kwargs):
                 user_data = raw_sql(query) #Alle Arbeitszeiten für Nutzer in den letzen 7 Tagen
                 sets = len(user_data)
                 employee_data.append([query_aa[x].Nutzername])
-                for i in range(sets):      #Füllen von Werten
-                        employee_data[x].extend([[user_data[i].Datum, user_data[i].Arbeitszeit]])
+                tmp = []
+                for i in range(sets):  # Füllen von Werten
+                    tmp.extend([[str(user_data[i].Datum), str(user_data[i].Arbeitszeit)]])
+                employee_data[x].append(tmp)
 
         elif request.POST.get("mtrbtr_mstz"):
             print("Mitarbeiter Umsatz")
@@ -1497,9 +1553,11 @@ def analyzation_employees_view(request, *args, **kwargs):
                 user_data = raw_sql(query)
                 sets = len(user_data)
                 employee_revenue_data.append([query_k[x].Nutzername])
-                
+
+                tmp = []
                 for i in range(sets):
-                    employee_revenue_data[x].extend([[user_data[i].Datum, user_data[i].Summe]])
+                    tmp.extend([[str(user_data[i].Datum), float(user_data[i].Summe)]])
+                employee_revenue_data[x].append(tmp)
     
     context = {'form': analystForm,
                 # chart no.1 - Mitarbeiterzeiten [line-chart]

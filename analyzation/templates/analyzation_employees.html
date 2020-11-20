@@ -104,7 +104,8 @@
 
 										<!-- Submit -->
 										<div class="form-group col-6">
-											<button id="submit-dateRange" name=mtrbtr_ztn value=1 class="btn btn-primary btn-block"
+											<button id="submit-dateRange" name=mtrbtr_ztn value=1
+											        class="btn btn-primary btn-block"
 											        type="submit">Filtern!
 											</button>
 										</div>
@@ -154,9 +155,10 @@
 
 										<!-- Submit -->
 										<div class="form-group col-6">
-											<button id="submit-dateRange" name=mtrbtr_mstz value=1 class="btn btn-primary btn-block"
+											<button id="submit-dateRange" name=mtrbtr_mstz value=1
+											        class="btn btn-primary btn-block"
 											        type="submit">Filtern!
-                                            </button>
+											</button>
 										</div>
 									</form>
 								</div>
@@ -209,6 +211,180 @@
         var employee_revenue_x_axes = ''
         var employee_revenue_y_axes = ''
 
+        var labels = []
+
+
+
+        var employee_times_data_usernames = []
+        var employee_times_data_labels = []
+        var employee_times_data_labels_days = []
+        var employee_times_data_username_days = []
+        var employee_times_data_username_hours = []
+        var employees_times_data_hours_raw = []
+        var employees_times_data_hours = []
+        var employee = {{ employee_data|safe }}
+
+
+        var employee_revenue_data_usernames = []
+        var employee_revenue_data_labels = []
+        var employee_revenue_data_labels_days = []
+        var employee_revenue_data_username_days = []
+        var employee_revenue_data_username_hours = []
+        var employees_revenue_data_hours_raw = []
+        var employees_revenue_data_hours = []
+        var employee2 = {{ employee_revenue_data|safe }}
+
+
+        // mitarbeiterzeiten
+        for (let i = 0; i < employee.length; i++) {
+            employee_times_data_usernames.push(employee[i][0])
+
+            let some_labels = []
+            let some_hours = []
+            employees_times_data_hours_raw = []
+
+            for (let k = 0; k < employee[i][1].length; k++) {
+                some_labels.push(employee[i][1][k][0])
+                some_hours.push(employee[i][1][k][1])
+            }
+
+            employee_times_data_username_days.push(some_labels)
+            employee_times_data_username_hours.push(some_hours)
+
+        }
+
+        // mitarbeiterumsatz
+        for (let i = 0; i < employee2.length; i++) {
+            employee_revenue_data_usernames.push(employee2[i][0])
+
+            let some_labels = []
+            let some_hours = []
+            employees_revenue_data_hours_raw = []
+
+            for (let k = 0; k < employee2[i][1].length; k++) {
+                some_labels.push(employee2[i][1][k][0])
+                some_hours.push(employee2[i][1][k][1])
+            }
+
+            employee_revenue_data_username_days.push(some_labels)
+            employee_revenue_data_username_hours.push(some_hours)
+
+        }
+
+        console.log('zeiten')
+        console.log({{ employee_data|safe }})
+        console.log('usernames')
+        console.log(employee_times_data_usernames)
+        console.log('labels')
+        console.log(employee_times_data_username_days)
+        console.log('hours')
+        console.log(employee_times_data_username_hours)
+
+
+        console.log(' ')
+        console.log(' ')
+        console.log(' ')
+
+        //var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var days = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+        var weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+
+        var counter = new Date().getDay();
+
+        for (let i = 0; i < 7; i++) {
+            if (counter < 7) {
+                labels.push(weekdays[counter]);
+            } else {
+                counter -= 7;
+                labels.push(weekdays[counter]);
+            }
+            counter++;
+        }
+
+        console.log(labels)
+
+        // mitarbeiterzeiten
+        for (let i = 0; i < employee_times_data_usernames.length; i++) {
+	        let tmpHours = []
+
+            for (let k = 0; k < labels.length; k++) {
+
+                let boolean = false;
+				let getHours = 0.00;
+
+                for (let m = 0; m < employee_times_data_username_hours[i].length; m++) {
+                    if (days[new Date(employee_times_data_username_days[i][m]).getDay()] === labels[k]) {
+                        boolean = true;
+
+                        if (Math.round(parseFloat((employee_times_data_username_hours[i][m].slice(7, 8)).replace(':', '.')) / 10) < 1) {
+                            getHours = parseFloat((employee_times_data_username_hours[i][m].slice(0, 5)).replace(':', '.'))
+                        } else {
+                            getHours = parseFloat((employee_times_data_username_hours[i][m].slice(0, 5)).replace(':', '.')) + 0.01;
+                        }
+
+                        break;
+                    }
+                }
+
+                if (boolean) {
+                    tmpHours.push(getHours);
+
+                } else {
+	                tmpHours.push(0.00);
+	            }
+            }
+            employees_times_data_hours.push(tmpHours);
+        }
+
+        // mitarbeiterumsatz
+        for (let i = 0; i < employee_revenue_data_usernames.length; i++) {
+	        let tmpRevenue = []
+
+            for (let k = 0; k < labels.length; k++) {
+
+                let boolean = false;
+				let getHours = 0.00;
+
+                for (let m = 0; m < employee_revenue_data_username_hours[i].length; m++) {
+                    if (days[new Date(employee_revenue_data_username_days[i][m]).getDay()] === labels[k]) {
+                        boolean = true;
+
+                        if (Math.round(employee_revenue_data_username_hours[i][m] / 10) < 1) {
+                            getHours = employee_revenue_data_username_hours[i][m];
+                        } else {
+                            getHours = employee_revenue_data_username_hours[i][m] + 0.01;
+                        }
+
+                        break;
+                    }
+                }
+
+                if (boolean) {
+                    tmpRevenue.push(getHours);
+
+                } else {
+	                tmpRevenue.push(0.00);
+	            }
+            }
+            employees_revenue_data_hours.push(tmpRevenue);
+        }
+
+
+
+
+
+
+        console.log('')
+        console.log('')
+        console.log('')
+        console.log(employees_times_data_hours)
+
+
+        console.log(' ')
+        console.log(' ')
+
+
+
         // COLORS
         var color_background = ['rgba(255,99,132,0.2)', 'rgba(61,236,245,0.2)', 'rgba(50,133,250,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(50,133,250,0.2)', 'rgba(165,97,255,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(254,177,249,0.2)', 'rgba(255,133,102,0.2)', 'rgba(243,211,131,0.2)', 'rgba(50,133,250,0.2)']
         var color_border = ['rgba(255,99,132,1)', 'rgba(61,236,245,1)', 'rgba(50,133,250,1)', 'rgba(243,211,131,1)', 'rgba(143,255,152,1)', 'rgba(50,133,250,1)', 'rgba(165,97,255,1)', 'rgba(243,211,131,1)', 'rgba(143,255,152,1)', 'rgba(254,177,249,1)', 'rgba(255,133,102,1)', 'rgba(243,211,131,1)', 'rgba(50,133,250,1)']
@@ -218,12 +394,14 @@
             method: "GET",
             url: endpoint,
             success: function (data) {
+				/*
                 employee_times_data = data.employee_times_data
                 employee_times_labels = data.employee_times_labels
                 employee_times_chart_labels = data.employee_times_chart_labels
                 employee_times_chart_legend = data.employee_times_chart_legend
                 employee_times_x_axes = data.employee_times_x_axes
                 employee_times_y_axes = data.employee_times_y_axes
+*/
                 employee_revenue_data = data.employee_revenue_data
                 employee_revenue_labels = data.employee_revenue_labels
                 employee_revenue_chart_labels = data.employee_revenue_chart_labels
@@ -246,7 +424,7 @@
             var config_employee_times_chart = {
                 type: 'line',
                 data: {
-                    labels: employee_times_chart_labels,
+                    labels: labels,
                     datasets: []
                 },
                 options: {
@@ -254,7 +432,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: employee_times_chart_legend,
+                        text: '{{ employee_times_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -278,14 +456,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: employee_times_x_axes
+                                labelString: '{{ employee_times_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: employee_times_y_axes
+                                labelString: '{{ employee_times_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
@@ -298,14 +476,14 @@
             var employeesTimesChartData = document.getElementById('employeesTimesChartData').getContext('2d');
             window.employeesTimesChartData = new Chart(employeesTimesChartData, config_employee_times_chart);
             // fill chart
-            employee_times_data.forEach(function (a, i) {
+            employee_times_data_usernames.forEach(function (a, i) {
 
-                if (color_background.length >= employee_revenue_data.length && color_border.length >= employee_revenue_data.length) {
+                if (color_background.length >= employee_times_data_usernames.length && color_border.length >= employee_times_data_usernames.length) {
                     var newDataset = {
-                        label: employee_times_labels[i],
+                        label: employee_times_data_usernames[i],
                         backgroundColor: color_background[i],
                         borderColor: color_border[i],
-                        data: employee_times_data[i],
+                        data: employees_times_data_hours[i],
                         fill: true,
                     };
                 } else {
@@ -316,15 +494,15 @@
                     bC += '1)';
 
                     var newDataset = {
-                        label: employee_times_labels[i],
+                        label: employee_times_data_usernames[i],
                         backgroundColor: bgC,
                         borderColor: bC,
-                        data: employee_times_data[i],
+                        data: employees_times_data_hours[i],
                         fill: true,
                     };
                 }
 
-                newDataset.data.push(employee_times_data[i]);
+                newDataset.data.push(employees_times_data_hours[i]);
 
                 config_employee_times_chart.data.datasets.push(newDataset);
                 window.employeesTimesChartData.update();
@@ -335,7 +513,7 @@
             var config_employee_revenue_chart = {
                 type: 'line',
                 data: {
-                    labels: employee_revenue_chart_labels,
+                    labels: labels,
                     datasets: []
                 },
                 options: {
@@ -343,7 +521,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: employee_revenue_chart_legend,
+                        text: '{{ employee_revenue_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -367,14 +545,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: employee_revenue_x_axes
+                                labelString: '{{ employee_revenue_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: employee_revenue_y_axes
+                                labelString: '{{ employee_revenue_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
@@ -387,14 +565,14 @@
             var employeesRevenueChartData = document.getElementById('employeesRevenueChartData').getContext('2d');
             window.employeesRevenueChartData = new Chart(employeesRevenueChartData, config_employee_revenue_chart);
             // fill chart
-            employee_revenue_data.forEach(function (a, i) {
+            employee_revenue_data_usernames.forEach(function (a, i) {
 
-                if (color_background.length >= employee_revenue_data.length && color_border.length >= employee_revenue_data.length) {
+                if (color_background.length >= employee_revenue_data_usernames.length && color_border.length >= employee_revenue_data_usernames.length) {
                     var newDataset = {
-                        label: employee_revenue_labels[i],
+                        label: employee_revenue_data_usernames[i],
                         backgroundColor: color_background[i],
                         borderColor: color_border[i],
-                        data: employee_revenue_data[i],
+                        data: employees_revenue_data_hours[i],
                         fill: true,
                     };
                 } else {
@@ -405,10 +583,10 @@
                     bC += '1)';
 
                     var newDataset = {
-                        label: employee_revenue_labels[i],
+                        label: employee_revenue_data_usernames[i],
                         backgroundColor: bgC,
                         borderColor: bC,
-                        data: employee_revenue_data[i],
+                        data: employees_revenue_data_hours[i],
                         fill: true,
                     };
                 }

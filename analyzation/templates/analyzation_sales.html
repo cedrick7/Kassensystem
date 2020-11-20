@@ -343,44 +343,6 @@
 						</div>
 						<div class="card-body" style="overflow-x: scroll;">
 							<div class="row">
-								<div class="col-12 col-filter">
-									<form id="" method="post" class="radio-form needs-validation">{% csrf_token %}
-										<!-- In days or hours -->
-										<div class="radio-form-div-1">
-											<div class="radio-form-div-2">
-												{% for radio in form.radioDAY %}
-													{{ radio.tag }}
-													<label for="{{ radio.id_for_label }}"
-													       class="label{{ forloop.counter0 }}">
-														<span>{{ radio }}</span>
-													</label>
-												{% endfor %}
-											</div>
-										</div>
-
-										<!-- Select Day -->
-										<div class="form-row" style="margin-top: 10px;">
-											<div class="form-group col">
-												<div class="input-group">
-													{{ form.day }}
-													<div class="invalid-feedback">
-														{{ form.day.errors }}
-													</div>
-												</div>
-											</div>
-										</div>
-
-
-										<!-- Submit -->
-										<div class="form-group col-6">
-											<button id="submit" name="stßztnfltr" value="1"
-											        class="btn btn-primary btn-block" type="submit">
-												Filtern!
-											</button>
-										</div>
-
-									</form>
-								</div>
 								<div class="col col-chart">
 									<div class="chart-area" style="overflow-x: scroll;">
 										<div class="chart-div line-chart"
@@ -428,7 +390,6 @@
         var revenue_chart_x_axes = '{{ revenue_chart_x_axes|safe }}'
         var revenue_chart_y_axes = '{{ revenue_chart_y_axes|safe }}'
 
-
         var weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
         //var weekdays = ['Sonntag', 'Samstag', 'Freitag', 'Donnerstag', 'Mittwoch', 'Dienstag', 'Montag']
 
@@ -454,8 +415,7 @@
             }
             counter++;
         }
-        //revenue_chart_labels = revenue_chart_labels.reverse();
-        console.log(revenue_chart_labels)
+
 
         var revenue_total_data_raw = {{ revenue_total_data|safe }};
         var revenue_total_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
@@ -463,10 +423,6 @@
 		var revenue_products_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
         var revenue_services_data_raw = {{ revenue_services_data|safe }};
 		var revenue_services_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
-
-
-
-
 
 
         for (let i = 0; i < revenue_chart_labels.length; i++) {
@@ -506,9 +462,6 @@
         }
 
 
-        console.log(revenue_services_data)
-
-
         var revenue_total_data_only = []
         for(let i = 0; i < revenue_chart_labels.length; i++) {
             let tmp = revenue_total_data[i][1];
@@ -526,41 +479,6 @@
             let tmp = revenue_services_data[i][1];
             revenue_services_data_only.push(tmp);
         }
-
-
-        console.log("====================================================================================")
-        console.log(revenue_services_data_only);
-        console.log({{ revenue_services_data|safe }});
-        console.log("====================================================================================")
-
-        var products_data =
-        {{ products_data|safe }}
-        var products_chart_legend = ''
-        var products_chart_labels =
-        {{ products_chart_labels|safe }}
-        var products_chart_x_axes = '{{ products_chart_x_axes|safe }}'
-        var products_chart_y_axes = '{{ products_chart_y_axes|safe }}'
-
-        var services_data =
-        {{ services_data|safe }}
-        var services_chart_legend = '{{ services_chart_legend|safe }}'
-        var services_chart_labels =
-        {{ services_chart_labels|safe }}
-        var services_chart_x_axes = '{{ services_chart_x_axes|safe }}'
-        var services_chart_y_axes = '{{ services_chart_y_axes|safe }}'
-
-        var payment_data =
-        {{ payment_data|safe }}
-        var payment_chart_labels =
-        {{ payment_chart_labels|safe }}
-        var payment_chart_legend = '{{ payment_chart_legend|safe }}'
-
-        var peak_times_data = []
-        var peak_times_chart_labels = []
-        var peak_times_chart_legend = ''
-        var peak_times_chart_x_axes = ''
-        var peak_times_chart_y_axes = ''
-        var color_x = ''
 
         // COLORS
         var color_background = ['rgba(255,99,132,0.2)', 'rgba(61,236,245,0.2)', 'rgba(50,133,250,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(50,133,250,0.2)', 'rgba(165,97,255,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(254,177,249,0.2)', 'rgba(255,133,102,0.2)', 'rgba(243,211,131,0.2)', 'rgba(50,133,250,0.2)']
@@ -598,20 +516,20 @@
                 payment_data = data.payment_data
                 payment_chart_labels = data.payment_chart_labels
                 payment_chart_legend = data.payment_chart_legend
-                */
+
                 peak_times_data = data.peak_times_data
                 peak_times_chart_labels = data.peak_times_chart_labels
                 peak_times_chart_legend = data.peak_times_chart_legend
                 peak_times_chart_x_axes = data.peak_times_chart_x_axes
                 peak_times_chart_y_axes = data.peak_times_chart_y_axes
-
+				*/
                 setChart()
             },
             error: function (error_data) {
                 console.log("error")
                 console.log(error_data)
             }
-        })
+        });
 
         function setChart() {
 
@@ -706,8 +624,8 @@
                 data: {
                     labels: {{ products_chart_labels|safe }},
                     datasets: [{
-                        label: products_chart_legend,
-                        data: products_data,
+                        label: '{{ products_chart_legend|safe }}',
+                        data: {{ products_data|safe }},
                         backgroundColor: [
                             color_background[0],
                             color_background[1],
@@ -740,7 +658,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: products_chart_legend,
+                        text: '{{ products_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -858,12 +776,12 @@
             var paymentsChart = new Chart(paymentsChartData, {
                 type: 'doughnut',
                 data: {
-                    labels: payment_chart_labels,
+                    labels: {{ payment_chart_labels|safe }},
                     datasets: [{
-                        label: payment_chart_legend,
-                        data: payment_data,
-                        backgroundColor: getBackgroundColor(payment_data),
-                        borderColor: getBorderColor(payment_data),
+                        label: {{ payment_chart_labels|safe }},
+                        data: {{ payment_data|safe }},
+                        backgroundColor: getBackgroundColor({{ payment_data|safe }}),
+                        borderColor: getBorderColor({{ payment_data|safe }}),
                         borderWidth: 1
                     }]
                 },
@@ -872,7 +790,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: false,
-                        text: payment_chart_legend,
+                        text: '{{ payment_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -897,10 +815,10 @@
             var peakTimesChart = new Chart(peakTimesChartData, {
                 type: 'line',
                 data: {
-                    labels: peak_times_chart_labels,
+                    labels: {{ peak_times_chart_labels|safe }},
                     datasets: [{
-                        label: peak_times_chart_legend,
-                        data: peak_times_data,
+                        label: '{{ peak_times_chart_legend|safe }}',
+                        data: {{ peak_times_data|safe }},
                         backgroundColor: color_background[0],
                         borderColor: color_border[0],
                         borderWidth: 1,
@@ -915,7 +833,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: peak_times_chart_legend,
+                        text: '{{ peak_times_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -939,14 +857,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: peak_times_chart_x_axes
+                                labelString: '{{ peak_times_chart_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: peak_times_chart_y_axes
+                                labelString: '{{ peak_times_chart_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
