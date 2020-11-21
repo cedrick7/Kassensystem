@@ -49,6 +49,42 @@ class FormDashboard(forms.Form):
         ),
     )
 
+    chart01 = forms.CharField(
+        required=True,
+        label='Zeitraum',
+        # inital = "",
+        widget=forms.TextInput(
+            attrs={
+                # aktueller Tag - 6 Tage vor heute
+                "placeholder": "01.10.2020 - 06.10.2020",
+                "class": "form-control needs-validation",
+                "id": "dateRangePicker",
+                "style": "",
+                # aktueller Tag - 6 Tage vor heute
+                "value": "01.10.2020 - 06.10.2020",
+                "readonly": ""
+            }
+        )
+    )
+    chart02 = forms.CharField(
+        required=True,
+        label='',
+        widget=forms.RadioSelect(
+            choices=RADIO_CHOICES_Top5OrTop10,  # '5' needs to be initial
+            attrs={
+            }
+        ),
+    )
+    chart03 = forms.CharField(
+        required=True,
+        label='',
+        widget=forms.RadioSelect(
+            choices=RADIO_CHOICES_Top5OrTop10,  # '5' needs to be initial
+            attrs={
+            }
+        ),
+    )
+
 
 class FormSalesFilter(forms.Form):
     dateRange = forms.CharField(

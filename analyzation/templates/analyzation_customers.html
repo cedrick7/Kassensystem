@@ -34,45 +34,8 @@
 							<!-- change this content -->
 							<p>Stoßzeiten Überblick</p>
 						</div>
-						<div class="card-body">
+						<div class="card-body" style="overflow-x: scroll;">
 							<div class="row">
-								<div class="col-12 col-filter">
-									<form id="" method="post" class="radio-form needs-validation">{% csrf_token %}
-										<!-- In days or hours -->
-										<div class="radio-form-div-1">
-											<div class="radio-form-div-2">
-												{% for radio in form.radioDAY %}
-													{{ radio.tag }}
-													<label for="{{ radio.id_for_label }}"
-													       class="label{{ forloop.counter0 }}">
-														<span>{{ radio }}</span>
-													</label>
-												{% endfor %}
-											</div>
-										</div>
-
-										<!-- Select Day -->
-										<div class="form-row" style="margin-top: 10px;">
-											<div class="form-group col">
-												<div class="input-group">
-													{{ form.day }}
-													<div class="invalid-feedback">
-														{{ form.day.errors }}
-													</div>
-												</div>
-											</div>
-										</div>
-
-
-										<!-- Submit -->
-										<div class="form-group col-6">
-											<button id="submit" name="stßztnfltr" value="1" class="btn btn-primary btn-block" type="submit">
-												Filtern!
-											</button>
-										</div>
-
-									</form>
-								</div>
 								<div class="col col-chart">
 									<div class="chart-area" style="overflow-x: scroll;">
 										<div class="chart-div line-chart"
@@ -483,10 +446,10 @@
             var peakTimesChart = new Chart(peakTimesChartData, {
                 type: 'line',
                 data: {
-                    labels: peak_times_chart_labels,
+                    labels: {{ peak_times_chart_labels|safe }},
                     datasets: [{
-                        label: peak_times_chart_legend,
-                        data: peak_times_data,
+                        label: '{{ peak_times_chart_legend|safe }}',
+                        data: {{ peak_times_data|safe }},
                         backgroundColor: color_background[0],
                         borderColor: color_border[0],
                         borderWidth: 1,
@@ -501,7 +464,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: peak_times_chart_legend,
+                        text: '{{ peak_times_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -525,14 +488,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: peak_times_chart_x_axes
+                                labelString: '{{ peak_times_chart_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: peak_times_chart_y_axes
+                                labelString: '{{ peak_times_chart_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true

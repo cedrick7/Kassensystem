@@ -328,27 +328,116 @@
 	<script>
 
         // DATA
-        const endpoint = '{% url "analyzation:api-dashboard-chart-data" %}'
-        var revenue_total_data = []
-        var revenue_total_legend = ''
-        var revenue_products_data = []
-        var revenue_products_legend = ''
-        var revenue_services_data = []
-        var revenue_services_legend = ''
-        var revenue_chart_legend = ''
-        var revenue_chart_labels = ''
-        var revenue_chart_x_axes = ''
-        var revenue_chart_y_axes = ''
-        var products_data = []
-        var products_chart_legend = ''
-        var products_chart_labels = ''
-        var products_chart_x_axes = ''
-        var products_chart_y_axes = ''
-        var services_data = []
-        var services_chart_legend = ''
-        var services_chart_labels = ''
-        var services_chart_x_axes = ''
-        var services_chart_y_axes = ''
+        const endpoint = '{% url "analyzation:api-sales-chart-data" %}'
+        // var revenue_total_data = {{ revenue_total_data|safe }}
+        var revenue_total_legend = '{{ revenue_total_legend|safe }}'
+        //var revenue_products_data = {{ revenue_products_data|safe }}
+        var revenue_products_legend = '{{ revenue_products_legend|safe }}'
+        //var revenue_services_data = {{ revenue_services_data|safe }}
+        var revenue_services_legend = '{{ revenue_services_legend|safe }}'
+        var revenue_chart_legend = '{{ revenue_chart_legend|safe }}'
+        var revenue_chart_labels = []
+        var revenue_chart_x_axes = '{{ revenue_chart_x_axes|safe }}'
+        var revenue_chart_y_axes = '{{ revenue_chart_y_axes|safe }}'
+
+
+        var weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+        //var weekdays = ['Sonntag', 'Samstag', 'Freitag', 'Donnerstag', 'Mittwoch', 'Dienstag', 'Montag']
+
+        var date_end = 99
+        date_end = {{ date_end|safe }}
+
+        console.log(date_end)
+
+        var counter = new Date().getDay();
+
+        if(date_end < 9) {
+            var counter = date_end;
+        }
+
+        console.log("counter = " + counter)
+
+        for (let i = 0; i < 7; i++) {
+            if (counter < 7) {
+                revenue_chart_labels.push(weekdays[counter]);
+            } else {
+                counter -= 7;
+                revenue_chart_labels.push(weekdays[counter]);
+            }
+            counter++;
+        }
+        //revenue_chart_labels = revenue_chart_labels.reverse();
+        console.log(revenue_chart_labels)
+
+        var revenue_total_data_raw = {{ revenue_total_data|safe }};
+        var revenue_total_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
+		var revenue_products_data_raw = {{ revenue_products_data|safe }};
+		var revenue_products_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
+        var revenue_services_data_raw = {{ revenue_services_data|safe }};
+		var revenue_services_data = [['Sonntag', 0.0], ['Samstag', 0.0], ['Freitag', 0.0], ['Donnerstag', 0.0], ['Mittwoch', 0.0], ['Dienstag', 0.0], ['Montag', 0.0]];
+
+
+
+
+
+
+        for (let i = 0; i < revenue_chart_labels.length; i++) {
+            for (let k = 0; k < revenue_total_data_raw.length; k++) {
+                if (revenue_chart_labels[i] === revenue_total_data_raw[k][0]) {
+					revenue_total_data[i][0] = revenue_chart_labels[i];
+	                revenue_total_data[i][1] = revenue_total_data_raw[k][1];
+                    break;
+                } else {
+	                revenue_total_data[i][0] = revenue_chart_labels[i];
+                }
+            }
+        }
+
+        for (let i = 0; i < revenue_chart_labels.length; i++) {
+            for (let k = 0; k < revenue_products_data_raw.length; k++) {
+                if (revenue_chart_labels[i] === revenue_products_data_raw[k][0]) {
+					revenue_products_data[i][0] = revenue_chart_labels[i];
+	                revenue_products_data[i][1] = revenue_products_data_raw[k][1];
+                    break;
+                } else {
+	                revenue_products_data[i][0] = revenue_chart_labels[i];
+                }
+            }
+        }
+
+        for (let i = 0; i < revenue_chart_labels.length; i++) {
+            for (let k = 0; k < revenue_services_data_raw.length; k++) {
+                if (revenue_chart_labels[i] === revenue_services_data_raw[k][0]) {
+					revenue_services_data[i][0] = revenue_chart_labels[i];
+	                revenue_services_data[i][1] = revenue_services_data_raw[k][1];
+                    break;
+                } else {
+	                revenue_services_data[i][0] = revenue_chart_labels[i];
+                }
+            }
+        }
+
+
+        console.log(revenue_services_data)
+
+
+        var revenue_total_data_only = []
+        for(let i = 0; i < revenue_chart_labels.length; i++) {
+            let tmp = revenue_total_data[i][1];
+            revenue_total_data_only.push(tmp);
+        }
+
+        var revenue_products_data_only = []
+        for(let i = 0; i < revenue_chart_labels.length; i++) {
+            let tmp = revenue_products_data[i][1];
+            revenue_products_data_only.push(tmp);
+        }
+
+        var revenue_services_data_only = []
+        for(let i = 0; i < revenue_chart_labels.length; i++) {
+            let tmp = revenue_services_data[i][1];
+            revenue_services_data_only.push(tmp);
+        }
 
         // COLORS
         var color_background = ['rgba(255,99,132,0.2)', 'rgba(61,236,245,0.2)', 'rgba(50,133,250,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(50,133,250,0.2)', 'rgba(165,97,255,0.2)', 'rgba(243,211,131,0.2)', 'rgba(143,255,152,0.2)', 'rgba(254,177,249,0.2)', 'rgba(255,133,102,0.2)', 'rgba(243,211,131,0.2)', 'rgba(50,133,250,0.2)']
@@ -359,6 +448,7 @@
             method: "GET",
             url: endpoint,
             success: function (data) {
+                /*
                 revenue_total_data = data.revenue_total_data
                 revenue_total_legend = data.revenue_total_legend
                 revenue_products_data = data.revenue_products_data
@@ -379,6 +469,7 @@
                 services_chart_labels = data.services_chart_labels
                 services_chart_x_axes = data.services_chart_x_axes
                 services_chart_y_axes = data.services_chart_y_axes
+                 */
 
                 setChart()
             },
@@ -397,8 +488,8 @@
                 data: {
                     labels: revenue_chart_labels,
                     datasets: [{
-                        label: revenue_total_legend,
-                        data: revenue_total_data,
+                        label: '{{ revenue_total_legend|safe }}',
+                        data: revenue_total_data_only,
                         backgroundColor: color_background[0],
                         borderColor: color_border[0],
                         borderWidth: 1,
@@ -407,8 +498,8 @@
                         fill: true,
                         lineTension: 0.25
                     }, {
-                        label: revenue_products_legend,
-                        data: revenue_products_data,
+                        label: '{{ revenue_products_legend|safe }}',
+                        data: revenue_products_data_only,
                         backgroundColor: color_background[1],
                         borderColor: color_border[1],
                         borderWidth: 1,
@@ -417,8 +508,8 @@
                         fill: true,
                         lineTension: 0.25
                     }, {
-                        label: revenue_services_legend,
-                        data: revenue_services_data,
+                        label: '{{ revenue_services_legend|safe }}',
+                        data: revenue_services_data_only,
                         backgroundColor: color_background[2],
                         borderColor: color_border[2],
                         borderWidth: 1,
@@ -433,7 +524,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: revenue_chart_legend,
+                        text: '{{ revenue_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -457,14 +548,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: revenue_chart_x_axes
+                                labelString: '{{ revenue_chart_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: revenue_chart_y_axes
+                                labelString: '{{ revenue_chart_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
@@ -479,10 +570,10 @@
             var productsChart = new Chart(productsChartData, {
                 type: 'bar',
                 data: {
-                    labels: products_chart_labels,
+                    labels: {{ products_chart_labels|safe }},
                     datasets: [{
-                        label: products_chart_legend,
-                        data: products_data,
+                        label: '{{ products_chart_legend|safe }}',
+                        data: {{ products_data|safe }},
                         backgroundColor: [
                             color_background[0],
                             color_background[1],
@@ -501,7 +592,7 @@
                             color_border[2],
                             color_border[3],
                             color_border[4],
-	                        color_border[5],
+                            color_border[5],
                             color_border[6],
                             color_border[7],
                             color_border[8],
@@ -515,7 +606,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: products_chart_legend,
+                        text: '{{ products_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -534,14 +625,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: products_chart_x_axes
+                                labelString: '{{ products_chart_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: products_chart_y_axes
+                                labelString: '{{ products_chart_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
@@ -556,17 +647,17 @@
             var servicesChart = new Chart(servicesChartData, {
                 type: 'bar',
                 data: {
-                    labels: services_chart_labels,
+                    labels: {{ services_chart_labels|safe }},
                     datasets: [{
-                        label: services_chart_legend,
-                        data: services_data,
+                        label: '{{ services_chart_legend|safe }}',
+                        data: {{ services_data|safe }},
                         backgroundColor: [
                             color_background[0],
                             color_background[1],
                             color_background[2],
                             color_background[3],
                             color_background[4],
-	                        color_background[5],
+                            color_background[5],
                             color_background[6],
                             color_background[7],
                             color_background[8],
@@ -578,7 +669,7 @@
                             color_border[2],
                             color_border[3],
                             color_border[4],
-	                        color_border[5],
+                            color_border[5],
                             color_border[6],
                             color_border[7],
                             color_border[8],
@@ -592,7 +683,7 @@
                     maintainAspectRatio: false,
                     title: {
                         display: true,
-                        text: services_chart_legend,
+                        text: '{{ services_chart_legend|safe }}',
                         fontSize: 14,
                     },
                     legend: {
@@ -611,14 +702,14 @@
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: services_chart_x_axes
+                                labelString: '{{ services_chart_x_axes|safe }}'
                             }
                         }],
                         yAxes: [{
                             display: true,
                             scaleLabel: {
                                 display: true,
-                                labelString: services_chart_y_axes
+                                labelString: '{{ services_chart_y_axes|safe }}'
                             },
                             ticks: {
                                 beginAtZero: true
