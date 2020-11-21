@@ -28,7 +28,7 @@ class CreateUserForm(UserCreationForm):
                     'value': '',
                 }
             ),
-            'firstname': forms.TextInput(
+            'first_name': forms.TextInput(
                 attrs={
                     'placeholder': 'Vorname',
                     'class': 'form-control needs-validation',
